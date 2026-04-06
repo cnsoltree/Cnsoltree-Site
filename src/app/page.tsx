@@ -133,7 +133,7 @@ function HeroSection() {
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
             让每一棵{" "}
             <span className="relative inline-block">
-              <span className="gradient-text">数字之树</span>
+              <span className="bg-gradient-to-r from-red-600 to-rose-500 bg-clip-text text-transparent">数字之树</span>
               <svg
                 aria-hidden="true"
                 viewBox="0 0 200 8"
@@ -143,7 +143,7 @@ function HeroSection() {
                 <path
                   d="M0 6 Q50 0 100 4 Q150 8 200 2"
                   fill="none"
-                  stroke="#10b981"
+                  stroke="#dc2626"
                   strokeWidth="3"
                   strokeLinecap="round"
                   opacity="0.5"
