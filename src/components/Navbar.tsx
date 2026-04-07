@@ -1,211 +1,304 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { categories } from "@/lib/data";
 
-// ─── 类型 ────────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-interface NavLink {
-  href: string;
+interface NavItem {
   label: string;
+  href?: string;
+  hasDropdown?: boolean;
 }
 
-// ─── 配置 ────────────────────────────────────────────────────────────────────
-
-const NAV_LINKS: NavLink[] = [
-  { href: "/", label: "首页" },
-  { href: "/about", label: "关于我们" },
-  { href: "/services", label: "服务" },
-  { href: "/blog", label: "博客" },
-  { href: "/contact", label: "联系我们" },
+const NAV_ITEMS: NavItem[] = [
+  { label: "Home",       href: "/" },
+  { label: "Product",    hasDropdown: true },
+  { label: "Blog",       href: "/blog" },
+  { label: "About",      href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
-// ─── 图标组件 ────────────────────────────────────────────────────────────────
+// ─── Icons ────────────────────────────────────────────────────────────────────
 
-function MenuIcon({ className }: { className?: string }) {
+function ChevronDown({ className }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-      />
+    <svg className={className} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
     </svg>
   );
 }
 
-function CloseIcon({ className }: { className?: string }) {
+function MenuIcon() {
   return (
-    <svg
-      className={className}
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      aria-hidden="true"
-    >
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
   );
 }
 
-// ─── Logo 组件 ───────────────────────────────────────────────────────────────
-
-function Logo() {
-  return (
-    <Link href="/" className="group flex items-center gap-2.5">
-      {/* 图标 */}
-      <div className="relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-emerald-600 shadow-sm transition-shadow group-hover:shadow-md">
-        {/* 树形 SVG */}
-        <svg
-          className="h-5 w-5 text-white"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M12 2L6 9h4v2H7l5 6 5-6h-3V9h4L12 2z" opacity="0.9" />
-          <rect x="10.5" y="17" width="3" height="5" rx="1" />
-        </svg>
-      </div>
-      {/* 文字 */}
-      <span className="text-base font-bold tracking-tight text-gray-900 transition-colors group-hover:text-emerald-700">
-        Cnsoltree
-      </span>
-    </Link>
-  );
-}
-
-// ─── 主组件 ──────────────────────────────────────────────────────────────────
+// ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen]         = useState(false);
+  const [mobileProductOpen, setMobileProductOpen] = useState(false);
+  const [desktopDropdown, setDesktopDropdown] = useState(false);
+  const [scrolled, setScrolled]             = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // 监听滚动，切换阴影
+  // Scroll shadow
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const fn = () => setScrolled(window.scrollY > 4);
+    window.addEventListener("scroll", fn, { passive: true });
+    return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  // 路由变化时关闭移动端菜单
+  // Close mobile on route change
   useEffect(() => {
     setMobileOpen(false);
+    setMobileProductOpen(false);
   }, [pathname]);
 
-  const isActive = (href: string): boolean =>
+  // Close desktop dropdown on outside click
+  useEffect(() => {
+    function handler(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDesktopDropdown(false);
+      }
+    }
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  function onMouseEnterProduct() {
+    if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
+    setDesktopDropdown(true);
+  }
+
+  function onMouseLeaveProduct() {
+    hoverTimeout.current = setTimeout(() => setDesktopDropdown(false), 120);
+  }
+
+  const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const isProductActive = pathname.startsWith("/product") || pathname.startsWith("/categories");
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-md transition-shadow duration-200 ${
-        scrolled ? "border-gray-200 shadow-sm" : "border-transparent"
+      className={`sticky top-0 z-50 w-full bg-white transition-shadow duration-200 ${
+        scrolled ? "shadow-md border-b border-gray-100" : "border-b border-gray-100"
       }`}
     >
-      <nav
-        className="mx-auto max-w-7xl px-6 lg:px-8"
-        aria-label="主导航"
-      >
-        {/* 顶部栏 */}
-        <div className="flex h-16 items-center justify-between">
-          <Logo />
+      <div className="container">
+        <div className="flex h-16 items-center justify-between lg:h-18">
 
-          {/* 桌面端导航链接 */}
-          <ul className="hidden items-center gap-0.5 md:flex" role="list">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
+          {/* ── Logo ───────────────────────────────────────────────── */}
+          <Link href="/" className="flex shrink-0 items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Cnsoltree Logo"
+              width={160}
+              height={40}
+              className="h-8 w-auto lg:h-9 object-contain"
+              priority
+            />
+          </Link>
+
+          {/* ── Desktop Navigation ─────────────────────────────────── */}
+          <nav className="hidden lg:flex lg:items-center lg:gap-1" aria-label="Main navigation">
+            {NAV_ITEMS.map((item) => {
+              if (item.hasDropdown) {
+                return (
+                  <div
+                    key={item.label}
+                    className="relative"
+                    ref={dropdownRef}
+                    onMouseEnter={onMouseEnterProduct}
+                    onMouseLeave={onMouseLeaveProduct}
+                  >
+                    <button
+                      className={`flex items-center gap-1 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                        isProductActive
+                          ? "text-green-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      }`}
+                      aria-expanded={desktopDropdown}
+                      aria-haspopup="true"
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-150 ${
+                          desktopDropdown ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Product dropdown */}
+                    {desktopDropdown && (
+                      <div
+                        className="absolute left-1/2 top-full -translate-x-1/2 mt-1 w-72 rounded-xl border border-gray-100 bg-white shadow-xl ring-1 ring-black/5"
+                        onMouseEnter={onMouseEnterProduct}
+                        onMouseLeave={onMouseLeaveProduct}
+                      >
+                        <div className="p-2">
+                          <Link
+                            href="/products"
+                            className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-green-700 hover:bg-green-50 transition-colors border-b border-gray-100 mb-1"
+                          >
+                            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                            </svg>
+                            All Products
+                          </Link>
+                          {categories.map((cat) => (
+                            <Link
+                              key={cat.slug}
+                              href={`/categories/${cat.slug}`}
+                              className="flex rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-700 transition-colors"
+                            >
+                              {cat.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
                 <Link
-                  href={link.href}
-                  className={`relative rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                    isActive(link.href)
-                      ? "text-emerald-700 after:absolute after:bottom-0 after:left-4 after:right-4 after:h-0.5 after:rounded-full after:bg-emerald-500"
-                      : "text-gray-600 hover:bg-gray-100/80 hover:text-gray-900"
+                  key={item.label}
+                  href={item.href!}
+                  className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                    isActive(item.href!)
+                      ? "text-green-700 font-semibold"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                   }`}
                 >
-                  {link.label}
+                  {item.label}
                 </Link>
-              </li>
-            ))}
-          </ul>
+              );
+            })}
+          </nav>
 
-          {/* 桌面端 CTA */}
-          <div className="hidden items-center gap-3 md:flex">
-            <Link
-              href="/login"
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
-            >
-              登录
-            </Link>
-            <Link href="/contact" className="btn-primary py-2 px-4 text-sm">
-              免费咨询
+          {/* ── Desktop CTA ────────────────────────────────────────── */}
+          <div className="hidden lg:flex lg:items-center lg:gap-3">
+            <Link href="/contact" className="btn-primary">
+              Contact Us
             </Link>
           </div>
 
-          {/* 移动端汉堡按钮 */}
+          {/* ── Mobile Hamburger ───────────────────────────────────── */}
           <button
             type="button"
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900 md:hidden"
-            onClick={() => setMobileOpen((prev) => !prev)}
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-600 hover:bg-gray-100 lg:hidden"
+            onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            aria-label={mobileOpen ? "关闭菜单" : "打开菜单"}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            {mobileOpen ? (
-              <CloseIcon className="h-5 w-5" />
-            ) : (
-              <MenuIcon className="h-5 w-5" />
-            )}
+            {mobileOpen ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
+      </div>
 
-        {/* 移动端菜单 */}
-        <div
-          id="mobile-menu"
-          role="dialog"
-          aria-label="移动端导航菜单"
-          className={`overflow-hidden transition-all duration-300 md:hidden ${
-            mobileOpen ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="border-t border-gray-100 py-3">
-            <ul className="flex flex-col gap-0.5" role="list">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
+      {/* ── Mobile Menu ──────────────────────────────────────────────── */}
+      <div
+        className={`overflow-hidden border-t border-gray-100 transition-all duration-300 lg:hidden ${
+          mobileOpen ? "max-h-[600px]" : "max-h-0"
+        }`}
+      >
+        <nav className="container py-4" aria-label="Mobile navigation">
+          <ul className="space-y-0.5">
+            {NAV_ITEMS.map((item) => {
+              if (item.hasDropdown) {
+                return (
+                  <li key={item.label}>
+                    <button
+                      className={`flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                        isProductActive
+                          ? "bg-green-50 text-green-700 font-semibold"
+                          : "text-gray-700 hover:bg-gray-50"
+                      }`}
+                      onClick={() => setMobileProductOpen((v) => !v)}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-150 ${
+                          mobileProductOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile product sub-menu */}
+                    <div
+                      className={`overflow-hidden transition-all duration-200 ${
+                        mobileProductOpen ? "max-h-[500px]" : "max-h-0"
+                      }`}
+                    >
+                      <ul className="mt-1 ml-4 border-l-2 border-gray-100 pl-4 space-y-0.5">
+                        <li>
+                          <Link
+                            href="/products"
+                            className="flex rounded-lg px-3 py-2 text-sm font-semibold text-green-700 hover:bg-green-50"
+                          >
+                            All Products
+                          </Link>
+                        </li>
+                        {categories.map((cat) => (
+                          <li key={cat.slug}>
+                            <Link
+                              href={`/categories/${cat.slug}`}
+                              className="flex rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
+                            >
+                              {cat.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                );
+              }
+
+              return (
+                <li key={item.label}>
                   <Link
-                    href={link.href}
-                    className={`flex rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
-                      isActive(link.href)
-                        ? "bg-emerald-50 text-emerald-700"
-                        : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+                    href={item.href!}
+                    className={`flex rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                      isActive(item.href!)
+                        ? "bg-green-50 text-green-700 font-semibold"
+                        : "text-gray-700 hover:bg-gray-50"
                     }`}
                   >
-                    {link.label}
+                    {item.label}
                   </Link>
                 </li>
-              ))}
-            </ul>
+              );
+            })}
+          </ul>
 
-            {/* 移动端 CTA */}
-            <div className="mt-3 flex flex-col gap-2 border-t border-gray-100 pt-3">
-              <Link href="/login" className="btn-secondary py-2.5 text-sm">
-                登录
-              </Link>
-              <Link href="/contact" className="btn-primary py-2.5 text-sm">
-                免费咨询
-              </Link>
-            </div>
+          <div className="mt-4 border-t border-gray-100 pt-4">
+            <Link href="/contact" className="btn-primary w-full justify-center">
+              Contact Us
+            </Link>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
