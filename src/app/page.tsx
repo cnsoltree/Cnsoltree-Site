@@ -94,7 +94,7 @@ export default function HomePage() {
               B2B Electrical Protection Solutions
             </p>
             <h1 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-              Reliable Protection for Every Circuit
+              hello world
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-300">
               Manufacturer and wholesale supplier of circuit breakers, surge
