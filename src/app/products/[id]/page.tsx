@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
+import ProductImageGallery from "@/components/ProductImageGallery";
 import {
   getProductById,
   getProductsByCategory,
@@ -28,6 +29,9 @@ export async function generateMetadata({
     title: product.name,
     description: product.shortDescription,
     alternates: { canonical: `/products/${product.id}` },
+    openGraph: {
+      images: [{ url: product.image }],
+    },
   };
 }
 
@@ -45,12 +49,11 @@ export default function ProductDetailPage({
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 
-  const badgeClass =
-    product.badge === "Hot"
-      ? "badge-hot"
-      : product.badge === "New"
-      ? "badge-new"
-      : "badge-feat";
+  // 画廊图片：优先使用 images 数组，否则退回到单张 image
+  const galleryImages =
+    product.images && product.images.length > 0
+      ? product.images
+      : [product.image];
 
   return (
     <>
@@ -66,7 +69,7 @@ export default function ProductDetailPage({
               {product.categoryName}
             </Link>
             <span>/</span>
-            <span className="text-gray-600 truncate max-w-[160px]">{product.name}</span>
+            <span className="max-w-[160px] truncate text-gray-600">{product.name}</span>
           </nav>
         </div>
       </div>
@@ -76,32 +79,43 @@ export default function ProductDetailPage({
         <div className="container">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
 
-            {/* Image */}
-            <div className="relative aspect-square overflow-hidden rounded-2xl bg-gray-50 border border-gray-100">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-contain p-8"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-              />
-              {product.badge && (
-                <span className={`absolute left-4 top-4 ${badgeClass}`}>
-                  {product.badge}
-                </span>
-              )}
-            </div>
+            {/* ── Image Gallery (client component) ─────────────────── */}
+            <ProductImageGallery
+              images={galleryImages}
+              productName={product.name}
+            />
 
-            {/* Info */}
+            {/* ── Info ─────────────────────────────────────────────── */}
             <div>
               <p className="section-eyebrow">{product.categoryName}</p>
               <h1 className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
                 {product.name}
               </h1>
+
+              {/* Description text */}
               <p className="mt-4 text-base leading-relaxed text-gray-600">
                 {product.description}
               </p>
+
+              {/* Description images（接线图、应用场景图等） */}
+              {product.descriptionImages && product.descriptionImages.length > 0 && (
+                <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {product.descriptionImages.map((src, i) => (
+                    <div
+                      key={src}
+                      className="relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 bg-gray-50"
+                    >
+                      <Image
+                        src={src}
+                        alt={`${product.name} detail image ${i + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 50vw, 200px"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Key Features */}
               <div className="mt-8">
@@ -111,7 +125,13 @@ export default function ProductDetailPage({
                 <ul className="mt-3 space-y-2">
                   {product.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm text-gray-600">
-                      <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <svg
+                        className="mt-0.5 h-4 w-4 shrink-0 text-green-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2.5}
+                        stroke="currentColor"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
                       {f}

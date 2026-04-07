@@ -18,7 +18,32 @@ export interface Product {
   description: string;
   features: string[];
   specs: Record<string, string>;
+  /**
+   * 封面图（必填）— 用于产品列表卡片封面，也作为详情页第一张图
+   * 路径示例："/images/products/mcb-1p-c.jpg"
+   */
   image: string;
+  /**
+   * 产品主图集（可选，最多 7 张）— 在详情页顶部以缩略图 + 大图形式展示
+   * 不填时详情页仅显示 image 封面图
+   * 示例：
+   *   images: [
+   *     "/images/products/mcb-1p-c-1.jpg",
+   *     "/images/products/mcb-1p-c-2.jpg",
+   *     "/images/products/mcb-1p-c-3.jpg",
+   *   ]
+   */
+  images?: string[];
+  /**
+   * 描述区图片（可选）— 显示在产品描述文字下方，支持多张
+   * 适合放安装图、应用场景图、接线图等
+   * 示例：
+   *   descriptionImages: [
+   *     "/images/products/mcb-1p-c-wiring.jpg",
+   *     "/images/products/mcb-1p-c-application.jpg",
+   *   ]
+   */
+  descriptionImages?: string[];
   badge?: "New" | "Hot" | "Featured";
 }
 
@@ -108,9 +133,9 @@ export const categories: Category[] = [
 export const products: Product[] = [
   // Circuit Breaker
   {
-    id: "cb-001",
-    name: "MCB 1P 6–63A C-Curve",
-    slug: "mcb-1p-6-63a-c-curve",
+    id: "MCB-AC-1P",
+    name: "MCB 1P AC 6–63A Circuit breaker",
+    slug: "MCB-1P-AC-6–63A-Circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
     shortDescription: "Single-pole miniature circuit breaker, 6–63A, C-curve, 6kA breaking capacity.",
@@ -135,11 +160,19 @@ export const products: Product[] = [
       "Mounting": "DIN-rail 35mm",
       "Certification": "CE, RoHS, IEC 60898-1",
     },
-    image: "/images/products/mcb-1p-c.jpg",
-    badge: "Hot",
+    image: "/images/products/MCB-AC-1P-01.jpg",
+    images: [
+      "/images/products/MCB-AC-1P-01.jpg",
+      "/images/products/MCB-AC-1P-02.jpg",
+      "/images/products/MCB-AC-1P-03.jpg",
+      "/images/products/MCB-AC-1P-04.jpg",
+      "/images/products/MCB-AC-1P-05.jpg",
+      "/images/products/MCB-AC-1P-06.jpg",
+      "/images/products/MCB-AC-1P-07.jpg",
+    ],
   },
   {
-    id: "cb-002",
+    id: "MCB-AC-2P",
     name: "MCB 3P 16–100A D-Curve",
     slug: "mcb-3p-16-100a-d-curve",
     categorySlug: "circuit-breaker",
@@ -163,11 +196,19 @@ export const products: Product[] = [
       "Mounting": "DIN-rail 35mm",
       "Certification": "CE, IEC 60898-1",
     },
-    image: "/images/products/mcb-3p-d.jpg",
-    badge: "Featured",
+    image: "/images/products/MCB-AC-2P-01.jpg",
+        images: [
+      "/images/products/MCB-AC-2P-01.jpg",
+      "/images/products/MCB-AC-2P-02.jpg",
+      "/images/products/MCB-AC-2P-03.jpg",
+      "/images/products/MCB-AC-2P-04.jpg",
+      "/images/products/MCB-AC-2P-05.jpg",
+      "/images/products/MCB-AC-2P-06.jpg",
+      "/images/products/MCB-AC-2P-07.jpg",
+    ],
   },
   {
-    id: "cb-003",
+    id: "MCB-AC-3P",
     name: "RCCB 2P 25–100A 30mA",
     slug: "rccb-2p-25-100a-30ma",
     categorySlug: "circuit-breaker",
@@ -189,9 +230,187 @@ export const products: Product[] = [
       "Type": "A",
       "Certification": "CE, IEC 61008-1",
     },
-    image: "/images/products/rccb-2p.jpg",
+    image: "/images/products/MCB-AC-3P-01.jpg",
+           images: [
+      "/images/products/MCB-AC-3P-01.jpg",
+      "/images/products/MCB-AC-3P-02.jpg",
+      "/images/products/MCB-AC-3P-03.jpg",
+      "/images/products/MCB-AC-3P-04.jpg",
+      "/images/products/MCB-AC-3P-05.jpg",
+      "/images/products/MCB-AC-3P-06.jpg",
+      "/images/products/MCB-AC-3P-07.jpg",
+    ],
   },
-
+  {
+    id: "MCB-AC-4P",
+    name: "RCCB 2P 25–100A 30mA",
+    slug: "rccb-2p-25-100a-30ma",
+    categorySlug: "circuit-breaker",
+    categoryName: "Circuit Breaker",
+    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    description:
+      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+    features: [
+      "Residual current protection at 30mA",
+      "Type A — detects AC and pulsating DC faults",
+      "Immune to nuisance tripping from high-frequency currents",
+      "Combined with MCB for RCBO function when required",
+    ],
+    specs: {
+      "Poles": "2P",
+      "Rated Current": "25A, 40A, 63A, 100A",
+      "Rated Voltage": "230/400V AC",
+      "Sensitivity": "30mA / 100mA / 300mA",
+      "Type": "A",
+      "Certification": "CE, IEC 61008-1",
+    },
+    image: "/images/products/MCB-AC-4P-01.jpg",
+           images: [
+      "/images/products/MCB-AC-4P-01.jpg",
+      "/images/products/MCB-AC-4P-02.jpg",
+      "/images/products/MCB-AC-4P-03.jpg",
+      "/images/products/MCB-AC-4P-04.jpg",
+      "/images/products/MCB-AC-4P-05.jpg",
+      "/images/products/MCB-AC-4P-06.jpg",
+      "/images/products/MCB-AC-4P-07.jpg",
+    ],
+  },
+  {
+    id: "MCB-DC-1P",
+    name: "RCCB 2P 25–100A 30mA",
+    slug: "rccb-2p-25-100a-30ma",
+    categorySlug: "circuit-breaker",
+    categoryName: "Circuit Breaker",
+    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    description:
+      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+    features: [
+      "Residual current protection at 30mA",
+      "Type A — detects AC and pulsating DC faults",
+      "Immune to nuisance tripping from high-frequency currents",
+      "Combined with MCB for RCBO function when required",
+    ],
+    specs: {
+      "Poles": "2P",
+      "Rated Current": "25A, 40A, 63A, 100A",
+      "Rated Voltage": "230/400V AC",
+      "Sensitivity": "30mA / 100mA / 300mA",
+      "Type": "A",
+      "Certification": "CE, IEC 61008-1",
+    },
+    image: "/images/products/MCB-DC-1P-01.jpg",
+           images: [
+      "/images/products/MCB-DC-1P-01.jpg",
+      "/images/products/MCB-DC-1P-02.jpg",
+      "/images/products/MCB-DC-1P-03.jpg",
+      "/images/products/MCB-DC-1P-04.jpg",
+      "/images/products/MCB-DC-1P-05.jpg",
+      "/images/products/MCB-DC-1P-06.jpg",
+      "/images/products/MCB-DC-1P-07.jpg",
+    ],
+  },
+  {
+    id: "MCB-DC-2P",
+    name: "RCCB 2P 25–100A 30mA",
+    slug: "rccb-2p-25-100a-30ma",
+    categorySlug: "circuit-breaker",
+    categoryName: "Circuit Breaker",
+    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    description:
+      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+    features: [
+      "Residual current protection at 30mA",
+      "Type A — detects AC and pulsating DC faults",
+      "Immune to nuisance tripping from high-frequency currents",
+      "Combined with MCB for RCBO function when required",
+    ],
+    specs: {
+      "Poles": "2P",
+      "Rated Current": "25A, 40A, 63A, 100A",
+      "Rated Voltage": "230/400V AC",
+      "Sensitivity": "30mA / 100mA / 300mA",
+      "Type": "A",
+      "Certification": "CE, IEC 61008-1",
+    },
+    image: "/images/products/MCB-DC-2P-01.jpg",
+           images: [
+      "/images/products/MCB-DC-2P-01.jpg",
+      "/images/products/MCB-DC-2P-02.jpg",
+      "/images/products/MCB-DC-2P-03.jpg",
+      "/images/products/MCB-DC-2P-04.jpg",
+      "/images/products/MCB-DC-2P-05.jpg",
+      "/images/products/MCB-DC-2P-06.jpg",
+      "/images/products/MCB-DC-2P-07.jpg",
+    ],
+  },
+  {
+    id: "MCB-DC-3P",
+    name: "RCCB 2P 25–100A 30mA",
+    slug: "rccb-2p-25-100a-30ma",
+    categorySlug: "circuit-breaker",
+    categoryName: "Circuit Breaker",
+    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    description:
+      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+    features: [
+      "Residual current protection at 30mA",
+      "Type A — detects AC and pulsating DC faults",
+      "Immune to nuisance tripping from high-frequency currents",
+      "Combined with MCB for RCBO function when required",
+    ],
+    specs: {
+      "Poles": "2P",
+      "Rated Current": "25A, 40A, 63A, 100A",
+      "Rated Voltage": "230/400V AC",
+      "Sensitivity": "30mA / 100mA / 300mA",
+      "Type": "A",
+      "Certification": "CE, IEC 61008-1",
+    },
+    image: "/images/products/MCB-DC-3P-01.jpg",
+           images: [
+      "/images/products/MCB-DC-3P-01.jpg",
+      "/images/products/MCB-DC-3P-02.jpg",
+      "/images/products/MCB-DC-3P-03.jpg",
+      "/images/products/MCB-DC-3P-04.jpg",
+      "/images/products/MCB-DC-3P-05.jpg",
+      "/images/products/MCB-DC-3P-06.jpg",
+      "/images/products/MCB-DC-3P-07.jpg",
+    ],
+  },
+  {
+    id: "MCB-DC-4P",
+    name: "RCCB 2P 25–100A 30mA",
+    slug: "rccb-2p-25-100a-30ma",
+    categorySlug: "circuit-breaker",
+    categoryName: "Circuit Breaker",
+    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    description:
+      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+    features: [
+      "Residual current protection at 30mA",
+      "Type A — detects AC and pulsating DC faults",
+      "Immune to nuisance tripping from high-frequency currents",
+      "Combined with MCB for RCBO function when required",
+    ],
+    specs: {
+      "Poles": "2P",
+      "Rated Current": "25A, 40A, 63A, 100A",
+      "Rated Voltage": "230/400V AC",
+      "Sensitivity": "30mA / 100mA / 300mA",
+      "Type": "A",
+      "Certification": "CE, IEC 61008-1",
+    },
+    image: "/images/products/MCB-DC-4P-01.jpg",
+           images: [
+      "/images/products/MCB-DC-4P-01.jpg",
+      "/images/products/MCB-DC-4P-02.jpg",
+      "/images/products/MCB-DC-4P-03.jpg",
+      "/images/products/MCB-DC-4P-04.jpg",
+      "/images/products/MCB-DC-4P-05.jpg",
+      "/images/products/MCB-DC-4P-06.jpg",
+      "/images/products/MCB-DC-4P-07.jpg",
+    ],
+  },
   // Surge Protector Device
   {
     id: "spd-001",

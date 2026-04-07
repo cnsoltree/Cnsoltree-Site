@@ -7,13 +7,6 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const badgeClass =
-    product.badge === "Hot"
-      ? "badge-hot"
-      : product.badge === "New"
-      ? "badge-new"
-      : "badge-feat";
-
   return (
     <Link
       href={`/products/${product.id}`}
@@ -29,11 +22,6 @@ export default function ProductCard({ product }: ProductCardProps) {
           className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        {product.badge && (
-          <span className={`absolute left-3 top-3 ${badgeClass}`}>
-            {product.badge}
-          </span>
-        )}
       </div>
 
       {/* Content */}
