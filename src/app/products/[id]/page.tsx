@@ -25,12 +25,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const product = getProductById(params.id);
   if (!product) return { title: "Product Not Found" };
+
+  // 兜底：没填 metaTitle 时自动生成
+  const title =
+    product.metaTitle ?? `${product.name} | ${product.categoryName} | Cnsoltree`;
+
+  // 兜底：没填 metaDescription 时用 shortDescription
+  const description =
+    product.metaDescription ?? product.shortDescription;
+
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title,
+    description,
+    keywords: product.metaKeywords,
     alternates: { canonical: `/products/${product.id}` },
     openGraph: {
-      images: [{ url: product.image }],
+      title,
+      description,
+      images: [{ url: product.image, alt: product.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
@@ -83,6 +100,7 @@ export default function ProductDetailPage({
             <ProductImageGallery
               images={galleryImages}
               productName={product.name}
+              imageAlts={product.imageAlts}
             />
 
             {/* ── Info ─────────────────────────────────────────────── */}

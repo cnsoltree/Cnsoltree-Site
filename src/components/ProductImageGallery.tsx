@@ -7,17 +7,25 @@ interface ProductImageGalleryProps {
   /** 所有展示图片，第一张为默认选中 */
   images: string[];
   productName: string;
+  /** 每张图对应的 SEO alt 文字，顺序与 images 一致；不填则自动生成兜底 alt */
+  imageAlts?: string[];
 }
 
 export default function ProductImageGallery({
   images,
   productName,
+  imageAlts,
 }: ProductImageGalleryProps) {
   const [active, setActive] = useState(0);
 
   // 最多展示 7 张
   const displayImages = images.slice(0, 7);
   const hasMultiple = displayImages.length > 1;
+
+  // 取当前图的 alt：优先用自定义，否则用产品名+序号兜底
+  function getAlt(index: number) {
+    return imageAlts?.[index] ?? `${productName} — image ${index + 1}`;
+  }
 
   return (
     <div className="flex flex-col gap-3">
@@ -26,7 +34,7 @@ export default function ProductImageGallery({
         <Image
           key={displayImages[active]}
           src={displayImages[active]}
-          alt={`${productName} — image ${active + 1}`}
+          alt={getAlt(active)}
           fill
           className="object-contain p-8 transition-opacity duration-200"
           sizes="(max-width: 1024px) 100vw, 50vw"
@@ -82,7 +90,7 @@ export default function ProductImageGallery({
             >
               <Image
                 src={src}
-                alt={`${productName} thumbnail ${i + 1}`}
+                alt={getAlt(i)}
                 fill
                 className="object-contain p-1.5"
                 sizes="64px"

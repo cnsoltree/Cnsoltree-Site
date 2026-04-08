@@ -109,7 +109,7 @@ export default function BlogPostPage({
     <>
       {/* Hero */}
       <section className="border-b border-gray-100 bg-gray-50 py-10">
-        <div className="container max-w-4xl">
+        <div className="container">
           <nav className="mb-5 flex items-center gap-2 text-xs text-gray-400" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-gray-600">Home</Link>
             <span>/</span>
@@ -143,7 +143,7 @@ export default function BlogPostPage({
 
       {/* Content */}
       <article className="section">
-        <div className="container max-w-4xl">
+        <div className="container">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_280px]">
             <div>
               {/* Cover image */}

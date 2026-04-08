@@ -45,6 +45,31 @@ export interface Product {
    */
   descriptionImages?: string[];
   badge?: "New" | "Hot" | "Featured";
+  /**
+   * SEO 字段（可选）— 不填时自动用 name / shortDescription 生成兜底值
+   *
+   * metaTitle      — 浏览器标签页和搜索结果标题，建议格式：
+   *                  "产品名 | 品类关键词 | Cnsoltree"
+   *                  示例："MCB 1P AC 6-63A Circuit Breaker | Miniature Circuit Breaker Supplier | Cnsoltree"
+   *
+   * metaDescription — 搜索结果摘要，建议 120–160 字符，包含核心关键词 + 行动词
+   *                  示例："Buy MCB 1P AC 6-63A circuit breaker from Cnsoltree. CE & RoHS certified, OEM available, ships worldwide."
+   *
+   * metaKeywords   — 关键词列表（逗号分隔），3–8 个，覆盖产品型号、品类、应用场景
+   *                  示例："MCB 1P, miniature circuit breaker, DIN rail MCB, circuit breaker supplier, CE certified MCB"
+   *
+   * imageAlts      — 每张主图对应的 alt 文字，顺序与 images 数组一致
+   *                  好的 alt 应包含产品型号 + 视角/细节描述
+   *                  示例：[
+   *                    "MCB-AC-1P single pole circuit breaker front view",
+   *                    "MCB-AC-1P circuit breaker side profile",
+   *                    "MCB-AC-1P DIN rail mounting detail",
+   *                  ]
+   */
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
+  imageAlts?: string[];
 }
 
 export interface BlogPost {
@@ -138,27 +163,31 @@ export const products: Product[] = [
     slug: "MCB-1P-AC-6–63A-Circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Single-pole miniature circuit breaker, 6–63A, C-curve, 6kA breaking capacity.",
+    shortDescription: "Single-pole miniature circuit breaker, 6–63A, B/C/D-curve, ideal for residential lighting and socket circuit protection.",
     description:
-      "The MCB 1P 6–63A C-Curve is a compact DIN-rail mounted miniature circuit breaker for overload and short-circuit protection in residential and light commercial wiring systems. IEC 60898-1 compliant with 6kA rated breaking capacity.",
+      "The Cnsoltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics — B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
     features: [
-      "IEC 60898-1 / EN 60898-1 compliant",
-      "Rated breaking capacity: 6kA",
-      "Trip curve: C (suitable for resistive and moderate inductive loads)",
-      "DIN-rail mounting, 35mm",
-      "Operating temperature: -25°C to +55°C",
-      "CE, RoHS certified",
+      "Slim 18mm single-module width — maximises circuit density in compact boards",
+      "B / C / D trip curve options — covers lighting, general, and motor loads",
+      "Ideal for residential distribution boards and socket circuit protection",
+      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "100% factory electrical test before shipment",
+      "OEM / ODM customization available — logo, color, rating label",
+      "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
       "Poles": "1P",
-      "Rated Current": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A",
-      "Rated Voltage": "230V AC",
-      "Breaking Capacity": "6kA",
-      "Trip Curve": "C",
+      "Rated Current": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed",
+      "Rated Voltage": "120V / 230V AC",
+      "Breaking Capacity": "4.5 kA, 6 kA Customed",
+      "Trip Curve": "C, B, D Customed",
+      "Housing Material": "Flame-Retardant Thermoplastic",
       "Mechanical Life": "20,000 operations",
       "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
       "Certification": "CE, RoHS, IEC 60898-1",
+      "Mounting Method": "DIN Rail Mounting (35mm)",
+      "Contact Material": "High-Conductivity Copper Alloy",
     },
     image: "/images/products/MCB-AC-1P-01.jpg",
     images: [
@@ -170,34 +199,53 @@ export const products: Product[] = [
       "/images/products/MCB-AC-1P-06.jpg",
       "/images/products/MCB-AC-1P-07.jpg",
     ],
+    metaTitle: "1 Pole MCB 6A-63A AC Circuit Breaker | DIN Rail Single Pole MCB | Cnsoltree",
+    metaDescription: "Cnsoltree 1 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
+    metaKeywords: "1 pole MCB, single pole circuit breaker, MCB 6A 63A, DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, AC circuit breaker wholesale",
+    imageAlts: [
+      "Cnsoltree 1 pole MCB 6-63A single pole miniature circuit breaker front view",
+      "MCB-AC-1P single pole circuit breaker side view showing DIN rail clip",
+      "MCB-AC-1P trip curve B C D selection detail",
+      "MCB-AC-1P terminal connection and wiring diagram",
+      "MCB-AC-1P installed on 35mm DIN rail in distribution board",
+      "MCB-AC-1P product dimensions and size drawing",
+      "MCB-AC-1P CE RoHS certification label and packaging",
+    ],
   },
   {
     id: "MCB-AC-2P",
-    name: "MCB 3P 16–100A D-Curve",
-    slug: "mcb-3p-16-100a-d-curve",
+    name: "MCB 2P AC 6–63A Circuit breaker",
+    slug: "mcb-2p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Three-pole MCB for motor and transformer protection, D-curve, 10kA.",
+    shortDescription: "Double-pole miniature circuit breaker, 6–63A, B/C/D-curve, simultaneously disconnects live and neutral for full circuit isolation.",
     description:
-      "The MCB 3P D-Curve is designed for three-phase applications requiring high inrush current tolerance, such as motors and transformers. 10kA breaking capacity ensures reliable protection in industrial environments.",
+      "The Cnsoltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors — a critical safety requirement for bathroom circuits, outdoor installations, and any application where full disconnection is mandatory. Rated at 120V/230V AC across 6A to 63A, it is the preferred choice for TT earthing systems and markets requiring double-pole protection by regulation (IEC 60364, BS 7671). Manufactured under ISO 9001 quality management, the robust flame-retardant housing and high-conductivity copper alloy contacts ensure consistent performance over 20,000 mechanical operations.",
     features: [
-      "3-pole construction for three-phase circuits",
-      "D-curve for high inrush loads (motors, transformers)",
-      "10kA rated breaking capacity",
-      "DIN 35mm rail mounting",
-      "Lockable handle for maintenance safety",
+      "Simultaneous live + neutral disconnection — full circuit isolation in one operation",
+      "Mandatory for bathroom, outdoor, and TT system installations",
+      "Complies with IEC 60364 and BS 7671 double-pole protection requirements",
+      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "High-conductivity copper alloy contacts — 20,000 mechanical operations rated",
+      "OEM / ODM customization available — logo, color, rating label",
+      "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
-      "Poles": "3P",
-      "Rated Current": "16A – 100A",
-      "Rated Voltage": "400V AC",
-      "Breaking Capacity": "10kA",
-      "Trip Curve": "D",
+      "Poles": "2P",
+      "Rated Current": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed",
+      "Rated Voltage": "120V / 230V AC",
+      "Breaking Capacity": "4.5 kA, 6 kA Customed",
+      "Trip Curve": "C, B, D Customed",
+      "Housing Material": "Flame-Retardant Thermoplastic",
+      "Mechanical Life": "20,000 operations",
+      "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
-      "Certification": "CE, IEC 60898-1",
+      "Certification": "CE, RoHS, IEC 60898-1",
+      "Mounting Method": "DIN Rail Mounting (35mm)",
+      "Contact Material": "High-Conductivity Copper Alloy",
     },
     image: "/images/products/MCB-AC-2P-01.jpg",
-        images: [
+    images: [
       "/images/products/MCB-AC-2P-01.jpg",
       "/images/products/MCB-AC-2P-02.jpg",
       "/images/products/MCB-AC-2P-03.jpg",
@@ -206,32 +254,53 @@ export const products: Product[] = [
       "/images/products/MCB-AC-2P-06.jpg",
       "/images/products/MCB-AC-2P-07.jpg",
     ],
+    metaTitle: "2 Pole MCB 6A-63A AC Circuit Breaker | Double Pole DIN Rail MCB | Cnsoltree",
+    metaDescription: "Cnsoltree 2 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
+    metaKeywords: "2 pole MCB, double pole circuit breaker, MCB 2P 6A 63A, DIN rail double pole MCB, miniature circuit breaker supplier, CE certified MCB, AC circuit breaker wholesale",
+    imageAlts: [
+      "Cnsoltree 2 pole MCB 6-63A double pole miniature circuit breaker front view",
+      "MCB-AC-2P double pole circuit breaker side view showing DIN rail clip",
+      "MCB-AC-2P trip curve B C D selection detail",
+      "MCB-AC-2P terminal connection and wiring diagram",
+      "MCB-AC-2P installed on 35mm DIN rail in distribution board",
+      "MCB-AC-2P product dimensions and size drawing",
+      "MCB-AC-2P CE RoHS certification label and packaging",
+    ],
   },
   {
     id: "MCB-AC-3P",
-    name: "RCCB 2P 25–100A 30mA",
-    slug: "rccb-2p-25-100a-30ma",
+    name: "MCB 3P AC 6–63A Circuit breaker",
+    slug: "mcb-3p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    shortDescription: "Three-pole miniature circuit breaker, 6–63A, B/C/D-curve, designed for three-phase industrial equipment and motor protection.",
     description:
-      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+      "The Cnsoltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors — a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
     features: [
-      "Residual current protection at 30mA",
-      "Type A — detects AC and pulsating DC faults",
-      "Immune to nuisance tripping from high-frequency currents",
-      "Combined with MCB for RCBO function when required",
+      "Simultaneous three-phase disconnection — prevents single-phasing motor damage",
+      "D-curve option for high inrush motor and transformer loads",
+      "Ideal for HVAC, pumps, compressors, and three-phase sub-boards",
+      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "Compact 3-module DIN footprint — optimises panel space in industrial enclosures",
+      "OEM / ODM customization available — logo, color, rating label",
+      "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
-      "Poles": "2P",
-      "Rated Current": "25A, 40A, 63A, 100A",
-      "Rated Voltage": "230/400V AC",
-      "Sensitivity": "30mA / 100mA / 300mA",
-      "Type": "A",
-      "Certification": "CE, IEC 61008-1",
+      "Poles": "3P",
+      "Rated Current": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed",
+      "Rated Voltage": "120V / 230V AC",
+      "Breaking Capacity": "4.5 kA, 6 kA Customed",
+      "Trip Curve": "C, B, D Customed",
+      "Housing Material": "Flame-Retardant Thermoplastic",
+      "Mechanical Life": "20,000 operations",
+      "Electrical Life": "10,000 operations",
+      "Mounting": "DIN-rail 35mm",
+      "Certification": "CE, RoHS, IEC 60898-1",
+      "Mounting Method": "DIN Rail Mounting (35mm)",
+      "Contact Material": "High-Conductivity Copper Alloy",
     },
     image: "/images/products/MCB-AC-3P-01.jpg",
-           images: [
+    images: [
       "/images/products/MCB-AC-3P-01.jpg",
       "/images/products/MCB-AC-3P-02.jpg",
       "/images/products/MCB-AC-3P-03.jpg",
@@ -240,32 +309,53 @@ export const products: Product[] = [
       "/images/products/MCB-AC-3P-06.jpg",
       "/images/products/MCB-AC-3P-07.jpg",
     ],
+    metaTitle: "3 Pole MCB 6A-63A AC Circuit Breaker | Three Phase DIN Rail MCB | Cnsoltree",
+    metaDescription: "Cnsoltree 3 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase industrial systems. OEM available, ships worldwide.",
+    metaKeywords: "3 pole MCB, three pole circuit breaker, MCB 3P 6A 63A, three phase DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, industrial circuit breaker wholesale",
+    imageAlts: [
+      "Cnsoltree 3 pole MCB 6-63A three pole miniature circuit breaker front view",
+      "MCB-AC-3P three pole circuit breaker side view showing DIN rail clip",
+      "MCB-AC-3P trip curve B C D selection detail",
+      "MCB-AC-3P three phase terminal connection and wiring diagram",
+      "MCB-AC-3P installed on 35mm DIN rail in three-phase distribution board",
+      "MCB-AC-3P product dimensions and size drawing",
+      "MCB-AC-3P CE RoHS certification label and packaging",
+    ],
   },
   {
     id: "MCB-AC-4P",
-    name: "RCCB 2P 25–100A 30mA",
-    slug: "rccb-2p-25-100a-30ma",
+    name: "MCB 4P AC 6–63A Circuit breaker",
+    slug: "mcb-4p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Residual current circuit breaker, 30mA sensitivity, Type A.",
+    shortDescription: "Four-pole miniature circuit breaker, 6–63A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S systems.",
     description:
-      "Protects against earth faults and electric shock. 30mA sensitivity provides effective personal protection in bathrooms, kitchens, and outdoor circuits. Type A detects both AC and pulsating DC residual currents.",
+      "The Cnsoltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral — the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
     features: [
-      "Residual current protection at 30mA",
-      "Type A — detects AC and pulsating DC faults",
-      "Immune to nuisance tripping from high-frequency currents",
-      "Combined with MCB for RCBO function when required",
+      "Full 3P+N simultaneous disconnection — highest isolation level for four-wire systems",
+      "Required for TN-S and TN-C-S systems where neutral switching is mandated",
+      "Eliminates neutral voltage rise risk during asymmetric fault conditions",
+      "Ideal for data centres, hospitals, and commercial buildings with sensitive loads",
+      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "OEM / ODM customization available — logo, color, rating label",
+      "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
-      "Poles": "2P",
-      "Rated Current": "25A, 40A, 63A, 100A",
-      "Rated Voltage": "230/400V AC",
-      "Sensitivity": "30mA / 100mA / 300mA",
-      "Type": "A",
-      "Certification": "CE, IEC 61008-1",
+      "Poles": "4P",
+      "Rated Current": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed",
+      "Rated Voltage": "120V / 230V AC",
+      "Breaking Capacity": "4.5 kA, 6 kA Customed",
+      "Trip Curve": "C, B, D Customed",
+      "Housing Material": "Flame-Retardant Thermoplastic",
+      "Mechanical Life": "20,000 operations",
+      "Electrical Life": "10,000 operations",
+      "Mounting": "DIN-rail 35mm",
+      "Certification": "CE, RoHS, IEC 60898-1",
+      "Mounting Method": "DIN Rail Mounting (35mm)",
+      "Contact Material": "High-Conductivity Copper Alloy",
     },
     image: "/images/products/MCB-AC-4P-01.jpg",
-           images: [
+    images: [
       "/images/products/MCB-AC-4P-01.jpg",
       "/images/products/MCB-AC-4P-02.jpg",
       "/images/products/MCB-AC-4P-03.jpg",
@@ -273,6 +363,18 @@ export const products: Product[] = [
       "/images/products/MCB-AC-4P-05.jpg",
       "/images/products/MCB-AC-4P-06.jpg",
       "/images/products/MCB-AC-4P-07.jpg",
+    ],
+    metaTitle: "4 Pole MCB 6A-63A AC Circuit Breaker | Four Pole DIN Rail MCB | Cnsoltree",
+    metaDescription: "Cnsoltree 4 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase + neutral systems. OEM available, ships worldwide.",
+    metaKeywords: "4 pole MCB, four pole circuit breaker, MCB 4P 6A 63A, four pole DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, three phase neutral circuit breaker",
+    imageAlts: [
+      "Cnsoltree 4 pole MCB 6-63A four pole miniature circuit breaker front view",
+      "MCB-AC-4P four pole circuit breaker side view showing DIN rail clip",
+      "MCB-AC-4P trip curve B C D selection detail",
+      "MCB-AC-4P four pole terminal connection and wiring diagram",
+      "MCB-AC-4P installed on 35mm DIN rail in distribution board",
+      "MCB-AC-4P product dimensions and size drawing",
+      "MCB-AC-4P CE RoHS certification label and packaging",
     ],
   },
   {
