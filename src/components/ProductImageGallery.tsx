@@ -18,8 +18,8 @@ export default function ProductImageGallery({
 }: ProductImageGalleryProps) {
   const [active, setActive] = useState(0);
 
-  // 最多展示 7 张
-  const displayImages = images.slice(0, 7);
+  // 最多展示 8 张
+  const displayImages = images.slice(0, 8);
   const hasMultiple = displayImages.length > 1;
 
   // 取当前图的 alt：优先用自定义，否则用产品名+序号兜底
