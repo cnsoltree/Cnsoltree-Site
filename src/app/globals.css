@@ -93,7 +93,7 @@
   }
 
   .section-subheading {
-    @apply mt-4 text-lg text-gray-500 leading-relaxed;
+    @apply mt-4 text-sm text-gray-500 leading-relaxed;
   }
 
   /* ── Inputs ──────────────────────────────────────────────────────── */

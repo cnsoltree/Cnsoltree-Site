@@ -8,7 +8,7 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Cnsoltree | Professional Electrical Protection Solutions",
+  title: "Soltree | Professional Electrical Protection Solutions",
   description:
     "B2B manufacturer of circuit breakers, SPDs, DC fuse holders, power meters, ATS and PV combiner boxes. Wholesale & OEM available.",
 };
@@ -140,6 +140,7 @@ export default function HomePage() {
             src="/images/hero-bg.jpg"
             alt=""
             className="absolute inset-0 h-full w-full object-cover object-center"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-slate-950/80" />
         </div>
@@ -268,14 +269,14 @@ export default function HomePage() {
         <div className="container">
           <div className="text-center">
             <p className="section-eyebrow">Our Product Range</p>
-            <h2 className="section-heading">8 Product Categories</h2>
+            <h2 className="section-heading">9 Product Categories</h2>
             <p className="section-subheading mx-auto max-w-2xl">
               From miniature circuit breakers to smart WiFi devices, every product
               is engineered for performance, safety, and long-term reliability.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {categories.map((cat) => (
               <Link
                 key={cat.slug}
@@ -314,8 +315,11 @@ export default function HomePage() {
       <section className="section-alt">
         <div className="container">
           <div className="text-center">
-            <p className="section-eyebrow">Why Cnsoltree</p>
+            <p className="section-eyebrow">Why Soltree</p>
             <h2 className="section-heading">Your Trusted Manufacturing Partner</h2>
+            <p className="section-subheading mx-auto max-w-2xl">
+              We combine international quality standards with tailored services to ensure a seamless supply chain experience for every partner.
+            </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -339,15 +343,18 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="container">
           <div className="text-center">
-            <p className="section-eyebrow">About Cnsoltree</p>
+            <p className="section-eyebrow">About Soltree</p>
             <h2 className="section-heading">Factory-Direct Electrical Solutions</h2>
+            <p className="section-subheading mx-auto max-w-2xl">
+              Explore our 50,000 m² facility with automated lines and R&amp;D centers. We deliver reliable electrical solutions.
+            </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
             <div className="relative overflow-hidden rounded-2xl shadow-lg" style={{height: '440px'}}>
               <Image
                 src="/images/factory.jpg"
-                alt="Cnsoltree manufacturing facility"
+                alt="Soltree manufacturing facility"
                 width={720}
                 height={480}
                 className="h-full w-full object-cover"
@@ -360,7 +367,7 @@ export default function HomePage() {
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-gray-600">
                 <span className="font-semibold text-gray-900">With over 15 years of manufacturing expertise,</span>{" "}
-                Cnsoltree produces a full range of low-voltage electrical products, including circuit breakers,
+                Soltree produces a full range of low-voltage electrical products, including circuit breakers,
                 SPDs, DC fuse holders, power meters, and ATS systems. Our solutions are widely used in residential,
                 commercial, and industrial applications. Backed by ISO 9001 certification and advanced production
                 facilities, we deliver consistent quality at competitive prices.
@@ -418,7 +425,7 @@ export default function HomePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/exhibition-1.png"
-                  alt="Cnsoltree exhibition booth"
+                  alt="Soltree exhibition booth"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
@@ -430,12 +437,69 @@ export default function HomePage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={`/images/exhibition-${n}.png`}
-                    alt={`Cnsoltree trade show photo ${n}`}
+                    alt={`Soltree trade show photo ${n}`}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+
+            {/* Left — Text */}
+            <div>
+              <p className="section-eyebrow">Certifications</p>
+              <h2 className="text-3xl font-bold leading-snug tracking-tight text-gray-900 sm:text-4xl">
+                Quality You Can Trust,<br />Certified Worldwide.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-gray-600">
+                Soltree maintains a global presence, supplying certified low-voltage
+                electrical products to customers in over 80 countries. Every product
+                is backed by internationally recognized certifications, ensuring
+                compliance, safety, and reliability across markets.
+              </p>
+              <ul className="mt-6 space-y-2.5">
+                {[
+                  "ISO 9001:2015 Quality Management System",
+                  "CE Marking — IEC/EN Standards Compliant",
+                  "CCC Certification (China Compulsory Certificate)",
+                  "RoHS Compliant — Environmentally Responsible",
+                  "Trusted Supplier for Global Electrical Brands",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <Link href="/contact" className="btn-primary">
+                  Get a Free Quote
+                </Link>
+              </div>
+            </div>
+
+            {/* Right — Certificate images */}
+            <div className="grid grid-cols-2 gap-4">
+              {["cert-1.jpg", "cert-2.jpg", "cert-3.jpg", "cert-4.jpg"].map((file) => (
+                <div key={file} className="overflow-hidden rounded-xl border border-gray-100 bg-gray-50 p-3 shadow-sm">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/images/${file}`}
+                    alt="Soltree certification"
+                    className="h-48 w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
@@ -496,6 +560,123 @@ export default function HomePage() {
             {latestPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-white">
+        <div className="container">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+
+            {/* Left — Contact Info */}
+            <div className="lg:col-span-1">
+              <p className="section-eyebrow">Get in Touch</p>
+              <h2 className="section-heading">Contact Us</h2>
+              <p className="mt-3 text-sm leading-relaxed text-gray-500">
+                Have questions about our products or need assistance with a project?
+                Our team is ready to help you find the perfect electrical solution.
+              </p>
+
+              <ul className="mt-8 space-y-5">
+                <li className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-700">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Address</p>
+                    <p className="mt-0.5 text-sm text-gray-700">Fenghuang Industrial Zone, Baishi Town, Yueqing Zhejiang P. R. China</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-700">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Email</p>
+                    <a href="mailto:Jacky@cnsoltree.com" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">Jacky@cnsoltree.com</a>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-700">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Phone / WhatsApp</p>
+                    <a href="tel:+8613693313816" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">+86-13693313816</a>
+                  </div>
+                </li>
+              </ul>
+
+              <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-5">
+                <h3 className="text-sm font-semibold text-gray-900">Business Hours</h3>
+                <dl className="mt-3 space-y-1.5 text-xs">
+                  <div className="flex justify-between">
+                    <dt className="text-gray-500">Monday – Friday</dt>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
+                  </div>
+                  <div className="flex justify-between">
+                    <dt className="text-gray-500">Saturday</dt>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
+                  </div>
+                  <div className="flex justify-between">
+                    <dt className="text-gray-500">Sunday</dt>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
+                  </div>
+                </dl>
+                <p className="mt-3 text-xs text-gray-400">
+                  Emails are monitored outside hours. We aim to respond within 24 hours on business days.
+                </p>
+              </div>
+            </div>
+
+            {/* Right — Form */}
+            <div className="lg:col-span-2">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+                <h3 className="text-lg font-bold text-gray-900">Send an Enquiry</h3>
+                <p className="mt-1 text-xs text-gray-500">All fields marked * are required.</p>
+                <form action="/api/contact" method="POST" className="mt-6 space-y-4" noValidate>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="home-name" className="label">Your Name *</label>
+                      <input id="home-name" name="name" type="text" required className="input" placeholder="John Smith" />
+                    </div>
+                    <div>
+                      <label htmlFor="home-phone" className="label">Phone / WhatsApp *</label>
+                      <input id="home-phone" name="phone" type="tel" required className="input" placeholder="+1 555 0100" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="home-email" className="label">Email Address *</label>
+                    <input id="home-email" name="email" type="email" required className="input" placeholder="john@company.com" />
+                  </div>
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="home-company" className="label">Your Company</label>
+                      <input id="home-company" name="company" type="text" className="input" placeholder="Company name" />
+                    </div>
+                    <div>
+                      <label htmlFor="home-country" className="label">Your Country</label>
+                      <input id="home-country" name="country" type="text" className="input" placeholder="e.g. United States" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="home-message" className="label">Your Message *</label>
+                    <textarea id="home-message" name="message" required rows={4} className="textarea" placeholder="Please describe your requirements..." />
+                  </div>
+                  <button type="submit" className="btn-primary w-full justify-center py-3.5">
+                    Send Now
+                  </button>
+                </form>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

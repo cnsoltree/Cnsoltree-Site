@@ -67,6 +67,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preload" as="image" href="/images/hero-bg.jpg" fetchPriority="high" />
+      </head>
       <body className="flex min-h-screen flex-col bg-white antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>

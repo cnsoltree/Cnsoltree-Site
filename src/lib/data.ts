@@ -142,6 +142,14 @@ export const categories: Category[] = [
       "Automatic Transfer Switches (ATS) provide seamless changeover between two independent power sources, ensuring continuous supply to critical loads. Available for single-phase and three-phase systems.",
     image: "/images/categories/ats-dual-power-switch.png",
   },
+  {
+    slug: "aerosol-fire-extinguisher",
+    name: "Aerosol Fire Extinguisher",
+    shortDescription: "Compact aerosol-based fire suppression for rapid response protection.",
+    description:
+      "Cnsoltree aerosol fire extinguishers provide fast, effective fire suppression using environmentally friendly aerosol agents. Suitable for electrical cabinets, vehicles, server rooms, and industrial enclosures. No pressure vessel required — safe, easy to install, and maintenance-free.",
+    image: "/images/categories/Aerosol-Fire-Extinguishe.png",
+  },
 ];
 
 // 鈹€鈹€鈹€ Products 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
@@ -2008,113 +2016,10 @@ export const products: Product[] = [
   },
 
   // Power Meter
-  {
-    id: "pm-001",
-    name: "DIN Rail Energy Meter 3P 100A",
-    slug: "din-rail-energy-meter-3p-100a",
-    categorySlug: "power-meter",
-    categoryName: "Power Meter",
-    shortDescription: "Three-phase multifunction energy meter with RS485 Modbus output.",
-    description:
-      "Measures active energy (kWh), reactive energy (kVarh), voltage, current, power factor, frequency, and THD. Large LCD display and RS485 Modbus RTU port for SCADA/BMS integration.",
-    features: [
-      "Measures V, A, W, var, VA, kWh, kVarh, PF, Hz, THD",
-      "RS485 Modbus RTU communication",
-      "Large backlit LCD display",
-      "Class 1 accuracy (IEC 62053-21)",
-      "DIN-rail mounting, 4-module width",
-    ],
-    specs: {
-      "Phases": "3P4W / 3P3W",
-      "Rated Current": "5(100)A",
-      "Accuracy Class": "Class 1",
-      "Communication": "RS485 Modbus RTU",
-      "Display": "4-line LCD backlit",
-      "Power Supply": "85鈥?65V AC",
-      "Certification": "CE, MID",
-    },
-    image: "/images/products/energy-meter-3p.jpg",
-    badge: "Featured",
-  },
-  {
-    id: "pm-002",
-    name: "Single Phase kWh Meter DIN 100A",
-    slug: "single-phase-kwh-meter-din-100a",
-    categorySlug: "power-meter",
-    categoryName: "Power Meter",
-    shortDescription: "Single-phase energy meter, MID certified, for sub-metering.",
-    description:
-      "Compact DIN-rail single-phase energy meter for tenant sub-metering, office energy monitoring, and EV charging cost allocation. MID certified for legal metrology applications.",
-    features: [
-      "MID certified for billing applications",
-      "Pulse output for remote reading",
-      "Anti-tamper design",
-      "Back-lit LCD with 7-digit display",
-    ],
-    specs: {
-      "Phases": "1P2W",
-      "Rated Current": "5(100)A",
-      "Accuracy": "Class 1",
-      "Output": "Pulse (1000imp/kWh)",
-      "Certification": "CE, MID",
-    },
-    image: "/images/products/kwh-meter-1p.jpg",
-  },
+
 
   // Wifi Smart Low Voltage Device
-  {
-    id: "ws-001",
-    name: "WiFi Smart Circuit Breaker 1P 63A",
-    slug: "wifi-smart-circuit-breaker-1p-63a",
-    categorySlug: "wifi-smart-low-voltage-device",
-    categoryName: "Wifi Smart Low Voltage Device",
-    shortDescription: "App-controlled MCB with energy monitoring and scheduling.",
-    description:
-      "Combines the protection functions of an MCB with smart control via Wi-Fi. Remote switching, real-time energy monitoring, overload alerts, and time scheduling through a smartphone app. No hub required.",
-    features: [
-      "Remote on/off via smartphone app (iOS & Android)",
-      "Real-time power consumption monitoring",
-      "Overload, short-circuit, and arc-fault protection",
-      "Scheduled switching and timer functions",
-      "No hub required 鈥?direct Wi-Fi 2.4GHz",
-      "Compatible with Amazon Alexa and Google Home",
-    ],
-    specs: {
-      "Poles": "1P",
-      "Rated Current": "16A, 32A, 63A",
-      "Rated Voltage": "230V AC",
-      "Connectivity": "Wi-Fi 2.4GHz (802.11 b/g/n)",
-      "App": "iOS / Android",
-      "Voice Control": "Alexa, Google Home",
-      "Certification": "CE, FCC, RoHS",
-    },
-    image: "/images/products/wifi-smart-mcb.jpg",
-    badge: "New",
-  },
-  {
-    id: "ws-002",
-    name: "WiFi Smart Energy Meter 3P",
-    slug: "wifi-smart-energy-meter-3p",
-    categorySlug: "wifi-smart-low-voltage-device",
-    categoryName: "Wifi Smart Low Voltage Device",
-    shortDescription: "Three-phase smart energy monitor with cloud dashboard and API.",
-    description:
-      "Provides real-time and historical energy data for three-phase installations via cloud platform. Open API allows integration with BMS, ERP, and custom dashboards. Ideal for commercial buildings and factories.",
-    features: [
-      "Cloud-based monitoring portal",
-      "Open REST API for third-party integration",
-      "Per-phase voltage, current, power, and energy",
-      "Alarm notifications via email/push",
-    ],
-    specs: {
-      "Phases": "3P4W",
-      "Connectivity": "Wi-Fi 2.4GHz",
-      "Cloud": "MQTT / REST API",
-      "Accuracy": "Class 1",
-      "Certification": "CE, FCC",
-    },
-    image: "/images/products/wifi-energy-3p.jpg",
-  },
+ 
 
   // PV Combiner Box
   {
