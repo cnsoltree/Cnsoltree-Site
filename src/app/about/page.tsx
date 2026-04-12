@@ -98,21 +98,37 @@ export default function AboutPage() {
               <p className="section-eyebrow">Company Overview</p>
               <h2 className="section-heading">Built on Quality, Delivered Globally</h2>
               <p className="mt-4 text-sm leading-7 text-gray-600">
-                Cnsoltree is headquartered in Zhejiang Province, China — one of the
-                world's leading electrical manufacturing regions. Our 50,000 m² facility
-                houses state-of-the-art production lines, an accredited testing laboratory,
-                and a dedicated R&D centre.
+                With over 15 years of expertise, Cnsoltree manufactures a comprehensive
+                range of low-voltage electrical products, including circuit breakers, RCCBs,
+                surge protectors, and smart meters. Our solutions are widely applied in
+                residential, commercial, and industrial settings, ensuring safe and efficient
+                power distribution. Supported by ISO 9001:2015 certification and advanced
+                production facilities, we consistently deliver high-quality products at
+                competitive prices.
               </p>
-              <p className="mt-4 text-sm leading-7 text-gray-600">
-                We supply over 500 product models across 8 categories to customers in
-                80+ countries. Our product range spans from traditional miniature circuit
-                breakers to IoT-connected smart devices for next-generation building management.
-              </p>
-              <p className="mt-4 text-sm leading-7 text-gray-600">
-                Every product carries CE marking and is manufactured under ISO 9001:2015
-                quality management. We offer full OEM and private label services with
-                dedicated engineering support for custom specifications.
-              </p>
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {[
+                  "ISO & CE Certified Quality",
+                  "Factory Direct Supply",
+                  "Smart Power Monitoring",
+                  "Wide Range of Applications",
+                  "Trusted by Global Customers",
+                  "Competitive Pricing",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <svg
+                      className="h-5 w-5 flex-shrink-0 text-green-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2.5}
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm font-medium text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/products" className="btn-primary">
                   View Products
@@ -124,7 +140,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-80 overflow-hidden rounded-2xl bg-gray-100 lg:h-96">
               <Image
-                src="/images/banner/factory.jpg"
+                src="/images/factory.jpg"
                 alt="Cnsoltree production facility"
                 fill
                 className="object-cover"

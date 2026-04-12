@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "https://www.cnsoltree.com"
   ),
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
   title: {
     default: "Cnsoltree | Professional Electrical Protection Solutions",
     template: "%s | Cnsoltree",

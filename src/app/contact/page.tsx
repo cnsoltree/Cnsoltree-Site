@@ -16,7 +16,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Address",
-    value: "No.123 Industrial Avenue, Yueqing, Zhejiang 325600, China",
+    value: "Fenghuang Industrial Zone, Baishi Town, Yueqing Zhejiang P. R. China",
     href: null,
   },
   {
@@ -26,8 +26,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "sales@cnsoltree.com",
-    href: "mailto:sales@cnsoltree.com",
+    value: "Jacky@cnsoltree.com",
+    href: "mailto:Jacky@cnsoltree.com",
   },
   {
     icon: (
@@ -36,8 +36,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+86 571 1234 5678",
-    href: "tel:+8657112345678",
+    value: "+86-13693313816",
+    href: "tel:+8613693313816",
   },
   {
     icon: (
@@ -47,8 +47,8 @@ const contactInfo = [
       </svg>
     ),
     label: "WhatsApp",
-    value: "+86 138 0000 0000",
-    href: "https://wa.me/8613800000000",
+    value: "+86-13693313816",
+    href: "https://wa.me/8613693313816",
   },
 ];
 
@@ -120,15 +120,15 @@ export default function ContactPage() {
                 <dl className="mt-3 space-y-1.5 text-xs">
                   <div className="flex justify-between">
                     <dt className="text-gray-500">Monday – Friday</dt>
-                    <dd className="font-medium text-gray-800">09:00 – 18:00 CST</dd>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-gray-500">Saturday</dt>
-                    <dd className="font-medium text-gray-800">09:00 – 13:00 CST</dd>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-gray-500">Sunday</dt>
-                    <dd className="font-medium text-gray-800">Closed</dd>
+                    <dd className="font-medium text-gray-800">09:00 – 22:00 CST</dd>
                   </div>
                 </dl>
                 <p className="mt-3 text-xs text-gray-400">
