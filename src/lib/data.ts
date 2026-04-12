@@ -1,4 +1,4 @@
-// ─── Types ───────────────────────────────────────────────────────────────────
+﻿// 鈹€鈹€鈹€ Types 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 
 export interface Category {
   slug: string;
@@ -19,15 +19,13 @@ export interface Product {
   features: string[];
   specs: Record<string, string>;
   /**
-   * 封面图（必填）— 用于产品列表卡片封面，也作为详情页第一张图
-   * 路径示例："/images/products/mcb-1p-c.jpg"
+   * 灏侀潰鍥撅紙蹇呭～锛夆€?鐢ㄤ簬浜у搧鍒楄〃鍗＄墖灏侀潰锛屼篃浣滀负璇︽儏椤电涓€寮犲浘
+   * 璺緞绀轰緥锛?/images/products/mcb-1p-c.jpg"
    */
   image: string;
   /**
-   * 产品主图集（可选，最多 8 张）— 在详情页顶部以缩略图 + 大图形式展示
-   * 不填时详情页仅显示 image 封面图
-   * 示例：
-   *   images: [
+   * 浜у搧涓诲浘闆嗭紙鍙€夛紝鏈€澶?8 寮狅級鈥?鍦ㄨ鎯呴〉椤堕儴浠ョ缉鐣ュ浘 + 澶у浘褰㈠紡灞曠ず
+   * 涓嶅～鏃惰鎯呴〉浠呮樉绀?image 灏侀潰鍥?   * 绀轰緥锛?   *   images: [
    *     "/images/products/mcb-1p-c-1.jpg",
    *     "/images/products/mcb-1p-c-2.jpg",
    *     "/images/products/mcb-1p-c-3.jpg",
@@ -35,10 +33,8 @@ export interface Product {
    */
   images?: string[];
   /**
-   * 描述区图片（可选）— 显示在产品描述文字下方，支持多张
-   * 适合放安装图、应用场景图、接线图等
-   * 示例：
-   *   descriptionImages: [
+   * 鎻忚堪鍖哄浘鐗囷紙鍙€夛級鈥?鏄剧ず鍦ㄤ骇鍝佹弿杩版枃瀛椾笅鏂癸紝鏀寔澶氬紶
+   * 閫傚悎鏀惧畨瑁呭浘銆佸簲鐢ㄥ満鏅浘銆佹帴绾垮浘绛?   * 绀轰緥锛?   *   descriptionImages: [
    *     "/images/products/mcb-1p-c-wiring.jpg",
    *     "/images/products/mcb-1p-c-application.jpg",
    *   ]
@@ -46,21 +42,16 @@ export interface Product {
   descriptionImages?: string[];
   badge?: "New" | "Hot" | "Featured";
   /**
-   * SEO 字段（可选）— 不填时自动用 name / shortDescription 生成兜底值
+   * SEO 瀛楁锛堝彲閫夛級鈥?涓嶅～鏃惰嚜鍔ㄧ敤 name / shortDescription 鐢熸垚鍏滃簳鍊?   *
+   * metaTitle      鈥?娴忚鍣ㄦ爣绛鹃〉鍜屾悳绱㈢粨鏋滄爣棰橈紝寤鸿鏍煎紡锛?   *                  "浜у搧鍚?| 鍝佺被鍏抽敭璇?| Cnsoltree"
+   *                  绀轰緥锛?MCB 1P AC 6-63A Circuit Breaker | Miniature Circuit Breaker Supplier | Cnsoltree"
    *
-   * metaTitle      — 浏览器标签页和搜索结果标题，建议格式：
-   *                  "产品名 | 品类关键词 | Cnsoltree"
-   *                  示例："MCB 1P AC 6-63A Circuit Breaker | Miniature Circuit Breaker Supplier | Cnsoltree"
+   * metaDescription 鈥?鎼滅储缁撴灉鎽樿锛屽缓璁?120鈥?60 瀛楃锛屽寘鍚牳蹇冨叧閿瘝 + 琛屽姩璇?   *                  绀轰緥锛?Buy MCB 1P AC 6-63A circuit breaker from Cnsoltree. CE & RoHS certified, OEM available, ships worldwide."
    *
-   * metaDescription — 搜索结果摘要，建议 120–160 字符，包含核心关键词 + 行动词
-   *                  示例："Buy MCB 1P AC 6-63A circuit breaker from Cnsoltree. CE & RoHS certified, OEM available, ships worldwide."
+   * metaKeywords   鈥?鍏抽敭璇嶅垪琛紙閫楀彿鍒嗛殧锛夛紝3鈥? 涓紝瑕嗙洊浜у搧鍨嬪彿銆佸搧绫汇€佸簲鐢ㄥ満鏅?   *                  绀轰緥锛?MCB 1P, miniature circuit breaker, DIN rail MCB, circuit breaker supplier, CE certified MCB"
    *
-   * metaKeywords   — 关键词列表（逗号分隔），3–8 个，覆盖产品型号、品类、应用场景
-   *                  示例："MCB 1P, miniature circuit breaker, DIN rail MCB, circuit breaker supplier, CE certified MCB"
-   *
-   * imageAlts      — 每张主图对应的 alt 文字，顺序与 images 数组一致
-   *                  好的 alt 应包含产品型号 + 视角/细节描述
-   *                  示例：[
+   * imageAlts      鈥?姣忓紶涓诲浘瀵瑰簲鐨?alt 鏂囧瓧锛岄『搴忎笌 images 鏁扮粍涓€鑷?   *                  濂界殑 alt 搴斿寘鍚骇鍝佸瀷鍙?+ 瑙嗚/缁嗚妭鎻忚堪
+   *                  绀轰緥锛歔
    *                    "MCB-AC-1P single pole circuit breaker front view",
    *                    "MCB-AC-1P circuit breaker side profile",
    *                    "MCB-AC-1P DIN rail mounting detail",
@@ -84,7 +75,7 @@ export interface BlogPost {
   readingTime: number;
 }
 
-// ─── Categories ───────────────────────────────────────────────────────────────
+// 鈹€鈹€鈹€ Categories 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 
 export const categories: Category[] = [
   {
@@ -93,7 +84,7 @@ export const categories: Category[] = [
     shortDescription: "Reliable overcurrent and short-circuit protection for LV systems.",
     description:
       "Our circuit breakers deliver dependable protection for low-voltage distribution systems across industrial, commercial, and residential applications. Engineered for long service life and compliance with IEC/EN standards.",
-    image: "/images/categories/circuit-breaker.jpg",
+    image: "/images/categories/circuit-breaker.png",
   },
   {
     slug: "surge-protector-device",
@@ -101,7 +92,7 @@ export const categories: Category[] = [
     shortDescription: "Transient overvoltage suppression for sensitive equipment.",
     description:
       "Cnsoltree surge protective devices (SPDs) safeguard electrical installations and connected equipment from lightning-induced surges and switching transients, meeting IEC 61643 Type 1/2/3 requirements.",
-    image: "/images/categories/surge-protector.jpg",
+    image: "/images/categories/surge-protector-device.png",
   },
   {
     slug: "dc-fuse-holder",
@@ -109,7 +100,7 @@ export const categories: Category[] = [
     shortDescription: "Safe and compact fuse mounting for DC circuits up to 1500V.",
     description:
       "Designed for photovoltaic and battery storage systems, our DC fuse holders ensure secure fuse mounting with IP-rated protection, touch-safe operation, and compatibility with standard cylindrical fuses.",
-    image: "/images/categories/dc-fuse-holder.jpg",
+    image: "/images/categories/dc-fuse-holder.png",
   },
   {
     slug: "over-voltage-protector",
@@ -117,7 +108,7 @@ export const categories: Category[] = [
     shortDescription: "Automatic load disconnection against sustained overvoltage.",
     description:
       "Our overvoltage protection relays continuously monitor supply voltage and disconnect loads instantly upon detecting dangerous voltage levels, protecting motors, appliances, and electronic equipment.",
-    image: "/images/categories/over-voltage-protector.jpg",
+    image: "/images/categories/over-voltage-protector.png",
   },
   {
     slug: "power-meter",
@@ -125,7 +116,7 @@ export const categories: Category[] = [
     shortDescription: "Precision energy measurement for industrial and commercial use.",
     description:
       "Multifunction DIN-rail power meters measure voltage, current, power, energy, power factor, and harmonics. Suitable for energy management, cost allocation, and demand monitoring in smart buildings.",
-    image: "/images/categories/power-meter.jpg",
+    image: "/images/categories/power-meter.png",
   },
   {
     slug: "wifi-smart-low-voltage-device",
@@ -133,7 +124,7 @@ export const categories: Category[] = [
     shortDescription: "IoT-enabled low-voltage devices for smart building control.",
     description:
       "Integrate low-voltage switching and monitoring into your smart building or energy management platform via Wi-Fi. Compatible with popular home automation protocols and cloud dashboards.",
-    image: "/images/categories/wifi-smart.jpg",
+    image: "/images/categories/wifi-smart-low-voltage-device.png",
   },
   {
     slug: "pv-combiner-box",
@@ -141,7 +132,7 @@ export const categories: Category[] = [
     shortDescription: "String combiner solutions for solar PV arrays.",
     description:
       "Our PV combiner boxes consolidate multiple PV string inputs into a single output, incorporating overcurrent protection, surge protection, and DC disconnection for safe and efficient solar installations.",
-    image: "/images/categories/pv-combiner-box.jpg",
+    image: "/images/categories/pv-combiner-box.png",
   },
   {
     slug: "ats-dual-power-switch",
@@ -149,30 +140,30 @@ export const categories: Category[] = [
     shortDescription: "Automatic transfer switching for uninterrupted power supply.",
     description:
       "Automatic Transfer Switches (ATS) provide seamless changeover between two independent power sources, ensuring continuous supply to critical loads. Available for single-phase and three-phase systems.",
-    image: "/images/categories/ats.jpg",
+    image: "/images/categories/ats-dual-power-switch.png",
   },
 ];
 
-// ─── Products ─────────────────────────────────────────────────────────────────
+// 鈹€鈹€鈹€ Products 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 
 export const products: Product[] = [
   // Circuit Breaker
   {
     id: "MCB-AC-1P",
-    name: "MCB 1P AC 6–63A Circuit breaker",
-    slug: "MCB-1P-AC-6–63A-Circuit-breaker",
+    name: "MCB 1P AC 6鈥?3A Circuit breaker",
+    slug: "MCB-1P-AC-6鈥?3A-Circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Single-pole miniature circuit breaker, 6–63A, B/C/D-curve, ideal for residential lighting and socket circuit protection.",
+    shortDescription: "Single-pole miniature circuit breaker, 6鈥?3A, B/C/D-curve, ideal for residential lighting and socket circuit protection.",
     description:
-      "The Cnsoltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics — B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
+      "The Cnsoltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics 鈥?B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
     features: [
-      "Slim 18mm single-module width — maximises circuit density in compact boards",
-      "B / C / D trip curve options — covers lighting, general, and motor loads",
+      "Slim 18mm single-module width 鈥?maximises circuit density in compact boards",
+      "B / C / D trip curve options 鈥?covers lighting, general, and motor loads",
       "Ideal for residential distribution boards and socket circuit protection",
-      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "CE & RoHS certified 鈥?accepted in EU, UK, and global markets",
       "100% factory electrical test before shipment",
-      "OEM / ODM customization available — logo, color, rating label",
+      "OEM / ODM customization available 鈥?logo, color, rating label",
       "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
@@ -214,20 +205,20 @@ export const products: Product[] = [
   },
   {
     id: "MCB-AC-2P",
-    name: "MCB 2P AC 6–63A Circuit breaker",
+    name: "MCB 2P AC 6鈥?3A Circuit breaker",
     slug: "mcb-2p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Double-pole miniature circuit breaker, 6–63A, B/C/D-curve, simultaneously disconnects live and neutral for full circuit isolation.",
+    shortDescription: "Double-pole miniature circuit breaker, 6鈥?3A, B/C/D-curve, simultaneously disconnects live and neutral for full circuit isolation.",
     description:
-      "The Cnsoltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors — a critical safety requirement for bathroom circuits, outdoor installations, and any application where full disconnection is mandatory. Rated at 120V/230V AC across 6A to 63A, it is the preferred choice for TT earthing systems and markets requiring double-pole protection by regulation (IEC 60364, BS 7671). Manufactured under ISO 9001 quality management, the robust flame-retardant housing and high-conductivity copper alloy contacts ensure consistent performance over 20,000 mechanical operations.",
+      "The Cnsoltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors 鈥?a critical safety requirement for bathroom circuits, outdoor installations, and any application where full disconnection is mandatory. Rated at 120V/230V AC across 6A to 63A, it is the preferred choice for TT earthing systems and markets requiring double-pole protection by regulation (IEC 60364, BS 7671). Manufactured under ISO 9001 quality management, the robust flame-retardant housing and high-conductivity copper alloy contacts ensure consistent performance over 20,000 mechanical operations.",
     features: [
-      "Simultaneous live + neutral disconnection — full circuit isolation in one operation",
+      "Simultaneous live + neutral disconnection 鈥?full circuit isolation in one operation",
       "Mandatory for bathroom, outdoor, and TT system installations",
       "Complies with IEC 60364 and BS 7671 double-pole protection requirements",
-      "CE & RoHS certified — accepted in EU, UK, and global markets",
-      "High-conductivity copper alloy contacts — 20,000 mechanical operations rated",
-      "OEM / ODM customization available — logo, color, rating label",
+      "CE & RoHS certified 鈥?accepted in EU, UK, and global markets",
+      "High-conductivity copper alloy contacts 鈥?20,000 mechanical operations rated",
+      "OEM / ODM customization available 鈥?logo, color, rating label",
       "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
@@ -269,20 +260,20 @@ export const products: Product[] = [
   },
   {
     id: "MCB-AC-3P",
-    name: "MCB 3P AC 6–63A Circuit breaker",
+    name: "MCB 3P AC 6鈥?3A Circuit breaker",
     slug: "mcb-3p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Three-pole miniature circuit breaker, 6–63A, B/C/D-curve, designed for three-phase industrial equipment and motor protection.",
+    shortDescription: "Three-pole miniature circuit breaker, 6鈥?3A, B/C/D-curve, designed for three-phase industrial equipment and motor protection.",
     description:
-      "The Cnsoltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors — a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
+      "The Cnsoltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors 鈥?a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
     features: [
-      "Simultaneous three-phase disconnection — prevents single-phasing motor damage",
+      "Simultaneous three-phase disconnection 鈥?prevents single-phasing motor damage",
       "D-curve option for high inrush motor and transformer loads",
       "Ideal for HVAC, pumps, compressors, and three-phase sub-boards",
-      "CE & RoHS certified — accepted in EU, UK, and global markets",
-      "Compact 3-module DIN footprint — optimises panel space in industrial enclosures",
-      "OEM / ODM customization available — logo, color, rating label",
+      "CE & RoHS certified 鈥?accepted in EU, UK, and global markets",
+      "Compact 3-module DIN footprint 鈥?optimises panel space in industrial enclosures",
+      "OEM / ODM customization available 鈥?logo, color, rating label",
       "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
@@ -324,20 +315,20 @@ export const products: Product[] = [
   },
   {
     id: "MCB-AC-4P",
-    name: "MCB 4P AC 6–63A Circuit breaker",
+    name: "MCB 4P AC 6鈥?3A Circuit breaker",
     slug: "mcb-4p-ac-6-63a-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Four-pole miniature circuit breaker, 6–63A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S systems.",
+    shortDescription: "Four-pole miniature circuit breaker, 6鈥?3A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S systems.",
     description:
-      "The Cnsoltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral — the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
+      "The Cnsoltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral 鈥?the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
     features: [
-      "Full 3P+N simultaneous disconnection — highest isolation level for four-wire systems",
+      "Full 3P+N simultaneous disconnection 鈥?highest isolation level for four-wire systems",
       "Required for TN-S and TN-C-S systems where neutral switching is mandated",
       "Eliminates neutral voltage rise risk during asymmetric fault conditions",
       "Ideal for data centres, hospitals, and commercial buildings with sensitive loads",
-      "CE & RoHS certified — accepted in EU, UK, and global markets",
-      "OEM / ODM customization available — logo, color, rating label",
+      "CE & RoHS certified 鈥?accepted in EU, UK, and global markets",
+      "OEM / ODM customization available 鈥?logo, color, rating label",
       "18-year ISO 9001 certified manufacturing facility",
     ],
     specs: {
@@ -379,21 +370,21 @@ export const products: Product[] = [
   },
   {
     id: "MCB-DC-1P",
-    name: "MCB 1P DC 6–63A Circuit Breaker",
+    name: "MCB 1P DC 6鈥?3A Circuit Breaker",
     slug: "1p-dc-mcb-solar-circuit-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Ultra-compact single-pole DC breaker for solar PV string protection — only 18mm wide, 500V DC rated.",
+    shortDescription: "Ultra-compact single-pole DC breaker for solar PV string protection 鈥?only 18mm wide, 500V DC rated.",
     description:
-      "The Cnsoltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch circuits. At just 18mm wide, it fits where multi-pole breakers cannot — making it the go-to choice for densely packed combiner boxes and compact off-grid battery enclosures. Rated at 500V DC with enhanced magnetic arc quenching, this breaker reliably interrupts stubborn DC arcs that would damage conventional AC-rated devices. Every unit leaves our ISO 9001 certified factory only after passing 100% electrical verification, giving installers confidence in consistent trip accuracy across the full 6–63A range. Whether you are wiring a rooftop solar array, a 48V telecom rack, or an RV leisure battery, the 1P DC MCB delivers code-compliant overcurrent protection without wasting valuable panel space.",
+      "The Cnsoltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch circuits. At just 18mm wide, it fits where multi-pole breakers cannot 鈥?making it the go-to choice for densely packed combiner boxes and compact off-grid battery enclosures. Rated at 500V DC with enhanced magnetic arc quenching, this breaker reliably interrupts stubborn DC arcs that would damage conventional AC-rated devices. Every unit leaves our ISO 9001 certified factory only after passing 100% electrical verification, giving installers confidence in consistent trip accuracy across the full 6鈥?3A range. Whether you are wiring a rooftop solar array, a 48V telecom rack, or an RV leisure battery, the 1P DC MCB delivers code-compliant overcurrent protection without wasting valuable panel space.",
     features: [
-      "Ultra-compact 18mm single-module width — saves critical DIN-rail space in crowded combiner boxes.",
-      "500V DC arc-quenching chamber — safely extinguishes persistent DC arcs that standard AC breakers cannot handle.",
-      "9 current ratings (6A–63A) — one SKU family covers everything from small off-grid setups to large string inverters.",
-      "100% factory electrical testing — every unit verified for correct trip curve before shipment.",
-      "Full OEM/ODM program — custom printing, private-label packaging, and modified trip curves available.",
-      "Thermal-magnetic dual protection — fast short-circuit response plus reliable overload tripping.",
-      "Snap-on 35mm DIN rail mount — tool-free installation and removal for rapid field service.",
+      "Ultra-compact 18mm single-module width 鈥?saves critical DIN-rail space in crowded combiner boxes.",
+      "500V DC arc-quenching chamber 鈥?safely extinguishes persistent DC arcs that standard AC breakers cannot handle.",
+      "9 current ratings (6A鈥?3A) 鈥?one SKU family covers everything from small off-grid setups to large string inverters.",
+      "100% factory electrical testing 鈥?every unit verified for correct trip curve before shipment.",
+      "Full OEM/ODM program 鈥?custom printing, private-label packaging, and modified trip curves available.",
+      "Thermal-magnetic dual protection 鈥?fast short-circuit response plus reliable overload tripping.",
+      "Snap-on 35mm DIN rail mount 鈥?tool-free installation and removal for rapid field service.",
     ],
     specs: {
       "Poles": "1P",
@@ -405,13 +396,13 @@ export const products: Product[] = [
       "Mechanical Life": "20,000 operations",
       "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
-      "Certification": "CE, RoHS, IEC 60947-2, TÜV (for PV)",
+      "Certification": "CE, RoHS, IEC 60947-2, T脺V (for PV)",
       "Mounting Method": "DIN Rail Mounting (35mm)",
       "Contact Material": "Silver Alloy Contacts",
       "Application": "Solar PV System, DC Power Distribution, Marine Electrical System",
       "Arc Extinguishing System": "Enhanced Magnetic Arc Quenching for DC",
       "Wiring Method": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)",
-      "Operating Temperature": "-25°C to +70°C",
+      "Operating Temperature": "-25掳C to +70掳C",
       "IP Rating": "IP20",
     },
     image: "/images/products/MCB-DC-1P-01.jpg",
@@ -424,8 +415,8 @@ export const products: Product[] = [
       "/images/products/MCB-DC-1P-06.jpg",
       "/images/products/MCB-DC-1P-07.jpg",
     ],
-    metaTitle: "1P DC MCB 6–63A 500V Solar Circuit Breaker | Cnsoltree",
-    metaDescription: "Buy Cnsoltree 1 Pole DC MCB — 500V rated, 6kA breaking capacity, CE & TÜV certified for solar PV. Ultra-compact 18mm design. OEM welcome. Get a quote today!",
+    metaTitle: "1P DC MCB 6鈥?3A 500V Solar Circuit Breaker | Cnsoltree",
+    metaDescription: "Buy Cnsoltree 1 Pole DC MCB 鈥?500V rated, 6kA breaking capacity, CE & T脺V certified for solar PV. Ultra-compact 18mm design. OEM welcome. Get a quote today!",
     metaKeywords: "1P DC MCB, single pole DC circuit breaker, 500V DC breaker, solar PV MCB, photovoltaic circuit breaker, DC miniature circuit breaker, DIN rail DC breaker",
     imageAlts: [
       "Cnsoltree 1P DC MCB 500V solar circuit breaker front view",
@@ -433,27 +424,27 @@ export const products: Product[] = [
       "MCB-DC-1P breaker terminal detail with screw connections",
       "1 pole DC MCB internal arc-quenching chamber close-up",
       "Cnsoltree 1P DC circuit breaker mounted on 35mm DIN rail",
-      "MCB-DC-1P product label showing CE TÜV certification marks",
+      "MCB-DC-1P product label showing CE T脺V certification marks",
       "Single pole 500V DC MCB packaging and accessories",
     ],
   },
   {
     id: "MCB-DC-2P",
-    name: "MCB 2P DC 6–63A Circuit Breaker",
+    name: "MCB 2P DC 6鈥?3A Circuit Breaker",
     slug: "2p-dc-mcb-battery-disconnect-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Two-pole DC breaker with simultaneous positive/negative disconnection — the industry standard for residential solar and battery storage.",
+    shortDescription: "Two-pole DC breaker with simultaneous positive/negative disconnection 鈥?the industry standard for residential solar and battery storage.",
     description:
-      "The Cnsoltree 2 Pole DC MCB is the most widely specified DC breaker for residential solar installations and battery energy storage systems. By breaking both the positive and negative conductors simultaneously, it provides complete galvanic isolation in a single switching action — eliminating the shock hazard that remains when only one pole is opened. Rated at 500V DC with 6kA breaking capacity, it handles the demanding fault currents generated by lithium-ion battery banks and high-voltage PV strings alike. The linked toggle mechanism guarantees that both poles trip together under overload or short-circuit conditions, meeting the safety requirements of IEC 60947-2 and TÜV PV certification. Backed by 18 years of manufacturing expertise and 100% pre-shipment electrical testing, the 2P DC MCB is available in nine current ratings from 6A to 63A — ready for everything from a single residential inverter feed to a parallel battery rack.",
+      "The Cnsoltree 2 Pole DC MCB is the most widely specified DC breaker for residential solar installations and battery energy storage systems. By breaking both the positive and negative conductors simultaneously, it provides complete galvanic isolation in a single switching action 鈥?eliminating the shock hazard that remains when only one pole is opened. Rated at 500V DC with 6kA breaking capacity, it handles the demanding fault currents generated by lithium-ion battery banks and high-voltage PV strings alike. The linked toggle mechanism guarantees that both poles trip together under overload or short-circuit conditions, meeting the safety requirements of IEC 60947-2 and T脺V PV certification. Backed by 18 years of manufacturing expertise and 100% pre-shipment electrical testing, the 2P DC MCB is available in nine current ratings from 6A to 63A 鈥?ready for everything from a single residential inverter feed to a parallel battery rack.",
     features: [
-      "Simultaneous 2-pole disconnection — breaks positive and negative lines together for full galvanic isolation.",
-      "500V DC rated with 6kA breaking capacity — handles high fault currents from lithium battery banks.",
-      "Linked toggle mechanism — both poles always trip together, preventing dangerous single-pole open states.",
-      "Ideal for residential solar and ESS — the most popular configuration for home PV inverter protection.",
-      "9 current ratings (6A–63A) — covers single-inverter feeds through parallel battery strings.",
-      "100% factory-tested trip accuracy — consistent C-curve performance across every production batch.",
-      "OEM/ODM ready — custom branding, bilingual labels, and modified specifications for your market.",
+      "Simultaneous 2-pole disconnection 鈥?breaks positive and negative lines together for full galvanic isolation.",
+      "500V DC rated with 6kA breaking capacity 鈥?handles high fault currents from lithium battery banks.",
+      "Linked toggle mechanism 鈥?both poles always trip together, preventing dangerous single-pole open states.",
+      "Ideal for residential solar and ESS 鈥?the most popular configuration for home PV inverter protection.",
+      "9 current ratings (6A鈥?3A) 鈥?covers single-inverter feeds through parallel battery strings.",
+      "100% factory-tested trip accuracy 鈥?consistent C-curve performance across every production batch.",
+      "OEM/ODM ready 鈥?custom branding, bilingual labels, and modified specifications for your market.",
     ],
     specs: {
       "Poles": "2P",
@@ -465,13 +456,13 @@ export const products: Product[] = [
       "Mechanical Life": "20,000 operations",
       "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
-      "Certification": "CE, RoHS, IEC 60947-2, TÜV (for PV)",
+      "Certification": "CE, RoHS, IEC 60947-2, T脺V (for PV)",
       "Mounting Method": "DIN Rail Mounting (35mm)",
       "Contact Material": "Silver Alloy Contacts",
       "Application": "Solar PV System, DC Power Distribution, Marine Electrical System",
       "Arc Extinguishing System": "Enhanced Magnetic Arc Quenching for DC",
       "Wiring Method": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)",
-      "Operating Temperature": "-25°C to +70°C",
+      "Operating Temperature": "-25掳C to +70掳C",
       "IP Rating": "IP20",
     },
     image: "/images/products/MCB-DC-2P-01.jpg",
@@ -484,8 +475,8 @@ export const products: Product[] = [
       "/images/products/MCB-DC-2P-06.jpg",
       "/images/products/MCB-DC-2P-07.jpg",
     ],
-    metaTitle: "2P DC MCB 6–63A Solar & Battery Disconnect Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 2 Pole DC MCB disconnects positive & negative simultaneously. 500V DC, 6kA, TÜV certified for solar PV & battery storage. Request OEM pricing now!",
+    metaTitle: "2P DC MCB 6鈥?3A Solar & Battery Disconnect Breaker | Cnsoltree",
+    metaDescription: "Cnsoltree 2 Pole DC MCB disconnects positive & negative simultaneously. 500V DC, 6kA, T脺V certified for solar PV & battery storage. Request OEM pricing now!",
     metaKeywords: "2P DC MCB, two pole DC circuit breaker, solar battery disconnect, DC isolator breaker, PV combiner box breaker, 500V DC breaker 2 pole, residential solar MCB",
     imageAlts: [
       "Cnsoltree 2P DC MCB 500V solar battery disconnect breaker front view",
@@ -493,27 +484,27 @@ export const products: Product[] = [
       "MCB-DC-2P dual terminal detail for positive and negative conductors",
       "2 pole DC MCB arc-quenching system internal view",
       "Cnsoltree 2P DC breaker installed in residential solar combiner box",
-      "MCB-DC-2P certification label showing CE TÜV IEC 60947-2 marks",
+      "MCB-DC-2P certification label showing CE T脺V IEC 60947-2 marks",
       "Two pole 500V DC MCB retail packaging with wiring diagram",
     ],
   },
   {
     id: "MCB-DC-3P",
-    name: "MCB 3P DC 6–63A Circuit Breaker",
+    name: "MCB 3P DC 6鈥?3A Circuit Breaker",
     slug: "3p-dc-mcb-commercial-solar-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Three-pole DC breaker for commercial PV arrays and high-voltage DC bus protection — 500V per pole, series-stackable.",
+    shortDescription: "Three-pole DC breaker for commercial PV arrays and high-voltage DC bus protection 鈥?500V per pole, series-stackable.",
     description:
-      "The Cnsoltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand multi-pole series protection. By connecting three poles in series, system designers can achieve safe interruption at voltages well beyond the single-pole 500V DC rating — a critical requirement for large rooftop arrays and ground-mount solar farms feeding high-voltage DC buses. Each pole contains an independent enhanced magnetic arc-quenching chamber, ensuring that even at elevated voltages the DC arc is reliably extinguished within milliseconds. The three-pole configuration also suits marine DC power networks and EV charging infrastructure where three-wire DC distribution is used. With 6kA DC breaking capacity, TÜV PV certification, and nine selectable current ratings from 6A to 63A, this breaker gives project engineers the flexibility to standardize on a single product family across diverse commercial DC applications. Every unit is 100% electrically tested in our ISO 9001 facility before shipping worldwide.",
+      "The Cnsoltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand multi-pole series protection. By connecting three poles in series, system designers can achieve safe interruption at voltages well beyond the single-pole 500V DC rating 鈥?a critical requirement for large rooftop arrays and ground-mount solar farms feeding high-voltage DC buses. Each pole contains an independent enhanced magnetic arc-quenching chamber, ensuring that even at elevated voltages the DC arc is reliably extinguished within milliseconds. The three-pole configuration also suits marine DC power networks and EV charging infrastructure where three-wire DC distribution is used. With 6kA DC breaking capacity, T脺V PV certification, and nine selectable current ratings from 6A to 63A, this breaker gives project engineers the flexibility to standardize on a single product family across diverse commercial DC applications. Every unit is 100% electrically tested in our ISO 9001 facility before shipping worldwide.",
     features: [
-      "3-pole series connection — enables safe switching at system voltages far above single-pole limits.",
-      "Independent arc chamber per pole — each pole extinguishes its own DC arc for maximum reliability.",
-      "Built for commercial solar — protects high-voltage DC buses on rooftop and ground-mount PV farms.",
-      "Marine and EV-ready — suits three-wire DC distribution in vessels and charging stations.",
-      "6kA DC breaking capacity — interrupts high fault currents from parallel-connected PV strings.",
-      "TÜV PV + IEC 60947-2 certified — meets international standards for photovoltaic DC protection.",
-      "Full OEM/ODM customization — voltage markings, trip curve variants, and private-label packaging available.",
+      "3-pole series connection 鈥?enables safe switching at system voltages far above single-pole limits.",
+      "Independent arc chamber per pole 鈥?each pole extinguishes its own DC arc for maximum reliability.",
+      "Built for commercial solar 鈥?protects high-voltage DC buses on rooftop and ground-mount PV farms.",
+      "Marine and EV-ready 鈥?suits three-wire DC distribution in vessels and charging stations.",
+      "6kA DC breaking capacity 鈥?interrupts high fault currents from parallel-connected PV strings.",
+      "T脺V PV + IEC 60947-2 certified 鈥?meets international standards for photovoltaic DC protection.",
+      "Full OEM/ODM customization 鈥?voltage markings, trip curve variants, and private-label packaging available.",
     ],
     specs: {
       "Poles": "3P",
@@ -525,13 +516,13 @@ export const products: Product[] = [
       "Mechanical Life": "20,000 operations",
       "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
-      "Certification": "CE, RoHS, IEC 60947-2, TÜV (for PV)",
+      "Certification": "CE, RoHS, IEC 60947-2, T脺V (for PV)",
       "Mounting Method": "DIN Rail Mounting (35mm)",
       "Contact Material": "Silver Alloy Contacts",
       "Application": "Solar PV System, DC Power Distribution, Marine Electrical System",
       "Arc Extinguishing System": "Enhanced Magnetic Arc Quenching for DC",
       "Wiring Method": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)",
-      "Operating Temperature": "-25°C to +70°C",
+      "Operating Temperature": "-25掳C to +70掳C",
       "IP Rating": "IP20",
     },
     image: "/images/products/MCB-DC-3P-01.jpg",
@@ -544,8 +535,8 @@ export const products: Product[] = [
       "/images/products/MCB-DC-3P-06.jpg",
       "/images/products/MCB-DC-3P-07.jpg",
     ],
-    metaTitle: "3P DC MCB 6–63A Commercial Solar PV Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 3 Pole DC MCB for commercial solar and high-voltage DC bus. Series-stackable 500V/pole, 6kA, TÜV certified. Ideal for PV farms. Get a free quote!",
+    metaTitle: "3P DC MCB 6鈥?3A Commercial Solar PV Breaker | Cnsoltree",
+    metaDescription: "Cnsoltree 3 Pole DC MCB for commercial solar and high-voltage DC bus. Series-stackable 500V/pole, 6kA, T脺V certified. Ideal for PV farms. Get a free quote!",
     metaKeywords: "3P DC MCB, three pole DC circuit breaker, commercial solar breaker, high voltage DC MCB, PV farm circuit breaker, 3 pole DC isolator, marine DC breaker",
     imageAlts: [
       "Cnsoltree 3P DC MCB commercial solar circuit breaker front view",
@@ -553,27 +544,27 @@ export const products: Product[] = [
       "MCB-DC-3P terminal block detail for series-connected DC wiring",
       "3 pole DC MCB three independent arc-quenching chambers close-up",
       "Cnsoltree 3P DC circuit breaker in commercial PV distribution board",
-      "MCB-DC-3P rating plate with TÜV PV and IEC 60947-2 certification",
+      "MCB-DC-3P rating plate with T脺V PV and IEC 60947-2 certification",
       "Three pole 500V DC MCB export packaging with installation guide",
     ],
   },
   {
     id: "MCB-DC-4P",
-    name: "MCB 4P DC 6–63A Circuit Breaker",
+    name: "MCB 4P DC 6鈥?3A Circuit Breaker",
     slug: "4p-dc-mcb-industrial-pv-breaker",
     categorySlug: "circuit-breaker",
     categoryName: "Circuit Breaker",
-    shortDescription: "Four-pole DC breaker for industrial solar plants and bipolar DC networks — maximum isolation safety with 500V per pole.",
+    shortDescription: "Four-pole DC breaker for industrial solar plants and bipolar DC networks 鈥?maximum isolation safety with 500V per pole.",
     description:
-      "The Cnsoltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for industrial-scale solar plants, utility-grade energy storage, and bipolar DC distribution networks, the four-pole configuration allows engineers to protect both the positive and negative buses of a bipolar system — or to achieve the maximum series voltage rating for extra-high-voltage DC strings. All four poles share a common linked toggle that guarantees simultaneous disconnection, a safety requirement in large installations where maintenance personnel must achieve a verified zero-energy state. With four independent enhanced magnetic arc chambers, the breaker can handle the extreme energy of industrial DC faults at up to 6kA. Each unit carries CE, TÜV PV, and IEC 60947-2 certification and is backed by Cnsoltree's 18-year track record of 100% electrical testing. Available in 6A through 63A with full OEM customization, it is the professional's choice when no compromise on DC safety is acceptable.",
+      "The Cnsoltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for industrial-scale solar plants, utility-grade energy storage, and bipolar DC distribution networks, the four-pole configuration allows engineers to protect both the positive and negative buses of a bipolar system 鈥?or to achieve the maximum series voltage rating for extra-high-voltage DC strings. All four poles share a common linked toggle that guarantees simultaneous disconnection, a safety requirement in large installations where maintenance personnel must achieve a verified zero-energy state. With four independent enhanced magnetic arc chambers, the breaker can handle the extreme energy of industrial DC faults at up to 6kA. Each unit carries CE, T脺V PV, and IEC 60947-2 certification and is backed by Cnsoltree's 18-year track record of 100% electrical testing. Available in 6A through 63A with full OEM customization, it is the professional's choice when no compromise on DC safety is acceptable.",
     features: [
-      "4-pole simultaneous disconnection — guarantees verified zero-energy state for safe maintenance lockout.",
-      "Bipolar DC network compatible — protects both positive and negative buses in bipolar distribution systems.",
-      "Maximum series voltage capability — four poles in series for extra-high-voltage DC string protection.",
-      "Industrial-grade 6kA breaking capacity — handles extreme fault energy from large PV arrays and battery farms.",
-      "Four independent arc chambers — each pole extinguishes DC arcs independently for redundant safety.",
-      "CE + TÜV PV + IEC 60947-2 — fully certified for utility-scale solar and industrial DC applications.",
-      "Complete OEM/ODM program — custom ratings, branded enclosures, and project-specific documentation available.",
+      "4-pole simultaneous disconnection 鈥?guarantees verified zero-energy state for safe maintenance lockout.",
+      "Bipolar DC network compatible 鈥?protects both positive and negative buses in bipolar distribution systems.",
+      "Maximum series voltage capability 鈥?four poles in series for extra-high-voltage DC string protection.",
+      "Industrial-grade 6kA breaking capacity 鈥?handles extreme fault energy from large PV arrays and battery farms.",
+      "Four independent arc chambers 鈥?each pole extinguishes DC arcs independently for redundant safety.",
+      "CE + T脺V PV + IEC 60947-2 鈥?fully certified for utility-scale solar and industrial DC applications.",
+      "Complete OEM/ODM program 鈥?custom ratings, branded enclosures, and project-specific documentation available.",
     ],
     specs: {
       "Poles": "4P",
@@ -585,13 +576,13 @@ export const products: Product[] = [
       "Mechanical Life": "20,000 operations",
       "Electrical Life": "10,000 operations",
       "Mounting": "DIN-rail 35mm",
-      "Certification": "CE, RoHS, IEC 60947-2, TÜV (for PV)",
+      "Certification": "CE, RoHS, IEC 60947-2, T脺V (for PV)",
       "Mounting Method": "DIN Rail Mounting (35mm)",
       "Contact Material": "Silver Alloy Contacts",
       "Application": "Solar PV System, DC Power Distribution, Marine Electrical System",
       "Arc Extinguishing System": "Enhanced Magnetic Arc Quenching for DC",
       "Wiring Method": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)",
-      "Operating Temperature": "-25°C to +70°C",
+      "Operating Temperature": "-25掳C to +70掳C",
       "IP Rating": "IP20",
     },
     image: "/images/products/MCB-DC-4P-01.jpg",
@@ -604,8 +595,8 @@ export const products: Product[] = [
       "/images/products/MCB-DC-4P-06.jpg",
       "/images/products/MCB-DC-4P-07.jpg",
     ],
-    metaTitle: "4P DC MCB 6–63A Industrial Solar & Bipolar Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 4 Pole DC MCB for industrial PV plants and bipolar DC networks. 500V/pole, 6kA, TÜV + CE certified. Full OEM support. Request bulk pricing today!",
+    metaTitle: "4P DC MCB 6鈥?3A Industrial Solar & Bipolar Breaker | Cnsoltree",
+    metaDescription: "Cnsoltree 4 Pole DC MCB for industrial PV plants and bipolar DC networks. 500V/pole, 6kA, T脺V + CE certified. Full OEM support. Request bulk pricing today!",
     metaKeywords: "4P DC MCB, four pole DC circuit breaker, industrial solar breaker, bipolar DC MCB, utility scale PV breaker, 4 pole DC isolator, energy storage DC breaker",
     imageAlts: [
       "Cnsoltree 4P DC MCB industrial solar circuit breaker front view",
@@ -613,7 +604,7 @@ export const products: Product[] = [
       "MCB-DC-4P quad terminal block for bipolar DC wiring",
       "4 pole DC MCB four independent arc-quenching chambers detail",
       "Cnsoltree 4P DC circuit breaker in industrial PV distribution panel",
-      "MCB-DC-4P nameplate with CE TÜV IEC 60947-2 certification marks",
+      "MCB-DC-4P nameplate with CE T脺V IEC 60947-2 certification marks",
       "Four pole 500V DC MCB bulk packaging for industrial projects",
     ],
   },
@@ -624,16 +615,16 @@ export const products: Product[] = [
     slug: "spd-ac-1p-385v-40ka-tn-s-neutral-ground",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "1-pole 385VAC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge current, ≤2.0kV protection level, <25ns response — modular hot-swappable DIN rail design for sub-distribution and combined lightning boxes.",
+    shortDescription: "1-pole 385VAC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge current, 鈮?.0kV protection level, <25ns response 鈥?modular hot-swappable DIN rail design for sub-distribution and combined lightning boxes.",
     description:
-      "The SPD-AC-1P-Grey is a single-pole AC surge protection device designed specifically for neutral-ground (N-PE) protection in TN-S low-voltage distribution systems. It safeguards the neutral line of single-phase systems against surge transients caused by lightning or switching events, with a maximum discharge current of 40kA and a nominal discharge current of 20kA. The voltage protection level of ≤2.0kV ensures downstream equipment is kept within safe limits during transient events. At its core is a metal oxide varistor (MOV) that responds in under 25 nanoseconds — effectively instantaneous suppression. The grey flame-retardant PC housing (UL94 V-0 rated) snaps onto a standard 35mm DIN rail and features a modular, hot-swappable design, allowing replacement under live conditions without rewiring. Suitable for installation in sub-distribution boxes and combined lightning boxes.",
+      "The SPD-AC-1P-Grey is a single-pole AC surge protection device designed specifically for neutral-ground (N-PE) protection in TN-S low-voltage distribution systems. It safeguards the neutral line of single-phase systems against surge transients caused by lightning or switching events, with a maximum discharge current of 40kA and a nominal discharge current of 20kA. The voltage protection level of 鈮?.0kV ensures downstream equipment is kept within safe limits during transient events. At its core is a metal oxide varistor (MOV) that responds in under 25 nanoseconds 鈥?effectively instantaneous suppression. The grey flame-retardant PC housing (UL94 V-0 rated) snaps onto a standard 35mm DIN rail and features a modular, hot-swappable design, allowing replacement under live conditions without rewiring. Suitable for installation in sub-distribution boxes and combined lightning boxes.",
     features: [
       "1-pole N-PE protection for TN-S low-voltage distribution systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤2.0kV — protects neutral line from transient overvoltage",
-      "<25ns ultra-fast response time — instantaneous transient suppression",
-      "Metal oxide varistor (MOV) core — excellent conductivity and corrosion resistance",
-      "Modular hot-swappable design — replace without rewiring",
+      "Voltage protection level 鈮?.0kV 鈥?protects neutral line from transient overvoltage",
+      "<25ns ultra-fast response time 鈥?instantaneous transient suppression",
+      "Metal oxide varistor (MOV) core 鈥?excellent conductivity and corrosion resistance",
+      "Modular hot-swappable design 鈥?replace without rewiring",
       "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting",
       "Suitable for sub-distribution boxes and combined lightning boxes",
     ],
@@ -642,7 +633,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "385V AC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤2.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "System Type": "TN-S Low-voltage Distribution System",
       "Protection Mode": "N-PE (Neutral to Ground)",
       "Wiring": "Top: Neutral / Bottom: Ground (PE)",
@@ -664,12 +655,12 @@ export const products: Product[] = [
       "/images/products/SPD-AC-1P-Grey-7.jpg",
     ],
     metaTitle: "1P SPD 385V 40kA TN-S | Neutral-Ground AC Surge Protector | Cnsoltree",
-    metaDescription: "1-pole 385VAC AC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge, ≤2.0kV protection level, <25ns response. DIN rail, hot-swappable. For sub-distribution and lightning boxes.",
+    metaDescription: "1-pole 385VAC AC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge, 鈮?.0kV protection level, <25ns response. DIN rail, hot-swappable. For sub-distribution and lightning boxes.",
     metaKeywords: "AC surge protector, 1P SPD, 385V SPD, TN-S SPD, neutral ground SPD, N-PE surge protector, 40kA SPD, DIN rail SPD, combined lightning box SPD, MOV surge protector",
     imageAlts: [
-      "SPD-AC-1P-Grey 1-pole AC surge protector front view — grey DIN rail SPD",
-      "SPD-AC-1P-Grey wiring diagram — top Neutral, bottom Ground (PE) connection",
-      "SPD-AC-1P-Grey MOV core component detail — metal oxide varistor",
+      "SPD-AC-1P-Grey 1-pole AC surge protector front view 鈥?grey DIN rail SPD",
+      "SPD-AC-1P-Grey wiring diagram 鈥?top Neutral, bottom Ground (PE) connection",
+      "SPD-AC-1P-Grey MOV core component detail 鈥?metal oxide varistor",
       "SPD-AC-1P-Grey 385V 40kA N-PE surge protection module close-up",
       "SPD-AC-1P-Grey modular hot-swappable design on 35mm DIN rail",
       "SPD-AC-1P-Grey flame-retardant PC housing UL94 V-0 detail",
@@ -682,17 +673,17 @@ export const products: Product[] = [
     slug: "spd-ac-2p-385v-40ka-full-mode",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "2-pole 385VAC full-mode surge protector covering L-N, L-PE and N-PE protection. 40kA max discharge, ≤2.0kV protection level, <25ns response — modular hot-swappable DIN rail SPD for residential and small industrial distribution boxes.",
+    shortDescription: "2-pole 385VAC full-mode surge protector covering L-N, L-PE and N-PE protection. 40kA max discharge, 鈮?.0kV protection level, <25ns response 鈥?modular hot-swappable DIN rail SPD for residential and small industrial distribution boxes.",
     description:
-      "The SPD-AC-2P-Grey is a 2-pole AC surge protection device providing full-mode protection across all three paths — L-N, L-PE, and N-PE — in a single module. This comprehensive coverage ensures that single-phase electrical devices and precision instruments are shielded from surge transients regardless of which conductor the overvoltage appears on. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is kept at ≤2.0kV. At its core, a metal oxide varistor (MOV) responds in under 25 nanoseconds for instantaneous suppression. Compatible with single-phase AC and IT systems, the SPD-AC-2P connects via L (In/Out) and N (In/Out) terminals and clips onto a standard 35mm DIN rail. The grey flame-retardant PC housing (UL94 V-0) features a modular, hot-swappable design for maintenance without rewiring. Suitable for main distribution boxes, sub-distribution boxes, and small industrial circuit panels.",
+      "The SPD-AC-2P-Grey is a 2-pole AC surge protection device providing full-mode protection across all three paths 鈥?L-N, L-PE, and N-PE 鈥?in a single module. This comprehensive coverage ensures that single-phase electrical devices and precision instruments are shielded from surge transients regardless of which conductor the overvoltage appears on. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is kept at 鈮?.0kV. At its core, a metal oxide varistor (MOV) responds in under 25 nanoseconds for instantaneous suppression. Compatible with single-phase AC and IT systems, the SPD-AC-2P connects via L (In/Out) and N (In/Out) terminals and clips onto a standard 35mm DIN rail. The grey flame-retardant PC housing (UL94 V-0) features a modular, hot-swappable design for maintenance without rewiring. Suitable for main distribution boxes, sub-distribution boxes, and small industrial circuit panels.",
     features: [
       "2-pole full-mode protection: L-N, L-PE and N-PE in a single module",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤2.0kV — protects single-phase devices and precision instruments",
-      "<25ns ultra-fast response time — instantaneous transient suppression",
-      "Metal oxide varistor (MOV) core — excellent conductivity and corrosion resistance",
+      "Voltage protection level 鈮?.0kV 鈥?protects single-phase devices and precision instruments",
+      "<25ns ultra-fast response time 鈥?instantaneous transient suppression",
+      "Metal oxide varistor (MOV) core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with single-phase AC systems and IT systems",
-      "Modular hot-swappable design — replace without rewiring",
+      "Modular hot-swappable design 鈥?replace without rewiring",
       "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting",
     ],
     specs: {
@@ -700,7 +691,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "385V AC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤2.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "System Type": "Single-phase AC System, IT System",
       "Protection Mode": "L-N, L-PE, N-PE (Full Mode)",
       "Wiring": "L (In/Out), N (In/Out)",
@@ -722,13 +713,13 @@ export const products: Product[] = [
       "/images/products/SPD-AC-2P-Grey-7.jpg",
     ],
     metaTitle: "2P SPD 385V 40kA Full Mode | L-N L-PE N-PE AC Surge Protector | Cnsoltree",
-    metaDescription: "2-pole 385VAC full-mode AC surge protector — L-N, L-PE and N-PE protection in one module. 40kA max discharge, ≤2.0kV, <25ns response. DIN rail, hot-swappable. For residential and industrial distribution boxes.",
+    metaDescription: "2-pole 385VAC full-mode AC surge protector 鈥?L-N, L-PE and N-PE protection in one module. 40kA max discharge, 鈮?.0kV, <25ns response. DIN rail, hot-swappable. For residential and industrial distribution boxes.",
     metaKeywords: "2P AC surge protector, full mode SPD, L-N L-PE N-PE SPD, 385V SPD, 40kA SPD, single phase SPD, residential SPD, DIN rail surge protector, MOV SPD, IT system SPD",
     imageAlts: [
-      "SPD-AC-2P-Grey 2-pole AC surge protector front view — grey DIN rail SPD",
-      "SPD-AC-2P-Grey wiring diagram — L and N in/out terminal connection",
-      "SPD-AC-2P-Grey full-mode protection paths — L-N, L-PE and N-PE",
-      "SPD-AC-2P-Grey MOV core component detail — metal oxide varistor",
+      "SPD-AC-2P-Grey 2-pole AC surge protector front view 鈥?grey DIN rail SPD",
+      "SPD-AC-2P-Grey wiring diagram 鈥?L and N in/out terminal connection",
+      "SPD-AC-2P-Grey full-mode protection paths 鈥?L-N, L-PE and N-PE",
+      "SPD-AC-2P-Grey MOV core component detail 鈥?metal oxide varistor",
       "SPD-AC-2P-Grey 385V 40kA full-mode surge protection module close-up",
       "SPD-AC-2P-Grey modular hot-swappable design on 35mm DIN rail",
       "SPD-AC-2P-Grey installed in residential main distribution box",
@@ -740,17 +731,17 @@ export const products: Product[] = [
     slug: "spd-ac-3p-385v-40ka-three-phase-lpe",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "3-pole 385VAC surge protector for three-phase 3-wire systems (no neutral). Independent L1-PE, L2-PE, L3-PE protection per phase. 40kA max discharge, ≤2.5kV protection level, <25ns response — for industrial power equipment and motor control panels.",
+    shortDescription: "3-pole 385VAC surge protector for three-phase 3-wire systems (no neutral). Independent L1-PE, L2-PE, L3-PE protection per phase. 40kA max discharge, 鈮?.5kV protection level, <25ns response 鈥?for industrial power equipment and motor control panels.",
     description:
-      "The SPD-AC-3P-Grey is a 3-pole AC surge protection device for three-phase 3-wire low-voltage systems without neutral. It provides independent phase-to-earth (L-PE) protection on each of the three phases — L1-PE, L2-PE, and L3-PE — shielding industrial power devices and three-phase loads from surge transients caused by lightning strikes or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤2.5kV per phase. A metal oxide varistor (MOV) core delivers sub-25ns response for instantaneous transient clamping. The grey flame-retardant PC housing (UL94 V-0) mounts directly on a 35mm DIN rail with a modular, hot-swappable design — modules can be replaced individually during maintenance without full rewiring. Suitable for installation in power distribution cabinets and equipment control boxes serving three-phase industrial loads.",
+      "The SPD-AC-3P-Grey is a 3-pole AC surge protection device for three-phase 3-wire low-voltage systems without neutral. It provides independent phase-to-earth (L-PE) protection on each of the three phases 鈥?L1-PE, L2-PE, and L3-PE 鈥?shielding industrial power devices and three-phase loads from surge transients caused by lightning strikes or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.5kV per phase. A metal oxide varistor (MOV) core delivers sub-25ns response for instantaneous transient clamping. The grey flame-retardant PC housing (UL94 V-0) mounts directly on a 35mm DIN rail with a modular, hot-swappable design 鈥?modules can be replaced individually during maintenance without full rewiring. Suitable for installation in power distribution cabinets and equipment control boxes serving three-phase industrial loads.",
     features: [
       "3-pole independent L-PE protection per phase: L1-PE, L2-PE, L3-PE",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤2.5kV per phase — for three-phase industrial loads",
-      "<25ns ultra-fast response time — instantaneous transient suppression",
-      "Metal oxide varistor (MOV) core — excellent conductivity and corrosion resistance",
-      "Three-phase 3-wire system (no neutral) — suitable for industrial installations",
-      "Modular hot-swappable design — individual module replacement without rewiring",
+      "Voltage protection level 鈮?.5kV per phase 鈥?for three-phase industrial loads",
+      "<25ns ultra-fast response time 鈥?instantaneous transient suppression",
+      "Metal oxide varistor (MOV) core 鈥?excellent conductivity and corrosion resistance",
+      "Three-phase 3-wire system (no neutral) 鈥?suitable for industrial installations",
+      "Modular hot-swappable design 鈥?individual module replacement without rewiring",
       "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting",
     ],
     specs: {
@@ -758,7 +749,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "385V AC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤2.5kV",
+      "Voltage Protection Level (Up)": "鈮?.5kV",
       "System Type": "Three-phase 3-wire Low-voltage System (No Neutral)",
       "Protection Mode": "L1-PE, L2-PE, L3-PE",
       "Wiring": "3 Phase Lines (L1, L2, L3), No Neutral",
@@ -780,13 +771,13 @@ export const products: Product[] = [
       "/images/products/SPD-AC-3P-Grey-7.jpg",
     ],
     metaTitle: "3P SPD 385V 40kA Three-Phase | L-PE AC Surge Protector | Cnsoltree",
-    metaDescription: "3-pole 385VAC three-phase L-PE surge protector for 3-wire systems. Independent L1-PE, L2-PE, L3-PE protection. 40kA max discharge, ≤2.5kV, <25ns response. DIN rail, hot-swappable. For industrial equipment and motor control.",
+    metaDescription: "3-pole 385VAC three-phase L-PE surge protector for 3-wire systems. Independent L1-PE, L2-PE, L3-PE protection. 40kA max discharge, 鈮?.5kV, <25ns response. DIN rail, hot-swappable. For industrial equipment and motor control.",
     metaKeywords: "3P AC surge protector, three-phase SPD, L-PE SPD, 385V 3 phase SPD, 40kA industrial SPD, motor control SPD, power distribution cabinet SPD, DIN rail SPD, MOV three-phase surge protector",
     imageAlts: [
-      "SPD-AC-3P-Grey 3-pole AC surge protector front view — grey three-phase DIN rail SPD",
-      "SPD-AC-3P-Grey wiring diagram — L1 L2 L3 phase line connections",
+      "SPD-AC-3P-Grey 3-pole AC surge protector front view 鈥?grey three-phase DIN rail SPD",
+      "SPD-AC-3P-Grey wiring diagram 鈥?L1 L2 L3 phase line connections",
       "SPD-AC-3P-Grey independent L-PE protection per phase detail",
-      "SPD-AC-3P-Grey MOV core component detail — metal oxide varistor",
+      "SPD-AC-3P-Grey MOV core component detail 鈥?metal oxide varistor",
       "SPD-AC-3P-Grey 385V 40kA three-phase surge protection module close-up",
       "SPD-AC-3P-Grey modular hot-swappable design on 35mm DIN rail",
       "SPD-AC-3P-Grey installed in industrial power distribution cabinet",
@@ -798,17 +789,17 @@ export const products: Product[] = [
     slug: "spd-ac-4p-385v-40ka-three-phase-neutral-full-mode",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "4-pole 385VAC full-mode surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection in one unit. 40kA max discharge, ≤2.5kV, <25ns response — for factory main cabinets, data centers and large building entry panels.",
+    shortDescription: "4-pole 385VAC full-mode surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection in one unit. 40kA max discharge, 鈮?.5kV, <25ns response 鈥?for factory main cabinets, data centers and large building entry panels.",
     description:
-      "The SPD-AC-4P-Grey is a 4-pole AC surge protection device providing complete full-mode protection across all four conductors — L1-PE, L2-PE, L3-PE and N-PE — in three-phase 4-wire TT and TN-S low-voltage systems. By covering all three phases and the neutral line simultaneously, it shields three-phase electrical devices, precision instruments, and the neutral conductor from surge transients caused by lightning or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤2.5kV per mode. A metal oxide varistor (MOV) core responds in under 25 nanoseconds for instantaneous clamping of transient overvoltages. The grey flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and features a modular, hot-swappable design for easy on-site maintenance. Designed for the highest level of entry-point protection in factory main distribution cabinets, data centers, and large commercial building entry panels.",
+      "The SPD-AC-4P-Grey is a 4-pole AC surge protection device providing complete full-mode protection across all four conductors 鈥?L1-PE, L2-PE, L3-PE and N-PE 鈥?in three-phase 4-wire TT and TN-S low-voltage systems. By covering all three phases and the neutral line simultaneously, it shields three-phase electrical devices, precision instruments, and the neutral conductor from surge transients caused by lightning or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.5kV per mode. A metal oxide varistor (MOV) core responds in under 25 nanoseconds for instantaneous clamping of transient overvoltages. The grey flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and features a modular, hot-swappable design for easy on-site maintenance. Designed for the highest level of entry-point protection in factory main distribution cabinets, data centers, and large commercial building entry panels.",
     features: [
       "4-pole full-mode protection: L1-PE, L2-PE, L3-PE and N-PE in one unit",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤2.5kV — covers all phases and neutral",
-      "<25ns ultra-fast response time — instantaneous transient suppression",
-      "Metal oxide varistor (MOV) core — excellent conductivity and corrosion resistance",
+      "Voltage protection level 鈮?.5kV 鈥?covers all phases and neutral",
+      "<25ns ultra-fast response time 鈥?instantaneous transient suppression",
+      "Metal oxide varistor (MOV) core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with TT and TN-S three-phase 4-wire low-voltage systems",
-      "Modular hot-swappable design — individual module replacement without rewiring",
+      "Modular hot-swappable design 鈥?individual module replacement without rewiring",
       "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting",
     ],
     specs: {
@@ -816,7 +807,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "385V AC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤2.5kV",
+      "Voltage Protection Level (Up)": "鈮?.5kV",
       "System Type": "Three-phase 4-wire Low-voltage System (TT / TN-S)",
       "Protection Mode": "L1-PE, L2-PE, L3-PE, N-PE (Full Mode)",
       "Wiring": "3 Phase Lines (L1, L2, L3) + Neutral (N)",
@@ -838,13 +829,13 @@ export const products: Product[] = [
       "/images/products/SPD-AC-4P-Grey-7.jpg",
     ],
     metaTitle: "4P SPD 385V 40kA Full Mode | Three-Phase+N AC Surge Protector | Cnsoltree",
-    metaDescription: "4-pole 385VAC full-mode AC surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection. 40kA max discharge, ≤2.5kV, <25ns response. For factory cabinets, data centers and large buildings.",
+    metaDescription: "4-pole 385VAC full-mode AC surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection. 40kA max discharge, 鈮?.5kV, <25ns response. For factory cabinets, data centers and large buildings.",
     metaKeywords: "4P AC surge protector, three-phase neutral SPD, full mode SPD, TT TN-S SPD, 385V 4 pole SPD, 40kA SPD, factory cabinet SPD, data center SPD, large building SPD, DIN rail surge protector",
     imageAlts: [
-      "SPD-AC-4P-Grey 4-pole AC surge protector front view — grey three-phase+N DIN rail SPD",
-      "SPD-AC-4P-Grey wiring diagram — L1 L2 L3 phase lines and Neutral connection",
-      "SPD-AC-4P-Grey full-mode protection paths — L1-PE L2-PE L3-PE and N-PE",
-      "SPD-AC-4P-Grey MOV core component detail — metal oxide varistor",
+      "SPD-AC-4P-Grey 4-pole AC surge protector front view 鈥?grey three-phase+N DIN rail SPD",
+      "SPD-AC-4P-Grey wiring diagram 鈥?L1 L2 L3 phase lines and Neutral connection",
+      "SPD-AC-4P-Grey full-mode protection paths 鈥?L1-PE L2-PE L3-PE and N-PE",
+      "SPD-AC-4P-Grey MOV core component detail 鈥?metal oxide varistor",
       "SPD-AC-4P-Grey 385V 40kA four-pole surge protection module close-up",
       "SPD-AC-4P-Grey modular hot-swappable design on 35mm DIN rail",
       "SPD-AC-4P-Grey installed in factory main distribution cabinet",
@@ -856,7 +847,7 @@ export const products: Product[] = [
     slug: "spd-dc-1p-500v-1000v-40ka-pv",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response — protects solar electrical systems and load equipment from lightning and transient overvoltage. For RVs and residential solar installations.",
+    shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response 鈥?protects solar electrical systems and load equipment from lightning and transient overvoltage. For RVs and residential solar installations.",
     description:
       "The SPD-DC-1P-White is a single-pole DC surge protection device engineered specifically for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. It protects solar electrical systems and connected load equipment against lightning-induced surges, switching transients, and overvoltage events, with a maximum discharge current of 40kA and a nominal of 20kA. The voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC, adapting to the system voltage in use. Built with a copper core for excellent conductivity and corrosion resistance, the device is housed in a white flame-retardant PC enclosure (flame-retardant rated) that snaps onto a standard 35mm DIN rail. Compatible with PV systems and circuit breakers, it is designed for installation inside distribution boxes on RV solar setups and residential rooftop solar systems.",
     features: [
@@ -865,7 +856,7 @@ export const products: Product[] = [
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
       "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
       "Lightning protection, surge suppression and transient overvoltage clamping",
-      "Copper core — excellent conductivity and corrosion resistance",
+      "Copper core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with PV systems and DC circuit breakers",
       "White flame-retardant PC housing, 35mm DIN rail mounting",
     ],
@@ -899,9 +890,9 @@ export const products: Product[] = [
     metaDescription: "1-pole DC surge protector for 500V and 1000V PV solar systems. 40kA max discharge, 2.8kV/3.6kV protection level, copper core, fast response. DIN rail, white housing. For RV and residential solar installations.",
     metaKeywords: "DC surge protector, 1P DC SPD, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, DIN rail DC SPD",
     imageAlts: [
-      "SPD-DC-1P-White 1-pole DC surge protector front view — white PV solar SPD",
+      "SPD-DC-1P-White 1-pole DC surge protector front view 鈥?white PV solar SPD",
       "SPD-DC-1P-White supporting 500VDC and 1000VDC PV system voltage",
-      "SPD-DC-1P-White copper core component detail — excellent conductivity",
+      "SPD-DC-1P-White copper core component detail 鈥?excellent conductivity",
       "SPD-DC-1P-White 40kA surge discharge and voltage protection level detail",
       "SPD-DC-1P-White wiring connection in distribution box",
       "SPD-DC-1P-White white flame-retardant PC housing close-up",
@@ -915,16 +906,16 @@ export const products: Product[] = [
     slug: "spd-dc-2p-500v-1000v-40ka-pv",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative conductors. 40kA max discharge, fast response — for RV and residential solar distribution boxes.",
+    shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative conductors. 40kA max discharge, fast response 鈥?for RV and residential solar distribution boxes.",
     description:
-      "The SPD-DC-2P-White is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit — shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The white flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
+      "The SPD-DC-2P-White is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit 鈥?shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The white flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
     features: [
-      "2-pole DC surge protection — simultaneous positive and negative conductor protection",
+      "2-pole DC surge protection 鈥?simultaneous positive and negative conductor protection",
       "Dual voltage: supports 500VDC and 1000VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
       "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
       "Lightning protection, surge suppression and transient overvoltage clamping",
-      "Copper core — excellent conductivity and corrosion resistance",
+      "Copper core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with PV systems and DC circuit breakers",
       "White flame-retardant PC housing, 35mm DIN rail mounting",
     ],
@@ -958,10 +949,10 @@ export const products: Product[] = [
     metaDescription: "2-pole DC surge protector for 500V and 1000V PV solar systems. Protects positive and negative conductors simultaneously. 40kA max discharge, 2.8kV/3.6kV protection level, copper core. For RV and residential solar.",
     metaKeywords: "2P DC surge protector, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, two pole DC SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, DIN rail DC SPD",
     imageAlts: [
-      "SPD-DC-2P-White 2-pole DC surge protector front view — white PV solar SPD",
+      "SPD-DC-2P-White 2-pole DC surge protector front view 鈥?white PV solar SPD",
       "SPD-DC-2P-White 2-pole positive and negative conductor protection diagram",
       "SPD-DC-2P-White supporting 500VDC and 1000VDC PV system voltage",
-      "SPD-DC-2P-White copper core component detail — excellent conductivity",
+      "SPD-DC-2P-White copper core component detail 鈥?excellent conductivity",
       "SPD-DC-2P-White 40kA surge discharge and voltage protection level detail",
       "SPD-DC-2P-White wiring connection in distribution box",
       "SPD-DC-2P-White on 35mm DIN rail in solar distribution box",
@@ -974,17 +965,17 @@ export const products: Product[] = [
     slug: "spd-dc-3p-1000v-1500v-40ka-pv-full-mode",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/DC-. 40kA max discharge, ≤4.0kV protection level — for PV combiner boxes, inverter DC sides, and solar power stations.",
+    shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/DC-. 40kA max discharge, 鈮?.0kV protection level 鈥?for PV combiner boxes, inverter DC sides, and solar power stations.",
     description:
-      "The SPD-DC-3P-White is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting both 1000VDC and 1500VDC operating voltages. It provides full-mode protection across all three DC protection paths simultaneously — DC+ to PE, DC- to PE, and DC+ to DC- — ensuring that inverters, PV arrays, and DC loads are comprehensively shielded against lightning-induced surges, switching transients, and overvoltage events regardless of which conductor is affected. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤4.0kV. At its core is a high-energy metal oxide varistor (MOV) that responds in under 25 nanoseconds. The modular, hot-swappable design allows individual modules to be replaced without rewiring, minimizing downtime in live installations. The white flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is suitable for installation in DC distribution cabinets and PV combiner boxes at solar power stations.",
+      "The SPD-DC-3P-White is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting both 1000VDC and 1500VDC operating voltages. It provides full-mode protection across all three DC protection paths simultaneously 鈥?DC+ to PE, DC- to PE, and DC+ to DC- 鈥?ensuring that inverters, PV arrays, and DC loads are comprehensively shielded against lightning-induced surges, switching transients, and overvoltage events regardless of which conductor is affected. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.0kV. At its core is a high-energy metal oxide varistor (MOV) that responds in under 25 nanoseconds. The modular, hot-swappable design allows individual modules to be replaced without rewiring, minimizing downtime in live installations. The white flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is suitable for installation in DC distribution cabinets and PV combiner boxes at solar power stations.",
     features: [
       "3-pole full-mode DC protection: DC+/PE, DC-/PE and DC+/DC- in one unit",
       "High voltage: supports 1000VDC and 1500VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤4.0kV — for high-voltage PV arrays and inverters",
-      "<25ns ultra-fast response — high-energy MOV core for instantaneous clamping",
+      "Voltage protection level 鈮?.0kV 鈥?for high-voltage PV arrays and inverters",
+      "<25ns ultra-fast response 鈥?high-energy MOV core for instantaneous clamping",
       "Protects inverters, PV arrays and DC loads from lightning and transient overvoltage",
-      "Modular hot-swappable design — minimize downtime in live solar installations",
+      "Modular hot-swappable design 鈥?minimize downtime in live solar installations",
       "White flame-retardant PC housing (UL94 V-0), 35mm DIN rail mounting",
     ],
     specs: {
@@ -992,7 +983,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "1000VDC / 1500VDC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤4.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "Application System": "Photovoltaic DC System",
       "Protection Mode": "DC+/PE, DC-/PE, DC+/DC- (Full Mode)",
       "Wiring": "3 Terminals: DC+, DC-, PE",
@@ -1015,14 +1006,14 @@ export const products: Product[] = [
       "/images/products/SPD-DC-3P-White-8.jpg",
     ],
     metaTitle: "3P DC SPD 1000V/1500V 40kA Full Mode | PV Solar Surge Protector | Cnsoltree",
-    metaDescription: "3-pole DC surge protector for 1000V and 1500V PV systems. Full-mode DC+/PE, DC-/PE and DC+/DC- protection. 40kA max discharge, ≤4.0kV, <25ns response. For PV combiner boxes, inverter DC side and solar power stations.",
+    metaDescription: "3-pole DC surge protector for 1000V and 1500V PV systems. Full-mode DC+/PE, DC-/PE and DC+/DC- protection. 40kA max discharge, 鈮?.0kV, <25ns response. For PV combiner boxes, inverter DC side and solar power stations.",
     metaKeywords: "3P DC surge protector, 1000V DC SPD, 1500V DC SPD, full mode DC SPD, PV combiner box SPD, inverter DC SPD, solar power station SPD, high voltage DC SPD, MOV DC surge protector",
     imageAlts: [
-      "SPD-DC-3P-White 3-pole DC surge protector front view — white high-voltage PV SPD",
-      "SPD-DC-3P-White full-mode protection paths — DC+/PE, DC-/PE and DC+/DC-",
-      "SPD-DC-3P-White 3 terminal wiring — DC+, DC- and PE connection",
+      "SPD-DC-3P-White 3-pole DC surge protector front view 鈥?white high-voltage PV SPD",
+      "SPD-DC-3P-White full-mode protection paths 鈥?DC+/PE, DC-/PE and DC+/DC-",
+      "SPD-DC-3P-White 3 terminal wiring 鈥?DC+, DC- and PE connection",
       "SPD-DC-3P-White high-energy MOV core for 1000V/1500V DC protection",
-      "SPD-DC-3P-White 40kA surge discharge and ≤4.0kV protection level detail",
+      "SPD-DC-3P-White 40kA surge discharge and 鈮?.0kV protection level detail",
       "SPD-DC-3P-White modular hot-swappable design on 35mm DIN rail",
       "SPD-DC-3P-White installed in PV combiner box at solar power station",
       "SPD-DC-3P-White on inverter DC side of commercial PV system",
@@ -1034,16 +1025,16 @@ export const products: Product[] = [
     slug: "spd-dc-4p-1000v-1500v-40ka-dual-mppt",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). 40kA max discharge — for dual MPPT inverters, PV combiner boxes, and energy storage systems.",
+    shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). 40kA max discharge 鈥?for dual MPPT inverters, PV combiner boxes, and energy storage systems.",
     description:
-      "The SPD-DC-4P-White is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting both 1000VDC and 1500VDC. Unlike single-input DC SPDs, it provides two completely independent protection circuits — DC1 (DC1+/PE and DC1-/PE) and DC2 (DC2+/PE and DC2-/PE) — allowing a single unit to simultaneously protect both input channels of a dual MPPT inverter or two separate PV arrays in a combiner box. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤4.0kV per channel. The high-energy metal oxide varistor (MOV) core responds in under 25 nanoseconds. The modular hot-swappable design allows individual pole modules to be replaced without rewiring. The white flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is built for installation in DC distribution cabinets and at inverter DC inputs in solar power and energy storage systems.",
+      "The SPD-DC-4P-White is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting both 1000VDC and 1500VDC. Unlike single-input DC SPDs, it provides two completely independent protection circuits 鈥?DC1 (DC1+/PE and DC1-/PE) and DC2 (DC2+/PE and DC2-/PE) 鈥?allowing a single unit to simultaneously protect both input channels of a dual MPPT inverter or two separate PV arrays in a combiner box. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.0kV per channel. The high-energy metal oxide varistor (MOV) core responds in under 25 nanoseconds. The modular hot-swappable design allows individual pole modules to be replaced without rewiring. The white flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is built for installation in DC distribution cabinets and at inverter DC inputs in solar power and energy storage systems.",
     features: [
       "4-pole dual-input protection: two independent DC circuits in one module",
       "Protects DC1 (DC1+/PE, DC1-/PE) and DC2 (DC2+/PE, DC2-/PE) simultaneously",
       "High voltage: supports 1000VDC and 1500VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤4.0kV per channel",
-      "<25ns ultra-fast response — high-energy MOV core for instantaneous clamping",
+      "Voltage protection level 鈮?.0kV per channel",
+      "<25ns ultra-fast response 鈥?high-energy MOV core for instantaneous clamping",
       "Ideal for dual MPPT inverters, PV combiner boxes and energy storage systems",
       "Modular hot-swappable design, white flame-retardant PC housing, 35mm DIN rail",
     ],
@@ -1052,7 +1043,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "1000VDC / 1500VDC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤4.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "Application System": "Photovoltaic DC System (Dual Input)",
       "Protection Mode": "DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE (Dual Independent)",
       "Wiring": "4 Terminals: DC1+, DC1-, DC2+, DC2-",
@@ -1075,14 +1066,14 @@ export const products: Product[] = [
       "/images/products/SPD-DC-4P-White-8.jpg",
     ],
     metaTitle: "4P DC SPD 1000V/1500V 40kA Dual MPPT | PV Surge Protector | Cnsoltree",
-    metaDescription: "4-pole dual-input DC surge protector for 1000V/1500V PV systems. Independent DC1 and DC2 channel protection. 40kA max discharge, ≤4.0kV, <25ns. For dual MPPT inverters, PV combiner boxes and energy storage systems.",
+    metaDescription: "4-pole dual-input DC surge protector for 1000V/1500V PV systems. Independent DC1 and DC2 channel protection. 40kA max discharge, 鈮?.0kV, <25ns. For dual MPPT inverters, PV combiner boxes and energy storage systems.",
     metaKeywords: "4P DC surge protector, dual MPPT SPD, dual input DC SPD, 1000V DC SPD, 1500V DC SPD, PV combiner box SPD, energy storage SPD, inverter DC input SPD, high voltage DC surge protector",
     imageAlts: [
-      "SPD-DC-4P-White 4-pole dual-input DC surge protector front view — white PV SPD",
-      "SPD-DC-4P-White dual circuit protection — DC1 and DC2 independent channels",
-      "SPD-DC-4P-White 4 terminal wiring — DC1+, DC1-, DC2+, DC2- connection",
+      "SPD-DC-4P-White 4-pole dual-input DC surge protector front view 鈥?white PV SPD",
+      "SPD-DC-4P-White dual circuit protection 鈥?DC1 and DC2 independent channels",
+      "SPD-DC-4P-White 4 terminal wiring 鈥?DC1+, DC1-, DC2+, DC2- connection",
       "SPD-DC-4P-White high-energy MOV core for 1000V/1500V DC dual-input protection",
-      "SPD-DC-4P-White 40kA surge discharge and ≤4.0kV protection level detail",
+      "SPD-DC-4P-White 40kA surge discharge and 鈮?.0kV protection level detail",
       "SPD-DC-4P-White modular hot-swappable design on 35mm DIN rail",
       "SPD-DC-4P-White installed on dual MPPT inverter DC input",
       "SPD-DC-4P-White in PV combiner box and energy storage system",
@@ -1094,7 +1085,7 @@ export const products: Product[] = [
     slug: "spd-dc-1p-500v-1000v-40ka-pv-orange",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response — protects solar electrical systems and load equipment from lightning and transient overvoltage. For RVs and residential solar installations.",
+    shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response 鈥?protects solar electrical systems and load equipment from lightning and transient overvoltage. For RVs and residential solar installations.",
     description:
       "The SPD-DC-1P-Orange is a single-pole DC surge protection device engineered specifically for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. It protects solar electrical systems and connected load equipment against lightning-induced surges, switching transients, and overvoltage events, with a maximum discharge current of 40kA and a nominal of 20kA. The voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC, adapting to the system voltage in use. Built with a copper core for excellent conductivity and corrosion resistance, the device is housed in an orange flame-retardant PC enclosure that snaps onto a standard 35mm DIN rail. Compatible with PV systems and circuit breakers, it is designed for installation inside distribution boxes on RV solar setups and residential rooftop solar systems.",
     features: [
@@ -1103,7 +1094,7 @@ export const products: Product[] = [
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
       "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
       "Lightning protection, surge suppression and transient overvoltage clamping",
-      "Copper core — excellent conductivity and corrosion resistance",
+      "Copper core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with PV systems and DC circuit breakers",
       "Orange flame-retardant PC housing, 35mm DIN rail mounting",
     ],
@@ -1137,9 +1128,9 @@ export const products: Product[] = [
     metaDescription: "Single-pole orange DC SPD for 500VDC and 1000VDC photovoltaic systems. Protects one DC conductor from lightning surges and switching transients. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing for visual identification. Suits RV solar and residential rooftop PV distribution boxes.",
     metaKeywords: "DC surge protector, 1P DC SPD, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, orange DC SPD",
     imageAlts: [
-      "SPD-DC-1P-Orange 1-pole DC surge protector front view — orange PV solar SPD",
+      "SPD-DC-1P-Orange 1-pole DC surge protector front view 鈥?orange PV solar SPD",
       "SPD-DC-1P-Orange supporting 500VDC and 1000VDC PV system voltage",
-      "SPD-DC-1P-Orange copper core component detail — excellent conductivity",
+      "SPD-DC-1P-Orange copper core component detail 鈥?excellent conductivity",
       "SPD-DC-1P-Orange 40kA surge discharge and voltage protection level detail",
       "SPD-DC-1P-Orange wiring connection in distribution box",
       "SPD-DC-1P-Orange orange flame-retardant PC housing close-up",
@@ -1153,16 +1144,16 @@ export const products: Product[] = [
     slug: "spd-dc-2p-500v-1000v-40ka-pv-orange",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative conductors. 40kA max discharge, fast response — for RV and residential solar distribution boxes.",
+    shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative conductors. 40kA max discharge, fast response 鈥?for RV and residential solar distribution boxes.",
     description:
-      "The SPD-DC-2P-Orange is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit — shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The orange flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
+      "The SPD-DC-2P-Orange is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit 鈥?shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The orange flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
     features: [
-      "2-pole DC surge protection — simultaneous positive and negative conductor protection",
+      "2-pole DC surge protection 鈥?simultaneous positive and negative conductor protection",
       "Dual voltage: supports 500VDC and 1000VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
       "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
       "Lightning protection, surge suppression and transient overvoltage clamping",
-      "Copper core — excellent conductivity and corrosion resistance",
+      "Copper core 鈥?excellent conductivity and corrosion resistance",
       "Compatible with PV systems and DC circuit breakers",
       "Orange flame-retardant PC housing, 35mm DIN rail mounting",
     ],
@@ -1193,13 +1184,13 @@ export const products: Product[] = [
       "/images/products/SPD-DC-2P-Orange-8.jpg",
     ],
     metaTitle: "2P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Cnsoltree",
-    metaDescription: "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC− conductors in a single circuit loop. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing aids cable identification. For two-wire DC circuits in RV and home solar installations.",
+    metaDescription: "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC鈭?conductors in a single circuit loop. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing aids cable identification. For two-wire DC circuits in RV and home solar installations.",
     metaKeywords: "2P DC surge protector, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, two pole DC SPD, RV solar surge protector, residential solar SPD, orange DC SPD, DIN rail DC SPD",
     imageAlts: [
-      "SPD-DC-2P-Orange 2-pole DC surge protector front view — orange PV solar SPD",
+      "SPD-DC-2P-Orange 2-pole DC surge protector front view 鈥?orange PV solar SPD",
       "SPD-DC-2P-Orange 2-pole positive and negative conductor protection diagram",
       "SPD-DC-2P-Orange supporting 500VDC and 1000VDC PV system voltage",
-      "SPD-DC-2P-Orange copper core component detail — excellent conductivity",
+      "SPD-DC-2P-Orange copper core component detail 鈥?excellent conductivity",
       "SPD-DC-2P-Orange 40kA surge discharge and voltage protection level detail",
       "SPD-DC-2P-Orange wiring connection in distribution box",
       "SPD-DC-2P-Orange on 35mm DIN rail in solar distribution box",
@@ -1212,17 +1203,17 @@ export const products: Product[] = [
     slug: "spd-dc-3p-1000v-1500v-40ka-pv-full-mode-orange",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/DC-. 40kA max discharge, ≤4.0kV protection level — for PV combiner boxes, inverter DC sides, and solar power stations.",
+    shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/DC-. 40kA max discharge, 鈮?.0kV protection level 鈥?for PV combiner boxes, inverter DC sides, and solar power stations.",
     description:
-      "The SPD-DC-3P-Orange is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting both 1000VDC and 1500VDC operating voltages. It provides full-mode protection across all three DC protection paths simultaneously — DC+ to PE, DC- to PE, and DC+ to DC- — ensuring that inverters, PV arrays, and DC loads are comprehensively shielded against lightning-induced surges, switching transients, and overvoltage events regardless of which conductor is affected. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤4.0kV. At its core is a high-energy metal oxide varistor (MOV) that responds in under 25 nanoseconds. The modular, hot-swappable design allows individual modules to be replaced without rewiring, minimizing downtime in live installations. The orange flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is suitable for installation in DC distribution cabinets and PV combiner boxes at solar power stations.",
+      "The SPD-DC-3P-Orange is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting both 1000VDC and 1500VDC operating voltages. It provides full-mode protection across all three DC protection paths simultaneously 鈥?DC+ to PE, DC- to PE, and DC+ to DC- 鈥?ensuring that inverters, PV arrays, and DC loads are comprehensively shielded against lightning-induced surges, switching transients, and overvoltage events regardless of which conductor is affected. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.0kV. At its core is a high-energy metal oxide varistor (MOV) that responds in under 25 nanoseconds. The modular, hot-swappable design allows individual modules to be replaced without rewiring, minimizing downtime in live installations. The orange flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is suitable for installation in DC distribution cabinets and PV combiner boxes at solar power stations.",
     features: [
       "3-pole full-mode DC protection: DC+/PE, DC-/PE and DC+/DC- in one unit",
       "High voltage: supports 1000VDC and 1500VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤4.0kV — for high-voltage PV arrays and inverters",
-      "<25ns ultra-fast response — high-energy MOV core for instantaneous clamping",
+      "Voltage protection level 鈮?.0kV 鈥?for high-voltage PV arrays and inverters",
+      "<25ns ultra-fast response 鈥?high-energy MOV core for instantaneous clamping",
       "Protects inverters, PV arrays and DC loads from lightning and transient overvoltage",
-      "Modular hot-swappable design — minimize downtime in live solar installations",
+      "Modular hot-swappable design 鈥?minimize downtime in live solar installations",
       "Orange flame-retardant PC housing (UL94 V-0), 35mm DIN rail mounting",
     ],
     specs: {
@@ -1230,7 +1221,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "1000VDC / 1500VDC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤4.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "Application System": "Photovoltaic DC System",
       "Protection Mode": "DC+/PE, DC-/PE, DC+/DC- (Full Mode)",
       "Wiring": "3 Terminals: DC+, DC-, PE",
@@ -1253,14 +1244,14 @@ export const products: Product[] = [
       "/images/products/SPD-DC-3P-Orange-8.jpg",
     ],
     metaTitle: "3P Orange DC Surge Protector 1000V/1500V 40kA Full Mode | PV SPD | Cnsoltree",
-    metaDescription: "Three-pole full-mode orange DC SPD for 1000VDC and 1500VDC PV systems. Covers all DC protection paths simultaneously — DC+/PE, DC−/PE and DC+/DC−. 40kA Imax, ≤4.0kV Up, <25ns MOV response. Modular DIN rail mount. For inverter DC inputs, PV string combiner boxes and large solar arrays.",
+    metaDescription: "Three-pole full-mode orange DC SPD for 1000VDC and 1500VDC PV systems. Covers all DC protection paths simultaneously 鈥?DC+/PE, DC鈭?PE and DC+/DC鈭? 40kA Imax, 鈮?.0kV Up, <25ns MOV response. Modular DIN rail mount. For inverter DC inputs, PV string combiner boxes and large solar arrays.",
     metaKeywords: "3P DC surge protector, 1000V DC SPD, 1500V DC SPD, full mode DC SPD, PV combiner box SPD, inverter DC SPD, solar power station SPD, high voltage DC SPD, orange DC SPD, MOV DC surge protector",
     imageAlts: [
-      "SPD-DC-3P-Orange 3-pole DC surge protector front view — orange high-voltage PV SPD",
-      "SPD-DC-3P-Orange full-mode protection paths — DC+/PE, DC-/PE and DC+/DC-",
-      "SPD-DC-3P-Orange 3 terminal wiring — DC+, DC- and PE connection",
+      "SPD-DC-3P-Orange 3-pole DC surge protector front view 鈥?orange high-voltage PV SPD",
+      "SPD-DC-3P-Orange full-mode protection paths 鈥?DC+/PE, DC-/PE and DC+/DC-",
+      "SPD-DC-3P-Orange 3 terminal wiring 鈥?DC+, DC- and PE connection",
       "SPD-DC-3P-Orange high-energy MOV core for 1000V/1500V DC protection",
-      "SPD-DC-3P-Orange 40kA surge discharge and ≤4.0kV protection level detail",
+      "SPD-DC-3P-Orange 40kA surge discharge and 鈮?.0kV protection level detail",
       "SPD-DC-3P-Orange modular hot-swappable design on 35mm DIN rail",
       "SPD-DC-3P-Orange installed in PV combiner box at solar power station",
       "SPD-DC-3P-Orange on inverter DC side of commercial PV system",
@@ -1272,16 +1263,16 @@ export const products: Product[] = [
     slug: "spd-dc-4p-1000v-1500v-40ka-dual-mppt-orange",
     categorySlug: "surge-protector-device",
     categoryName: "Surge Protector Device",
-    shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). 40kA max discharge — for dual MPPT inverters, PV combiner boxes, and energy storage systems.",
+    shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). 40kA max discharge 鈥?for dual MPPT inverters, PV combiner boxes, and energy storage systems.",
     description:
-      "The SPD-DC-4P-Orange is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting both 1000VDC and 1500VDC. Unlike single-input DC SPDs, it provides two completely independent protection circuits — DC1 (DC1+/PE and DC1-/PE) and DC2 (DC2+/PE and DC2-/PE) — allowing a single unit to simultaneously protect both input channels of a dual MPPT inverter or two separate PV arrays in a combiner box. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is ≤4.0kV per channel. The high-energy metal oxide varistor (MOV) core responds in under 25 nanoseconds. The modular hot-swappable design allows individual pole modules to be replaced without rewiring. The orange flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is built for installation in DC distribution cabinets and at inverter DC inputs in solar power and energy storage systems.",
+      "The SPD-DC-4P-Orange is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting both 1000VDC and 1500VDC. Unlike single-input DC SPDs, it provides two completely independent protection circuits 鈥?DC1 (DC1+/PE and DC1-/PE) and DC2 (DC2+/PE and DC2-/PE) 鈥?allowing a single unit to simultaneously protect both input channels of a dual MPPT inverter or two separate PV arrays in a combiner box. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 鈮?.0kV per channel. The high-energy metal oxide varistor (MOV) core responds in under 25 nanoseconds. The modular hot-swappable design allows individual pole modules to be replaced without rewiring. The orange flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is built for installation in DC distribution cabinets and at inverter DC inputs in solar power and energy storage systems.",
     features: [
       "4-pole dual-input protection: two independent DC circuits in one module",
       "Protects DC1 (DC1+/PE, DC1-/PE) and DC2 (DC2+/PE, DC2-/PE) simultaneously",
       "High voltage: supports 1000VDC and 1500VDC PV systems",
       "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-      "Voltage protection level ≤4.0kV per channel",
-      "<25ns ultra-fast response — high-energy MOV core for instantaneous clamping",
+      "Voltage protection level 鈮?.0kV per channel",
+      "<25ns ultra-fast response 鈥?high-energy MOV core for instantaneous clamping",
       "Ideal for dual MPPT inverters, PV combiner boxes and energy storage systems",
       "Modular hot-swappable design, orange flame-retardant PC housing, 35mm DIN rail",
     ],
@@ -1290,7 +1281,7 @@ export const products: Product[] = [
       "Max. Continuous Operating Voltage (Uc)": "1000VDC / 1500VDC",
       "Nominal Discharge Current (In)": "20kA",
       "Max. Discharge Current (Imax)": "40kA",
-      "Voltage Protection Level (Up)": "≤4.0kV",
+      "Voltage Protection Level (Up)": "鈮?.0kV",
       "Application System": "Photovoltaic DC System (Dual Input)",
       "Protection Mode": "DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE (Dual Independent)",
       "Wiring": "4 Terminals: DC1+, DC1-, DC2+, DC2-",
@@ -1313,14 +1304,14 @@ export const products: Product[] = [
       "/images/products/SPD-DC-4P-Orange-8.jpg",
     ],
     metaTitle: "4P Orange DC Surge Protector 1000V/1500V 40kA Dual MPPT | PV SPD | Cnsoltree",
-    metaDescription: "Four-pole dual-input orange DC SPD for 1000VDC and 1500VDC PV systems. Two independent protection circuits — DC1 (+/PE and −/PE) and DC2 (+/PE and −/PE) — in one DIN rail module. 40kA Imax, ≤4.0kV per channel, <25ns MOV. Designed for dual MPPT inverters and battery storage systems.",
+    metaDescription: "Four-pole dual-input orange DC SPD for 1000VDC and 1500VDC PV systems. Two independent protection circuits 鈥?DC1 (+/PE and 鈭?PE) and DC2 (+/PE and 鈭?PE) 鈥?in one DIN rail module. 40kA Imax, 鈮?.0kV per channel, <25ns MOV. Designed for dual MPPT inverters and battery storage systems.",
     metaKeywords: "4P DC surge protector, dual MPPT SPD, dual input DC SPD, 1000V DC SPD, 1500V DC SPD, PV combiner box SPD, energy storage SPD, inverter DC input SPD, orange DC SPD, high voltage DC surge protector",
     imageAlts: [
-      "SPD-DC-4P-Orange 4-pole dual-input DC surge protector front view — orange PV SPD",
-      "SPD-DC-4P-Orange dual circuit protection — DC1 and DC2 independent channels",
-      "SPD-DC-4P-Orange 4 terminal wiring — DC1+, DC1-, DC2+, DC2- connection",
+      "SPD-DC-4P-Orange 4-pole dual-input DC surge protector front view 鈥?orange PV SPD",
+      "SPD-DC-4P-Orange dual circuit protection 鈥?DC1 and DC2 independent channels",
+      "SPD-DC-4P-Orange 4 terminal wiring 鈥?DC1+, DC1-, DC2+, DC2- connection",
       "SPD-DC-4P-Orange high-energy MOV core for 1000V/1500V DC dual-input protection",
-      "SPD-DC-4P-Orange 40kA surge discharge and ≤4.0kV protection level detail",
+      "SPD-DC-4P-Orange 40kA surge discharge and 鈮?.0kV protection level detail",
       "SPD-DC-4P-Orange modular hot-swappable design on 35mm DIN rail",
       "SPD-DC-4P-Orange installed on dual MPPT inverter DC input",
       "SPD-DC-4P-Orange in PV combiner box and energy storage system",
@@ -1333,12 +1324,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-32x-1p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1346,7 +1337,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1369,12 +1360,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-32x-2p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1382,7 +1373,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1405,12 +1396,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-32x-3p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1418,7 +1409,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1441,12 +1432,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-32x-4p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1454,7 +1445,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1477,12 +1468,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-63x-1p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1490,7 +1481,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1513,12 +1504,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-63x-2p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1526,7 +1517,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1549,12 +1540,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-63x-3p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1562,7 +1553,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1585,12 +1576,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-63x-4p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1598,7 +1589,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1621,12 +1612,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-125am-1p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1634,7 +1625,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1656,12 +1647,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-125am-2p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1669,7 +1660,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1691,12 +1682,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-125am-3p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1704,7 +1695,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1726,12 +1717,12 @@ export const products: Product[] = [
     slug: "dc-fuse-holder-rt18-125am-4p",
     categorySlug: "dc-fuse-holder",
     categoryName: "DC Fuse Holder",
-    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10×38mm cylindrical fuses.",
+    shortDescription: "DIN-rail DC fuse holder, 1000V DC, for 10脳38mm cylindrical fuses.",
     description:
-      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10×38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
+      "Designed for photovoltaic string protection, our DC fuse holder accommodates standard 10脳38mm cylindrical fuses at up to 1000V DC. Touch-safe fuse replacement and IP20 finger protection.",
     features: [
       "Rated voltage: 1000V DC",
-      "Fuse size: 10×38mm",
+      "Fuse size: 10脳38mm",
       "Touch-safe fuse replacement",
       "DIN-rail 35mm mounting",
       "Status indicator window",
@@ -1739,7 +1730,7 @@ export const products: Product[] = [
     specs: {
       "Rated Voltage": "1000V DC",
       "Rated Current": "30A",
-      "Fuse Size": "10×38mm",
+      "Fuse Size": "10脳38mm",
       "Mounting": "DIN-rail 35mm",
       "Protection": "IP20",
       "Certification": "CE, IEC 60269",
@@ -1774,8 +1765,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1811,8 +1802,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1848,8 +1839,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1885,8 +1876,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1922,8 +1913,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1959,8 +1950,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -1996,8 +1987,8 @@ export const products: Product[] = [
     ],
     specs: {
       "Rated Voltage": "230V AC",
-      "Overvoltage Trip": "Adjustable 240V–270V",
-      "Undervoltage Trip": "Adjustable 160V–210V",
+      "Overvoltage Trip": "Adjustable 240V鈥?70V",
+      "Undervoltage Trip": "Adjustable 160V鈥?10V",
       "Response Time": "<0.05s",
       "Max Current": "63A",
       "Certification": "CE, RoHS",
@@ -2039,7 +2030,7 @@ export const products: Product[] = [
       "Accuracy Class": "Class 1",
       "Communication": "RS485 Modbus RTU",
       "Display": "4-line LCD backlit",
-      "Power Supply": "85–265V AC",
+      "Power Supply": "85鈥?65V AC",
       "Certification": "CE, MID",
     },
     image: "/images/products/energy-meter-3p.jpg",
@@ -2085,7 +2076,7 @@ export const products: Product[] = [
       "Real-time power consumption monitoring",
       "Overload, short-circuit, and arc-fault protection",
       "Scheduled switching and timer functions",
-      "No hub required — direct Wi-Fi 2.4GHz",
+      "No hub required 鈥?direct Wi-Fi 2.4GHz",
       "Compatible with Amazon Alexa and Google Home",
     ],
     specs: {
@@ -2133,16 +2124,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string PV combiner box with 63A DC breaker, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string PV combiner box with 63A DC breaker, 4脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HT-8Way-2in1out-600VDC is a 2-string PV combiner box engineered to aggregate and protect solar array outputs before they reach the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems — residential rooftops, commercial arrays and small utility sites alike.",
+      "The HT-8Way-2in1out-600VDC is a 2-string PV combiner box engineered to aggregate and protect solar array outputs before they reach the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4脳15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems 鈥?residential rooftops, commercial arrays and small utility sites alike.",
     features: [
       "2-string PV input, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "4 × 15A PV fuses for independent per-pole string protection",
+      "4 脳 15A PV fuses for independent per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2170,7 +2161,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string PV combiner box with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string PV combiner box with 63A DC breaker, 4脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string combiner box, 600VDC combiner box, solar combiner box with SPD, 63A DC breaker, 15A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2189,16 +2180,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "1-string PV combiner box with 63A DC breaker, 2×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "1-string PV combiner box with 63A DC breaker, 2脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HT-8Way-1in1out-600VDC is a compact 1-string PV combiner box designed to protect and consolidate a single solar string before it reaches the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 2×15A PV fuses for independent per-pole protection, and a 500V DC surge protection device rated at 40kA max discharge current to shield the system from lightning-induced transients. The hard, flame-retardant plastic housing is rated IP65 — fully sealed against dust and water — making it ideal for outdoor installation on both on-grid and off-grid PV systems.",
+      "The HT-8Way-1in1out-600VDC is a compact 1-string PV combiner box designed to protect and consolidate a single solar string before it reaches the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 2脳15A PV fuses for independent per-pole protection, and a 500V DC surge protection device rated at 40kA max discharge current to shield the system from lightning-induced transients. The hard, flame-retardant plastic housing is rated IP65 鈥?fully sealed against dust and water 鈥?making it ideal for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "1-string PV input, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "2 × 15A PV fuses for independent per-pole protection",
+      "2 脳 15A PV fuses for independent per-pole protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2226,7 +2217,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 1-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "1-string PV combiner box with 63A DC breaker, 2×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "1-string PV combiner box with 63A DC breaker, 2脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 1 string combiner box, 600VDC combiner box, solar combiner box with SPD, 63A DC breaker, 15A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2245,16 +2236,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string PV combiner box with 32A DC breaker, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string PV combiner box with 32A DC breaker, 4脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-8Way-2in1out-500VDC-32A-15AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 32A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems — residential rooftops, commercial arrays and small utility sites alike.",
+      "The HA-8Way-2in1out-500VDC-32A-15AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 32A DC circuit breaker for overload and short-circuit protection, 4脳15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems 鈥?residential rooftops, commercial arrays and small utility sites alike.",
     features: [
       "2-string PV input, 1 output configuration",
       "32A DC circuit breaker for overload and short-circuit protection",
-      "4 × 15A PV fuses for individual per-pole string protection",
+      "4 脳 15A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2282,7 +2273,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-1-out 500VDC 32A | 15A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string PV combiner box with 32A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string PV combiner box with 32A DC breaker, 4脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string combiner box, 500VDC combiner box, solar combiner box with SPD, 32A DC breaker, 15A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2301,16 +2292,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string PV combiner box with 40A DC breaker, 4×20A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string PV combiner box with 40A DC breaker, 4脳20A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-8Way-2in1out-500VDC-40A-20AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 40A DC circuit breaker for overload and short-circuit protection, 4×20A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems — residential rooftops, commercial arrays and small utility sites alike.",
+      "The HA-8Way-2in1out-500VDC-40A-20AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 40A DC circuit breaker for overload and short-circuit protection, 4脳20A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems 鈥?residential rooftops, commercial arrays and small utility sites alike.",
     features: [
       "2-string PV input, 1 output configuration",
       "40A DC circuit breaker for overload and short-circuit protection",
-      "4 × 20A PV fuses for individual per-pole string protection",
+      "4 脳 20A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2338,7 +2329,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-1-out 500VDC 40A | 20A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string PV combiner box with 40A DC breaker, 4×20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string PV combiner box with 40A DC breaker, 4脳20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string combiner box, 500VDC combiner box, solar combiner box with SPD, 40A DC breaker, 20A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2357,16 +2348,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string PV combiner box with 63A DC breaker, 4×30A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string PV combiner box with 63A DC breaker, 4脳30A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-8Way-2in1out-500VDC-63A-30AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×30A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems — residential rooftops, commercial arrays and small utility sites alike.",
+      "The HA-8Way-2in1out-500VDC-63A-30AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reach the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4脳30A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems 鈥?residential rooftops, commercial arrays and small utility sites alike.",
     features: [
       "2-string PV input, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "4 × 30A PV fuses for individual per-pole string protection",
+      "4 脳 30A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2394,7 +2385,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-1-out 500VDC 63A | 30A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string PV combiner box with 63A DC breaker, 4×30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string PV combiner box with 63A DC breaker, 4脳30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string combiner box, 500VDC combiner box, solar combiner box with SPD, 63A DC breaker, 30A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2413,16 +2404,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string, 2-output PV combiner box with 32A DC breaker, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string, 2-output PV combiner box with 32A DC breaker, 4脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-12Way-2in2out-500VDC-32A-15AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 32A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+      "The HA-12Way-2in2out-500VDC-32A-15AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 32A DC circuit breaker for overload and short-circuit protection, 4脳15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "2-string PV input, 2 output configuration",
       "32A DC circuit breaker for overload and short-circuit protection",
-      "4 × 15A PV fuses for individual per-pole string protection",
+      "4 脳 15A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2450,7 +2441,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-2-out 500VDC 32A | 15A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string, 2-output PV combiner box with 32A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string, 2-output PV combiner box with 32A DC breaker, 4脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string 2 output combiner box, 500VDC combiner box, solar combiner box with SPD, 32A DC breaker, 15A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2469,16 +2460,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string, 2-output PV combiner box with 40A DC breaker, 4×20A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string, 2-output PV combiner box with 40A DC breaker, 4脳20A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-12Way-2in2out-500VDC-40A-20AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 40A DC circuit breaker for overload and short-circuit protection, 4×20A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+      "The HA-12Way-2in2out-500VDC-40A-20AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 40A DC circuit breaker for overload and short-circuit protection, 4脳20A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "2-string PV input, 2 output configuration",
       "40A DC circuit breaker for overload and short-circuit protection",
-      "4 × 20A PV fuses for individual per-pole string protection",
+      "4 脳 20A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2506,7 +2497,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-2-out 500VDC 40A | 20A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string, 2-output PV combiner box with 40A DC breaker, 4×20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string, 2-output PV combiner box with 40A DC breaker, 4脳20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string 2 output combiner box, 500VDC combiner box, solar combiner box with SPD, 40A DC breaker, 20A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2525,16 +2516,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string, 2-output PV combiner box with 63A DC breaker, 4×30A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string, 2-output PV combiner box with 63A DC breaker, 4脳30A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-12Way-2in2out-500VDC-63A-30AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×30A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+      "The HA-12Way-2in2out-500VDC-63A-30AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4脳30A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "2-string PV input, 2 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "4 × 30A PV fuses for individual per-pole string protection",
+      "4 脳 30A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2562,7 +2553,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-2-out 500VDC 63A | 30A Fuse & 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string, 2-output PV combiner box with 63A DC breaker, 4×30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string, 2-output PV combiner box with 63A DC breaker, 4脳30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 2 string 2 output combiner box, 500VDC combiner box, solar combiner box with SPD, 63A DC breaker, 30A PV fuse, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2589,7 +2580,7 @@ export const products: Product[] = [
       "32A DC circuit breaker for overload and short-circuit protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2643,7 +2634,7 @@ export const products: Product[] = [
       "40A DC circuit breaker for overload and short-circuit protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2670,7 +2661,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 1-in-1-out 500VDC 40A | No Fuse, 40kA SPD | Cnsoltree",
     metaDescription:
-      "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure. No fuse version — for on-grid and off-grid solar systems. OEM available.",
+      "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure. No fuse version 鈥?for on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 1 string combiner box, 500VDC combiner box, solar combiner box with SPD, 40A DC breaker, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2689,16 +2680,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "1-string 1000V DC PV combiner box with 32A/1200V isolator switch, 2×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "1-string 1000V DC PV combiner box with 32A/1200V isolator switch, 2脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-8Way-1in1out-1000VDC-DS is a 1-string, 1-output PV combiner box built around a 32A / 1200V DC isolator switch, providing safe on-site load-break disconnection for installation and maintenance. It integrates 2×15A PV fuses for independent per-pole protection and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The hard, flame-retardant plastic enclosure is IP65-rated, making it suitable for outdoor installation on both on-grid and off-grid PV systems rated up to 1000V DC.",
+      "The HA-8Way-1in1out-1000VDC-DS is a 1-string, 1-output PV combiner box built around a 32A / 1200V DC isolator switch, providing safe on-site load-break disconnection for installation and maintenance. It integrates 2脳15A PV fuses for independent per-pole protection and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The hard, flame-retardant plastic enclosure is IP65-rated, making it suitable for outdoor installation on both on-grid and off-grid PV systems rated up to 1000V DC.",
     features: [
       "1-string PV input, 1 output configuration",
       "32A / 1200V DC isolator switch for safe manual disconnection",
-      "2 × 15A PV fuses for individual per-pole protection",
+      "2 脳 15A PV fuses for individual per-pole protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Supports 1000V DC PV systems (on-grid / off-grid)",
     ],
     specs: {
@@ -2726,7 +2717,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 1-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Cnsoltree",
     metaDescription:
-      "1-string 1000V DC PV combiner box with 32A/1200V isolator switch, 2×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "1-string 1000V DC PV combiner box with 32A/1200V isolator switch, 2脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 1000VDC combiner box, isolator switch combiner box, DC isolator 32A, 15A PV fuse, 40kA SPD, IP65 combiner box, on-grid off-grid PV",
     imageAlts: [
@@ -2745,16 +2736,16 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+      "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4脳15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
     description:
-      "The HA-12way-2in1out-1000VDC-DS is a 2-string, 1-output PV combiner box built around a 32A / 1200V DC isolator switch, providing safe on-site load-break disconnection for installation and maintenance. It integrates 4×15A PV fuses for independent per-pole string protection and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The hard, flame-retardant plastic enclosure is IP65-rated, making it suitable for outdoor installation on both on-grid and off-grid PV systems rated up to 1000V DC.",
+      "The HA-12way-2in1out-1000VDC-DS is a 2-string, 1-output PV combiner box built around a 32A / 1200V DC isolator switch, providing safe on-site load-break disconnection for installation and maintenance. It integrates 4脳15A PV fuses for independent per-pole string protection and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The hard, flame-retardant plastic enclosure is IP65-rated, making it suitable for outdoor installation on both on-grid and off-grid PV systems rated up to 1000V DC.",
     features: [
       "2-string PV input, 1 output configuration",
       "32A / 1200V DC isolator switch for safe manual disconnection",
-      "4 × 15A PV fuses for individual per-pole string protection",
+      "4 脳 15A PV fuses for individual per-pole string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Supports 1000V DC PV systems (on-grid / off-grid)",
     ],
     specs: {
@@ -2782,7 +2773,7 @@ export const products: Product[] = [
     metaTitle:
       "PV Combiner Box 2-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Cnsoltree",
     metaDescription:
-      "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+      "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4脳15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
       "PV combiner box, 1000VDC combiner box, 2 string combiner box, isolator switch combiner box, DC isolator 32A, 15A PV fuse, 40kA SPD, IP65, on-grid off-grid PV",
     imageAlts: [
@@ -2809,7 +2800,7 @@ export const products: Product[] = [
       "Dual 32A DC circuit breakers for redundant overload and short-circuit protection",
       "Dual 500V DC SPDs, each with 40kA maximum discharge current",
       "Flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2859,10 +2850,10 @@ export const products: Product[] = [
       "The HA-4Way-1DCB-1SPD-White is a compact 1-string, 1-output PV combiner box finished in a white, flame-retardant plastic enclosure for installations where a clean, low-profile appearance is preferred. It integrates a 40A DC circuit breaker for overload and short-circuit protection and a 500V DC surge protection device rated at 40kA max discharge current to shield the system from lightning-induced transients. Rated IP65 against dust and water, it is built for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "1-string PV input, 1 output configuration",
-      "1 × 40A DC circuit breaker for overload and short-circuit protection",
-      "1 × 500V DC SPD with 40kA maximum discharge current (lightning protection)",
+      "1 脳 40A DC circuit breaker for overload and short-circuit protection",
+      "1 脳 500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "White flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2917,7 +2908,7 @@ export const products: Product[] = [
       "Dual 40A DC circuit breakers for redundant overload and short-circuit protection",
       "Dual 500V DC SPDs, each with 40kA maximum discharge current",
       "White flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2959,20 +2950,20 @@ export const products: Product[] = [
   },
   {
     id: "HA-18Way-4DCB-4SPD-White",
-    name: "PV Combiner Box (White) 1 String Input 1 Output, 4× 40A DC Breakers & 4× 500V/40kA SPDs",
+    name: "PV Combiner Box (White) 1 String Input 1 Output, 4脳 40A DC Breakers & 4脳 500V/40kA SPDs",
     slug: "pv-combiner-box-1in-1out-quad-40a-quad-spd-white",
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "1-string PV combiner box in a white IP65 enclosure with 4× 40A DC breakers and 4× 500V/40kA SPDs for high-redundancy protection.",
+      "1-string PV combiner box in a white IP65 enclosure with 4脳 40A DC breakers and 4脳 500V/40kA SPDs for high-redundancy protection.",
     description:
       "The HA-18Way-4DCB-4SPD-White is a 1-string, 1-output PV combiner box in a white, flame-retardant plastic enclosure, built for installations that demand high-redundancy protection. It integrates four 40A DC circuit breakers for overload and short-circuit protection and four 500V DC surge protection devices, each rated at 40kA max discharge current, for multi-stage defence against lightning-induced transients. Rated IP65 against dust and water, it is built for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "1-string PV input, 1 output configuration",
-      "4 × 40A DC circuit breakers for high-redundancy overload and short-circuit protection",
-      "4 × 500V DC SPDs, each with 40kA maximum discharge current",
+      "4 脳 40A DC circuit breakers for high-redundancy overload and short-circuit protection",
+      "4 脳 500V DC SPDs, each with 40kA maximum discharge current",
       "White flame-retardant hard plastic housing",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -2997,15 +2988,15 @@ export const products: Product[] = [
       "/images/products/HA-18Way-4DCB-4SPD-White-7.jpg",
     ],
     metaTitle:
-      "PV Combiner Box White 4× 40A DC Breakers & 4× 40kA SPDs | Cnsoltree",
+      "PV Combiner Box White 4脳 40A DC Breakers & 4脳 40kA SPDs | Cnsoltree",
     metaDescription:
-      "1-string PV combiner box in white IP65 enclosure with 4× 40A DC breakers and 4× 500V/40kA SPDs for high-redundancy protection. On-grid / off-grid. OEM available.",
+      "1-string PV combiner box in white IP65 enclosure with 4脳 40A DC breakers and 4脳 500V/40kA SPDs for high-redundancy protection. On-grid / off-grid. OEM available.",
     metaKeywords:
       "PV combiner box, white combiner box, high redundancy combiner box, quad DC breaker, quad SPD, 40A DC breaker, 40kA SPD, IP65, on-grid off-grid PV",
     imageAlts: [
       "HA-18Way-4DCB-4SPD-White PV combiner box front view white enclosure",
-      "HA-18Way-4DCB-4SPD-White combiner box interior with 4× 40A DC breakers",
-      "HA-18Way-4DCB-4SPD-White 4× 500V 40kA surge protection devices detail",
+      "HA-18Way-4DCB-4SPD-White combiner box interior with 4脳 40A DC breakers",
+      "HA-18Way-4DCB-4SPD-White 4脳 500V 40kA surge protection devices detail",
       "HA-18Way-4DCB-4SPD-White wiring layout with high-redundancy protection",
       "HA-18Way-4DCB-4SPD-White IP65 flame-retardant enclosure close-up",
       "HA-18Way-4DCB-4SPD-White side profile",
@@ -3019,17 +3010,17 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "6-input PV combiner box in a cold-rolled steel enclosure with 100A DC breaker, 6×15A fuses, 500V/40kA SPD and built-in radiator.",
+      "6-input PV combiner box in a cold-rolled steel enclosure with 100A DC breaker, 6脳15A fuses, 500V/40kA SPD and built-in radiator.",
     description:
-      "The PCB-M6in-01 is a 6-input PV combiner box designed for commercial solar arrays where multiple strings must be aggregated into a single feed. It integrates a 100A DC circuit breaker for overload and short-circuit protection, 6×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The rugged cold-rolled steel enclosure is rated IP65 against dust and water and is equipped with a built-in radiator for stable operation under continuous load. Suitable for outdoor installation on both on-grid and off-grid PV systems.",
+      "The PCB-M6in-01 is a 6-input PV combiner box designed for commercial solar arrays where multiple strings must be aggregated into a single feed. It integrates a 100A DC circuit breaker for overload and short-circuit protection, 6脳15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The rugged cold-rolled steel enclosure is rated IP65 against dust and water and is equipped with a built-in radiator for stable operation under continuous load. Suitable for outdoor installation on both on-grid and off-grid PV systems.",
     features: [
       "6 PV array inputs, 1 output configuration",
       "100A DC circuit breaker for overload and short-circuit protection",
-      "6 × 15A PV fuses for independent per-string protection",
+      "6 脳 15A PV fuses for independent per-string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Heavy-duty cold-rolled steel enclosure",
       "Built-in radiator for stable thermal performance under continuous load",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both on-grid and off-grid PV systems",
     ],
     specs: {
@@ -3057,12 +3048,12 @@ export const products: Product[] = [
     metaTitle:
       "6-Input PV Combiner Box 100A DC Breaker | Steel with Radiator | Cnsoltree",
     metaDescription:
-      "6-input PV combiner box in cold-rolled steel enclosure with 100A DC breaker, 6×15A PV fuses, 500V/40kA SPD and built-in radiator. IP65 outdoor-rated. OEM available.",
+      "6-input PV combiner box in cold-rolled steel enclosure with 100A DC breaker, 6脳15A PV fuses, 500V/40kA SPD and built-in radiator. IP65 outdoor-rated. OEM available.",
     metaKeywords:
       "PV combiner box, 6 input combiner box, 100A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, combiner box with radiator, IP65, on-grid off-grid PV",
     imageAlts: [
       "PCB-M6in-01 6-input PV combiner box steel enclosure front view",
-      "PCB-M6in-01 combiner box interior with 100A DC breaker and 6×15A fuses",
+      "PCB-M6in-01 combiner box interior with 100A DC breaker and 6脳15A fuses",
       "PCB-M6in-01 500V 40kA surge protection device detail",
       "PCB-M6in-01 built-in radiator for thermal dissipation",
       "PCB-M6in-01 wiring terminals for 6 PV array inputs",
@@ -3076,17 +3067,17 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "4-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 4×20A fuses, 500V/40kA SPD and lockable door.",
+      "4-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 4脳20A fuses, 500V/40kA SPD and lockable door.",
     description:
-      "The PCB-M4in-02 is a 4-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×20A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+      "The PCB-M4in-02 is a 4-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4脳20A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
     features: [
       "4 PV array inputs, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "4 × 20A PV fuses for independent per-string protection",
+      "4 脳 20A PV fuses for independent per-string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Robust steel enclosure with high impact resistance",
       "Integrated safety lock and key for tamper prevention",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both grid-tied and off-grid PV systems",
     ],
     specs: {
@@ -3114,12 +3105,12 @@ export const products: Product[] = [
     metaTitle:
       "4-Input PV Combiner Box 63A DC Breaker 20A Fuse | Steel with Safety Lock | Cnsoltree",
     metaDescription:
-      "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4×20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+      "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4脳20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
       "PV combiner box, 4 input combiner box, 63A DC breaker, 20A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
     imageAlts: [
       "PCB-M4in-02 4-input PV combiner box steel enclosure front view",
-      "PCB-M4in-02 combiner box interior with 63A DC breaker and 4×20A fuses",
+      "PCB-M4in-02 combiner box interior with 63A DC breaker and 4脳20A fuses",
       "PCB-M4in-02 500V 40kA surge protection device detail",
       "PCB-M4in-02 safety lock and key tamper prevention",
       "PCB-M4in-02 wiring terminals for 4 PV array inputs",
@@ -3133,17 +3124,17 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "6-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 6×20A fuses, 500V/40kA SPD and lockable door.",
+      "6-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 6脳20A fuses, 500V/40kA SPD and lockable door.",
     description:
-      "The PCB-M6in-03 is a 6-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 6×20A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+      "The PCB-M6in-03 is a 6-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 6脳20A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
     features: [
       "6 PV array inputs, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "6 × 20A PV fuses for independent per-string protection",
+      "6 脳 20A PV fuses for independent per-string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Robust steel enclosure with high impact resistance",
       "Integrated safety lock and key for tamper prevention",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both grid-tied and off-grid PV systems",
     ],
     specs: {
@@ -3171,12 +3162,12 @@ export const products: Product[] = [
     metaTitle:
       "6-Input PV Combiner Box 63A DC Breaker | Steel with Safety Lock | Cnsoltree",
     metaDescription:
-      "6-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 6×20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+      "6-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 6脳20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
       "PV combiner box, 6 input combiner box, 63A DC breaker, 20A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
     imageAlts: [
       "PCB-M6in-03 6-input PV combiner box steel enclosure front view",
-      "PCB-M6in-03 combiner box interior with 63A DC breaker and 6×20A fuses",
+      "PCB-M6in-03 combiner box interior with 63A DC breaker and 6脳20A fuses",
       "PCB-M6in-03 500V 40kA surge protection device detail",
       "PCB-M6in-03 safety lock and key tamper prevention",
       "PCB-M6in-03 wiring terminals for 6 PV array inputs",
@@ -3190,17 +3181,17 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "4-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 4×15A fuses, 500V/40kA SPD and lockable door.",
+      "4-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 4脳15A fuses, 500V/40kA SPD and lockable door.",
     description:
-      "The PCB-M4in-04 is a 4-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+      "The PCB-M4in-04 is a 4-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4脳15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
     features: [
       "4 PV array inputs, 1 output configuration",
       "63A DC circuit breaker for overload and short-circuit protection",
-      "4 × 15A PV fuses for independent per-string protection",
+      "4 脳 15A PV fuses for independent per-string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Robust steel enclosure with high impact resistance",
       "Integrated safety lock and key for tamper prevention",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both grid-tied and off-grid PV systems",
     ],
     specs: {
@@ -3229,12 +3220,12 @@ export const products: Product[] = [
     metaTitle:
       "4-Input PV Combiner Box 63A DC Breaker 15A Fuse | Steel with Safety Lock | Cnsoltree",
     metaDescription:
-      "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+      "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4脳15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
       "PV combiner box, 4 input combiner box, 63A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
     imageAlts: [
       "PCB-M4in-04 4-input PV combiner box steel enclosure front view",
-      "PCB-M4in-04 combiner box interior with 63A DC breaker and 4×15A fuses",
+      "PCB-M4in-04 combiner box interior with 63A DC breaker and 4脳15A fuses",
       "PCB-M4in-04 500V 40kA surge protection device detail",
       "PCB-M4in-04 safety lock and key tamper prevention",
       "PCB-M4in-04 wiring terminals for 4 PV array inputs",
@@ -3249,17 +3240,17 @@ export const products: Product[] = [
     categorySlug: "pv-combiner-box",
     categoryName: "PV Combiner Box",
     shortDescription:
-      "6-input PV combiner box in a heavy-duty steel enclosure with 125A DC breaker, 6×15A fuses, 500V/40kA SPD and lockable door.",
+      "6-input PV combiner box in a heavy-duty steel enclosure with 125A DC breaker, 6脳15A fuses, 500V/40kA SPD and lockable door.",
     description:
-      "The PCB-M6in-05 is a 6-input PV combiner box built for higher-current commercial and small utility solar arrays. It integrates a 125A DC circuit breaker for overload and short-circuit protection, 6×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+      "The PCB-M6in-05 is a 6-input PV combiner box built for higher-current commercial and small utility solar arrays. It integrates a 125A DC circuit breaker for overload and short-circuit protection, 6脳15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
     features: [
       "6 PV array inputs, 1 output configuration",
       "125A DC circuit breaker for higher-current overload and short-circuit protection",
-      "6 × 15A PV fuses for independent per-string protection",
+      "6 脳 15A PV fuses for independent per-string protection",
       "500V DC SPD with 40kA maximum discharge current (lightning protection)",
       "Robust steel enclosure with high impact resistance",
       "Integrated safety lock and key for tamper prevention",
-      "IP65 waterproof and dustproof — suitable for outdoor installation",
+      "IP65 waterproof and dustproof 鈥?suitable for outdoor installation",
       "Compatible with both grid-tied and off-grid PV systems",
     ],
     specs: {
@@ -3288,12 +3279,12 @@ export const products: Product[] = [
     metaTitle:
       "6-Input PV Combiner Box 125A DC Breaker 15A Fuse | Steel with Safety Lock | Cnsoltree",
     metaDescription:
-      "6-input PV combiner box in heavy-duty steel enclosure with 125A DC breaker, 6×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+      "6-input PV combiner box in heavy-duty steel enclosure with 125A DC breaker, 6脳15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
       "PV combiner box, 6 input combiner box, 125A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
     imageAlts: [
       "PCB-M6in-05 6-input PV combiner box steel enclosure front view",
-      "PCB-M6in-05 combiner box interior with 125A DC breaker and 6×15A fuses",
+      "PCB-M6in-05 combiner box interior with 125A DC breaker and 6脳15A fuses",
       "PCB-M6in-05 500V 40kA surge protection device detail",
       "PCB-M6in-05 safety lock and key tamper prevention",
       "PCB-M6in-05 wiring terminals for 6 PV array inputs",
@@ -3309,22 +3300,22 @@ export const products: Product[] = [
     slug: "ats-2p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "2-pole 63A PC class ATS for 110V/220V single-phase systems. Auto & manual transfer in 50ms with built-in over/under-voltage protection — ideal for home emergency backup, RV, and generator applications.",
+    shortDescription: "2-pole 63A PC class ATS for 110V/220V single-phase systems. Auto & manual transfer in 50ms with built-in over/under-voltage protection 鈥?ideal for home emergency backup, RV, and generator applications.",
     description:
-      "The ATS-ST-2P-63A is a PC class (load level) automatic transfer switch designed for single-phase 110V or 220V AC systems up to 63A. With a rapid 50ms transfer time, it seamlessly switches between mains power and a backup source (inverter or generator) when a fault is detected, keeping connected loads running with minimal interruption. The 2-pole design switches both Live and Neutral simultaneously, ensuring complete isolation of the backup source. Built-in over-voltage and under-voltage protection monitors the supply continuously — for 110V systems the thresholds are 85V–145V, and for 220V systems 175V–260V. Supports both automatic and manual switching modes with Source I (Mains) set as the priority, automatically returning to mains once power is restored. The motor-driven mechanism is housed in a PA6 flame-retardant enclosure for reliable long-term operation.",
+      "The ATS-ST-2P-63A is a PC class (load level) automatic transfer switch designed for single-phase 110V or 220V AC systems up to 63A. With a rapid 50ms transfer time, it seamlessly switches between mains power and a backup source (inverter or generator) when a fault is detected, keeping connected loads running with minimal interruption. The 2-pole design switches both Live and Neutral simultaneously, ensuring complete isolation of the backup source. Built-in over-voltage and under-voltage protection monitors the supply continuously 鈥?for 110V systems the thresholds are 85V鈥?45V, and for 220V systems 175V鈥?60V. Supports both automatic and manual switching modes with Source I (Mains) set as the priority, automatically returning to mains once power is restored. The motor-driven mechanism is housed in a PA6 flame-retardant enclosure for reliable long-term operation.",
     features: [
-      "2-pole switching (Live + Neutral) — 2 inputs / 1 output",
-      "PC class (load level) — handles full rated load continuously",
-      "Fast 50ms (0.05s) transfer time — minimal load interruption",
+      "2-pole switching (Live + Neutral) 鈥?2 inputs / 1 output",
+      "PC class (load level) 鈥?handles full rated load continuously",
+      "Fast 50ms (0.05s) transfer time 鈥?minimal load interruption",
       "Dual voltage: supports both 110V and 220V AC",
       "Auto & manual transfer modes; returns to mains automatically",
-      "Over-voltage & under-voltage protection (110V: 85V–145V; 220V: 175V–260V)",
+      "Over-voltage & under-voltage protection (110V: 85V鈥?45V; 220V: 175V鈥?60V)",
       "Compatible with mains, inverter, and generator sources",
       "PA6 flame-retardant housing with motor-driven mechanism",
     ],
     specs: {
       "Poles": "2P (Live + Neutral)",
-      "Rated Current": "63A (Operating Range: 6A–63A)",
+      "Rated Current": "63A (Operating Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Single Phase",
@@ -3333,7 +3324,7 @@ export const products: Product[] = [
       "Priority Source": "Source I (Mains)",
       "Compatible Sources": "Mains, Inverter, Generator",
       "Switching Mode": "Auto & Manual",
-      "Transfer Time": "≤0.05s (50ms)",
+      "Transfer Time": "鈮?.05s (50ms)",
       "Over-voltage Protection": "145V (110V mode) / 260V (220V mode)",
       "Under-voltage Protection": "85V (110V mode) / 175V (220V mode)",
       "Housing": "PA6 Flame-retardant",
@@ -3352,10 +3343,10 @@ export const products: Product[] = [
     metaDescription: "ATS-ST series single-phase 63A 2-pole PC class ATS for 110V and 220V. 50ms auto transfer, built-in over/under-voltage protection. For home backup, RV, inverter and generator applications.",
     metaKeywords: "ATS-ST 63A ATS, 2P automatic transfer switch, 110V 220V ATS, PC class ATS, single phase transfer switch, home backup power switch, RV ATS, 50ms transfer switch, voltage protection ATS",
     imageAlts: [
-      "63A 2P ATS 110V/220V front view — PC class auto transfer switch",
-      "ATS-ST-2P-63A wiring diagram — 2 inputs 1 output connection",
-      "2P ATS internal structure — PCB, motor and PA6 flame-retardant housing",
-      "63A single-phase ATS voltage protection settings — 110V and 220V",
+      "63A 2P ATS 110V/220V front view 鈥?PC class auto transfer switch",
+      "ATS-ST-2P-63A wiring diagram 鈥?2 inputs 1 output connection",
+      "2P ATS internal structure 鈥?PCB, motor and PA6 flame-retardant housing",
+      "63A single-phase ATS voltage protection settings 鈥?110V and 220V",
       "ATS-ST-2P-63A auto and manual switching modes",
       "63A 2P transfer switch for home backup and RV applications",
     ],
@@ -3366,22 +3357,22 @@ export const products: Product[] = [
     slug: "ats-4p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems. Switches all 3 lines and neutral simultaneously in 50ms — built for hospitals, cold storage, and data centers.",
+    shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems. Switches all 3 lines and neutral simultaneously in 50ms 鈥?built for hospitals, cold storage, and data centers.",
     description:
-      "The ATS-ST-4P-63A is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. All four poles — three phases and neutral — switch simultaneously in 50ms, ensuring complete source isolation and preventing any backfeed between the two supplies. When mains power fails, the unit instantly transfers the load to the backup source (inverter or generator); once mains is restored, it automatically reverts to Source I priority. Built-in voltage monitoring provides over-voltage and under-voltage protection across both voltage settings: for 110V systems the thresholds are 85V–145V, and for 220V systems 175V–260V. The motor-driven switching mechanism enclosed in a PA6 flame-retardant housing ensures reliable and safe operation in demanding commercial environments such as hospitals, cold-storage facilities, and data centers.",
+      "The ATS-ST-4P-63A is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. All four poles 鈥?three phases and neutral 鈥?switch simultaneously in 50ms, ensuring complete source isolation and preventing any backfeed between the two supplies. When mains power fails, the unit instantly transfers the load to the backup source (inverter or generator); once mains is restored, it automatically reverts to Source I priority. Built-in voltage monitoring provides over-voltage and under-voltage protection across both voltage settings: for 110V systems the thresholds are 85V鈥?45V, and for 220V systems 175V鈥?60V. The motor-driven switching mechanism enclosed in a PA6 flame-retardant housing ensures reliable and safe operation in demanding commercial environments such as hospitals, cold-storage facilities, and data centers.",
     features: [
-      "4-pole switching (3 Lines + Neutral simultaneously) — 2 inputs / 1 output",
-      "PC class (load level) — handles full rated load continuously",
-      "Fast 50ms (0.05s) transfer time — critical load interruption under 50ms",
+      "4-pole switching (3 Lines + Neutral simultaneously) 鈥?2 inputs / 1 output",
+      "PC class (load level) 鈥?handles full rated load continuously",
+      "Fast 50ms (0.05s) transfer time 鈥?critical load interruption under 50ms",
       "Dual voltage: supports both 110V and 220V AC three-phase systems",
       "Auto & manual transfer modes; automatically returns to mains priority",
-      "Over-voltage & under-voltage protection (110V: 85V–145V; 220V: 175V–260V)",
+      "Over-voltage & under-voltage protection (110V: 85V鈥?45V; 220V: 175V鈥?60V)",
       "Compatible with mains, inverter, and generator power sources",
       "PA6 flame-retardant housing with motor-driven mechanism for long service life",
     ],
     specs: {
       "Poles": "4P (3 Lines + Neutral)",
-      "Rated Current": "63A (Operating Range: 6A–63A)",
+      "Rated Current": "63A (Operating Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase with Neutral",
@@ -3390,7 +3381,7 @@ export const products: Product[] = [
       "Priority Source": "Source I (Mains)",
       "Compatible Sources": "Mains, Inverter, Generator",
       "Switching Mode": "Auto & Manual",
-      "Transfer Time": "≤0.05s (50ms)",
+      "Transfer Time": "鈮?.05s (50ms)",
       "Over-voltage Protection": "145V (110V mode) / 260V (220V mode)",
       "Under-voltage Protection": "85V (110V mode) / 175V (220V mode)",
       "Housing": "PA6 Flame-retardant",
@@ -3409,10 +3400,10 @@ export const products: Product[] = [
     metaDescription: "ATS-ST series three-phase 63A 4-pole (3L+N) PC class ATS for 110V and 220V. 50ms auto transfer, simultaneous 3L+N switching, over/under-voltage protection. For hospitals, cold storage and data centers.",
     metaKeywords: "ATS-ST 63A 4P ATS, three-phase automatic transfer switch, 4 pole ATS 110V 220V, PC class ATS, three phase transfer switch, hospital ATS, data center transfer switch, voltage protection ATS",
     imageAlts: [
-      "63A 4P ATS 110V/220V front view — PC class three-phase auto transfer switch",
-      "ATS-ST-4P-63A wiring diagram — 4-pole 2 inputs 1 output connection",
-      "4P ATS internal structure — PCB, motor and PA6 flame-retardant housing",
-      "63A three-phase ATS voltage protection settings — 110V and 220V modes",
+      "63A 4P ATS 110V/220V front view 鈥?PC class three-phase auto transfer switch",
+      "ATS-ST-4P-63A wiring diagram 鈥?4-pole 2 inputs 1 output connection",
+      "4P ATS internal structure 鈥?PCB, motor and PA6 flame-retardant housing",
+      "63A three-phase ATS voltage protection settings 鈥?110V and 220V modes",
       "ATS-ST-4P-63A auto and manual switching mode panel",
       "63A 4-pole transfer switch for hospitals, cold storage and data centers",
     ],
@@ -3423,13 +3414,13 @@ export const products: Product[] = [
     slug: "ats-w2r-2p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "2-pole 63A PC class ATS for single-phase 110V/220V systems. Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter — ideal for home emergency backup and RV.",
+    shortDescription: "2-pole 63A PC class ATS for single-phase 110V/220V systems. Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter 鈥?ideal for home emergency backup and RV.",
     description:
-      "The ATS-W2R-2P is a PC class (load level) automatic transfer switch for single-phase 110V or 220V AC systems up to 63A. With a 50ms transfer time, it switches seamlessly between Source A (mains priority) and a backup supply — whether a generator or PV inverter — whenever a mains fault is detected, ensuring connected loads experience less than 50ms of interruption. The 2-pole design switches both Live and Neutral simultaneously, fully isolating the two sources and preventing any backfeed. Once mains power is restored, the unit automatically reverts to Source A priority. Built on a motor-driven mechanism with a PA6 flame-retardant housing, the W2R series delivers reliable automatic transfer performance for home emergency backup systems, RV setups, and off-grid solar PV applications.",
+      "The ATS-W2R-2P is a PC class (load level) automatic transfer switch for single-phase 110V or 220V AC systems up to 63A. With a 50ms transfer time, it switches seamlessly between Source A (mains priority) and a backup supply 鈥?whether a generator or PV inverter 鈥?whenever a mains fault is detected, ensuring connected loads experience less than 50ms of interruption. The 2-pole design switches both Live and Neutral simultaneously, fully isolating the two sources and preventing any backfeed. Once mains power is restored, the unit automatically reverts to Source A priority. Built on a motor-driven mechanism with a PA6 flame-retardant housing, the W2R series delivers reliable automatic transfer performance for home emergency backup systems, RV setups, and off-grid solar PV applications.",
     features: [
-      "2-pole switching (Live + Neutral) — 2 inputs / 1 output",
-      "PC class (load level) — handles full rated load continuously",
-      "Fast 50ms (0.05s) transfer time — load interruption under 50ms",
+      "2-pole switching (Live + Neutral) 鈥?2 inputs / 1 output",
+      "PC class (load level) 鈥?handles full rated load continuously",
+      "Fast 50ms (0.05s) transfer time 鈥?load interruption under 50ms",
       "Dual voltage: supports both 110V and 220V AC single-phase",
       "Auto & manual transfer modes; returns to Source A (mains) automatically",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3438,7 +3429,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "2P (Live + Neutral)",
-      "Rated Current": "63A (Operating Range: 6A–63A)",
+      "Rated Current": "63A (Operating Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Single Phase",
@@ -3447,7 +3438,7 @@ export const products: Product[] = [
       "Priority Source": "Source A (Mains)",
       "Compatible Sources": "Mains, Generator, PV Inverter",
       "Switching Mode": "Auto & Manual",
-      "Transfer Time": "≤0.05s (50ms)",
+      "Transfer Time": "鈮?.05s (50ms)",
       "Housing": "PA6 Flame-retardant",
       "Applications": "Home Emergency Backup, RV",
     },
@@ -3464,9 +3455,9 @@ export const products: Product[] = [
     metaDescription: "ATS-W2R series single-phase 63A 2-pole PC class ATS for 110V and 220V. 50ms auto transfer, compatible with mains, generator and PV inverter. For home emergency backup and RV applications.",
     metaKeywords: "ATS-W2R 63A 2P ATS, dual power transfer switch, 110V 220V ATS, PC class ATS, single phase ATS, PV inverter ATS, home backup transfer switch, RV ATS, solar ATS",
     imageAlts: [
-      "63A 2P ATS-W2R 110V/220V front view — PC class dual power transfer switch",
-      "ATS-W2R-2P wiring diagram — 2-pole 2 inputs 1 output connection",
-      "ATS-W2R-2P internal structure — PCB, motor and PA6 flame-retardant housing",
+      "63A 2P ATS-W2R 110V/220V front view 鈥?PC class dual power transfer switch",
+      "ATS-W2R-2P wiring diagram 鈥?2-pole 2 inputs 1 output connection",
+      "ATS-W2R-2P internal structure 鈥?PCB, motor and PA6 flame-retardant housing",
       "63A single-phase ATS-W2R auto and manual switching mode panel",
       "ATS-W2R-2P compatible with mains, generator and PV inverter sources",
       "63A 2-pole transfer switch for home emergency backup and RV use",
@@ -3478,13 +3469,13 @@ export const products: Product[] = [
     slug: "ats-w2r-3p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "3-pole 63A PC class ATS for three-phase 110V/220V systems (no neutral). Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter — for hospitals, cold storage, and data centers.",
+    shortDescription: "3-pole 63A PC class ATS for three-phase 110V/220V systems (no neutral). Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter 鈥?for hospitals, cold storage, and data centers.",
     description:
-      "The ATS-W2R-3P is a PC class (load level) automatic transfer switch for three-phase systems without neutral (3L only), rated at 63A and supporting both 110V and 220V AC. All three line poles switch simultaneously in 50ms, providing complete source isolation and preventing backfeed between mains and the backup supply. When Source A (mains) fails, the unit instantly transfers the load to a generator or PV inverter; once mains is restored, it automatically reverts to Source A priority without manual intervention. Supports both automatic and manual switching modes to suit different installation requirements. Built on a motor-driven mechanism housed in a PA6 flame-retardant enclosure, the W2R-3P is engineered for reliable continuous operation in demanding commercial environments — hospitals, cold-storage facilities, data centers, and industrial equipment requiring uninterrupted three-phase power.",
+      "The ATS-W2R-3P is a PC class (load level) automatic transfer switch for three-phase systems without neutral (3L only), rated at 63A and supporting both 110V and 220V AC. All three line poles switch simultaneously in 50ms, providing complete source isolation and preventing backfeed between mains and the backup supply. When Source A (mains) fails, the unit instantly transfers the load to a generator or PV inverter; once mains is restored, it automatically reverts to Source A priority without manual intervention. Supports both automatic and manual switching modes to suit different installation requirements. Built on a motor-driven mechanism housed in a PA6 flame-retardant enclosure, the W2R-3P is engineered for reliable continuous operation in demanding commercial environments 鈥?hospitals, cold-storage facilities, data centers, and industrial equipment requiring uninterrupted three-phase power.",
     features: [
-      "3-pole switching (3 Lines simultaneously, no neutral) — 2 inputs / 1 output",
-      "PC class (load level) — handles full rated load continuously",
-      "Fast 50ms (0.05s) transfer time — load interruption under 50ms",
+      "3-pole switching (3 Lines simultaneously, no neutral) 鈥?2 inputs / 1 output",
+      "PC class (load level) 鈥?handles full rated load continuously",
+      "Fast 50ms (0.05s) transfer time 鈥?load interruption under 50ms",
       "Dual voltage: supports both 110V and 220V AC three-phase",
       "Auto & manual transfer modes; returns to Source A (mains) automatically",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3493,7 +3484,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "3P (3 Lines, No Neutral)",
-      "Rated Current": "63A (Operating Range: 6A–63A)",
+      "Rated Current": "63A (Operating Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase (No Neutral)",
@@ -3502,7 +3493,7 @@ export const products: Product[] = [
       "Priority Source": "Source A (Mains)",
       "Compatible Sources": "Mains, Generator, PV Inverter",
       "Switching Mode": "Auto & Manual",
-      "Transfer Time": "≤0.05s (50ms)",
+      "Transfer Time": "鈮?.05s (50ms)",
       "Housing": "PA6 Flame-retardant",
       "Applications": "Hospitals, Cold Storage, Data Centers",
     },
@@ -3519,9 +3510,9 @@ export const products: Product[] = [
     metaDescription: "ATS-W2R series three-phase 63A 3-pole (no neutral) PC class ATS for 110V and 220V. 50ms auto transfer, compatible with mains, generator and PV inverter. For hospitals, cold storage and data centers.",
     metaKeywords: "ATS-W2R 63A 3P ATS, three-phase no neutral transfer switch, 3 pole ATS 110V 220V, PC class ATS, PV inverter ATS, hospital transfer switch, data center ATS, commercial ATS",
     imageAlts: [
-      "63A 3P ATS-W2R 110V/220V front view — PC class three-phase transfer switch",
-      "ATS-W2R-3P wiring diagram — 3-pole 2 inputs 1 output connection",
-      "ATS-W2R-3P internal structure — PCB, motor and PA6 flame-retardant housing",
+      "63A 3P ATS-W2R 110V/220V front view 鈥?PC class three-phase transfer switch",
+      "ATS-W2R-3P wiring diagram 鈥?3-pole 2 inputs 1 output connection",
+      "ATS-W2R-3P internal structure 鈥?PCB, motor and PA6 flame-retardant housing",
       "63A three-phase ATS-W2R auto and manual switching mode panel",
       "ATS-W2R-3P compatible with mains, generator and PV inverter sources",
       "63A 3-pole transfer switch for hospitals, cold storage and data centers",
@@ -3533,13 +3524,13 @@ export const products: Product[] = [
     slug: "ats-w2r-4p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems with neutral. Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter — for hospitals, cold storage, and data centers.",
+    shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems with neutral. Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter 鈥?for hospitals, cold storage, and data centers.",
     description:
-      "The ATS-W2R-4P is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. All four poles — three phases and neutral — switch simultaneously in 50ms, ensuring complete isolation between sources and eliminating any risk of backfeed. When Source A (mains) fails, the unit instantly transfers the load to a generator or PV inverter; once mains is restored, it automatically reverts to Source A priority without manual intervention. Supports both automatic and manual switching modes to suit diverse installation needs. Built on a motor-driven mechanism housed in a PA6 flame-retardant enclosure, the W2R-4P combines three-phase coverage with neutral switching — essential for balanced load distribution in commercial and medical environments such as hospitals, cold-storage facilities, and data centers.",
+      "The ATS-W2R-4P is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. All four poles 鈥?three phases and neutral 鈥?switch simultaneously in 50ms, ensuring complete isolation between sources and eliminating any risk of backfeed. When Source A (mains) fails, the unit instantly transfers the load to a generator or PV inverter; once mains is restored, it automatically reverts to Source A priority without manual intervention. Supports both automatic and manual switching modes to suit diverse installation needs. Built on a motor-driven mechanism housed in a PA6 flame-retardant enclosure, the W2R-4P combines three-phase coverage with neutral switching 鈥?essential for balanced load distribution in commercial and medical environments such as hospitals, cold-storage facilities, and data centers.",
     features: [
-      "4-pole switching (3 Lines + Neutral simultaneously) — 2 inputs / 1 output",
-      "PC class (load level) — handles full rated load continuously",
-      "Fast 50ms (0.05s) transfer time — load interruption under 50ms",
+      "4-pole switching (3 Lines + Neutral simultaneously) 鈥?2 inputs / 1 output",
+      "PC class (load level) 鈥?handles full rated load continuously",
+      "Fast 50ms (0.05s) transfer time 鈥?load interruption under 50ms",
       "Dual voltage: supports both 110V and 220V AC three-phase with neutral",
       "Auto & manual transfer modes; returns to Source A (mains) automatically",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3548,7 +3539,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "4P (3 Lines + Neutral)",
-      "Rated Current": "63A (Operating Range: 6A–63A)",
+      "Rated Current": "63A (Operating Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase with Neutral",
@@ -3557,7 +3548,7 @@ export const products: Product[] = [
       "Priority Source": "Source A (Mains)",
       "Compatible Sources": "Mains, Generator, PV Inverter",
       "Switching Mode": "Auto & Manual",
-      "Transfer Time": "≤0.05s (50ms)",
+      "Transfer Time": "鈮?.05s (50ms)",
       "Housing": "PA6 Flame-retardant",
       "Applications": "Hospitals, Cold Storage, Data Centers",
     },
@@ -3574,9 +3565,9 @@ export const products: Product[] = [
     metaDescription: "ATS-W2R series three-phase 63A 4-pole (3L+N) PC class ATS for 110V and 220V. 50ms auto transfer, compatible with mains, generator and PV inverter. For hospitals, cold storage and data centers.",
     metaKeywords: "ATS-W2R 63A 4P ATS, three-phase neutral transfer switch, 4 pole ATS 110V 220V, PC class ATS, 3L+N ATS, PV inverter ATS, hospital transfer switch, data center ATS",
     imageAlts: [
-      "63A 4P ATS-W2R 110V/220V front view — PC class three-phase with neutral transfer switch",
-      "ATS-W2R-4P wiring diagram — 4-pole 3L+N 2 inputs 1 output connection",
-      "ATS-W2R-4P internal structure — PCB, motor and PA6 flame-retardant housing",
+      "63A 4P ATS-W2R 110V/220V front view 鈥?PC class three-phase with neutral transfer switch",
+      "ATS-W2R-4P wiring diagram 鈥?4-pole 3L+N 2 inputs 1 output connection",
+      "ATS-W2R-4P internal structure 鈥?PCB, motor and PA6 flame-retardant housing",
       "63A three-phase ATS-W2R-4P auto and manual switching mode panel",
       "ATS-W2R-4P compatible with mains, generator and PV inverter sources",
       "63A 4-pole 3L+N transfer switch for hospitals, cold storage and data centers",
@@ -3588,22 +3579,22 @@ export const products: Product[] = [
     slug: "stq1-63-2p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock prevents dual-power connection. ~2s auto transfer — an economical choice for home backup, RV, elevators, and fire protection.",
+    shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock prevents dual-power connection. ~2s auto transfer 鈥?an economical choice for home backup, RV, elevators, and fire protection.",
     description:
-      "The STQ1-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civilian-grade solution for non-critical backup power applications. Unlike PC class switches, the STQ1-63 uses a circuit breaker with mechanical interlock mechanism — physically preventing both power sources from connecting simultaneously. When Normal Power (N/mains) fails, the unit automatically transfers the load to the backup source (generator or PV inverter) in approximately 2 seconds; a brief 2s power interruption occurs during the switchover, which is acceptable for most residential and light-commercial loads. The unit reverts to Normal Power priority automatically once mains is restored. With a maximum load capacity of approximately 6930W (≈6.9kW) and compatibility with mains, generator, and PV inverter sources, the STQ1-63-2P is a cost-effective solution for home emergency backup, RV setups, elevators, and fire-protection panel circuits.",
+      "The STQ1-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civilian-grade solution for non-critical backup power applications. Unlike PC class switches, the STQ1-63 uses a circuit breaker with mechanical interlock mechanism 鈥?physically preventing both power sources from connecting simultaneously. When Normal Power (N/mains) fails, the unit automatically transfers the load to the backup source (generator or PV inverter) in approximately 2 seconds; a brief 2s power interruption occurs during the switchover, which is acceptable for most residential and light-commercial loads. The unit reverts to Normal Power priority automatically once mains is restored. With a maximum load capacity of approximately 6930W (鈮?.9kW) and compatibility with mains, generator, and PV inverter sources, the STQ1-63-2P is a cost-effective solution for home emergency backup, RV setups, elevators, and fire-protection panel circuits.",
     features: [
-      "2-pole switching (Live + Neutral) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "~2s auto transfer time — brief 2s interruption acceptable for most civilian loads",
+      "2-pole switching (Live + Neutral) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for most civilian loads",
       "Dual voltage: supports both 110V and 220V AC single-phase",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
-      "Max load capacity: ~6930W (≈6.9kW)",
-      "Economical civilian-grade ATS — cost-effective alternative to PC class units",
+      "Max load capacity: ~6930W (鈮?.9kW)",
+      "Economical civilian-grade ATS 鈥?cost-effective alternative to PC class units",
     ],
     specs: {
       "Poles": "2P (Live + Neutral)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Single Phase",
@@ -3614,7 +3605,7 @@ export const products: Product[] = [
       "Switching Mode": "Auto & Manual",
       "Auto Transfer Time": "~2s",
       "Power Interruption": "Brief ~2s during transfer",
-      "Max Load Power": "~6930W (≈6.9kW)",
+      "Max Load Power": "~6930W (鈮?.9kW)",
       "Internal Components": "PCB Control Board, Motor, Thermal Relay",
       "Applications": "Home Emergency, Fire Protection, Elevators, RV",
     },
@@ -3631,10 +3622,10 @@ export const products: Product[] = [
     metaDescription: "STQ1-63 series 63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s transfer, max 6.9kW. For home backup, RV, fire protection and elevator applications.",
     metaKeywords: "STQ1-63 ATS, 63A CB class transfer switch, 2P auto transfer switch, 110V 220V ATS, mechanical interlock ATS, home backup ATS, RV transfer switch, fire protection ATS, elevator ATS, economical ATS",
     imageAlts: [
-      "STQ1-63 63A 2P CB class ATS 110V/220V front view — economical auto transfer switch",
-      "STQ1-63-2P wiring diagram — 2-pole 2 inputs 1 output connection",
-      "STQ1-63-2P internal components — PCB control board, motor and thermal relay",
-      "STQ1-63 mechanical interlock mechanism — prevents dual-power connection",
+      "STQ1-63 63A 2P CB class ATS 110V/220V front view 鈥?economical auto transfer switch",
+      "STQ1-63-2P wiring diagram 鈥?2-pole 2 inputs 1 output connection",
+      "STQ1-63-2P internal components 鈥?PCB control board, motor and thermal relay",
+      "STQ1-63 mechanical interlock mechanism 鈥?prevents dual-power connection",
       "63A single-phase ATS auto and manual switching mode panel",
       "STQ1-63-2P transfer switch for home emergency, fire protection, elevator and RV",
     ],
@@ -3645,13 +3636,13 @@ export const products: Product[] = [
     slug: "stq1-63-3p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~22kW — a cost-effective solution for industrial equipment, commercial elevators, and three-phase motors.",
+    shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~22kW 鈥?a cost-effective solution for industrial equipment, commercial elevators, and three-phase motors.",
     description:
       "The STQ1-63-3P is a CB class automatic transfer switch for three-phase 110V or 220V AC systems up to 63A, offering a cost-effective industrial solution for non-critical three-phase loads. All three poles switch simultaneously using a circuit breaker with mechanical interlock, physically preventing both power sources from connecting at the same time. When Normal Power (N/mains) fails, the unit automatically transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power interruption occurs during switchover, which is acceptable for most industrial and commercial equipment. The unit automatically reverts to Normal Power priority once mains is restored. With a maximum load capacity of approximately 22kW across three phases, the STQ1-63-3P is well suited for powering industrial equipment, commercial elevators, three-phase motors, and other heavy loads where PC class switching speed is not required.",
     features: [
-      "3-pole switching (3 Lines simultaneously, no neutral) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "~2s auto transfer time — brief 2s interruption acceptable for industrial loads",
+      "3-pole switching (3 Lines simultaneously, no neutral) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for industrial loads",
       "Dual voltage: supports both 110V and 220V AC three-phase",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3660,7 +3651,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "3P (Triple-Pole, Simultaneous Switching)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase",
@@ -3688,10 +3679,10 @@ export const products: Product[] = [
     metaDescription: "STQ1-63 series 63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s transfer, max 22kW. For industrial equipment, commercial elevators and three-phase motors.",
     metaKeywords: "STQ1-63 3P ATS, three-phase CB class transfer switch, 63A 3 pole ATS, industrial auto transfer switch, commercial elevator ATS, three-phase motor ATS, mechanical interlock ATS, cost-effective ATS",
     imageAlts: [
-      "STQ1-63 63A 3P CB class ATS 110V/220V front view — three-phase auto transfer switch",
-      "STQ1-63-3P wiring diagram — 3-pole 2 inputs 1 output connection",
-      "STQ1-63-3P internal components — PCB control board, motor and thermal relay",
-      "STQ1-63 three-phase mechanical interlock mechanism — prevents dual-power connection",
+      "STQ1-63 63A 3P CB class ATS 110V/220V front view 鈥?three-phase auto transfer switch",
+      "STQ1-63-3P wiring diagram 鈥?3-pole 2 inputs 1 output connection",
+      "STQ1-63-3P internal components 鈥?PCB control board, motor and thermal relay",
+      "STQ1-63 three-phase mechanical interlock mechanism 鈥?prevents dual-power connection",
       "63A three-phase ATS auto and manual switching mode panel",
       "STQ1-63-3P transfer switch for industrial equipment, elevators and three-phase motors",
     ],
@@ -3702,14 +3693,14 @@ export const products: Product[] = [
     slug: "stq1-63-4p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s auto transfer, supports mixed 3-phase and single-phase loads — for hospitals, cold storage, and data centers.",
+    shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s auto transfer, supports mixed 3-phase and single-phase loads 鈥?for hospitals, cold storage, and data centers.",
     description:
-      "The STQ1-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. By switching all four poles — three phases and neutral — simultaneously, it enables use with mixed three-phase and single-phase loads in the same installation, making it ideal for facilities such as hospitals, cold-storage plants, and data centers where neutral is essential for balanced distribution. Built-in mechanical interlock physically prevents both power sources from connecting at the same time. Additional over-voltage and under-voltage protection continuously monitors the supply, adding an extra layer of protection not present in the 3P version. When Normal Power (N/mains) fails, the unit transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s outage occurs during switchover. Once mains is restored, it reverts to Normal Power priority automatically. Maximum load capacity is approximately 13.9kW (13870W).",
+      "The STQ1-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. By switching all four poles 鈥?three phases and neutral 鈥?simultaneously, it enables use with mixed three-phase and single-phase loads in the same installation, making it ideal for facilities such as hospitals, cold-storage plants, and data centers where neutral is essential for balanced distribution. Built-in mechanical interlock physically prevents both power sources from connecting at the same time. Additional over-voltage and under-voltage protection continuously monitors the supply, adding an extra layer of protection not present in the 3P version. When Normal Power (N/mains) fails, the unit transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s outage occurs during switchover. Once mains is restored, it reverts to Normal Power priority automatically. Maximum load capacity is approximately 13.9kW (13870W).",
     features: [
-      "4-pole switching (3 Lines + Neutral simultaneously) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "Over-voltage & under-voltage protection — added safety beyond the 3P version",
-      "~2s auto transfer time — brief 2s interruption acceptable for commercial loads",
+      "4-pole switching (3 Lines + Neutral simultaneously) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "Over-voltage & under-voltage protection 鈥?added safety beyond the 3P version",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for commercial loads",
       "Dual voltage: supports both 110V and 220V AC; compatible with 3-phase and single-phase loads",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3717,7 +3708,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "4P (3 Lines + Neutral)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase with Neutral (compatible with 3-phase & single-phase loads)",
@@ -3746,9 +3737,9 @@ export const products: Product[] = [
     metaDescription: "STQ1-63 series 63A 4-pole (3L+N) CB class ATS for 110V/220V. Mechanical interlock, over/under-voltage protection, ~2s transfer, max 13.9kW. For hospitals, cold storage and data centers.",
     metaKeywords: "STQ1-63 4P ATS, four-pole CB class transfer switch, 63A 3L+N ATS, hospital auto transfer switch, cold storage ATS, data center ATS, three-phase neutral ATS, mechanical interlock ATS",
     imageAlts: [
-      "STQ1-63 63A 4P CB class ATS 110V/220V front view — three-phase with neutral transfer switch",
-      "STQ1-63-4P wiring diagram — 4-pole 3L+N 2 inputs 1 output connection",
-      "STQ1-63-4P internal components — PCB control board, motor and thermal relay",
+      "STQ1-63 63A 4P CB class ATS 110V/220V front view 鈥?three-phase with neutral transfer switch",
+      "STQ1-63-4P wiring diagram 鈥?4-pole 3L+N 2 inputs 1 output connection",
+      "STQ1-63-4P internal components 鈥?PCB control board, motor and thermal relay",
       "STQ1-63-4P over-voltage and under-voltage protection settings",
       "63A four-pole ATS auto and manual switching mode panel",
       "STQ1-63-4P transfer switch for hospitals, cold storage and data centers",
@@ -3760,22 +3751,22 @@ export const products: Product[] = [
     slug: "stq2-63-2p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~6.9kW — an economical civilian ATS for home emergency backup, RV, fire protection, and elevators.",
+    shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~6.9kW 鈥?an economical civilian ATS for home emergency backup, RV, fire protection, and elevators.",
     description:
-      "The STQ2-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civilian-grade backup power solution. Using a circuit breaker with mechanical interlock mechanism, it physically prevents both power sources from being connected simultaneously. When Normal Power (N/mains) fails, the unit automatically switches to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power outage occurs during transfer, which is acceptable for most residential and light-duty loads. Once mains is restored, the unit reverts to Normal Power priority automatically. With a maximum load capacity of approximately 6930W (≈6.9kW) and support for both auto and manual switching modes, the STQ2-63-2P is a straightforward, cost-effective choice for home emergency backup, RV power systems, fire-protection panels, elevator circuits, and general backup power applications.",
+      "The STQ2-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civilian-grade backup power solution. Using a circuit breaker with mechanical interlock mechanism, it physically prevents both power sources from being connected simultaneously. When Normal Power (N/mains) fails, the unit automatically switches to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power outage occurs during transfer, which is acceptable for most residential and light-duty loads. Once mains is restored, the unit reverts to Normal Power priority automatically. With a maximum load capacity of approximately 6930W (鈮?.9kW) and support for both auto and manual switching modes, the STQ2-63-2P is a straightforward, cost-effective choice for home emergency backup, RV power systems, fire-protection panels, elevator circuits, and general backup power applications.",
     features: [
-      "2-pole switching (Live + Neutral) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "~2s auto transfer time — brief 2s interruption acceptable for civilian loads",
+      "2-pole switching (Live + Neutral) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for civilian loads",
       "Dual voltage: supports both 110V and 220V AC single-phase",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
-      "Max load capacity: ~6930W (≈6.9kW)",
-      "Economical civilian-grade ATS — cost-effective alternative to PC class units",
+      "Max load capacity: ~6930W (鈮?.9kW)",
+      "Economical civilian-grade ATS 鈥?cost-effective alternative to PC class units",
     ],
     specs: {
       "Poles": "2P (Live + Neutral)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Single Phase",
@@ -3786,7 +3777,7 @@ export const products: Product[] = [
       "Switching Mode": "Auto & Manual",
       "Auto Transfer Time": "~2s",
       "Power Interruption": "Brief ~2s during transfer",
-      "Max Load Power": "~6930W (≈6.9kW)",
+      "Max Load Power": "~6930W (鈮?.9kW)",
       "Internal Components": "PCB Control Board, Motor, Thermal Relay",
       "Applications": "Home Emergency, Fire Protection, Elevators, RV",
     },
@@ -3803,10 +3794,10 @@ export const products: Product[] = [
     metaDescription: "STQ2-63 series 63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s transfer, max 6.9kW. For home backup, RV, fire protection and elevator applications.",
     metaKeywords: "STQ2-63 ATS, 63A CB class transfer switch, 2P single-phase ATS, 110V 220V ATS, mechanical interlock ATS, home backup ATS, RV transfer switch, fire protection ATS, economical ATS",
     imageAlts: [
-      "STQ2-63 63A 2P CB class ATS 110V/220V front view — economical single-phase auto transfer switch",
-      "STQ2-63-2P wiring diagram — 2-pole 2 inputs 1 output connection",
-      "STQ2-63-2P internal components — PCB control board, motor and thermal relay",
-      "STQ2-63 mechanical interlock mechanism — prevents dual-power connection",
+      "STQ2-63 63A 2P CB class ATS 110V/220V front view 鈥?economical single-phase auto transfer switch",
+      "STQ2-63-2P wiring diagram 鈥?2-pole 2 inputs 1 output connection",
+      "STQ2-63-2P internal components 鈥?PCB control board, motor and thermal relay",
+      "STQ2-63 mechanical interlock mechanism 鈥?prevents dual-power connection",
       "63A single-phase STQ2 ATS auto and manual switching mode panel",
       "STQ2-63-2P transfer switch for home emergency, fire protection, elevator and RV",
     ],
@@ -3817,13 +3808,13 @@ export const products: Product[] = [
     slug: "stq2-63-3p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V (no neutral). Mechanical interlock, ~2s auto transfer, max ~22kW — a cost-effective solution for industrial equipment, commercial elevators, and three-phase motors.",
+    shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V (no neutral). Mechanical interlock, ~2s auto transfer, max ~22kW 鈥?a cost-effective solution for industrial equipment, commercial elevators, and three-phase motors.",
     description:
       "The STQ2-63-3P is a CB class automatic transfer switch for three-phase 110V or 220V AC systems up to 63A, offering a cost-effective industrial solution for non-critical three-phase loads. All three poles switch simultaneously using a circuit breaker with mechanical interlock, physically preventing both power sources from connecting at the same time. When Normal Power (N/mains) fails, the unit automatically transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power interruption occurs during switchover, which is acceptable for most industrial and commercial equipment. The unit automatically reverts to Normal Power priority once mains is restored. With a maximum load capacity of approximately 22kW across three phases and support for both auto and manual switching modes, the STQ2-63-3P is a straightforward, cost-effective choice for powering industrial equipment, commercial elevators, three-phase motors, and other heavy loads where PC class switching speed is not required.",
     features: [
-      "3-pole switching (3 Lines simultaneously, no neutral) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "~2s auto transfer time — brief 2s interruption acceptable for industrial loads",
+      "3-pole switching (3 Lines simultaneously, no neutral) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for industrial loads",
       "Dual voltage: supports both 110V and 220V AC three-phase",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3832,7 +3823,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "3P (Triple-Pole, Simultaneous Switching)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase",
@@ -3860,10 +3851,10 @@ export const products: Product[] = [
     metaDescription: "STQ2-63 series 63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s transfer, max 22kW. For industrial equipment, commercial elevators and three-phase motors.",
     metaKeywords: "STQ2-63 3P ATS, three-phase CB class transfer switch, 63A 3 pole ATS, industrial auto transfer switch, commercial elevator ATS, three-phase motor ATS, mechanical interlock ATS, cost-effective industrial ATS",
     imageAlts: [
-      "STQ2-63 63A 3P CB class ATS 110V/220V front view — three-phase auto transfer switch",
-      "STQ2-63-3P wiring diagram — 3-pole 2 inputs 1 output connection",
-      "STQ2-63-3P internal components — PCB control board, motor and thermal relay",
-      "STQ2-63 three-phase mechanical interlock mechanism — prevents dual-power connection",
+      "STQ2-63 63A 3P CB class ATS 110V/220V front view 鈥?three-phase auto transfer switch",
+      "STQ2-63-3P wiring diagram 鈥?3-pole 2 inputs 1 output connection",
+      "STQ2-63-3P internal components 鈥?PCB control board, motor and thermal relay",
+      "STQ2-63 three-phase mechanical interlock mechanism 鈥?prevents dual-power connection",
       "63A three-phase STQ2 ATS auto and manual switching mode panel",
       "STQ2-63-3P transfer switch for industrial equipment, elevators and three-phase motors",
     ],
@@ -3874,14 +3865,14 @@ export const products: Product[] = [
     slug: "stq2-63-4p-63a-110v-220v",
     categorySlug: "ats-dual-power-switch",
     categoryName: "ATS Dual Power Switch",
-    shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s auto transfer, supports mixed 3-phase and single-phase loads — for hospitals, cold storage, and data centers.",
+    shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s auto transfer, supports mixed 3-phase and single-phase loads 鈥?for hospitals, cold storage, and data centers.",
     description:
-      "The STQ2-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. By switching all four poles — three phases and neutral — simultaneously, it enables use with mixed three-phase and single-phase loads in the same installation, making it well suited for facilities such as hospitals, cold-storage plants, and data centers where neutral is essential for balanced distribution. Built-in mechanical interlock physically prevents both power sources from connecting at the same time. Additional over-voltage and under-voltage protection continuously monitors the supply for an extra layer of safety. When Normal Power (N/mains) fails, the unit transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s outage occurs during switchover. Once mains is restored, it reverts to Normal Power priority automatically. Maximum load capacity is approximately 13.9kW (13870W).",
+      "The STQ2-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. By switching all four poles 鈥?three phases and neutral 鈥?simultaneously, it enables use with mixed three-phase and single-phase loads in the same installation, making it well suited for facilities such as hospitals, cold-storage plants, and data centers where neutral is essential for balanced distribution. Built-in mechanical interlock physically prevents both power sources from connecting at the same time. Additional over-voltage and under-voltage protection continuously monitors the supply for an extra layer of safety. When Normal Power (N/mains) fails, the unit transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s outage occurs during switchover. Once mains is restored, it reverts to Normal Power priority automatically. Maximum load capacity is approximately 13.9kW (13870W).",
     features: [
-      "4-pole switching (3 Lines + Neutral simultaneously) — 2 inputs / 1 output",
-      "CB class — circuit breaker with mechanical interlock, prevents dual-power connection",
-      "Over-voltage & under-voltage protection — added safety beyond the 3P version",
-      "~2s auto transfer time — brief 2s interruption acceptable for commercial loads",
+      "4-pole switching (3 Lines + Neutral simultaneously) 鈥?2 inputs / 1 output",
+      "CB class 鈥?circuit breaker with mechanical interlock, prevents dual-power connection",
+      "Over-voltage & under-voltage protection 鈥?added safety beyond the 3P version",
+      "~2s auto transfer time 鈥?brief 2s interruption acceptable for commercial loads",
       "Dual voltage: supports both 110V and 220V AC; compatible with 3-phase and single-phase loads",
       "Auto & manual transfer modes; Normal Power (N) priority with auto return",
       "Compatible with mains, generator, and PV inverter sources",
@@ -3889,7 +3880,7 @@ export const products: Product[] = [
     ],
     specs: {
       "Poles": "4P (3 Lines + Neutral)",
-      "Rated Current": "63A (Working Range: 6A–63A)",
+      "Rated Current": "63A (Working Range: 6A鈥?3A)",
       "Rated Voltage": "110V / 220V AC",
       "Frequency": "50/60Hz",
       "Phase": "Three-Phase with Neutral (compatible with 3-phase & single-phase loads)",
@@ -3918,9 +3909,9 @@ export const products: Product[] = [
     metaDescription: "STQ2-63 series 63A 4-pole (3L+N) CB class ATS for 110V/220V. Mechanical interlock, over/under-voltage protection, ~2s transfer, max 13.9kW. For hospitals, cold storage and data centers.",
     metaKeywords: "STQ2-63 4P ATS, four-pole CB class transfer switch, 63A 3L+N ATS, hospital auto transfer switch, cold storage ATS, data center ATS, three-phase neutral ATS, mechanical interlock ATS",
     imageAlts: [
-      "STQ2-63 63A 4P CB class ATS 110V/220V front view — three-phase with neutral transfer switch",
-      "STQ2-63-4P wiring diagram — 4-pole 3L+N 2 inputs 1 output connection",
-      "STQ2-63-4P internal components — PCB control board, motor and thermal relay",
+      "STQ2-63 63A 4P CB class ATS 110V/220V front view 鈥?three-phase with neutral transfer switch",
+      "STQ2-63-4P wiring diagram 鈥?4-pole 3L+N 2 inputs 1 output connection",
+      "STQ2-63-4P internal components 鈥?PCB control board, motor and thermal relay",
       "STQ2-63-4P over-voltage and under-voltage protection settings",
       "63A four-pole STQ2 ATS auto and manual switching mode panel",
       "STQ2-63-4P transfer switch for hospitals, cold storage and data centers",
@@ -3928,7 +3919,7 @@ export const products: Product[] = [
   },
 ];
 
-// ─── Blog Posts ───────────────────────────────────────────────────────────────
+// 鈹€鈹€鈹€ Blog Posts 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 
 export const blogPosts: BlogPost[] = [
   {
@@ -3968,7 +3959,7 @@ Always consult product datasheets and IEC 62548 / IEC 60364-7-712 when designing
   
 ];
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// 鈹€鈹€鈹€ Helpers 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
 
 export function getCategoryBySlug(slug: string): Category | undefined {
   return categories.find((c) => c.slug === slug);
@@ -3999,3 +3990,4 @@ export function getLatestBlogPosts(count = 3): BlogPost[] {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, count);
 }
+
