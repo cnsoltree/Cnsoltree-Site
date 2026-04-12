@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
 import {
   categories,
   getLatestBlogPosts,
@@ -486,18 +487,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right — Certificate images */}
-            <div className="grid grid-cols-2 gap-4">
-              {["cert-1.jpg", "cert-2.jpg", "cert-3.jpg", "cert-4.jpg"].map((file) => (
-                <div key={file} className="overflow-hidden rounded-xl border border-gray-100 bg-gray-50 p-3 shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`/images/${file}`}
-                    alt="Soltree certification"
-                    className="h-48 w-full object-contain"
-                  />
-                </div>
-              ))}
+            {/* Right — Certificate image */}
+            <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/CT.png"
+                alt="Soltree certification"
+                className="w-full object-contain"
+              />
             </div>
 
           </div>
@@ -563,6 +560,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <TestimonialsSlider />
 
       <section className="section bg-white">
         <div className="container">
@@ -648,8 +647,8 @@ export default function HomePage() {
                       <input id="home-name" name="name" type="text" required className="input" placeholder="John Smith" />
                     </div>
                     <div>
-                      <label htmlFor="home-phone" className="label">Phone / WhatsApp *</label>
-                      <input id="home-phone" name="phone" type="tel" required className="input" placeholder="+1 555 0100" />
+                      <label htmlFor="home-phone" className="label">Phone / WhatsApp</label>
+                      <input id="home-phone" name="phone" type="tel" className="input" placeholder="+1 555 0100" />
                     </div>
                   </div>
                   <div>
