@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -52,15 +53,7 @@ const contactInfo = [
   },
 ];
 
-const inquiryTypes = [
-  "Product Enquiry",
-  "Request for Quotation",
-  "OEM / Private Label",
-  "Sample Request",
-  "Technical Support",
-  "Distributor Partnership",
-  "Other",
-];
+
 
 export default function ContactPage() {
   return (
@@ -141,109 +134,10 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <div className="card-flat">
                 <h2 className="text-lg font-bold text-gray-900">Send an Enquiry</h2>
-                <p className="mt-1 text-xs text-gray-500">
+                <p className="mt-1 mb-6 text-xs text-gray-500">
                   All fields marked * are required.
                 </p>
-
-                <form
-                  action="/api/contact"
-                  method="POST"
-                  className="mt-6 space-y-5"
-                  noValidate
-                >
-                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="name" className="label">Full Name *</label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        autoComplete="name"
-                        className="input"
-                        placeholder="John Smith"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="label">Email Address *</label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        autoComplete="email"
-                        className="input"
-                        placeholder="john@company.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="company" className="label">Company</label>
-                      <input
-                        id="company"
-                        name="company"
-                        type="text"
-                        autoComplete="organization"
-                        className="input"
-                        placeholder="Your company name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="label">Phone / WhatsApp</label>
-                      <input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        autoComplete="tel"
-                        className="input"
-                        placeholder="+1 555 0100"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="inquiry_type" className="label">Inquiry Type *</label>
-                    <select
-                      id="inquiry_type"
-                      name="inquiry_type"
-                      required
-                      className="input"
-                      defaultValue=""
-                    >
-                      <option value="" disabled>Select inquiry type…</option>
-                      {inquiryTypes.map((t) => (
-                        <option key={t} value={t}>{t}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="label">Message *</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      className="textarea"
-                      placeholder="Please describe your requirements, including product names, quantities, and any special specifications…"
-                    />
-                  </div>
-
-                  {/* Privacy notice */}
-                  <p className="text-xs text-gray-400">
-                    By submitting this form you agree to our{" "}
-                    <Link href="/privacy" className="underline hover:text-gray-600">
-                      Privacy Policy
-                    </Link>
-                    . We will only use your information to respond to your enquiry.
-                  </p>
-
-                  <button type="submit" className="btn-primary w-full sm:w-auto justify-center px-10 py-3.5">
-                    Send Enquiry
-                  </button>
-                </form>
+                <ContactForm showInquiryType buttonText="Send Enquiry" />
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
+import ContactForm from "@/components/ContactForm";
 import {
   categories,
   getLatestBlogPosts,
@@ -639,40 +640,8 @@ export default function HomePage() {
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-gray-100 bg-gray-50 p-8">
                 <h3 className="text-lg font-bold text-gray-900">Send an Enquiry</h3>
-                <p className="mt-1 text-xs text-gray-500">All fields marked * are required.</p>
-                <form action="/api/contact" method="POST" className="mt-6 space-y-4" noValidate>
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="home-name" className="label">Your Name *</label>
-                      <input id="home-name" name="name" type="text" required className="input" placeholder="John Smith" />
-                    </div>
-                    <div>
-                      <label htmlFor="home-phone" className="label">Phone / WhatsApp</label>
-                      <input id="home-phone" name="phone" type="tel" className="input" placeholder="+1 555 0100" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="home-email" className="label">Email Address *</label>
-                    <input id="home-email" name="email" type="email" required className="input" placeholder="john@company.com" />
-                  </div>
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="home-company" className="label">Your Company</label>
-                      <input id="home-company" name="company" type="text" className="input" placeholder="Company name" />
-                    </div>
-                    <div>
-                      <label htmlFor="home-country" className="label">Your Country</label>
-                      <input id="home-country" name="country" type="text" className="input" placeholder="e.g. United States" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="home-message" className="label">Your Message *</label>
-                    <textarea id="home-message" name="message" required rows={4} className="textarea" placeholder="Please describe your requirements..." />
-                  </div>
-                  <button type="submit" className="btn-primary w-full justify-center py-3.5">
-                    Send Now
-                  </button>
-                </form>
+                <p className="mt-1 mb-6 text-xs text-gray-500">All fields marked * are required.</p>
+                <ContactForm showCountry buttonText="Send Now" />
               </div>
             </div>
 

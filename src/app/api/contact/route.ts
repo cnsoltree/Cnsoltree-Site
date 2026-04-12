@@ -124,7 +124,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       {
         success: false,
         error:
-          "请检查表单字段：name（必填，≤100字）、email（合法格式）、message（10–5000字）。",
+          "Please check your form: name (required, max 100 characters), email (valid format), message (10–5000 characters).",
       },
       { status: 422 }
     );
@@ -148,25 +148,17 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
   // 4. 发送管理员通知邮件 + 用户确认邮件（并发）
   try {
-    await Promise.all([
-      resend.emails.send({
-        from: FROM_EMAIL,
-        to: ADMIN_EMAIL,
-        replyTo: email,
-        subject: `[Cnsoltree] 新咨询来自 ${name}${company ? ` · ${company}` : ""}`,
-        html: adminEmailHtml({ name, email, company, message }),
-      }),
-      resend.emails.send({
-        from: FROM_EMAIL,
-        to: email,
-        subject: "我们已收到你的咨询 — Cnsoltree",
-        html: userConfirmationHtml(name),
-      }),
-    ]);
+    await resend.emails.send({
+      from: FROM_EMAIL,
+      to: ADMIN_EMAIL,
+      replyTo: email,
+      subject: `[Soltree] New enquiry from ${name}${company ? ` · ${company}` : ""}`,
+      html: adminEmailHtml({ name, email, company, message }),
+    });
   } catch (err) {
     console.error("[Contact] Resend error:", err);
     return NextResponse.json(
-      { success: false, error: "邮件发送失败，请稍后重试。" },
+      { success: false, error: "Failed to send email. Please try again later." },
       { status: 502 }
     );
   }
