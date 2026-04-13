@@ -406,17 +406,31 @@ export default function BlogPostPage({
               </div>
 
               {/* CTA */}
-              <div className="mt-10 rounded-xl border border-green-100 bg-green-50 p-6">
-                <h3 className="text-base font-semibold text-gray-900">
-                  Have a technical question?
-                </h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  Our engineering team is available to answer product selection questions,
-                  provide datasheets, or discuss your specific application.
+              <div className="mt-10 rounded-xl border border-green-100 bg-gradient-to-br from-green-50 to-white p-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-green-600">
+                  Factory Direct · OEM Available
                 </p>
-                <Link href="/contact" className="btn-primary mt-4 inline-flex">
-                  Contact Our Engineers
-                </Link>
+                <h3 className="mt-2 text-lg font-bold text-gray-900">
+                  Ready to Source? Get a Factory-Direct Quote.
+                </h3>
+                <ul className="mt-4 space-y-2">
+                  {[
+                    "Wholesale pricing with full CE & TUV documentation",
+                    "OEM & private label — custom spec, your brand",
+                    "Samples, datasheets & tech support on request",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
+                      <span className="mt-0.5 text-green-500 font-bold">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <Link href="/contact" className="btn-primary inline-flex">
+                    Request a Quote
+                  </Link>
+                  <span className="text-xs text-gray-400">Reply within 24 hours</span>
+                </div>
               </div>
             </div>
 

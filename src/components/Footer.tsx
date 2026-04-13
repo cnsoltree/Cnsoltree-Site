@@ -33,7 +33,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-gray-400">
-              Cnsoltree is an electrical equipment company committed to
+              Soltree is an electrical equipment company committed to
               providing quality products at affordable prices. We&apos;re proud
               to have maintained a 98.9% customer satisfaction rate through
               dedication and excellent service.

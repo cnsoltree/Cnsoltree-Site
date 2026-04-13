@@ -3952,7 +3952,7 @@ Stop competing on price with generic boxes. Start building your brand's technica
     `,
     date: "2026-04-13",
     dateModified: "2026-04-13",
-    author: "Cnsoltree Engineering Team",
+    author: "Soltree Engineering Team",
     image: "/images/blog/PV-Combiner-Box-Cost-and-Quality.jpg",
     tags: ["PV Combiner Box", "Solar PV", "Sourcing Guide", "OEM", "B2B Procurement"],
     readingTime: 6,
