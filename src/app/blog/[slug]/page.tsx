@@ -220,6 +220,17 @@ function renderContent(markdown: string) {
     } else if (/^\d+\.\s/.test(line)) {
       listOrdered = true;
       listItems.push({ text: line.replace(/^\d+\.\s/, ""), ordered: true });
+    } else if (/^!\[([^\]]*)\]\(([^)]+)\)$/.test(line)) {
+      flushList();
+      const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (imgMatch) {
+        const [, alt, src] = imgMatch;
+        elements.push(
+          <div key={key++} className="relative my-6 overflow-hidden rounded-xl bg-gray-100" style={{ aspectRatio: "16/9" }}>
+            <Image src={src} alt={alt} fill className="object-cover" />
+          </div>
+        );
+      }
     } else {
       flushList();
       elements.push(
