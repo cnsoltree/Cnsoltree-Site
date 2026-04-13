@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getBlogPostBySlug, blogPosts, getLatestBlogPosts } from "@/lib/data";
+import { getBlogPostBySlug, blogPosts, getLatestBlogPosts, getProductsByCategory } from "@/lib/data";
 import TableOfContents, { type TocItem } from "@/components/TableOfContents";
 
 // ─── Static params (SSG) ──────────────────────────────────────────────────────
@@ -255,6 +255,9 @@ export default function BlogPostPage({
   if (!post) notFound();
 
   const related = getLatestBlogPosts(4).filter((p) => p.slug !== post.slug).slice(0, 3);
+  const relatedProducts = post.relatedCategorySlug
+    ? getProductsByCategory(post.relatedCategorySlug).slice(0, 3)
+    : [];
   const toc = extractToc(post.content);
   const faqs = extractFaqs(post.content);
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
@@ -419,6 +422,41 @@ export default function BlogPostPage({
 
             {/* Sidebar */}
             <aside className="space-y-6">
+
+              {/* Factory Direct */}
+              <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+                <div className="relative h-36 w-full">
+                  <Image
+                    src="/images/factory.jpg"
+                    alt="Cnsoltree factory — IEC-certified electrical component manufacturer"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <span className="absolute bottom-3 left-4 text-sm font-bold tracking-wide text-white">
+                    Factory Direct
+                  </span>
+                </div>
+                <div className="p-4">
+                  <p className="text-xs leading-relaxed text-gray-500">
+                    IEC-certified manufacturer of low-voltage electrical protection products. OEM &amp; private label available.
+                  </p>
+                  <div className="mt-3 flex items-center justify-center gap-3">
+                    <div className="relative h-8 w-8">
+                      <Image src="/images/ce.png" alt="CE certified" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-8 w-12">
+                      <Image src="/images/TUV.png" alt="TUV certified" fill className="object-contain" />
+                    </div>
+                    <div className="relative h-8 w-12">
+                      <Image src="/images/rohs.png" alt="RoHS compliant" fill className="object-contain" />
+                    </div>
+                  </div>
+                  <Link href="/contact" className="btn-primary mt-4 inline-flex w-full justify-center text-xs py-2">
+                    Request a Quote
+                  </Link>
+                </div>
+              </div>
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-5">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
                   About This Article
@@ -461,17 +499,53 @@ export default function BlogPostPage({
                 </div>
               )}
 
-              <div className="rounded-xl border border-gray-200 bg-white p-5">
-                <h3 className="text-sm font-semibold text-gray-900">
-                  Need Products?
-                </h3>
-                <p className="mt-1 text-xs text-gray-500 leading-relaxed">
-                  Browse our full range of IEC-certified electrical protection products.
-                </p>
-                <Link href="/products" className="btn-primary mt-4 inline-flex w-full justify-center text-xs py-2">
-                  View Products
-                </Link>
-              </div>
+              {relatedProducts.length > 0 ? (
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                    Featured Products
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {relatedProducts.map((product) => (
+                      <li key={product.id}>
+                        <Link
+                          href={`/products/${product.slug}`}
+                          className="group flex items-center gap-3 rounded-lg border border-gray-100 bg-gray-50 p-2.5 hover:border-green-200 hover:bg-green-50 transition-colors"
+                        >
+                          <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-md bg-white">
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              className="object-contain p-1"
+                            />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className="text-xs font-medium leading-snug text-gray-800 group-hover:text-green-700 transition-colors line-clamp-2">
+                              {product.name}
+                            </p>
+                            <p className="mt-1 text-[11px] text-green-600 font-medium">
+                              View Product →
+                            </p>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={`/categories/${post.relatedCategorySlug}`} className="mt-3 inline-flex w-full justify-center rounded-lg border border-gray-200 py-2 text-xs font-medium text-gray-600 hover:border-green-300 hover:text-green-700 transition-colors">
+                    View All Products →
+                  </Link>
+                </div>
+              ) : (
+                <div className="rounded-xl border border-gray-200 bg-white p-5">
+                  <h3 className="text-sm font-semibold text-gray-900">Need Products?</h3>
+                  <p className="mt-1 text-xs text-gray-500 leading-relaxed">
+                    Browse our full range of IEC-certified electrical protection products.
+                  </p>
+                  <Link href="/products" className="btn-primary mt-4 inline-flex w-full justify-center text-xs py-2">
+                    View Products
+                  </Link>
+                </div>
+              )}
             </aside>
           </div>
         </div>

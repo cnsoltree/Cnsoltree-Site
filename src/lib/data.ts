@@ -78,6 +78,7 @@ export interface BlogPost {
   metaTitle?: string;
   metaDescription?: string;
   metaKeywords?: string;
+  relatedCategorySlug?: string;
 }
 
 // ─── Categories ───────────────────────────────────────────────────────────────
@@ -3958,6 +3959,7 @@ Stop competing on price with generic boxes. Start building your brand's technica
     metaTitle: "PV Combiner Box Sourcing from China 2026 | Wholesale Guide | Cnsoltree",
     metaDescription: "Source reliable PV combiner boxes from China in 2026. Evaluate DC components, IP65 enclosures & OEM options — factory-direct wholesale guide for solar distributors.",
     metaKeywords: "PV combiner box, solar combiner box, PV combiner box manufacturer China, wholesale solar combiner box, DC combiner box OEM, IP65 PV combiner box, 1000V 1500V combiner box",
+    relatedCategorySlug: "pv-combiner-box",
   },
   
 ];
