@@ -43,10 +43,10 @@ export interface Product {
   badge?: "New" | "Hot" | "Featured";
   /**
    * SEO 字段（可选） – 不填时自动用 name / shortDescription 生成兜底 – *
-   * metaTitle – 浏览器标签页和搜索结果标题，建议格式 – *                  "产品 – | 品类关键 – | Cnsoltree"
-   *                  示例 – MCB 1P AC 6-63A Circuit Breaker | Miniature Circuit Breaker Supplier | Cnsoltree"
+   * metaTitle – 浏览器标签页和搜索结果标题，建议格式 – *                  "产品 – | 品类关键 – | Soltree"
+   *                  示例 – MCB 1P AC 6-63A Circuit Breaker | Miniature Circuit Breaker Supplier | Soltree"
    *
-   * metaDescription – 搜索结果摘要，建 – 120 – 60 字符，包含核心关键词 + 行动 – *                  示例 – Buy MCB 1P AC 6-63A circuit breaker from Cnsoltree. CE & RoHS certified, OEM available, ships worldwide."
+   * metaDescription – 搜索结果摘要，建 – 120 – 60 字符，包含核心关键词 + 行动 – *                  示例 – Buy MCB 1P AC 6-63A circuit breaker from Soltree. CE & RoHS certified, OEM available, ships worldwide."
    *
    * metaKeywords – 关键词列表（逗号分隔），3 – 个，覆盖产品型号、品类、应用场 – *                  示例 – MCB 1P, miniature circuit breaker, DIN rail MCB, circuit breaker supplier, CE certified MCB"
    *
@@ -97,7 +97,7 @@ export const categories: Category[] = [
     name: "Surge Protector Device",
     shortDescription: "Transient overvoltage suppression for sensitive equipment.",
     description:
-      "Cnsoltree surge protective devices (SPDs) safeguard electrical installations and connected equipment from lightning-induced surges and switching transients, meeting IEC 61643 Type 1/2/3 requirements.",
+      "Soltree surge protective devices (SPDs) safeguard electrical installations and connected equipment from lightning-induced surges and switching transients, meeting IEC 61643 Type 1/2/3 requirements.",
     image: "/images/categories/surge-protector-device.png",
   },
   {
@@ -153,7 +153,7 @@ export const categories: Category[] = [
     name: "Aerosol Fire Extinguisher",
     shortDescription: "Compact aerosol-based fire suppression for rapid response protection.",
     description:
-      "Cnsoltree aerosol fire extinguishers provide fast, effective fire suppression using environmentally friendly aerosol agents. Suitable for electrical cabinets, vehicles, server rooms, and industrial enclosures. No pressure vessel required – –  safe, easy to install, and maintenance-free.",
+      "Soltree aerosol fire extinguishers provide fast, effective fire suppression using environmentally friendly aerosol agents. Suitable for electrical cabinets, vehicles, server rooms, and industrial enclosures. No pressure vessel required – –  safe, easy to install, and maintenance-free.",
     image: "/images/categories/Aerosol-Fire-Extinguishe.png",
   },
 ];
@@ -170,7 +170,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Single-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, ideal for residential lighting and socket circuit protection.",
     description:
-      "The Cnsoltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics – B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
+      "The Soltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics – B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
     features: [
       "Slim 18mm single-module width – maximises circuit density in compact boards",
       "B / C / D trip curve options – covers lighting, general, and motor loads",
@@ -204,11 +204,11 @@ export const products: Product[] = [
       "/images/products/MCB-AC-1P-06.jpg",
       "/images/products/MCB-AC-1P-07.jpg",
     ],
-    metaTitle: "1 Pole MCB 6A-63A AC Circuit Breaker | DIN Rail Single Pole MCB | Cnsoltree",
-    metaDescription: "Cnsoltree 1 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
+    metaTitle: "1 Pole MCB 6A-63A AC Circuit Breaker | DIN Rail Single Pole MCB | Soltree",
+    metaDescription: "Soltree 1 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
     metaKeywords: "1 pole MCB, single pole circuit breaker, MCB 6A 63A, DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, AC circuit breaker wholesale",
     imageAlts: [
-      "Cnsoltree 1 pole MCB 6-63A single pole miniature circuit breaker front view",
+      "Soltree 1 pole MCB 6-63A single pole miniature circuit breaker front view",
       "MCB-AC-1P single pole circuit breaker side view showing DIN rail clip",
       "MCB-AC-1P trip curve B C D selection detail",
       "MCB-AC-1P terminal connection and wiring diagram",
@@ -225,7 +225,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Double-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, simultaneously disconnects live and neutral for full circuit isolation.",
     description:
-      "The Cnsoltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors – a critical safety requirement for bathroom circuits, outdoor installations, and any application where full disconnection is mandatory. Rated at 120V/230V AC across 6A to 63A, it is the preferred choice for TT earthing systems and markets requiring double-pole protection by regulation (IEC 60364, BS 7671). Manufactured under ISO 9001 quality management, the robust flame-retardant housing and high-conductivity copper alloy contacts ensure consistent performance over 20,000 mechanical operations.",
+      "The Soltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors – a critical safety requirement for bathroom circuits, outdoor installations, and any application where full disconnection is mandatory. Rated at 120V/230V AC across 6A to 63A, it is the preferred choice for TT earthing systems and markets requiring double-pole protection by regulation (IEC 60364, BS 7671). Manufactured under ISO 9001 quality management, the robust flame-retardant housing and high-conductivity copper alloy contacts ensure consistent performance over 20,000 mechanical operations.",
     features: [
       "Simultaneous live + neutral disconnection – full circuit isolation in one operation",
       "Mandatory for bathroom, outdoor, and TT system installations",
@@ -259,11 +259,11 @@ export const products: Product[] = [
       "/images/products/MCB-AC-2P-06.jpg",
       "/images/products/MCB-AC-2P-07.jpg",
     ],
-    metaTitle: "2 Pole MCB 6A-63A AC Circuit Breaker | Double Pole DIN Rail MCB | Cnsoltree",
-    metaDescription: "Cnsoltree 2 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
+    metaTitle: "2 Pole MCB 6A-63A AC Circuit Breaker | Double Pole DIN Rail MCB | Soltree",
+    metaDescription: "Soltree 2 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
     metaKeywords: "2 pole MCB, double pole circuit breaker, MCB 2P 6A 63A, DIN rail double pole MCB, miniature circuit breaker supplier, CE certified MCB, AC circuit breaker wholesale",
     imageAlts: [
-      "Cnsoltree 2 pole MCB 6-63A double pole miniature circuit breaker front view",
+      "Soltree 2 pole MCB 6-63A double pole miniature circuit breaker front view",
       "MCB-AC-2P double pole circuit breaker side view showing DIN rail clip",
       "MCB-AC-2P trip curve B C D selection detail",
       "MCB-AC-2P terminal connection and wiring diagram",
@@ -280,7 +280,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Three-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, designed for three-phase industrial equipment and motor protection.",
     description:
-      "The Cnsoltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors – a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
+      "The Soltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors – a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
     features: [
       "Simultaneous three-phase disconnection – prevents single-phasing motor damage",
       "D-curve option for high inrush motor and transformer loads",
@@ -314,11 +314,11 @@ export const products: Product[] = [
       "/images/products/MCB-AC-3P-06.jpg",
       "/images/products/MCB-AC-3P-07.jpg",
     ],
-    metaTitle: "3 Pole MCB 6A-63A AC Circuit Breaker | Three Phase DIN Rail MCB | Cnsoltree",
-    metaDescription: "Cnsoltree 3 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase industrial systems. OEM available, ships worldwide.",
+    metaTitle: "3 Pole MCB 6A-63A AC Circuit Breaker | Three Phase DIN Rail MCB | Soltree",
+    metaDescription: "Soltree 3 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase industrial systems. OEM available, ships worldwide.",
     metaKeywords: "3 pole MCB, three pole circuit breaker, MCB 3P 6A 63A, three phase DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, industrial circuit breaker wholesale",
     imageAlts: [
-      "Cnsoltree 3 pole MCB 6-63A three pole miniature circuit breaker front view",
+      "Soltree 3 pole MCB 6-63A three pole miniature circuit breaker front view",
       "MCB-AC-3P three pole circuit breaker side view showing DIN rail clip",
       "MCB-AC-3P trip curve B C D selection detail",
       "MCB-AC-3P three phase terminal connection and wiring diagram",
@@ -335,7 +335,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Four-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S systems.",
     description:
-      "The Cnsoltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral – the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
+      "The Soltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral – the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
     features: [
       "Full 3P+N simultaneous disconnection – highest isolation level for four-wire systems",
       "Required for TN-S and TN-C-S systems where neutral switching is mandated",
@@ -369,11 +369,11 @@ export const products: Product[] = [
       "/images/products/MCB-AC-4P-06.jpg",
       "/images/products/MCB-AC-4P-07.jpg",
     ],
-    metaTitle: "4 Pole MCB 6A-63A AC Circuit Breaker | Four Pole DIN Rail MCB | Cnsoltree",
-    metaDescription: "Cnsoltree 4 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase + neutral systems. OEM available, ships worldwide.",
+    metaTitle: "4 Pole MCB 6A-63A AC Circuit Breaker | Four Pole DIN Rail MCB | Soltree",
+    metaDescription: "Soltree 4 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase + neutral systems. OEM available, ships worldwide.",
     metaKeywords: "4 pole MCB, four pole circuit breaker, MCB 4P 6A 63A, four pole DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, three phase neutral circuit breaker",
     imageAlts: [
-      "Cnsoltree 4 pole MCB 6-63A four pole miniature circuit breaker front view",
+      "Soltree 4 pole MCB 6-63A four pole miniature circuit breaker front view",
       "MCB-AC-4P four pole circuit breaker side view showing DIN rail clip",
       "MCB-AC-4P trip curve B C D selection detail",
       "MCB-AC-4P four pole terminal connection and wiring diagram",
@@ -390,7 +390,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Ultra-compact single-pole DC breaker for solar PV string protection – only 18mm wide, 500V DC rated.",
     description:
-      "The Cnsoltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch circuits. At just 18mm wide, it fits where multi-pole breakers cannot – making it the go-to choice for densely packed combiner boxes and compact off-grid battery enclosures. Rated at 500V DC with enhanced magnetic arc quenching, this breaker reliably interrupts stubborn DC arcs that would damage conventional AC-rated devices. Every unit leaves our ISO 9001 certified factory only after passing 100% electrical verification, giving installers confidence in consistent trip accuracy across the full 6 – 63A range. Whether you are wiring a rooftop solar array, a 48V telecom rack, or an RV leisure battery, the 1P DC MCB delivers code-compliant overcurrent protection without wasting valuable panel space.",
+      "The Soltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch circuits. At just 18mm wide, it fits where multi-pole breakers cannot – making it the go-to choice for densely packed combiner boxes and compact off-grid battery enclosures. Rated at 500V DC with enhanced magnetic arc quenching, this breaker reliably interrupts stubborn DC arcs that would damage conventional AC-rated devices. Every unit leaves our ISO 9001 certified factory only after passing 100% electrical verification, giving installers confidence in consistent trip accuracy across the full 6 – 63A range. Whether you are wiring a rooftop solar array, a 48V telecom rack, or an RV leisure battery, the 1P DC MCB delivers code-compliant overcurrent protection without wasting valuable panel space.",
     features: [
       "Ultra-compact 18mm single-module width – saves critical DIN-rail space in crowded combiner boxes.",
       "500V DC arc-quenching chamber – safely extinguishes persistent DC arcs that standard AC breakers cannot handle.",
@@ -429,15 +429,15 @@ export const products: Product[] = [
       "/images/products/MCB-DC-1P-06.jpg",
       "/images/products/MCB-DC-1P-07.jpg",
     ],
-    metaTitle: "1P DC MCB 6 – 63A 500V Solar Circuit Breaker | Cnsoltree",
-    metaDescription: "Buy Cnsoltree 1 Pole DC MCB – 500V rated, 6kA breaking capacity, CE & TÜV certified for solar PV. Ultra-compact 18mm design. OEM welcome. Get a quote today!",
+    metaTitle: "1P DC MCB 6 – 63A 500V Solar Circuit Breaker | Soltree",
+    metaDescription: "Buy Soltree 1 Pole DC MCB – 500V rated, 6kA breaking capacity, CE & TÜV certified for solar PV. Ultra-compact 18mm design. OEM welcome. Get a quote today!",
     metaKeywords: "1P DC MCB, single pole DC circuit breaker, 500V DC breaker, solar PV MCB, photovoltaic circuit breaker, DC miniature circuit breaker, DIN rail DC breaker",
     imageAlts: [
-      "Cnsoltree 1P DC MCB 500V solar circuit breaker front view",
+      "Soltree 1P DC MCB 500V solar circuit breaker front view",
       "Single pole DC miniature circuit breaker side profile showing DIN rail clip",
       "MCB-DC-1P breaker terminal detail with screw connections",
       "1 pole DC MCB internal arc-quenching chamber close-up",
-      "Cnsoltree 1P DC circuit breaker mounted on 35mm DIN rail",
+      "Soltree 1P DC circuit breaker mounted on 35mm DIN rail",
       "MCB-DC-1P product label showing CE TÜV certification marks",
       "Single pole 500V DC MCB packaging and accessories",
     ],
@@ -450,7 +450,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Two-pole DC breaker with simultaneous positive/negative disconnection – the industry standard for residential solar and battery storage.",
     description:
-      "The Cnsoltree 2 Pole DC MCB is the most widely specified DC breaker for residential solar installations and battery energy storage systems. By breaking both the positive and negative conductors simultaneously, it provides complete galvanic isolation in a single switching action – eliminating the shock hazard that remains when only one pole is opened. Rated at 500V DC with 6kA breaking capacity, it handles the demanding fault currents generated by lithium-ion battery banks and high-voltage PV strings alike. The linked toggle mechanism guarantees that both poles trip together under overload or short-circuit conditions, meeting the safety requirements of IEC 60947-2 and TÜV PV certification. Backed by 18 years of manufacturing expertise and 100% pre-shipment electrical testing, the 2P DC MCB is available in nine current ratings from 6A to 63A – ready for everything from a single residential inverter feed to a parallel battery rack.",
+      "The Soltree 2 Pole DC MCB is the most widely specified DC breaker for residential solar installations and battery energy storage systems. By breaking both the positive and negative conductors simultaneously, it provides complete galvanic isolation in a single switching action – eliminating the shock hazard that remains when only one pole is opened. Rated at 500V DC with 6kA breaking capacity, it handles the demanding fault currents generated by lithium-ion battery banks and high-voltage PV strings alike. The linked toggle mechanism guarantees that both poles trip together under overload or short-circuit conditions, meeting the safety requirements of IEC 60947-2 and TÜV PV certification. Backed by 18 years of manufacturing expertise and 100% pre-shipment electrical testing, the 2P DC MCB is available in nine current ratings from 6A to 63A – ready for everything from a single residential inverter feed to a parallel battery rack.",
     features: [
       "Simultaneous 2-pole disconnection – breaks positive and negative lines together for full galvanic isolation.",
       "500V DC rated with 6kA breaking capacity – handles high fault currents from lithium battery banks.",
@@ -489,15 +489,15 @@ export const products: Product[] = [
       "/images/products/MCB-DC-2P-06.jpg",
       "/images/products/MCB-DC-2P-07.jpg",
     ],
-    metaTitle: "2P DC MCB 6 – 63A Solar & Battery Disconnect Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 2 Pole DC MCB disconnects positive & negative simultaneously. 500V DC, 6kA, TÜV certified for solar PV & battery storage. Request OEM pricing now!",
+    metaTitle: "2P DC MCB 6 – 63A Solar & Battery Disconnect Breaker | Soltree",
+    metaDescription: "Soltree 2 Pole DC MCB disconnects positive & negative simultaneously. 500V DC, 6kA, TÜV certified for solar PV & battery storage. Request OEM pricing now!",
     metaKeywords: "2P DC MCB, two pole DC circuit breaker, solar battery disconnect, DC isolator breaker, PV combiner box breaker, 500V DC breaker 2 pole, residential solar MCB",
     imageAlts: [
-      "Cnsoltree 2P DC MCB 500V solar battery disconnect breaker front view",
+      "Soltree 2P DC MCB 500V solar battery disconnect breaker front view",
       "Two pole DC circuit breaker side profile with linked toggle mechanism",
       "MCB-DC-2P dual terminal detail for positive and negative conductors",
       "2 pole DC MCB arc-quenching system internal view",
-      "Cnsoltree 2P DC breaker installed in residential solar combiner box",
+      "Soltree 2P DC breaker installed in residential solar combiner box",
       "MCB-DC-2P certification label showing CE TÜV IEC 60947-2 marks",
       "Two pole 500V DC MCB retail packaging with wiring diagram",
     ],
@@ -510,7 +510,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Three-pole DC breaker for commercial PV arrays and high-voltage DC bus protection – 500V per pole, series-stackable.",
     description:
-      "The Cnsoltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand multi-pole series protection. By connecting three poles in series, system designers can achieve safe interruption at voltages well beyond the single-pole 500V DC rating – a critical requirement for large rooftop arrays and ground-mount solar farms feeding high-voltage DC buses. Each pole contains an independent enhanced magnetic arc-quenching chamber, ensuring that even at elevated voltages the DC arc is reliably extinguished within milliseconds. The three-pole configuration also suits marine DC power networks and EV charging infrastructure where three-wire DC distribution is used. With 6kA DC breaking capacity, TÜV PV certification, and nine selectable current ratings from 6A to 63A, this breaker gives project engineers the flexibility to standardize on a single product family across diverse commercial DC applications. Every unit is 100% electrically tested in our ISO 9001 facility before shipping worldwide.",
+      "The Soltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand multi-pole series protection. By connecting three poles in series, system designers can achieve safe interruption at voltages well beyond the single-pole 500V DC rating – a critical requirement for large rooftop arrays and ground-mount solar farms feeding high-voltage DC buses. Each pole contains an independent enhanced magnetic arc-quenching chamber, ensuring that even at elevated voltages the DC arc is reliably extinguished within milliseconds. The three-pole configuration also suits marine DC power networks and EV charging infrastructure where three-wire DC distribution is used. With 6kA DC breaking capacity, TÜV PV certification, and nine selectable current ratings from 6A to 63A, this breaker gives project engineers the flexibility to standardize on a single product family across diverse commercial DC applications. Every unit is 100% electrically tested in our ISO 9001 facility before shipping worldwide.",
     features: [
       "3-pole series connection – enables safe switching at system voltages far above single-pole limits.",
       "Independent arc chamber per pole – each pole extinguishes its own DC arc for maximum reliability.",
@@ -549,15 +549,15 @@ export const products: Product[] = [
       "/images/products/MCB-DC-3P-06.jpg",
       "/images/products/MCB-DC-3P-07.jpg",
     ],
-    metaTitle: "3P DC MCB 6 – 63A Commercial Solar PV Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 3 Pole DC MCB for commercial solar and high-voltage DC bus. Series-stackable 500V/pole, 6kA, TÜV certified. Ideal for PV farms. Get a free quote!",
+    metaTitle: "3P DC MCB 6 – 63A Commercial Solar PV Breaker | Soltree",
+    metaDescription: "Soltree 3 Pole DC MCB for commercial solar and high-voltage DC bus. Series-stackable 500V/pole, 6kA, TÜV certified. Ideal for PV farms. Get a free quote!",
     metaKeywords: "3P DC MCB, three pole DC circuit breaker, commercial solar breaker, high voltage DC MCB, PV farm circuit breaker, 3 pole DC isolator, marine DC breaker",
     imageAlts: [
-      "Cnsoltree 3P DC MCB commercial solar circuit breaker front view",
+      "Soltree 3P DC MCB commercial solar circuit breaker front view",
       "Three pole DC breaker side profile showing triple arc chambers",
       "MCB-DC-3P terminal block detail for series-connected DC wiring",
       "3 pole DC MCB three independent arc-quenching chambers close-up",
-      "Cnsoltree 3P DC circuit breaker in commercial PV distribution board",
+      "Soltree 3P DC circuit breaker in commercial PV distribution board",
       "MCB-DC-3P rating plate with TÜV PV and IEC 60947-2 certification",
       "Three pole 500V DC MCB export packaging with installation guide",
     ],
@@ -570,7 +570,7 @@ export const products: Product[] = [
     categoryName: "Circuit Breaker",
     shortDescription: "Four-pole DC breaker for industrial solar plants and bipolar DC networks – maximum isolation safety with 500V per pole.",
     description:
-      "The Cnsoltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for industrial-scale solar plants, utility-grade energy storage, and bipolar DC distribution networks, the four-pole configuration allows engineers to protect both the positive and negative buses of a bipolar system – or to achieve the maximum series voltage rating for extra-high-voltage DC strings. All four poles share a common linked toggle that guarantees simultaneous disconnection, a safety requirement in large installations where maintenance personnel must achieve a verified zero-energy state. With four independent enhanced magnetic arc chambers, the breaker can handle the extreme energy of industrial DC faults at up to 6kA. Each unit carries CE, TÜV PV, and IEC 60947-2 certification and is backed by Cnsoltree's 18-year track record of 100% electrical testing. Available in 6A through 63A with full OEM customization, it is the professional's choice when no compromise on DC safety is acceptable.",
+      "The Soltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for industrial-scale solar plants, utility-grade energy storage, and bipolar DC distribution networks, the four-pole configuration allows engineers to protect both the positive and negative buses of a bipolar system – or to achieve the maximum series voltage rating for extra-high-voltage DC strings. All four poles share a common linked toggle that guarantees simultaneous disconnection, a safety requirement in large installations where maintenance personnel must achieve a verified zero-energy state. With four independent enhanced magnetic arc chambers, the breaker can handle the extreme energy of industrial DC faults at up to 6kA. Each unit carries CE, TÜV PV, and IEC 60947-2 certification and is backed by Soltree's 18-year track record of 100% electrical testing. Available in 6A through 63A with full OEM customization, it is the professional's choice when no compromise on DC safety is acceptable.",
     features: [
       "4-pole simultaneous disconnection – guarantees verified zero-energy state for safe maintenance lockout.",
       "Bipolar DC network compatible – protects both positive and negative buses in bipolar distribution systems.",
@@ -609,15 +609,15 @@ export const products: Product[] = [
       "/images/products/MCB-DC-4P-06.jpg",
       "/images/products/MCB-DC-4P-07.jpg",
     ],
-    metaTitle: "4P DC MCB 6 – 63A Industrial Solar & Bipolar Breaker | Cnsoltree",
-    metaDescription: "Cnsoltree 4 Pole DC MCB for industrial PV plants and bipolar DC networks. 500V/pole, 6kA, TÜV + CE certified. Full OEM support. Request bulk pricing today!",
+    metaTitle: "4P DC MCB 6 – 63A Industrial Solar & Bipolar Breaker | Soltree",
+    metaDescription: "Soltree 4 Pole DC MCB for industrial PV plants and bipolar DC networks. 500V/pole, 6kA, TÜV + CE certified. Full OEM support. Request bulk pricing today!",
     metaKeywords: "4P DC MCB, four pole DC circuit breaker, industrial solar breaker, bipolar DC MCB, utility scale PV breaker, 4 pole DC isolator, energy storage DC breaker",
     imageAlts: [
-      "Cnsoltree 4P DC MCB industrial solar circuit breaker front view",
+      "Soltree 4P DC MCB industrial solar circuit breaker front view",
       "Four pole DC breaker side profile showing linked 4-pole toggle",
       "MCB-DC-4P quad terminal block for bipolar DC wiring",
       "4 pole DC MCB four independent arc-quenching chambers detail",
-      "Cnsoltree 4P DC circuit breaker in industrial PV distribution panel",
+      "Soltree 4P DC circuit breaker in industrial PV distribution panel",
       "MCB-DC-4P nameplate with CE TÜV IEC 60947-2 certification marks",
       "Four pole 500V DC MCB bulk packaging for industrial projects",
     ],
@@ -668,7 +668,7 @@ export const products: Product[] = [
       "/images/products/SPD-AC-1P-Grey-6.jpg",
       "/images/products/SPD-AC-1P-Grey-7.jpg",
     ],
-    metaTitle: "1P SPD 385V 40kA TN-S | Neutral-Ground AC Surge Protector | Cnsoltree",
+    metaTitle: "1P SPD 385V 40kA TN-S | Neutral-Ground AC Surge Protector | Soltree",
     metaDescription: "1-pole 385VAC AC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge, – .0kV protection level, <25ns response. DIN rail, hot-swappable. For sub-distribution and lightning boxes.",
     metaKeywords: "AC surge protector, 1P SPD, 385V SPD, TN-S SPD, neutral ground SPD, N-PE surge protector, 40kA SPD, DIN rail SPD, combined lightning box SPD, MOV surge protector",
     imageAlts: [
@@ -726,7 +726,7 @@ export const products: Product[] = [
       "/images/products/SPD-AC-2P-Grey-6.jpg",
       "/images/products/SPD-AC-2P-Grey-7.jpg",
     ],
-    metaTitle: "2P SPD 385V 40kA Full Mode | L-N L-PE N-PE AC Surge Protector | Cnsoltree",
+    metaTitle: "2P SPD 385V 40kA Full Mode | L-N L-PE N-PE AC Surge Protector | Soltree",
     metaDescription: "2-pole 385VAC full-mode AC surge protector – L-N, L-PE and N-PE protection in one module. 40kA max discharge, – .0kV, <25ns response. DIN rail, hot-swappable. For residential and industrial distribution boxes.",
     metaKeywords: "2P AC surge protector, full mode SPD, L-N L-PE N-PE SPD, 385V SPD, 40kA SPD, single phase SPD, residential SPD, DIN rail surge protector, MOV SPD, IT system SPD",
     imageAlts: [
@@ -784,7 +784,7 @@ export const products: Product[] = [
       "/images/products/SPD-AC-3P-Grey-6.jpg",
       "/images/products/SPD-AC-3P-Grey-7.jpg",
     ],
-    metaTitle: "3P SPD 385V 40kA Three-Phase | L-PE AC Surge Protector | Cnsoltree",
+    metaTitle: "3P SPD 385V 40kA Three-Phase | L-PE AC Surge Protector | Soltree",
     metaDescription: "3-pole 385VAC three-phase L-PE surge protector for 3-wire systems. Independent L1-PE, L2-PE, L3-PE protection. 40kA max discharge, – .5kV, <25ns response. DIN rail, hot-swappable. For industrial equipment and motor control.",
     metaKeywords: "3P AC surge protector, three-phase SPD, L-PE SPD, 385V 3 phase SPD, 40kA industrial SPD, motor control SPD, power distribution cabinet SPD, DIN rail SPD, MOV three-phase surge protector",
     imageAlts: [
@@ -842,7 +842,7 @@ export const products: Product[] = [
       "/images/products/SPD-AC-4P-Grey-6.jpg",
       "/images/products/SPD-AC-4P-Grey-7.jpg",
     ],
-    metaTitle: "4P SPD 385V 40kA Full Mode | Three-Phase+N AC Surge Protector | Cnsoltree",
+    metaTitle: "4P SPD 385V 40kA Full Mode | Three-Phase+N AC Surge Protector | Soltree",
     metaDescription: "4-pole 385VAC full-mode AC surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection. 40kA max discharge, – .5kV, <25ns response. For factory cabinets, data centers and large buildings.",
     metaKeywords: "4P AC surge protector, three-phase neutral SPD, full mode SPD, TT TN-S SPD, 385V 4 pole SPD, 40kA SPD, factory cabinet SPD, data center SPD, large building SPD, DIN rail surge protector",
     imageAlts: [
@@ -900,7 +900,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-1P-White-7.jpg",
       "/images/products/SPD-DC-1P-White-8.jpg",
     ],
-    metaTitle: "1P DC SPD 500V/1000V 40kA PV | Solar Surge Protector for RV & Home | Cnsoltree",
+    metaTitle: "1P DC SPD 500V/1000V 40kA PV | Solar Surge Protector for RV & Home | Soltree",
     metaDescription: "1-pole DC surge protector for 500V and 1000V PV solar systems. 40kA max discharge, 2.8kV/3.6kV protection level, copper core, fast response. DIN rail, white housing. For RV and residential solar installations.",
     metaKeywords: "DC surge protector, 1P DC SPD, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, DIN rail DC SPD",
     imageAlts: [
@@ -959,7 +959,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-2P-White-7.jpg",
       "/images/products/SPD-DC-2P-White-8.jpg",
     ],
-    metaTitle: "2P DC SPD 500V/1000V 40kA PV | Solar Surge Protector for RV & Home | Cnsoltree",
+    metaTitle: "2P DC SPD 500V/1000V 40kA PV | Solar Surge Protector for RV & Home | Soltree",
     metaDescription: "2-pole DC surge protector for 500V and 1000V PV solar systems. Protects positive and negative conductors simultaneously. 40kA max discharge, 2.8kV/3.6kV protection level, copper core. For RV and residential solar.",
     metaKeywords: "2P DC surge protector, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, two pole DC SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, DIN rail DC SPD",
     imageAlts: [
@@ -1019,7 +1019,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-3P-White-7.jpg",
       "/images/products/SPD-DC-3P-White-8.jpg",
     ],
-    metaTitle: "3P DC SPD 1000V/1500V 40kA Full Mode | PV Solar Surge Protector | Cnsoltree",
+    metaTitle: "3P DC SPD 1000V/1500V 40kA Full Mode | PV Solar Surge Protector | Soltree",
     metaDescription: "3-pole DC surge protector for 1000V and 1500V PV systems. Full-mode DC+/PE, DC-/PE and DC+/DC- protection. 40kA max discharge, – .0kV, <25ns response. For PV combiner boxes, inverter DC side and solar power stations.",
     metaKeywords: "3P DC surge protector, 1000V DC SPD, 1500V DC SPD, full mode DC SPD, PV combiner box SPD, inverter DC SPD, solar power station SPD, high voltage DC SPD, MOV DC surge protector",
     imageAlts: [
@@ -1079,7 +1079,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-4P-White-7.jpg",
       "/images/products/SPD-DC-4P-White-8.jpg",
     ],
-    metaTitle: "4P DC SPD 1000V/1500V 40kA Dual MPPT | PV Surge Protector | Cnsoltree",
+    metaTitle: "4P DC SPD 1000V/1500V 40kA Dual MPPT | PV Surge Protector | Soltree",
     metaDescription: "4-pole dual-input DC surge protector for 1000V/1500V PV systems. Independent DC1 and DC2 channel protection. 40kA max discharge, – .0kV, <25ns. For dual MPPT inverters, PV combiner boxes and energy storage systems.",
     metaKeywords: "4P DC surge protector, dual MPPT SPD, dual input DC SPD, 1000V DC SPD, 1500V DC SPD, PV combiner box SPD, energy storage SPD, inverter DC input SPD, high voltage DC surge protector",
     imageAlts: [
@@ -1138,7 +1138,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-1P-Orange-7.jpg",
       "/images/products/SPD-DC-1P-Orange-8.jpg",
     ],
-    metaTitle: "1P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Cnsoltree",
+    metaTitle: "1P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Soltree",
     metaDescription: "Single-pole orange DC SPD for 500VDC and 1000VDC photovoltaic systems. Protects one DC conductor from lightning surges and switching transients. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing for visual identification. Suits RV solar and residential rooftop PV distribution boxes.",
     metaKeywords: "DC surge protector, 1P DC SPD, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, orange DC SPD",
     imageAlts: [
@@ -1197,7 +1197,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-2P-Orange-7.jpg",
       "/images/products/SPD-DC-2P-Orange-8.jpg",
     ],
-    metaTitle: "2P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Cnsoltree",
+    metaTitle: "2P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Soltree",
     metaDescription: "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC – conductors in a single circuit loop. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing aids cable identification. For two-wire DC circuits in RV and home solar installations.",
     metaKeywords: "2P DC surge protector, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, two pole DC SPD, RV solar surge protector, residential solar SPD, orange DC SPD, DIN rail DC SPD",
     imageAlts: [
@@ -1257,7 +1257,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-3P-Orange-7.jpg",
       "/images/products/SPD-DC-3P-Orange-8.jpg",
     ],
-    metaTitle: "3P Orange DC Surge Protector 1000V/1500V 40kA Full Mode | PV SPD | Cnsoltree",
+    metaTitle: "3P Orange DC Surge Protector 1000V/1500V 40kA Full Mode | PV SPD | Soltree",
     metaDescription: "Three-pole full-mode orange DC SPD for 1000VDC and 1500VDC PV systems. Covers all DC protection paths simultaneously – DC+/PE, DC – PE and DC+/DC – 40kA Imax, – .0kV Up, <25ns MOV response. Modular DIN rail mount. For inverter DC inputs, PV string combiner boxes and large solar arrays.",
     metaKeywords: "3P DC surge protector, 1000V DC SPD, 1500V DC SPD, full mode DC SPD, PV combiner box SPD, inverter DC SPD, solar power station SPD, high voltage DC SPD, orange DC SPD, MOV DC surge protector",
     imageAlts: [
@@ -1317,7 +1317,7 @@ export const products: Product[] = [
       "/images/products/SPD-DC-4P-Orange-7.jpg",
       "/images/products/SPD-DC-4P-Orange-8.jpg",
     ],
-    metaTitle: "4P Orange DC Surge Protector 1000V/1500V 40kA Dual MPPT | PV SPD | Cnsoltree",
+    metaTitle: "4P Orange DC Surge Protector 1000V/1500V 40kA Dual MPPT | PV SPD | Soltree",
     metaDescription: "Four-pole dual-input orange DC SPD for 1000VDC and 1500VDC PV systems. Two independent protection circuits – DC1 (+/PE and – PE) and DC2 (+/PE and – PE) – in one DIN rail module. 40kA Imax, – .0kV per channel, <25ns MOV. Designed for dual MPPT inverters and battery storage systems.",
     metaKeywords: "4P DC surge protector, dual MPPT SPD, dual input DC SPD, 1000V DC SPD, 1500V DC SPD, PV combiner box SPD, energy storage SPD, inverter DC input SPD, orange DC SPD, high voltage DC surge protector",
     imageAlts: [
@@ -2070,7 +2070,7 @@ export const products: Product[] = [
       "/images/products/HT-8Way-2in1out-600VDC-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string PV combiner box with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2126,7 +2126,7 @@ export const products: Product[] = [
       "/images/products/HT-8Way-1in1out-600VDC-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 1-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 1-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "1-string PV combiner box with 63A DC breaker, 2×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2182,7 +2182,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-2in1out-500VDC-32A-15AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-1-out 500VDC 32A | 15A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-1-out 500VDC 32A | 15A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string PV combiner box with 32A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2238,7 +2238,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-2in1out-500VDC-40A-20AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-1-out 500VDC 40A | 20A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-1-out 500VDC 40A | 20A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string PV combiner box with 40A DC breaker, 4×20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2294,7 +2294,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-2in1out-500VDC-63A-30AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-1-out 500VDC 63A | 30A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-1-out 500VDC 63A | 30A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string PV combiner box with 63A DC breaker, 4×30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2350,7 +2350,7 @@ export const products: Product[] = [
       "/images/products/HA-12Way-2in2out-500VDC-32A-15AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-2-out 500VDC 32A | 15A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-2-out 500VDC 32A | 15A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string, 2-output PV combiner box with 32A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2406,7 +2406,7 @@ export const products: Product[] = [
       "/images/products/HA-12Way-2in2out-500VDC-40A-20AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-2-out 500VDC 40A | 20A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-2-out 500VDC 40A | 20A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string, 2-output PV combiner box with 40A DC breaker, 4×20A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2462,7 +2462,7 @@ export const products: Product[] = [
       "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-2-out 500VDC 63A | 30A Fuse & 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-2-out 500VDC 63A | 30A Fuse & 40kA SPD | Soltree",
     metaDescription:
       "2-string, 2-output PV combiner box with 63A DC breaker, 4×30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2516,7 +2516,7 @@ export const products: Product[] = [
       "/images/products/HA-4Way-500VDC-32A-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 1-in-1-out 500VDC 32A | 40kA SPD | Cnsoltree",
+      "PV Combiner Box 1-in-1-out 500VDC 32A | 40kA SPD | Soltree",
     metaDescription:
       "Compact 1-string PV combiner box with 32A DC breaker, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2570,7 +2570,7 @@ export const products: Product[] = [
       "/images/products/HA-4Way-500VDC-40A-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 1-in-1-out 500VDC 40A | No Fuse, 40kA SPD | Cnsoltree",
+      "PV Combiner Box 1-in-1-out 500VDC 40A | No Fuse, 40kA SPD | Soltree",
     metaDescription:
       "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure. No fuse version – for on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2626,7 +2626,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-1in1out-1000VDC-DS-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 1-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Cnsoltree",
+      "PV Combiner Box 1-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Soltree",
     metaDescription:
       "1-string 1000V DC PV combiner box with 32A/1200V isolator switch, 2×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2682,7 +2682,7 @@ export const products: Product[] = [
       "/images/products/HA-12way-2in1out-1000VDC-DS-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 2-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Cnsoltree",
+      "PV Combiner Box 2-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Soltree",
     metaDescription:
       "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2735,7 +2735,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-2DCB-2SPD-6.jpg",
     ],
     metaTitle:
-      "PV Combiner Box 1-in-1-out Dual 32A DC Breakers & Dual 40kA SPDs | Cnsoltree",
+      "PV Combiner Box 1-in-1-out Dual 32A DC Breakers & Dual 40kA SPDs | Soltree",
     metaDescription:
       "1-string PV combiner box with dual 32A DC breakers and dual 500V/40kA SPDs for redundant protection. IP65 flame-retardant enclosure. On-grid / off-grid. OEM available.",
     metaKeywords:
@@ -2789,7 +2789,7 @@ export const products: Product[] = [
       "/images/products/HA-4Way-1DCB-1SPD-White-7.jpg",
     ],
     metaTitle:
-      "PV Combiner Box White 1-in-1-out 40A | 40kA SPD | Cnsoltree",
+      "PV Combiner Box White 1-in-1-out 40A | 40kA SPD | Soltree",
     metaDescription:
       "Compact 1-string PV combiner box in white IP65 enclosure with 40A DC breaker and 500V/40kA SPD. For on-grid and off-grid solar systems. OEM available.",
     metaKeywords:
@@ -2844,7 +2844,7 @@ export const products: Product[] = [
       "/images/products/HA-8Way-2DCB-2SPD-White-7.jpg",
     ],
     metaTitle:
-      "PV Combiner Box White Dual 40A DC Breakers & Dual 40kA SPDs | Cnsoltree",
+      "PV Combiner Box White Dual 40A DC Breakers & Dual 40kA SPDs | Soltree",
     metaDescription:
       "1-string PV combiner box in white IP65 enclosure with dual 40A DC breakers and dual 500V/40kA SPDs for redundant protection. On-grid / off-grid. OEM available.",
     metaKeywords:
@@ -2899,7 +2899,7 @@ export const products: Product[] = [
       "/images/products/HA-18Way-4DCB-4SPD-White-7.jpg",
     ],
     metaTitle:
-      "PV Combiner Box White 4× 40A DC Breakers & 4× 40kA SPDs | Cnsoltree",
+      "PV Combiner Box White 4× 40A DC Breakers & 4× 40kA SPDs | Soltree",
     metaDescription:
       "1-string PV combiner box in white IP65 enclosure with 4× 40A DC breakers and 4× 500V/40kA SPDs for high-redundancy protection. On-grid / off-grid. OEM available.",
     metaKeywords:
@@ -2957,7 +2957,7 @@ export const products: Product[] = [
       "/images/products/PCB-M6in-01-6.jpg",
     ],
     metaTitle:
-      "6-Input PV Combiner Box 100A DC Breaker | Steel with Radiator | Cnsoltree",
+      "6-Input PV Combiner Box 100A DC Breaker | Steel with Radiator | Soltree",
     metaDescription:
       "6-input PV combiner box in cold-rolled steel enclosure with 100A DC breaker, 6×15A PV fuses, 500V/40kA SPD and built-in radiator. IP65 outdoor-rated. OEM available.",
     metaKeywords:
@@ -3014,7 +3014,7 @@ export const products: Product[] = [
       "/images/products/PCB-M4in-02-6.jpg",
     ],
     metaTitle:
-      "4-Input PV Combiner Box 63A DC Breaker 20A Fuse | Steel with Safety Lock | Cnsoltree",
+      "4-Input PV Combiner Box 63A DC Breaker 20A Fuse | Steel with Safety Lock | Soltree",
     metaDescription:
       "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4×20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
@@ -3071,7 +3071,7 @@ export const products: Product[] = [
       "/images/products/PCB-M6in-03-6.jpg",
     ],
     metaTitle:
-      "6-Input PV Combiner Box 63A DC Breaker | Steel with Safety Lock | Cnsoltree",
+      "6-Input PV Combiner Box 63A DC Breaker | Steel with Safety Lock | Soltree",
     metaDescription:
       "6-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 6×20A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
@@ -3129,7 +3129,7 @@ export const products: Product[] = [
       "/images/products/PCB-M4in-04-7.jpg",
     ],
     metaTitle:
-      "4-Input PV Combiner Box 63A DC Breaker 15A Fuse | Steel with Safety Lock | Cnsoltree",
+      "4-Input PV Combiner Box 63A DC Breaker 15A Fuse | Steel with Safety Lock | Soltree",
     metaDescription:
       "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
@@ -3188,7 +3188,7 @@ export const products: Product[] = [
       "/images/products/PCB-M6in-05-7.jpg",
     ],
     metaTitle:
-      "6-Input PV Combiner Box 125A DC Breaker 15A Fuse | Steel with Safety Lock | Cnsoltree",
+      "6-Input PV Combiner Box 125A DC Breaker 15A Fuse | Steel with Safety Lock | Soltree",
     metaDescription:
       "6-input PV combiner box in heavy-duty steel enclosure with 125A DC breaker, 6×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
     metaKeywords:
@@ -3956,7 +3956,7 @@ Stop competing on price with generic boxes. Start building your brand's technica
     image: "/images/blog/PV-Combiner-Box-Cost-and-Quality.jpg",
     tags: ["PV Combiner Box", "Solar PV", "Sourcing Guide", "OEM", "B2B Procurement"],
     readingTime: 6,
-    metaTitle: "PV Combiner Box Sourcing from China 2026 | Wholesale Guide | Cnsoltree",
+    metaTitle: "PV Combiner Box Sourcing from China 2026 | Wholesale Guide | Soltree",
     metaDescription: "Source reliable PV combiner boxes from China in 2026. Evaluate DC components, IP65 enclosures & OEM options — factory-direct wholesale guide for solar distributors.",
     metaKeywords: "PV combiner box, solar combiner box, PV combiner box manufacturer China, wholesale solar combiner box, DC combiner box OEM, IP65 PV combiner box, 1000V 1500V combiner box",
     relatedCategorySlug: "pv-combiner-box",

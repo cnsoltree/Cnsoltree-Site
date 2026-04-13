@@ -81,7 +81,7 @@ function userConfirmationHtml(name: string): string {
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background: #059669; padding: 32px 24px; border-radius: 12px 12px 0 0; text-align: center;">
         <div style="display: inline-flex; align-items: center; gap: 8px; color: white; font-size: 20px; font-weight: 700;">
-          🌿 Cnsoltree
+          🌿 Soltree
         </div>
       </div>
       <div style="background: #fff; padding: 32px 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
@@ -94,10 +94,10 @@ function userConfirmationHtml(name: string): string {
         </p>
         <a href="${process.env.NEXT_PUBLIC_APP_URL ?? "https://cnsoltree.com"}"
            style="display: inline-block; background: #059669; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;">
-          访问 Cnsoltree
+          访问 Soltree
         </a>
         <p style="margin: 32px 0 0; color: #9ca3af; font-size: 13px; border-top: 1px solid #f3f4f6; padding-top: 16px;">
-          © ${new Date().getFullYear()} Cnsoltree. 保留所有权利。
+          © ${new Date().getFullYear()} Soltree. 保留所有权利。
         </p>
       </div>
     </div>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Cnsoltree",
+  title: "Privacy Policy | Soltree",
   description:
-    "Learn how Cnsoltree collects, uses, and protects your personal data when you visit our website.",
+    "Learn how Soltree collects, uses, and protects your personal data when you visit our website.",
 };
 
 export default function PrivacyPage() {
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             <div className="prose prose-gray max-w-none text-sm leading-relaxed text-gray-600 [&_h2]:mb-3 [&_h2]:mt-10 [&_h2]:text-lg [&_h2]:font-semibold [&_h2]:text-gray-900 [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:space-y-1.5 [&_ul]:pl-5 [&_ul>li]:list-disc [&_ul>li]:text-gray-600">
 
               <p>
-                At Cnsoltree, your privacy is important to us. This Privacy Policy explains what
+                At Soltree, your privacy is important to us. This Privacy Policy explains what
                 information we collect when you visit our website, how we use it, and the choices
                 you have regarding your personal data.
               </p>
@@ -136,7 +136,7 @@ export default function PrivacyPage() {
                 If you have any questions or concerns about this Privacy Policy, please contact us:
               </p>
               <p>
-                Cnsoltree Support Team
+                Soltree Support Team
                 <br />
                 <a
                   href="mailto:jacky@cnsoltree.com"

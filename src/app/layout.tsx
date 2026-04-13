@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     apple: "/images/favicon.png",
   },
   title: {
-    default: "Cnsoltree | Professional Electrical Protection Solutions",
-    template: "%s | Cnsoltree",
+    default: "Soltree | Professional Electrical Protection Solutions",
+    template: "%s | Soltree",
   },
   description:
-    "Cnsoltree is a B2B manufacturer and supplier of low-voltage electrical protection products including circuit breakers, SPDs, DC fuse holders, power meters, ATS, and PV combiner boxes.",
+    "Soltree is a B2B manufacturer and supplier of low-voltage electrical protection products including circuit breakers, SPDs, DC fuse holders, power meters, ATS, and PV combiner boxes.",
   keywords: [
     "circuit breaker",
     "surge protector",
@@ -38,19 +38,19 @@ export const metadata: Metadata = {
     "electrical components wholesale",
     "B2B electrical supplier",
   ],
-  authors: [{ name: "Cnsoltree" }],
+  authors: [{ name: "Soltree" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Cnsoltree",
-    title: "Cnsoltree | Professional Electrical Protection Solutions",
+    siteName: "Soltree",
+    title: "Soltree | Professional Electrical Protection Solutions",
     description:
       "B2B manufacturer of circuit breakers, SPDs, DC fuse holders, power meters, ATS and PV combiner boxes.",
     images: [{ url: "/images/og-cover.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cnsoltree | Professional Electrical Protection Solutions",
+    title: "Soltree | Professional Electrical Protection Solutions",
     description:
       "B2B manufacturer of low-voltage electrical protection products.",
   },

@@ -110,7 +110,7 @@ export default function Navbar() {
           <Link href="/" className="flex shrink-0 items-center">
             <Image
               src="/images/logo.png"
-              alt="Cnsoltree Logo"
+              alt="Soltree Logo"
               width={160}
               height={40}
               className="h-8 w-auto lg:h-9 object-contain"

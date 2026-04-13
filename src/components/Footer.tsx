@@ -26,7 +26,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="Cnsoltree Logo"
+                alt="Soltree Logo"
                 width={140}
                 height={36}
                 className="h-8 w-auto object-contain"
@@ -134,7 +134,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="container flex flex-col items-center justify-between gap-3 py-5 sm:flex-row">
           <p className="text-xs text-gray-500">
-            © {year} Cnsoltree. All rights reserved.
+            © {year} Soltree. All rights reserved.
           </p>
           <div className="flex gap-5">
             <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">

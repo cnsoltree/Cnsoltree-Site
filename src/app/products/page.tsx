@@ -6,7 +6,7 @@ import { products, categories } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse Cnsoltree's full range of low-voltage electrical protection products: circuit breakers, SPDs, DC fuse holders, power meters, ATS, PV combiner boxes and more.",
+    "Browse Soltree's full range of low-voltage electrical protection products: circuit breakers, SPDs, DC fuse holders, power meters, ATS, PV combiner boxes and more.",
 };
 
 export default function ProductsPage() {

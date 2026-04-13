@@ -284,7 +284,7 @@ export default function BlogPostPage({
     },
     publisher: {
       "@type": "Organization",
-      name: "Cnsoltree",
+      name: "Soltree",
       logo: {
         "@type": "ImageObject",
         url: `${siteUrl}/images/favicon.png`,
@@ -442,7 +442,7 @@ export default function BlogPostPage({
                 <div className="relative h-36 w-full">
                   <Image
                     src="/images/factory.jpg"
-                    alt="Cnsoltree factory — IEC-certified electrical component manufacturer"
+                    alt="Soltree factory — IEC-certified electrical component manufacturer"
                     fill
                     className="object-cover"
                   />

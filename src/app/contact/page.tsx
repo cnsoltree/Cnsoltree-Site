@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Cnsoltree for product enquiries, OEM pricing, samples, or technical support. Our sales team responds within 24 hours.",
+    "Contact Soltree for product enquiries, OEM pricing, samples, or technical support. Our sales team responds within 24 hours.",
 };
 
 const contactInfo = [

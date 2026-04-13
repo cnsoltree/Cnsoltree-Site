@@ -6,7 +6,7 @@ import { blogPosts } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Technical articles, selection guides, and installation best practices from Cnsoltree engineers — covering circuit breakers, SPDs, ATS, PV systems, and more.",
+    "Technical articles, selection guides, and installation best practices from Soltree engineers — covering circuit breakers, SPDs, ATS, PV systems, and more.",
 };
 
 // Collect all unique tags
@@ -33,7 +33,7 @@ export default function BlogPage() {
             Technical Resources
           </h1>
           <p className="mt-3 max-w-2xl text-base text-gray-500">
-            Selection guides, installation tips, and technical insights from the Cnsoltree engineering team.
+            Selection guides, installation tips, and technical insights from the Soltree engineering team.
           </p>
 
           {/* Tags */}

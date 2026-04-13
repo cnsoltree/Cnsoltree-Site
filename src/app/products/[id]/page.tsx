@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   // 兜底：没填 metaTitle 时自动生成
   const title =
-    product.metaTitle ?? `${product.name} | ${product.categoryName} | Cnsoltree`;
+    product.metaTitle ?? `${product.name} | ${product.categoryName} | Soltree`;
 
   // 兜底：没填 metaDescription 时用 shortDescription
   const description =

@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Cnsoltree — 15+ years of manufacturing electrical protection products, serving distributors and system integrators in 80+ countries.",
+    "Learn about Soltree — 15+ years of manufacturing electrical protection products, serving distributors and system integrators in 80+ countries.",
 };
 
 const milestones = [
@@ -72,18 +72,18 @@ export default function AboutPage() {
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/banner/about-bg.jpg"
-            alt="Cnsoltree manufacturing facility"
+            alt="Soltree manufacturing facility"
             fill
             className="object-cover opacity-15"
           />
         </div>
         <div className="container max-w-4xl text-center">
-          <p className="section-eyebrow text-green-400">About Cnsoltree</p>
+          <p className="section-eyebrow text-green-400">About Soltree</p>
           <h1 className="mt-3 text-4xl font-bold text-white sm:text-5xl text-balance">
             15+ Years of Engineering Excellence
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-300">
-            Since 2008, Cnsoltree has been designing and manufacturing
+            Since 2008, Soltree has been designing and manufacturing
             low-voltage electrical protection products for distributors,
             system integrators, and project contractors worldwide.
           </p>
@@ -98,7 +98,7 @@ export default function AboutPage() {
               <p className="section-eyebrow">Company Overview</p>
               <h2 className="section-heading">Built on Quality, Delivered Globally</h2>
               <p className="mt-4 text-sm leading-7 text-gray-600">
-                With over 15 years of expertise, Cnsoltree manufactures a comprehensive
+                With over 15 years of expertise, Soltree manufactures a comprehensive
                 range of low-voltage electrical products, including circuit breakers, RCCBs,
                 surge protectors, and smart meters. Our solutions are widely applied in
                 residential, commercial, and industrial settings, ensuring safe and efficient
@@ -141,7 +141,7 @@ export default function AboutPage() {
             <div className="relative h-80 overflow-hidden rounded-2xl bg-gray-100 lg:h-96">
               <Image
                 src="/images/factory.jpg"
-                alt="Cnsoltree production facility"
+                alt="Soltree production facility"
                 fill
                 className="object-cover"
               />
