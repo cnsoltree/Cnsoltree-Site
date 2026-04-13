@@ -1,0 +1,343 @@
+L153: "Cnsoltree aerosol fire extinguishers provide fast, effective fire suppression using environmentally friendly aerosol agents. Suitable for e
+L164: name: "MCB 1P AC 6 – 3A Circuit breaker",
+L165: slug: "MCB-1P-AC-6 – 3A-Circuit-breaker",
+L168: shortDescription: "Single-pole miniature circuit breaker, 6 – 3A, B/C/D-curve, ideal for residential lighting and socket circuit protection.
+L170: "The Cnsoltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-ci
+L172: "Slim 18mm single-module width – maximises circuit density in compact boards",
+L173: "B / C / D trip curve options – covers lighting, general, and motor loads",
+L175: "CE & RoHS certified – accepted in EU, UK, and global markets",
+L177: "OEM / ODM customization available – logo, color, rating label",
+L219: name: "MCB 2P AC 6 – 3A Circuit breaker",
+L223: shortDescription: "Double-pole miniature circuit breaker, 6 – 3A, B/C/D-curve, simultaneously disconnects live and neutral for full circuit 
+L225: "The Cnsoltree 2 Pole MCB provides complete single-phase circuit isolation by simultaneously breaking both the live and neutral conductors –
+L227: "Simultaneous live + neutral disconnection – full circuit isolation in one operation",
+L230: "CE & RoHS certified – accepted in EU, UK, and global markets",
+L231: "High-conductivity copper alloy contacts – 20,000 mechanical operations rated",
+L232: "OEM / ODM customization available – logo, color, rating label",
+L274: name: "MCB 3P AC 6 – 3A Circuit breaker",
+L278: shortDescription: "Three-pole miniature circuit breaker, 6 – 3A, B/C/D-curve, designed for three-phase industrial equipment and motor protec
+L280: "The Cnsoltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps,
+L282: "Simultaneous three-phase disconnection – prevents single-phasing motor damage",
+L285: "CE & RoHS certified – accepted in EU, UK, and global markets",
+L286: "Compact 3-module DIN footprint – optimises panel space in industrial enclosures",
+L287: "OEM / ODM customization available – logo, color, rating label",
+L329: name: "MCB 4P AC 6 – 3A Circuit breaker",
+L333: shortDescription: "Four-pole miniature circuit breaker, 6 – 3A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S syste
+L335: "The Cnsoltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase 
+L337: "Full 3P+N simultaneous disconnection – highest isolation level for four-wire systems",
+L341: "CE & RoHS certified – accepted in EU, UK, and global markets",
+L342: "OEM / ODM customization available – logo, color, rating label",
+L384: name: "MCB 1P DC 6 – 3A Circuit Breaker",
+L388: shortDescription: "Ultra-compact single-pole DC breaker for solar PV string protection – only 18mm wide, 500V DC rated.",
+L390: "The Cnsoltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch c
+L392: "Ultra-compact 18mm single-module width – saves critical DIN-rail space in crowded combiner boxes.",
+L393: "500V DC arc-quenching chamber – safely extinguishes persistent DC arcs that standard AC breakers cannot handle.",
+L394: "9 current ratings (6A – 3A) – one SKU family covers everything from small off-grid setups to large string inverters.",
+L395: "100% factory electrical testing – every unit verified for correct trip curve before shipment.",
+L396: "Full OEM/ODM program – custom printing, private-label packaging, and modified trip curves available.",
+L397: "Thermal-magnetic dual protection – fast short-circuit response plus reliable overload tripping.",
+L398: "Snap-on 35mm DIN rail mount – tool-free installation and removal for rapid field service.",
+L429: metaTitle: "1P DC MCB 6 – 3A 500V Solar Circuit Breaker | Cnsoltree",
+L430: metaDescription: "Buy Cnsoltree 1 Pole DC MCB – 500V rated, 6kA breaking capacity, CE & TÜV certified for solar PV. Ultra-compact 18mm desig
+L444: name: "MCB 2P DC 6 – 3A Circuit Breaker",
+L448: shortDescription: "Two-pole DC breaker with simultaneous positive/negative disconnection – the industry standard for residential solar and b
+L450: "The Cnsoltree 2 Pole DC MCB is the most widely specified DC breaker for residential solar installations and battery energy storage systems.
+L452: "Simultaneous 2-pole disconnection – breaks positive and negative lines together for full galvanic isolation.",
+L453: "500V DC rated with 6kA breaking capacity – handles high fault currents from lithium battery banks.",
+L454: "Linked toggle mechanism – both poles always trip together, preventing dangerous single-pole open states.",
+L455: "Ideal for residential solar and ESS – the most popular configuration for home PV inverter protection.",
+L456: "9 current ratings (6A – 3A) – covers single-inverter feeds through parallel battery strings.",
+L457: "100% factory-tested trip accuracy – consistent C-curve performance across every production batch.",
+L458: "OEM/ODM ready – custom branding, bilingual labels, and modified specifications for your market.",
+L489: metaTitle: "2P DC MCB 6 – 3A Solar & Battery Disconnect Breaker | Cnsoltree",
+L504: name: "MCB 3P DC 6 – 3A Circuit Breaker",
+L508: shortDescription: "Three-pole DC breaker for commercial PV arrays and high-voltage DC bus protection – 500V per pole, series-stackable.",
+L510: "The Cnsoltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand m
+L512: "3-pole series connection – enables safe switching at system voltages far above single-pole limits.",
+L513: "Independent arc chamber per pole – each pole extinguishes its own DC arc for maximum reliability.",
+L514: "Built for commercial solar – protects high-voltage DC buses on rooftop and ground-mount PV farms.",
+L515: "Marine and EV-ready – suits three-wire DC distribution in vessels and charging stations.",
+L516: "6kA DC breaking capacity – interrupts high fault currents from parallel-connected PV strings.",
+L517: "TÜV PV + IEC 60947-2 certified – meets international standards for photovoltaic DC protection.",
+L518: "Full OEM/ODM customization – voltage markings, trip curve variants, and private-label packaging available.",
+L549: metaTitle: "3P DC MCB 6 – 3A Commercial Solar PV Breaker | Cnsoltree",
+L564: name: "MCB 4P DC 6 – 3A Circuit Breaker",
+L568: shortDescription: "Four-pole DC breaker for industrial solar plants and bipolar DC networks – maximum isolation safety with 500V per pole.",
+L570: "The Cnsoltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for indust
+L572: "4-pole simultaneous disconnection – guarantees verified zero-energy state for safe maintenance lockout.",
+L573: "Bipolar DC network compatible – protects both positive and negative buses in bipolar distribution systems.",
+L574: "Maximum series voltage capability – four poles in series for extra-high-voltage DC string protection.",
+L575: "Industrial-grade 6kA breaking capacity – handles extreme fault energy from large PV arrays and battery farms.",
+L576: "Four independent arc chambers – each pole extinguishes DC arcs independently for redundant safety.",
+L577: "CE + TÜV PV + IEC 60947-2 – fully certified for utility-scale solar and industrial DC applications.",
+L578: "Complete OEM/ODM program – custom ratings, branded enclosures, and project-specific documentation available.",
+L609: metaTitle: "4P DC MCB 6 – 3A Industrial Solar & Bipolar Breaker | Cnsoltree",
+L629: shortDescription: "1-pole 385VAC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge current, – .0kV protection le
+L631: "The SPD-AC-1P-Grey is a single-pole AC surge protection device designed specifically for neutral-ground (N-PE) protection in TN-S low-volta
+L635: "Voltage protection level – .0kV – protects neutral line from transient overvoltage",
+L636: "<25ns ultra-fast response time – instantaneous transient suppression",
+L637: "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+L638: "Modular hot-swappable design – replace without rewiring",
+L647: "Voltage Protection Level (Up)": " – .0kV",
+L669: metaDescription: "1-pole 385VAC AC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge, – .0kV protection level, <
+L672: "SPD-AC-1P-Grey 1-pole AC surge protector front view – grey DIN rail SPD",
+L673: "SPD-AC-1P-Grey wiring diagram – top Neutral, bottom Ground (PE) connection",
+L674: "SPD-AC-1P-Grey MOV core component detail – metal oxide varistor",
+L687: shortDescription: "2-pole 385VAC full-mode surge protector covering L-N, L-PE and N-PE protection. 40kA max discharge, – .0kV protection lev
+L689: "The SPD-AC-2P-Grey is a 2-pole AC surge protection device providing full-mode protection across all three paths – L-N, L-PE, and N-PE – in 
+L693: "Voltage protection level – .0kV – protects single-phase devices and precision instruments",
+L694: "<25ns ultra-fast response time – instantaneous transient suppression",
+L695: "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+L697: "Modular hot-swappable design – replace without rewiring",
+L705: "Voltage Protection Level (Up)": " – .0kV",
+L727: metaDescription: "2-pole 385VAC full-mode AC surge protector – L-N, L-PE and N-PE protection in one module. 40kA max discharge, – .0kV, <25n
+L730: "SPD-AC-2P-Grey 2-pole AC surge protector front view – grey DIN rail SPD",
+L731: "SPD-AC-2P-Grey wiring diagram – L and N in/out terminal connection",
+L732: "SPD-AC-2P-Grey full-mode protection paths – L-N, L-PE and N-PE",
+L733: "SPD-AC-2P-Grey MOV core component detail – metal oxide varistor",
+L745: shortDescription: "3-pole 385VAC surge protector for three-phase 3-wire systems (no neutral). Independent L1-PE, L2-PE, L3-PE protection per
+L747: "The SPD-AC-3P-Grey is a 3-pole AC surge protection device for three-phase 3-wire low-voltage systems without neutral. It provides independe
+L751: "Voltage protection level – .5kV per phase – for three-phase industrial loads",
+L752: "<25ns ultra-fast response time – instantaneous transient suppression",
+L753: "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+L754: "Three-phase 3-wire system (no neutral) – suitable for industrial installations",
+L755: "Modular hot-swappable design – individual module replacement without rewiring",
+L763: "Voltage Protection Level (Up)": " – .5kV",
+L785: metaDescription: "3-pole 385VAC three-phase L-PE surge protector for 3-wire systems. Independent L1-PE, L2-PE, L3-PE protection. 40kA max di
+L788: "SPD-AC-3P-Grey 3-pole AC surge protector front view – grey three-phase DIN rail SPD",
+L789: "SPD-AC-3P-Grey wiring diagram – L1 L2 L3 phase line connections",
+L791: "SPD-AC-3P-Grey MOV core component detail – metal oxide varistor",
+L803: shortDescription: "4-pole 385VAC full-mode surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection i
+L805: "The SPD-AC-4P-Grey is a 4-pole AC surge protection device providing complete full-mode protection across all four conductors – L1-PE, L2-PE
+L809: "Voltage protection level – .5kV – covers all phases and neutral",
+L810: "<25ns ultra-fast response time – instantaneous transient suppression",
+L811: "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+L813: "Modular hot-swappable design – individual module replacement without rewiring",
+L821: "Voltage Protection Level (Up)": " – .5kV",
+L843: metaDescription: "4-pole 385VAC full-mode AC surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection
+L846: "SPD-AC-4P-Grey 4-pole AC surge protector front view – grey three-phase+N DIN rail SPD",
+L847: "SPD-AC-4P-Grey wiring diagram – L1 L2 L3 phase lines and Neutral connection",
+L848: "SPD-AC-4P-Grey full-mode protection paths – L1-PE L2-PE L3-PE and N-PE",
+L849: "SPD-AC-4P-Grey MOV core component detail – metal oxide varistor",
+L861: shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response – protects 
+L870: "Copper core – excellent conductivity and corrosion resistance",
+L904: "SPD-DC-1P-White 1-pole DC surge protector front view – white PV solar SPD",
+L906: "SPD-DC-1P-White copper core component detail – excellent conductivity",
+L920: shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative co
+L922: "The SPD-DC-2P-White is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages.
+L924: "2-pole DC surge protection – simultaneous positive and negative conductor protection",
+L929: "Copper core – excellent conductivity and corrosion resistance",
+L963: "SPD-DC-2P-White 2-pole DC surge protector front view – white PV solar SPD",
+L966: "SPD-DC-2P-White copper core component detail – excellent conductivity",
+L979: shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/D
+L981: "The SPD-DC-3P-White is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting b
+L986: "Voltage protection level – .0kV – for high-voltage PV arrays and inverters",
+L987: "<25ns ultra-fast response – high-energy MOV core for instantaneous clamping",
+L989: "Modular hot-swappable design – minimize downtime in live solar installations",
+L997: "Voltage Protection Level (Up)": " – .0kV",
+L1020: metaDescription: "3-pole DC surge protector for 1000V and 1500V PV systems. Full-mode DC+/PE, DC-/PE and DC+/DC- protection. 40kA max discha
+L1023: "SPD-DC-3P-White 3-pole DC surge protector front view – white high-voltage PV SPD",
+L1024: "SPD-DC-3P-White full-mode protection paths – DC+/PE, DC-/PE and DC+/DC-",
+L1025: "SPD-DC-3P-White 3 terminal wiring – DC+, DC- and PE connection",
+L1027: "SPD-DC-3P-White 40kA surge discharge and – .0kV protection level detail",
+L1039: shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, 
+L1041: "The SPD-DC-4P-White is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting b
+L1047: "Voltage protection level – .0kV per channel",
+L1048: "<25ns ultra-fast response – high-energy MOV core for instantaneous clamping",
+L1057: "Voltage Protection Level (Up)": " – .0kV",
+L1080: metaDescription: "4-pole dual-input DC surge protector for 1000V/1500V PV systems. Independent DC1 and DC2 channel protection. 40kA max disc
+L1083: "SPD-DC-4P-White 4-pole dual-input DC surge protector front view – white PV SPD",
+L1084: "SPD-DC-4P-White dual circuit protection – DC1 and DC2 independent channels",
+L1085: "SPD-DC-4P-White 4 terminal wiring – DC1+, DC1-, DC2+, DC2- connection",
+L1087: "SPD-DC-4P-White 40kA surge discharge and – .0kV protection level detail",
+L1099: shortDescription: "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response – protects 
+L1108: "Copper core – excellent conductivity and corrosion resistance",
+L1142: "SPD-DC-1P-Orange 1-pole DC surge protector front view – orange PV solar SPD",
+L1144: "SPD-DC-1P-Orange copper core component detail – excellent conductivity",
+L1158: shortDescription: "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative co
+L1160: "The SPD-DC-2P-Orange is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages
+L1162: "2-pole DC surge protection – simultaneous positive and negative conductor protection",
+L1167: "Copper core – excellent conductivity and corrosion resistance",
+L1198: metaDescription: "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC – conductor
+L1201: "SPD-DC-2P-Orange 2-pole DC surge protector front view – orange PV solar SPD",
+L1204: "SPD-DC-2P-Orange copper core component detail – excellent conductivity",
+L1217: shortDescription: "3-pole high-voltage DC surge protector for 1000VDC and 1500VDC PV systems. Full-mode protection: DC+/PE, DC-/PE and DC+/D
+L1219: "The SPD-DC-3P-Orange is a 3-pole high-voltage DC surge protection device for utility and commercial-scale photovoltaic systems, supporting 
+L1224: "Voltage protection level – .0kV – for high-voltage PV arrays and inverters",
+L1225: "<25ns ultra-fast response – high-energy MOV core for instantaneous clamping",
+L1227: "Modular hot-swappable design – minimize downtime in live solar installations",
+L1235: "Voltage Protection Level (Up)": " – .0kV",
+L1258: metaDescription: "Three-pole full-mode orange DC SPD for 1000VDC and 1500VDC PV systems. Covers all DC protection paths simultaneously – DC+
+L1261: "SPD-DC-3P-Orange 3-pole DC surge protector front view – orange high-voltage PV SPD",
+L1262: "SPD-DC-3P-Orange full-mode protection paths – DC+/PE, DC-/PE and DC+/DC-",
+L1263: "SPD-DC-3P-Orange 3 terminal wiring – DC+, DC- and PE connection",
+L1265: "SPD-DC-3P-Orange 40kA surge discharge and – .0kV protection level detail",
+L1277: shortDescription: "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, 
+L1279: "The SPD-DC-4P-Orange is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting 
+L1285: "Voltage protection level – .0kV per channel",
+L1286: "<25ns ultra-fast response – high-energy MOV core for instantaneous clamping",
+L1295: "Voltage Protection Level (Up)": " – .0kV",
+L1318: metaDescription: "Four-pole dual-input orange DC SPD for 1000VDC and 1500VDC PV systems. Two independent protection circuits – DC1 (+/PE and
+L1321: "SPD-DC-4P-Orange 4-pole dual-input DC surge protector front view – orange PV SPD",
+L1322: "SPD-DC-4P-Orange dual circuit protection – DC1 and DC2 independent channels",
+L1323: "SPD-DC-4P-Orange 4 terminal wiring – DC1+, DC1-, DC2+, DC2- connection",
+L1325: "SPD-DC-4P-Orange 40kA surge discharge and – .0kV protection level detail",
+L1779: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1780: "Undervoltage Trip": "Adjustable 160V – 10V",
+L1816: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1817: "Undervoltage Trip": "Adjustable 160V – 10V",
+L1853: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1854: "Undervoltage Trip": "Adjustable 160V – 10V",
+L1890: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1891: "Undervoltage Trip": "Adjustable 160V – 10V",
+L1927: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1928: "Undervoltage Trip": "Adjustable 160V – 10V",
+L1964: "Overvoltage Trip": "Adjustable 240V – 70V",
+L1965: "Undervoltage Trip": "Adjustable 160V – 10V",
+L2001: "Overvoltage Trip": "Adjustable 240V – 70V",
+L2002: "Undervoltage Trip": "Adjustable 160V – 10V",
+L2037: "The HT-8Way-2in1out-600VDC is a 2-string PV combiner box engineered to aggregate and protect solar array outputs before they reach the inve
+L2044: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2093: "The HT-8Way-1in1out-600VDC is a compact 1-string PV combiner box designed to protect and consolidate a single solar string before it reache
+L2100: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2149: "The HA-8Way-2in1out-500VDC-32A-15AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reac
+L2156: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2205: "The HA-8Way-2in1out-500VDC-40A-20AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reac
+L2212: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2261: "The HA-8Way-2in1out-500VDC-63A-30AFUSE is a 2-string PV combiner box designed to aggregate and protect solar array outputs before they reac
+L2268: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2324: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2380: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2436: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2491: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2545: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2572: "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure. No fuse version – for on-grid 
+L2600: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2656: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2711: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2764: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2819: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2874: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2931: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L2988: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L3045: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L3102: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L3161: "IP65 waterproof and dustproof – suitable for outdoor installation",
+L3211: shortDescription: "2-pole 63A PC class ATS for 110V/220V single-phase systems. Auto & manual transfer in 50ms with built-in over/under-volta
+L3213: "The ATS-ST-2P-63A is a PC class (load level) automatic transfer switch designed for single-phase 110V or 220V AC systems up to 63A. With a 
+L3215: "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+L3216: "PC class (load level) – handles full rated load continuously",
+L3217: "Fast 50ms (0.05s) transfer time – minimal load interruption",
+L3220: "Over-voltage & under-voltage protection (110V: 85V – 45V; 220V: 175V – 60V)",
+L3226: "Rated Current": "63A (Operating Range: 6A – 3A)",
+L3235: "Transfer Time": " – .05s (50ms)",
+L3254: "63A 2P ATS 110V/220V front view – PC class auto transfer switch",
+L3255: "ATS-ST-2P-63A wiring diagram – 2 inputs 1 output connection",
+L3256: "2P ATS internal structure – PCB, motor and PA6 flame-retardant housing",
+L3257: "63A single-phase ATS voltage protection settings – 110V and 220V",
+L3268: shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems. Switches all 3 lines and neutral simultaneously in 50ms – buil
+L3270: "The ATS-ST-4P-63A is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and suppor
+L3272: "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+L3273: "PC class (load level) – handles full rated load continuously",
+L3274: "Fast 50ms (0.05s) transfer time – critical load interruption under 50ms",
+L3277: "Over-voltage & under-voltage protection (110V: 85V – 45V; 220V: 175V – 60V)",
+L3283: "Rated Current": "63A (Operating Range: 6A – 3A)",
+L3292: "Transfer Time": " – .05s (50ms)",
+L3311: "63A 4P ATS 110V/220V front view – PC class three-phase auto transfer switch",
+L3312: "ATS-ST-4P-63A wiring diagram – 4-pole 2 inputs 1 output connection",
+L3313: "4P ATS internal structure – PCB, motor and PA6 flame-retardant housing",
+L3314: "63A three-phase ATS voltage protection settings – 110V and 220V modes",
+L3325: shortDescription: "2-pole 63A PC class ATS for single-phase 110V/220V systems. Auto & manual transfer in 50ms, compatible with mains, genera
+L3327: "The ATS-W2R-2P is a PC class (load level) automatic transfer switch for single-phase 110V or 220V AC systems up to 63A. With a 50ms transfe
+L3329: "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+L3330: "PC class (load level) – handles full rated load continuously",
+L3331: "Fast 50ms (0.05s) transfer time – load interruption under 50ms",
+L3340: "Rated Current": "63A (Operating Range: 6A – 3A)",
+L3349: "Transfer Time": " – .05s (50ms)",
+L3366: "63A 2P ATS-W2R 110V/220V front view – PC class dual power transfer switch",
+L3367: "ATS-W2R-2P wiring diagram – 2-pole 2 inputs 1 output connection",
+L3368: "ATS-W2R-2P internal structure – PCB, motor and PA6 flame-retardant housing",
+L3380: shortDescription: "3-pole 63A PC class ATS for three-phase 110V/220V systems (no neutral). Auto & manual transfer in 50ms, compatible with m
+L3382: "The ATS-W2R-3P is a PC class (load level) automatic transfer switch for three-phase systems without neutral (3L only), rated at 63A and sup
+L3384: "3-pole switching (3 Lines simultaneously, no neutral) – 2 inputs / 1 output",
+L3385: "PC class (load level) – handles full rated load continuously",
+L3386: "Fast 50ms (0.05s) transfer time – load interruption under 50ms",
+L3395: "Rated Current": "63A (Operating Range: 6A – 3A)",
+L3404: "Transfer Time": " – .05s (50ms)",
+L3421: "63A 3P ATS-W2R 110V/220V front view – PC class three-phase transfer switch",
+L3422: "ATS-W2R-3P wiring diagram – 3-pole 2 inputs 1 output connection",
+L3423: "ATS-W2R-3P internal structure – PCB, motor and PA6 flame-retardant housing",
+L3435: shortDescription: "4-pole 63A PC class ATS for three-phase 110V/220V systems with neutral. Auto & manual transfer in 50ms, compatible with m
+L3437: "The ATS-W2R-4P is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supportin
+L3439: "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+L3440: "PC class (load level) – handles full rated load continuously",
+L3441: "Fast 50ms (0.05s) transfer time – load interruption under 50ms",
+L3450: "Rated Current": "63A (Operating Range: 6A – 3A)",
+L3459: "Transfer Time": " – .05s (50ms)",
+L3476: "63A 4P ATS-W2R 110V/220V front view – PC class three-phase with neutral transfer switch",
+L3477: "ATS-W2R-4P wiring diagram – 4-pole 3L+N 2 inputs 1 output connection",
+L3478: "ATS-W2R-4P internal structure – PCB, motor and PA6 flame-retardant housing",
+L3490: shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock prevents dual-power connection. ~2s auto transfe
+L3492: "The STQ1-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civili
+L3494: "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+L3495: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3496: "~2s auto transfer time – brief 2s interruption acceptable for most civilian loads",
+L3500: "Max load capacity: ~6930W ( – .9kW)",
+L3501: "Economical civilian-grade ATS – cost-effective alternative to PC class units",
+L3505: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3516: "Max Load Power": "~6930W ( – .9kW)",
+L3533: "STQ1-63 63A 2P CB class ATS 110V/220V front view – economical auto transfer switch",
+L3534: "STQ1-63-2P wiring diagram – 2-pole 2 inputs 1 output connection",
+L3535: "STQ1-63-2P internal components – PCB control board, motor and thermal relay",
+L3536: "STQ1-63 mechanical interlock mechanism – prevents dual-power connection",
+L3547: shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~22kW – a cost-effective 
+L3551: "3-pole switching (3 Lines simultaneously, no neutral) – 2 inputs / 1 output",
+L3552: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3553: "~2s auto transfer time – brief 2s interruption acceptable for industrial loads",
+L3562: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3590: "STQ1-63 63A 3P CB class ATS 110V/220V front view – three-phase auto transfer switch",
+L3591: "STQ1-63-3P wiring diagram – 3-pole 2 inputs 1 output connection",
+L3592: "STQ1-63-3P internal components – PCB control board, motor and thermal relay",
+L3593: "STQ1-63 three-phase mechanical interlock mechanism – prevents dual-power connection",
+L3604: shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s
+L3606: "The STQ1-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V a
+L3608: "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+L3609: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3610: "Over-voltage & under-voltage protection – added safety beyond the 3P version",
+L3611: "~2s auto transfer time – brief 2s interruption acceptable for commercial loads",
+L3619: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3648: "STQ1-63 63A 4P CB class ATS 110V/220V front view – three-phase with neutral transfer switch",
+L3649: "STQ1-63-4P wiring diagram – 4-pole 3L+N 2 inputs 1 output connection",
+L3650: "STQ1-63-4P internal components – PCB control board, motor and thermal relay",
+L3662: shortDescription: "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~6.9kW – an economical c
+L3664: "The STQ2-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civili
+L3666: "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+L3667: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3668: "~2s auto transfer time – brief 2s interruption acceptable for civilian loads",
+L3672: "Max load capacity: ~6930W ( – .9kW)",
+L3673: "Economical civilian-grade ATS – cost-effective alternative to PC class units",
+L3677: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3688: "Max Load Power": "~6930W ( – .9kW)",
+L3705: "STQ2-63 63A 2P CB class ATS 110V/220V front view – economical single-phase auto transfer switch",
+L3706: "STQ2-63-2P wiring diagram – 2-pole 2 inputs 1 output connection",
+L3707: "STQ2-63-2P internal components – PCB control board, motor and thermal relay",
+L3708: "STQ2-63 mechanical interlock mechanism – prevents dual-power connection",
+L3719: shortDescription: "63A 3-pole CB class ATS for three-phase 110V/220V (no neutral). Mechanical interlock, ~2s auto transfer, max ~22kW – a co
+L3723: "3-pole switching (3 Lines simultaneously, no neutral) – 2 inputs / 1 output",
+L3724: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3725: "~2s auto transfer time – brief 2s interruption acceptable for industrial loads",
+L3734: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3762: "STQ2-63 63A 3P CB class ATS 110V/220V front view – three-phase auto transfer switch",
+L3763: "STQ2-63-3P wiring diagram – 3-pole 2 inputs 1 output connection",
+L3764: "STQ2-63-3P internal components – PCB control board, motor and thermal relay",
+L3765: "STQ2-63 three-phase mechanical interlock mechanism – prevents dual-power connection",
+L3776: shortDescription: "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s
+L3778: "The STQ2-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V a
+L3780: "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+L3781: "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+L3782: "Over-voltage & under-voltage protection – added safety beyond the 3P version",
+L3783: "~2s auto transfer time – brief 2s interruption acceptable for commercial loads",
+L3791: "Rated Current": "63A (Working Range: 6A – 3A)",
+L3820: "STQ2-63 63A 4P CB class ATS 110V/220V front view – three-phase with neutral transfer switch",
+L3821: "STQ2-63-4P wiring diagram – 4-pole 3L+N 2 inputs 1 output connection",
+L3822: "STQ2-63-4P internal components – PCB control board, motor and thermal relay",
