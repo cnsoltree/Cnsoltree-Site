@@ -4008,10 +4008,8 @@ A megawatt-scale solar plant is constantly exposed to electrical anomalies, from
 - **Type 2 DC Surge Protection Devices (SPDs)** — Lightning strikes can send transient overvoltages down the DC lines, instantly destroying a multi-thousand-dollar inverter. Integrating a [Type 2 DC SPD](/categories/surge-protector-device) within the combiner box safely shunts these extreme voltage spikes directly to the ground, protecting downstream infrastructure.
 
 ## Designing for the Future: 1500V DC and IEC 61439-2 Compliance
-
-![1500V DC solar PV combiner box IEC 61439-2 compliant design for utility-scale photovoltaic systems](/images/blog/solar-pv-combiner-box-2.jpg)
-
 As the commercial solar industry aggressively scales, standardizing on 1500V DC architectures has become the norm to increase energy yield and lower balance-of-system (BOS) costs. However, these higher voltages demand significantly more rigorous safety standards, particularly regarding creepage distances, electrical clearances, and thermal management within the enclosure.
+![1500V DC solar PV combiner box IEC 61439-2 compliant design for utility-scale photovoltaic systems](/images/blog/solar-pv-combiner-box-2.jpg)
 ### The Importance of the IEC 61439-2 Standard
 
 When sourcing combiner boxes for megawatt-scale projects, simply piecing together certified components inside a random box is a dangerous oversight. Professional system designers and procurement managers must specify equipment that strictly complies with the IEC 61439-2 standard for low-voltage switchgear and controlgear assemblies.
@@ -4023,10 +4021,8 @@ Compliance with this standard dictates that the entire assembly—not just the i
 Beyond physical safety, modern utility-scale designs are increasingly adopting Smart PV Combiner Boxes. By integrating RS485 communication protocols and string-level current monitoring, these advanced units provide real-time diagnostic data to the central SCADA system. This digitization allows O&M operators to instantly pinpoint underperforming panels, shaded strings, or blown fuses without manual field inspections, drastically maximizing plant uptime.
 
 ## The EPC Perspective: Reducing Installation and O&M Costs
-
-![Pre-wired solar PV combiner box IP65 enclosure for EPC installation — MC4 connectors and waterproof cable glands](/images/blog/solar-pv-combiner-box-3.jpg)
-
 For Engineering, Procurement, and Construction (EPC) firms, the true cost of a solar component isn't determined solely by its upfront purchase price—it is heavily dictated by the labor required to install it and the long-term Operations and Maintenance (O&M) expenses. A well-designed combiner box specifically addresses these on-site realities.
+![Pre-wired solar PV combiner box IP65 enclosure for EPC installation — MC4 connectors and waterproof cable glands](/images/blog/solar-pv-combiner-box-3.jpg)
 ### Pre-Wired Solutions for Rapid Installation
 
 To combat soaring field labor rates, industry-leading manufacturers provide pre-wired, plug-and-play solutions. By incorporating pre-installed MC4 connectors and standardized waterproof cable glands, site electricians can bypass complex internal wire terminations. Furthermore, enclosures engineered with ample internal routing space prevent cable crowding, dramatically slashing installation time and minimizing human error during grid connection.
