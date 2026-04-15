@@ -4073,6 +4073,231 @@ Not automatically. A combiner box must be specifically rated and type-tested for
     relatedCategorySlug: "pv-combiner-box",
   },
 
+  {
+    slug: "pv-combiner-box-buyers-checklist",
+    title: "PV Combiner Box Buyer's Checklist: 12 Specs You Must Verify Before Ordering",
+    excerpt:
+      "The 12 technical and commercial specs every solar distributor and EPC buyer should verify before placing a PV combiner box PO — the same list our engineers use when auditing a design.",
+    content: `
+Sourcing a PV combiner box isn't just about finding the lowest price. One wrong spec — an under-rated SPD, a cheap IP seal, an uncertified breaker — and the box fails in the field. For a distributor, that means warranty claims, reputation damage, and lost projects.
+
+Over **15 years of manufacturing and exporting [PV combiner boxes](/categories/pv-combiner-box) to 10+ countries across 200+ solar projects**, we've seen the same specification mistakes repeat across buyers. This checklist gives you the **12 technical and commercial specs every buyer must verify before placing a PO** — the same list our engineers use when auditing a design.
+
+> 💡 **New to PV combiner boxes?** Read our [guide to PV combiner box basics](/blog/what-is-solar-pv-combiner-box-photovoltaic-designs) before continuing.
+
+## Why This Checklist Matters
+
+Most combiner box failures in the field trace back to one of three root causes:
+
+1. **Under-specified components** to hit a price target
+2. **Mismatched ratings** between the box and the actual PV array
+3. **Missing or invalid certifications** that block customs clearance or project acceptance
+
+This checklist is structured to catch all three — before the PO is signed.
+
+## The 12-Point PV Combiner Box Buyer's Checklist
+
+### 1. DC vs AC Combiner Box — Match the System Type
+
+Before anything else, confirm whether you need a **DC combiner box** (between modules and inverter) or an **AC combiner box** (between multiple string inverters and the grid). Ordering the wrong type is more common than you'd think, especially in hybrid projects.
+
+**Verify with the supplier:**
+- System topology (central inverter vs. string inverter)
+- Voltage side (DC input side vs. AC output side)
+
+### 2. Number of Input Strings (4 / 6 / 8 / 12 / 16 / 24-in-1)
+
+The "N-in-1" spec determines how many PV strings the box consolidates. Over-specifying wastes money; under-specifying forces you to buy multiple boxes when one would do.
+
+**Ask yourself:**
+- How many modules per string?
+- How many strings per MPPT/inverter?
+- What's the future expansion plan?
+
+A rough guide based on project scale:
+
+| Project Size | Recommended Config |
+|---|---|
+| Under 100kW rooftop | 4-in-1 / 6-in-1 |
+| 100–500kW C&I | 8-in-1 / 12-in-1 |
+| Above 500kW utility | 16-in-1 / 24-in-1 |
+
+### 3. Rated DC Voltage (Usually 1000V or 1500V)
+
+1000V systems are legacy; **1500V is now standard for utility-scale and most C&I projects** because it reduces BOS cost. Verify every component inside the box — breaker, SPD, fuse, terminals — is rated for your system voltage, not just the enclosure label.
+
+> ⚠️ **Red flag**: A 1500V box with 1000V-rated internal components. This happens more than buyers realize.
+
+### 4. Rated Input Current per String (Fuse/Breaker Sizing)
+
+The per-string current rating must match your module's **Isc (short-circuit current) × safety factor (typically 1.25–1.56)**, per IEC 62548. The [DC fuse holder](/categories/dc-fuse-holder) and PV fuse inside the box must be rated for this current at the full system DC voltage.
+
+**Typical ratings**: 15A, 20A, 25A, 32A per string.
+
+For today's mainstream 550W–720W modules, gPV-rated fuses sized at roughly 1.5× module Isc cover the full range without over-specification.
+
+### 5. SPD (Surge Protection Device) Type and Class
+
+Lightning and induced surges are the leading cause of combiner box failure in tropical and high-altitude regions. A proper [Type 2 DC SPD](/categories/surge-protector-device) inside the combiner box is non-negotiable.
+
+**Verify:**
+- **Type**: Type 1 (direct lightning) vs Type 2 (induced surge) vs Type 1+2 (combined)
+- **Class**: For the DC side, specify **Class II SPDs rated for PV (Uc ≥ 1.2 × system voltage)**
+- **Brand**: DEHN, Phoenix, Citel, OBO, or equivalent — not unbranded
+- **Replaceable cartridge**: makes field maintenance far cheaper
+
+> ⚠️ **Red flag**: Boxes priced 30% below market often use unbranded SPDs that fail within 6–12 months.
+
+### 6. IP Protection Rating (IP65 / IP66 / IP67)
+
+The enclosure rating must match your installation environment. Over-spec'ing IP67 for a dry rooftop wastes 15–20% of your budget; under-spec'ing IP65 for a coastal or desert site guarantees water or dust ingress within two years.
+
+| Environment | Minimum IP |
+|---|---|
+| Rooftop (dry, temperate) | IP65 |
+| Ground-mount (temperate) | IP65 / IP66 |
+| Coastal / humid tropical | IP66 |
+| Desert / heavy dust / flood-prone | IP67 |
+
+![IP65-rated PV combiner box installed outdoors on a solar farm, withstanding dust and rain](/images/blog/pv-combiner-box-outdoor-installation.jpg)
+
+### 7. Enclosure Material (Metal vs ABS/SMC)
+
+- **Metal (cold-rolled steel / stainless 304)**: Stronger, better heat dissipation, higher cost. Best for utility-scale and harsh environments.
+- **ABS / SMC / Fiberglass**: Lighter, corrosion-proof, UV-resistant. Best for rooftop and coastal/corrosive sites.
+
+![Comparison of metal and ABS/SMC PV combiner box enclosures for different solar project environments](/images/blog/pv-combiner-box-enclosure-metal-vs-abs.jpg)
+
+**Verify:**
+- Metal thickness (≥1.2mm is standard; cheap boxes use 0.8mm)
+- UV resistance rating on plastics (look for **UL 746C f1 rating**)
+- Powder-coating thickness on metal (≥60μm)
+
+### 8. Certifications (IEC, TÜV, CE, UL, CB)
+
+No certification means no customs clearance in most target markets. Worse, no insurance coverage and no project acceptance.
+
+**Must-haves by market:**
+- **EU**: CE, IEC 61439-2, TÜV, RoHS
+- **US / Canada**: UL 1741, cUL
+- **Australia**: AS/NZS compliance
+- **Middle East / Africa / LATAM**: IEC 61439 + CB + local approvals (SASO, INMETRO, etc.)
+
+**Always ask for:**
+- The actual certificate PDF (not a photo on a phone)
+- Certificate number — verify directly on the TÜV / UL / IECEE website
+
+### 9. Monitoring & Smart Functions (Optional but Rising)
+
+Modern smart combiner boxes include string-level current monitoring, temperature sensors, and RS485 / Ethernet communication back to a SCADA or inverter monitoring system.
+
+**Verify:**
+- Communication protocol (Modbus RTU / TCP most common)
+- Compatibility with your inverter / SCADA brand
+- Cybersecurity standards if you're selling to EU markets (NIS2 compliance is coming)
+
+### 10. Internal Wiring and Terminal Quality
+
+Buyers rarely inspect this, and that's where cost-cutting hides:
+
+- Copper wire should be **99.9% pure copper** — not CCA (copper-clad aluminum)
+- Wire cross-section must match current rating per IEC 60228
+- Terminals should be **tin-plated copper**, torque-tested and labeled
+- Every internal connection should be **numbered and traceable** to the wiring diagram
+
+![Internal wiring of a Soltree PV combiner box showing numbered tin-plated copper terminals, DC fuses and SPD](/images/blog/pv-combiner-box-internal-wiring.jpg)
+
+Ask the supplier to send real unit photos of the inside — not stock images.
+
+### 11. Testing & Quality Documentation
+
+Before shipment, you should receive and verify:
+
+- Factory test report (insulation resistance, dielectric strength, continuity)
+- Routine test per IEC 61439-2
+- Serial number traceability
+- Wiring diagram specific to your PO
+- Photos of the actual units shipped
+
+> ⚠️ **Red flag**: Supplier refuses to send unit-specific test reports. Walk away.
+
+### 12. Warranty, Spare Parts & After-Sales
+
+A 5-year warranty is worthless if the supplier can't ship replacement SPDs or breakers to your site.
+
+**Verify:**
+- Warranty length — **industry standard: 5 years on the box, 2 years on components**
+- Spare parts availability (stocked, or re-ordered each time?)
+- Response time commitment for warranty claims
+- Local agent or service partner in your country
+
+## Bonus: 3 Commercial Specs Often Forgotten
+
+Beyond the technical 12, these commercial terms cost buyers the most when overlooked:
+
+- **MOQ & lead time** — confirm both for stock models and customized configurations (our standard: **MOQ 10 units, lead time within 15 days**)
+- **Packaging** — export-grade plywood case, fumigation certificate, correct HS code
+- **Pricing terms** — FOB vs CIF vs DDP — understand exactly what's included
+
+## Quick Summary: The 12-Point Checklist
+
+| # | Spec to Verify | Why It Matters |
+|---|---|---|
+| 1 | DC vs AC type | System compatibility |
+| 2 | Number of strings | Sizing & cost |
+| 3 | Rated DC voltage | 1500V is standard in 2026 |
+| 4 | Input current / fuse size | Module Isc match |
+| 5 | SPD type & brand | Lightning survival |
+| 6 | IP rating | Environment match |
+| 7 | Enclosure material | Durability & cost |
+| 8 | Certifications | Customs & compliance |
+| 9 | Monitoring / smart | Future-proofing |
+| 10 | Internal wiring quality | Hidden cost-cutting |
+| 11 | Test documentation | Traceability |
+| 12 | Warranty & after-sales | Long-term cost |
+
+## Ready to Source?
+
+This checklist is the same one our engineers use when quoting every project. If you'd like us to run your specific requirements through it and quote a matching combiner box configuration, [contact our engineering team](/contact) to request a tailored quotation.
+
+## Frequently Asked Questions
+
+### What's the single most overlooked spec by first-time buyers?
+
+SPD brand and class. Unbranded SPDs are the leading cause of premature combiner box failure, especially in tropical markets.
+
+### Can I request a customized combiner box based on this checklist?
+
+Yes. String count, SPD class, monitoring options, enclosure material, and cable gland configuration can all be customized to match your project requirements. Our **MOQ is 10 units**, with a typical **lead time within 15 days** for most customized configurations.
+
+### What documents should I ask the supplier to send before placing the PO?
+
+Datasheet, wiring diagram, full certification PDFs, factory test report template, and at least three real project reference photos.
+
+### Is IP66 always better than IP65?
+
+Not always. IP66 costs more and is overkill for dry rooftops. Match the rating to your actual site conditions.
+
+### How do I know if a combiner box is truly 1500V-rated?
+
+Every internal component — breaker, SPD, fuse holder, terminals — must carry a 1500V DC rating on its own label, not just the enclosure.
+
+## About the Author
+
+*Written by **Jacky**, Soltree. Reviewed by **Jacky**, Chief Engineer. 15 years of experience in PV combiner box engineering and B2B export.*
+    `,
+    date: "2026-04-14",
+    dateModified: "2026-04-14",
+    author: "Jacky",
+    image: "/images/blog/pv-combiner-box-buyers-checklist.jpg",
+    tags: ["PV Combiner Box", "Buyer's Guide", "Sourcing", "Specifications", "B2B"],
+    readingTime: 10,
+    metaTitle: "PV Combiner Box Buyer's Checklist: 12 Specs to Verify (2026) | Soltree",
+    metaDescription: "The 12-point PV combiner box checklist used by engineers — verify voltage, SPD, IP rating, certifications and warranty before your next PO. B2B sourcing guide.",
+    metaKeywords: "PV combiner box specifications, PV combiner box buyer checklist, how to choose PV combiner box, PV combiner box sourcing guide, solar combiner box specs, 1500V combiner box checklist, PV combiner box manufacturer",
+    relatedCategorySlug: "pv-combiner-box",
+  },
+
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────

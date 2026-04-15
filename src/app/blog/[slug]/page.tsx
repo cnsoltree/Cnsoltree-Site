@@ -182,12 +182,62 @@ function renderContent(markdown: string) {
     listItems = [];
   }
 
-  for (const raw of lines) {
+  function splitRow(row: string): string[] {
+    const trimmed = row.trim().replace(/^\|/, "").replace(/\|$/, "");
+    return trimmed.split("|").map((c) => c.trim());
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
     const line = raw.trim();
     if (!line) { flushList(); continue; }
 
     // Skip HTML comments
     if (line.startsWith("<!--") || line.startsWith("-->") || line.includes("<!--")) continue;
+
+    // ─── Table detection: header row + separator row ────────────────────────
+    if (line.startsWith("|") && i + 1 < lines.length) {
+      const next = lines[i + 1].trim();
+      const isSeparator = /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(next);
+      if (isSeparator) {
+        flushList();
+        const headers = splitRow(line);
+        const bodyRows: string[][] = [];
+        let j = i + 2;
+        while (j < lines.length && lines[j].trim().startsWith("|")) {
+          bodyRows.push(splitRow(lines[j]));
+          j++;
+        }
+        elements.push(
+          <div key={key++} className="my-6 overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b-2 border-gray-200">
+                  {headers.map((h, hi) => (
+                    <th key={hi} className="px-4 py-2.5 text-left font-semibold text-gray-900">
+                      {parseInline(h)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {bodyRows.map((row, ri) => (
+                  <tr key={ri} className="border-b border-gray-100">
+                    {row.map((cell, ci) => (
+                      <td key={ci} className="px-4 py-2.5 text-gray-600 leading-relaxed">
+                        {parseInline(cell)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+        i = j - 1;
+        continue;
+      }
+    }
 
     if (line.startsWith("## ")) {
       flushList();
