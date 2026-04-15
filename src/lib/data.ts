@@ -3828,6 +3828,142 @@ export const products: Product[] = [
       "STQ2-63-4P transfer switch for hospitals, cold storage and data centers",
     ],
   },
+  // Aerosol Fire Extinguisher
+  {
+    id: "Aerosol-DIN-Rail",
+    name: "DIN Rail Thermal Aerosol Fire Extinguishing Device",
+    slug: "din-rail-aerosol-fire-extinguisher",
+    categorySlug: "aerosol-fire-extinguisher",
+    categoryName: "Aerosol Fire Extinguisher",
+    shortDescription: "Passive DIN-rail thermal aerosol fire sticker for distribution cabinets, PV combiner boxes and electrical enclosures. 170°C self-activation, no power or wiring required.",
+    description:
+      "The Soltree DIN Rail Thermal Aerosol Fire Extinguishing Device — also known as an electrical cabinet automatic fire sticker — is purpose-built for closed electrical enclosures such as distribution cabinets, switch cabinets, PV combiner boxes, meter boxes and communication cabinets. Its fully passive heat-sensitive design requires no external power supply and no wiring: once the ambient temperature reaches 170°C or an open flame is detected, the unit self-activates within 6 seconds and rapidly releases thermal aerosol to suppress incipient electrical fires at the source. Dual installation modes — 35mm DIN rail clip and industrial-grade self-adhesive backing — allow fast retrofit into both new and existing cabinets. The pressure-free storage design eliminates leakage and burst risks, while the aerosol agent leaves no residue and causes no corrosion to PCBs, relays or copper busbars. With a -50°C to +90°C operating range, 10-year service life and completely maintenance-free operation, it is the ideal fire safety solution for electrical distribution and new energy equipment. Manufactured in our ISO 9001 certified facility with 15 years of electrical protection expertise and 200+ projects delivered across 10+ countries.",
+    features: [
+      "Passive heat activation at 170°C — no power, no wiring, no control panel required",
+      "≤6 seconds spray response — suppresses electrical fires at the initial stage",
+      "Dual mounting: 35mm DIN rail clip + self-adhesive backing for fast retrofit",
+      "Pressure-free storage — no leakage, no burst risk, safe long-term standby",
+      "No residue, no corrosion to PCBs, relays and copper busbars after discharge",
+      "Wide -50°C to +90°C operating range — suitable for outdoor PV and telecom cabinets",
+      "10-year service life, fully maintenance-free — install once and forget",
+      "Protects 0.1m³ to 0.3m³ enclosures — covers most combiner boxes and distribution cabinets",
+      "Eco-friendly thermal aerosol agent, safe for personnel and equipment",
+      "OEM / ODM customization available — logo, label, capacity on request",
+    ],
+    specs: {
+      "Product Name": "DIN Rail Thermal Aerosol Fire Extinguishing Device",
+      "Alias": "Electrical Cabinet Automatic Fire Sticker",
+      "Extinguishing Medium": "Thermal Aerosol",
+      "Trigger Temperature": "170°C Heat-Sensitive Activation",
+      "Activation Mode": "Heat Induction / Open Flame Trigger",
+      "Spray Response Time": "≤6 Seconds",
+      "Optional Specification": "10g, 20g, 30g",
+      "Protected Volume": "0.1 m³ ~ 0.3 m³",
+      "Installation Type": "DIN Rail (35mm) / Self-adhesive Mounting",
+      "Power Supply": "Passive — No External Power Needed",
+      "Storage Condition": "Normal Pressure, Pressureless",
+      "Working Temperature": "-50°C ~ +90°C",
+      "Relative Humidity": "≤95%RH",
+      "Housing Material": "Flame-Retardant ABS",
+      "Spray Design": "Dual Nozzle Directional Ejection",
+      "Service Life": "10 Years",
+      "Maintenance": "Maintenance-Free, No Residue",
+      "Application": "Distribution Cabinet, PV Combiner Box, Switch Cabinet, Meter Box, Communication Cabinet",
+      "Fire Grade": "Special Grade for Electrical Equipment",
+      "Safety Performance": "High-Temperature Resistant, Eco-Friendly",
+    },
+    image: "/images/products/Aerosol-Fire-Extinguishing-Sticker-1.jpg",
+    images: [
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-1.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-2.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-3.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-4.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-5.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-6.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-7.jpg",
+      "/images/products/Aerosol-Fire-Extinguishing-Sticker-8.jpg",
+    ],
+    badge: "New",
+    metaTitle: "DIN Rail Aerosol Fire Extinguisher for Cabinets | Soltree",
+    metaDescription: "Soltree DIN rail aerosol fire extinguisher for distribution cabinets & PV combiner boxes. 170°C auto-activation, passive, maintenance-free. OEM, worldwide shipping.",
+    metaKeywords: "aerosol fire extinguisher, electrical cabinet fire sticker, DIN rail fire extinguisher, PV combiner box fire protection, distribution cabinet fire suppression, automatic fire extinguishing device, thermal aerosol fire suppression, switchgear fire protection",
+    imageAlts: [
+      "Soltree DIN rail thermal aerosol fire extinguishing device front view",
+      "DIN rail thermal aerosol fire sticker mounted inside electrical distribution cabinet",
+      "Thermal aerosol fire extinguisher self-adhesive backing installation detail",
+      "Aerosol fire extinguishing device dual nozzle directional spray design",
+      "DIN rail aerosol fire sticker installed in PV combiner box for solar array protection",
+      "Thermal aerosol fire extinguisher 10g 20g 30g capacity options comparison",
+      "Aerosol fire extinguishing device product dimensions and size drawing",
+      "DIN rail aerosol fire extinguisher certification label and packaging",
+    ],
+  },
+  {
+    id: "RT18-125AM-2P-DUP",
+    name: "x",
+    slug: "rt18-125am-2p-fuse-holder",
+    categorySlug: "dc-fuse-holder",
+    categoryName: "DC Fuse Holder",
+    shortDescription: "Double-pole 125A 690V DIN rail fuse holder for Φ22×58mm fuse links — simultaneous line + neutral protection, yellow status indicator, ideal for industrial control cabinets.",
+    description:
+      "The Soltree RT18-125AM 2P DIN rail fuse holder is a specialized protection component designed for single-phase circuits requiring dual-pole (line + neutral) fuse protection — a common requirement in TT earthing systems, bathroom/outdoor installations and markets where double-pole disconnection is mandated by IEC 60364 / BS 7671. Its highly flame-retardant, high-temperature resistant insulated housing is paired with thickened copper conductors (conductivity >98%) to ensure high-efficiency power transmission and low contact resistance (<5mΩ), achieving more than 99.5% current transmission efficiency. Rated at 125A / 690V and compatible with standard Φ22×58mm cylindrical fuse links, the 2-module design (70mm wide) clips onto any 35mm DIN rail for quick deployment in control panels, distribution boards and switchgear. A yellow fuse status window on each pole provides at-a-glance fault monitoring, while oversized wiring terminals and high-quality screws guarantee secure, vibration-resistant connections. Manufactured in our ISO 9001 certified facility with 15 years of low-voltage protection expertise and 200+ projects delivered across 10+ countries, every unit undergoes 100% electrical testing before shipment. Note: fuse link is NOT included — optional ratings 63A / 80A / 100A / 125A are sold separately.",
+    features: [
+      "Dual-pole design — simultaneous line + neutral fuse protection in one unit",
+      "Complies with IEC 60364 / BS 7671 double-pole protection requirements",
+      "Rated 125A / 690V — handles demanding single-phase industrial loads",
+      "Fits standard Φ22×58mm cylindrical fuse links — globally sourced spares",
+      "Thickened copper conductors, conductivity >98% — efficient power transmission",
+      "Contact resistance <5mΩ, current transmission efficiency >99.5% — minimal heat loss",
+      "Yellow fuse status indicator window on each pole — instant visual fault diagnosis",
+      "2-module 70mm wide, 35mm DIN rail clip mounting — fast deployment",
+      "Flame-retardant, high-temperature resistant insulated housing — safe under fault conditions",
+      "Oversized wiring terminals + premium screws — secure, vibration-resistant connections",
+      "CE & RoHS certified — accepted in EU, UK, and global markets",
+      "OEM / ODM customization available — logo, label, packaging",
+      "15-year ISO 9001 certified factory, 200+ projects delivered in 10+ countries",
+    ],
+    specs: {
+      "Product Model": "RT18-125AM",
+      "Pole Configuration": "2P (Double Pole)",
+      "Rated Current": "125A",
+      "Rated Voltage": "690V",
+      "Compatible Fuse Size": "Φ22×58mm",
+      "Optional Fuse Ratings": "63A / 80A / 100A / 125A (sold separately)",
+      "Fuse Inclusion": "Fuse link NOT included — purchased separately",
+      "Housing Material": "High Flame-Retardant & High-Temperature Resistant Insulated Material",
+      "Conductor Material": "Thickened Copper",
+      "Conductivity": ">98%",
+      "Contact Resistance": "<5mΩ",
+      "Current Transmission Efficiency": ">99.5%",
+      "Mounting Method": "35mm Standard DIN Rail",
+      "Product Dimensions": "70mm (W) × 127mm (H) × 76mm (D)",
+      "Fuse Indication": "Yellow Status Indicator Window (per pole)",
+      "Wiring Design": "Large Wiring Terminals + High-Quality Screws",
+      "Safety Features": "Flame Retardant, High-Temperature Resistant, Safe Insulation",
+      "Application": "Industrial Control Cabinets, Distribution Boxes, Switchgear",
+      "Certification": "CE, RoHS",
+    },
+    image: "/images/products/RT18-125AM-2p-1.jpg",
+    images: [
+      "/images/products/RT18-125AM-2p-1.jpg",
+      "/images/products/RT18-125AM-2p-2.jpg",
+      "/images/products/RT18-125AM-2p-3.jpg",
+      "/images/products/RT18-125AM-2p-4.jpg",
+      "/images/products/RT18-125AM-2p-5.jpg",
+      "/images/products/RT18-125AM-2p-6.jpg",
+    ],
+    metaTitle: "RT18-125AM 2P Fuse Holder 125A 690V DIN Rail | Soltree",
+    metaDescription: "Soltree RT18-125AM 2P DIN rail fuse holder, 125A 690V for Φ22×58mm fuses. Dual-pole line+neutral protection, CE & RoHS. OEM, worldwide shipping.",
+    metaKeywords: "RT18-125AM 2P fuse holder, 2 pole fuse holder 125A, double pole fuse holder, DIN rail fuse holder 690V, 22x58 fuse holder, cylindrical fuse holder supplier, industrial fuse holder wholesale",
+    imageAlts: [
+      "Soltree RT18-125AM 2P double pole DIN rail fuse holder 125A 690V front view",
+      "RT18-125AM 2P fuse holder side profile with DIN rail clip",
+      "RT18-125AM 2P fuse holder dual yellow fuse status indicator windows close-up",
+      "RT18-125AM 2P fuse holder wiring terminals and screw detail",
+      "RT18-125AM 2P fuse holder installed on 35mm DIN rail in distribution box",
+      "RT18-125AM 2P fuse holder product dimensions 70x127x76mm drawing",
+    ],
+  },
 ];
 
 // ─── Blog Posts ───────────────────────────────────────────────────────────────
@@ -4295,6 +4431,186 @@ Every internal component — breaker, SPD, fuse holder, terminals — must carry
     metaTitle: "PV Combiner Box Buyer's Checklist: 12 Specs to Verify (2026) | Soltree",
     metaDescription: "The 12-point PV combiner box checklist used by engineers — verify voltage, SPD, IP rating, certifications and warranty before your next PO. B2B sourcing guide.",
     metaKeywords: "PV combiner box specifications, PV combiner box buyer checklist, how to choose PV combiner box, PV combiner box sourcing guide, solar combiner box specs, 1500V combiner box checklist, PV combiner box manufacturer",
+    relatedCategorySlug: "pv-combiner-box",
+  },
+
+  {
+    slug: "dc-vs-ac-pv-combiner-box",
+    title: "DC vs AC PV Combiner Box: Which One Do You Need?",
+    excerpt:
+      "DC and AC combiner boxes sit on opposite sides of the inverter and solve different problems. This guide helps EPC engineers and buyers pick the right one — and avoid the costly mistake of ordering the wrong type.",
+    content: `
+Choosing between a DC combiner box and an AC combiner box sounds like a simple binary decision — until the wrong unit arrives on site and the project stalls for weeks. Over **15 years of manufacturing [PV combiner boxes](/categories/pv-combiner-box) for 200+ solar projects across 10+ countries**, we've seen this exact mistake repeat: a 500kW rooftop job ordered DC combiners when the design actually called for AC consolidation downstream of string inverters.
+
+This guide is written for EPC engineers, system designers, and early-stage buyers who need a clear, non-academic answer to: **DC or AC — which one does this project need?**
+
+> 💡 **New to combiner boxes in general?** Start with our [guide to PV combiner box fundamentals](/blog/what-is-solar-pv-combiner-box-photovoltaic-designs) and come back for the comparison.
+
+## Why This Decision Matters
+
+A combiner box is not interchangeable hardware. The DC and AC variants:
+
+- Sit on **opposite sides of the inverter**
+- Handle **different voltage types, current magnitudes, and fault behaviors**
+- Carry **different certification requirements**
+- Are priced differently — often by 20–40% for the same string count
+
+Order the wrong type and you'll face one of three outcomes: the unit doesn't fit the electrical design at all, it fits but fails early, or it passes initial commissioning but triggers code violations during inspection. None of those are cheap.
+
+## The Core Difference in One Sentence
+
+**A DC combiner box consolidates direct-current strings from PV modules before the inverter. An AC combiner box consolidates alternating-current outputs from multiple string inverters before the grid connection or transformer.**
+
+Everything else — component choice, certifications, protection strategy — flows from that one structural fact.
+
+## How a DC PV Combiner Box Works
+
+In a **centralized or large string-inverter architecture**, dozens of PV strings each carry 10–15A of DC current at system voltages up to 1500V. Running every string individually to the inverter is physically and economically impractical.
+
+A DC combiner box sits between the array and the inverter and:
+
+- Aggregates multiple DC strings (typically 4 / 6 / 8 / 12 / 16 / 24-in-1)
+- Provides **string-level fusing** (PV fuses in [DC fuse holders](/categories/dc-fuse-holder))
+- Includes a **DC load-break disconnect switch**
+- Protects downstream equipment with a **Type 2 DC [SPD](/categories/surge-protector-device)**
+- Reduces cable runs and copper cost to the inverter
+
+**Typical application**: utility-scale solar farms, large C&I rooftops (>500kW), projects using central inverters.
+
+## How an AC PV Combiner Box Works
+
+In a **distributed string-inverter architecture**, each string inverter outputs AC power at 400V / 480V / 800V three-phase. When you have multiple string inverters on a site, you can't run each one individually to the transformer — you consolidate them in an **AC combiner box** (also called an AC recombiner).
+
+An AC combiner box:
+
+- Aggregates outputs from multiple string inverters (typically 4–12 inverter inputs)
+- Uses **AC MCCBs or MCBs**, not DC-rated switches
+- Uses **Type 2 AC SPDs**, not DC SPDs
+- Provides a single AC feeder to the transformer or LV distribution
+- Often includes metering (kWh meter, CT-based current monitoring)
+
+**Typical application**: distributed C&I rooftops, smaller utility farms using multiple 50–250kW string inverters, hybrid systems.
+
+## Side-by-Side: What's Actually Different Inside
+
+| Component | DC Combiner Box | AC Combiner Box |
+|---|---|---|
+| Input source | PV strings (direct from modules) | String inverters (AC output) |
+| Voltage type | DC, up to 1500V | AC three-phase, 400–800V |
+| Per-channel current | 10–15A per string | 30–250A per inverter |
+| Fuses | gPV-rated PV fuses | gG-rated AC fuses (or MCCB) |
+| Disconnect | DC load-break switch | AC MCCB |
+| SPD | Type 2 DC SPD (Uc ≥ 1.2× sys voltage) | Type 2 AC SPD |
+| Certification focus | IEC 61439-2, TÜV, UL 1741 (DC) | IEC 61439-2, UL 1741, local AC grid codes |
+| Enclosure rating | Same IP options (IP65/66/67) | Same IP options |
+| Position in system | Before the inverter | After the inverter |
+
+## When You Need a DC Combiner Box
+
+Choose DC if **any** of the following applies:
+
+- Project uses a **central inverter** (500kW and above is common)
+- Project uses **large string inverters** where you still need per-string fusing and diagnostics upstream
+- Array has **4 or more strings per MPPT** that need consolidation
+- System voltage is **1000V or 1500V DC**
+- Code or utility inspection requires string-level overcurrent protection at the array
+
+> ⚠️ **Red flag**: Some buyers try to skip the DC combiner box in central-inverter designs to save cost. In a 4+ string array, this violates IEC 62548 and most national electrical codes — and eliminates the only practical way to isolate a single faulted string.
+
+## When You Need an AC Combiner Box
+
+Choose AC if **any** of the following applies:
+
+- Project uses **multiple string inverters** (typically 50–250kW each) on the same LV bus
+- You need a **single consolidated AC feeder** to the transformer
+- You want **centralized AC disconnect and SPD** before the point of common coupling
+- Grid code requires **metering, monitoring, or power quality protection** at the combined AC output
+
+## The Hybrid Case: Some Projects Need Both
+
+Large distributed C&I and utility projects often use **both** in the same design:
+
+1. DC combiner boxes consolidate PV strings → central inverter
+2. AC combiner boxes consolidate multiple central/string inverter outputs → transformer
+
+If you're building a 2MW+ project with a mix of inverter types, don't assume one covers both roles. Audit each side of the inverter separately.
+
+## The 3 Most Common Wrong-Type Mistakes
+
+**Mistake 1 — Ordering DC when you needed AC.**
+Distributor buys "PV combiner boxes" for a string-inverter rooftop project, receives DC units with PV fuses and 1500V DC switches. None of it is useful on the AC side. Result: 4–6 week re-order delay.
+
+**Mistake 2 — Ordering AC SPD on a DC box (or vice versa).**
+A DC-rated SPD will not clear surges properly on AC, and an AC SPD on a DC system is a fire hazard. Always check the SPD's DC/AC label individually — not just the box label.
+
+**Mistake 3 — Using an AC disconnect on the DC side.**
+Standard AC MCCBs have no arc-extinguishing design for DC. The arc will not extinguish under load, leading to sustained arcing and potential fire. Always use true **DC load-break switches** on the DC side.
+
+> ⚠️ **Red flag**: If a supplier can't clearly explain why a specific disconnect is DC- or AC-rated, don't buy from them. This is fundamental product knowledge.
+
+## What to Verify Before You Order (Either Type)
+
+Regardless of DC or AC, these specs apply to both:
+
+- Rated voltage and current match your system
+- IP rating matches your installation environment
+- All internal components carry the same voltage rating as the enclosure label
+- Certifications valid in your target market (CE / TÜV / UL / IEC 61439-2)
+- Supplier provides a wiring diagram **specific to your PO**, not a generic template
+
+👉 **Full spec verification list**: [PV Combiner Box Buyer's Checklist: 12 Specs You Must Verify](/blog/pv-combiner-box-buyers-checklist)
+
+## Quick Summary
+
+| Question | If Yes → Choose |
+|---|---|
+| Do you have 4+ PV strings feeding a central or large string inverter? | **DC combiner box** |
+| Are you consolidating outputs from multiple string inverters? | **AC combiner box** |
+| Is the combiner positioned before the inverter? | **DC** |
+| Is the combiner positioned after the inverter? | **AC** |
+| Does your project use both central and string inverters at scale? | **Both** |
+
+## Still Not Sure? Let Our Engineers Review Your Design
+
+Send us your single-line diagram and we'll tell you exactly which combiner configuration your project needs — and quote a matching spec. With 200+ projects across 10+ countries, we've seen almost every topology variant you can throw at us.
+
+👉 [Contact our engineering team](/contact) for a design review and quotation.
+
+## Frequently Asked Questions
+
+### Can I use a DC combiner box on the AC side of the inverter?
+
+No. DC and AC combiner boxes use fundamentally different internal components — fuses, disconnects, and SPDs are all voltage-type specific. Using a DC-rated unit on an AC line (or vice versa) creates a serious safety hazard and is not compliant with IEC 61439-2.
+
+### Is an AC combiner box the same as a recombiner box?
+
+Functionally very similar — "AC recombiner" is another term often used when consolidating the AC outputs of multiple string inverters. The core function (aggregating AC feeders with overcurrent and surge protection) is the same.
+
+### Do small residential systems need either type?
+
+Usually not. Systems with 1–3 strings feeding a single string inverter typically route cables directly without a combiner box. IEC and NEC only mandate combiner boxes at 4+ strings per MPPT or for specific overcurrent coordination requirements.
+
+### Can one enclosure contain both DC and AC sections?
+
+Some OEM designs offer "hybrid" enclosures with separate compartments, but these are uncommon and require careful certification. For most B2B projects, it's cleaner and more cost-effective to specify separate DC and AC units.
+
+### Which is more expensive — DC or AC?
+
+It depends on string count and inverter current rating, not the DC/AC distinction alone. An 8-in-1 DC combiner and a 4-input AC combiner may cost similarly. Get a like-for-like quote based on your actual project spec rather than assuming one is always cheaper.
+
+## About the Author
+
+*Written by **Jacky**, Soltree. Reviewed by **Jacky**, Chief Engineer. 15 years of experience in PV combiner box engineering and B2B export, with 200+ delivered projects across rooftop, C&I, and utility-scale applications.*
+    `,
+    date: "2026-04-15",
+    dateModified: "2026-04-15",
+    author: "Jacky",
+    image: "/images/blog/DC-vs-AC-PV-Combiner-Box.jpg",
+    tags: ["PV Combiner Box", "DC vs AC", "System Design", "EPC", "Technical Guide"],
+    readingTime: 9,
+    metaTitle: "DC vs AC PV Combiner Box: Which Do You Need? (2026) | Soltree",
+    metaDescription: "DC vs AC PV combiner box — know the difference, avoid ordering the wrong type, and match the right unit to your solar project's inverter architecture.",
+    metaKeywords: "dc combiner box vs ac combiner box, ac combiner box vs dc combiner box, pv combiner box difference, ac recombiner box, dc combiner box applications, ac combiner box applications, choose pv combiner box type",
     relatedCategorySlug: "pv-combiner-box",
   },
 
