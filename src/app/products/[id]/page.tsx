@@ -111,9 +111,11 @@ export default function ProductDetailPage({
               </h1>
 
               {/* Description text */}
-              <p className="mt-4 text-base leading-relaxed text-gray-600">
-                {product.description}
-              </p>
+              <div className="mt-4 space-y-3 text-base leading-relaxed text-gray-600">
+                {product.description.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
 
               {/* Description images（接线图、应用场景图等） */}
               {product.descriptionImages && product.descriptionImages.length > 0 && (
