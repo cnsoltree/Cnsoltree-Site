@@ -12,6 +12,7 @@ interface NavItem {
   label: string;
   href?: string;
   hasDropdown?: boolean;
+  hasSolutionDropdown?: boolean;
 }
 
 const NAV_ITEMS: NavItem[] = [
@@ -19,7 +20,12 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Product",    hasDropdown: true },
   { label: "Blog",       href: "/blog" },
   { label: "About",      href: "/about" },
+  { label: "Solutions",  hasSolutionDropdown: true },
   { label: "Contact Us", href: "/contact" },
+];
+
+const SOLUTIONS = [
+  { label: "Aerosol Fire Extinguisher Solution", href: "/solutions/aerosol-fire-extinguisher" },
 ];
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -52,12 +58,16 @@ function CloseIcon() {
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [mobileOpen, setMobileOpen]         = useState(false);
+  const [mobileOpen, setMobileOpen]               = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
-  const [desktopDropdown, setDesktopDropdown] = useState(false);
-  const [scrolled, setScrolled]             = useState(false);
+  const [mobileSolutionOpen, setMobileSolutionOpen] = useState(false);
+  const [desktopDropdown, setDesktopDropdown]     = useState(false);
+  const [desktopSolutionOpen, setDesktopSolutionOpen] = useState(false);
+  const [scrolled, setScrolled]                   = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const solutionRef = useRef<HTMLDivElement>(null);
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const solutionHoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Scroll shadow
   useEffect(() => {
@@ -70,13 +80,17 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
     setMobileProductOpen(false);
+    setMobileSolutionOpen(false);
   }, [pathname]);
 
-  // Close desktop dropdown on outside click
+  // Close desktop dropdowns on outside click
   useEffect(() => {
     function handler(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setDesktopDropdown(false);
+      }
+      if (solutionRef.current && !solutionRef.current.contains(e.target as Node)) {
+        setDesktopSolutionOpen(false);
       }
     }
     document.addEventListener("mousedown", handler);
@@ -92,10 +106,20 @@ export default function Navbar() {
     hoverTimeout.current = setTimeout(() => setDesktopDropdown(false), 120);
   }
 
+  function onMouseEnterSolution() {
+    if (solutionHoverTimeout.current) clearTimeout(solutionHoverTimeout.current);
+    setDesktopSolutionOpen(true);
+  }
+
+  function onMouseLeaveSolution() {
+    solutionHoverTimeout.current = setTimeout(() => setDesktopSolutionOpen(false), 120);
+  }
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
-  const isProductActive = pathname.startsWith("/product") || pathname.startsWith("/categories");
+  const isProductActive  = pathname.startsWith("/product") || pathname.startsWith("/categories");
+  const isSolutionActive = pathname.startsWith("/solutions");
 
   return (
     <header
@@ -171,6 +195,56 @@ export default function Navbar() {
                               className="flex rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-green-700 transition-colors"
                             >
                               {cat.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              if (item.hasSolutionDropdown) {
+                return (
+                  <div
+                    key={item.label}
+                    className="relative"
+                    ref={solutionRef}
+                    onMouseEnter={onMouseEnterSolution}
+                    onMouseLeave={onMouseLeaveSolution}
+                  >
+                    <button
+                      className={`flex items-center gap-1 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+                        isSolutionActive
+                          ? "text-green-700 font-semibold"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      }`}
+                      aria-expanded={desktopSolutionOpen}
+                      aria-haspopup="true"
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-150 ${
+                          desktopSolutionOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Solutions dropdown */}
+                    {desktopSolutionOpen && (
+                      <div
+                        className="absolute left-1/2 top-full -translate-x-1/2 mt-1 w-72 rounded-xl border border-gray-100 bg-white shadow-xl ring-1 ring-black/5"
+                        onMouseEnter={onMouseEnterSolution}
+                        onMouseLeave={onMouseLeaveSolution}
+                      >
+                        <div className="p-2">
+                          {SOLUTIONS.map((s) => (
+                            <Link
+                              key={s.href}
+                              href={s.href}
+                              className="flex rounded-lg px-3 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors"
+                            >
+                              {s.label}
                             </Link>
                           ))}
                         </div>
@@ -266,6 +340,48 @@ export default function Navbar() {
                               className="flex rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
                             >
                               {cat.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                );
+              }
+
+              if (item.hasSolutionDropdown) {
+                return (
+                  <li key={item.label}>
+                    <button
+                      className={`flex w-full items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                        isSolutionActive
+                          ? "bg-green-50 text-green-700 font-semibold"
+                          : "text-gray-700 hover:bg-gray-50"
+                      }`}
+                      onClick={() => setMobileSolutionOpen((v) => !v)}
+                    >
+                      {item.label}
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform duration-150 ${
+                          mobileSolutionOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    {/* Mobile solutions sub-menu */}
+                    <div
+                      className={`overflow-hidden transition-all duration-200 ${
+                        mobileSolutionOpen ? "max-h-[300px]" : "max-h-0"
+                      }`}
+                    >
+                      <ul className="mt-1 ml-4 border-l-2 border-gray-100 pl-4 space-y-0.5">
+                        {SOLUTIONS.map((s) => (
+                          <li key={s.href}>
+                            <Link
+                              href={s.href}
+                              className="flex rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700"
+                            >
+                              {s.label}
                             </Link>
                           </li>
                         ))}
