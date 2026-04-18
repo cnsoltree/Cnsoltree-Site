@@ -133,8 +133,8 @@ function parseInline(text: string): React.ReactNode[] {
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) tokens.push(text.slice(last, m.index));
     if (m[1] != null) {
-      // **bold**
-      tokens.push(<strong key={`b${i++}`} className="font-semibold text-gray-800">{m[1]}</strong>);
+      // **bold** — recursively parse inner content so nested links render correctly
+      tokens.push(<strong key={`b${i++}`} className="font-semibold text-gray-800">{parseInline(m[1])}</strong>);
     } else if (m[2] != null) {
       // [text](url)
       tokens.push(
@@ -276,8 +276,16 @@ function renderContent(markdown: string) {
       if (imgMatch) {
         const [, alt, src] = imgMatch;
         elements.push(
-          <div key={key++} className="relative my-6 overflow-hidden rounded-xl bg-gray-100" style={{ aspectRatio: "16/9" }}>
-            <Image src={src} alt={alt} fill className="object-cover" />
+          <div key={key++} className="my-6 rounded-xl overflow-hidden bg-gray-50">
+            <Image
+              src={src}
+              alt={alt}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100%", height: "auto" }}
+              className="rounded-xl"
+            />
           </div>
         );
       }
