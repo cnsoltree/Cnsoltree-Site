@@ -106,9 +106,6 @@ export default function AerosolSolutionPage() {
                 <a href="#contact-form" className="btn-primary-lg">
                   Get a Free Quote
                 </a>
-                <Link href="/categories/aerosol-fire-extinguisher" className="btn-outline-white">
-                  View All Products
-                </Link>
               </div>
             </div>
 
