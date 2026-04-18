@@ -90,7 +90,7 @@ export default function AerosolSolutionPage() {
           priority
         />
         <div className="container relative z-10">
-          <div className="flex items-center gap-10 lg:gap-16">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
             {/* Left: text */}
             <div className="flex-1 max-w-xl">
               <p className="section-eyebrow text-green-400">Manufacturer &amp; OEM Supplier</p>
@@ -113,8 +113,8 @@ export default function AerosolSolutionPage() {
             </div>
 
             {/* Right: hero product image */}
-            <div className="hidden lg:block lg:w-[420px] xl:w-[500px] shrink-0">
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl" style={{ height: "340px" }}>
+            <div className="w-full lg:w-[420px] xl:w-[500px] shrink-0">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl" style={{ height: "280px" }}>
                 <Image
                   src="/images/products/Aerosol-Fire-Extinguisher-Solutions.jpg"
                   alt="Aerosol fire extinguisher for electrical cabinet"
@@ -540,7 +540,7 @@ export default function AerosolSolutionPage() {
               countries to keep projects on schedule.
             </p>
 
-            <dl className="mt-12 grid grid-cols-4 gap-8">
+            <dl className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
               {[
                 { value: "200,000+", label: "Units Per Year" },
                 { value: "80+",      label: "Countries & Regions Served" },
