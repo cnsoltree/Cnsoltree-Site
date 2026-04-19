@@ -28,8 +28,8 @@ const TRUST_STATS = [
 
 const PRODUCTS = [
   {
-    name: "QRR-0.01G-2/10RLK",
-    image: "/images/products/Aerosol-Fire-Extinguishing-Sticker-1.jpg",
+    name: "Din Rail Aerosol Fire Extinguisher",
+    image: "/images/din-rail-aerosol-fire-extinguisher.jpg",
     specs: [
       "Model: QRR-0.01G (-2/10 R LT)",
       "Dosage: 10g / 20g",
@@ -98,9 +98,7 @@ export default function AerosolSolutionPage() {
                 Aerosol Fire Extinguisher Solutions
               </h1>
               <p className="mt-5 text-lg text-gray-300">
-                Passive thermal aerosol fire suppression for electrical cabinets, PV combiner boxes
-                and industrial enclosures. No power, no wiring, no maintenance — just reliable
-                protection from a factory with 15+ years of expertise.
+                Passive thermal aerosol fire suppression systems engineered for total enclosure protection. Zero power requirements, zero wiring, zero maintenance — deliver industrial-grade fire safety backed by 15+ years of manufacturing expertise.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a href="#contact-form" className="btn-primary-lg">
@@ -527,7 +525,7 @@ export default function AerosolSolutionPage() {
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold leading-snug text-gray-900 sm:text-4xl">
               Your Trusted Aerosol Fire Extinguisher<br />
-              Manufacturer in China. Global Shipping.
+              Made in China. Global Shipping.
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-gray-500">
               Based in Yueqing, China — the electrical manufacturing hub — Soltree combines
@@ -540,8 +538,8 @@ export default function AerosolSolutionPage() {
             <dl className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
               {[
                 { value: "200,000+", label: "Units Per Year" },
-                { value: "80+",      label: "Countries & Regions Served" },
-                { value: "15+",      label: "Years Experience" },
+                { value: "80+", label: "Countries & Regions Served" },
+                { value: "15+", label: "Years Experience" },
                 { value: "50,000㎡", label: "Factory in Total" },
               ].map((s) => (
                 <div key={s.label}>

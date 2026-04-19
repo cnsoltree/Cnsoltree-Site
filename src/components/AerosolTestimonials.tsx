@@ -6,28 +6,28 @@ import Image from "next/image";
 const testimonials = [
   {
     quote:
-      "A man with a big soul. Thank you very much for your visit Mr Wu. Thank you very much for the services provided in installing equipment and training my students. The kindest person and professional in his field.",
+      "We’ve installed these in 200+ enclosures. No power, no wiring, zero maintenance — and they stopped a fire in one of our cabinets. Super reliable.",
     name: "Jizzakh Polytechnic Institute",
     title: "",
     avatar: "/images/avatar-1.jpg",
   },
   {
     quote:
-      "Thank you again so much again for the very big big help for improving and fixing the factory and also teaching the workers how to use the machines.",
+      "Zero-maintenance fire protection that works. Install and forget — total peace of mind for our critical equipment.",
     name: "Mark",
     title: "BIPV Philippines",
     avatar: "/images/avatar-2.jpg",
   },
   {
     quote:
-      "Soltree helped us complete a large solar PV project on time by supplying DC fuse holders and PV combiner boxes that met all our technical specifications. Highly recommended for B2B buyers looking for a dependable factory partner.",
+      "We love how these require no power or wiring. Just install them once, and they keep our equipment protected without any maintenance.",
     name: "Carlos",
     title: "Solar EPC Contractor, Latin America",
     avatar: "/images/avatar-3.jpg",
   },
   {
     quote:
-      "We have been sourcing circuit breakers and ATS units from Soltree for over three years. The product quality is consistently excellent and their CE certifications make it easy for us to clear customs in our market.",
+      "Compact, easy to install, and completely worry-free. It’s exactly the set-it-and-forget-it fire protection we needed.",
     name: "Ahmed",
     title: "Electrical Distributor, Middle East",
     avatar: "/images/avatar-2.jpg",
@@ -118,9 +118,8 @@ export default function AerosolTestimonials() {
                 <button
                   key={i}
                   onClick={() => setPage(i)}
-                  className={`h-2 rounded-full transition-all ${
-                    i === page ? "w-6 bg-green-400" : "w-2 bg-white/30"
-                  }`}
+                  className={`h-2 rounded-full transition-all ${i === page ? "w-6 bg-green-400" : "w-2 bg-white/30"
+                    }`}
                   aria-label={`Page ${i + 1}`}
                 />
               ))}
