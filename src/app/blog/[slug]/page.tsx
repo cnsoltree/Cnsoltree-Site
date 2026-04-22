@@ -437,8 +437,9 @@ export default function BlogPostPage({
                   src={post.image}
                   alt={post.title}
                   fill
-                  className="object-cover"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="object-cover"
                 />
               </div>
 
@@ -502,6 +503,7 @@ export default function BlogPostPage({
                     src="/images/factory.jpg"
                     alt="Soltree factory — IEC-certified electrical component manufacturer"
                     fill
+                    sizes="280px"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -515,13 +517,13 @@ export default function BlogPostPage({
                   </p>
                   <div className="mt-3 flex items-center justify-center gap-3">
                     <div className="relative h-8 w-8">
-                      <Image src="/images/ce.png" alt="CE certified" fill className="object-contain" />
+                      <Image src="/images/ce.png" alt="CE certified" fill sizes="32px" className="object-contain" />
                     </div>
                     <div className="relative h-8 w-12">
-                      <Image src="/images/TUV.png" alt="TUV certified" fill className="object-contain" />
+                      <Image src="/images/TUV.png" alt="TUV certified" fill sizes="48px" className="object-contain" />
                     </div>
                     <div className="relative h-8 w-12">
-                      <Image src="/images/rohs.png" alt="RoHS compliant" fill className="object-contain" />
+                      <Image src="/images/rohs.png" alt="RoHS compliant" fill sizes="48px" className="object-contain" />
                     </div>
                   </div>
                   <Link href="/contact" className="btn-primary mt-4 inline-flex w-full justify-center text-xs py-2">
@@ -588,6 +590,7 @@ export default function BlogPostPage({
                               src={product.image}
                               alt={product.name}
                               fill
+                              sizes="56px"
                               className="object-contain p-1"
                             />
                           </div>

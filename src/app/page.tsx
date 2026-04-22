@@ -137,12 +137,13 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden py-20 sm:py-24">
         <div className="pointer-events-none absolute inset-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/images/hero-bg.jpg"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            fetchPriority="high"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-slate-950/80" />
         </div>

@@ -105,7 +105,7 @@ export default function AerosolTestimonials() {
                       {t.title && <p className="text-xs text-green-600">{t.title}</p>}
                     </div>
                     <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-green-400 bg-gray-200">
-                      <Image src={t.avatar} alt={t.name} fill className="object-cover" />
+                      <Image src={t.avatar} alt={t.name} fill sizes="48px" className="object-cover" />
                     </div>
                   </div>
                 </div>

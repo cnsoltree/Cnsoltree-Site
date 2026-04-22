@@ -74,6 +74,8 @@ export default function AboutPage() {
             src="/images/banner/about-bg.jpg"
             alt="Soltree manufacturing facility"
             fill
+            priority
+            sizes="100vw"
             className="object-cover opacity-15"
           />
         </div>
@@ -143,6 +145,7 @@ export default function AboutPage() {
                 src="/images/factory.jpg"
                 alt="Soltree production facility"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

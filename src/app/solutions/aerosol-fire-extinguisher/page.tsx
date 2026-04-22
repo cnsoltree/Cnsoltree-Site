@@ -86,8 +86,9 @@ export default function AerosolSolutionPage() {
           src="/images/hero-bg.jpg"
           alt="Aerosol fire extinguisher manufacturing facility"
           fill
-          className="object-cover opacity-30"
           priority
+          sizes="100vw"
+          className="object-cover opacity-30"
         />
         <div className="container relative z-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
@@ -114,6 +115,8 @@ export default function AerosolSolutionPage() {
                   src="/images/products/Aerosol-Fire-Extinguisher-Solutions.jpg"
                   alt="Aerosol fire extinguisher for electrical cabinet"
                   fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 500px"
                   className="object-cover brightness-75"
                 />
               </div>
@@ -151,6 +154,7 @@ export default function AerosolSolutionPage() {
                     src={p.image}
                     alt={p.name}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-contain p-4"
                   />
                 </div>
@@ -243,6 +247,7 @@ export default function AerosolSolutionPage() {
                   src="/images/aerosol-installed.jpg"
                   alt="Aerosol fire extinguisher installed in electrical cabinet"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover brightness-75"
                 />
               </div>
@@ -362,6 +367,7 @@ export default function AerosolSolutionPage() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
@@ -517,6 +523,7 @@ export default function AerosolSolutionPage() {
             src="/images/world-map.jpg"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
           />
         </div>

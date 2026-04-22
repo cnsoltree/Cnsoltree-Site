@@ -89,6 +89,7 @@ export default function TestimonialsSlider() {
                   src={t.avatar}
                   alt={t.name}
                   fill
+                  sizes="44px"
                   className="object-cover"
                   onError={() => {}}
                 />
