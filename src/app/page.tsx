@@ -425,11 +425,12 @@ export default function HomePage() {
             {/* Large image - spans 2 rows on md+ */}
             <div className="col-span-2 overflow-hidden rounded-xl md:col-span-1 md:row-span-2">
               <div className="relative h-64 w-full md:h-full" style={{minHeight: '320px'}}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/exhibition-1.png"
                   alt="Soltree exhibition booth"
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
             </div>
@@ -437,11 +438,12 @@ export default function HomePage() {
             {[2, 3, 4, 5].map((n) => (
               <div key={n} className="overflow-hidden rounded-xl">
                 <div className="relative h-52 w-full md:h-64">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={`/images/exhibition-${n}.png`}
                     alt={`Soltree trade show photo ${n}`}
-                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 420px"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>
