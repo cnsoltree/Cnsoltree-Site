@@ -323,9 +323,27 @@ export default function BlogPostPage({
   });
 
   // ─── JSON-LD structured data ────────────────────────────────────────────────
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://www.cnsoltree.com";
+  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://www.elesoltree.com";
   const postUrl = `${siteUrl}/blog/${post.slug}`;
   const imageUrl = post.image.startsWith("http") ? post.image : `${siteUrl}${post.image}`;
+
+  // Auto-detect author type: organizational names (team/group/editorial/...) → Organization,
+  // personal names (Jacky, etc.) → Person. Better E-E-A-T signal than a one-size-fits-all type.
+  const isOrgAuthor = /\b(team|group|inc|llc|ltd|corp|company|editorial|engineering|staff)\b/i.test(post.author);
+  const authorSchema = {
+    "@type": isOrgAuthor ? "Organization" : "Person",
+    name: post.author,
+    url: `${siteUrl}/about`,
+  };
+
+  // Word count from raw markdown — strip markdown punctuation/links/images first
+  const plainText = post.content
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[#*_>`|\-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const wordCount = plainText ? plainText.split(" ").length : 0;
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -335,11 +353,7 @@ export default function BlogPostPage({
     image: [imageUrl],
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.dateModified || post.date).toISOString(),
-    author: {
-      "@type": "Organization",
-      name: post.author,
-      url: `${siteUrl}/about`,
-    },
+    author: authorSchema,
     publisher: {
       "@type": "Organization",
       name: "Soltree",
@@ -351,6 +365,7 @@ export default function BlogPostPage({
     mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
     keywords: post.metaKeywords,
     articleSection: post.tags?.[0],
+    wordCount,
     inLanguage: "en-US",
   };
 

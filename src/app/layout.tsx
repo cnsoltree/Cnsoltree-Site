@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://www.cnsoltree.com"
+    process.env.NEXT_PUBLIC_APP_URL ?? "https://www.elesoltree.com"
   ),
   icons: {
     icon: "/images/favicon.png",

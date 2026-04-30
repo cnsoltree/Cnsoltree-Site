@@ -92,7 +92,7 @@ function userConfirmationHtml(name: string): string {
         <p style="margin: 0 0 24px; color: #4b5563; font-size: 15px; line-height: 1.7;">
           如有紧急需求，欢迎直接回复本邮件，我们会尽快处理。
         </p>
-        <a href="${process.env.NEXT_PUBLIC_APP_URL ?? "https://cnsoltree.com"}"
+        <a href="${process.env.NEXT_PUBLIC_APP_URL ?? "https://www.elesoltree.com"}"
            style="display: inline-block; background: #059669; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600;">
           访问 Soltree
         </a>

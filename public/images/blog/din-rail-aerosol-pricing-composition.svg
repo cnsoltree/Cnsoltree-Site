@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#f9fafb"/>
+  <text x="600" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">Where Your FOB Cost Goes</text>
+  <text x="600" y="105" text-anchor="middle" font-size="16" fill="#6b7280">Cost composition of a typical 100 g din rail aerosol extinguisher</text>
+
+  <g transform="translate(80, 200)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Aerosol compound + initiator</text>
+    <rect x="0" y="0" width="500" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="125" height="36" rx="6" fill="#15803d"/>
+    <text x="510" y="24" font-size="14" font-weight="700" fill="#15803d">25%</text>
+  </g>
+
+  <g transform="translate(80, 270)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Housing, end caps, DIN clip</text>
+    <rect x="0" y="0" width="500" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="100" height="36" rx="6" fill="#16a34a"/>
+    <text x="510" y="24" font-size="14" font-weight="700" fill="#16a34a">20%</text>
+  </g>
+
+  <g transform="translate(80, 340)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Electric trigger circuit</text>
+    <rect x="0" y="0" width="500" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="75" height="36" rx="6" fill="#22c55e"/>
+    <text x="510" y="24" font-size="14" font-weight="700" fill="#16a34a">15%</text>
+  </g>
+
+  <g transform="translate(80, 410)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Certification amortization</text>
+    <rect x="0" y="0" width="500" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="50" height="36" rx="6" fill="#4ade80"/>
+    <text x="510" y="24" font-size="14" font-weight="700" fill="#16a34a">10%</text>
+  </g>
+
+  <g transform="translate(700, 200)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Labor + QC</text>
+    <rect x="0" y="0" width="400" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="40" height="36" rx="6" fill="#86efac"/>
+    <text x="410" y="24" font-size="14" font-weight="700" fill="#16a34a">10%</text>
+  </g>
+
+  <g transform="translate(700, 270)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Packaging + inland logistics</text>
+    <rect x="0" y="0" width="400" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="20" height="36" rx="6" fill="#bbf7d0"/>
+    <text x="410" y="24" font-size="14" font-weight="700" fill="#16a34a">5%</text>
+  </g>
+
+  <g transform="translate(700, 340)">
+    <text x="0" y="-10" font-size="14" font-weight="600" fill="#111827">Overhead + margin</text>
+    <rect x="0" y="0" width="400" height="36" rx="6" fill="#e5e7eb"/>
+    <rect x="0" y="0" width="60" height="36" rx="6" fill="#15803d"/>
+    <text x="410" y="24" font-size="14" font-weight="700" fill="#15803d">15%</text>
+  </g>
+
+  <g transform="translate(80, 500)">
+    <rect width="1040" height="100" rx="12" fill="#dcfce7"/>
+    <text x="40" y="40" font-size="16" font-weight="700" fill="#15803d">Quotes valid for less than 30 days are now standard</text>
+    <text x="40" y="68" font-size="14" fill="#15803d">Chemistry and housing - the two largest cost lines - are exposed to commodity price swings.</text>
+    <text x="40" y="88" font-size="14" fill="#15803d">Always confirm the quotation validity period before locking in volume planning.</text>
+  </g>
+
+  <text x="600" y="640" text-anchor="middle" font-size="14" fill="#9ca3af">Soltree | Reference structure - actual share varies by SKU and certification scope</text>
+</svg>

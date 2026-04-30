@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="800" fill="#f9fafb"/>
+  <text x="600" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">Top Applications in 2026</text>
+  <text x="600" y="105" text-anchor="middle" font-size="16" fill="#6b7280">Six verticals driving global demand for cabinet-level fire suppression</text>
+
+  <g transform="translate(60, 160)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">BESS</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Battery energy storage</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">+40-50% YoY deployments</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">PCS cabinet, BMS panel</text>
+  </g>
+
+  <g transform="translate(425, 160)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">Solar PV</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Combiner box, inverter</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">Distributed PV growth</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">EMEA, LATAM markets</text>
+  </g>
+
+  <g transform="translate(790, 160)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">EV Charging</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Charger control cabinet</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">EU AFIR + US NEVI</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">Mandate-driven rollout</text>
+  </g>
+
+  <g transform="translate(60, 360)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">Data Centers</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Row-PDU, RDHX, racks</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">AI capex surge</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">UPS-room ignition risk</text>
+  </g>
+
+  <g transform="translate(425, 360)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">Telecom / 5G</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Power cabinet, BBU</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">Network densification</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">Outdoor exposure</text>
+  </g>
+
+  <g transform="translate(790, 360)">
+    <rect width="350" height="180" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect width="6" height="180" rx="3" fill="#15803d"/>
+    <text x="40" y="55" font-size="22" font-weight="700" fill="#111827">Rail Transit</text>
+    <text x="40" y="85" font-size="14" fill="#6b7280">Signaling cabinet</text>
+    <text x="40" y="135" font-size="13" fill="#15803d" font-weight="600">EN 50553 mandated</text>
+    <text x="40" y="158" font-size="12" fill="#9ca3af">Fire-safety compliance</text>
+  </g>
+
+  <g transform="translate(60, 580)">
+    <rect width="1080" height="100" rx="12" fill="#dcfce7"/>
+    <text x="600" y="630" text-anchor="middle" font-size="18" font-weight="700" fill="#15803d">Plus marine, industrial automation, building electrical and more</text>
+    <text x="600" y="658" text-anchor="middle" font-size="13" fill="#15803d">9 verticals, 80+ countries shipped from China in 2025</text>
+  </g>
+
+  <text x="600" y="730" text-anchor="middle" font-size="14" fill="#9ca3af">Soltree | Din Rail Aerosol Fire Extinguisher</text>
+</svg>

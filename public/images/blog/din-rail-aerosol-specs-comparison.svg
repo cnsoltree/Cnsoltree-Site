@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#f9fafb"/>
+  <text x="600" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">Specification Comparison</text>
+  <text x="600" y="105" text-anchor="middle" font-size="16" fill="#6b7280">Three SKU tiers cover 90%+ of cabinet protection scenarios</text>
+
+  <g transform="translate(80, 160)">
+    <rect width="320" height="440" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect width="320" height="80" rx="14" fill="#f3f4f6"/>
+    <rect y="60" width="320" height="20" fill="#f3f4f6"/>
+    <text x="160" y="40" text-anchor="middle" font-size="16" font-weight="600" fill="#6b7280">Small</text>
+    <text x="160" y="68" text-anchor="middle" font-size="28" font-weight="800" fill="#111827">50 g</text>
+
+    <line x1="30" y1="120" x2="290" y2="120" stroke="#e5e7eb"/>
+    <text x="30" y="160" font-size="13" fill="#6b7280">Rated volume</text>
+    <text x="290" y="160" text-anchor="end" font-size="14" font-weight="600" fill="#111827">0.5 m3</text>
+    <line x1="30" y1="180" x2="290" y2="180" stroke="#f3f4f6"/>
+    <text x="30" y="210" font-size="13" fill="#6b7280">Discharge time</text>
+    <text x="290" y="210" text-anchor="end" font-size="14" font-weight="600" fill="#111827">&lt; 3 s</text>
+    <line x1="30" y1="230" x2="290" y2="230" stroke="#f3f4f6"/>
+    <text x="30" y="260" font-size="13" fill="#6b7280">Operating temp</text>
+    <text x="290" y="260" text-anchor="end" font-size="14" font-weight="600" fill="#111827">-40 to +85 C</text>
+    <line x1="30" y1="280" x2="290" y2="280" stroke="#f3f4f6"/>
+    <text x="30" y="310" font-size="13" fill="#6b7280">DIN slots</text>
+    <text x="290" y="310" text-anchor="end" font-size="14" font-weight="600" fill="#111827">2U</text>
+    <line x1="30" y1="330" x2="290" y2="330" stroke="#f3f4f6"/>
+    <text x="30" y="360" font-size="13" fill="#6b7280">Activation</text>
+    <text x="290" y="360" text-anchor="end" font-size="14" font-weight="600" fill="#111827">Thermal</text>
+    <line x1="30" y1="380" x2="290" y2="380" stroke="#f3f4f6"/>
+    <text x="30" y="410" font-size="13" fill="#6b7280">Service life</text>
+    <text x="290" y="410" text-anchor="end" font-size="14" font-weight="600" fill="#111827">10 y</text>
+  </g>
+
+  <g transform="translate(440, 140)">
+    <rect width="320" height="480" rx="14" fill="#ffffff" stroke="#15803d" stroke-width="3"/>
+    <rect width="320" height="80" rx="14" fill="#15803d"/>
+    <rect y="60" width="320" height="20" fill="#15803d"/>
+    <text x="160" y="40" text-anchor="middle" font-size="16" font-weight="600" fill="#dcfce7">Most Popular</text>
+    <text x="160" y="68" text-anchor="middle" font-size="28" font-weight="800" fill="#ffffff">100 g</text>
+
+    <line x1="30" y1="140" x2="290" y2="140" stroke="#e5e7eb"/>
+    <text x="30" y="180" font-size="13" fill="#6b7280">Rated volume</text>
+    <text x="290" y="180" text-anchor="end" font-size="14" font-weight="600" fill="#111827">1.0 m3</text>
+    <line x1="30" y1="200" x2="290" y2="200" stroke="#f3f4f6"/>
+    <text x="30" y="230" font-size="13" fill="#6b7280">Discharge time</text>
+    <text x="290" y="230" text-anchor="end" font-size="14" font-weight="600" fill="#111827">&lt; 3 s</text>
+    <line x1="30" y1="250" x2="290" y2="250" stroke="#f3f4f6"/>
+    <text x="30" y="280" font-size="13" fill="#6b7280">Operating temp</text>
+    <text x="290" y="280" text-anchor="end" font-size="14" font-weight="600" fill="#111827">-40 to +85 C</text>
+    <line x1="30" y1="300" x2="290" y2="300" stroke="#f3f4f6"/>
+    <text x="30" y="330" font-size="13" fill="#6b7280">DIN slots</text>
+    <text x="290" y="330" text-anchor="end" font-size="14" font-weight="600" fill="#111827">4U</text>
+    <line x1="30" y1="350" x2="290" y2="350" stroke="#f3f4f6"/>
+    <text x="30" y="380" font-size="13" fill="#6b7280">Activation</text>
+    <text x="290" y="380" text-anchor="end" font-size="14" font-weight="600" fill="#111827">Thermal + 24V</text>
+    <line x1="30" y1="400" x2="290" y2="400" stroke="#f3f4f6"/>
+    <text x="30" y="430" font-size="13" fill="#6b7280">Service life</text>
+    <text x="290" y="430" text-anchor="end" font-size="14" font-weight="600" fill="#111827">10-15 y</text>
+  </g>
+
+  <g transform="translate(800, 160)">
+    <rect width="320" height="440" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect width="320" height="80" rx="14" fill="#f3f4f6"/>
+    <rect y="60" width="320" height="20" fill="#f3f4f6"/>
+    <text x="160" y="40" text-anchor="middle" font-size="16" font-weight="600" fill="#6b7280">Large</text>
+    <text x="160" y="68" text-anchor="middle" font-size="28" font-weight="800" fill="#111827">200 g</text>
+
+    <line x1="30" y1="120" x2="290" y2="120" stroke="#e5e7eb"/>
+    <text x="30" y="160" font-size="13" fill="#6b7280">Rated volume</text>
+    <text x="290" y="160" text-anchor="end" font-size="14" font-weight="600" fill="#111827">2.0 m3</text>
+    <line x1="30" y1="180" x2="290" y2="180" stroke="#f3f4f6"/>
+    <text x="30" y="210" font-size="13" fill="#6b7280">Discharge time</text>
+    <text x="290" y="210" text-anchor="end" font-size="14" font-weight="600" fill="#111827">&lt; 3 s</text>
+    <line x1="30" y1="230" x2="290" y2="230" stroke="#f3f4f6"/>
+    <text x="30" y="260" font-size="13" fill="#6b7280">Operating temp</text>
+    <text x="290" y="260" text-anchor="end" font-size="14" font-weight="600" fill="#111827">-40 to +95 C</text>
+    <line x1="30" y1="280" x2="290" y2="280" stroke="#f3f4f6"/>
+    <text x="30" y="310" font-size="13" fill="#6b7280">DIN slots</text>
+    <text x="290" y="310" text-anchor="end" font-size="14" font-weight="600" fill="#111827">8U</text>
+    <line x1="30" y1="330" x2="290" y2="330" stroke="#f3f4f6"/>
+    <text x="30" y="360" font-size="13" fill="#6b7280">Activation</text>
+    <text x="290" y="360" text-anchor="end" font-size="14" font-weight="600" fill="#111827">Dual-mode</text>
+    <line x1="30" y1="380" x2="290" y2="380" stroke="#f3f4f6"/>
+    <text x="30" y="410" font-size="13" fill="#6b7280">Service life</text>
+    <text x="290" y="410" text-anchor="end" font-size="14" font-weight="600" fill="#111827">15 y</text>
+  </g>
+
+  <text x="600" y="650" text-anchor="middle" font-size="14" fill="#9ca3af">Soltree | Specifications subject to confirmation per project</text>
+</svg>

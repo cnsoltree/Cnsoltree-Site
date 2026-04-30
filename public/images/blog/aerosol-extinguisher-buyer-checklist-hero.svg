@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="630" fill="#f9fafb"/>
+  <text x="600" y="58" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">The 12-Spec Buyer's Checklist</text>
+  <text x="600" y="92" text-anchor="middle" font-size="15" fill="#6b7280">Pre-purchase audit for din rail aerosol fire extinguisher importers and distributors</text>
+
+  <g transform="translate(40, 130)">
+    <rect width="270" height="36" rx="8" fill="#15803d"/>
+    <text x="135" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">PERFORMANCE</text>
+  </g>
+  <g transform="translate(320, 130)">
+    <rect width="270" height="36" rx="8" fill="#15803d"/>
+    <text x="135" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">DOCUMENTATION</text>
+  </g>
+  <g transform="translate(600, 130)">
+    <rect width="270" height="36" rx="8" fill="#15803d"/>
+    <text x="135" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">BUILD QUALITY</text>
+  </g>
+  <g transform="translate(880, 130)">
+    <rect width="270" height="36" rx="8" fill="#15803d"/>
+    <text x="135" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">COMMERCIAL</text>
+  </g>
+
+  <g transform="translate(40, 184)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">1</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Agent Mass</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Confirm design</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">concentration is named</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">on the spec sheet</text>
+  </g>
+
+  <g transform="translate(40, 314)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">2</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Discharge Time</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Full curve documented,</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">not just peak figure</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">(under 3 seconds)</text>
+  </g>
+
+  <g transform="translate(40, 444)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">3</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Operating Temp</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Qualified for destination</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">climate (BESS / GCC</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">need +95 C extended)</text>
+  </g>
+
+  <g transform="translate(320, 184)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">4</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Notified Body Cert</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Third-party EN 15276,</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">not self-issued DoC</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">(verify NB number)</text>
+  </g>
+
+  <g transform="translate(320, 314)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">5</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Original Test Report</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Full report, not just the</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">cover. Model number</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">must match your PO</text>
+  </g>
+
+  <g transform="translate(320, 444)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">6</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">MSDS + DGD</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Translated to destination</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">language. UN 3268,</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">Class 9 documentation</text>
+  </g>
+
+  <g transform="translate(600, 184)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">7</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">UL94 V-0 Housing</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Self-extinguishing flame</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">retardancy. Confirm</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">UL Yellow Card</text>
+  </g>
+
+  <g transform="translate(600, 314)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">8</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">IEC 60068 Tested</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Vibration and shock</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">resistance verified by</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">third-party lab</text>
+  </g>
+
+  <g transform="translate(600, 444)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">9</text>
+    <text x="62" y="36" font-size="14" font-weight="700" fill="#111827">Cold-Soak Tested</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">100-unit batch tested at</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">-40 C, all units must</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">discharge within spec</text>
+  </g>
+
+  <g transform="translate(880, 184)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">10</text>
+    <text x="64" y="36" font-size="14" font-weight="700" fill="#111827">Warranty + Life</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">24+ month warranty,</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">10+ year service life;</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">read the PI carefully</text>
+  </g>
+
+  <g transform="translate(880, 314)">
+    <rect width="270" height="120" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="32" cy="32" r="18" fill="#dcfce7"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">11</text>
+    <text x="64" y="36" font-size="14" font-weight="700" fill="#111827">Capacity Verified</text>
+    <text x="20" y="74" font-size="12" fill="#6b7280">Production capacity at</text>
+    <text x="20" y="92" font-size="12" fill="#6b7280">least 2x your annual</text>
+    <text x="20" y="110" font-size="12" fill="#6b7280">forecast volume</text>
+  </g>
+
+  <g transform="translate(880, 444)">
+    <rect width="270" height="120" rx="10" fill="#15803d"/>
+    <circle cx="32" cy="32" r="18" fill="#ffffff"/>
+    <text x="32" y="38" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">12</text>
+    <text x="64" y="36" font-size="14" font-weight="700" fill="#ffffff">Quote = PI</text>
+    <text x="20" y="74" font-size="12" fill="#dcfce7">MOQ, price, lead time</text>
+    <text x="20" y="92" font-size="12" fill="#dcfce7">consistent between</text>
+    <text x="20" y="110" font-size="12" fill="#dcfce7">quotation and PI</text>
+  </g>
+
+  <text x="600" y="600" text-anchor="middle" font-size="13" fill="#9ca3af">Soltree | Run this checklist on every new supplier; re-run annually on existing</text>
+</svg>

@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { categories, products, blogPosts } from "@/lib/data";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "https://www.cnsoltree.com";
+  process.env.NEXT_PUBLIC_APP_URL ?? "https://www.elesoltree.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
