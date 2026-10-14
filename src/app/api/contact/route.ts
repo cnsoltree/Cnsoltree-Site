@@ -148,13 +148,19 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
   // 4. 发送管理员通知邮件 + 用户确认邮件（并发）
   try {
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
       reply_to: email,
       subject: `[Soltree] New enquiry from ${name}${company ? ` · ${company}` : ""}`,
       html: adminEmailHtml({ name, email, company, message }),
     });
+    if (error) {
+      throw new Error(error.message);
+    }
+    if (!data?.id) {
+      throw new Error("Resend did not return an email ID.");
+    }
   } catch (err) {
     console.error("[Contact] Resend error:", err);
     return NextResponse.json(
