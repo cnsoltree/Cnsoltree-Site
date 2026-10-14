@@ -139,10 +139,10 @@ export default function PrivacyPage() {
                 Soltree Support Team
                 <br />
                 <a
-                  href="mailto:jacky@cnsoltree.com"
+                  href="mailto:shawn@cnsoltree.com"
                   className="font-medium text-green-700 hover:text-green-800 transition-colors"
                 >
-                  jacky@cnsoltree.com
+                  shawn@cnsoltree.com
                 </a>
               </p>
 

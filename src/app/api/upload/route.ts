@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     const ext = filename.split(".").pop() ?? "bin";
     const key = `uploads/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
 
-    const { url } = await getPresignedUploadUrl(key, contentType);
+    const { uploadUrl: url } = await getPresignedUploadUrl(key, contentType);
 
     return NextResponse.json({ url, key });
   } catch (error) {

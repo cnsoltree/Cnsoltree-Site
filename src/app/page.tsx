@@ -601,7 +601,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Email</p>
-                    <a href="mailto:Jacky@cnsoltree.com" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">Jacky@cnsoltree.com</a>
+                    <a href="mailto:shawn@cnsoltree.com" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">shawn@cnsoltree.com</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -612,7 +612,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Phone / WhatsApp</p>
-                    <a href="tel:+8613693313816" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">+86-13693313816</a>
+                    <a href="tel:+8618305772325" className="mt-0.5 text-sm text-gray-700 hover:text-green-700 transition-colors">+86 18305772325</a>
                   </div>
                 </li>
               </ul>

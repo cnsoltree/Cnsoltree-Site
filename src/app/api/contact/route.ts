@@ -6,7 +6,7 @@ import { createSupabaseAdmin } from "@/lib/supabase";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "noreply@cnsoltree.com";
-const ADMIN_EMAIL = process.env.RESEND_ADMIN_EMAIL ?? FROM_EMAIL;
+const ADMIN_EMAIL = process.env.RESEND_ADMIN_EMAIL ?? "shawn@cnsoltree.com";
 
 // ─── 请求体类型 ───────────────────────────────────────────────────────────────
 
@@ -151,7 +151,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      replyTo: email,
+      reply_to: email,
       subject: `[Soltree] New enquiry from ${name}${company ? ` · ${company}` : ""}`,
       html: adminEmailHtml({ name, email, company, message }),
     });

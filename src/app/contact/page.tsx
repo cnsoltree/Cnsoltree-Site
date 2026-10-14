@@ -27,8 +27,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email",
-    value: "Jacky@cnsoltree.com",
-    href: "mailto:Jacky@cnsoltree.com",
+    value: "shawn@cnsoltree.com",
+    href: "mailto:shawn@cnsoltree.com",
   },
   {
     icon: (
@@ -37,8 +37,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Phone",
-    value: "+86-13693313816",
-    href: "tel:+8613693313816",
+    value: "+86 18305772325",
+    href: "tel:+8618305772325",
   },
   {
     icon: (
@@ -48,8 +48,8 @@ const contactInfo = [
       </svg>
     ),
     label: "WhatsApp",
-    value: "+86-13693313816",
-    href: "https://wa.me/8613693313816",
+    value: "+86 18305772325",
+    href: "https://wa.me/8618305772325",
   },
 ];
 

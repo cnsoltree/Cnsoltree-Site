@@ -48,6 +48,7 @@ export interface Database {
           message?: string;
           replied?: boolean;
         };
+        Relationships: [];
       };
       profiles: {
         Row: {
@@ -71,6 +72,7 @@ export interface Database {
           full_name?: string | null;
           avatar_url?: string | null;
         };
+        Relationships: [];
       };
     };
     Views: Record<string, never>;
