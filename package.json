@@ -24,7 +24,7 @@
     "verify:admin": "node scripts/verify-admin.mjs",
     "admin:online:check": "node scripts/admin-online-setup.mjs",
     "admin:online:prepare": "node scripts/admin-online-setup.mjs --prepare-storage",
-    "verify:online-admin": "node scripts/verify-admin-auth-proxy.mjs && node scripts/verify-admin-store.mjs && node scripts/verify-admin-content.mjs && node scripts/verify-admin-publish.mjs && node scripts/verify-online-admin-ui.mjs",
+    "verify:online-admin": "node scripts/verify-admin-auth-proxy.mjs && node scripts/verify-admin-store.mjs && node scripts/verify-admin-content.mjs && node scripts/verify-admin-publish.mjs && node scripts/verify-online-admin-ui.mjs && node scripts/verify-admin-online-setup.mjs",
     "verify:online-admin:runtime": "node scripts/verify-online-admin-runtime.mjs",
     "verify:products": "node scripts/verify-product-admin.mjs",
     "verify:taxonomy": "node scripts/verify-taxonomy.mjs",
