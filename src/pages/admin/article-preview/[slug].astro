@@ -1,0 +1,47 @@
+---
+import ArticleDetail from '@/components/ArticleDetail.astro';
+import { categories, type BlogPost } from '@/lib/data';
+
+export const prerender = false;
+if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+Astro.response.headers.set('Cache-Control', 'no-store');
+const records = import.meta.glob('../../../content/articles/*.json', {
+  eager: true,
+  import: 'default',
+});
+const record = Object.values(records).find(
+  (value) =>
+    value &&
+    typeof value === 'object' &&
+    (value as Record<string, unknown>).slug === Astro.params.slug,
+) as Record<string, unknown> | undefined;
+if (!record || record.deletedAt) return new Response('Article not found', { status: 404 });
+const text = (key: string) => (typeof record[key] === 'string' ? (record[key] as string) : '');
+const strings = (key: string) =>
+  Array.isArray(record[key])
+    ? (record[key] as unknown[]).filter((value): value is string => typeof value === 'string')
+    : [];
+const date = (key: string) => (Number.isFinite(Date.parse(text(key))) ? text(key) : '');
+const category = categories.find((item) => item.slug === text('relatedCategorySlug'));
+const post: BlogPost = {
+  slug: text('slug'),
+  title: text('title') || text('slug'),
+  excerpt: text('excerpt') || '尚未填写文章摘要（预览提示）',
+  content: text('content') || '尚未填写文章正文（预览提示）',
+  date: date('date'),
+  dateModified: date('dateModified') || undefined,
+  author: text('author') || 'Soltree',
+  image: text('image').startsWith('/images/') ? text('image') : '',
+  tags: strings('tags'),
+  readingTime:
+    typeof record.readingTime === 'number' && record.readingTime > 0 ? record.readingTime : 1,
+  relatedCategorySlug: category?.slug,
+  relatedProductTypes: strings('relatedProductTypes'),
+  metaTitle: text('metaTitle') || undefined,
+  metaDescription: text('metaDescription') || undefined,
+  metaKeywords: text('metaKeywords') || undefined,
+};
+---
+
+<ArticleDetail post={post} preview />

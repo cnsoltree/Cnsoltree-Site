@@ -1,0 +1,139 @@
+---
+/**
+ * 全站 SEO 头部 —— 所有页面通过 BaseLayout 使用它。
+ * 统一输出：title / description / canonical / keywords / OpenGraph / Twitter / JSON-LD。
+ */
+import { SITE, CONTACT, SOCIAL } from '@/consts';
+import { ClientRouter } from 'astro:transitions';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  path?: string;
+  image?: string;
+  keywords?: string;
+  type?: 'website' | 'article';
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+  // article 类型专属字段
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
+const {
+  title,
+  description = SITE.description,
+  path = Astro.url.pathname,
+  image = SITE.ogImage,
+  keywords,
+  type = 'website',
+  schema = [],
+  noindex = false,
+  publishedTime,
+  modifiedTime,
+  author,
+  section,
+  tags = [],
+} = Astro.props;
+
+// canonical 统一带尾斜杠，与 sitemap / trailingSlash:always 保持一致
+const normalizedPath = path === '/' ? '/' : path.replace(/\/$/, '');
+const canonical = new URL(normalizedPath, SITE.url).href;
+const ogImageUrl = new URL(image, SITE.url).href;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organization`,
+  name: SITE.name,
+  url: SITE.url,
+  description: SITE.description,
+  logo: new URL('/images/logo.png', SITE.url).href,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    email: CONTACT.email,
+    telephone: CONTACT.phone,
+    availableLanguage: ['English'],
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: CONTACT.street,
+    addressLocality: CONTACT.city,
+    addressRegion: CONTACT.region,
+    addressCountry: CONTACT.country,
+  },
+  ...(SOCIAL.length > 0 ? { sameAs: SOCIAL } : {}),
+};
+
+const allSchema = [organizationSchema, ...schema];
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#15803d" />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+{keywords && <meta name="keywords" content={keywords} />}
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="en" href={canonical} />
+<link rel="alternate" hreflang="x-default" href={canonical} />
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+)}
+
+<!-- Icons -->
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<!-- iOS 会把透明像素合成到黑底上，所以主屏图标单独用一张压了白底的 -->
+<link rel="apple-touch-icon" href="/images/favicon.png" />
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title={`${SITE.name} Blog`} href="/rss.xml" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:locale" content={SITE.locale} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Open Graph: article 专属 -->
+{type === 'article' && publishedTime && (
+  <meta property="article:published_time" content={publishedTime} />
+)}
+{type === 'article' && modifiedTime && (
+  <meta property="article:modified_time" content={modifiedTime} />
+)}
+{type === 'article' && author && <meta property="article:author" content={author} />}
+{type === 'article' && section && <meta property="article:section" content={section} />}
+{type === 'article' && tags.map((tag) => <meta property="article:tag" content={tag} />)}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+<!-- 站内导航视图过渡（类 SPA 丝滑切换） -->
+<ClientRouter />
+
+<!-- JSON-LD 结构化数据 -->
+{allSchema.map((s) => (
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(s).replaceAll('<', '\\u003c')}
+  />
+))}

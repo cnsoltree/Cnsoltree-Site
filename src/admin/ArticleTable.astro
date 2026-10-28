@@ -1,0 +1,123 @@
+---
+---
+
+<main
+  id="studio-articles"
+  class="product-manager article-manager"
+  aria-labelledby="article-manager-title"
+  hidden
+>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="article-manager-title">文章管理</h1>
+      <p>管理文章内容、分类与发布状态。</p>
+    </div>
+  </div>
+  <section class="product-panel" aria-label="文章列表">
+    <div class="product-toolbar">
+      <a class="product-create" href="/admin#/collections/articles/new">
+        <span aria-hidden="true">＋</span> 新建文章
+      </a>
+      <p class="product-local-note">发布更新本地网站，线上更新仍需部署。</p>
+      <button type="button" class="product-refresh" data-product-refresh>
+        刷新列表
+      </button>
+    </div>
+    <div class="product-filters">
+      <label class="product-filter">
+        <span>文章分类</span>
+        <select data-product-category aria-label="按文章分类筛选">
+          <option value="">全部分类</option>
+        </select>
+      </label>
+      <label class="product-filter product-search">
+        <span>查找文章</span>
+        <input
+          type="search"
+          data-product-search
+          placeholder="输入 ID 或文章标题"
+          aria-label="查找文章"
+        />
+      </label>
+      <label class="product-filter">
+        <span>发布状态</span>
+        <select data-product-filter-status aria-label="按文章发布状态筛选">
+          <option value="active">全部状态</option>
+          <option value="published">已发布</option>
+          <option value="draft">未发布</option>
+          <option value="trash">回收站</option>
+        </select>
+      </label>
+    </div>
+    <p class="product-error" data-product-error role="alert" hidden></p>
+    <div
+      class="product-table-scroll"
+      data-product-scroll
+      tabindex="0"
+      aria-label="可横向滚动的文章表格"
+    >
+      <table class="product-table article-table" aria-label="文章管理列表" aria-busy="true">
+        <colgroup>
+          <col class="article-column-id" />
+          <col class="article-column-title" />
+          <col class="product-column-category" />
+          <col class="product-column-status" />
+          <col class="article-column-date" />
+          <col class="product-column-actions" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">标题</th>
+            <th scope="col">分类</th>
+            <th scope="col">发布状态</th>
+            <th scope="col">时间</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody data-product-rows>
+          <tr>
+            <td colspan="6" class="product-empty">
+              正在加载文章…
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-pagination">
+      <span class="product-total" data-product-total aria-live="polite">
+        正在加载
+      </span>
+      <div class="product-page-controls">
+        <button type="button" data-product-prev aria-label="文章上一页" disabled>
+          上一页
+        </button>
+        <span data-product-page>1 / 1</span>
+        <button type="button" data-product-next aria-label="文章下一页" disabled>
+          下一页
+        </button>
+        <select data-product-page-size aria-label="文章每页显示条数">
+          <option value="20">20 条 / 页</option>
+          <option value="50">50 条 / 页</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <dialog
+    class="product-delete-dialog"
+    data-product-delete-dialog
+    aria-labelledby="article-delete-title"
+  >
+    <h2 id="article-delete-title">删除这篇文章？</h2>
+    <p class="product-dialog-name" data-product-delete-name></p>
+    <p>删除后将移入回收站，并从本地网站下架。你可以在回收站恢复文章。</p>
+    <div class="product-dialog-actions">
+      <button type="button" data-product-delete-cancel autofocus>
+        取消
+      </button>
+      <button type="button" class="product-confirm-delete" data-product-delete-confirm>
+        移入回收站
+      </button>
+    </div>
+  </dialog>
+</main>

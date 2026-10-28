@@ -1,0 +1,54 @@
+---
+import type { BlogPost } from '@/lib/data';
+import Img from '@/components/Img.astro';
+import { allArticleGroups } from '@/lib/product-taxonomy';
+import { matchesBlogGroup } from '@/lib/blog-taxonomy';
+interface Props {
+  post: BlogPost;
+}
+const { post } = Astro.props;
+const family = allArticleGroups.find((group) => matchesBlogGroup(post, group));
+const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<a href={`/blog/${post.slug}`} class="card group flex flex-col" aria-label={post.title}>
+  {/* Cover Image */}
+  <div class="relative h-48 w-full overflow-hidden bg-gray-100">
+    <Img
+      src={post.image}
+      alt={post.title}
+      fill
+      class="object-cover transition-transform duration-300 group-hover:scale-105"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    />
+  </div>
+
+  {/* Content */}
+  <div class="flex flex-1 flex-col p-5">
+    {family && (
+      <div class="flex flex-wrap gap-1.5" data-blog-category>
+        <span class="rounded bg-green-50 px-2 py-0.5 text-xs font-medium text-green-700">
+          {family.name}
+        </span>
+      </div>
+    )}
+
+    {/* Title */}
+    <h3 class="mt-3 text-sm font-semibold leading-snug text-gray-900 group-hover:text-green-700 transition-colors line-clamp-2">
+      {post.title}
+    </h3>
+
+    {/* Excerpt */}
+    <p class="mt-2 flex-1 text-xs leading-relaxed text-gray-500 line-clamp-3">{post.excerpt}</p>
+
+    {/* Meta */}
+    <div class="mt-4 flex items-center justify-between text-xs text-gray-400">
+      <span>{formattedDate}</span>
+      <span>{post.readingTime} min read</span>
+    </div>
+  </div>
+</a>

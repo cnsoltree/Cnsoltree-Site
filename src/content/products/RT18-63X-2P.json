@@ -1,0 +1,133 @@
+{
+  "id": "RT18-63X-2P",
+  "name": "RT18-63X 2P DIN Rail Fuse Holder 63A 690V",
+  "slug": "dc-fuse-holder-rt18-63x-2p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Double-pole 63A DIN rail fuse holder for 14x51mm fuse links — high-current dual-line protection for large PV arrays, battery storage systems, and heavy-duty dual-line AC/DC circuits, with LED fault indication.",
+  "description": "Large-scale photovoltaic arrays, high-capacity battery storage banks, and heavy-duty dual-line industrial circuits demand a fuse holder that can carry 63A continuously while protecting both conductors simultaneously. The Soltree RT18-63X 2P delivers exactly that: two independent 63A fuse positions in one compact module, rated at 690V AC or 500V DC, accommodating 14x51mm cylindrical fuse links. Compared to the RT18-32X 2P, the larger 14x51mm fuse format allows selection of higher-breaking-capacity fuse elements suited to the elevated fault currents found in large PV string combiners and battery inverter feeds. The reinforced flame-retardant PVC housing handles the thermal demands of high sustained currents, while high-conductivity copper contacts with optional tin plating minimize oxidation and contact resistance over time. A red LED status indicator on each pole gives immediate visual fault confirmation. Snap-on 35mm DIN rail mounting and 4mm²–16mm² screw clamp terminals support both quick installation and robust cable connections. Note: fuse links are sold separately.",
+  "features": [
+    "Double-pole design — simultaneous high-current protection on both conductors",
+    "Rated 63A / 690V AC or 500V DC — suited for large PV arrays and battery storage",
+    "Compatible with standard 14x51mm cylindrical fuse links",
+    "LED indicator per pole — instant fault detection on either conductor",
+    "Reinforced flame-retardant PVC housing — handles high sustained current loads",
+    "High-conductivity copper contacts — low oxidation, stable long-term DC performance",
+    "Snap-on 35mm DIN rail mounting",
+    "Screw clamp terminals for 4mm²–16mm² cables",
+    "IP20 touch-safe protection",
+    "Suitable for large PV arrays, battery inverter feeds, dual-line AC/DC circuits",
+    "Compliant with IEC 60269 and GB/T 13539",
+    "Fuse links sold separately"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "High-Current Fuse Holder Base"
+    },
+    {
+      "name": "Model Number",
+      "value": "RT18-63X"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "2P (Double Pole)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "690V AC / 500V DC"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "14x51mm"
+    },
+    {
+      "name": "Mounting Type",
+      "value": "35mm DIN Rail (Top-hat)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PVC (UL94 V-0)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-conductivity Copper (Tin-plated optional)"
+    },
+    {
+      "name": "Indicator Type",
+      "value": "LED Status Light (Red, per pole)"
+    },
+    {
+      "name": "Indicator Logic",
+      "value": "Lights up upon fuse failure"
+    },
+    {
+      "name": "Connection Method",
+      "value": "Screw clamp terminals"
+    },
+    {
+      "name": "Suitable Wire Size",
+      "value": "4mm² – 16mm² (AWG 12-6)"
+    },
+    {
+      "name": "Protection Class",
+      "value": "IP20 (Touch-safe)"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +60°C"
+    },
+    {
+      "name": "Standards Compliance",
+      "value": "IEC 60269, GB/T 13539"
+    },
+    {
+      "name": "Application",
+      "value": "Large PV Arrays, Battery Storage, Heavy-Duty Dual-Line Circuits"
+    },
+    {
+      "name": "Installation",
+      "value": "Snap-on mounting"
+    },
+    {
+      "name": "Weight",
+      "value": "Approx. 160g"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse links NOT included — sold separately"
+    }
+  ],
+  "image": "/images/products/RT18-63X-2P-1.jpg",
+  "images": [
+    "/images/products/RT18-63X-2P-1.jpg",
+    "/images/products/RT18-63X-2P-2.jpg",
+    "/images/products/RT18-63X-2P-3.jpg",
+    "/images/products/RT18-63X-2P-4.jpg",
+    "/images/products/RT18-63X-2P-5.jpg",
+    "/images/products/RT18-63X-2P-6.jpg",
+    "/images/products/RT18-63X-2P-7.jpg"
+  ],
+  "metaTitle": "RT18-63X 2P Fuse Holder 63A 690V High-Current DIN Rail | Soltree",
+  "metaDescription": "RT18-63X 2P DIN rail fuse holder 63A 690V/500V DC for 14x51mm fuses. High-current double-pole protection for large PV arrays and battery storage. LED indicator, CE & RoHS.",
+  "metaKeywords": "RT18-63X 2P fuse holder, double pole fuse holder 63A, 14x51mm DC fuse holder, large PV array fuse base, battery storage fuse holder 63A, high current dual pole fuse holder, solar inverter fuse protection 690V",
+  "imageAlts": [
+    "Soltree RT18-63X 2P double-pole high-current DIN rail fuse holder 63A front view",
+    "RT18-63X 2P fuse holder side profile with DIN rail clip",
+    "RT18-63X 2P fuse holder dual LED indicators close-up",
+    "RT18-63X 2P fuse holder screw clamp terminal for 14x51mm fuse",
+    "RT18-63X 2P fuse holder installed in large PV combiner box",
+    "RT18-63X 2P fuse holder with 14x51mm cylindrical fuse link",
+    "RT18-63X 2P fuse holder product dimensions drawing"
+  ],
+  "published": true,
+  "sortOrder": 25
+}

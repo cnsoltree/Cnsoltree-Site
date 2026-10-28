@@ -1,0 +1,221 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogCard from './BlogCard.astro';
+import Img from './Img.astro';
+import { blogPosts } from '@/lib/data';
+import { articleGroups, allArticleGroups, groupHref } from '@/lib/product-taxonomy';
+import { blogCategoryHref, matchesBlogGroup } from '@/lib/blog-taxonomy';
+interface Props {
+  groupSlug?: string;
+}
+const { groupSlug } = Astro.props;
+const group = allArticleGroups.find((family) => family.slug === groupSlug);
+const posts = blogPosts
+  .filter((post) => !group || matchesBlogGroup(post, group))
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const title = group?.name ?? 'Technical Resources';
+const description = group
+  ? `Technical articles, product selection and sourcing advice for ${group.name.toLowerCase()}.`
+  : 'Selection guides, installation tips and technical insights, organized by electrical product family.';
+const path = group ? blogCategoryHref(group.slug) : '/blog';
+const countGroup = (family: (typeof allArticleGroups)[number]) =>
+  blogPosts.filter((post) =>
+    matchesBlogGroup(post, allArticleGroups.find((group) => group.slug === family.slug) ?? family),
+  ).length;
+const breadcrumbItems = [
+  { name: 'Home', path: '/' },
+  { name: 'Blog', path: '/blog' },
+  ...(group ? [{ name: group.name, path: blogCategoryHref(group.slug) }] : []),
+];
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url: new URL(path, 'https://www.elesoltree.com').href,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: posts.length,
+      itemListElement: posts.map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://www.elesoltree.com/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: new URL(item.path, 'https://www.elesoltree.com').href,
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  noindex={posts.length === 0}
+  schema={schema}
+>
+  <section class="relative overflow-hidden bg-slate-950 py-14 sm:py-20">
+    <div class="pointer-events-none absolute inset-0">
+      <Img src="/images/hero-bg.jpg" alt="" fill priority class="object-cover object-right" />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/40"></div>
+    </div>
+    <div class="container relative z-10">
+      <nav
+        aria-label="Breadcrumb"
+        class="mb-7 flex flex-wrap items-center gap-2 text-xs text-slate-300"
+      >
+        {breadcrumbItems.map((item, index) => (
+          <>
+            <span hidden={index === 0} aria-hidden="true">
+              /
+            </span>
+            {index === breadcrumbItems.length - 1 ? (
+              <span>{item.name}</span>
+            ) : (
+              <a href={item.path} class="hover:text-green-300">
+                {item.name}
+              </a>
+            )}
+          </>
+        ))}
+      </nav>
+      <p class="text-xs font-bold uppercase tracking-widest text-green-300">
+        Soltree Knowledge Center
+      </p>
+      <h1 class="mt-4 max-w-4xl text-3xl font-bold tracking-tight text-white sm:text-5xl">
+        {title}
+      </h1>
+      <p class="mt-5 max-w-2xl text-base leading-7 text-slate-300">{description}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container flex flex-col gap-10 lg:flex-row">
+      <aside class="shrink-0 lg:w-64">
+        <nav aria-label="Blog categories" data-blog-filters>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-gray-900">
+            Browse by Product
+          </h2>
+          <a
+            href="/blog"
+            aria-current={!group ? 'page' : undefined}
+            class:list={[
+              'mt-4 flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold',
+              !group ? 'bg-green-50 text-green-700' : 'text-gray-600 hover:bg-gray-50',
+            ]}
+          >
+            All Articles<span class="text-xs font-normal text-gray-400">{blogPosts.length}</span>
+          </a>
+          <ul class="mt-2 space-y-1">
+            {articleGroups.map((family) => (
+              <li>
+                <a
+                  href={blogCategoryHref(family.slug)}
+                  aria-current={family.slug === group?.slug ? 'page' : undefined}
+                  class:list={[
+                    'flex items-center gap-3 rounded-xl px-4 py-4 text-sm font-semibold',
+                    family.slug === group?.slug
+                      ? 'bg-green-50 text-green-700'
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-green-700',
+                  ]}
+                >
+                  <svg
+                    class="h-5 w-5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d={family.icon} />
+                  </svg>
+                  <span class="flex-1">{family.name}</span>
+                  <span class="text-xs font-normal text-gray-400">{countGroup(family)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+      <div class="min-w-0 flex-1">
+        <div class="mb-6 flex items-center justify-between gap-3">
+          <h2 class="text-2xl font-bold text-gray-900">Latest Articles</h2>
+          <span class="text-sm text-gray-400">
+            {posts.length} {posts.length === 1 ? 'article' : 'articles'}
+          </span>
+        </div>
+        {posts.length > 0 ? (
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {posts.map((post) => (
+              <BlogCard post={post} />
+            ))}
+          </div>
+        ) : (
+          <div class="rounded-2xl border border-gray-100 bg-gray-50 px-6 py-12 text-center">
+            <h3 class="text-lg font-semibold text-gray-900">No articles in this category yet</h3>
+            <p class="mx-auto mt-3 max-w-md text-sm leading-7 text-gray-500">
+              Browse our available technical resources or contact our team for help with product
+              selection.
+            </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+              <a href="/blog" class="btn-outline">
+                View All Articles
+              </a>
+              <a href="/contact" class="btn-primary">
+                Ask an Engineer
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+  <section class="border-t border-gray-100 bg-gray-50 py-12">
+    <div class="container text-center">
+      <h2 class="text-2xl font-bold text-gray-900">Find the Right Components for Your Project</h2>
+      <p class="mt-3 text-sm text-gray-500">
+        Explore the product range or ask our team for technical assistance.
+      </p>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href={group ? groupHref(group.slug) : '/products'} class="btn-primary">
+          {group ? 'Explore Related Products' : 'Browse Products'}
+        </a>
+        <a href="/contact" class="btn-outline">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import { navigate } from 'astro:transitions/client';
+  document.addEventListener('astro:page-load', () => {
+    document.querySelectorAll<HTMLAnchorElement>('[data-blog-filters] a').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+          return;
+        event.preventDefault();
+        event.stopPropagation();
+        const top = window.scrollY;
+        document.addEventListener(
+          'astro:after-swap',
+          () => window.scrollTo({ top, behavior: 'instant' }),
+          { once: true },
+        );
+        void navigate(link.href, { sourceElement: link });
+      });
+    });
+  });
+</script>

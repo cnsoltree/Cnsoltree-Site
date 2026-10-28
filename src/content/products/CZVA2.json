@@ -1,0 +1,124 @@
+{
+  "id": "CZVA2",
+  "name": "Plug-in Voltage Protector Socket EU/UK/South Africa Universal Over/Under Voltage Cutoff",
+  "slug": "czva2-plug-in-voltage-protector-socket-eu-uk-south-africa-fixed-cutoff",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Fixed-threshold plug-in voltage protector with 3-LED status indicators — no setup required, plugs in and protects instantly. Cuts off below 165V±5V or above 265V±5V, auto-restores after 30s. EU Schuko, UK, South Africa. 10A / 13A, optional child safety shutter. CE & RoHS.",
+  "description": "Not every voltage protection situation calls for adjustable thresholds and a programming menu. Sometimes you just need reliable, zero-configuration protection that works the moment you plug it in. The Soltree CZVA2 is built for exactly that: a fixed-logic voltage protector socket that automatically disconnects your appliance when voltage drops below 165V±5V or rises above 265V±5V, then restores power after a built-in 30-second delay — no buttons to configure, no thresholds to set.\n\nThree LED indicators give you an immediate at-a-glance status: green for normal operation, a low-voltage warning when the grid sags, and a high-voltage warning when it spikes. This makes the CZVA2 ideal for users who want hands-off protection: rental property tenants protecting a refrigerator, households in regions with occasional voltage fluctuation, offices keeping computer equipment safe, or travelers carrying it as portable appliance protection across EU, UK, and South African socket types. The optional child safety shutter makes it suitable for homes with young children.\n\nAvailable in 10A (2200W) and 13A (2860W) rated current versions to cover a wider range of appliances — the 13A variant handles higher-draw equipment like large air conditioners and washing machines where the 10A version falls short. CE and RoHS certified, white finish, operating temperature -10℃ to +50℃.",
+  "features": [
+    "Zero-configuration — fixed protection logic works immediately on plug-in, no setup required",
+    "3-LED status indicators — Normal (green) / Low Voltage / High Voltage for instant fault identification",
+    "Fixed over-voltage cutoff at 265V±5V — protects against grid spikes",
+    "Fixed under-voltage cutoff at 165V±5V — protects against grid sags",
+    "30-second auto-recovery delay — prevents rapid cycling after a voltage event",
+    "One-button power control for easy on/off",
+    "Optional child safety shutter — safe for homes with young children",
+    "Available in 10A (2200W) and 13A (2860W) versions",
+    "Available in EU Schuko, UK, and South Africa universal socket configurations",
+    "Plug-and-play — no installation or wiring required",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Plug-in Voltage Protector Socket"
+    },
+    {
+      "name": "Compatible Socket Standards",
+      "value": "EU Schuko / UK / South Africa Universal"
+    },
+    {
+      "name": "Rated Input Voltage",
+      "value": "AC 220–240V"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "50Hz"
+    },
+    {
+      "name": "Rated Current Options",
+      "value": "10(2)A / 13A"
+    },
+    {
+      "name": "Max Rated Power",
+      "value": "2200W (10A) / 2860W (13A)"
+    },
+    {
+      "name": "Low Voltage Cutoff",
+      "value": "165V ±5V"
+    },
+    {
+      "name": "High Voltage Cutoff",
+      "value": "265V ±5V"
+    },
+    {
+      "name": "Auto Recovery Delay Time",
+      "value": "30 Seconds (Fixed)"
+    },
+    {
+      "name": "Protection Function",
+      "value": "Over-Voltage & Under-Voltage Cutoff"
+    },
+    {
+      "name": "Operating Indicators",
+      "value": "3 LED Indicators (Normal / Low Voltage / High Voltage)"
+    },
+    {
+      "name": "Power Control",
+      "value": "One-Button Power Switch"
+    },
+    {
+      "name": "Child Safety Shutter",
+      "value": "Optional (With / Without)"
+    },
+    {
+      "name": "Socket Type",
+      "value": "Universal 3-Pin Socket"
+    },
+    {
+      "name": "Installation",
+      "value": "Plug-and-Play"
+    },
+    {
+      "name": "Application",
+      "value": "Rental Properties, Home Appliances, Office Equipment, Travel Use, Refrigerators, TVs, Air Conditioners"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-10℃ ~ +50℃"
+    },
+    {
+      "name": "Color",
+      "value": "White"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/CZVA2-1.jpg",
+  "images": [
+    "/images/products/CZVA2-1.jpg",
+    "/images/products/CZVA2-2.jpg",
+    "/images/products/CZVA2-3.jpg",
+    "/images/products/CZVA2-4.jpg",
+    "/images/products/CZVA2-5.jpg",
+    "/images/products/CZVA2-6.jpg",
+    "/images/products/CZVA2-7.jpg"
+  ],
+  "metaTitle": "CZVA2 Plug-in Voltage Protector Socket EU UK South Africa 10A 13A Fixed Cutoff | Soltree",
+  "metaDescription": "CZVA2 plug-in voltage protector with 3-LED status indicators — fixed over-voltage (265V) and under-voltage (165V) cutoff, 30s auto-restore. EU Schuko, UK, South Africa. 10A / 13A, optional child safety shutter. CE & RoHS.",
+  "metaKeywords": "plug-in voltage protector socket CE RoHS, fixed voltage cutoff protector EU UK, over under voltage socket protector 220V 240V, LED voltage protection indicator socket, voltage protector child safety shutter, 13A voltage protector socket 2860W, South Africa plug voltage guard, zero configuration voltage protector home",
+  "imageAlts": [
+    "Soltree CZVA2 plug-in voltage protector socket EU plug with 3 LED status indicators front view",
+    "CZVA2 voltage protector LED indicators showing Normal Low Voltage High Voltage status",
+    "CZVA2 plug-in voltage protector EU Schuko UK South Africa plug variants white",
+    "CZVA2 voltage protector socket with optional child safety shutter",
+    "CZVA2 10A and 13A voltage protector socket options for home appliances",
+    "CZVA2 voltage protector connected to refrigerator protecting against grid voltage fluctuation",
+    "CZVA2 plug-in voltage protector socket CE RoHS certification label"
+  ],
+  "published": true,
+  "sortOrder": 43
+}

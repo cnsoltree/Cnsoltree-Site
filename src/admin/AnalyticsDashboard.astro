@@ -1,0 +1,214 @@
+---
+---
+
+<main
+  id="studio-analytics"
+  class="product-manager analytics-manager"
+  aria-labelledby="analytics-title"
+  hidden
+  inert
+>
+  <div class="product-page-heading analytics-heading">
+    <div>
+      <h1 id="analytics-title">数据看板</h1>
+      <p>搜索表现、网站访问与询盘，集中查看网站的运营情况。</p>
+    </div>
+    <span class="analytics-connection">
+      <span aria-hidden="true"></span> 数据源未接入
+    </span>
+  </div>
+
+  <section class="analytics-controls" aria-label="看板筛选">
+    <div class="analytics-controls-top">
+      <div class="analytics-tabs" role="tablist" aria-label="数据类型">
+        <button
+          id="analytics-search-tab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="analytics-report-panel"
+          data-analytics-tab="search"
+        >
+          搜索表现 <small>GSC</small>
+        </button>
+        <button
+          id="analytics-traffic-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="analytics-report-panel"
+          tabindex="-1"
+          data-analytics-tab="traffic"
+        >
+          访问与询盘
+        </button>
+      </div>
+      <div class="analytics-presets" role="group" aria-label="日期范围">
+        <button type="button" data-analytics-days="7" aria-pressed="false">
+          近 7 天
+        </button>
+        <button type="button" data-analytics-days="28" aria-pressed="true">
+          近 28 天
+        </button>
+        <button type="button" data-analytics-days="90" aria-pressed="false">
+          近 90 天
+        </button>
+        <button
+          type="button"
+          data-analytics-custom
+          aria-pressed="false"
+          aria-expanded="false"
+          aria-controls="analytics-custom-range"
+        >
+          自定义
+        </button>
+      </div>
+    </div>
+    <form
+      id="analytics-custom-range"
+      class="analytics-custom-range"
+      data-analytics-range-form
+      hidden
+    >
+      <label>
+        开始日期 <input type="date" name="startDate" data-analytics-start required />
+      </label>
+      <span aria-hidden="true">—</span>
+      <label>
+        结束日期 <input type="date" name="endDate" data-analytics-end required />
+      </label>
+      <button type="submit" class="analytics-apply">
+        应用日期
+      </button>
+      <span>按太平洋时间统计，最晚可选择昨日。</span>
+    </form>
+    <p class="product-error analytics-range-error" data-analytics-error role="alert" hidden></p>
+    <div class="analytics-context">
+      <p>
+        <span data-analytics-range-label></span>
+        <span class="analytics-context-dot" aria-hidden="true">
+          ·
+        </span>
+        <span data-analytics-source-label>Google Search Console 尚未接入</span>
+      </p>
+      <button type="button" class="analytics-text-button" data-analytics-source-info>
+        数据来源说明 <span aria-hidden="true">ⓘ</span>
+      </button>
+    </div>
+    <p class="analytics-feedback" data-analytics-feedback role="status" aria-live="polite"></p>
+  </section>
+
+  <div id="analytics-report-panel" role="tabpanel" aria-labelledby="analytics-search-tab">
+    <div data-analytics-overview>
+      <div class="analytics-metrics" data-analytics-metrics aria-label="核心指标"></div>
+      <section class="analytics-panel analytics-trend" aria-labelledby="analytics-trend-title">
+        <div class="analytics-panel-heading">
+          <div>
+            <h2 id="analytics-trend-title" data-analytics-trend-title>
+              点击趋势
+            </h2>
+            <p data-analytics-trend-caption>接入后可查看每日搜索表现。</p>
+          </div>
+          <label class="analytics-metric-select">
+            <span>查看指标</span>
+            <select data-analytics-metric aria-label="趋势图指标"></select>
+          </label>
+        </div>
+        <div
+          class="analytics-empty-chart"
+          role="img"
+          aria-labelledby="analytics-chart-empty-title analytics-chart-empty-description"
+        >
+          <div class="analytics-chart-grid" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="analytics-chart-message">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path
+                d="M6 6v24h24M12 23v-6m7 6V11m7 12v-9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <h3 id="analytics-chart-empty-title" data-analytics-chart-empty-title>
+              尚未接入 Google Search Console
+            </h3>
+            <p id="analytics-chart-empty-description" data-analytics-chart-empty-description>
+              接入真实数据后，这里会展示所选日期的趋势。
+            </p>
+          </div>
+        </div>
+        <div class="analytics-chart-dates" aria-hidden="true">
+          <span data-analytics-chart-start></span>
+          <span data-analytics-chart-end></span>
+        </div>
+      </section>
+      <div class="analytics-breakdowns" data-analytics-tables></div>
+    </div>
+    <section
+      class="analytics-panel analytics-detail"
+      data-analytics-detail
+      hidden
+      aria-labelledby="analytics-detail-title"
+    >
+      <button type="button" class="analytics-back" data-analytics-back>
+        <span aria-hidden="true">←</span> 返回数据看板
+      </button>
+      <div class="analytics-panel-heading">
+        <div>
+          <h2 id="analytics-detail-title" tabindex="-1" data-analytics-detail-title></h2>
+          <p data-analytics-detail-description></p>
+        </div>
+        <span class="analytics-status-tag">未接入</span>
+      </div>
+      <div data-analytics-detail-table></div>
+    </section>
+  </div>
+
+  <dialog
+    class="product-delete-dialog analytics-source-dialog"
+    data-analytics-source-dialog
+    aria-labelledby="analytics-source-dialog-title"
+  >
+    <h2 id="analytics-source-dialog-title">数据来源说明</h2>
+    <div class="analytics-source-item">
+      <h3>搜索表现 · Google Search Console</h3>
+      <p>
+        提供 Google 自然搜索的点击、展示、点击率、平均排名，以及国家、设备、页面与搜索关键词数据。
+      </p>
+    </div>
+    <div class="analytics-source-item">
+      <h3>访问统计 · 网站分析</h3>
+      <p>
+        访问量、访客、国家、设备和来源网站需要另行接入网站分析工具。GSC
+        不提供网站访问量或完整的来源网站数据。
+      </p>
+    </div>
+    <div class="analytics-source-item">
+      <h3>询盘统计 · 事件跟踪</h3>
+      <p>
+        询盘数量和转化率需要接入表单提交等有效询盘事件。WhatsApp
+        按钮点击可单独记录为联系意向，接入后再确认哪些行为计入有效询盘。
+      </p>
+    </div>
+    <p class="analytics-source-notice">
+      当前看板仅提供布局与筛选。所有数据源尚未接入，「—」表示暂无可用数据，并非数值为零。
+    </p>
+    <div class="product-dialog-actions">
+      <button type="button" data-analytics-source-close autofocus>
+        知道了
+      </button>
+    </div>
+  </dialog>
+</main>

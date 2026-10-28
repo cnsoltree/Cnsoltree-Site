@@ -1,0 +1,16 @@
+---
+import ResourceArchive from '@/components/ResourceArchive.astro';
+import { allProductGroups } from '@/lib/product-taxonomy';
+import { resourceTopicSlug } from '@/lib/landing-pages';
+export function getStaticPaths() {
+  return allProductGroups.flatMap((group) => [
+    { params: { path: group.slug }, props: { groupSlug: group.slug } },
+    ...group.items.map((item) => ({
+      params: { path: `${group.slug}/${resourceTopicSlug(item)}` },
+      props: { groupSlug: group.slug, topicSlug: resourceTopicSlug(item) },
+    })),
+  ]);
+}
+---
+
+<ResourceArchive {...Astro.props} />

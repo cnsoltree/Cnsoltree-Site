@@ -1,0 +1,123 @@
+{
+  "id": "RT18-125AM-4P",
+  "name": "RT18-125AM 4P DIN Rail Fuse Holder 125A 690V",
+  "slug": "dc-fuse-holder-rt18-125am-4p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Four-pole 125A 690V DIN rail fuse holder for Φ22×58mm fuse links — complete 3P+N fuse disconnection for TN-S/TN-C-S systems, four independent yellow status indicators, ideal for large HVAC, MCC and complex four-wire distribution boards.",
+  "description": "In TN-S and TN-C-S distribution systems, complete isolation means disconnecting all three phase conductors and the neutral — leaving any one unfused creates a hazard when the neutral shifts under unbalanced load. The Soltree RT18-125AM 4P solves this with four independent fuse positions in one 140mm-wide (4-module) housing, providing full 3P+N fuse protection in a single DIN rail component. Typical applications include large HVAC system feeds, motor control centers serving unbalanced loads, main distribution boards in commercial buildings and any switchgear where full four-wire fuse isolation is required by the system design or local wiring regulations. Four yellow indicator windows — one per pole — allow maintenance teams to identify a faulty phase or neutral fuse without probing live conductors. Thickened copper conductors (conductivity >98%) hold contact resistance below 5mΩ and transmission efficiency above 99.5% across all four poles simultaneously. Rated 125A / 690V, it accepts Φ22×58mm cylindrical fuse links (63A / 80A / 100A / 125A, sold separately). Large wiring terminals and premium screws provide secure, vibration-resistant connections. Every unit is 100% electrically tested at our ISO 9001 certified facility before shipment. Note: fuse links are NOT included.",
+  "features": [
+    "Four-pole 3P+N design — independent fuse protection for three phases and neutral in one unit",
+    "Rated 125A / 690V — handles demanding three-phase four-wire industrial loads",
+    "Fits standard Φ22×58mm cylindrical fuse links — globally sourced spares",
+    "Thickened copper conductors, conductivity >98% — efficient power transmission",
+    "Contact resistance <5mΩ, current transmission efficiency >99.5% — minimal heat loss",
+    "Four independent yellow fuse status indicator windows — instant per-pole fault diagnosis",
+    "4-module 140mm wide, 35mm DIN rail clip mounting — fast deployment",
+    "Flame-retardant, high-temperature resistant insulated housing — safe under fault conditions",
+    "Large wiring terminals + premium screws — secure, vibration-resistant connections",
+    "CE & RoHS certified — accepted in EU, UK, and global markets",
+    "OEM / ODM customization available — logo, label, packaging",
+    "15-year ISO 9001 certified factory, 200+ projects delivered in 10+ countries"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "RT18-125AM"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "4P (Four Pole / 3P+N)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "125A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "690V"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "Φ22×58mm"
+    },
+    {
+      "name": "Optional Fuse Ratings",
+      "value": "63A / 80A / 100A / 125A (sold separately)"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse links NOT included — purchased separately"
+    },
+    {
+      "name": "Housing Material",
+      "value": "High Flame-Retardant & High-Temperature Resistant Insulated Material"
+    },
+    {
+      "name": "Conductor Material",
+      "value": "Thickened Copper"
+    },
+    {
+      "name": "Conductivity",
+      "value": ">98%"
+    },
+    {
+      "name": "Contact Resistance",
+      "value": "<5mΩ"
+    },
+    {
+      "name": "Current Transmission Efficiency",
+      "value": ">99.5%"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "35mm Standard DIN Rail"
+    },
+    {
+      "name": "Product Dimensions",
+      "value": "140mm (W) × 127mm (H) × 76mm (D)"
+    },
+    {
+      "name": "Fuse Indication",
+      "value": "Yellow Status Indicator Window (per pole, 4 positions)"
+    },
+    {
+      "name": "Wiring Design",
+      "value": "Large Wiring Terminals + High-Quality Screws"
+    },
+    {
+      "name": "Safety Features",
+      "value": "Flame Retardant, High-Temperature Resistant, Safe Insulation"
+    },
+    {
+      "name": "Application",
+      "value": "Three-Phase Four-Wire Systems, Industrial Control Cabinets, Distribution Boxes"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/RT18-125AM-4p-1.jpg",
+  "images": [
+    "/images/products/RT18-125AM-4p-1.jpg",
+    "/images/products/RT18-125AM-4p-2.jpg",
+    "/images/products/RT18-125AM-4p-3.jpg",
+    "/images/products/RT18-125AM-4p-4.jpg",
+    "/images/products/RT18-125AM-4p-5.jpg",
+    "/images/products/RT18-125AM-4p-6.jpg"
+  ],
+  "metaTitle": "RT18-125AM 4P Fuse Holder 125A 690V 3P+N DIN Rail | Soltree",
+  "metaDescription": "RT18-125AM 4P DIN rail fuse holder 125A 690V — complete 3P+N four-wire fuse disconnection for TN-S/TN-C-S systems, HVAC and MCC panels, 4 yellow indicators. CE & RoHS, OEM available.",
+  "metaKeywords": "RT18-125AM 4P fuse holder, 3P+N fuse holder 125A, four pole fuse holder DIN rail, TN-S fuse disconnection, neutral fuse holder 690V, four wire fuse base, HVAC fuse holder, MCC fuse holder four pole, complete disconnection fuse base",
+  "imageAlts": [
+    "Soltree RT18-125AM 4P four pole DIN rail fuse holder 125A 690V front view",
+    "RT18-125AM 4P fuse holder side profile with DIN rail clip",
+    "RT18-125AM 4P fuse holder four yellow fuse status indicator windows close-up",
+    "RT18-125AM 4P fuse holder wiring terminals and screw detail",
+    "RT18-125AM 4P fuse holder installed on 35mm DIN rail in distribution box",
+    "RT18-125AM 4P fuse holder product dimensions 140x127x76mm drawing"
+  ],
+  "published": true,
+  "sortOrder": 31
+}

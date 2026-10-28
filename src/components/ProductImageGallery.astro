@@ -1,0 +1,103 @@
+---
+import Img from './Img.astro';
+interface Props {
+  images: string[];
+  productName: string;
+  imageAlts?: string[];
+}
+const { images, productName, imageAlts } = Astro.props;
+const displayImages = images.slice(0, 8);
+---
+
+<div data-gallery>
+  <div class="relative aspect-square overflow-hidden rounded-2xl border border-gray-100 bg-gray-50">
+    {displayImages.map((src, index) => (
+      <div data-slide={index} hidden={index !== 0}>
+        <Img
+          src={src}
+          alt={imageAlts?.[index] ?? `${productName} — image ${index + 1}`}
+          fill
+          width={1000}
+          priority={index === 0}
+          class="object-contain p-8"
+        />
+      </div>
+    ))}
+    {displayImages.length > 1 && (
+      <>
+        <button
+          type="button"
+          data-gallery-prev
+          aria-label="Previous image"
+          class="absolute left-3 top-1/2 rounded-full bg-white/90 p-3 shadow"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          data-gallery-next
+          aria-label="Next image"
+          class="absolute right-3 top-1/2 rounded-full bg-white/90 p-3 shadow"
+        >
+          ›
+        </button>
+        <span
+          data-gallery-count
+          class="absolute bottom-3 right-3 rounded bg-black/40 px-2 py-1 text-xs text-white"
+        >
+          1 / {displayImages.length}
+        </span>
+      </>
+    )}
+  </div>
+  {displayImages.length > 1 && (
+    <div class="mt-3 flex gap-2 overflow-x-auto pb-2">
+      {displayImages.map((src, index) => (
+        <button
+          type="button"
+          data-thumb={index}
+          aria-label={`Show image ${index + 1}`}
+          aria-pressed={index === 0 ? 'true' : 'false'}
+          class:list={[
+            'relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border-2 bg-gray-50',
+            index === 0 ? 'border-green-700' : 'border-transparent',
+          ]}
+        >
+          <Img
+            src={src}
+            alt={imageAlts?.[index] ?? `${productName} thumbnail ${index + 1}`}
+            width={100}
+            class="h-full w-full object-contain p-1"
+          />
+        </button>
+      ))}
+    </div>
+  )}
+</div>
+<script>
+  function initGallery() {
+    document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((root) => {
+      const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
+      let active = 0;
+      function show(index: number) {
+        active = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => (slide.hidden = i !== active));
+        root.querySelectorAll<HTMLButtonElement>('[data-thumb]').forEach((thumb, i) => {
+          thumb.classList.toggle('border-green-700', i === active);
+          thumb.classList.toggle('border-transparent', i !== active);
+          thumb.setAttribute('aria-pressed', String(i === active));
+        });
+        const count = root.querySelector('[data-gallery-count]');
+        if (count) count.textContent = `${active + 1} / ${slides.length}`;
+      }
+      root.querySelector('[data-gallery-prev]')?.addEventListener('click', () => show(active - 1));
+      root.querySelector('[data-gallery-next]')?.addEventListener('click', () => show(active + 1));
+      root
+        .querySelectorAll<HTMLElement>('[data-thumb]')
+        .forEach((thumb) =>
+          thumb.addEventListener('click', () => show(Number(thumb.dataset.thumb))),
+        );
+    });
+  }
+  document.addEventListener('astro:page-load', initGallery);
+</script>

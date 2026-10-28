@@ -1,0 +1,81 @@
+{
+  "id": "HA-4Way-500VDC-40A",
+  "name": "PV Combiner Box 1 String Input 1 Output, 500V DC 40A Breaker & 40kA SPD",
+  "slug": "pv-combiner-box-1in-1out-500vdc-40a",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+  "description": "The HA-4Way-500VDC-40A is a compact 1-string PV combiner box designed to protect a single solar string before it reaches the inverter. It integrates a 40A DC circuit breaker for overload and short-circuit protection and a 500V DC surge protection device rated at 40kA max discharge current to shield the system from lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+  "features": [
+    "1-string PV input, 1 output configuration",
+    "40A DC circuit breaker for overload and short-circuit protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HA-4Way-500VDC-40A"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "1"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "Max System Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "40A"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HA-4Way-500VDC-40A-1.jpg",
+  "images": [
+    "/images/products/HA-4Way-500VDC-40A-1.jpg",
+    "/images/products/HA-4Way-500VDC-40A-2.jpg",
+    "/images/products/HA-4Way-500VDC-40A-3.jpg",
+    "/images/products/HA-4Way-500VDC-40A-4.jpg",
+    "/images/products/HA-4Way-500VDC-40A-5.jpg",
+    "/images/products/HA-4Way-500VDC-40A-6.jpg"
+  ],
+  "metaTitle": "PV Combiner Box 1-in-1-out 500VDC 40A | No Fuse, 40kA SPD | Soltree",
+  "metaDescription": "Compact 1-string PV combiner box with 40A DC breaker and 500V/40kA SPD in an IP65 flame-retardant enclosure. No fuse version – for on-grid and off-grid solar systems. OEM available.",
+  "metaKeywords": "PV combiner box, 1 string combiner box, 500VDC combiner box, solar combiner box with SPD, 40A DC breaker, IP65 combiner box, on-grid off-grid PV",
+  "imageAlts": [
+    "HA-4Way-500VDC-40A 1-string PV combiner box front view",
+    "HA-4Way-500VDC-40A combiner box interior with 40A DC breaker",
+    "HA-4Way-500VDC-40A wiring layout",
+    "HA-4Way-500VDC-40A 500V 40kA surge protection device detail",
+    "HA-4Way-500VDC-40A IP65 flame-retardant plastic enclosure",
+    "HA-4Way-500VDC-40A outdoor installation on PV system"
+  ],
+  "published": true,
+  "sortOrder": 63
+}

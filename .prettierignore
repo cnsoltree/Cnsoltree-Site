@@ -1,0 +1,14 @@
+node_modules/
+node_modules.shared/
+dist/
+.astro/
+.content-backups/
+.wrangler/
+.vercel/
+.env*
+.dev.vars*
+*.log
+package-lock.json
+public/
+src/assets/
+AGENTS.md

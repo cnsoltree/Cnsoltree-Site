@@ -1,0 +1,99 @@
+{
+  "id": "SPD-DC-1P-White",
+  "name": "1P DC Surge Protector 500V/1000V 40kA - PV Solar SPD for RV & Residential Solar Systems",
+  "slug": "spd-dc-1p-500v-1000v-40ka-pv",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "1-pole DC surge protector supporting 500VDC and 1000VDC PV systems. 40kA max discharge current, fast response – protects solar electrical systems and load equipment from lightning and transient overvoltage. For RVs and residential solar installations.",
+  "description": "The SPD-DC-1P-White is a single-pole DC surge protection device engineered specifically for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. It protects solar electrical systems and connected load equipment against lightning-induced surges, switching transients, and overvoltage events, with a maximum discharge current of 40kA and a nominal of 20kA. The voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC, adapting to the system voltage in use. Built with a copper core for excellent conductivity and corrosion resistance, the device is housed in a white flame-retardant PC enclosure (flame-retardant rated) that snaps onto a standard 35mm DIN rail. Compatible with PV systems and circuit breakers, it is designed for installation inside distribution boxes on RV solar setups and residential rooftop solar systems.",
+  "features": [
+    "1-pole DC surge protection for PV photovoltaic systems",
+    "Dual voltage: supports 500VDC and 1000VDC systems",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
+    "Lightning protection, surge suppression and transient overvoltage clamping",
+    "Copper core – excellent conductivity and corrosion resistance",
+    "Compatible with PV systems and DC circuit breakers",
+    "White flame-retardant PC housing, 35mm DIN rail mounting"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "1P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "500VDC / 1000VDC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": "2.8kV (500VDC) / 3.6kV (1000VDC)"
+    },
+    {
+      "name": "Application System",
+      "value": "Photovoltaic (PV) System"
+    },
+    {
+      "name": "Protection Function",
+      "value": "Lightning Protection, Surge Suppression, Transient Overvoltage"
+    },
+    {
+      "name": "Core Material",
+      "value": "Copper"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC, White"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Compatibility",
+      "value": "PV Systems, DC Circuit Breakers"
+    },
+    {
+      "name": "Installation Location",
+      "value": "Distribution Box"
+    },
+    {
+      "name": "Applications",
+      "value": "RVs, Residential Solar Systems"
+    }
+  ],
+  "image": "/images/products/SPD-DC-1P-White-1.jpg",
+  "images": [
+    "/images/products/SPD-DC-1P-White-1.jpg",
+    "/images/products/SPD-DC-1P-White-2.jpg",
+    "/images/products/SPD-DC-1P-White-3.jpg",
+    "/images/products/SPD-DC-1P-White-4.jpg",
+    "/images/products/SPD-DC-1P-White-5.jpg",
+    "/images/products/SPD-DC-1P-White-6.jpg",
+    "/images/products/SPD-DC-1P-White-7.jpg",
+    "/images/products/SPD-DC-1P-White-8.jpg"
+  ],
+  "metaTitle": "1P DC SPD 500V/1000V 40kA PV | Solar Surge Protector for RV & Home | Soltree",
+  "metaDescription": "1-pole DC surge protector for 500V and 1000V PV solar systems. 40kA max discharge, 2.8kV/3.6kV protection level, copper core, fast response. DIN rail, white housing. For RV and residential solar installations.",
+  "metaKeywords": "DC surge protector, 1P DC SPD, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, RV solar surge protector, residential solar SPD, photovoltaic SPD, DIN rail DC SPD",
+  "imageAlts": [
+    "SPD-DC-1P-White 1-pole DC surge protector front view – white PV solar SPD",
+    "SPD-DC-1P-White supporting 500VDC and 1000VDC PV system voltage",
+    "SPD-DC-1P-White copper core component detail – excellent conductivity",
+    "SPD-DC-1P-White 40kA surge discharge and voltage protection level detail",
+    "SPD-DC-1P-White wiring connection in distribution box",
+    "SPD-DC-1P-White white flame-retardant PC housing close-up",
+    "SPD-DC-1P-White on 35mm DIN rail in solar distribution box",
+    "SPD-DC-1P-White installed in RV and residential solar PV system"
+  ],
+  "published": true,
+  "sortOrder": 12
+}

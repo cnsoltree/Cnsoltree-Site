@@ -1,0 +1,122 @@
+{
+  "id": "DDR",
+  "name": "DDR Series 18mm DIN Rail AC Digital Multi-Function Meter Voltage Current Frequency",
+  "slug": "ddr-series-18mm-din-rail-ac-digital-multi-function-meter",
+  "categorySlug": "power-meter",
+  "categoryName": "Power Meter",
+  "shortDescription": "DDR series ultra-slim 18mm DIN rail AC digital meter — 5 model configurations covering voltage, current, frequency, and 3-channel current monitoring. Bright red LED display, 80–500V, 0–100A, CE compliant. Ideal for real-time parameter monitoring in distribution cabinets, workshops, and commercial panels.",
+  "description": "Not every metering application requires energy consumption tracking. When the task is real-time monitoring of AC voltage, current, or frequency in a distribution cabinet — without the complexity of a full energy meter — the DDR series delivers exactly that in an ultra-slim 18mm DIN rail footprint. Five functional models let you specify precisely what the panel needs to display, from a 3-in-1 V+A+Hz combined meter to dedicated single-parameter instruments for voltage, current, or frequency.\n\nThe bright red LED display is the defining feature of the DDR series — high-visibility digital readouts that remain easy to read in dim enclosures, industrial environments, and workshops where ambient light is limited. At 18mm wide and 81×66mm in profile, each unit occupies a single 1P DIN rail slot, making the DDR practical in crowded distribution boards where space is at a premium.\n\nThe wide measurement range covers AC 80–500V voltage, 0–100A current, and 50/60Hz frequency — spanning single-phase and three-phase system monitoring. Measurement accuracy is ≤2% with a 1-sample-per-second refresh rate for stable real-time readings. The 3-channel current model is particularly useful for three-phase load balancing checks without a dedicated power analyzer. Rated insulation voltage 660V, IP20 protection, operating temperature range -50℃ to +55℃. Flame-retardant nylon housing, CE compliant. Note: not suitable for variable frequency drives, inverters, or high-harmonic environments.",
+  "features": [
+    "5 functional model configurations — V+A+Hz combined, 3-channel current, V+A, single voltage, single current, single frequency",
+    "Bright red LED display — high visibility in dim enclosures and industrial environments",
+    "Ultra-slim 18mm width — fits 1P DIN rail slot, saves space in crowded distribution boards",
+    "Wide voltage range: AC 80–500V (covers single-phase and three-phase systems)",
+    "Current range: 0–100A",
+    "Frequency range: 50/60Hz",
+    "≤2% measurement accuracy, 1 sample/second refresh rate",
+    "Rated insulation voltage 660V, power consumption ≤2VA",
+    "IP20 protection, operating temperature -50℃ to +55℃",
+    "Flame-retardant nylon housing, CE compliant",
+    "Not suitable for VFDs, inverters, or high-harmonic environments"
+  ],
+  "specs": [
+    {
+      "name": "Product Series",
+      "value": "DDR"
+    },
+    {
+      "name": "Available Models",
+      "value": "V+A+Hz (3-in-1) / 3-Channel Current / V+A / Single Voltage / Single Current / Single Frequency"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "AC 80V–500V"
+    },
+    {
+      "name": "Rated Current",
+      "value": "AC 0–100A (ammeter models)"
+    },
+    {
+      "name": "Frequency Range",
+      "value": "AC 50–60Hz"
+    },
+    {
+      "name": "Accuracy",
+      "value": "≤2% Error"
+    },
+    {
+      "name": "Sampling Rate",
+      "value": "1 Time/Second"
+    },
+    {
+      "name": "Display Type",
+      "value": "Red LED Digital Display"
+    },
+    {
+      "name": "Rated Insulation Voltage",
+      "value": "660V"
+    },
+    {
+      "name": "Power Consumption",
+      "value": "≤2VA"
+    },
+    {
+      "name": "Width",
+      "value": "18mm (1P DIN Rail Module)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "18 × 81 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Protection Degree",
+      "value": "IP20"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-50℃ ~ +55℃"
+    },
+    {
+      "name": "Humidity",
+      "value": "1–80% (No Condensation)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Nylon"
+    },
+    {
+      "name": "Application",
+      "value": "Distribution Cabinets, Workshops, Commercial Panels, Three-Phase Load Monitoring"
+    },
+    {
+      "name": "Certification",
+      "value": "CE"
+    }
+  ],
+  "image": "/images/products/DDR-1.jpg",
+  "images": [
+    "/images/products/DDR-1.jpg",
+    "/images/products/DDR-2.jpg",
+    "/images/products/DDR-3.jpg",
+    "/images/products/DDR-4.jpg",
+    "/images/products/DDR-5.jpg",
+    "/images/products/DDR-6.jpg"
+  ],
+  "metaTitle": "DDR Series 18mm DIN Rail AC Voltage Current Frequency Meter Red LED CE | Soltree",
+  "metaDescription": "DDR series 18mm DIN rail AC digital meter — 5 configurations: V+A+Hz, 3-channel current, V+A, single parameter. Red LED display, 80–500V, 0–100A, 50/60Hz, ≤2% accuracy. CE compliant.",
+  "metaKeywords": "DDR DIN rail AC meter voltage current frequency, 18mm din rail panel meter red LED, AC voltage current meter DIN rail 500V, 3 channel current meter DIN rail, din rail frequency meter 50 60Hz, compact panel meter 18mm distribution cabinet, AC multi-function meter workshop industrial, single phase three phase panel meter LED",
+  "imageAlts": [
+    "Soltree DDR series 18mm DIN rail AC digital meter red LED display front view",
+    "DDR V+A+Hz 3-in-1 combined meter showing voltage current and frequency simultaneously",
+    "DDR 3-channel current meter for three-phase load monitoring in distribution cabinet",
+    "DDR single voltage meter red LED display 80-500V AC range",
+    "DDR 18mm ultra-slim DIN rail meter installed in crowded distribution board",
+    "DDR series meter flame-retardant nylon housing IP20 CE certification"
+  ],
+  "published": true,
+  "sortOrder": 50
+}

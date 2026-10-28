@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#f9fafb"/>
+  <text x="600" y="70" text-anchor="middle" font-size="30" font-weight="700" fill="#111827">Certifications by Destination Market</text>
+  <text x="600" y="105" text-anchor="middle" font-size="16" fill="#6b7280">Map your target market to the certifications that gate customs clearance</text>
+
+  <g transform="translate(80, 150)">
+    <rect width="1040" height="60" rx="8" fill="#15803d"/>
+    <text x="100" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Market</text>
+    <text x="380" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Mandatory</text>
+    <text x="800" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">Recommended</text>
+  </g>
+
+  <g transform="translate(80, 220)" font-size="14">
+    <rect width="1040" height="50" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">European Union</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">CE + EN 15276-1/2</text>
+    <text x="640" y="30" fill="#6b7280">DNV / VdS / LPCB endorsement</text>
+  </g>
+
+  <g transform="translate(80, 270)" font-size="14">
+    <rect width="1040" height="50" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">United Kingdom</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">UKCA + EN 15276</text>
+    <text x="640" y="30" fill="#6b7280">LPCB approval</text>
+  </g>
+
+  <g transform="translate(80, 320)" font-size="14">
+    <rect width="1040" height="50" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">United States</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">UL 2775 listing</text>
+    <text x="640" y="30" fill="#6b7280">NFPA 2010 + FM Approvals</text>
+  </g>
+
+  <g transform="translate(80, 370)" font-size="14">
+    <rect width="1040" height="50" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">GCC (KSA / UAE)</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">SASO + Civil Defense</text>
+    <text x="640" y="30" fill="#6b7280">EN 15276 alignment</text>
+  </g>
+
+  <g transform="translate(80, 420)" font-size="14">
+    <rect width="1040" height="50" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">Brazil</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">INMETRO 179/2010</text>
+    <text x="640" y="30" fill="#6b7280">ABNT NBR 17240</text>
+  </g>
+
+  <g transform="translate(80, 470)" font-size="14">
+    <rect width="1040" height="50" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="20" y="32" font-weight="700" fill="#111827">Korea / Australia</text>
+    <rect x="220" y="14" width="240" height="22" rx="4" fill="#dcfce7"/>
+    <text x="240" y="30" font-weight="600" fill="#15803d">KFI / ActivFire</text>
+    <text x="640" y="30" fill="#6b7280">KC mark, AS 4214 alignment</text>
+  </g>
+
+  <g transform="translate(80, 540)">
+    <rect width="1040" height="60" rx="8" fill="#fef3c7"/>
+    <text x="20" y="38" font-size="14" fill="#92400e" font-weight="600">Critical:</text>
+    <text x="100" y="38" font-size="14" fill="#92400e">CE self-declaration is NOT sufficient for EN 15276 - a Notified Body certificate is required.</text>
+  </g>
+
+  <text x="600" y="640" text-anchor="middle" font-size="14" fill="#9ca3af">Soltree | Verify each certificate number on the issuing body database</text>
+</svg>

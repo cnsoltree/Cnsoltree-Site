@@ -1,0 +1,112 @@
+{
+  "id": "MCB-DC-3P",
+  "name": "MCB 3P DC 6 – 63A Circuit Breaker",
+  "slug": "3p-dc-mcb-commercial-solar-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Three-pole DC breaker for commercial PV arrays and high-voltage DC bus protection – 500V per pole, series-stackable.",
+  "description": "The Soltree 3 Pole DC MCB is purpose-built for commercial and industrial photovoltaic installations where higher system voltages demand multi-pole series protection. By connecting three poles in series, system designers can achieve safe interruption at voltages well beyond the single-pole 500V DC rating – a critical requirement for large rooftop arrays and ground-mount solar farms feeding high-voltage DC buses. Each pole contains an independent enhanced magnetic arc-quenching chamber, ensuring that even at elevated voltages the DC arc is reliably extinguished within milliseconds. The three-pole configuration also suits marine DC power networks and EV charging infrastructure where three-wire DC distribution is used. With 6kA DC breaking capacity, TÜV PV certification, and nine selectable current ratings from 6A to 63A, this breaker gives project engineers the flexibility to standardize on a single product family across diverse commercial DC applications. Every unit is 100% electrically tested in our ISO 9001 facility before shipping worldwide.",
+  "features": [
+    "3-pole series connection – enables safe switching at system voltages far above single-pole limits.",
+    "Independent arc chamber per pole – each pole extinguishes its own DC arc for maximum reliability.",
+    "Built for commercial solar – protects high-voltage DC buses on rooftop and ground-mount PV farms.",
+    "Marine and EV-ready – suits three-wire DC distribution in vessels and charging stations.",
+    "6kA DC breaking capacity – interrupts high fault currents from parallel-connected PV strings.",
+    "TÜV PV + IEC 60947-2 certified – meets international standards for photovoltaic DC protection.",
+    "Full OEM/ODM customization – voltage markings, trip curve variants, and private-label packaging available."
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "3P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A (DC)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "6 kA DC"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C (DC)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic, UV Resistant"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60947-2, TÜV (for PV)"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "Silver Alloy Contacts"
+    },
+    {
+      "name": "Application",
+      "value": "Solar PV System, DC Power Distribution, Marine Electrical System"
+    },
+    {
+      "name": "Arc Extinguishing System",
+      "value": "Enhanced Magnetic Arc Quenching for DC"
+    },
+    {
+      "name": "Wiring Method",
+      "value": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +70°C"
+    },
+    {
+      "name": "IP Rating",
+      "value": "IP20"
+    }
+  ],
+  "image": "/images/products/MCB-DC-3P-01.jpg",
+  "images": [
+    "/images/products/MCB-DC-3P-01.jpg",
+    "/images/products/MCB-DC-3P-02.jpg",
+    "/images/products/MCB-DC-3P-03.jpg",
+    "/images/products/MCB-DC-3P-04.jpg",
+    "/images/products/MCB-DC-3P-05.jpg",
+    "/images/products/MCB-DC-3P-06.jpg",
+    "/images/products/MCB-DC-3P-07.jpg"
+  ],
+  "metaTitle": "3P DC MCB 6 – 63A Commercial Solar PV Breaker | Soltree",
+  "metaDescription": "Soltree 3 Pole DC MCB for commercial solar and high-voltage DC bus. Series-stackable 500V/pole, 6kA, TÜV certified. Ideal for PV farms. Get a free quote!",
+  "metaKeywords": "3P DC MCB, three pole DC circuit breaker, commercial solar breaker, high voltage DC MCB, PV farm circuit breaker, 3 pole DC isolator, marine DC breaker",
+  "imageAlts": [
+    "Soltree 3P DC MCB commercial solar circuit breaker front view",
+    "Three pole DC breaker side profile showing triple arc chambers",
+    "MCB-DC-3P terminal block detail for series-connected DC wiring",
+    "3 pole DC MCB three independent arc-quenching chambers close-up",
+    "Soltree 3P DC circuit breaker in commercial PV distribution board",
+    "MCB-DC-3P rating plate with TÜV PV and IEC 60947-2 certification",
+    "Three pole 500V DC MCB export packaging with installation guide"
+  ],
+  "published": true,
+  "sortOrder": 6
+}

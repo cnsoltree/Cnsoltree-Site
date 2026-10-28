@@ -1,0 +1,141 @@
+{
+  "id": "PN2-VA3",
+  "name": "PN2-VA3 Self-Resetting Over/Under Voltage Protector 40A–80A",
+  "slug": "pn2-va3-self-resetting-over-under-voltage-protector",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Self-resetting voltage protector for professional electrical contractors and commercial panel installations — white + green dual digital display delivers sharp digit contrast under the bright fluorescent lighting typical of commercial enclosures. Configurable over/under voltage and over-current thresholds, auto-restore, password lock. CE & RoHS certified. 40A / 63A / 80A.",
+  "description": "Electrical contractors working on commercial distribution boards, office fit-outs, and retail unit power installations need protection devices that are easy to inspect and commission on-site. The Soltree PN2-VA3 is built with professional installers in mind — its dual digital display uses white voltage digits and green current digits, a combination that delivers noticeably sharper contrast under the bright fluorescent lighting found in commercial electrical rooms, switchgear enclosures, and panel inspection environments.\n\nWhere the PN2-VA2 is specified for residential and home use, the PN2-VA3 is the preferred choice for commercial electrical contractors supplying office buildings and retail chains, panel builders working to professional installation standards, and export projects where CE and RoHS certification is a procurement requirement.\n\nThe protection platform is fully configurable: over-voltage threshold (130–300V AC), under-voltage threshold (80–210V AC), and over-current trip are all set via the front panel, with 0.5-second automatic disconnect on fault and automatic power restoration once the supply stabilizes. Reset delay is adjustable from 0 to 999 seconds (default 60s) to prevent nuisance tripping in commercial circuits. A password lock prevents unauthorized changes in multi-tenant commercial premises. Available in 40A, 63A, and 80A variants; AC 110V customizable for international export markets. 35mm DIN rail mounting. CE and RoHS certified.",
+  "features": [
+    "White + green dual digital display — sharper digit contrast in bright commercial enclosures and fluorescent-lit switchrooms",
+    "Self-resetting — automatically restores power after fault clears, no manual reset required",
+    "User-configurable trip points — over-voltage 130–300V, under-voltage 80–210V AC",
+    "Over-current protection — adjustable current trip threshold",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s) — prevents nuisance tripping in commercial circuits",
+    "Password lock — prevents unauthorized changes in multi-tenant commercial premises",
+    "Energy-saving mode — reduces device self-consumption",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable for international export)",
+    "35mm DIN rail mounting — standard commercial distribution board installation",
+    "Flame-retardant PC housing (UL94 V-0)",
+    "Mechanical life ≥10,000 cycles",
+    "CE & RoHS certified — accepted for EU, UK, and international export projects"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Self-Resetting Over/Under Voltage Protector"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VA3"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Voltage Trip Delay",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Dual Digital Display — Voltage (White) + Current (Green)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay Protection"
+    },
+    {
+      "name": "Application",
+      "value": "Commercial Electrical Installations, Contractor Panel Builds, Office Buildings, Export Projects"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VA3-1.jpg",
+  "images": [
+    "/images/products/PN2-VA3-1.jpg",
+    "/images/products/PN2-VA3-2.jpg",
+    "/images/products/PN2-VA3-3.jpg",
+    "/images/products/PN2-VA3-4.jpg",
+    "/images/products/PN2-VA3-5.jpg",
+    "/images/products/PN2-VA3-6.jpg",
+    "/images/products/PN2-VA3-7.jpg",
+    "/images/products/PN2-VA3-8.jpg"
+  ],
+  "metaTitle": "PN2-VA3 Voltage Protector Commercial Contractor White Display 40A–80A | Soltree",
+  "metaDescription": "PN2-VA3 self-resetting voltage protector for commercial electrical contractors — white + green dual display for clear panel readability, auto-reconnect, 40A–80A. CE & RoHS certified for export.",
+  "metaKeywords": "PN2-VA3 voltage protector commercial, electrical contractor voltage relay DIN rail, commercial panel voltage protector white display, over voltage protector contractor installation, CE RoHS voltage protector export, distribution board voltage relay commercial, 63A voltage relay panel builder, office retail voltage protection relay",
+  "imageAlts": [
+    "Soltree PN2-VA3 self-resetting over under voltage protector white green dual display front view",
+    "PN2-VA3 voltage protector dual screen showing white voltage and green current readings",
+    "PN2-VA3 protector parameter setting panel trip point adjustment",
+    "PN2-VA3 voltage protector DIN rail mounting side profile",
+    "PN2-VA3 self-resetting voltage protector installed in home distribution board",
+    "PN2-VA3 protector wiring terminal connections detail",
+    "PN2-VA3 voltage protector product dimensions 81x36x66mm drawing",
+    "PN2-VA3 voltage protector 40A 63A 80A current rating options"
+  ],
+  "published": true,
+  "sortOrder": 33
+}

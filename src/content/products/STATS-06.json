@@ -1,0 +1,135 @@
+{
+  "id": "STATS-06",
+  "name": "STATS-06 3-Phase 4-Wire Over/Under Voltage & Current Protector with Multi-Protection",
+  "slug": "stats-06-3-phase-4-wire-over-under-voltage-current-protector-multi-protection",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Intelligent 3-phase 4-wire protection relay for AC380V systems — combines over/under voltage, over-current, phase loss, open neutral, phase sequence, and 3-phase unbalance protection in one unit. Color display with real-time L1/L2/L3 voltage and current. 63A / 100A.",
+  "description": "Three-phase systems fail in more ways than single-phase ones, and a single protection function is rarely enough. The Soltree STATS-06 is purpose-built for AC380V 3-phase 4-wire circuits — integrating six protection functions into one DIN rail device: over-voltage, under-voltage, over-current, phase loss, open neutral, phase sequence error, and 3-phase unbalance detection. When any of these faults occur, the STATS-06 trips immediately, disconnecting the load before equipment damage occurs. Once the fault clears, it automatically restores power after the configured recovery delay.\n\nThe high-definition color display shows real-time voltage and current for all three phases simultaneously — current values below 1A are suppressed to keep the display clean and readable. All protection thresholds are field-configurable: over-voltage from 230–300V (default 270V), under-voltage from 120–210V (default 170V), over-current from 1–63A or 1–100A, plus adjustable action time and recovery delay. A built-in 3-phase voltage and current calibration function corrects measurement errors at installation, ensuring accuracy throughout the device's service life.\n\nWidely deployed in photovoltaic energy storage systems where 3-phase unbalance is a common fault mode, industrial distribution panels protecting motor-driven equipment, commercial building power supplies where phase loss could damage HVAC compressors, and any application where a single-function protector leaves too many failure modes uncovered. Available in white or dark gray housing, supports custom LOGO for OEM integration, and backed by a 3-year warranty.",
+  "features": [
+    "6-in-1 protection — over-voltage, under-voltage, over-current, phase loss, open neutral, phase sequence, and 3-phase unbalance",
+    "High-definition color display — real-time L1/L2/L3 voltage and current (current hidden below 1A for clean readout)",
+    "Fully configurable thresholds — over-voltage 230–300V, under-voltage 120–210V, over-current 1–63A or 1–100A",
+    "Adjustable action time (0.1–10s) and recovery delay (1–600s)",
+    "3-phase voltage and current calibration — corrects measurement errors at installation",
+    "Continuous over-current protection counter — 0–20 trips before lockout (configurable)",
+    "Auto-recovery after fault clearance — restores power without manual reset",
+    "35mm DIN rail mounting — standard industrial panel installation",
+    "Housing available in white or dark gray, supports custom LOGO for OEM",
+    "Rated for AC 380V 3-phase 4-wire systems, 63A or 100A",
+    "3-year warranty",
+    "CE certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "STATS-06"
+    },
+    {
+      "name": "Product Type",
+      "value": "3-Phase 4-Wire Over/Under Voltage & Over-Current Protector"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "AC 380V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60Hz"
+    },
+    {
+      "name": "Rated Current Options",
+      "value": "63A / 100A"
+    },
+    {
+      "name": "Over-Voltage Protection Range",
+      "value": "AC 230–300V (Default: 270V)"
+    },
+    {
+      "name": "Over-Voltage Recovery Range",
+      "value": "AC 225–295V (Default: 265V)"
+    },
+    {
+      "name": "Under-Voltage Protection Range",
+      "value": "AC 120–210V (Default: 170V)"
+    },
+    {
+      "name": "Under-Voltage Recovery Range",
+      "value": "AC 125–215V (Default: 175V)"
+    },
+    {
+      "name": "Over-Current Protection Range",
+      "value": "1–63A / 1–100A (Default: 63A)"
+    },
+    {
+      "name": "Over-Current Action Time",
+      "value": "0.1s–10s (Default: 0.5s)"
+    },
+    {
+      "name": "Continuous Over-Current Protection Times",
+      "value": "0–20 Times (Default: OFF)"
+    },
+    {
+      "name": "Power-On Delay Time",
+      "value": "1–600s (Default: 5s)"
+    },
+    {
+      "name": "Protection Recovery Delay Time",
+      "value": "1–600s (Default: 30s)"
+    },
+    {
+      "name": "Display Function",
+      "value": "Real-Time 3-Phase Voltage & Current Display (Current Not Displayed Below 1A)"
+    },
+    {
+      "name": "Core Protection Functions",
+      "value": "Over/Under Voltage, Over-Current, Phase Loss, Open Neutral, Phase Sequence, 3-Phase Unbalance"
+    },
+    {
+      "name": "Calibration Function",
+      "value": "3-Phase Voltage & Current Calibration"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mounting"
+    },
+    {
+      "name": "Housing Color Options",
+      "value": "White / Dark Gray"
+    },
+    {
+      "name": "Application",
+      "value": "Photovoltaic Energy Storage, Industrial Motor Distribution Panels, Commercial HVAC Power Supply, 3-Phase Equipment Protection"
+    },
+    {
+      "name": "Warranty",
+      "value": "3 Years"
+    }
+  ],
+  "image": "/images/products/STATS-06-1.jpg",
+  "images": [
+    "/images/products/STATS-06-1.jpg",
+    "/images/products/STATS-06-2.jpg",
+    "/images/products/STATS-06-3.jpg",
+    "/images/products/STATS-06-4.jpg",
+    "/images/products/STATS-06-5.jpg",
+    "/images/products/STATS-06-6.jpg",
+    "/images/products/STATS-06-7.jpg",
+    "/images/products/STATS-06-8.jpg"
+  ],
+  "metaTitle": "STATS-06 3-Phase 4-Wire Voltage Current Protector Phase Loss Unbalance 63A 100A | Soltree",
+  "metaDescription": "STATS-06 intelligent 3-phase 4-wire protector for AC380V — over/under voltage, over-current, phase loss, open neutral, phase sequence, and unbalance protection. Color display, configurable thresholds, DIN rail. 63A / 100A.",
+  "metaKeywords": "STATS-06 3-phase protector, 3-phase 4-wire over voltage protector AC380V, phase loss protection relay DIN rail, 3-phase unbalance protector, open neutral protection relay, over current phase sequence protector, 3 phase voltage current display protector, photovoltaic 3-phase protection",
+  "imageAlts": [
+    "Soltree STATS-06 3-phase 4-wire over under voltage current protector color display front view",
+    "STATS-06 color display showing L1 L2 L3 real-time voltage and current values",
+    "STATS-06 3-phase protector threshold configuration for over-voltage under-voltage and over-current",
+    "STATS-06 phase loss open neutral phase sequence unbalance protection relay",
+    "STATS-06 3-phase protector DIN rail mounting side profile",
+    "STATS-06 protector installed in industrial 3-phase distribution panel AC380V",
+    "STATS-06 wiring diagram for 3-phase 4-wire L1 L2 L3 neutral connections",
+    "STATS-06 3-phase protector white and dark gray housing options with custom LOGO"
+  ],
+  "published": true,
+  "sortOrder": 41
+}

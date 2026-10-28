@@ -1,0 +1,132 @@
+{
+  "id": "CZVA3",
+  "name": "CZVA3 EU Plug 16A Voltage Protector Socket Dual Display Voltage Current with Password Lock",
+  "slug": "czva3-eu-plug-adjustable-voltage-protector-socket-dual-display",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Advanced EU plug voltage protector socket with dual-color display showing voltage (red) and current (green) simultaneously — plus password lock, over-current protection, and energy-saving mode. Fully adjustable thresholds, 16A / 3680W. Ideal for high-power appliances and shared or commercial environments.",
+  "description": "Protecting an appliance from voltage anomalies is straightforward. Knowing your circuit's live current draw at the same time, locking your protection settings so no one can change them, and cutting power within half a second of a fault — that requires a more capable device. The Soltree CZVA3 is designed for users who need more than basic voltage protection.\n\nIts high-resolution dual-color digital display shows voltage in red and current in green simultaneously, giving you a real-time snapshot of both grid quality and load behavior without switching between screens or menus. Over-voltage and under-voltage trip thresholds are fully adjustable (130–300V and 80–210V respectively), and over-current protection adds a third layer of defense for appliances susceptible to load spikes. The password lock function prevents unauthorized changes to protection settings — critical for shared accommodation, rental properties, or small business environments where multiple people have access to the device.\n\nRated at 16A / 3680W, it handles higher-draw loads that exceed the capacity of standard 10A plug protectors — large washing machines, powerful electric heaters, workshop tools. The wider operating temperature range (-25℃ to +55℃) and multi-frequency support (40/50/60/70Hz) make it suitable for environments beyond the typical household. Flame-retardant UL94 V-0 housing, ≥10,000 mechanical cycle rating, custom LOGO available for OEM orders.",
+  "features": [
+    "Dual-color digital display — voltage in red and current in green, visible simultaneously",
+    "Password lock — prevents unauthorized changes to protection settings",
+    "Over-current protection — trips within 0.5s on voltage or current fault",
+    "Fully adjustable over-voltage threshold: 130–300V",
+    "Fully adjustable under-voltage threshold: 80–210V",
+    "Adjustable reset delay: 0–999s (default 60s)",
+    "Energy-saving mode — reduces standby self-consumption",
+    "16A / 3680W rated — handles high-draw appliances beyond 10A protector limits",
+    "Multi-frequency support: 40/50/60/70Hz",
+    "Wide operating temperature: -25℃ to +55℃",
+    "Flame-retardant PC housing (UL94 V-0), ≥10,000 mechanical cycles",
+    "Custom LOGO available for OEM orders",
+    "EU Schuko plug, AC 220V (110V customizable)"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Plug-in Self-Resetting Over/Under Voltage & Over-Current Protector Socket"
+    },
+    {
+      "name": "Plug/Socket Standard",
+      "value": "EU Schuko"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Voltage Trip Delay",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Max Working Current",
+      "value": "16A"
+    },
+    {
+      "name": "Max Rated Power",
+      "value": "3680W"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Dual Digital Display — Voltage (Red) + Current (Green)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Yes — supports password locking to prevent unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Yes — switchable to reduce self-consumption"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default: 60s)"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-Voltage, Under-Voltage, Over-Current, Delay Protection"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-Condensing)"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25℃ to +55℃"
+    },
+    {
+      "name": "Application",
+      "value": "Shared Accommodation, Rental Properties, Small Business, High-Power Appliances, Workshop Equipment"
+    },
+    {
+      "name": "Customizable LOGO",
+      "value": "Yes"
+    }
+  ],
+  "image": "/images/products/CZVA3-1.jpg",
+  "images": [
+    "/images/products/CZVA3-1.jpg",
+    "/images/products/CZVA3-2.jpg",
+    "/images/products/CZVA3-3.jpg",
+    "/images/products/CZVA3-4.jpg",
+    "/images/products/CZVA3-5.jpg",
+    "/images/products/CZVA3-6.jpg"
+  ],
+  "metaTitle": "CZVA3 EU Plug Voltage Protector Socket Dual Display Password Lock 16A 3680W | Soltree",
+  "metaDescription": "CZVA3 EU plug voltage protector with dual-color display (voltage + current), password lock, over-current protection and energy-saving mode. Adjustable 130–300V / 80–210V thresholds, 16A / 3680W. Auto-reset, OEM LOGO available.",
+  "metaKeywords": "EU plug voltage protector dual display, voltage current display protector socket, password lock voltage protector EU, 16A voltage protector socket 3680W, over-current voltage protector EU Schuko, adjustable voltage protector with current display, energy saving voltage protector socket, OEM voltage protector EU plug",
+  "imageAlts": [
+    "Soltree CZVA3 EU plug voltage protector socket dual-color display voltage red current green front view",
+    "CZVA3 dual display showing live voltage reading in red and current in green simultaneously",
+    "CZVA3 adjustable voltage protector over-voltage under-voltage threshold settings and password lock",
+    "CZVA3 EU Schuko plug voltage protector socket 16A 3680W high-power appliance protection",
+    "CZVA3 voltage protector energy-saving mode and reset delay configuration panel",
+    "CZVA3 EU plug voltage current protector socket flame-retardant UL94 V-0 housing"
+  ],
+  "published": true,
+  "sortOrder": 44
+}

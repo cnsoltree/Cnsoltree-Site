@@ -1,0 +1,41 @@
+---
+import { CONTACT } from '@/consts';
+---
+
+<details class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+  <summary
+    aria-label="WhatsApp"
+    class="ml-auto flex h-14 w-14 cursor-pointer list-none items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
+  >
+    <svg
+      class="h-7 w-7"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.7"
+      aria-hidden="true"
+    >
+      <path d="M21 11.5a9 9 0 0 1-13.5 8L3 21l1.5-4.5A9 9 0 1 1 21 11.5Z" />
+      <path d="M8 7c0 5 4 9 9 9l-2-3-2 1-3-3 1-2-3-2Z" />
+    </svg>
+  </summary>
+  <div class="absolute bottom-16 right-0 w-[min(320px,calc(100vw-3rem))] overflow-hidden rounded-2xl bg-white shadow-2xl">
+    <div class="bg-[#075E54] px-5 py-4 text-white">
+      <h2 class="font-bold">Chat with Soltree</h2>
+      <p class="mt-1 text-sm text-green-100">Product selection &amp; quotations</p>
+    </div>
+    <p class="bg-[#ECE5DD] px-5 py-6 text-sm">
+      Tell us your product requirements. Our team will help you find the right solution.
+    </p>
+    <div class="p-4">
+      <a
+        href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent("Hi, I'm interested in your products. Can you help?")}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary w-full"
+      >
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</details>

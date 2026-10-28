@@ -1,0 +1,58 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+  priority?: boolean;
+  class?: string;
+  sizes?: string;
+  [key: string]: unknown;
+}
+const {
+  src,
+  alt,
+  width,
+  height,
+  fill = false,
+  priority = false,
+  class: className,
+  sizes,
+} = Astro.props;
+const assets = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
+  { eager: true },
+);
+const assetPath = `/src/assets/${src.replace(/^\/images\//, '')}`;
+// Legacy product records use .jpg for some .JPG originals; emit the real optimized asset on Linux too.
+const asset = (
+  assets[assetPath] ??
+  Object.entries(assets).find(([name]) => name.toLowerCase() === assetPath.toLowerCase())?.[1]
+)?.default;
+// Keep the brand artwork lossless at its original resolution for high-density displays.
+const isLogo = src === '/images/logo.png';
+const targetWidth = isLogo && asset ? asset.width : (width ?? (priority ? 1600 : 800));
+const optimized = asset
+  ? await getImage({
+      src: asset,
+      width: Math.min(targetWidth, asset.width),
+      format: isLogo ? 'png' : 'webp',
+      quality: isLogo ? 100 : 80,
+    })
+  : undefined;
+---
+
+<img
+  src={optimized?.src ?? src}
+  alt={alt}
+  width={optimized?.attributes.width ?? width}
+  height={optimized?.attributes.height ?? height}
+  class:list={[className, fill && 'absolute inset-0 h-full w-full']}
+  sizes={sizes}
+  loading={priority ? 'eager' : 'lazy'}
+  fetchpriority={priority ? 'high' : 'auto'}
+  decoding="async"
+/>

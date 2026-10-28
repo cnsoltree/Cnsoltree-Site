@@ -1,0 +1,87 @@
+{
+  "id": "PCB-M6in-01",
+  "name": "PV Combiner Box 6 PV Array Inputs, 100A DC Breaker, 15A Fuse & 40kA SPD (Steel, with Radiator)",
+  "slug": "pv-combiner-box-6in-1out-100a-15a-steel",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "6-input PV combiner box in a cold-rolled steel enclosure with 100A DC breaker, 6×15A fuses, 500V/40kA SPD and built-in radiator.",
+  "description": "The PCB-M6in-01 is a 6-input PV combiner box designed for commercial solar arrays where multiple strings must be aggregated into a single feed. It integrates a 100A DC circuit breaker for overload and short-circuit protection, 6×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The rugged cold-rolled steel enclosure is rated IP65 against dust and water and is equipped with a built-in radiator for stable operation under continuous load. Suitable for outdoor installation on both on-grid and off-grid PV systems.",
+  "features": [
+    "6 PV array inputs, 1 output configuration",
+    "100A DC circuit breaker for overload and short-circuit protection",
+    "6 × 15A PV fuses for independent per-string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Heavy-duty cold-rolled steel enclosure",
+    "Built-in radiator for stable thermal performance under continuous load",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "PCB-M6in-01"
+    },
+    {
+      "name": "PV Array Inputs",
+      "value": "6"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "100A"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "15A (6 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Cold-rolled steel"
+    },
+    {
+      "name": "Cooling",
+      "value": "Built-in radiator"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/PCB-M6in-01-1.jpg",
+  "images": [
+    "/images/products/PCB-M6in-01-1.jpg",
+    "/images/products/PCB-M6in-01-2.jpg",
+    "/images/products/PCB-M6in-01-3.jpg",
+    "/images/products/PCB-M6in-01-4.jpg",
+    "/images/products/PCB-M6in-01-5.jpg",
+    "/images/products/PCB-M6in-01-6.jpg"
+  ],
+  "metaTitle": "6-Input PV Combiner Box 100A DC Breaker | Steel with Radiator | Soltree",
+  "metaDescription": "6-input PV combiner box in cold-rolled steel enclosure with 100A DC breaker, 6×15A PV fuses, 500V/40kA SPD and built-in radiator. IP65 outdoor-rated. OEM available.",
+  "metaKeywords": "PV combiner box, 6 input combiner box, 100A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, combiner box with radiator, IP65, on-grid off-grid PV",
+  "imageAlts": [
+    "PCB-M6in-01 6-input PV combiner box steel enclosure front view",
+    "PCB-M6in-01 combiner box interior with 100A DC breaker and 6×15A fuses",
+    "PCB-M6in-01 500V 40kA surge protection device detail",
+    "PCB-M6in-01 built-in radiator for thermal dissipation",
+    "PCB-M6in-01 wiring terminals for 6 PV array inputs",
+    "PCB-M6in-01 IP65 cold-rolled steel enclosure outdoor installation"
+  ],
+  "published": true,
+  "sortOrder": 70
+}

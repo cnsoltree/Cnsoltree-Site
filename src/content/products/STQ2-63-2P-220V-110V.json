@@ -1,0 +1,103 @@
+{
+  "id": "STQ2-63-2P-220V-110V",
+  "name": "STQ2-63 63A 2P CB Class Auto Transfer Switch 110V/220V - Economical Single-Phase ATS for Home & RV",
+  "slug": "stq2-63-2p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s auto transfer, max ~6.9kW – an economical civilian ATS for home emergency backup, RV, fire protection, and elevators.",
+  "description": "The STQ2-63-2P is a CB class automatic transfer switch for single-phase 110V or 220V AC systems up to 63A, designed as an economical civilian-grade backup power solution. Using a circuit breaker with mechanical interlock mechanism, it physically prevents both power sources from being connected simultaneously. When Normal Power (N/mains) fails, the unit automatically switches to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power outage occurs during transfer, which is acceptable for most residential and light-duty loads. Once mains is restored, the unit reverts to Normal Power priority automatically. With a maximum load capacity of approximately 6930W ( – .9kW) and support for both auto and manual switching modes, the STQ2-63-2P is a straightforward, cost-effective choice for home emergency backup, RV power systems, fire-protection panels, elevator circuits, and general backup power applications.",
+  "features": [
+    "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+    "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+    "~2s auto transfer time – brief 2s interruption acceptable for civilian loads",
+    "Dual voltage: supports both 110V and 220V AC single-phase",
+    "Auto & manual transfer modes; Normal Power (N) priority with auto return",
+    "Compatible with mains, generator, and PV inverter sources",
+    "Max load capacity: ~6930W ( – .9kW)",
+    "Economical civilian-grade ATS – cost-effective alternative to PC class units"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "2P (Live + Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Working Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Single Phase"
+    },
+    {
+      "name": "Type",
+      "value": "CB Class (Circuit Breaker + Mechanical Interlock)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Normal Power (N / Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Generator, PV Inverter"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Auto Transfer Time",
+      "value": "~2s"
+    },
+    {
+      "name": "Power Interruption",
+      "value": "Brief ~2s during transfer"
+    },
+    {
+      "name": "Max Load Power",
+      "value": "~6930W ( – .9kW)"
+    },
+    {
+      "name": "Internal Components",
+      "value": "PCB Control Board, Motor, Thermal Relay"
+    },
+    {
+      "name": "Applications",
+      "value": "Home Emergency, Fire Protection, Elevators, RV"
+    }
+  ],
+  "image": "/images/products/STQ2-63-2P(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/STQ2-63-2P(220V 110V)-1.jpg",
+    "/images/products/STQ2-63-2P(220V 110V)-2.jpg",
+    "/images/products/STQ2-63-2P(220V 110V)-3.jpg",
+    "/images/products/STQ2-63-2P(220V 110V)-4.jpg",
+    "/images/products/STQ2-63-2P(220V 110V)-5.jpg",
+    "/images/products/STQ2-63-2P(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "STQ2-63 63A 2P CB Class ATS 110V/220V | Economical Single-Phase Transfer Switch",
+  "metaDescription": "STQ2-63 series 63A 2-pole CB class ATS for single-phase 110V/220V. Mechanical interlock, ~2s transfer, max 6.9kW. For home backup, RV, fire protection and elevator applications.",
+  "metaKeywords": "STQ2-63 ATS, 63A CB class transfer switch, 2P single-phase ATS, 110V 220V ATS, mechanical interlock ATS, home backup ATS, RV transfer switch, fire protection ATS, economical ATS",
+  "imageAlts": [
+    "STQ2-63 63A 2P CB class ATS 110V/220V front view – economical single-phase auto transfer switch",
+    "STQ2-63-2P wiring diagram – 2-pole 2 inputs 1 output connection",
+    "STQ2-63-2P internal components – PCB control board, motor and thermal relay",
+    "STQ2-63 mechanical interlock mechanism – prevents dual-power connection",
+    "63A single-phase STQ2 ATS auto and manual switching mode panel",
+    "STQ2-63-2P transfer switch for home emergency, fire protection, elevator and RV"
+  ],
+  "published": true,
+  "sortOrder": 83
+}

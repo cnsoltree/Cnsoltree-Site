@@ -1,0 +1,103 @@
+{
+  "id": "ATS-ST-4P-63A-220V-110V",
+  "name": "63A 4P Automatic Transfer Switch 110V/220V - PC Class 50ms Three-Phase ATS for Commercial Use",
+  "slug": "ats-4p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "4-pole 63A PC class ATS for three-phase 110V/220V systems. Switches all 3 lines and neutral simultaneously in 50ms – built for hospitals, cold storage, and data centers.",
+  "description": "The ATS-ST-4P-63A is a PC class (load level) automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. All four poles – three phases and neutral – switch simultaneously in 50ms, ensuring complete source isolation and preventing any backfeed between the two supplies. When mains power fails, the unit instantly transfers the load to the backup source (inverter or generator); once mains is restored, it automatically reverts to Source I priority. Built-in voltage monitoring provides over-voltage and under-voltage protection across both voltage settings: for 110V systems the thresholds are 85V – 145V, and for 220V systems 175V – 260V. The motor-driven switching mechanism enclosed in a PA6 flame-retardant housing ensures reliable and safe operation in demanding commercial environments such as hospitals, cold-storage facilities, and data centers.",
+  "features": [
+    "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+    "PC class (load level) – handles full rated load continuously",
+    "Fast 50ms (0.05s) transfer time – critical load interruption under 50ms",
+    "Dual voltage: supports both 110V and 220V AC three-phase systems",
+    "Auto & manual transfer modes; automatically returns to mains priority",
+    "Over-voltage & under-voltage protection (110V: 85V – 145V; 220V: 175V – 260V)",
+    "Compatible with mains, inverter, and generator power sources",
+    "PA6 flame-retardant housing with motor-driven mechanism for long service life"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P (3 Lines + Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Operating Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Three-Phase with Neutral"
+    },
+    {
+      "name": "Type",
+      "value": "PC Class (Load Level)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Source I (Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Inverter, Generator"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Transfer Time",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Over-voltage Protection",
+      "value": "145V (110V mode) / 260V (220V mode)"
+    },
+    {
+      "name": "Under-voltage Protection",
+      "value": "85V (110V mode) / 175V (220V mode)"
+    },
+    {
+      "name": "Housing",
+      "value": "PA6 Flame-retardant"
+    },
+    {
+      "name": "Applications",
+      "value": "Hospitals, Cold Storage, Data Centers"
+    }
+  ],
+  "image": "/images/products/ATS-ST-4P-63A(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/ATS-ST-4P-63A(220V 110V)-1.jpg",
+    "/images/products/ATS-ST-4P-63A(220V 110V)-2.jpg",
+    "/images/products/ATS-ST-4P-63A(220V 110V)-3.jpg",
+    "/images/products/ATS-ST-4P-63A(220V 110V)-4.jpg",
+    "/images/products/ATS-ST-4P-63A(220V 110V)-5.jpg",
+    "/images/products/ATS-ST-4P-63A(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "ATS-ST 63A 4P ATS 110V/220V | PC Class 50ms Three-Phase with Voltage Protection",
+  "metaDescription": "ATS-ST series three-phase 63A 4-pole (3L+N) PC class ATS for 110V and 220V. 50ms auto transfer, simultaneous 3L+N switching, over/under-voltage protection. For hospitals, cold storage and data centers.",
+  "metaKeywords": "ATS-ST 63A 4P ATS, three-phase automatic transfer switch, 4 pole ATS 110V 220V, PC class ATS, three phase transfer switch, hospital ATS, data center transfer switch, voltage protection ATS",
+  "imageAlts": [
+    "63A 4P ATS 110V/220V front view – PC class three-phase auto transfer switch",
+    "ATS-ST-4P-63A wiring diagram – 4-pole 2 inputs 1 output connection",
+    "4P ATS internal structure – PCB, motor and PA6 flame-retardant housing",
+    "63A three-phase ATS voltage protection settings – 110V and 220V modes",
+    "ATS-ST-4P-63A auto and manual switching mode panel",
+    "63A 4-pole transfer switch for hospitals, cold storage and data centers"
+  ],
+  "published": true,
+  "sortOrder": 76
+}

@@ -1,0 +1,155 @@
+{
+  "id": "PN2-VAK",
+  "name": "PN2-VAK Self-Resetting Voltage Protector with kWh Energy Meter 40A–80A",
+  "slug": "pn2-vak-self-resetting-voltage-protector-kwh-meter",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Self-resetting over/under voltage and over-current protector with built-in kWh energy meter — tri-color display shows voltage (red), current (green), and cumulative energy consumption (blue) simultaneously. 40A / 63A / 80A options.",
+  "description": "The Soltree PN2-VAK is the most feature-complete model in the PN2 series, combining over/under voltage protection, over-current control, and real-time kWh energy metering into a single compact DIN rail device. While the PN2-VA2 through VA5 models focus purely on protection and automatic restoration, the PN2-VAK adds a built-in kWh meter that tracks cumulative electricity consumption — making it suitable for sub-metering in rental properties, individual tenant circuits, light commercial premises, and any installation where both protection and consumption monitoring are required in one unit.\n\nThe tri-color digital display provides simultaneous visibility of three metrics: real-time voltage in red, current in green, and total kWh in blue. Current is not displayed below 1A; kWh is not displayed below 0.01 kWh, keeping the display clean during standby.\n\nProtection parameters are fully configurable: over-voltage from 240V to 300V AC, under-voltage from 140V to 230V AC, and over-current from 1A up to the rated maximum. A 0.5-second disconnect activates on fault, with automatic power restoration after the adjustable reset delay (0–999 seconds, default 60s). Password lock prevents unauthorized changes. Available in 40A, 63A, and 80A variants; AC 110V customizable for export markets.",
+  "features": [
+    "Built-in kWh energy meter — cumulative electricity consumption tracking in one device",
+    "Tri-color digital display — voltage (red), current (green), kWh (blue) simultaneously",
+    "Self-resetting — auto-disconnects on fault, auto-restores when supply stabilizes",
+    "Over-voltage protection — configurable 240–300V AC trip threshold",
+    "Under-voltage protection — configurable 140–230V AC trip threshold",
+    "Over-current protection — adjustable 1A to rated maximum",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s)",
+    "Password lock — prevents unauthorized parameter changes",
+    "Energy-saving mode — reduces standby self-consumption",
+    "Clean display logic — current hidden below 1A, kWh hidden below 0.01 kWh",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable)",
+    "35mm DIN rail mounting",
+    "Flame-retardant PC housing (UL94 V-0), mechanical life ≥10,000 cycles",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Self-Resetting Voltage Protector with kWh Energy Meter"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VAK"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 240–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 140–230V"
+    },
+    {
+      "name": "Over-Current Setting Range",
+      "value": "1–40A / 1–63A / 1–80A (per rated model)"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Trip Delay (Over-Voltage)",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Tri-color — Voltage (Red) + Current (Green) + kWh (Blue)"
+    },
+    {
+      "name": "Current Display Note",
+      "value": "Not displayed when current is below 1A"
+    },
+    {
+      "name": "kWh Display Note",
+      "value": "Cumulative; not displayed below 0.01 kWh"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay Protection, kWh Metering"
+    },
+    {
+      "name": "Application",
+      "value": "Rental Property Sub-metering, Tenant Electricity Billing, Light Commercial Premises"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VAK-1.jpg",
+  "images": [
+    "/images/products/PN2-VAK-1.jpg",
+    "/images/products/PN2-VAK-2.jpg",
+    "/images/products/PN2-VAK-3.jpg",
+    "/images/products/PN2-VAK-4.jpg",
+    "/images/products/PN2-VAK-5.jpg",
+    "/images/products/PN2-VAK-6.jpg",
+    "/images/products/PN2-VAK-7.jpg",
+    "/images/products/PN2-VAK-8.jpg"
+  ],
+  "metaTitle": "PN2-VAK Voltage Protector with kWh Meter 40A–80A DIN Rail | Soltree",
+  "metaDescription": "PN2-VAK self-resetting voltage protector with built-in kWh energy meter, 40A–80A. Tri-color display: voltage, current and energy consumption. Auto-reconnect, CE & RoHS.",
+  "metaKeywords": "PN2-VAK voltage protector kWh meter, voltage protector with energy meter, self-resetting relay kWh display, over voltage protector electricity meter, DIN rail voltage protector kWh, sub-metering voltage protector, voltage current kwh display relay",
+  "imageAlts": [
+    "Soltree PN2-VAK self-resetting voltage protector with kWh energy meter tri-color display front view",
+    "PN2-VAK tri-color display showing voltage red current green kWh blue simultaneously",
+    "PN2-VAK voltage protector kWh meter cumulative energy consumption reading",
+    "PN2-VAK protector parameter setting panel over-voltage under-voltage trip points",
+    "PN2-VAK voltage protector DIN rail mounting side profile",
+    "PN2-VAK self-resetting voltage protector installed in distribution board",
+    "PN2-VAK protector wiring terminal connections detail",
+    "PN2-VAK voltage protector 40A 63A 80A current rating options with kWh metering"
+  ],
+  "published": true,
+  "sortOrder": 36
+}

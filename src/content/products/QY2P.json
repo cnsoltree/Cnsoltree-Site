@@ -1,0 +1,96 @@
+{
+  "id": "QY2P",
+  "name": "QY2P Single-Phase DIN Rail Energy Meter LED/LCD Display 0.5% Accuracy",
+  "slug": "qy2p-single-phase-din-rail-energy-meter-led-lcd-display",
+  "categorySlug": "power-meter",
+  "categoryName": "Power Meter",
+  "shortDescription": "Single-phase DIN rail energy meter series with 0.5% high accuracy — available in three models: QY2P-E (LED, 5-parameter full monitoring), QY2P-UID (LCD, streamlined V/I/kWh), and QY2P-UIDY (upgraded color LCD, enhanced readout). Factory calibrated, suitable for residential, commercial, and industrial metering.",
+  "description": "The QY2P series is a range of single-phase DIN rail energy meters built around a shared 0.5% high-accuracy measurement platform, factory calibrated for stable, consistent performance. Three models are available to match different display preferences and monitoring requirements — from full 5-parameter electrical monitoring to streamlined kWh-focused metering.\n\nThe QY2P-E features a multi-color LED display and is the most feature-rich model in the series, measuring real-time voltage, current, active power, power factor, and total energy consumption simultaneously. It is the right choice for users who need a complete view of their circuit's electrical performance — identifying inefficient loads, checking power factor, and tracking energy costs in one device.\n\nThe QY2P-UID uses a high-contrast color LCD screen and focuses on the three core metering parameters: voltage, current, and total energy consumption (kWh). Its streamlined display and cost-effective positioning make it well suited for straightforward energy usage tracking in residential sub-metering, rental properties, and light commercial circuits where power factor monitoring is not required.\n\nThe QY2P-UIDY shares the same V/I/kWh parameter set as the QY2P-UID but features an upgraded color LCD with optimized layout and enhanced readability. It is the premium display option in the series — designed for installations where long-term visibility, clear digit rendering, and panel aesthetics matter. All three models install on standard 35mm DIN rail.",
+  "features": [
+    "0.5% high accuracy across all models — factory calibrated for reliable, consistent measurements",
+    "35mm DIN rail mounting — fits standard distribution boards",
+    "QY2P-E: Multi-color LED display — Voltage, Current, Active Power, Power Factor, kWh",
+    "QY2P-UID: Color LCD display — Voltage, Current, kWh (streamlined, cost-effective)",
+    "QY2P-UIDY: Upgraded color LCD display — Voltage, Current, kWh (premium readout)",
+    "QY2P-E — ideal for full electrical parameter monitoring and power quality analysis",
+    "QY2P-UID — ideal for straightforward energy consumption tracking in residential and rental circuits",
+    "QY2P-UIDY — ideal for installations requiring premium display clarity and long-term readability",
+    "Single-phase metering for residential, commercial, and light industrial applications"
+  ],
+  "specs": [
+    {
+      "name": "Product Series",
+      "value": "QY2P"
+    },
+    {
+      "name": "Available Models",
+      "value": "QY2P-E / QY2P-UID / QY2P-UIDY"
+    },
+    {
+      "name": "Installation Type",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Phase",
+      "value": "Single-Phase"
+    },
+    {
+      "name": "Accuracy",
+      "value": "0.5% (High Precision, Factory Calibrated)"
+    },
+    {
+      "name": "QY2P-E Display",
+      "value": "Multi-Color LED Display"
+    },
+    {
+      "name": "QY2P-E Parameters",
+      "value": "Voltage, Current, Active Power, Power Factor, Energy (kWh)"
+    },
+    {
+      "name": "QY2P-UID Display",
+      "value": "Advanced Color LCD Display"
+    },
+    {
+      "name": "QY2P-UID Parameters",
+      "value": "Voltage, Current, Energy (kWh)"
+    },
+    {
+      "name": "QY2P-UIDY Display",
+      "value": "Upgraded Color LCD Display (Enhanced Readout)"
+    },
+    {
+      "name": "QY2P-UIDY Parameters",
+      "value": "Voltage, Current, Energy (kWh)"
+    },
+    {
+      "name": "Application",
+      "value": "Residential Sub-metering, Rental Properties, Commercial Circuits, Light Industrial Metering"
+    }
+  ],
+  "image": "/images/products/QY2P-1.jpg",
+  "images": [
+    "/images/products/QY2P-1.jpg",
+    "/images/products/QY2P-2.jpg",
+    "/images/products/QY2P-3.jpg",
+    "/images/products/QY2P-4.jpg",
+    "/images/products/QY2P-5.jpg",
+    "/images/products/QY2P-6.jpg",
+    "/images/products/QY2P-7.jpg",
+    "/images/products/QY2P-8.jpg"
+  ],
+  "metaTitle": "QY2P Single-Phase DIN Rail Energy Meter LED LCD 0.5% Accuracy | Soltree",
+  "metaDescription": "QY2P single-phase DIN rail energy meter — 0.5% accuracy, three display options: LED (V/I/W/PF/kWh), LCD basic (V/I/kWh), LCD premium. For residential, rental, and commercial sub-metering.",
+  "metaKeywords": "QY2P single phase energy meter DIN rail, single phase kWh meter din rail 0.5% accuracy, LED energy meter DIN rail, LCD energy meter single phase, sub-metering energy meter DIN rail, residential energy monitor DIN rail, voltage current kwh meter single phase, QY2P-E QY2P-UID QY2P-UIDY",
+  "imageAlts": [
+    "Soltree QY2P single-phase DIN rail energy meter series LED LCD display front view",
+    "QY2P-E multi-color LED energy meter showing voltage current power factor kWh readings",
+    "QY2P-UID advanced color LCD energy meter displaying voltage current and kWh",
+    "QY2P-UIDY upgraded color LCD energy meter with enhanced readout layout",
+    "QY2P series energy meter 35mm DIN rail mounting profile",
+    "QY2P DIN rail energy meter installed in residential distribution board",
+    "QY2P energy meter 0.5% accuracy factory calibrated single-phase metering",
+    "QY2P-E QY2P-UID QY2P-UIDY three model variants comparison"
+  ],
+  "published": true,
+  "sortOrder": 47
+}

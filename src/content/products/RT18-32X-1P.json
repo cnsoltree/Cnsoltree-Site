@@ -1,0 +1,121 @@
+{
+  "id": "RT18-32X-1P",
+  "name": "RT18-32X 1P DIN Rail Fuse Holder 32A 690V",
+  "slug": "dc-fuse-holder-rt18-32x-1p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Single-pole 32A 690V DIN rail fuse holder for 10x38mm fuse links — the most compact RT18-32X option, ideal for single-phase control circuits, lighting distribution boards, and individual equipment protection.",
+  "description": "When a single-phase control circuit or lighting branch needs reliable fuse protection without consuming extra rail space, the Soltree RT18-32X 1P is the go-to choice. At just one DIN rail module wide, it is the most space-efficient configuration in the RT18-32X series — fitting tight control cabinets where every millimeter counts. Built with a flame-retardant PVC housing and high-conductivity copper contacts, it ensures minimal contact resistance and stable current transmission under continuous load. Rated at 32A and 500V–690V AC, it accepts standard 10x38mm ceramic fuse links for dependable overload and short-circuit protection. The integrated red LED indicator lights up immediately when the fuse blows, allowing maintenance staff to locate the fault at a glance without probing live terminals. A snap-on 35mm DIN rail design and screw terminals complete a fast, tool-free installation. Note: fuse links are sold separately.",
+  "features": [
+    "Single-pole 1-module design — most space-efficient RT18-32X option",
+    "Rated 32A / 500V–690V AC — suitable for single-phase control and lighting circuits",
+    "Compatible with standard 10x38mm ceramic fuse links",
+    "Red LED indicator — lights up instantly on fuse blowout for quick fault detection",
+    "Flame-retardant PVC housing — safe under fault and overload conditions",
+    "High-conductivity copper contacts — stable current transmission, low heat generation",
+    "Snap-on 35mm DIN rail mounting — tool-free installation",
+    "Screw terminals — secure wiring connections",
+    "IP20 finger-safe protection",
+    "Compliant with IEC 60269 and GB 13539",
+    "CE & RoHS certified",
+    "Fuse links sold separately"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Fuse Holder"
+    },
+    {
+      "name": "Model Number",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "1P (Single Pole)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "32A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Mounting Type",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PVC (V0 Rating)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-conductivity Copper"
+    },
+    {
+      "name": "Indicator",
+      "value": "LED (lights up on fuse blowout)"
+    },
+    {
+      "name": "Protection Degree",
+      "value": "IP20"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +60°C"
+    },
+    {
+      "name": "Standards Compliance",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Application",
+      "value": "Single-phase control circuits, lighting distribution boards"
+    },
+    {
+      "name": "Installation",
+      "value": "Snap-on DIN rail"
+    },
+    {
+      "name": "Weight",
+      "value": "Approx. 80g"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse links NOT included — sold separately"
+    }
+  ],
+  "image": "/images/products/RT18-32X-1P-1.jpg",
+  "images": [
+    "/images/products/RT18-32X-1P-1.jpg",
+    "/images/products/RT18-32X-1P-2.jpg",
+    "/images/products/RT18-32X-1P-3.jpg",
+    "/images/products/RT18-32X-1P-4.jpg",
+    "/images/products/RT18-32X-1P-5.jpg",
+    "/images/products/RT18-32X-1P-6.jpg",
+    "/images/products/RT18-32X-1P-7.jpg"
+  ],
+  "metaTitle": "RT18-32X 1P Fuse Holder 32A 690V DIN Rail | Soltree",
+  "metaDescription": "RT18-32X 1P single-pole DIN rail fuse holder 32A 690V for 10x38mm ceramic fuses. Compact single-module design for control circuits and lighting boards. LED blowout indicator, CE & RoHS.",
+  "metaKeywords": "RT18-32X 1P fuse holder, single pole fuse holder 32A, 10x38mm fuse holder, DIN rail fuse holder 690V, control circuit fuse holder, lighting circuit fuse base, single phase fuse holder LED indicator",
+  "imageAlts": [
+    "Soltree RT18-32X 1P single-pole DIN rail fuse holder 32A 690V front view",
+    "RT18-32X 1P fuse holder side profile with DIN rail clip",
+    "RT18-32X 1P fuse holder LED indicator close-up",
+    "RT18-32X 1P fuse holder screw terminal wiring detail",
+    "RT18-32X 1P fuse holder installed on 35mm DIN rail in control panel",
+    "RT18-32X 1P fuse holder with 10x38mm ceramic fuse link",
+    "RT18-32X 1P fuse holder product dimensions drawing"
+  ],
+  "published": true,
+  "sortOrder": 20
+}

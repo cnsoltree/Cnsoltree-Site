@@ -1,0 +1,130 @@
+{
+  "id": "Aerosol-DIN-Rail",
+  "name": "DIN Rail Thermal Aerosol Fire Extinguishing Device",
+  "slug": "din-rail-aerosol-fire-extinguisher",
+  "categorySlug": "aerosol-fire-extinguisher",
+  "categoryName": "Aerosol Fire Extinguisher",
+  "shortDescription": "Passive DIN-rail thermal aerosol fire sticker for distribution cabinets, PV combiner boxes and electrical enclosures. 170°C self-activation, no power or wiring required.",
+  "description": "The Soltree DIN Rail Thermal Aerosol Fire Extinguishing Device — also known as an electrical cabinet automatic fire sticker — is purpose-built for closed electrical enclosures such as distribution cabinets, switch cabinets, PV combiner boxes, meter boxes and communication cabinets. Its fully passive heat-sensitive design requires no external power supply and no wiring: once the ambient temperature reaches 170°C or an open flame is detected, the unit self-activates within 6 seconds and rapidly releases thermal aerosol to suppress incipient electrical fires at the source. Dual installation modes — 35mm DIN rail clip and industrial-grade self-adhesive backing — allow fast retrofit into both new and existing cabinets. The pressure-free storage design eliminates leakage and burst risks, while the aerosol agent leaves no residue and causes no corrosion to PCBs, relays or copper busbars. With a -50°C to +90°C operating range, 10-year service life and completely maintenance-free operation, it is the ideal fire safety solution for electrical distribution and new energy equipment. Manufactured in our ISO 9001 certified facility with 15 years of electrical protection expertise and 200+ projects delivered across 10+ countries.",
+  "features": [
+    "Passive heat activation at 170°C — no power, no wiring, no control panel required",
+    "≤6 seconds spray response — suppresses electrical fires at the initial stage",
+    "Dual mounting: 35mm DIN rail clip + self-adhesive backing for fast retrofit",
+    "Pressure-free storage — no leakage, no burst risk, safe long-term standby",
+    "No residue, no corrosion to PCBs, relays and copper busbars after discharge",
+    "Wide -50°C to +90°C operating range — suitable for outdoor PV and telecom cabinets",
+    "10-year service life, fully maintenance-free — install once and forget",
+    "Protects 0.1m³ to 0.3m³ enclosures — covers most combiner boxes and distribution cabinets",
+    "Eco-friendly thermal aerosol agent, safe for personnel and equipment",
+    "OEM / ODM customization available — logo, label, capacity on request"
+  ],
+  "specs": [
+    {
+      "name": "Product Name",
+      "value": "DIN Rail Thermal Aerosol Fire Extinguishing Device"
+    },
+    {
+      "name": "Alias",
+      "value": "Electrical Cabinet Automatic Fire Sticker"
+    },
+    {
+      "name": "Extinguishing Medium",
+      "value": "Thermal Aerosol"
+    },
+    {
+      "name": "Trigger Temperature",
+      "value": "170°C Heat-Sensitive Activation"
+    },
+    {
+      "name": "Activation Mode",
+      "value": "Heat Induction / Open Flame Trigger"
+    },
+    {
+      "name": "Spray Response Time",
+      "value": "≤6 Seconds"
+    },
+    {
+      "name": "Optional Specification",
+      "value": "10g, 20g, 30g"
+    },
+    {
+      "name": "Protected Volume",
+      "value": "0.1 m³ ~ 0.3 m³"
+    },
+    {
+      "name": "Installation Type",
+      "value": "DIN Rail (35mm) / Self-adhesive Mounting"
+    },
+    {
+      "name": "Power Supply",
+      "value": "Passive — No External Power Needed"
+    },
+    {
+      "name": "Storage Condition",
+      "value": "Normal Pressure, Pressureless"
+    },
+    {
+      "name": "Working Temperature",
+      "value": "-50°C ~ +90°C"
+    },
+    {
+      "name": "Relative Humidity",
+      "value": "≤95%RH"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant ABS"
+    },
+    {
+      "name": "Spray Design",
+      "value": "Dual Nozzle Directional Ejection"
+    },
+    {
+      "name": "Service Life",
+      "value": "10 Years"
+    },
+    {
+      "name": "Maintenance",
+      "value": "Maintenance-Free, No Residue"
+    },
+    {
+      "name": "Application",
+      "value": "Distribution Cabinet, PV Combiner Box, Switch Cabinet, Meter Box, Communication Cabinet"
+    },
+    {
+      "name": "Fire Grade",
+      "value": "Special Grade for Electrical Equipment"
+    },
+    {
+      "name": "Safety Performance",
+      "value": "High-Temperature Resistant, Eco-Friendly"
+    }
+  ],
+  "image": "/images/products/Aerosol-Fire-Extinguishing-Sticker-1.jpg",
+  "images": [
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-1.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-2.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-3.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-4.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-5.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-6.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-7.jpg",
+    "/images/products/Aerosol-Fire-Extinguishing-Sticker-8.jpg"
+  ],
+  "badge": "New",
+  "metaTitle": "DIN Rail Aerosol Fire Extinguisher for Cabinets | Soltree",
+  "metaDescription": "Soltree DIN rail aerosol fire extinguisher for distribution cabinets & PV combiner boxes. 170°C auto-activation, passive, maintenance-free. OEM, worldwide shipping.",
+  "metaKeywords": "aerosol fire extinguisher, electrical cabinet fire sticker, DIN rail fire extinguisher, PV combiner box fire protection, distribution cabinet fire suppression, automatic fire extinguishing device, thermal aerosol fire suppression, switchgear fire protection",
+  "imageAlts": [
+    "Soltree DIN rail thermal aerosol fire extinguishing device front view",
+    "DIN rail thermal aerosol fire sticker mounted inside electrical distribution cabinet",
+    "Thermal aerosol fire extinguisher self-adhesive backing installation detail",
+    "Aerosol fire extinguishing device dual nozzle directional spray design",
+    "DIN rail aerosol fire sticker installed in PV combiner box for solar array protection",
+    "Thermal aerosol fire extinguisher 10g 20g 30g capacity options comparison",
+    "Aerosol fire extinguishing device product dimensions and size drawing",
+    "DIN rail aerosol fire extinguisher certification label and packaging"
+  ],
+  "published": true,
+  "sortOrder": 86
+}

@@ -1,0 +1,79 @@
+{
+  "id": "HA-4Way-1DCB-1SPD-White",
+  "name": "PV Combiner Box (White) 1 String Input 1 Output, 40A DC Breaker & 500V/40kA SPD",
+  "slug": "pv-combiner-box-1in-1out-40a-spd-white",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "Compact 1-string PV combiner box in a white IP65 enclosure with 40A DC breaker and 500V/40kA SPD.",
+  "description": "The HA-4Way-1DCB-1SPD-White is a compact 1-string, 1-output PV combiner box finished in a white, flame-retardant plastic enclosure for installations where a clean, low-profile appearance is preferred. It integrates a 40A DC circuit breaker for overload and short-circuit protection and a 500V DC surge protection device rated at 40kA max discharge current to shield the system from lightning-induced transients. Rated IP65 against dust and water, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+  "features": [
+    "1-string PV input, 1 output configuration",
+    "1 × 40A DC circuit breaker for overload and short-circuit protection",
+    "1 × 500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "White flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HA-4Way-1DCB-1SPD-White"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "1"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "40A"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic (white)"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HA-4Way-1DCB-1SPD-White-1.jpg",
+  "images": [
+    "/images/products/HA-4Way-1DCB-1SPD-White-1.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-2.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-3.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-4.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-5.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-6.jpg",
+    "/images/products/HA-4Way-1DCB-1SPD-White-7.jpg"
+  ],
+  "metaTitle": "PV Combiner Box White 1-in-1-out 40A | 40kA SPD | Soltree",
+  "metaDescription": "Compact 1-string PV combiner box in white IP65 enclosure with 40A DC breaker and 500V/40kA SPD. For on-grid and off-grid solar systems. OEM available.",
+  "metaKeywords": "PV combiner box, white combiner box, 1 string combiner box, 40A DC breaker, 40kA SPD, IP65 combiner box, on-grid off-grid PV",
+  "imageAlts": [
+    "HA-4Way-1DCB-1SPD-White PV combiner box front view white enclosure",
+    "HA-4Way-1DCB-1SPD-White combiner box interior with 40A DC breaker",
+    "HA-4Way-1DCB-1SPD-White 500V 40kA surge protection device detail",
+    "HA-4Way-1DCB-1SPD-White wiring terminals",
+    "HA-4Way-1DCB-1SPD-White IP65 flame-retardant enclosure close-up",
+    "HA-4Way-1DCB-1SPD-White side profile",
+    "HA-4Way-1DCB-1SPD-White outdoor installation on PV system"
+  ],
+  "published": true,
+  "sortOrder": 67
+}

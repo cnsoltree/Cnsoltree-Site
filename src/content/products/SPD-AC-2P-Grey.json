@@ -1,0 +1,101 @@
+{
+  "id": "SPD-AC-2P-Grey",
+  "name": "2P AC Surge Protector 385V 40kA - Full Mode L-N/L-PE/N-PE SPD for Residential & Industrial Circuits",
+  "slug": "spd-ac-2p-385v-40ka-full-mode",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "2-pole 385VAC full-mode surge protector covering L-N, L-PE and N-PE protection. 40kA max discharge, – .0kV protection level, <25ns response – modular hot-swappable DIN rail SPD for residential and small industrial distribution boxes.",
+  "description": "The SPD-AC-2P-Grey is a 2-pole AC surge protection device providing full-mode protection across all three paths – L-N, L-PE, and N-PE – in a single module. This comprehensive coverage ensures that single-phase electrical devices and precision instruments are shielded from surge transients regardless of which conductor the overvoltage appears on. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is kept at – .0kV. At its core, a metal oxide varistor (MOV) responds in under 25 nanoseconds for instantaneous suppression. Compatible with single-phase AC and IT systems, the SPD-AC-2P connects via L (In/Out) and N (In/Out) terminals and clips onto a standard 35mm DIN rail. The grey flame-retardant PC housing (UL94 V-0) features a modular, hot-swappable design for maintenance without rewiring. Suitable for main distribution boxes, sub-distribution boxes, and small industrial circuit panels.",
+  "features": [
+    "2-pole full-mode protection: L-N, L-PE and N-PE in a single module",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level – .0kV – protects single-phase devices and precision instruments",
+    "<25ns ultra-fast response time – instantaneous transient suppression",
+    "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+    "Compatible with single-phase AC systems and IT systems",
+    "Modular hot-swappable design – replace without rewiring",
+    "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "2P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "System Type",
+      "value": "Single-phase AC System, IT System"
+    },
+    {
+      "name": "Protection Mode",
+      "value": "L-N, L-PE, N-PE (Full Mode)"
+    },
+    {
+      "name": "Wiring",
+      "value": "L (In/Out), N (In/Out)"
+    },
+    {
+      "name": "Core Component",
+      "value": "Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Response Time",
+      "value": "<25ns"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0), Grey"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Design",
+      "value": "Modular, Hot-swappable"
+    },
+    {
+      "name": "Applications",
+      "value": "Main Distribution Box, Sub-distribution Box, Small Industrial Circuits"
+    }
+  ],
+  "image": "/images/products/SPD-AC-2P-Grey-1.jpg",
+  "images": [
+    "/images/products/SPD-AC-2P-Grey-1.jpg",
+    "/images/products/SPD-AC-2P-Grey-2.jpg",
+    "/images/products/SPD-AC-2P-Grey-3.jpg",
+    "/images/products/SPD-AC-2P-Grey-4.jpg",
+    "/images/products/SPD-AC-2P-Grey-5.jpg",
+    "/images/products/SPD-AC-2P-Grey-6.jpg",
+    "/images/products/SPD-AC-2P-Grey-7.jpg"
+  ],
+  "metaTitle": "2P SPD 385V 40kA Full Mode | L-N L-PE N-PE AC Surge Protector | Soltree",
+  "metaDescription": "2-pole 385VAC full-mode AC surge protector – L-N, L-PE and N-PE protection in one module. 40kA max discharge, – .0kV, <25ns response. DIN rail, hot-swappable. For residential and industrial distribution boxes.",
+  "metaKeywords": "2P AC surge protector, full mode SPD, L-N L-PE N-PE SPD, 385V SPD, 40kA SPD, single phase SPD, residential SPD, DIN rail surge protector, MOV SPD, IT system SPD",
+  "imageAlts": [
+    "SPD-AC-2P-Grey 2-pole AC surge protector front view – grey DIN rail SPD",
+    "SPD-AC-2P-Grey wiring diagram – L and N in/out terminal connection",
+    "SPD-AC-2P-Grey full-mode protection paths – L-N, L-PE and N-PE",
+    "SPD-AC-2P-Grey MOV core component detail – metal oxide varistor",
+    "SPD-AC-2P-Grey 385V 40kA full-mode surge protection module close-up",
+    "SPD-AC-2P-Grey modular hot-swappable design on 35mm DIN rail",
+    "SPD-AC-2P-Grey installed in residential main distribution box"
+  ],
+  "published": true,
+  "sortOrder": 9
+}

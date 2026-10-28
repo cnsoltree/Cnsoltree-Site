@@ -1,0 +1,13 @@
+---
+import BlogArchive from '@/components/BlogArchive.astro';
+import { allArticleGroups } from '@/lib/product-taxonomy';
+export function getStaticPaths() {
+  return allArticleGroups.map((group) => ({
+    params: { group: group.slug },
+    props: { groupSlug: group.slug },
+  }));
+}
+const { groupSlug } = Astro.props;
+---
+
+<BlogArchive groupSlug={groupSlug} />

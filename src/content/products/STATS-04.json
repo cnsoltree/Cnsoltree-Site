@@ -1,0 +1,140 @@
+{
+  "id": "STATS-04",
+  "name": "STATS-04 3-Way ATS Automatic Transfer Switch with Triple Voltage & Output Current Display",
+  "slug": "stats-04-3-way-ats-automatic-transfer-switch-voltage-current-display",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "3-way ATS with 4-parameter display showing three input voltages plus real-time output current — adds load current visibility for installations where monitoring actual load draw is as critical as source switching. 63A / 80A / 100A options.",
+  "description": "The Soltree STATS-04 is designed for engineers and facility managers who need to know not just which power source is active, but how much current their load is actually drawing at any given moment. Its 4-parameter display adds real-time output current to the three input voltage readings, eliminating the need for a separate clamp meter or sub-meter to track load behavior during source transfers and normal operation.\n\nThis makes the STATS-04 the preferred choice over the STATS-03 in applications where load current data drives decisions: generator sizing verification, electrical contractor commissioning of new panels, rental property sub-metering with ATS, solar storage systems requiring load-vs-generation balance monitoring, and industrial installations where overcurrent trending helps predict maintenance needs before a trip occurs.\n\nWhen a fault is detected on the active source — voltage outside the 130–300V over-voltage or 80–210V under-voltage window, or current exceeding the configured threshold — the STATS-04 switches to the next available source in under 0.2 seconds. Priority sequence is customizable, and startup and recovery delays (each 1–600s) are independently set. Available in 63A, 80A, and 100A ratings on a 35mm DIN rail.",
+  "features": [
+    "4-parameter display — 3 input voltages (L1/L2/L3) + output current simultaneously",
+    "3-way automatic transfer switch — L1→L2→L3 priority switching, customizable sequence",
+    "Sub-0.2s switching response — seamless source transfer with minimal downtime",
+    "Over-voltage protection — configurable 130–300V AC trip threshold",
+    "Under-voltage protection — configurable 80–210V AC trip threshold",
+    "Over-current protection — configurable 1A to rated maximum",
+    "Adjustable startup delay 1–600s",
+    "Adjustable auto-recovery delay 1–600s",
+    "Load current monitoring — real-time output current visible without extra metering",
+    "35mm DIN rail mounting — fits standard distribution boards",
+    "Flame-retardant PC housing (UL94 V-0), mechanical life ≥10,000 cycles",
+    "Available in 63A / 80A / 100A current ratings",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "STATS-04"
+    },
+    {
+      "name": "Product Type",
+      "value": "3-Input Automatic Transfer Switch with Current Display"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Protection Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Protection Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Current Protection Range",
+      "value": "1–63A / 1–80A / 1–100A (per rated model)"
+    },
+    {
+      "name": "Rated Working Current",
+      "value": "63A / 80A / 100A (Optional)"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Display Mode",
+      "value": "4-Parameter Display — L1/L2/L3 Input Voltage + Output Current"
+    },
+    {
+      "name": "Priority Switching Sequence",
+      "value": "L1 → L2 → L3 (Customizable)"
+    },
+    {
+      "name": "Startup Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Auto-Recovery Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Switching Response Time",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +50°C"
+    },
+    {
+      "name": "Relative Humidity",
+      "value": "≤50% at 40°C (Non-Condensing)"
+    },
+    {
+      "name": "Core Functions",
+      "value": "3-Way Priority Switching, Over/Under Voltage Protection, Over-Current Protection, Triple Voltage + Output Current Monitoring"
+    },
+    {
+      "name": "Application",
+      "value": "Generator Sizing Verification, Electrical Panel Commissioning, Rental Property Sub-metering, Solar Load Monitoring"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/STATS-04-1.jpg",
+  "images": [
+    "/images/products/STATS-04-1.jpg",
+    "/images/products/STATS-04-2.jpg",
+    "/images/products/STATS-04-3.jpg",
+    "/images/products/STATS-04-4.jpg",
+    "/images/products/STATS-04-5.jpg",
+    "/images/products/STATS-04-6.jpg",
+    "/images/products/STATS-04-7.jpg",
+    "/images/products/STATS-04-8.jpg"
+  ],
+  "metaTitle": "STATS-04 3-Way ATS with Voltage & Output Current Display 63A–100A | Soltree",
+  "metaDescription": "STATS-04 3-way automatic transfer switch with 4-parameter display — L1/L2/L3 input voltages plus output current. Over/under voltage protection, <0.2s switching, 63A–100A. CE & RoHS.",
+  "metaKeywords": "STATS-04 automatic transfer switch, 3-way ATS current display, ATS with output current monitor, automatic transfer switch voltage current display, 3 input ATS 100A DIN rail, ATS load monitoring generator solar, priority switching ATS current meter",
+  "imageAlts": [
+    "Soltree STATS-04 3-way ATS automatic transfer switch 4-parameter display front view",
+    "STATS-04 display showing L1 L2 L3 input voltages and output current simultaneously",
+    "STATS-04 ATS priority switching sequence and parameter setting panel",
+    "STATS-04 over under voltage protection threshold configuration",
+    "STATS-04 3-way ATS DIN rail mounting side profile",
+    "STATS-04 automatic transfer switch installed in factory distribution board",
+    "STATS-04 ATS wiring terminal connections for three 220V inputs and load output",
+    "STATS-04 automatic transfer switch 63A 80A 100A current rating options"
+  ],
+  "published": true,
+  "sortOrder": 39
+}

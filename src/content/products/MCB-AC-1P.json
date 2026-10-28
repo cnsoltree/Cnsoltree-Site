@@ -1,0 +1,92 @@
+{
+  "id": "MCB-AC-1P",
+  "name": "MCB 1P AC 6 – 63A Circuit breaker",
+  "slug": "MCB-1P-AC-6 – 63A-Circuit-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Single-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, ideal for residential lighting and socket circuit protection.",
+  "description": "The Soltree 1 Pole MCB is engineered for residential and light commercial single-phase circuits, providing reliable overload and short-circuit protection for lighting branches, socket outlets, and small appliances. Its slim single-module width (18mm) allows maximum circuit density in compact distribution boards. Manufactured in our ISO 9001 certified facility with 18 years of expertise, each unit undergoes 100% electrical testing before shipment. Available in B, C, and D trip curves to suit different load characteristics – B curve for sensitive resistive loads, C curve for general use, D curve for high-inrush equipment.",
+  "features": [
+    "Slim 18mm single-module width – maximises circuit density in compact boards",
+    "B / C / D trip curve options – covers lighting, general, and motor loads",
+    "Ideal for residential distribution boards and socket circuit protection",
+    "CE & RoHS certified – accepted in EU, UK, and global markets",
+    "100% factory electrical test before shipment",
+    "OEM / ODM customization available – logo, color, rating label",
+    "18-year ISO 9001 certified manufacturing facility"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "1P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "4.5 kA, 6 kA Customed"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C, B, D Customed"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-Conductivity Copper Alloy"
+    }
+  ],
+  "image": "/images/products/MCB-AC-1P-01.jpg",
+  "images": [
+    "/images/products/MCB-AC-1P-01.jpg",
+    "/images/products/MCB-AC-1P-02.jpg",
+    "/images/products/MCB-AC-1P-03.jpg",
+    "/images/products/MCB-AC-1P-04.jpg",
+    "/images/products/MCB-AC-1P-05.jpg",
+    "/images/products/MCB-AC-1P-06.jpg",
+    "/images/products/MCB-AC-1P-07.jpg"
+  ],
+  "metaTitle": "1 Pole MCB 6A-63A AC Circuit Breaker | DIN Rail Single Pole MCB | Soltree",
+  "metaDescription": "Soltree 1 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. ISO 9001 factory, OEM available, bulk orders shipped worldwide.",
+  "metaKeywords": "1 pole MCB, single pole circuit breaker, MCB 6A 63A, DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, AC circuit breaker wholesale",
+  "imageAlts": [
+    "Soltree 1 pole MCB 6-63A single pole miniature circuit breaker front view",
+    "MCB-AC-1P single pole circuit breaker side view showing DIN rail clip",
+    "MCB-AC-1P trip curve B C D selection detail",
+    "MCB-AC-1P terminal connection and wiring diagram",
+    "MCB-AC-1P installed on 35mm DIN rail in distribution board",
+    "MCB-AC-1P product dimensions and size drawing",
+    "MCB-AC-1P CE RoHS certification label and packaging"
+  ],
+  "published": true,
+  "sortOrder": 0
+}

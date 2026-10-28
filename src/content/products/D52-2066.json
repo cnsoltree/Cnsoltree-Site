@@ -1,0 +1,133 @@
+{
+  "id": "D52-2066",
+  "name": "D52-2066 6-in-1 AC Power Monitor DIN Rail 110V 220V 380V 100A Voltage Current Power Factor kWh Frequency",
+  "slug": "d52-2066-6in1-ac-power-monitor-din-rail-voltage-current-kwh-frequency",
+  "categorySlug": "power-meter",
+  "categoryName": "Power Meter",
+  "shortDescription": "6-in-1 DIN rail AC power monitor — displays voltage, current, active power (W), power factor, energy consumption (kWh), and frequency simultaneously on a color screen. Supports 110V/220V single-phase and 380V three-phase. 100A, ±1% accuracy. CE certified.",
+  "description": "Managing a circuit effectively means knowing more than just the voltage. The Soltree D52-2066 is a 6-in-1 multi-function AC power monitor that gives you a complete real-time view of your circuit's electrical performance — voltage, current, active power in watts, power factor, cumulative energy in kWh, and supply frequency — all displayed simultaneously on a high-resolution color screen, without needing separate instruments for each parameter.\n\nThe D52-2066 supports both single-phase (110V/220V) and three-phase (380V) systems, with two selectable voltage range options: 40–300V for standard single-phase and low-voltage applications, and 250–450V for three-phase and industrial circuits. Current measurement covers 0–100A (0.01A resolution), compatible with both built-in and external current transformers (CT) for flexible installation. Sampling rate is 2 times per second with ±1% ±2-digit accuracy across all parameters.\n\nEnergy consumption data is stored automatically during power outages — no readings are lost when the circuit is interrupted. The SAM CK button resets the kWh counter when needed (hold 5 seconds). Compact 54×80×64mm footprint installs on standard 35mm DIN rail. Suitable for home energy monitoring, industrial circuit analysis, and photovoltaic system performance tracking. CE certified, flame-retardant PC housing, operating temperature -10℃ to +50℃.",
+  "features": [
+    "6-in-1 display — voltage, current, power (W), power factor, kWh, and frequency simultaneously",
+    "Color multi-parameter digital display — all values visible at a glance on one screen",
+    "Dual voltage range — 40–300V (single-phase) or 250–450V (three-phase 380V), selectable",
+    "100A current range with 0.01A resolution",
+    "Works with built-in or external current transformers (CT)",
+    "±1% ±2-digit accuracy across all measured parameters",
+    "2 samples per second — responsive real-time monitoring",
+    "Auto-saves energy data during power outage — no kWh data loss",
+    "SAM CK button for kWh reset (hold 5 seconds)",
+    "35mm DIN rail mounting — compact 54×80×64mm footprint",
+    "Suitable for single-phase 110V/220V and three-phase 380V systems",
+    "CE certified, flame-retardant PC housing"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "D52-2066"
+    },
+    {
+      "name": "Product Type",
+      "value": "6-in-1 DIN Rail AC Multi-Function Power Monitor"
+    },
+    {
+      "name": "Installation Type",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Supported Systems",
+      "value": "Single-Phase 110V/220V, 3-Phase 380V"
+    },
+    {
+      "name": "Voltage Range Options",
+      "value": "40.0–300.0V / 250.0–450.0V (Selectable)"
+    },
+    {
+      "name": "Current Range",
+      "value": "0–100.0A (Resolution: 0.01A)"
+    },
+    {
+      "name": "Frequency Range",
+      "value": "45.0–65.0Hz"
+    },
+    {
+      "name": "Power Factor Range",
+      "value": "0.00–1.00 PF"
+    },
+    {
+      "name": "Active Power Range",
+      "value": "0–450,000W (0–9999.9W: 0.1W resolution; ≥10,000W: 1W resolution)"
+    },
+    {
+      "name": "Energy Consumption Range",
+      "value": "0–99,999 kWh (Resolution: 0.01 / 0.1 / 1 kWh based on value)"
+    },
+    {
+      "name": "Sampling Speed",
+      "value": "2 Times Per Second"
+    },
+    {
+      "name": "Accuracy",
+      "value": "±1% ±2 Digits"
+    },
+    {
+      "name": "Display Type",
+      "value": "Color Multi-Parameter Digital Display"
+    },
+    {
+      "name": "Reset Function",
+      "value": "SAM CK Button for Energy Reset (Hold 5s)"
+    },
+    {
+      "name": "Data Retention",
+      "value": "Auto-Saves Energy Data During Power Outage"
+    },
+    {
+      "name": "CT Compatibility",
+      "value": "Built-In or External Current Transformers"
+    },
+    {
+      "name": "Application",
+      "value": "Home Energy Monitoring, Industrial Circuit Analysis, Photovoltaic Systems"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-10℃ ~ +50℃"
+    },
+    {
+      "name": "Dimensions",
+      "value": "54 × 80 × 64mm"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC"
+    },
+    {
+      "name": "Certification",
+      "value": "CE"
+    }
+  ],
+  "image": "/images/products/D52-2066-1.jpg",
+  "images": [
+    "/images/products/D52-2066-1.jpg",
+    "/images/products/D52-2066-2.jpg",
+    "/images/products/D52-2066-3.jpg",
+    "/images/products/D52-2066-4.jpg",
+    "/images/products/D52-2066-5.jpg",
+    "/images/products/D52-2066-6.jpg",
+    "/images/products/D52-2066-7.jpg"
+  ],
+  "metaTitle": "D52-2066 6-in-1 DIN Rail AC Power Monitor 110V 220V 380V 100A kWh Meter | Soltree",
+  "metaDescription": "D52-2066 6-in-1 DIN rail AC power monitor — voltage, current, power, power factor, kWh and frequency on one color display. Supports 110V/220V/380V, 100A, external CT, ±1% accuracy. CE certified.",
+  "metaKeywords": "D52-2066 power monitor, 6 in 1 AC power meter DIN rail, voltage current power factor kwh frequency meter, din rail energy monitor 380V, multifunction power meter 100A, AC power monitor single phase three phase, kWh meter DIN rail color display, photovoltaic energy meter DIN rail",
+  "imageAlts": [
+    "Soltree D52-2066 6-in-1 DIN rail AC power monitor color display front view",
+    "D52-2066 color display showing voltage current power factor kWh and frequency simultaneously",
+    "D52-2066 power monitor voltage range selection 40-300V and 250-450V options",
+    "D52-2066 DIN rail energy monitor current transformer CT connection wiring",
+    "D52-2066 AC power monitor DIN rail mounting 35mm profile",
+    "D52-2066 power monitor installed in industrial distribution board",
+    "D52-2066 6-in-1 power monitor dimensions 54x80x64mm and CE certification"
+  ],
+  "published": true,
+  "sortOrder": 45
+}

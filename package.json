@@ -1,31 +1,55 @@
 {
-  "name": "cnsoltree-site",
+  "name": "astro-elesoltree",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "overrides": {
+    "@vercel/routing-utils": {
+      "path-to-regexp": "6.3.0"
+    },
+    "@tailwindcss/typography": {
+      "postcss-selector-parser": "6.1.5"
+    }
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "admin": "node scripts/admin.mjs",
+    "prebuild": "node scripts/sync-media.mjs",
+    "content:backup": "node scripts/content-backup.mjs",
+    "verify:admin": "node scripts/verify-admin.mjs",
+    "verify:products": "node scripts/verify-product-admin.mjs",
+    "verify:taxonomy": "node scripts/verify-taxonomy.mjs",
+    "verify:taxonomy:live": "node scripts/verify-taxonomy-live.mjs",
+    "verify:analytics": "node scripts/verify-analytics.mjs && node scripts/verify-analytics-navigation.mjs",
+    "verify:seo": "node scripts/verify-seo-diagnostics.mjs && node scripts/verify-seo-admin.mjs && node scripts/verify-seo-research.mjs && node scripts/verify-analytics-navigation.mjs",
+    "verify:deploy": "node scripts/verify.mjs && node scripts/check-built-images.mjs && node scripts/verify-contact-runtime.mjs && node scripts/verify-vercel-build.mjs",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "verify": "node scripts/verify.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.600.0",
-    "@aws-sdk/s3-request-presigner": "^3.600.0",
-    "@supabase/supabase-js": "^2.43.5",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
-    "resend": "^3.3.0"
+    "@astrojs/vercel": "11.0.16",
+    "@astrojs/markdown-remark": "7.3.4",
+    "@astrojs/rss": "4.0.19",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.1.0",
+    "astro": "7.4.2",
+    "tailwindcss": "^4.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@astrojs/check": "0.9.12",
+    "decap-cms": "3.17.3",
+    "decap-server": "3.11.6",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.2",
+    "sharp": "0.35.5",
+    "typescript": "^5.7.0"
   }
 }

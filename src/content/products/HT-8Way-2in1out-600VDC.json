@@ -1,0 +1,86 @@
+{
+  "id": "HT-8Way-2in1out-600VDC",
+  "name": "PV Combiner Box 2 String Input 1 Output, 600V DC 63A Breaker, 15A Fuse & 40kA SPD",
+  "slug": "pv-combiner-box-2in-1out-600vdc-63a-15a",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "2-string PV combiner box with 63A DC breaker, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+  "description": "The HT-8Way-2in1out-600VDC is a 2-string PV combiner box engineered to aggregate and protect solar array outputs before they reach the inverter. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems – residential rooftops, commercial arrays and small utility sites alike.",
+  "features": [
+    "2-string PV input, 1 output configuration",
+    "63A DC circuit breaker for overload and short-circuit protection",
+    "4 × 15A PV fuses for independent per-pole string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HT-8Way-2in1out-600VDC"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "2"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "Max System Voltage",
+      "value": "600V DC"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "63A"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "15A (4 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HT-8Way-2in1out-600VDC-1.jpg",
+  "images": [
+    "/images/products/HT-8Way-2in1out-600VDC-1.jpg",
+    "/images/products/HT-8Way-2in1out-600VDC-2.jpg",
+    "/images/products/HT-8Way-2in1out-600VDC-3.jpg",
+    "/images/products/HT-8Way-2in1out-600VDC-4.jpg",
+    "/images/products/HT-8Way-2in1out-600VDC-5.jpg",
+    "/images/products/HT-8Way-2in1out-600VDC-6.jpg"
+  ],
+  "metaTitle": "PV Combiner Box 2-in-1-out 600VDC 63A | 15A Fuse & 40kA SPD | Soltree",
+  "metaDescription": "2-string PV combiner box with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+  "metaKeywords": "PV combiner box, 2 string combiner box, 600VDC combiner box, solar combiner box with SPD, 63A DC breaker, 15A PV fuse, IP65 combiner box, on-grid off-grid PV",
+  "imageAlts": [
+    "HT-8Way-2in1out-600VDC 2-string PV combiner box front view",
+    "HT-8Way-2in1out-600VDC combiner box interior with 63A DC breaker and fuses",
+    "HT-8Way-2in1out-600VDC wiring layout with 15A PV fuses",
+    "HT-8Way-2in1out-600VDC 500V 40kA surge protection device detail",
+    "HT-8Way-2in1out-600VDC IP65 flame-retardant plastic enclosure",
+    "HT-8Way-2in1out-600VDC outdoor installation on PV system"
+  ],
+  "published": true,
+  "sortOrder": 54
+}

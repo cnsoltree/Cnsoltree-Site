@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Catalog from '@/components/Catalog.astro';
+import { allCategories } from '@/lib/taxonomy';
+export function getStaticPaths() {
+  return allCategories.map((category) => ({
+    params: { slug: category.slug },
+    props: { category },
+  }));
+}
+const { category } = Astro.props;
+---
+
+<BaseLayout title={category.name} description={category.description}>
+  <Catalog category={category.slug} />
+</BaseLayout>

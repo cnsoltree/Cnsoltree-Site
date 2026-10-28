@@ -1,0 +1,127 @@
+{
+  "id": "SRP",
+  "name": "SRP Tuya WiFi Smart Reclosing Leakage Protector 63A 10-in-1 with TFT Display and Energy Metering",
+  "slug": "srp-tuya-wifi-smart-reclosing-leakage-protector-63a-energy-metering",
+  "categorySlug": "wifi-smart-low-voltage-device",
+  "categoryName": "Wifi Smart Low Voltage Device",
+  "shortDescription": "10-in-1 Tuya WiFi smart reclosing leakage protector — leakage protection, over/under voltage, over-current, overload, plus real-time voltage, current, power, kWh, frequency, and power factor. 1.46\" TFT color display, auto-reclose, 63A, 1,000,000 mechanical life. Alexa & Google Assistant.",
+  "description": "Standard smart breakers handle switching and basic monitoring. The Soltree SRP goes further — it adds leakage (RCD) protection and auto-reclosing to the full smart circuit breaker feature set, making it the right choice for circuits where earth fault safety is a requirement alongside remote control and energy monitoring. Ten functions are integrated into one compact DIN rail unit: leakage protection, over-voltage, under-voltage, over-current, overload, and delay protection, plus real-time tracking of voltage, current, active power, cumulative kWh, frequency, and power factor.\n\nThe 1.46\" TFT color display is a key differentiator — a high-definition wide-angle color screen mounted on the device itself shows all key electrical parameters at a glance without opening the app, useful during installation, commissioning, and routine panel inspections in low-light conditions. The auto-reclosing function allows the device to automatically attempt power restoration after a fault trip — configurable for circuits where brief outages are acceptable and manual reset call-outs should be minimized.\n\nWiFi connectivity runs on Tuya/Smart Life for remote on/off, timer scheduling, and energy data access from anywhere. Amazon Alexa and Google Assistant voice control is supported. Rated 0.1A–63A adjustable, AC 80–300V (110V/220V) 50/60Hz. Mechanical life of 1,000,000 operations and electrical life of 100,000 operations — significantly higher than standard smart breakers. IP20, operating temperature -10℃ to +60℃, indoor AC use only. Requires 2.4GHz WiFi; 5GHz not supported.",
+  "features": [
+    "Leakage (RCD) protection — earth fault safety for kitchens, bathrooms, and wet-area circuits",
+    "Auto-reclosing — automatically attempts power restoration after fault trip (configurable)",
+    "10-in-1: leakage, over/under voltage, over-current, overload, delay protection + V/I/W/kWh/Hz/PF monitoring",
+    "1.46\" TFT color display — full parameter readout on-device without opening the app",
+    "Tuya / Smart Life app — remote on/off, scheduling, energy data from anywhere",
+    "Amazon Alexa and Google Assistant voice control",
+    "Adjustable rated current: 0.1A–63A",
+    "AC 80–300V (110V/220V), 50/60Hz",
+    "Mechanical life: 1,000,000 operations — 10× higher than standard smart breakers",
+    "Electrical life: 100,000 operations",
+    "35mm DIN rail mounting, IP20, -10℃ to +60℃",
+    "2.4GHz WiFi only. Indoor AC use only. L+N wiring, power from top."
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "SRP"
+    },
+    {
+      "name": "Product Type",
+      "value": "Tuya WiFi Smart Reclosing Leakage Protector with Energy Metering"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "AC 80–300V (110V/220V)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "0.1A–63A (Adjustable)"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Display",
+      "value": "1.46\" TFT Color Screen"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Leakage, Over-Voltage, Under-Voltage, Over-Current, Overload, Delay"
+    },
+    {
+      "name": "Monitoring Parameters",
+      "value": "Voltage, Current, Power (W), Energy (kWh), Frequency, Power Factor"
+    },
+    {
+      "name": "Auto-Reclosing",
+      "value": "Yes (Configurable)"
+    },
+    {
+      "name": "Control Methods",
+      "value": "WiFi App, Voice Control, Local Button"
+    },
+    {
+      "name": "Compatible Apps",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Voice Control",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "WiFi Standard",
+      "value": "2.4GHz Only (5GHz Not Supported)"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "1,000,000 Operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "100,000 Operations"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP20"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-10℃ ~ +60℃"
+    },
+    {
+      "name": "Application",
+      "value": "Homes, Offices, Warehouses, Wet-Area Circuits, Small Industrial Environments"
+    },
+    {
+      "name": "Important Note",
+      "value": "Indoor AC use only. L+N wiring, power from top. 2.4GHz WiFi only."
+    }
+  ],
+  "image": "/images/products/SRP-1.jpg",
+  "images": [
+    "/images/products/SRP-1.jpg",
+    "/images/products/SRP-2.jpg",
+    "/images/products/SRP-3.jpg",
+    "/images/products/SRP-4.jpg",
+    "/images/products/SRP-5.jpg",
+    "/images/products/SRP-6.jpg"
+  ],
+  "metaTitle": "SRP Tuya WiFi Smart Reclosing Leakage Protector 63A TFT Display Energy Meter | Soltree",
+  "metaDescription": "SRP Tuya WiFi smart reclosing leakage protector — 10-in-1: RCD leakage, over/under voltage, over-current, V/I/W/kWh/Hz/PF monitoring. 1.46\" TFT display, auto-reclose, 63A, 1M mechanical life.",
+  "metaKeywords": "Tuya WiFi leakage protector smart, WiFi RCD smart breaker DIN rail, smart reclosing leakage circuit breaker, auto reclose WiFi breaker 63A, leakage protection energy monitoring smart breaker, 10 in 1 smart circuit breaker TFT display, WiFi earth fault protector DIN rail, smart RCBO Tuya app Alexa",
+  "imageAlts": [
+    "Soltree SRP Tuya WiFi smart reclosing leakage protector 1.46 inch TFT color display front view",
+    "SRP smart leakage protector TFT display showing voltage current power factor kWh frequency",
+    "SRP WiFi leakage protector auto-reclose function and protection threshold settings in Tuya app",
+    "SRP 10-in-1 smart breaker leakage over-voltage under-voltage over-current overload protection",
+    "SRP smart reclosing leakage protector DIN rail installation in distribution box",
+    "SRP Tuya Smart Life app remote control energy monitoring and scheduling interface"
+  ],
+  "published": true,
+  "sortOrder": 52
+}

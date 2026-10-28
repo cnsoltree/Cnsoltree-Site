@@ -1,0 +1,92 @@
+{
+  "id": "MCB-AC-4P",
+  "name": "MCB 4P AC 6 – 63A Circuit breaker",
+  "slug": "mcb-4p-ac-6-63a-circuit-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Four-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, full three-phase + neutral protection for TN-S and TN-C-S systems.",
+  "description": "The Soltree 4 Pole MCB delivers complete protection for three-phase four-wire (3P+N) systems by simultaneously isolating all three phase conductors and the neutral – the highest level of circuit isolation available in a miniature circuit breaker. It is the code-compliant choice for TN-S and TN-C-S earthing systems where neutral switching is required, including commercial buildings, data centres, hospitals, and industrial facilities with sensitive electronic loads. The 4-pole design eliminates the risk of neutral voltage rise during asymmetric faults, protecting downstream equipment from damaging overvoltage. Available from 6A to 63A with B, C, and D trip curves to match any load profile.",
+  "features": [
+    "Full 3P+N simultaneous disconnection – highest isolation level for four-wire systems",
+    "Required for TN-S and TN-C-S systems where neutral switching is mandated",
+    "Eliminates neutral voltage rise risk during asymmetric fault conditions",
+    "Ideal for data centres, hospitals, and commercial buildings with sensitive loads",
+    "CE & RoHS certified – accepted in EU, UK, and global markets",
+    "OEM / ODM customization available – logo, color, rating label",
+    "18-year ISO 9001 certified manufacturing facility"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "4.5 kA, 6 kA Customed"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C, B, D Customed"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-Conductivity Copper Alloy"
+    }
+  ],
+  "image": "/images/products/MCB-AC-4P-01.jpg",
+  "images": [
+    "/images/products/MCB-AC-4P-01.jpg",
+    "/images/products/MCB-AC-4P-02.jpg",
+    "/images/products/MCB-AC-4P-03.jpg",
+    "/images/products/MCB-AC-4P-04.jpg",
+    "/images/products/MCB-AC-4P-05.jpg",
+    "/images/products/MCB-AC-4P-06.jpg",
+    "/images/products/MCB-AC-4P-07.jpg"
+  ],
+  "metaTitle": "4 Pole MCB 6A-63A AC Circuit Breaker | Four Pole DIN Rail MCB | Soltree",
+  "metaDescription": "Soltree 4 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase + neutral systems. OEM available, ships worldwide.",
+  "metaKeywords": "4 pole MCB, four pole circuit breaker, MCB 4P 6A 63A, four pole DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, three phase neutral circuit breaker",
+  "imageAlts": [
+    "Soltree 4 pole MCB 6-63A four pole miniature circuit breaker front view",
+    "MCB-AC-4P four pole circuit breaker side view showing DIN rail clip",
+    "MCB-AC-4P trip curve B C D selection detail",
+    "MCB-AC-4P four pole terminal connection and wiring diagram",
+    "MCB-AC-4P installed on 35mm DIN rail in distribution board",
+    "MCB-AC-4P product dimensions and size drawing",
+    "MCB-AC-4P CE RoHS certification label and packaging"
+  ],
+  "published": true,
+  "sortOrder": 3
+}

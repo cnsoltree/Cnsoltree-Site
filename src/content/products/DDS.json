@@ -1,0 +1,109 @@
+{
+  "id": "DDS",
+  "name": "DDS Single-Phase DIN Rail Energy Meter DDS662 DDS667 DDS668 Series 110V 230V",
+  "slug": "dds-single-phase-din-rail-energy-meter-dds662-dds667-dds668",
+  "categorySlug": "power-meter",
+  "categoryName": "Power Meter",
+  "shortDescription": "DDS662/DDS667/DDS668 series single-phase DIN rail energy meters — 110V/230V, 50/60Hz, 5(80)A. Three models covering basic kWh metering through full multi-parameter monitoring (kWh, V, I, W, PF, Hz). Backlit LCD options, pulse output, suitable for residential, rental billing, and global power distribution systems.",
+  "description": "The DDS series covers three models of compact single-phase DIN rail energy meters designed for accurate, reliable metering across residential, rental, commercial, and light industrial installations. All models are rated 5(80)A and compatible with both 110V/230V 50/60Hz power systems, making them suitable for domestic and export markets worldwide.\n\nThe DDS662 is the foundation model — a straightforward, wide-input energy meter with a clear LCD display showing kWh, voltage, current, and power. It supports both 110V and 230V at 50/60Hz and includes a pulse output at 1600 imp/kWh for external data logging and sub-metering systems. Long service life and high reliability make it a proven choice for residential sub-metering and light commercial energy monitoring.\n\nThe DDS667 adds a backlit LCD for clear reading in low-light conditions such as enclosed distribution cabinets and basement meter rooms. An operation button enables manual data switching and reset, giving users direct control over the displayed parameter and consumption records. Available in 110V/60Hz and 230V/50Hz versions to cover North American and international grid standards.\n\nThe DDS668 is the most capable model in the series, displaying the full parameter set: kWh, voltage, current, active power, power factor, and frequency. The backlit LCD supports both manual and automatic scrolling display modes, and a reset function allows flexible usage monitoring for rental billing, tenant sub-metering, and energy management applications. Certified for international power distribution systems.",
+  "features": [
+    "Available in three models: DDS662 (basic), DDS667 (backlit + button), DDS668 (full multi-parameter)",
+    "Compatible with 110V/230V 50/60Hz — suitable for global power systems",
+    "Rated current: 5(80)A — handles typical residential and light commercial loads",
+    "35mm DIN rail mounting — standard distribution board installation",
+    "DDS662: Wide-input LCD meter, kWh/V/I/W display, pulse output 1600 imp/kWh",
+    "DDS667: Backlit LCD, manual data switching and reset button, 110V/60Hz or 230V/50Hz",
+    "DDS668: Full parameter display — kWh, voltage, current, power, power factor, frequency",
+    "DDS668: Manual and automatic scrolling display modes",
+    "High accuracy, stable long-term performance",
+    "Compact size, easy installation in distribution boxes",
+    "Ideal for rental billing, tenant sub-metering, and energy management",
+    "Meets international safety and performance standards"
+  ],
+  "specs": [
+    {
+      "name": "Product Series",
+      "value": "DDS"
+    },
+    {
+      "name": "Available Models",
+      "value": "DDS662 / DDS667 / DDS668"
+    },
+    {
+      "name": "Installation Type",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Phase",
+      "value": "Single-Phase"
+    },
+    {
+      "name": "Rated Current",
+      "value": "5(80)A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 230V (50/60Hz)"
+    },
+    {
+      "name": "DDS662 Display",
+      "value": "LCD — kWh, Voltage, Current, Power"
+    },
+    {
+      "name": "DDS662 Special Feature",
+      "value": "Pulse Output: 1600 imp/kWh"
+    },
+    {
+      "name": "DDS667 Display",
+      "value": "Backlit LCD — kWh, Voltage, Current, Power"
+    },
+    {
+      "name": "DDS667 Special Feature",
+      "value": "Operation Button for Data Switching and Reset"
+    },
+    {
+      "name": "DDS667 Versions",
+      "value": "110V/60Hz or 230V/50Hz"
+    },
+    {
+      "name": "DDS668 Display",
+      "value": "Backlit LCD — kWh, Voltage, Current, Power, Power Factor, Frequency"
+    },
+    {
+      "name": "DDS668 Special Feature",
+      "value": "Manual / Automatic Scrolling Display, Reset Function"
+    },
+    {
+      "name": "Application",
+      "value": "Residential Sub-metering, Rental Billing, Tenant Electricity Monitoring, Light Industrial"
+    },
+    {
+      "name": "Compliance",
+      "value": "Meets International Safety and Performance Standards"
+    }
+  ],
+  "image": "/images/products/DDS-1.jpg",
+  "images": [
+    "/images/products/DDS-1.jpg",
+    "/images/products/DDS-2.jpg",
+    "/images/products/DDS-3.jpg",
+    "/images/products/DDS-4.jpg",
+    "/images/products/DDS-5.jpg",
+    "/images/products/DDS-6.jpg",
+    "/images/products/DDS-7.jpg"
+  ],
+  "metaTitle": "DDS662 DDS667 DDS668 Single-Phase DIN Rail Energy Meter 110V 230V 5(80)A | Soltree",
+  "metaDescription": "DDS series single-phase DIN rail energy meters — DDS662 (pulse output), DDS667 (backlit LCD, button reset), DDS668 (full V/I/W/PF/Hz display). 110V/230V, 5(80)A, rental billing and sub-metering.",
+  "metaKeywords": "DDS662 energy meter DIN rail, DDS667 backlit LCD energy meter, DDS668 multi-parameter energy meter, single phase DIN rail meter 110V 230V, rental billing energy meter, sub-metering DIN rail kWh meter, DDS series electric meter 5 80A, energy meter pulse output 1600 imp kWh",
+  "imageAlts": [
+    "Soltree DDS series single-phase DIN rail energy meter DDS662 DDS667 DDS668 front view",
+    "DDS662 LCD energy meter showing kWh voltage current power readings",
+    "DDS667 backlit LCD energy meter with operation button for data switching",
+    "DDS668 multi-parameter energy meter displaying kWh voltage current power factor frequency",
+    "DDS series energy meter 35mm DIN rail mounting profile",
+    "DDS single-phase energy meter installed in residential distribution board for rental billing",
+    "DDS662 DDS667 DDS668 three model variants 110V 230V 50 60Hz comparison"
+  ],
+  "published": true,
+  "sortOrder": 48
+}

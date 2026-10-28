@@ -1,0 +1,89 @@
+{
+  "id": "PCB-M4in-04",
+  "name": "PV Combiner Box 4 PV Array Inputs, 63A DC Breaker, 15A Fuse & 40kA SPD (Steel, with Safety Lock)",
+  "slug": "pv-combiner-box-4in-1out-63a-15a-steel-lock",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "4-input PV combiner box in a heavy-duty steel enclosure with 63A DC breaker, 4×15A fuses, 500V/40kA SPD and lockable door.",
+  "description": "The PCB-M4in-04 is a 4-input PV combiner box designed for commercial solar arrays where security and ruggedness are priorities. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+  "features": [
+    "4 PV array inputs, 1 output configuration",
+    "63A DC circuit breaker for overload and short-circuit protection",
+    "4 × 15A PV fuses for independent per-string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Robust steel enclosure with high impact resistance",
+    "Integrated safety lock and key for tamper prevention",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both grid-tied and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "PCB-M4in-04"
+    },
+    {
+      "name": "PV Array Inputs",
+      "value": "4"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "63A"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "15A (4 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Robust steel (high impact resistance)"
+    },
+    {
+      "name": "Security",
+      "value": "Safety lock & key"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "Grid-tied / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/PCB-M4in-04-1.jpg",
+  "images": [
+    "/images/products/PCB-M4in-04-1.jpg",
+    "/images/products/PCB-M4in-04-2.jpg",
+    "/images/products/PCB-M4in-04-3.jpg",
+    "/images/products/PCB-M4in-04-4.jpg",
+    "/images/products/PCB-M4in-04-5.jpg",
+    "/images/products/PCB-M4in-04-6.jpg",
+    "/images/products/PCB-M4in-04-7.jpg"
+  ],
+  "metaTitle": "4-Input PV Combiner Box 63A DC Breaker 15A Fuse | Steel with Safety Lock | Soltree",
+  "metaDescription": "4-input PV combiner box in heavy-duty steel enclosure with 63A DC breaker, 4×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+  "metaKeywords": "PV combiner box, 4 input combiner box, 63A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
+  "imageAlts": [
+    "PCB-M4in-04 4-input PV combiner box steel enclosure front view",
+    "PCB-M4in-04 combiner box interior with 63A DC breaker and 4×15A fuses",
+    "PCB-M4in-04 500V 40kA surge protection device detail",
+    "PCB-M4in-04 safety lock and key tamper prevention",
+    "PCB-M4in-04 wiring terminals for 4 PV array inputs",
+    "PCB-M4in-04 IP65 robust steel enclosure outdoor installation",
+    "PCB-M4in-04 side profile and mounting detail"
+  ],
+  "published": true,
+  "sortOrder": 73
+}

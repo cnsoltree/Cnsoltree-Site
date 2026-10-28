@@ -1,0 +1,159 @@
+{
+  "id": "PN2-VAFD",
+  "name": "PN2-VAFD 5-in-1 Self-Resetting Voltage Protector with Voltage, Current, Power, Frequency & kWh Meter",
+  "slug": "pn2-vafd-5-in-1-voltage-protector-power-frequency-kwh-meter",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "5-in-1 self-resetting voltage protector with multi-function meter — simultaneously displays voltage, current, power (W), frequency (Hz), and cumulative kWh on one device. The most comprehensive PN2 series model. 40A / 63A / 80A options.",
+  "description": "The Soltree PN2-VAFD is the most advanced model in the PN2 series — a true 5-in-1 device that combines full over/under voltage and over-current protection with a multi-function power meter in a single DIN rail unit. Where the PN2-VAK displays voltage, current, and kWh, the PN2-VAFD adds real-time power (W) and supply frequency (Hz) to the display, giving installers and end users a complete picture of circuit performance without any additional metering hardware.\n\nThis makes it ideal for light commercial premises, rental properties with sub-metering requirements, home energy monitoring setups, and any installation where a detailed understanding of power quality and consumption is needed alongside automatic fault protection. The multi-color display presents all five metrics simultaneously: voltage, current, active power in watts, supply frequency in hertz, and cumulative energy in kWh. Additional smart features include over-current counting, preset power level alerts, and fast power-off protection.\n\nProtection parameters are fully configurable — over-voltage (240–300V AC), under-voltage (140–230V AC), over-current (1A to rated maximum) — with password lock and adjustable reset delay (0–999s, default 60s). Available in 40A, 63A, and 80A variants; AC 110V customizable for export markets.",
+  "features": [
+    "5-in-1 display — voltage, current, power (W), frequency (Hz), and kWh simultaneously",
+    "Self-resetting — auto-disconnects on fault, auto-restores when supply stabilizes",
+    "Over-voltage protection — configurable 240–300V AC trip threshold",
+    "Under-voltage protection — configurable 140–230V AC trip threshold",
+    "Over-current protection — adjustable 1A to rated maximum",
+    "Built-in kWh energy meter — cumulative electricity consumption tracking",
+    "Real-time power (W) and frequency (Hz) display — no extra metering hardware needed",
+    "Over-current counting and preset power level alert functions",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s)",
+    "Password lock — prevents unauthorized parameter changes",
+    "Energy-saving mode — reduces standby self-consumption",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable)",
+    "35mm DIN rail mounting, flame-retardant PC housing (UL94 V-0)",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "5-in-1 Self-Resetting Voltage Protector with Multi-Function Meter"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VAFD"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 240–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 140–230V"
+    },
+    {
+      "name": "Over-Current Setting Range",
+      "value": "1–40A / 1–63A / 1–80A (per rated model)"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Trip Delay (Over-Voltage)",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Multi-Color — Voltage + Current + Power (W) + Frequency (Hz) + kWh"
+    },
+    {
+      "name": "Current Display Note",
+      "value": "Not displayed when current is below 1A"
+    },
+    {
+      "name": "kWh Display Note",
+      "value": "Cumulative; not displayed below 0.01 kWh"
+    },
+    {
+      "name": "Additional Functions",
+      "value": "Over-current counting, preset power level, fast power-off protection"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection & Measurement Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay, kWh, Power (W), Frequency (Hz), Over-current counting, Preset power level"
+    },
+    {
+      "name": "Application",
+      "value": "Home Energy Monitoring, Light Commercial Power Quality Analysis, Solar PV Installations"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VAFDM-1.jpg",
+  "images": [
+    "/images/products/PN2-VAFDM-1.jpg",
+    "/images/products/PN2-VAFDM-2.jpg",
+    "/images/products/PN2-VAFDM-3.jpg",
+    "/images/products/PN2-VAFDM-4.jpg",
+    "/images/products/PN2-VAFDM-5.jpg",
+    "/images/products/PN2-VAFDM-6.jpg",
+    "/images/products/PN2-VAFDM-7.jpg",
+    "/images/products/PN2-VAFDM-8.jpg"
+  ],
+  "metaTitle": "PN2-VAFD 5-in-1 Voltage Protector Power Frequency kWh Meter 40A–80A | Soltree",
+  "metaDescription": "PN2-VAFD 5-in-1 self-resetting voltage protector with voltage, current, power, frequency and kWh meter display. 40A–80A, AC 220V, auto-reconnect. CE & RoHS.",
+  "metaKeywords": "PN2-VAFD voltage protector 5 in 1, voltage protector power meter frequency meter, self-resetting relay watt meter kwh, DIN rail voltage protector multimeter, over voltage protector power frequency display, 5 in 1 voltage current power frequency energy meter relay",
+  "imageAlts": [
+    "Soltree PN2-VAFD 5-in-1 self-resetting voltage protector multi-color display front view",
+    "PN2-VAFD display showing voltage current power watts frequency Hz and kWh simultaneously",
+    "PN2-VAFD 5-in-1 protector kWh energy meter cumulative consumption reading",
+    "PN2-VAFD protector parameter setting panel over-voltage under-voltage trip points",
+    "PN2-VAFD voltage protector DIN rail mounting side profile",
+    "PN2-VAFD 5-in-1 protector installed in distribution board",
+    "PN2-VAFD protector wiring terminal connections detail",
+    "PN2-VAFD voltage protector 40A 63A 80A current rating options"
+  ],
+  "published": true,
+  "sortOrder": 37
+}

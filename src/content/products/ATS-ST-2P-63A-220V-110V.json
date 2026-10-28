@@ -1,0 +1,103 @@
+{
+  "id": "ATS-ST-2P-63A-220V-110V",
+  "name": "63A 2P Automatic Transfer Switch 110V/220V - PC Class 50ms Fast Switching ATS for Home & RV",
+  "slug": "ats-2p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "2-pole 63A PC class ATS for 110V/220V single-phase systems. Auto & manual transfer in 50ms with built-in over/under-voltage protection – ideal for home emergency backup, RV, and generator applications.",
+  "description": "The ATS-ST-2P-63A is a PC class (load level) automatic transfer switch designed for single-phase 110V or 220V AC systems up to 63A. With a rapid 50ms transfer time, it seamlessly switches between mains power and a backup source (inverter or generator) when a fault is detected, keeping connected loads running with minimal interruption. The 2-pole design switches both Live and Neutral simultaneously, ensuring complete isolation of the backup source. Built-in over-voltage and under-voltage protection monitors the supply continuously – for 110V systems the thresholds are 85V – 145V, and for 220V systems 175V – 260V. Supports both automatic and manual switching modes with Source I (Mains) set as the priority, automatically returning to mains once power is restored. The motor-driven mechanism is housed in a PA6 flame-retardant enclosure for reliable long-term operation.",
+  "features": [
+    "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+    "PC class (load level) – handles full rated load continuously",
+    "Fast 50ms (0.05s) transfer time – minimal load interruption",
+    "Dual voltage: supports both 110V and 220V AC",
+    "Auto & manual transfer modes; returns to mains automatically",
+    "Over-voltage & under-voltage protection (110V: 85V – 145V; 220V: 175V – 260V)",
+    "Compatible with mains, inverter, and generator sources",
+    "PA6 flame-retardant housing with motor-driven mechanism"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "2P (Live + Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Operating Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Single Phase"
+    },
+    {
+      "name": "Type",
+      "value": "PC Class (Load Level)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Source I (Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Inverter, Generator"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Transfer Time",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Over-voltage Protection",
+      "value": "145V (110V mode) / 260V (220V mode)"
+    },
+    {
+      "name": "Under-voltage Protection",
+      "value": "85V (110V mode) / 175V (220V mode)"
+    },
+    {
+      "name": "Housing",
+      "value": "PA6 Flame-retardant"
+    },
+    {
+      "name": "Applications",
+      "value": "Home Emergency Backup, RV"
+    }
+  ],
+  "image": "/images/products/ATS-ST-2P-63A(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/ATS-ST-2P-63A(220V 110V)-1.jpg",
+    "/images/products/ATS-ST-2P-63A(220V 110V)-2.jpg",
+    "/images/products/ATS-ST-2P-63A(220V 110V)-3.jpg",
+    "/images/products/ATS-ST-2P-63A(220V 110V)-4.jpg",
+    "/images/products/ATS-ST-2P-63A(220V 110V)-5.jpg",
+    "/images/products/ATS-ST-2P-63A(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "ATS-ST 63A 2P ATS 110V/220V | PC Class 50ms with Voltage Protection",
+  "metaDescription": "ATS-ST series single-phase 63A 2-pole PC class ATS for 110V and 220V. 50ms auto transfer, built-in over/under-voltage protection. For home backup, RV, inverter and generator applications.",
+  "metaKeywords": "ATS-ST 63A ATS, 2P automatic transfer switch, 110V 220V ATS, PC class ATS, single phase transfer switch, home backup power switch, RV ATS, 50ms transfer switch, voltage protection ATS",
+  "imageAlts": [
+    "63A 2P ATS 110V/220V front view – PC class auto transfer switch",
+    "ATS-ST-2P-63A wiring diagram – 2 inputs 1 output connection",
+    "2P ATS internal structure – PCB, motor and PA6 flame-retardant housing",
+    "63A single-phase ATS voltage protection settings – 110V and 220V",
+    "ATS-ST-2P-63A auto and manual switching modes",
+    "63A 2P transfer switch for home backup and RV applications"
+  ],
+  "published": true,
+  "sortOrder": 75
+}

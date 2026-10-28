@@ -1,0 +1,107 @@
+{
+  "id": "STQ1-63-4P-220V-110V",
+  "name": "STQ1-63 63A 4P CB Class Auto Transfer Switch 110V/220V - Three-Phase+N ATS for Hospitals & Cold Storage",
+  "slug": "stq1-63-4p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "63A 4-pole CB class ATS for three-phase 110V/220V with neutral. Mechanical interlock + over/under-voltage protection, ~2s auto transfer, supports mixed 3-phase and single-phase loads – for hospitals, cold storage, and data centers.",
+  "description": "The STQ1-63-4P is a CB class automatic transfer switch for three-phase systems with neutral (3L+N), rated at 63A and supporting both 110V and 220V AC. By switching all four poles – three phases and neutral – simultaneously, it enables use with mixed three-phase and single-phase loads in the same installation, making it ideal for facilities such as hospitals, cold-storage plants, and data centers where neutral is essential for balanced distribution. Built-in mechanical interlock physically prevents both power sources from connecting at the same time. Additional over-voltage and under-voltage protection continuously monitors the supply, adding an extra layer of protection not present in the 3P version. When Normal Power (N/mains) fails, the unit transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s outage occurs during switchover. Once mains is restored, it reverts to Normal Power priority automatically. Maximum load capacity is approximately 13.9kW (13870W).",
+  "features": [
+    "4-pole switching (3 Lines + Neutral simultaneously) – 2 inputs / 1 output",
+    "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+    "Over-voltage & under-voltage protection – added safety beyond the 3P version",
+    "~2s auto transfer time – brief 2s interruption acceptable for commercial loads",
+    "Dual voltage: supports both 110V and 220V AC; compatible with 3-phase and single-phase loads",
+    "Auto & manual transfer modes; Normal Power (N) priority with auto return",
+    "Compatible with mains, generator, and PV inverter sources",
+    "Max load capacity: ~13.9kW (13870W)"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P (3 Lines + Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Working Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Three-Phase with Neutral (compatible with 3-phase & single-phase loads)"
+    },
+    {
+      "name": "Type",
+      "value": "CB Class (Circuit Breaker + Mechanical Interlock)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Normal Power (N / Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Generator, PV Inverter"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Auto Transfer Time",
+      "value": "~2s"
+    },
+    {
+      "name": "Power Interruption",
+      "value": "Brief ~2s during transfer"
+    },
+    {
+      "name": "Protection",
+      "value": "Mechanical Interlock, Over-voltage & Under-voltage"
+    },
+    {
+      "name": "Max Load Power",
+      "value": "~13.9kW (13870W)"
+    },
+    {
+      "name": "Internal Components",
+      "value": "PCB Control Board, Motor, Thermal Relay"
+    },
+    {
+      "name": "Applications",
+      "value": "Hospitals, Cold Storage, Data Centers"
+    }
+  ],
+  "image": "/images/products/STQ1-63-4P(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/STQ1-63-4P(220V 110V)-1.jpg",
+    "/images/products/STQ1-63-4P(220V 110V)-2.jpg",
+    "/images/products/STQ1-63-4P(220V 110V)-3.jpg",
+    "/images/products/STQ1-63-4P(220V 110V)-4.jpg",
+    "/images/products/STQ1-63-4P(220V 110V)-5.jpg",
+    "/images/products/STQ1-63-4P(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "STQ1-63 63A 4P CB Class ATS 110V/220V | Three-Phase+N Auto Transfer Switch",
+  "metaDescription": "STQ1-63 series 63A 4-pole (3L+N) CB class ATS for 110V/220V. Mechanical interlock, over/under-voltage protection, ~2s transfer, max 13.9kW. For hospitals, cold storage and data centers.",
+  "metaKeywords": "STQ1-63 4P ATS, four-pole CB class transfer switch, 63A 3L+N ATS, hospital auto transfer switch, cold storage ATS, data center ATS, three-phase neutral ATS, mechanical interlock ATS",
+  "imageAlts": [
+    "STQ1-63 63A 4P CB class ATS 110V/220V front view – three-phase with neutral transfer switch",
+    "STQ1-63-4P wiring diagram – 4-pole 3L+N 2 inputs 1 output connection",
+    "STQ1-63-4P internal components – PCB control board, motor and thermal relay",
+    "STQ1-63-4P over-voltage and under-voltage protection settings",
+    "63A four-pole ATS auto and manual switching mode panel",
+    "STQ1-63-4P transfer switch for hospitals, cold storage and data centers"
+  ],
+  "published": true,
+  "sortOrder": 82
+}

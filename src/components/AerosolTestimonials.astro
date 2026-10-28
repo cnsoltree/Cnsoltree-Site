@@ -1,0 +1,95 @@
+---
+import Img from './Img.astro';
+const testimonials = [
+  {
+    quote:
+      'We’ve installed these in 200+ enclosures. No power, no wiring, zero maintenance — and they stopped a fire in one of our cabinets. Super reliable.',
+    name: 'Jizzakh Polytechnic Institute',
+    title: '',
+    avatar: '/images/avatar-1.jpg',
+  },
+  {
+    quote:
+      'Zero-maintenance fire protection that works. Install and forget — total peace of mind for our critical equipment.',
+    name: 'Mark',
+    title: 'BIPV Philippines',
+    avatar: '/images/avatar-2.jpg',
+  },
+  {
+    quote:
+      'We love how these require no power or wiring. Just install them once, and they keep our equipment protected without any maintenance.',
+    name: 'Carlos',
+    title: 'Solar EPC Contractor, Latin America',
+    avatar: '/images/avatar-3.jpg',
+  },
+  {
+    quote:
+      'Compact, easy to install, and completely worry-free. It’s exactly the set-it-and-forget-it fire protection we needed.',
+    name: 'Ahmed',
+    title: 'Electrical Distributor, Middle East',
+    avatar: '/images/avatar-2.jpg',
+  },
+];
+---
+
+<section class="section-alt" data-testimonials>
+  <div class="container">
+    <h2 class="section-heading text-center">Satisfied Customers Over The Globe</h2>
+    <p class="section-subheading text-center">
+      See why global industry leaders rely on Soltree for their electrical systems.
+    </p>
+    <div class="mx-auto mt-10 max-w-3xl">
+      {testimonials.map((item, index) => (
+        <figure
+          data-testimonial
+          hidden={index !== 0}
+          class="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm"
+        >
+          <blockquote class="text-base leading-8 text-gray-600">{item.quote}</blockquote>
+          <figcaption class="mt-6">
+            <Img
+              src={item.avatar}
+              alt={item.name}
+              width={64}
+              class="mx-auto h-14 w-14 rounded-full object-cover"
+            />
+            <p class="mt-3 text-sm font-bold text-gray-900">{item.name}</p>
+            <p class="mt-1 text-xs text-gray-500">{item.title}</p>
+          </figcaption>
+        </figure>
+      ))}
+      <div class="mt-5 flex justify-center gap-4">
+        <button
+          type="button"
+          data-testimonial-prev
+          class="btn-outline"
+          aria-label="Previous testimonial"
+        >
+          Previous
+        </button>
+        <button
+          type="button"
+          data-testimonial-next
+          class="btn-outline"
+          aria-label="Next testimonial"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('astro:page-load', () =>
+    document.querySelectorAll<HTMLElement>('[data-testimonials]').forEach((root) => {
+      const slides = [...root.querySelectorAll<HTMLElement>('[data-testimonial]')];
+      let index = 0;
+      function move(delta: number) {
+        index = (index + delta + slides.length) % slides.length;
+        slides.forEach((slide, i) => (slide.hidden = i !== index));
+      }
+      root.querySelector('[data-testimonial-prev]')?.addEventListener('click', () => move(-1));
+      root.querySelector('[data-testimonial-next]')?.addEventListener('click', () => move(1));
+    }),
+  );
+</script>

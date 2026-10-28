@@ -1,0 +1,101 @@
+{
+  "id": "SPD-AC-1P-Grey",
+  "name": "1P AC Surge Protector 385V 40kA - TN-S Neutral-Ground SPD for Sub-distribution & Lightning Boxes",
+  "slug": "spd-ac-1p-385v-40ka-tn-s-neutral-ground",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "1-pole 385VAC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge current, – .0kV protection level, <25ns response – modular hot-swappable DIN rail design for sub-distribution and combined lightning boxes.",
+  "description": "The SPD-AC-1P-Grey is a single-pole AC surge protection device designed specifically for neutral-ground (N-PE) protection in TN-S low-voltage distribution systems. It safeguards the neutral line of single-phase systems against surge transients caused by lightning or switching events, with a maximum discharge current of 40kA and a nominal discharge current of 20kA. The voltage protection level of – .0kV ensures downstream equipment is kept within safe limits during transient events. At its core is a metal oxide varistor (MOV) that responds in under 25 nanoseconds – effectively instantaneous suppression. The grey flame-retardant PC housing (UL94 V-0 rated) snaps onto a standard 35mm DIN rail and features a modular, hot-swappable design, allowing replacement under live conditions without rewiring. Suitable for installation in sub-distribution boxes and combined lightning boxes.",
+  "features": [
+    "1-pole N-PE protection for TN-S low-voltage distribution systems",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level – .0kV – protects neutral line from transient overvoltage",
+    "<25ns ultra-fast response time – instantaneous transient suppression",
+    "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+    "Modular hot-swappable design – replace without rewiring",
+    "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting",
+    "Suitable for sub-distribution boxes and combined lightning boxes"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "1P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "System Type",
+      "value": "TN-S Low-voltage Distribution System"
+    },
+    {
+      "name": "Protection Mode",
+      "value": "N-PE (Neutral to Ground)"
+    },
+    {
+      "name": "Wiring",
+      "value": "Top: Neutral / Bottom: Ground (PE)"
+    },
+    {
+      "name": "Core Component",
+      "value": "Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Response Time",
+      "value": "<25ns"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0), Grey"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Design",
+      "value": "Modular, Hot-swappable"
+    },
+    {
+      "name": "Applications",
+      "value": "Sub-distribution Box, Combined Lightning Box"
+    }
+  ],
+  "image": "/images/products/SPD-AC-1P-Grey-1.jpg",
+  "images": [
+    "/images/products/SPD-AC-1P-Grey-1.jpg",
+    "/images/products/SPD-AC-1P-Grey-2.jpg",
+    "/images/products/SPD-AC-1P-Grey-3.jpg",
+    "/images/products/SPD-AC-1P-Grey-4.jpg",
+    "/images/products/SPD-AC-1P-Grey-5.jpg",
+    "/images/products/SPD-AC-1P-Grey-6.jpg",
+    "/images/products/SPD-AC-1P-Grey-7.jpg"
+  ],
+  "metaTitle": "1P SPD 385V 40kA TN-S | Neutral-Ground AC Surge Protector | Soltree",
+  "metaDescription": "1-pole 385VAC AC surge protector for TN-S neutral-ground (N-PE) protection. 40kA max discharge, – .0kV protection level, <25ns response. DIN rail, hot-swappable. For sub-distribution and lightning boxes.",
+  "metaKeywords": "AC surge protector, 1P SPD, 385V SPD, TN-S SPD, neutral ground SPD, N-PE surge protector, 40kA SPD, DIN rail SPD, combined lightning box SPD, MOV surge protector",
+  "imageAlts": [
+    "SPD-AC-1P-Grey 1-pole AC surge protector front view – grey DIN rail SPD",
+    "SPD-AC-1P-Grey wiring diagram – top Neutral, bottom Ground (PE) connection",
+    "SPD-AC-1P-Grey MOV core component detail – metal oxide varistor",
+    "SPD-AC-1P-Grey 385V 40kA N-PE surge protection module close-up",
+    "SPD-AC-1P-Grey modular hot-swappable design on 35mm DIN rail",
+    "SPD-AC-1P-Grey flame-retardant PC housing UL94 V-0 detail",
+    "SPD-AC-1P-Grey installed in sub-distribution box combined lightning box"
+  ],
+  "published": true,
+  "sortOrder": 8
+}

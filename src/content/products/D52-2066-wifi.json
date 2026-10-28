@@ -1,0 +1,131 @@
+{
+  "id": "D52-2066-wifi",
+  "name": "D52-2066 Tuya WiFi Smart Energy Meter 6-in-1 DIN Rail Monitor with Remote App Control",
+  "slug": "d52-2066-wifi-tuya-smart-energy-meter-din-rail-remote-app",
+  "categorySlug": "power-meter",
+  "additionalCategorySlugs": ["wifi-smart-low-voltage-device"],
+  "categoryName": "Power Meter",
+  "shortDescription": "Tuya WiFi smart energy meter with 6-in-1 color display — monitor voltage, current, power, power factor, kWh, and frequency remotely via mobile app. Real-time data plus daily, monthly, and yearly consumption history. DIN rail, 100A, power-failure memory. Ideal for homes, rentals, hotels, and commercial spaces.",
+  "description": "Knowing your electricity consumption in real time — from anywhere, without visiting the panel — is what separates a smart energy meter from a standard one. The Soltree D52-2066 WiFi edition adds Tuya 2.4GHz connectivity to the full 6-in-1 measurement platform, letting you monitor AC voltage, current, active power, power factor, frequency, and kWh consumption live through the Tuya mobile app on your phone or tablet.\n\nBeyond real-time readings, the app gives you detailed consumption history broken down by day, month, and year — making it practical for rental property owners tracking tenant usage, hotel facility managers reviewing floor-by-floor energy spend, and homeowners keeping tabs on monthly electricity costs without waiting for the utility bill. The high-definition color LED screen displays all six parameters simultaneously at the device for on-site readings, and built-in power-failure memory ensures kWh data is preserved through outages.\n\nSupports both built-in and external current transformers (CT) for flexible installation across different panel configurations. Measures up to 100A (0.01A resolution), 40–300V AC, with ±1% ±2-digit accuracy and 2 samples per second. 35mm DIN rail mount, compact 54×80×64mm footprint, 150g. Flame-retardant PC housing.",
+  "features": [
+    "Tuya WiFi (2.4GHz) — remote monitoring via mobile app from anywhere",
+    "6-in-1 color display — voltage, current, power (W), power factor, kWh, and frequency",
+    "App consumption history — daily, monthly, and yearly energy usage statistics",
+    "Power-failure memory — kWh data preserved through outages",
+    "Works with built-in or external current transformers (CT)",
+    "100A current range, 0.01A resolution",
+    "40–300V AC voltage range",
+    "±1% ±2-digit accuracy, 2 samples per second",
+    "35mm DIN rail mounting — compact 54×80×64mm, 150g",
+    "Flame-retardant PC housing",
+    "Suitable for homes, rental properties, hotels, offices, commercial buildings"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "D52-2066 (WiFi Edition)"
+    },
+    {
+      "name": "Product Type",
+      "value": "Tuya WiFi Smart 6-in-1 DIN Rail Energy Meter"
+    },
+    {
+      "name": "Connection Protocol",
+      "value": "Tuya 2.4GHz WiFi"
+    },
+    {
+      "name": "Supported CT Types",
+      "value": "Built-in / External (Optional)"
+    },
+    {
+      "name": "AC Voltage Range",
+      "value": "40.0–300.0V"
+    },
+    {
+      "name": "AC Current Range",
+      "value": "0–100.0A (Resolution: 0.01A)"
+    },
+    {
+      "name": "Frequency Range",
+      "value": "45.0–65.0Hz"
+    },
+    {
+      "name": "Power Factor Range",
+      "value": "0.00–1.00 PF"
+    },
+    {
+      "name": "Active Power Range",
+      "value": "0–45,000W (0–9999.9W: 0.1W resolution; ≥10,000W: 1W resolution)"
+    },
+    {
+      "name": "Energy Consumption Range",
+      "value": "0–99,999 kWh (0–999.99 kWh: 0.01 kWh; 1,000–9,999.9 kWh: 0.1 kWh; ≥10,000 kWh: 1 kWh)"
+    },
+    {
+      "name": "Sampling Speed",
+      "value": "2 Times Per Second"
+    },
+    {
+      "name": "Accuracy",
+      "value": "±1% ±2 Digits"
+    },
+    {
+      "name": "Display",
+      "value": "High-Definition Color LED Screen"
+    },
+    {
+      "name": "Power Failure Memory",
+      "value": "Yes — preserves energy consumption data"
+    },
+    {
+      "name": "Remote Monitoring",
+      "value": "Tuya App — real-time data, daily/monthly/yearly history"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Dimensions",
+      "value": "54 × 80 × 64mm"
+    },
+    {
+      "name": "Weight",
+      "value": "150g"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC"
+    },
+    {
+      "name": "Application",
+      "value": "Homes, Rental Properties, Hotels, Offices, Commercial Buildings"
+    }
+  ],
+  "image": "/images/products/D52-2066-wifi-1.jpg",
+  "images": [
+    "/images/products/D52-2066-wifi-1.jpg",
+    "/images/products/D52-2066-wifi-2.jpg",
+    "/images/products/D52-2066-wifi-3.jpg",
+    "/images/products/D52-2066-wifi-4.jpg",
+    "/images/products/D52-2066-wifi-5.jpg",
+    "/images/products/D52-2066-wifi-6.jpg",
+    "/images/products/D52-2066-wifi-7.jpg",
+    "/images/products/D52-2066-wifi-8.jpg"
+  ],
+  "metaTitle": "D52-2066 WiFi Smart Energy Meter Tuya App 6-in-1 DIN Rail 100A kWh Monitor | Soltree",
+  "metaDescription": "D52-2066 Tuya WiFi smart energy meter — 6-in-1 color display with remote app monitoring, daily/monthly kWh history, power-failure memory. DIN rail, 100A, 40–300V. For homes, rentals, hotels.",
+  "metaKeywords": "Tuya WiFi energy meter DIN rail, smart energy monitor app control, remote kWh meter WiFi, WiFi power meter 100A DIN rail, Tuya smart electricity monitor, rental property energy meter WiFi, hotel energy monitoring DIN rail, 6 in 1 WiFi power meter color display",
+  "imageAlts": [
+    "Soltree D52-2066 Tuya WiFi smart energy meter 6-in-1 DIN rail color display front view",
+    "D52-2066 WiFi energy meter Tuya app showing real-time voltage current kWh on mobile",
+    "D52-2066 smart meter color display showing voltage current power factor kWh frequency",
+    "D52-2066 WiFi energy meter daily monthly yearly consumption history in Tuya app",
+    "D52-2066 Tuya smart meter DIN rail mounting and CT connection wiring",
+    "D52-2066 WiFi energy meter installed in rental property distribution panel",
+    "D52-2066 smart energy monitor 54x80x64mm compact DIN rail footprint",
+    "D52-2066 WiFi meter power failure memory and remote monitoring features"
+  ],
+  "published": true,
+  "sortOrder": 46
+}

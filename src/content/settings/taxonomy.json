@@ -1,0 +1,353 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "slug": "circuit-breaker",
+      "name": "Circuit Breaker",
+      "shortDescription": "Reliable overcurrent and short-circuit protection for LV systems.",
+      "description": "Our circuit breakers deliver dependable protection for low-voltage distribution systems across industrial, commercial, and residential applications. Engineered for long service life and compliance with IEC/EN standards.",
+      "image": "/images/categories/circuit-breaker.png"
+    },
+    {
+      "slug": "surge-protector-device",
+      "name": "Surge Protector Device",
+      "shortDescription": "Transient overvoltage suppression for sensitive equipment.",
+      "description": "Soltree surge protective devices (SPDs) safeguard electrical installations and connected equipment from lightning-induced surges and switching transients, meeting IEC 61643 Type 1/2/3 requirements.",
+      "image": "/images/categories/surge-protector-device.png"
+    },
+    {
+      "slug": "dc-fuse-holder",
+      "name": "DC Fuse Holder",
+      "shortDescription": "Safe and compact fuse mounting for DC circuits up to 1500V.",
+      "description": "Designed for photovoltaic and battery storage systems, our DC fuse holders ensure secure fuse mounting with IP-rated protection, touch-safe operation, and compatibility with standard cylindrical fuses.",
+      "image": "/images/categories/dc-fuse-holder.png"
+    },
+    {
+      "slug": "over-voltage-protector",
+      "name": "Over Voltage Protector",
+      "shortDescription": "Automatic load disconnection against sustained overvoltage.",
+      "description": "Our overvoltage protection relays continuously monitor supply voltage and disconnect loads instantly upon detecting dangerous voltage levels, protecting motors, appliances, and electronic equipment.",
+      "image": "/images/categories/over-voltage-protector.png"
+    },
+    {
+      "slug": "power-meter",
+      "name": "Power Meter",
+      "shortDescription": "Precision energy measurement for industrial and commercial use.",
+      "description": "Multifunction DIN-rail power meters measure voltage, current, power, energy, power factor, and harmonics. Suitable for energy management, cost allocation, and demand monitoring in smart buildings.",
+      "image": "/images/categories/power-meter.png"
+    },
+    {
+      "slug": "wifi-smart-low-voltage-device",
+      "name": "Wifi Smart Low Voltage Device",
+      "shortDescription": "IoT-enabled low-voltage devices for smart building control.",
+      "description": "Integrate low-voltage switching and monitoring into your smart building or energy management platform via Wi-Fi. Compatible with popular home automation protocols and cloud dashboards.",
+      "image": "/images/categories/wifi-smart-low-voltage-device.png"
+    },
+    {
+      "slug": "pv-combiner-box",
+      "name": "PV Combiner Box",
+      "shortDescription": "String combiner solutions for solar PV arrays.",
+      "description": "Our PV combiner boxes consolidate multiple PV string inputs into a single output, incorporating overcurrent protection, surge protection, and DC disconnection for safe and efficient solar installations.",
+      "image": "/images/categories/pv-combiner-box.png"
+    },
+    {
+      "slug": "ats-dual-power-switch",
+      "name": "ATS Dual Power Switch",
+      "shortDescription": "Automatic transfer switching for uninterrupted power supply.",
+      "description": "Automatic Transfer Switches (ATS) provide seamless changeover between two independent power sources, ensuring continuous supply to critical loads. Available for single-phase and three-phase systems.",
+      "image": "/images/categories/ats-dual-power-switch.png"
+    },
+    {
+      "slug": "aerosol-fire-extinguisher",
+      "name": "Aerosol Fire Extinguisher",
+      "shortDescription": "Compact aerosol-based fire suppression for rapid response protection.",
+      "description": "Soltree aerosol fire extinguishers provide fast, effective fire suppression using environmentally friendly aerosol agents. Suitable for electrical cabinets, vehicles, server rooms, and industrial enclosures. No pressure vessel required – –  safe, easy to install, and maintenance-free.",
+      "image": "/images/categories/Aerosol-Fire-Extinguishe.png"
+    }
+  ],
+  "groups": [
+    {
+      "slug": "circuit-protection",
+      "name": "Circuit Protection",
+      "description": "Explore circuit breakers, surge protective devices and voltage protectors for low-voltage electrical systems.",
+      "icon": "M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Zm1 4-4 6h4l-2 4",
+      "items": [
+        {
+          "name": "MCB",
+          "category": "circuit-breaker",
+          "type": "MCB",
+          "slug": "mcb",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        },
+        {
+          "name": "MCCB",
+          "category": "circuit-breaker",
+          "type": "MCCB",
+          "slug": "mccb",
+          "products": {
+            "visible": true,
+            "order": 1
+          },
+          "articles": {
+            "visible": true,
+            "order": 1
+          }
+        },
+        {
+          "name": "RCCB",
+          "category": "circuit-breaker",
+          "type": "RCCB",
+          "slug": "rccb",
+          "products": {
+            "visible": true,
+            "order": 2
+          },
+          "articles": {
+            "visible": true,
+            "order": 2
+          }
+        },
+        {
+          "name": "Surge Protector",
+          "category": "surge-protector-device",
+          "slug": "surge-protector",
+          "products": {
+            "visible": true,
+            "order": 3
+          },
+          "articles": {
+            "visible": true,
+            "order": 3
+          }
+        },
+        {
+          "name": "Voltage Protector",
+          "category": "over-voltage-protector",
+          "slug": "voltage-protector",
+          "products": {
+            "visible": true,
+            "order": 4
+          },
+          "articles": {
+            "visible": true,
+            "order": 4
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 0
+      },
+      "articles": {
+        "visible": true,
+        "order": 0
+      }
+    },
+    {
+      "slug": "switching-isolation",
+      "name": "Switching & Isolation",
+      "description": "Find automatic transfer switches for changeover between power sources.",
+      "icon": "M5 4h14v16H5V4Zm3 5h8M8 15h8M10 7v4m4 2v4",
+      "items": [
+        {
+          "name": "Automatic Transfer Switch",
+          "category": "ats-dual-power-switch",
+          "slug": "automatic-transfer-switch",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 1
+      },
+      "articles": {
+        "visible": true,
+        "order": 1
+      }
+    },
+    {
+      "slug": "solar-pv-components",
+      "name": "Solar PV Components",
+      "description": "Browse DC circuit breakers, DC surge protectors, fuse holders and combiner boxes for solar PV installations.",
+      "icon": "M12 2v2m7 1-2 2M3 5l2 2M2 11h2m16 0h2M8 11a4 4 0 1 1 8 0M6 16h12l3 6H3l3-6Zm6 0v6M5 19h14",
+      "items": [
+        {
+          "name": "DC Circuit Breaker",
+          "category": "circuit-breaker",
+          "type": "DC",
+          "slug": "dc-circuit-breaker",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        },
+        {
+          "name": "DC Surge Protector",
+          "category": "surge-protector-device",
+          "type": "DC",
+          "slug": "dc-surge-protector",
+          "products": {
+            "visible": true,
+            "order": 1
+          },
+          "articles": {
+            "visible": true,
+            "order": 1
+          }
+        },
+        {
+          "name": "DC Fuse Holder",
+          "category": "dc-fuse-holder",
+          "slug": "dc-fuse-holder",
+          "products": {
+            "visible": true,
+            "order": 2
+          },
+          "articles": {
+            "visible": true,
+            "order": 2
+          }
+        },
+        {
+          "name": "PV Combiner Box",
+          "category": "pv-combiner-box",
+          "slug": "pv-combiner-box",
+          "products": {
+            "visible": true,
+            "order": 3
+          },
+          "articles": {
+            "visible": true,
+            "order": 3
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 2
+      },
+      "articles": {
+        "visible": true,
+        "order": 2
+      }
+    },
+    {
+      "slug": "metering-smart-control",
+      "name": "Metering & Smart Control",
+      "description": "Discover power meters and WiFi smart devices for energy monitoring and remote control.",
+      "icon": "M4 4h16v16H4V4Zm4 5h8M8 16v-3m4 3v-5m4 5v-2",
+      "items": [
+        {
+          "name": "Power Meter",
+          "category": "power-meter",
+          "slug": "power-meter",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        },
+        {
+          "name": "WiFi Smart Devices",
+          "category": "wifi-smart-low-voltage-device",
+          "slug": "wifi-smart-devices",
+          "products": {
+            "visible": true,
+            "order": 1
+          },
+          "articles": {
+            "visible": true,
+            "order": 1
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 3
+      },
+      "articles": {
+        "visible": true,
+        "order": 3
+      }
+    },
+    {
+      "slug": "enclosures-boxes",
+      "name": "Enclosures & Boxes",
+      "description": "Explore PV combiner boxes for solar string collection and electrical protection.",
+      "icon": "M5 3h14v18H5V3Zm4 5h6m-6 4h6m-6 4h3m4 0h.01",
+      "items": [
+        {
+          "name": "PV Combiner Box",
+          "category": "pv-combiner-box",
+          "slug": "pv-combiner-box",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 4
+      },
+      "articles": {
+        "visible": true,
+        "order": 4
+      }
+    },
+    {
+      "slug": "fire-suppression",
+      "name": "Fire Suppression",
+      "description": "Discover aerosol fire extinguishers for electrical cabinets and enclosed equipment.",
+      "icon": "M13 3s1 5-3 8c0 0-1-2-1-3-3 3-5 6-3 10 3 6 13 4 13-3 0-4-3-8-6-12Zm-1 10c-3 3-3 6 0 7 3-1 3-4 0-7Z",
+      "items": [
+        {
+          "name": "Aerosol Fire Extinguisher",
+          "category": "aerosol-fire-extinguisher",
+          "slug": "aerosol-fire-extinguisher",
+          "products": {
+            "visible": true,
+            "order": 0
+          },
+          "articles": {
+            "visible": true,
+            "order": 0
+          }
+        }
+      ],
+      "products": {
+        "visible": true,
+        "order": 5
+      },
+      "articles": {
+        "visible": true,
+        "order": 5
+      }
+    }
+  ]
+}

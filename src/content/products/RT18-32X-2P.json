@@ -1,0 +1,125 @@
+{
+  "id": "RT18-32X-2P",
+  "name": "RT18-32X 2P DC Fuse Holder 32A 500V",
+  "slug": "dc-fuse-holder-rt18-32x-2p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Double-pole 32A 500V DC fuse holder for 10x38mm fuse links — simultaneous positive and negative line protection for PV arrays, battery banks, and DC control circuits, with red LED fault indication.",
+  "description": "DC systems differ from AC in one critical way: both the positive and negative conductors carry fault current, which means single-pole fusing leaves a live conductor unprotected during a fault. The Soltree RT18-32X 2P is designed specifically for two-wire DC circuits — protecting both lines simultaneously in a single compact module. It is widely used in photovoltaic string protection, battery bank feeds, DC power supplies, and DC control panels where safe isolation of both conductors is required. Constructed with flame-retardant PVC housing and high-purity copper contacts, it maintains low contact resistance and stable transmission under continuous DC load. Rated at 32A and 500V DC, it accepts standard 10x38mm fuse links. The built-in red LED indicator lights up the moment a fuse blows, pinpointing the fault without tools. A 35mm DIN rail snap-on design and screw terminals allow fast installation in solar inverter cabinets, energy storage enclosures, and DC distribution panels. Note: fuse links are sold separately.",
+  "features": [
+    "Double-pole design — simultaneous positive and negative conductor protection in DC circuits",
+    "Rated 32A / 500V DC — purpose-built for two-wire direct current systems",
+    "Compatible with standard 10x38mm fuse links",
+    "Red LED indicator — instant visual fault detection on either pole",
+    "Flame-retardant PVC housing — safe under DC arc fault conditions",
+    "High-purity copper contacts — low resistance, stable DC transmission",
+    "Snap-on 35mm DIN rail mounting — fast installation in PV and battery enclosures",
+    "Screw terminal block — secure wiring for DC applications",
+    "IP20 touch-safe protection",
+    "Suitable for PV arrays, battery storage, and DC power supplies",
+    "Compliant with IEC 60269 and GB 13539",
+    "Fuse links sold separately"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "DC Fuse Holder Base"
+    },
+    {
+      "name": "Model Number",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "2P (Double Pole)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "32A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Mounting Type",
+      "value": "35mm DIN Rail (TH35)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PVC (V0 Rating)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-purity Copper"
+    },
+    {
+      "name": "Indicator Type",
+      "value": "LED Visual Indicator (Red)"
+    },
+    {
+      "name": "Indicator Function",
+      "value": "Lights up when fuse blows"
+    },
+    {
+      "name": "Connection Type",
+      "value": "Screw terminal block"
+    },
+    {
+      "name": "Wire Capacity",
+      "value": "2.5mm² – 10mm²"
+    },
+    {
+      "name": "Protection Degree",
+      "value": "IP20"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-5°C to +40°C"
+    },
+    {
+      "name": "Standards Compliance",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Application",
+      "value": "PV Systems, Battery Storage, DC Power Supply"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse links NOT included — sold separately"
+    }
+  ],
+  "image": "/images/products/RT18-32X-2P-1.jpg",
+  "images": [
+    "/images/products/RT18-32X-2P-1.jpg",
+    "/images/products/RT18-32X-2P-2.jpg",
+    "/images/products/RT18-32X-2P-3.jpg",
+    "/images/products/RT18-32X-2P-4.jpg",
+    "/images/products/RT18-32X-2P-5.jpg",
+    "/images/products/RT18-32X-2P-6.jpg",
+    "/images/products/RT18-32X-2P-7.jpg"
+  ],
+  "metaTitle": "RT18-32X 2P DC Fuse Holder 32A 500V DIN Rail | Soltree",
+  "metaDescription": "RT18-32X 2P DC fuse holder 32A 500V for 10x38mm fuses. Dual-pole positive and negative protection for PV arrays, battery banks, and DC circuits. LED fault indicator, CE & RoHS.",
+  "metaKeywords": "RT18-32X 2P DC fuse holder, double pole DC fuse holder 32A, 10x38mm DC fuse base, PV string fuse holder, battery storage fuse holder 500V DC, solar fuse holder DIN rail, DC circuit fuse protection",
+  "imageAlts": [
+    "Soltree RT18-32X 2P double-pole DC fuse holder 32A 500V front view",
+    "RT18-32X 2P DC fuse holder side profile with DIN rail clip",
+    "RT18-32X 2P DC fuse holder red LED indicator close-up",
+    "RT18-32X 2P DC fuse holder screw terminal wiring detail",
+    "RT18-32X 2P DC fuse holder installed in PV solar panel junction box",
+    "RT18-32X 2P DC fuse holder with 10x38mm fuse link",
+    "RT18-32X 2P DC fuse holder product dimensions drawing"
+  ],
+  "published": true,
+  "sortOrder": 21
+}

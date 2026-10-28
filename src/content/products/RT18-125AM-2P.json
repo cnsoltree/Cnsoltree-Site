@@ -1,0 +1,124 @@
+{
+  "id": "RT18-125AM-2P",
+  "name": "RT18-125AM 2P DIN Rail Fuse Holder 125A 690V",
+  "slug": "dc-fuse-holder-rt18-125am-2p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Double-pole 125A 690V DIN rail fuse holder for Φ22×58mm fuse links — simultaneous line + neutral disconnection, compliant with IEC 60364 / BS 7671 double-pole protection requirements, ideal for TT earthing systems and outdoor circuits.",
+  "description": "Certain installations demand more than single-pole fuse protection — TT earthing systems, bathroom circuits, outdoor distribution boards and any project governed by IEC 60364 or BS 7671 all require double-pole disconnection on the live and neutral conductors simultaneously. The Soltree RT18-125AM 2P is built precisely for these applications. By fusing both line and neutral in a single 70mm-wide (2-module) housing, it satisfies the regulatory requirement for complete single-phase isolation without additional switching components. The flame-retardant housing integrates thickened copper conductors (conductivity >98%), keeping contact resistance below 5mΩ and transmission efficiency above 99.5%. Rated 125A / 690V, it takes standard Φ22×58mm cylindrical fuse links (63A / 80A / 100A / 125A, sold separately) and snaps onto any 35mm DIN rail. A yellow indicator window on each pole gives independent per-conductor status at a glance, while oversized terminals and premium screws ensure vibration-proof connections in demanding environments. Every unit passes 100% electrical testing at our ISO 9001 certified facility before shipment. Note: fuse links are NOT included.",
+  "features": [
+    "Dual-pole design — simultaneous line + neutral fuse protection in one unit",
+    "Complies with IEC 60364 / BS 7671 double-pole protection requirements",
+    "Rated 125A / 690V — handles demanding single-phase industrial loads",
+    "Fits standard Φ22×58mm cylindrical fuse links — globally sourced spares",
+    "Thickened copper conductors, conductivity >98% — efficient power transmission",
+    "Contact resistance <5mΩ, current transmission efficiency >99.5% — minimal heat loss",
+    "Yellow fuse status indicator window on each pole — instant visual fault diagnosis",
+    "2-module 70mm wide, 35mm DIN rail clip mounting — fast deployment",
+    "Flame-retardant, high-temperature resistant insulated housing — safe under fault conditions",
+    "Oversized wiring terminals + premium screws — secure, vibration-resistant connections",
+    "CE & RoHS certified — accepted in EU, UK, and global markets",
+    "OEM / ODM customization available — logo, label, packaging",
+    "15-year ISO 9001 certified factory, 200+ projects delivered in 10+ countries"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "RT18-125AM"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "2P (Double Pole)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "125A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "690V"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "Φ22×58mm"
+    },
+    {
+      "name": "Optional Fuse Ratings",
+      "value": "63A / 80A / 100A / 125A (sold separately)"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse link NOT included — purchased separately"
+    },
+    {
+      "name": "Housing Material",
+      "value": "High Flame-Retardant & High-Temperature Resistant Insulated Material"
+    },
+    {
+      "name": "Conductor Material",
+      "value": "Thickened Copper"
+    },
+    {
+      "name": "Conductivity",
+      "value": ">98%"
+    },
+    {
+      "name": "Contact Resistance",
+      "value": "<5mΩ"
+    },
+    {
+      "name": "Current Transmission Efficiency",
+      "value": ">99.5%"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "35mm Standard DIN Rail"
+    },
+    {
+      "name": "Product Dimensions",
+      "value": "70mm (W) × 127mm (H) × 76mm (D)"
+    },
+    {
+      "name": "Fuse Indication",
+      "value": "Yellow Status Indicator Window (per pole)"
+    },
+    {
+      "name": "Wiring Design",
+      "value": "Large Wiring Terminals + High-Quality Screws"
+    },
+    {
+      "name": "Safety Features",
+      "value": "Flame Retardant, High-Temperature Resistant, Safe Insulation"
+    },
+    {
+      "name": "Application",
+      "value": "TT Earthing Systems, Outdoor Circuits, Bathroom Installations, Double-Pole Compliance Boards"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/RT18-125AM-2p-1.jpg",
+  "images": [
+    "/images/products/RT18-125AM-2p-1.jpg",
+    "/images/products/RT18-125AM-2p-2.jpg",
+    "/images/products/RT18-125AM-2p-3.jpg",
+    "/images/products/RT18-125AM-2p-4.jpg",
+    "/images/products/RT18-125AM-2p-5.jpg",
+    "/images/products/RT18-125AM-2p-6.jpg"
+  ],
+  "metaTitle": "RT18-125AM 2P Fuse Holder 125A 690V Double-Pole DIN Rail | Soltree",
+  "metaDescription": "RT18-125AM 2P double-pole DIN rail fuse holder 125A 690V — simultaneous line + neutral fuse protection, IEC 60364 / BS 7671 compliant. For TT earthing & outdoor circuits. CE & RoHS, OEM available.",
+  "metaKeywords": "RT18-125AM 2P fuse holder, double pole fuse holder 125A, line neutral fuse protection, IEC 60364 fuse holder, BS 7671 double pole fuse base, TT earthing fuse holder, outdoor circuit fuse holder 690V, 2P cylindrical fuse base",
+  "imageAlts": [
+    "Soltree RT18-125AM 2P double pole DIN rail fuse holder 125A 690V front view",
+    "RT18-125AM 2P fuse holder side profile with DIN rail clip",
+    "RT18-125AM 2P fuse holder dual yellow fuse status indicator windows close-up",
+    "RT18-125AM 2P fuse holder wiring terminals and screw detail",
+    "RT18-125AM 2P fuse holder installed on 35mm DIN rail in distribution box",
+    "RT18-125AM 2P fuse holder product dimensions 70x127x76mm drawing"
+  ],
+  "published": true,
+  "sortOrder": 29
+}

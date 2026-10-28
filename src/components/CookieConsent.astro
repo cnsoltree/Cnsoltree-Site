@@ -1,0 +1,38 @@
+<div data-cookie-banner hidden class="fixed inset-x-0 bottom-0 z-50 p-4 sm:p-6">
+  <div class="mx-auto flex max-w-3xl flex-col gap-3 rounded-xl border border-gray-200 bg-white px-5 py-4 shadow-lg sm:flex-row sm:items-center sm:gap-5">
+    <p class="flex-1 text-sm leading-relaxed text-gray-600">
+      We use cookies to improve your experience. By continuing to visit this site you agree to our
+      use of cookies.{' '}
+      <a href="/privacy" class="text-green-700 underline">
+        Privacy Policy
+      </a>
+    </p>
+    <div class="flex shrink-0 gap-2">
+      <button type="button" data-consent="declined" class="btn-outline">
+        Decline
+      </button>
+      <button type="button" data-consent="accepted" class="btn-primary">
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const banner = document.querySelector<HTMLElement>('[data-cookie-banner]');
+    if (!banner) return;
+    try {
+      banner.hidden = Boolean(localStorage.getItem('cookie-consent'));
+    } catch {
+      banner.hidden = false;
+    }
+    banner.querySelectorAll<HTMLElement>('[data-consent]').forEach((button) =>
+      button.addEventListener('click', () => {
+        try {
+          localStorage.setItem('cookie-consent', button.dataset.consent!);
+        } catch {}
+        banner.hidden = true;
+      }),
+    );
+  });
+</script>

@@ -1,0 +1,101 @@
+{
+  "id": "SPD-AC-4P-Grey",
+  "name": "4P AC Surge Protector 385V 40kA - Full Mode Three-Phase+N SPD for Factory, Data Center & Large Buildings",
+  "slug": "spd-ac-4p-385v-40ka-three-phase-neutral-full-mode",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "4-pole 385VAC full-mode surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection in one unit. 40kA max discharge, – .5kV, <25ns response – for factory main cabinets, data centers and large building entry panels.",
+  "description": "The SPD-AC-4P-Grey is a 4-pole AC surge protection device providing complete full-mode protection across all four conductors – L1-PE, L2-PE, L3-PE and N-PE – in three-phase 4-wire TT and TN-S low-voltage systems. By covering all three phases and the neutral line simultaneously, it shields three-phase electrical devices, precision instruments, and the neutral conductor from surge transients caused by lightning or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is – .5kV per mode. A metal oxide varistor (MOV) core responds in under 25 nanoseconds for instantaneous clamping of transient overvoltages. The grey flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and features a modular, hot-swappable design for easy on-site maintenance. Designed for the highest level of entry-point protection in factory main distribution cabinets, data centers, and large commercial building entry panels.",
+  "features": [
+    "4-pole full-mode protection: L1-PE, L2-PE, L3-PE and N-PE in one unit",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level – .5kV – covers all phases and neutral",
+    "<25ns ultra-fast response time – instantaneous transient suppression",
+    "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+    "Compatible with TT and TN-S three-phase 4-wire low-voltage systems",
+    "Modular hot-swappable design – individual module replacement without rewiring",
+    "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": " – .5kV"
+    },
+    {
+      "name": "System Type",
+      "value": "Three-phase 4-wire Low-voltage System (TT / TN-S)"
+    },
+    {
+      "name": "Protection Mode",
+      "value": "L1-PE, L2-PE, L3-PE, N-PE (Full Mode)"
+    },
+    {
+      "name": "Wiring",
+      "value": "3 Phase Lines (L1, L2, L3) + Neutral (N)"
+    },
+    {
+      "name": "Core Component",
+      "value": "Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Response Time",
+      "value": "<25ns"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0), Grey"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Design",
+      "value": "Modular, Hot-swappable"
+    },
+    {
+      "name": "Applications",
+      "value": "Factory Main Cabinet, Data Center, Large Building Entry Panel"
+    }
+  ],
+  "image": "/images/products/SPD-AC-4P-Grey-1.jpg",
+  "images": [
+    "/images/products/SPD-AC-4P-Grey-1.jpg",
+    "/images/products/SPD-AC-4P-Grey-2.jpg",
+    "/images/products/SPD-AC-4P-Grey-3.jpg",
+    "/images/products/SPD-AC-4P-Grey-4.jpg",
+    "/images/products/SPD-AC-4P-Grey-5.jpg",
+    "/images/products/SPD-AC-4P-Grey-6.jpg",
+    "/images/products/SPD-AC-4P-Grey-7.jpg"
+  ],
+  "metaTitle": "4P SPD 385V 40kA Full Mode | Three-Phase+N AC Surge Protector | Soltree",
+  "metaDescription": "4-pole 385VAC full-mode AC surge protector for TT/TN-S three-phase 4-wire systems. L1-PE, L2-PE, L3-PE and N-PE protection. 40kA max discharge, – .5kV, <25ns response. For factory cabinets, data centers and large buildings.",
+  "metaKeywords": "4P AC surge protector, three-phase neutral SPD, full mode SPD, TT TN-S SPD, 385V 4 pole SPD, 40kA SPD, factory cabinet SPD, data center SPD, large building SPD, DIN rail surge protector",
+  "imageAlts": [
+    "SPD-AC-4P-Grey 4-pole AC surge protector front view – grey three-phase+N DIN rail SPD",
+    "SPD-AC-4P-Grey wiring diagram – L1 L2 L3 phase lines and Neutral connection",
+    "SPD-AC-4P-Grey full-mode protection paths – L1-PE L2-PE L3-PE and N-PE",
+    "SPD-AC-4P-Grey MOV core component detail – metal oxide varistor",
+    "SPD-AC-4P-Grey 385V 40kA four-pole surge protection module close-up",
+    "SPD-AC-4P-Grey modular hot-swappable design on 35mm DIN rail",
+    "SPD-AC-4P-Grey installed in factory main distribution cabinet"
+  ],
+  "published": true,
+  "sortOrder": 11
+}
