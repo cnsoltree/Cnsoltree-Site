@@ -334,14 +334,30 @@ const jsFiles = fs.readdirSync(path.join(root, '_astro')).filter((file) => file.
 const clientJs = jsFiles
   .map((file) => fs.readFileSync(path.join(root, '_astro', file), 'utf8'))
   .join('\n');
+// The authenticated editor may use Decap/React; public pages keep their small native scripts.
+const publicScripts = new Set();
+const visitScript = (filename) => {
+  if (publicScripts.has(filename)) return;
+  assert(filename.startsWith(root + path.sep), 'Public script must stay inside the static output.');
+  publicScripts.add(filename);
+  const source = fs.readFileSync(filename, 'utf8');
+  for (const match of source.matchAll(/\b(?:from\s*|import\s*\(\s*)["'](\.?\/[^"']+\.js)["']/g))
+    visitScript(path.resolve(path.dirname(filename), match[1]));
+};
+for (const file of htmlFiles)
+  for (const match of fs
+    .readFileSync(file, 'utf8')
+    .matchAll(/<script\b[^>]*\bsrc="(\/_astro\/[^"?]+\.js)"/g))
+    visitScript(path.join(root, match[1]));
+const publicJs = [...publicScripts].map((filename) => fs.readFileSync(filename, 'utf8')).join('\n');
 assert(
-  !clientJs.includes('react-dom') && !clientJs.includes('react.production'),
+  !publicJs.includes('react-dom') && !publicJs.includes('react.production'),
   'Unexpected React runtime',
 );
 if (fs.existsSync('.env.local'))
   for (const line of fs.readFileSync('.env.local', 'utf8').split('\n')) {
     const match = line.match(
-      /^(RESEND_API_KEY|SUPABASE_SERVICE_ROLE_KEY|SEO_OPENAI_API_KEY)=(.*)$/,
+      /^(RESEND_API_KEY|SUPABASE_SERVICE_ROLE_KEY|SEO_OPENAI_API_KEY|ADMIN_GITHUB_TOKEN)=(.*)$/,
     );
     if (!match) continue;
     const value = match[2].trim().replace(/^['"]|['"]$/g, '');
@@ -355,5 +371,5 @@ console.log(
   `PASS: ${routes.length} pages, ${products.length} products, ${blogPosts.length} articles, ${productGroups.length} product groups, zero broken local links/assets, safe form validation, no React runtime or client secrets.`,
 );
 console.log(
-  `External client JavaScript: ${Buffer.byteLength(clientJs)} bytes across ${jsFiles.length} files (before compression; inline feature scripts excluded).`,
+  `Public external JavaScript: ${Buffer.byteLength(publicJs)} bytes across ${publicScripts.size} files (before compression; admin-only bundles excluded).`,
 );

@@ -1,7 +1,13 @@
-import { allProductGroups, allArticleGroups, categories } from '../lib/taxonomy';
+import {
+  allProductGroups,
+  allArticleGroups,
+  categories,
+  validateTaxonomy,
+  getTaxonomyGroups,
+} from '../lib/taxonomy';
 
-function categoryOptions(groups: typeof allProductGroups) {
-  const active = new Map(categories.map((category) => [category.slug, category]));
+function categoryOptions(groups: typeof allProductGroups, activeCategories = categories) {
+  const active = new Map(activeCategories.map((category) => [category.slug, category]));
   const families = new Map<string, string[]>();
   for (const group of groups) {
     if (group.deletedAt) continue;
@@ -89,6 +95,7 @@ const list = (name: string, label: string, field?: object | null) => ({
 export const categoryNames: Record<string, string> = Object.fromEntries(
   categories.map((category) => [category.slug, category.name]),
 );
+let previewFamilies = allProductGroups;
 
 export const cmsConfig = {
   backend: { name: 'git-gateway' },
@@ -306,5 +313,61 @@ export const cmsConfig = {
 
 // Used in preview labels without fetching the public catalog or embedding content in admin JS.
 export const familyName = (categorySlug: string) =>
-  allProductGroups.find((group) => group.items.some((item) => item.category === categorySlug))
+  previewFamilies.find((group) => group.items.some((item) => item.category === categorySlug))
     ?.name ?? '';
+
+/** Fetch online taxonomy before CMS.init so newly added cloud categories are selectable immediately. */
+export function configureOnlineCms(input: unknown, origin: string) {
+  const taxonomy = validateTaxonomy(input);
+  const activeCategories = taxonomy.categories.filter((category) => !category.deletedAt);
+  const productFamilies = getTaxonomyGroups(taxonomy, 'products', false);
+  const articleFamilies = getTaxonomyGroups(taxonomy, 'articles', false);
+  previewFamilies = productFamilies.filter((group) => !group.deletedAt);
+  for (const key of Object.keys(categoryNames)) delete categoryNames[key];
+  Object.assign(
+    categoryNames,
+    Object.fromEntries(activeCategories.map((category) => [category.slug, category.name])),
+  );
+  Object.assign(cmsConfig.backend, {
+    name: 'soltree-online',
+    proxy_url: '/api/admin/proxy',
+    branch: 'main',
+  });
+  const runtimeConfig: Record<string, unknown> = cmsConfig;
+  delete runtimeConfig.local_backend;
+  cmsConfig.site_url = cmsConfig.display_url = new URL(origin).origin;
+  publication.label = '前台显示（发布到网站后生效）';
+  publication.hint =
+    '关闭时作为草稿保存，不进入公开页面。保存到云端后，点击顶部“发布到网站”更新正式网站。';
+  const typeOptions = [
+    ...new Set(
+      previewFamilies.flatMap((group) =>
+        group.items
+          .filter(
+            (item) =>
+              !item.deletedAt &&
+              activeCategories.some((category) => category.slug === item.category),
+          )
+          .flatMap((item) => (item.type ? [item.type] : [])),
+      ),
+    ),
+  ];
+  for (const collection of cmsConfig.collections) {
+    for (const filter of collection.view_filters)
+      filter.label = filter.pattern ? '已选入网站发布' : '草稿 / 未选入发布';
+    for (const definition of collection.fields) {
+      const field = definition as Record<string, unknown>;
+      if (
+        ['categorySlug', 'additionalCategorySlugs', 'relatedCategorySlug'].includes(
+          String(field.name),
+        )
+      )
+        field.options = categoryOptions(
+          collection.name === 'articles' ? articleFamilies : productFamilies,
+          activeCategories,
+        );
+      if (['productTypes', 'relatedProductTypes'].includes(String(field.name)))
+        field.options = typeOptions;
+    }
+  }
+}

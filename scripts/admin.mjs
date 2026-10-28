@@ -5,6 +5,7 @@ import { spawn } from 'node:child_process';
 import { createConnection } from 'node:net';
 import { syncMedia } from './sync-media.mjs';
 import { backupContent } from './content-backup.mjs';
+import './sync-admin-assets.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 process.chdir(root);

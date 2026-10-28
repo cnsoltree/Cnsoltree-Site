@@ -1,0 +1,359 @@
+---
+import { onlineAdminEnabled } from '@/lib/admin-server';
+export const prerender = false;
+if (!import.meta.env.DEV && !onlineAdminEnabled())
+  return new Response('Not found', { status: 404 });
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+Astro.response.headers.set('Cache-Control', 'no-store');
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>登录内容后台 · Soltree</title>
+  </head>
+  <body>
+    <main class="admin-login">
+      <section class="login-brand" aria-label="Soltree 内容管理">
+        <a href="/" aria-label="返回 Soltree 网站">
+          <img src="/images/logo.png" width="236" height="40" alt="Soltree" />
+        </a>
+        <span class="brand-label">CONTENT WORKSPACE</span>
+        <h1>
+          用好内容，
+          <br />
+          让客户找到你。
+        </h1>
+        <p>
+          集中维护产品、文章与知识资料，
+          <br class="desktop-break" />
+          按自己的节奏更新网站。
+        </p>
+        <div class="brand-decoration" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+      <section class="login-card" aria-labelledby="login-title">
+        <div class="login-heading">
+          <span class="login-eyebrow">SOLTREE</span>
+          <h2 id="login-title">欢迎回来</h2>
+          <p>登录你的内容工作区</p>
+        </div>
+        <form data-admin-login aria-busy="false">
+          <label for="admin-email">登录邮箱</label>
+          <input
+            id="admin-email"
+            type="email"
+            name="email"
+            value="jacky@cnsoltree.com"
+            autocomplete="username"
+            inputmode="email"
+            maxlength="254"
+            spellcheck="false"
+            required
+          />
+          <label for="admin-password">密码</label>
+          <div class="password-field">
+            <input
+              id="admin-password"
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              maxlength="1024"
+              required
+            />
+            <button
+              type="button"
+              data-login-password-toggle
+              aria-label="显示密码"
+              aria-pressed="false"
+            >
+              <svg
+                width="19"
+                height="19"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"
+              >
+                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" />
+                <circle cx="12" cy="12" r="2.5" />
+              </svg>
+            </button>
+          </div>
+          <p class="login-error" data-login-error role="alert" hidden></p>
+          <button class="login-submit" type="submit" data-login-submit>
+            登录后台 <span aria-hidden="true">→</span>
+          </button>
+          <p class="login-feedback" data-login-feedback role="status" aria-live="polite"></p>
+        </form>
+        <p class="login-note">此入口仅供已授权的管理账号使用。</p>
+        <a class="login-home" href="/">
+          ← 返回网站
+        </a>
+        <noscript>
+          <p class="login-error">请启用 JavaScript 后登录后台。</p>
+        </noscript>
+      </section>
+    </main>
+    <script>
+      import '../../admin/login.js';
+    </script>
+  </body>
+</html>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 24% 25%, #dff5e9, transparent 46%),
+      linear-gradient(120deg, #edf2fc, #eff6f6);
+    color: #294538;
+    font-family: Inter, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+  :global(*) {
+    box-sizing: border-box;
+  }
+  .admin-login {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    align-items: center;
+    gap: 90px;
+    width: min(1040px, calc(100% - 80px));
+    min-height: 100dvh;
+    padding: 55px 0;
+    margin: auto;
+  }
+  .login-brand > a {
+    display: inline-flex;
+    margin-bottom: 55px;
+  }
+  .login-brand img {
+    width: 236px;
+    max-width: 100%;
+    height: auto;
+  }
+  .brand-label {
+    display: block;
+    color: #358c68;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+  }
+  .login-brand h1 {
+    margin: 19px 0;
+    color: #264f39;
+    font-size: clamp(34px, 4vw, 46px);
+    letter-spacing: -0.04em;
+    line-height: 1.5;
+    font-weight: 650;
+  }
+  .login-brand p {
+    margin: 0;
+    color: #658170;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .brand-decoration {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    height: 78px;
+    margin-top: 35px;
+    opacity: 0.72;
+  }
+  .brand-decoration span {
+    display: block;
+    width: 28px;
+    height: 34px;
+    border: 1px solid #aad9bf;
+    border-radius: 8px;
+    background: linear-gradient(160deg, #e6f6e7, #c5ead8);
+    transform: skewY(-10deg);
+  }
+  .brand-decoration span:nth-child(2) {
+    height: 56px;
+  }
+  .brand-decoration span:nth-child(3) {
+    height: 74px;
+  }
+  .login-card {
+    padding: 37px 35px 30px;
+    border: 1px solid #fff;
+    border-radius: 24px;
+    background: #ffffffc9;
+    box-shadow: 0 20px 80px #4979600a;
+  }
+  .login-eyebrow {
+    color: #378767;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+  }
+  .login-heading h2 {
+    margin: 13px 0 7px;
+    color: #294d38;
+    font-size: 27px;
+    letter-spacing: -0.04em;
+  }
+  .login-heading p {
+    margin: 0 0 30px;
+    color: #728779;
+    font-size: 12px;
+  }
+  form {
+    display: grid;
+  }
+  label {
+    margin: 0 0 9px;
+    color: #536e5f;
+    font-size: 12px;
+  }
+  input {
+    width: 100%;
+    height: 44px;
+    padding: 11px 12px;
+    border: 1px solid #dce8df;
+    border-radius: 8px;
+    background: #fff;
+    color: #3d5c4b;
+    font: inherit;
+    font-size: 13px;
+  }
+  #admin-email {
+    margin-bottom: 21px;
+  }
+  .password-field {
+    position: relative;
+  }
+  .password-field input {
+    padding-right: 45px;
+  }
+  .password-field button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #718c7b;
+    cursor: pointer;
+  }
+  .password-field button:hover {
+    background: #f0f8f2;
+  }
+  .login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    padding: 12px 17px;
+    margin-top: 25px;
+    border: 1px solid #1b9068;
+    border-radius: 9px;
+    background: #1b9068;
+    color: #fff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .login-submit:hover {
+    background: #167d5a;
+  }
+  .login-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+  }
+  .login-error {
+    margin: 15px 0 0;
+    padding: 11px 12px;
+    border: 1px solid #efd8cf;
+    border-radius: 7px;
+    background: #fff2ed;
+    color: #a96554;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .login-error[hidden] {
+    display: none;
+  }
+  .login-feedback {
+    margin: 10px 0 0;
+    color: #397f5b;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .login-feedback:empty {
+    margin: 0;
+  }
+  .login-note {
+    margin: 23px 0 19px;
+    color: #788b7d;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .login-home {
+    color: #58836a;
+    font-size: 11px;
+    text-decoration: none;
+  }
+  :is(a, button, input):focus-visible {
+    outline: 2px solid #64b998;
+    outline-offset: 3px;
+  }
+  @media (max-width: 900px) {
+    .admin-login {
+      width: min(760px, calc(100% - 48px));
+      grid-template-columns: minmax(0, 1fr) 370px;
+      gap: 35px;
+    }
+    .login-card {
+      padding: 30px 27px;
+    }
+    .login-brand h1 {
+      font-size: 33px;
+    }
+    .login-brand img {
+      width: 200px;
+    }
+  }
+  @media (max-width: 680px) {
+    .admin-login {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      width: min(420px, calc(100% - 36px));
+      gap: 26px;
+      padding: 32px 0;
+    }
+    .login-brand > a {
+      margin: 0;
+    }
+    .login-brand img {
+      width: 185px;
+    }
+    .brand-label,
+    .login-brand h1,
+    .login-brand p,
+    .brand-decoration {
+      display: none;
+    }
+    .login-card {
+      padding: 31px 26px;
+      border-radius: 20px;
+    }
+  }
+</style>

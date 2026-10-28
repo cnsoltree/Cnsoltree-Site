@@ -1,0 +1,300 @@
+---
+interface Props {
+  email: string;
+}
+const { email } = Astro.props;
+---
+
+<section
+  class="online-publish"
+  data-online-publish
+  data-email={email}
+  aria-label="云端保存与网站发布"
+  hidden
+>
+  <details class="publish-details" data-publish-details>
+    <summary>
+      <span class="publish-dot" aria-hidden="true"></span>
+      <span data-publish-summary>发布状态</span>
+      <span aria-hidden="true">⌄</span>
+    </summary>
+    <div class="publish-popover">
+      <h2>保存与发布</h2>
+      <dl>
+        <div>
+          <dt>云端保存</dt>
+          <dd data-publish-cloud>本次会话暂无保存记录</dd>
+        </div>
+        <div>
+          <dt>网站发布</dt>
+          <dd data-publish-state>正在读取…</dd>
+        </div>
+      </dl>
+      <p data-publish-message role="status" aria-live="polite">
+        保存到云端后，点击发布更新正式网站。
+      </p>
+      <p class="publish-error" data-publish-error role="alert" hidden></p>
+      <a class="publish-login" href="/admin/login" data-publish-login hidden>
+        重新登录
+      </a>
+      <div class="publish-popover-actions">
+        <button type="button" data-publish-refresh>
+          检查状态
+        </button>
+        <a href="/" target="_blank" rel="noopener noreferrer" data-publish-site>
+          查看当前网站 ↗
+        </a>
+      </div>
+    </div>
+  </details>
+  <button type="button" class="publish-trigger" data-publish-open>
+    发布到网站
+  </button>
+  <div class="publish-account">
+    <span title={email}>{email}</span>
+    <button type="button" data-admin-logout>
+      退出登录
+    </button>
+  </div>
+  <dialog class="publish-dialog" data-publish-dialog aria-labelledby="publish-dialog-title">
+    <h2 id="publish-dialog-title">发布到正式网站？</h2>
+    <p>仅发布已保存到云端且开启前台显示的内容；尚未保存的编辑不会包含。是否继续？</p>
+    <p class="publish-error" data-publish-dialog-error role="alert" hidden></p>
+    <div class="publish-dialog-actions">
+      <button type="button" data-publish-cancel autofocus>
+        取消
+      </button>
+      <button type="button" class="publish-confirm" data-publish-confirm>
+        确认发布
+      </button>
+    </div>
+  </dialog>
+</section>
+<script>
+  import './online-publish.js';
+</script>
+
+<style>
+  .online-publish {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    color: #577464;
+    font: inherit;
+    font-size: 12px;
+  }
+  .online-publish[hidden],
+  [hidden] {
+    display: none !important;
+  }
+  .publish-details {
+    position: relative;
+  }
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #647f70;
+    font-size: 11px;
+    cursor: pointer;
+    list-style: none;
+    white-space: nowrap;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .publish-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #8aa999;
+  }
+  .online-publish[data-status='queued'] .publish-dot,
+  .online-publish[data-status='building'] .publish-dot {
+    background: #d1ae63;
+  }
+  .online-publish[data-status='ready'] .publish-dot {
+    background: #31aa80;
+  }
+  .online-publish[data-status='error'] .publish-dot {
+    background: #d07a6b;
+  }
+  .publish-popover {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: -45px;
+    width: min(355px, calc(100vw - 30px));
+    padding: 21px;
+    border: 1px solid #e1eee5;
+    border-radius: 13px;
+    background: #fafffc;
+    box-shadow: 0 14px 50px #3e6b4e1f;
+    white-space: normal;
+  }
+  .publish-popover h2,
+  .publish-dialog h2 {
+    margin: 0 0 16px;
+    color: #345b43;
+    font-size: 16px;
+  }
+  dl {
+    display: grid;
+    gap: 11px;
+    margin: 0 0 15px;
+  }
+  dl > div {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: start;
+  }
+  dt {
+    flex-shrink: 0;
+    color: #70887a;
+    font-size: 11px;
+  }
+  dd {
+    margin: 0;
+    color: #42654e;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: right;
+  }
+  .publish-popover p {
+    margin: 0;
+    color: #647e6d;
+    font-size: 11px;
+    line-height: 1.9;
+  }
+  .publish-popover-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .publish-popover-actions :is(button, a),
+  .publish-account button,
+  .publish-login {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #318664;
+    font: inherit;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .publish-trigger {
+    min-height: 34px;
+    padding: 8px 12px;
+    border: 1px solid #249872;
+    border-radius: 8px;
+    background: #249872;
+    color: #fff;
+    font: inherit;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .publish-account {
+    display: grid;
+    gap: 5px;
+    max-width: 150px;
+    font-size: 10px;
+  }
+  .publish-account > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .publish-account button {
+    text-align: left;
+  }
+  .publish-dialog {
+    width: min(430px, calc(100% - 36px));
+    padding: 27px;
+    border: 1px solid #fff;
+    border-radius: 17px;
+    background: #f7fcf8;
+    color: #617966;
+    box-shadow: 0 20px 80px #264b4b30;
+  }
+  .publish-dialog::backdrop {
+    background: #263e4155;
+    backdrop-filter: blur(3px);
+  }
+  .publish-dialog p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+  .publish-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 11px;
+    margin-top: 23px;
+  }
+  .publish-dialog-actions button {
+    padding: 9px 14px;
+    border: 1px solid #d9e7dd;
+    border-radius: 7px;
+    background: #fff;
+    color: #627d6b;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .publish-dialog-actions .publish-confirm {
+    border-color: #249872;
+    background: #249872;
+    color: #fff;
+  }
+  .publish-popover .publish-error,
+  .publish-dialog .publish-error {
+    margin-top: 13px;
+    padding: 10px 12px;
+    border: 1px solid #efd5cb;
+    border-radius: 6px;
+    background: #fff1ec;
+    color: #a36250;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .publish-login {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  :is(button, a, summary):focus-visible {
+    outline: 2px solid #6ac09e;
+    outline-offset: 3px;
+  }
+  @media (max-width: 1100px) {
+    .publish-account > span {
+      display: none;
+    }
+  }
+  @media (max-width: 750px) {
+    .online-publish {
+      gap: 10px;
+    }
+    summary > [data-publish-summary] {
+      max-width: 68px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .publish-trigger {
+      padding: 8px 9px;
+      font-size: 11px;
+    }
+    .publish-popover {
+      right: -125px;
+    }
+  }
+</style>

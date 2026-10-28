@@ -1,21 +1,33 @@
 ---
 import ArticleDetail from '@/components/ArticleDetail.astro';
 import { categories, type BlogPost } from '@/lib/data';
+import { onlineAdminEnabled, requireAdmin } from '@/lib/admin-server';
+import { getCloudRecord } from '@/lib/admin-content';
 
 export const prerender = false;
-if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
+if (!import.meta.env.DEV) {
+  if (!onlineAdminEnabled()) return new Response('Not found', { status: 404 });
+  try {
+    await requireAdmin(Astro);
+  } catch {
+    return Astro.redirect('/admin/login', 303);
+  }
+}
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
 Astro.response.headers.set('Cache-Control', 'no-store');
 const records = import.meta.glob('../../../content/articles/*.json', {
   eager: true,
   import: 'default',
 });
-const record = Object.values(records).find(
+const localRecord = Object.values(records).find(
   (value) =>
     value &&
     typeof value === 'object' &&
     (value as Record<string, unknown>).slug === Astro.params.slug,
 ) as Record<string, unknown> | undefined;
+const record = import.meta.env.DEV
+  ? localRecord
+  : await getCloudRecord('articles', Astro.params.slug ?? '');
 if (!record || record.deletedAt) return new Response('Article not found', { status: 404 });
 const text = (key: string) => (typeof record[key] === 'string' ? (record[key] as string) : '');
 const strings = (key: string) =>

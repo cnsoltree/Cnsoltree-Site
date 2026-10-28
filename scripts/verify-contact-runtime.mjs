@@ -27,6 +27,10 @@ const envModule = moduleUrl(`export const getSecret = key => {
 const helperModule = moduleUrl(compile(helper, 'contact.ts'));
 const compiled = compile(source, fileURLToPath(routeFile))
   .replace(/(['"])@\/lib\/contact\1/g, JSON.stringify(helperModule))
+  .replace(
+    /(['"])@\/lib\/supabase\.mjs\1/g,
+    JSON.stringify(new URL('src/lib/supabase.mjs', root).href),
+  )
   .replace(/(['"])astro:env\/server\1/g, JSON.stringify(envModule));
 assert(!compiled.includes('locals.runtime'), 'The handler must not depend on Cloudflare locals');
 const { POST, GET, prerender } = await import(moduleUrl(compiled));

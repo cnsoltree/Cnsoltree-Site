@@ -12,3 +12,4 @@ package-lock.json
 public/
 src/assets/
 AGENTS.md
+src/admin/image-index.json

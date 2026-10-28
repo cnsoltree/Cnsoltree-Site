@@ -4,7 +4,7 @@ The current Soltree Next.js content and product catalog, migrated into native As
 
 ## Local use
 
-The local Chinese product/article CMS is available at `http://127.0.0.1:4323/admin` after `npm run admin` (or double-click `启动内容后台.cmd`). See [后台使用说明.md](./后台使用说明.md). The CMS uses pinned Decap packages and local JSON files; it is development-only and is not an authenticated online CMS deployment. Existing content and URLs were migrated losslessly to `src/content/products` and `src/content/articles`; `src/lib/data.ts` validates and exposes only published entries. Admin changes are backed up to ignored `.content-backups` and uploads are copied into the Astro asset pipeline. `npm run build` synchronizes uploads before compiling. Landing pages stay code-managed.
+The local Chinese product/article CMS is available at `http://127.0.0.1:4323/admin` after `npm run admin` (or double-click `启动内容后台.cmd`). See [后台使用说明.md](./后台使用说明.md). Local mode uses pinned Decap packages and local JSON files. Authenticated online mode uses a private Supabase workspace and explicit Git publication; it stays disabled until configured. Follow [线上后台启用说明.md](./线上后台启用说明.md) before enabling it. Existing content and URLs were migrated losslessly to `src/content/products` and `src/content/articles`; `src/lib/data.ts` validates and exposes only published entries. Local changes are backed up to ignored `.content-backups`; uploads and editor assets are prepared before builds. Landing pages stay code-managed.
 
 ```sh
 npm ci
@@ -52,7 +52,7 @@ Deploy the migration branch as a Preview first, with the production domain still
 
 Vercel normally adds `X-Robots-Tag: noindex` to Preview deployment URLs. Check the actual Preview response headers and keep Deployment Protection enabled for private previews; [custom preview domains can omit that automatic header](https://vercel.com/kb/guide/are-vercel-preview-deployment-indexed-by-search-engines). Do not assign the production domain to Preview or add a global production `noindex` rule. Public canonical URLs continue to use `https://www.elesoltree.com`.
 
-The content backend remains local: run `npm run admin` on your computer, edit the JSON content, review the change and commit/deploy a new build. Production `/admin` and its preview endpoints return 404, and `/__cms` is a development-server middleware only. Publishing the website does not publish an authenticated editing service or the local filesystem proxy. Private SEO knowledge/planning data, backups and local secrets are excluded from Git and must stay out of the public output.
+Production admin routes return 404 unless `ADMIN_ONLINE_ENABLED=true`. When enabled, `/admin` requires the confirmed `jacky@cnsoltree.com` Supabase account; APIs validate the session and request origin. The online `/__cms` operates on a private JSONB snapshot and commits changes with a database compare-and-swap transaction. Cloud saving does not publish content. Explicit publication exports public records and referenced images to the same Git main branch with a non-forced update, then checks the matching Production deployment. Private knowledge/planning, drafts, trash and unpublished media stay outside the public repository. The loopback local filesystem proxy remains development-only.
 
 ## Verification and limits
 
@@ -66,7 +66,7 @@ No domain or production deployment has been changed by these local migration fil
 
 The Vercel preparation upgrades the previous Astro 5 and adapter 9 versions after the dependency audit identified production vulnerabilities. The production-dependency audit on 2026-10-28 reports zero critical and five high entries, all tracking the same remaining upstream chain: `@astrojs/vercel → @vercel/functions → @vercel/oidc → @vercel/cli-config@0.3.4 → zod@4.1.11`. That Zod version is affected by the constrained-collection memory-exhaustion advisory fixed in 4.6.6. The CLI-config package pins and bundles its older Zod copy, so replacing only its external dependency would not establish that its bundled code is fixed.
 
-The inspected Vercel function does not include the CLI-config/OIDC configuration readers; its included Zod is 4.6.7. The upstream reader validates local Vercel global/auth configuration files, while `/api/contact` uses the site's own `validContact` checks and does not send HTTP form input into those schemas. This limits the observed exposure in this build; it does not mean the dependency audit is clean. Track the upstream fix and re-run `npm audit --omit=dev` for each deployment. The CMS remains local, and the filesystem proxy must not be exposed to a network.
+The inspected Vercel function does not include the CLI-config/OIDC configuration readers; its included Zod is 4.6.7. The upstream reader validates local Vercel global/auth configuration files, while `/api/contact` uses the site's own `validContact` checks and does not send HTTP form input into those schemas. This limits the observed exposure in this build; it does not mean the dependency audit is clean. Track the upstream fix and re-run `npm audit --omit=dev` for each deployment. The local filesystem proxy must not be exposed to a network; online mode uses authenticated endpoints and durable storage.
 
 ## Code formatting
 

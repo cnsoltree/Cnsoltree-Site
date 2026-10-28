@@ -304,6 +304,8 @@ function initGroupManager(manager) {
     render();
     try {
       const response = await fetch(api, { cache: 'no-store' });
+      if (document.body.dataset.adminMode === 'online' && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || '分组加载失败，请重试。');
       if (version === requestVersion) accept(data);
@@ -337,6 +339,8 @@ function initGroupManager(manager) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ revision, taxonomy: next }),
       });
+      if (document.body.dataset.adminMode === 'online' && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       const data = await response.json();
       if (!response.ok) {
         if (response.status === 409) {
@@ -346,6 +350,12 @@ function initGroupManager(manager) {
         throw new Error(data.error || '保存失败，请重试。');
       }
       accept(data);
+      if (document.body.dataset.adminMode === 'online')
+        document.dispatchEvent(
+          new CustomEvent('studio:cloud-saved', {
+            detail: { savedAt: data.savedAt || new Date().toISOString() },
+          }),
+        );
       if (dialog.open) dialog.close();
       feedback.textContent = '已保存';
       document.dispatchEvent(new CustomEvent('studio:taxonomy-saved'));

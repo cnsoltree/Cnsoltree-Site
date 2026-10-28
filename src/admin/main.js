@@ -3,16 +3,21 @@ import './product-table.js';
 import './group-manager.js';
 import './analytics-dashboard.js';
 import './seo-workspace.js';
-import { cmsConfig, categoryNames, familyName } from './config';
+import { cmsConfig, categoryNames, familyName, configureOnlineCms } from './config';
 import chineseLocale from '../../node_modules/decap-cms-locales/dist/esm/zh_Hans/index.js';
 
 const { CMS, h, createClass } = window;
-if (!CMS) throw new Error('内容后台未加载，请重启 npm run admin 后刷新。');
+const online = document.body.dataset.adminMode === 'online';
+const saveLabel = online ? '保存到云端' : '保存到本地';
+if (!CMS)
+  throw new Error(
+    online ? '内容后台未加载，请刷新页面后重试。' : '内容后台未加载，请重启 npm run admin 后刷新。',
+  );
 const savedProductRevisions = new Map();
 const savedArticleRevisions = new Map();
 CMS.registerLocale('zh_Hans', {
   ...chineseLocale,
-  auth: { ...chineseLocale.auth, login: '进入本地后台' },
+  auth: { ...chineseLocale.auth, login: online ? '进入内容后台' : '进入本地后台' },
   collection: {
     ...chineseLocale.collection,
     sidebar: { ...chineseLocale.collection.sidebar, collections: '内容导航' },
@@ -23,24 +28,24 @@ CMS.registerLocale('zh_Hans', {
       ...chineseLocale.editor.editorToolbar,
       backCollection: '返回%{collectionLabel}',
       unsavedChanges: '有未保存的修改',
-      publish: '保存到本地',
-      publishNow: '保存到本地',
+      publish: saveLabel,
+      publishNow: saveLabel,
       published: '已保存',
-      publishing: '正在保存到本地…',
+      publishing: online ? '正在保存到云端…' : '正在保存到本地…',
       publishAndCreateNew: '保存后新建内容',
       publishAndDuplicate: '保存后复制内容',
-      save: '保存到本地',
-      saving: '正在保存到本地…',
-      changesSaved: '修改已保存到本地',
+      save: saveLabel,
+      saving: online ? '正在保存到云端…' : '正在保存到本地…',
+      changesSaved: online ? '修改已保存到云端，发布后更新网站' : '修改已保存到本地',
     },
   },
   ui: {
     ...chineseLocale.ui,
     toast: {
       ...chineseLocale.ui.toast,
-      entrySaved: '内容已保存到本地',
-      entryPublished: '内容已保存到本地',
-      onFailToPublishEntry: '本地保存失败：%{details}',
+      entrySaved: online ? '内容已保存到云端' : '内容已保存到本地',
+      entryPublished: online ? '内容已保存到云端，等待网站发布' : '内容已保存到本地',
+      onFailToPublishEntry: online ? '云端保存失败：%{details}' : '本地保存失败：%{details}',
     },
   },
 });
@@ -145,15 +150,31 @@ function ContentPreview({ entry, widgetFor, getAsset }) {
     h(
       'p',
       { className: 'status' },
-      data.get('published') ? '前台显示：开启 · 保存后可查看本地页面' : '草稿 · 不生成公开页面',
+      data.get('published')
+        ? online
+          ? '已选入网站发布 · 保存后可预览'
+          : '前台显示：开启 · 保存后可查看本地页面'
+        : '草稿 · 不生成公开页面',
     ),
     data.get('published') && entry.get('path') && !entry.get('newRecord')
       ? h(
           'a',
-          { href: path, target: '_blank', rel: 'noopener noreferrer' },
-          '查看已保存的本地页面 ↗',
+          {
+            href: online
+              ? `/admin/${product ? 'product' : 'article'}-preview/${encodeURIComponent(data.get(product ? 'id' : 'slug') || '')}`
+              : path,
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          online ? '查看已保存的云端预览 ↗' : '查看已保存的本地页面 ↗',
         )
-      : h('p', { className: 'hint' }, '保存并开启“前台显示”后，可打开本地页面。'),
+      : h(
+          'p',
+          { className: 'hint' },
+          online
+            ? '保存到云端后可预览；点击顶部“发布到网站”更新正式网站。'
+            : '保存并开启“前台显示”后，可打开本地页面。',
+        ),
     h(
       'p',
       { className: 'preview-label' },
@@ -186,7 +207,14 @@ CMS.registerEventListener({
     const key = isProduct ? 'id' : 'slug';
     const existingPath = entry.get('path');
     const response = await fetch('/__cms/content-index', { cache: 'no-store' });
-    if (!response.ok) throw new Error('暂时无法核对内容网址，请确认本地后台服务正在运行后重试。');
+    if (response.status === 401 && online)
+      document.dispatchEvent(new Event('studio:session-expired'));
+    if (!response.ok)
+      throw new Error(
+        online
+          ? '暂时无法核对云端内容网址，请确认登录状态后重试。'
+          : '暂时无法核对内容网址，请确认本地后台服务正在运行后重试。',
+      );
     const contentIndex = await response.json();
     const index = contentIndex[isProduct ? 'products' : 'articles'];
     const value = data.get(key);
@@ -234,6 +262,7 @@ CMS.registerEventListener({
         if (!metadata) throw new Error('暂时无法核对产品状态，请刷新后台后重试。');
         if (metadata.deletedAt) throw new Error('此产品已移入回收站，请先从回收站恢复后再编辑。');
         if (
+          !online &&
           metadata.updatedAt !== data.get('updatedAt') &&
           metadata.updatedAt !== savedProductRevisions.get(existingPath)
         )
@@ -258,6 +287,7 @@ CMS.registerEventListener({
         if (!metadata) throw new Error('暂时无法核对文章状态，请刷新后台后重试。');
         if (metadata.deletedAt) throw new Error('此文章已移入回收站，请先从回收站恢复后再编辑。');
         if (
+          !online &&
           metadata.dateModified !== data.get('dateModified') &&
           metadata.dateModified !== savedArticleRevisions.get(existingPath)
         )
@@ -313,7 +343,36 @@ CMS.registerEventListener({
       savedProductRevisions.set(entry.get('path'), entry.getIn(['data', 'updatedAt']));
     else if (entry.get('path') && entry.getIn(['data', 'slug']))
       savedArticleRevisions.set(entry.get('path'), entry.getIn(['data', 'dateModified']));
+    if (online)
+      document.dispatchEvent(
+        new CustomEvent('studio:cloud-saved', {
+          detail: { savedAt: new Date().toISOString(), path: entry.get('path') },
+        }),
+      );
   },
 });
 
-CMS.init({ config: cmsConfig });
+async function startCms() {
+  if (online) {
+    const response = await fetch('/__cms/taxonomy', {
+      credentials: 'same-origin',
+      cache: 'no-store',
+    });
+    if (response.status === 401) document.dispatchEvent(new Event('studio:session-expired'));
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || '暂时无法读取云端分类，请刷新后重试。');
+    configureOnlineCms(data.taxonomy, window.location.origin);
+    const { registerOnlineBackend } = await import('./online-backend.js');
+    await registerOnlineBackend(CMS);
+  }
+  CMS.init({ config: cmsConfig });
+}
+void startCms().catch((error) => {
+  const notice = document.createElement('p');
+  notice.className = 'product-error';
+  notice.setAttribute('role', 'alert');
+  notice.textContent = `后台初始化未完成：${error.message || '请刷新页面后重试。'}`;
+  notice.style.cssText =
+    'position:fixed;top:calc(var(--studio-header) + 12px);left:calc(var(--studio-sidebar) + 25px);right:25px;z-index:1200';
+  document.body.append(notice);
+});

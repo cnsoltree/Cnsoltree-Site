@@ -9,9 +9,21 @@ import analyticsTheme from '../admin/analytics-dashboard.css?raw';
 import SeoAssistant from '../admin/SeoAssistant.astro';
 import KnowledgeBase from '../admin/KnowledgeBase.astro';
 import seoTheme from '../admin/seo-workspace.css?raw';
+import OnlinePublishPanel from '../admin/OnlinePublishPanel.astro';
+import assistant from '../admin/assistant.svg?url';
+import { onlineAdminEnabled, requireAdmin } from '../lib/admin-server';
 
 export const prerender = false;
-if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
+const online = !import.meta.env.DEV || Astro.url.searchParams.get('mode') === 'online';
+let account;
+if (online) {
+  if (!onlineAdminEnabled()) return new Response('Not found', { status: 404 });
+  try {
+    account = await requireAdmin(Astro);
+  } catch {
+    return Astro.redirect('/admin/login', 303);
+  }
+}
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
 Astro.response.headers.set('Cache-Control', 'no-store');
 ---
@@ -22,7 +34,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
-    <title>Soltree 内容后台 · 本地版</title>
+    <title>{online ? 'Soltree 内容后台' : 'Soltree 内容后台 · 本地版'}</title>
     <style is:inline set:html={adminTheme}></style>
     <style is:inline set:html={groupManagerTheme}></style>
     <style is:inline set:html={analyticsTheme}></style>
@@ -30,9 +42,9 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <script is:inline>
       window.CMS_MANUAL_INIT = true;
     </script>
-    <script is:inline src="/__cms/decap-cms.js"></script>
+    <script is:inline src={online ? '/__admin/decap-cms.js' : '/__cms/decap-cms.js'}></script>
   </head>
-  <body class="soltree-admin" data-view="workspace">
+  <body class="soltree-admin" data-view="workspace" data-admin-mode={online ? 'online' : 'local'}>
     <aside id="studio-sidebar" class="studio-sidebar" aria-label="后台导航">
       <div class="studio-sidebar-brand">
         <a
@@ -191,8 +203,16 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <header id="local-cms-note" class="studio-shell-header">
       <span class="studio-page-label" data-studio-page-label></span>
       <div class="studio-header-actions">
-        <span class="studio-environment" title="保存仅更新本机文件，线上更新仍需构建和部署。">
-          <i aria-hidden="true"></i>本地工作区
+        <span
+          class="studio-environment"
+          title={
+            online
+              ? '保存到云端，确认发布后更新正式网站。'
+              : '保存仅更新本机文件，线上更新仍需构建和部署。'
+          }
+        >
+          <i aria-hidden="true"></i>
+          {online ? '云端工作区' : '本地工作区'}
         </span>
         <a class="studio-website" href="/" target="_blank" rel="noopener">
           查看网站
@@ -214,11 +234,12 @@ Astro.response.headers.set('Cache-Control', 'no-store');
           <h1 id="studio-greeting">老板，上午好</h1>
         </div>
         <div class="studio-assistant">
-          <img src="/src/admin/assistant.svg" width="300" height="240" alt="" />
+          <img src={assistant} width="300" height="240" alt="" />
         </div>
       </section>
       <div class="studio-workspace-blank" aria-hidden="true"></div>
     </main>
+    {online && <OnlinePublishPanel email={account?.email} />}
     <ProductTable />
     <ArticleTable />
     <GroupManager />
@@ -231,6 +252,8 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     </div>
     <div id="nc-root" hidden inert></div>
     <noscript>请启用 JavaScript 后使用内容后台。</noscript>
-    <script is:inline type="module" src="/src/admin/main.js"></script>
+    <script>
+      import '../admin/main.js';
+    </script>
   </body>
 </html>

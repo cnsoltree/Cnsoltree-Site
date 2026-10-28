@@ -125,7 +125,9 @@ function normalizeRetirement(previous, next, usage, label, now) {
   }
 }
 
-/** Mount at /__cms/taxonomy in the local development server only. */
+/** Mount at /__cms/taxonomy in the local development server only.
+ * @param {{root: string, getLandingPages?: () => Promise<Record<string, any>[]>}} options
+ */
 export function createTaxonomyAdminHandler({ root, getLandingPages = async () => [] }) {
   const source = path.resolve(root, 'src/content/settings/taxonomy.json');
   // ponytail: a local process queue plus revision checks; multiple writers need a shared lock/store.
