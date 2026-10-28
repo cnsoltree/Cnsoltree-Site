@@ -1,0 +1,120 @@
+---
+---
+
+<main id="studio-products" class="product-manager" aria-labelledby="product-manager-title" hidden>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="product-manager-title">产品管理</h1>
+      <p>管理商品资料、分类与发布状态。</p>
+    </div>
+  </div>
+  <section class="product-panel" aria-label="产品列表">
+    <div class="product-toolbar">
+      <a class="product-create" href="/admin#/collections/products/new">
+        <span aria-hidden="true">＋</span> 新建产品
+      </a>
+      <p class="product-local-note">发布更新本地网站，线上更新仍需部署。</p>
+      <button type="button" class="product-refresh" data-product-refresh>
+        刷新列表
+      </button>
+    </div>
+    <div class="product-filters">
+      <label class="product-filter">
+        <span>商品分类</span>
+        <select data-product-category aria-label="按商品分类筛选">
+          <option value="">全部分类</option>
+        </select>
+      </label>
+      <label class="product-filter product-search">
+        <span>查找商品</span>
+        <input
+          type="search"
+          data-product-search
+          placeholder="输入 ID 或商品名称"
+          aria-label="查找产品"
+        />
+      </label>
+      <label class="product-filter">
+        <span>发布状态</span>
+        <select data-product-filter-status aria-label="按发布状态筛选">
+          <option value="active">全部状态</option>
+          <option value="published">已发布</option>
+          <option value="draft">未发布</option>
+          <option value="trash">回收站</option>
+        </select>
+      </label>
+    </div>
+    <p class="product-error" data-product-error role="alert" hidden></p>
+    <div
+      class="product-table-scroll"
+      data-product-scroll
+      tabindex="0"
+      aria-label="可横向滚动的产品表格"
+    >
+      <table class="product-table" aria-label="产品管理列表" aria-busy="true">
+        <colgroup>
+          <col class="product-column-id" />
+          <col class="product-column-info" />
+          <col class="product-column-category" />
+          <col class="product-column-status" />
+          <col class="product-column-date" />
+          <col class="product-column-date" />
+          <col class="product-column-actions" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">商品信息</th>
+            <th scope="col">商品分类</th>
+            <th scope="col">发布状态</th>
+            <th scope="col">创建时间</th>
+            <th scope="col">更新时间</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody data-product-rows>
+          <tr>
+            <td colspan="7" class="product-empty">
+              正在加载产品…
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="product-pagination">
+      <span class="product-total" data-product-total aria-live="polite">
+        正在加载
+      </span>
+      <div class="product-page-controls">
+        <button type="button" data-product-prev aria-label="上一页" disabled>
+          上一页
+        </button>
+        <span data-product-page>1 / 1</span>
+        <button type="button" data-product-next aria-label="下一页" disabled>
+          下一页
+        </button>
+        <select data-product-page-size aria-label="每页显示条数">
+          <option value="20">20 条 / 页</option>
+          <option value="50">50 条 / 页</option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <dialog
+    class="product-delete-dialog"
+    data-product-delete-dialog
+    aria-labelledby="product-delete-title"
+  >
+    <h2 id="product-delete-title">删除这个产品？</h2>
+    <p class="product-dialog-name" data-product-delete-name></p>
+    <p>删除后将移入回收站，并从本地网站下架。你可以在回收站恢复产品。</p>
+    <div class="product-dialog-actions">
+      <button type="button" data-product-delete-cancel autofocus>
+        取消
+      </button>
+      <button type="button" class="product-confirm-delete" data-product-delete-confirm>
+        移入回收站
+      </button>
+    </div>
+  </dialog>
+</main>

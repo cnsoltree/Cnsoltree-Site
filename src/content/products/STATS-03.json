@@ -1,0 +1,140 @@
+{
+  "id": "STATS-03",
+  "name": "STATS-03 3-Way ATS Automatic Transfer Switch with Over/Under Voltage Protection & Triple Voltage Display",
+  "slug": "stats-03-3-way-ats-automatic-transfer-switch-voltage-protector",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "3-way automatic transfer switch (ATS) with priority-based switching (L1→L2→L3) and triple input voltage display — purpose-built for power source redundancy and supply quality monitoring in factories, server rooms, generators, and solar storage systems.",
+  "description": "When uninterrupted power supply depends on multiple sources being healthy and available, the Soltree STATS-03 gives you complete visibility and automatic control. It accepts three independent AC 220V inputs (L1, L2, L3) and continuously monitors the voltage of each source — the triple digital display shows all three input voltages simultaneously, so operators can assess the health of every supply at a glance without additional metering hardware.\n\nThis makes the STATS-03 the right choice for installations where power source quality monitoring is as important as the switching itself: factory production lines feeding sensitive CNC equipment, retail shops with grid plus generator backup, server rooms requiring zero-interruption failover, and solar-plus-grid hybrid systems where source voltage stability needs constant verification.\n\nWhen the active source falls outside the configured voltage window (over-voltage 130–300V AC, under-voltage 80–210V AC) or exceeds the over-current threshold, the STATS-03 transfers to the next available source in under 0.2 seconds. The priority sequence (default L1→L2→L3) is fully customizable, and both startup delay and auto-recovery delay (each 1–600s) are independently adjustable to prevent nuisance switching during momentary fluctuations. Available in 63A, 80A, and 100A ratings on a standard 35mm DIN rail footprint.",
+  "features": [
+    "Triple input voltage display — monitor L1/L2/L3 supply health simultaneously without extra metering",
+    "3-way automatic transfer switch — L1→L2→L3 priority switching, fully customizable sequence",
+    "Sub-0.2s switching response — seamless source transfer protecting sensitive equipment",
+    "Over-voltage protection — configurable 130–300V AC, isolates loads from grid spikes",
+    "Under-voltage protection — configurable 80–210V AC, prevents brownout damage",
+    "Over-current protection — configurable 1A to rated maximum (63A / 80A / 100A)",
+    "Adjustable startup delay 1–600s — prevents nuisance switching on momentary dips",
+    "Adjustable auto-recovery delay 1–600s — controlled return to primary source",
+    "Ideal for CNC machinery, server rooms, generator-backed retail, solar-grid hybrid systems",
+    "35mm DIN rail mounting — direct fit in standard distribution boards",
+    "Flame-retardant PC housing (UL94 V-0), mechanical life ≥10,000 cycles",
+    "Available in 63A / 80A / 100A current ratings",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "STATS-03"
+    },
+    {
+      "name": "Product Type",
+      "value": "3-Input Automatic Transfer Switch with Triple Voltage Display"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Protection Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Protection Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Current Protection Range",
+      "value": "1–63A / 1–80A / 1–100A (per rated model)"
+    },
+    {
+      "name": "Rated Working Current",
+      "value": "63A / 80A / 100A (Optional)"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Triple Digital Display — L1 / L2 / L3 Input Voltage only"
+    },
+    {
+      "name": "Priority Switching Sequence",
+      "value": "L1 → L2 → L3 (Customizable)"
+    },
+    {
+      "name": "Startup Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Auto-Recovery Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Switching Response Time",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +50°C"
+    },
+    {
+      "name": "Relative Humidity",
+      "value": "≤50% at 40°C (Non-Condensing)"
+    },
+    {
+      "name": "Core Functions",
+      "value": "3-Way Priority Switching, Over/Under Voltage Protection, Over-Current Protection, Triple Input Voltage Monitoring"
+    },
+    {
+      "name": "Application",
+      "value": "CNC Machinery, Server Rooms, Generator-Backed Retail, Solar-Grid Hybrid Systems"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/STATS-03-1.jpg",
+  "images": [
+    "/images/products/STATS-03-1.jpg",
+    "/images/products/STATS-03-2.jpg",
+    "/images/products/STATS-03-3.jpg",
+    "/images/products/STATS-03-4.jpg",
+    "/images/products/STATS-03-5.jpg",
+    "/images/products/STATS-03-6.jpg",
+    "/images/products/STATS-03-7.jpg",
+    "/images/products/STATS-03-8.jpg"
+  ],
+  "metaTitle": "STATS-03 3-Way ATS Triple Voltage Display 63A–100A DIN Rail | Soltree",
+  "metaDescription": "STATS-03 3-way ATS with triple L1/L2/L3 input voltage display — monitor all three supply sources simultaneously. Priority switching, <0.2s response, 63A–100A. For server rooms, CNC, solar-grid systems.",
+  "metaKeywords": "STATS-03 automatic transfer switch, 3-way ATS triple voltage display, ATS input voltage monitoring 220V, 3 source power transfer switch DIN rail, ATS CNC machinery server room, solar grid ATS switch, priority switching ATS voltage display",
+  "imageAlts": [
+    "Soltree STATS-03 3-way automatic transfer switch triple input voltage display front view",
+    "STATS-03 triple display showing L1 L2 L3 source voltages for power quality monitoring",
+    "STATS-03 ATS priority switching sequence L1 L2 L3 customization panel",
+    "STATS-03 startup delay and auto-recovery delay parameter setting",
+    "STATS-03 3-way ATS DIN rail mounting profile showing compact form factor",
+    "STATS-03 installed in server room distribution board with three power inputs wired",
+    "STATS-03 ATS L1 L2 L3 input terminal wiring diagram",
+    "STATS-03 automatic transfer switch 63A 80A 100A model variants"
+  ],
+  "published": true,
+  "sortOrder": 38
+}

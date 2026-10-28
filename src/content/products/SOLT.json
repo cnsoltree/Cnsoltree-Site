@@ -1,0 +1,115 @@
+{
+  "id": "SOLT",
+  "name": "SOLT Tuya WiFi Smart DIN Rail Circuit Breaker with Energy Monitoring and Voltage Protection",
+  "slug": "solt-tuya-wifi-smart-din-rail-circuit-breaker-energy-monitoring",
+  "categorySlug": "wifi-smart-low-voltage-device",
+  "categoryName": "Wifi Smart Low Voltage Device",
+  "shortDescription": "Tuya/Smart Life WiFi smart DIN rail circuit breaker — three models: SOLT-OF (remote on/off), SOLT-M (energy monitoring), SOLT-MV (full protection + metering). App control, Alexa & Google Assistant compatible. AC 90–300V, 1A–63A, ≥100,000 operations.",
+  "description": "The Soltree SOLT series brings remote control, energy monitoring, and electrical protection together in a single DIN rail circuit breaker that works with the Tuya and Smart Life app ecosystem. All three models connect to standard 2.4GHz WiFi and are compatible with Amazon Alexa and Google Assistant for voice control — making them a practical upgrade for smart home installations, rental property management, and commercial power automation without replacing existing distribution hardware.\n\nThe SOLT-OF is the entry-level remote control model, adding WiFi on/off switching, timer scheduling, and relay last-status memory to any circuit. With over 100,000 rated mechanical operations, it is built for long-term, high-cycle applications such as lighting circuits, pump controls, and non-critical load automation where simple remote access is the primary requirement.\n\nThe SOLT-M adds real-time energy monitoring to the remote control foundation — tracking voltage, current, active power, and cumulative kWh consumption through the app. Historical usage data and smart scheduling make it well suited for home energy management, solar system load control, and rental property sub-metering where understanding consumption patterns is as important as remote switching.\n\nThe SOLT-MV is the most capable model, combining all SOLT-M metering functions with 4-in-1 electrical protection: over-voltage, under-voltage, over-current, and over-power, each with user-configurable trip thresholds set directly in the app. The auto-trip function protects sensitive electronics and high-power appliances from grid anomalies. Important notes: wiring must use L+N (top entry), not L+L. Not compatible with Home Assistant. 2.4GHz WiFi only; 5GHz not supported.",
+  "features": [
+    "SOLT-OF: Remote on/off, timer scheduling, relay last-status memory — basic smart control",
+    "SOLT-M: All SOLT-OF functions + real-time voltage, current, power, and kWh monitoring",
+    "SOLT-MV: All SOLT-M functions + over-voltage, under-voltage, over-current, over-power protection",
+    "SOLT-MV: User-configurable protection thresholds via app — tailored safety for each installation",
+    "Tuya / Smart Life app — remote control, scheduling, and energy data logging from anywhere",
+    "Amazon Alexa and Google Assistant voice control",
+    "2.4GHz WiFi connectivity — easy pairing with standard home networks",
+    "35mm DIN rail mounting — installs in standard distribution boxes",
+    "AC 90–300V, 1A–63A, 50/60Hz",
+    "≥100,000 mechanical operations — long service life",
+    "IP20 protection, flame-retardant housing",
+    "Wiring: L+N top entry only (not L+L). Not compatible with Home Assistant."
+  ],
+  "specs": [
+    {
+      "name": "Product Series",
+      "value": "SOLT"
+    },
+    {
+      "name": "Available Models",
+      "value": "SOLT-OF (Remote Control) / SOLT-M (Metering) / SOLT-MV (Protection + Metering)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "AC 90–300V, 50/60Hz"
+    },
+    {
+      "name": "Rated Current",
+      "value": "1A–63A"
+    },
+    {
+      "name": "Wireless Standard",
+      "value": "WiFi 2.4GHz (5GHz Not Supported)"
+    },
+    {
+      "name": "Compatible Apps",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Voice Control",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "SOLT-OF Functions",
+      "value": "Remote On/Off, Timer Scheduling, Last-Status Memory"
+    },
+    {
+      "name": "SOLT-M Functions",
+      "value": "Remote Control + Voltage, Current, Power, kWh Monitoring"
+    },
+    {
+      "name": "SOLT-MV Functions",
+      "value": "Full Metering + Over/Under Voltage, Over-Current, Over-Power Protection"
+    },
+    {
+      "name": "SOLT-MV Protection Thresholds",
+      "value": "User-Configurable via App"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥100,000 Operations"
+    },
+    {
+      "name": "Protection Degree",
+      "value": "IP20"
+    },
+    {
+      "name": "Application",
+      "value": "Smart Home Automation, Rental Property Management, Solar Load Control, Appliance Protection"
+    },
+    {
+      "name": "Important Note",
+      "value": "L+N wiring only (top entry). Not compatible with Home Assistant. 2.4GHz WiFi only."
+    }
+  ],
+  "image": "/images/products/SOLT-1.jpg",
+  "images": [
+    "/images/products/SOLT-1.jpg",
+    "/images/products/SOLT-2.jpg",
+    "/images/products/SOLT-3.jpg",
+    "/images/products/SOLT-4.jpg",
+    "/images/products/SOLT-5.jpg",
+    "/images/products/SOLT-6.jpg",
+    "/images/products/SOLT-7.jpg",
+    "/images/products/SOLT-8.jpg"
+  ],
+  "metaTitle": "SOLT Tuya WiFi Smart DIN Rail Breaker Energy Monitor Over Voltage Protection 63A | Soltree",
+  "metaDescription": "SOLT Tuya WiFi smart DIN rail circuit breaker — SOLT-OF (remote control), SOLT-M (energy metering), SOLT-MV (over/under voltage + over-current protection). Alexa & Google Assistant, 90–300V, 63A.",
+  "metaKeywords": "Tuya WiFi smart circuit breaker DIN rail, smart DIN rail switch energy monitoring, WiFi breaker over voltage protection, smart life din rail switch 63A, remote control circuit breaker app, SOLT-MV over under voltage breaker, smart home DIN rail breaker Alexa, solar load control WiFi switch",
+  "imageAlts": [
+    "Soltree SOLT Tuya WiFi smart DIN rail circuit breaker three model variants front view",
+    "SOLT-OF WiFi DIN rail switch remote on/off timer scheduling Smart Life app",
+    "SOLT-M WiFi energy monitoring breaker showing voltage current power kWh in Tuya app",
+    "SOLT-MV full protection breaker over-voltage under-voltage over-current over-power settings",
+    "SOLT smart DIN rail breaker 35mm installation in distribution box",
+    "SOLT WiFi breaker Amazon Alexa Google Assistant voice control setup",
+    "SOLT-MV user-configurable protection thresholds in Smart Life app",
+    "SOLT series Tuya WiFi smart breaker L+N wiring diagram top entry"
+  ],
+  "published": true,
+  "sortOrder": 51
+}

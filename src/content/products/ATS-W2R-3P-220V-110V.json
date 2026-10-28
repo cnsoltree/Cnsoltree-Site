@@ -1,0 +1,95 @@
+{
+  "id": "ATS-W2R-3P-220V-110V",
+  "name": "63A 3P Automatic Transfer Switch 110V/220V - PC Class 50ms Three-Phase ATS for Commercial Use",
+  "slug": "ats-w2r-3p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "3-pole 63A PC class ATS for three-phase 110V/220V systems (no neutral). Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter – for hospitals, cold storage, and data centers.",
+  "description": "The ATS-W2R-3P is a PC class (load level) automatic transfer switch for three-phase systems without neutral (3L only), rated at 63A and supporting both 110V and 220V AC. All three line poles switch simultaneously in 50ms, providing complete source isolation and preventing backfeed between mains and the backup supply. When Source A (mains) fails, the unit instantly transfers the load to a generator or PV inverter; once mains is restored, it automatically reverts to Source A priority without manual intervention. Supports both automatic and manual switching modes to suit different installation requirements. Built on a motor-driven mechanism housed in a PA6 flame-retardant enclosure, the W2R-3P is engineered for reliable continuous operation in demanding commercial environments – hospitals, cold-storage facilities, data centers, and industrial equipment requiring uninterrupted three-phase power.",
+  "features": [
+    "3-pole switching (3 Lines simultaneously, no neutral) – 2 inputs / 1 output",
+    "PC class (load level) – handles full rated load continuously",
+    "Fast 50ms (0.05s) transfer time – load interruption under 50ms",
+    "Dual voltage: supports both 110V and 220V AC three-phase",
+    "Auto & manual transfer modes; returns to Source A (mains) automatically",
+    "Compatible with mains, generator, and PV inverter sources",
+    "PA6 flame-retardant housing with motor-driven mechanism",
+    "Suitable for hospitals, cold storage, data centers, and industrial equipment"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "3P (3 Lines, No Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Operating Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Three-Phase (No Neutral)"
+    },
+    {
+      "name": "Type",
+      "value": "PC Class (Load Level)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Source A (Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Generator, PV Inverter"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Transfer Time",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Housing",
+      "value": "PA6 Flame-retardant"
+    },
+    {
+      "name": "Applications",
+      "value": "Hospitals, Cold Storage, Data Centers"
+    }
+  ],
+  "image": "/images/products/ATS-W2R-3P(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/ATS-W2R-3P(220V 110V)-1.jpg",
+    "/images/products/ATS-W2R-3P(220V 110V)-2.jpg",
+    "/images/products/ATS-W2R-3P(220V 110V)-3.jpg",
+    "/images/products/ATS-W2R-3P(220V 110V)-4.jpg",
+    "/images/products/ATS-W2R-3P(220V 110V)-5.jpg",
+    "/images/products/ATS-W2R-3P(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "ATS-W2R 63A 3P ATS 110V/220V | PC Class 50ms Three-Phase No-Neutral",
+  "metaDescription": "ATS-W2R series three-phase 63A 3-pole (no neutral) PC class ATS for 110V and 220V. 50ms auto transfer, compatible with mains, generator and PV inverter. For hospitals, cold storage and data centers.",
+  "metaKeywords": "ATS-W2R 63A 3P ATS, three-phase no neutral transfer switch, 3 pole ATS 110V 220V, PC class ATS, PV inverter ATS, hospital transfer switch, data center ATS, commercial ATS",
+  "imageAlts": [
+    "63A 3P ATS-W2R 110V/220V front view – PC class three-phase transfer switch",
+    "ATS-W2R-3P wiring diagram – 3-pole 2 inputs 1 output connection",
+    "ATS-W2R-3P internal structure – PCB, motor and PA6 flame-retardant housing",
+    "63A three-phase ATS-W2R auto and manual switching mode panel",
+    "ATS-W2R-3P compatible with mains, generator and PV inverter sources",
+    "63A 3-pole transfer switch for hospitals, cold storage and data centers"
+  ],
+  "published": true,
+  "sortOrder": 78
+}

@@ -1,0 +1,112 @@
+{
+  "id": "MCB-DC-1P",
+  "name": "MCB 1P DC 6 – 63A Circuit Breaker",
+  "slug": "1p-dc-mcb-solar-circuit-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Ultra-compact single-pole DC breaker for solar PV string protection – only 18mm wide, 500V DC rated.",
+  "description": "The Soltree 1 Pole DC MCB is the most space-efficient solution for protecting individual photovoltaic strings and single-line DC branch circuits. At just 18mm wide, it fits where multi-pole breakers cannot – making it the go-to choice for densely packed combiner boxes and compact off-grid battery enclosures. Rated at 500V DC with enhanced magnetic arc quenching, this breaker reliably interrupts stubborn DC arcs that would damage conventional AC-rated devices. Every unit leaves our ISO 9001 certified factory only after passing 100% electrical verification, giving installers confidence in consistent trip accuracy across the full 6 – 63A range. Whether you are wiring a rooftop solar array, a 48V telecom rack, or an RV leisure battery, the 1P DC MCB delivers code-compliant overcurrent protection without wasting valuable panel space.",
+  "features": [
+    "Ultra-compact 18mm single-module width – saves critical DIN-rail space in crowded combiner boxes.",
+    "500V DC arc-quenching chamber – safely extinguishes persistent DC arcs that standard AC breakers cannot handle.",
+    "9 current ratings (6A – 63A) – one SKU family covers everything from small off-grid setups to large string inverters.",
+    "100% factory electrical testing – every unit verified for correct trip curve before shipment.",
+    "Full OEM/ODM program – custom printing, private-label packaging, and modified trip curves available.",
+    "Thermal-magnetic dual protection – fast short-circuit response plus reliable overload tripping.",
+    "Snap-on 35mm DIN rail mount – tool-free installation and removal for rapid field service."
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "1P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A (DC)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "6 kA DC"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C (DC)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic, UV Resistant"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60947-2, TÜV (for PV)"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "Silver Alloy Contacts"
+    },
+    {
+      "name": "Application",
+      "value": "Solar PV System, DC Power Distribution, Marine Electrical System"
+    },
+    {
+      "name": "Arc Extinguishing System",
+      "value": "Enhanced Magnetic Arc Quenching for DC"
+    },
+    {
+      "name": "Wiring Method",
+      "value": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +70°C"
+    },
+    {
+      "name": "IP Rating",
+      "value": "IP20"
+    }
+  ],
+  "image": "/images/products/MCB-DC-1P-01.jpg",
+  "images": [
+    "/images/products/MCB-DC-1P-01.jpg",
+    "/images/products/MCB-DC-1P-02.jpg",
+    "/images/products/MCB-DC-1P-03.jpg",
+    "/images/products/MCB-DC-1P-04.jpg",
+    "/images/products/MCB-DC-1P-05.jpg",
+    "/images/products/MCB-DC-1P-06.jpg",
+    "/images/products/MCB-DC-1P-07.jpg"
+  ],
+  "metaTitle": "1P DC MCB 6 – 63A 500V Solar Circuit Breaker | Soltree",
+  "metaDescription": "Buy Soltree 1 Pole DC MCB – 500V rated, 6kA breaking capacity, CE & TÜV certified for solar PV. Ultra-compact 18mm design. OEM welcome. Get a quote today!",
+  "metaKeywords": "1P DC MCB, single pole DC circuit breaker, 500V DC breaker, solar PV MCB, photovoltaic circuit breaker, DC miniature circuit breaker, DIN rail DC breaker",
+  "imageAlts": [
+    "Soltree 1P DC MCB 500V solar circuit breaker front view",
+    "Single pole DC miniature circuit breaker side profile showing DIN rail clip",
+    "MCB-DC-1P breaker terminal detail with screw connections",
+    "1 pole DC MCB internal arc-quenching chamber close-up",
+    "Soltree 1P DC circuit breaker mounted on 35mm DIN rail",
+    "MCB-DC-1P product label showing CE TÜV certification marks",
+    "Single pole 500V DC MCB packaging and accessories"
+  ],
+  "published": true,
+  "sortOrder": 4
+}

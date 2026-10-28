@@ -1,0 +1,166 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family:
+      var(--font-inter),
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #111827;
+    background-color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.02em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed bg-green-700 text-white px-6 py-3 text-sm shadow-sm
+      hover:bg-green-800 focus:ring-green-600;
+  }
+
+  .btn-primary-lg {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed bg-green-700 text-white px-8 py-3.5 text-base shadow-sm
+      hover:bg-green-800 focus:ring-green-600;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed border border-gray-300 bg-white text-gray-700 px-6 py-3 text-sm shadow-sm
+      hover:bg-gray-50 hover:border-gray-400 focus:ring-gray-400;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed border border-white/60 bg-white/10 text-white px-6 py-3 text-sm backdrop-blur-sm
+      hover:bg-white/20 focus:ring-white;
+  }
+
+  .btn-outline-lg {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed border border-gray-300 bg-white text-gray-700 px-8 py-3.5 text-base shadow-sm
+      hover:bg-gray-50 focus:ring-gray-400;
+  }
+
+  /* ── Cards ───────────────────────────────────────────────────────── */
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden
+      transition-shadow duration-200 hover:shadow-md;
+  }
+
+  .card-flat {
+    @apply bg-white rounded-xl border border-gray-100 p-6;
+  }
+
+  /* ── Section layout ──────────────────────────────────────────────── */
+  .section {
+    @apply py-16 sm:py-20;
+  }
+
+  .section-alt {
+    @apply py-16 sm:py-20 bg-gray-50;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Section headers ─────────────────────────────────────────────── */
+  .section-eyebrow {
+    @apply text-xs font-bold uppercase tracking-widest text-green-700;
+  }
+
+  .section-heading {
+    @apply mt-2 text-3xl font-bold text-gray-900 sm:text-4xl;
+  }
+
+  .section-subheading {
+    @apply mt-4 text-sm text-gray-500 leading-relaxed;
+  }
+
+  /* ── Inputs ──────────────────────────────────────────────────────── */
+  .input {
+    @apply block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400
+      focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600
+      transition-colors;
+  }
+
+  .textarea {
+    @apply block w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder-gray-400
+      focus:border-green-600 focus:outline-none focus:ring-1 focus:ring-green-600
+      transition-colors resize-none;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────────── */
+  .badge-hot {
+    @apply inline-flex items-center rounded px-2 py-0.5 text-xs font-bold bg-red-100 text-red-700;
+  }
+  .badge-new {
+    @apply inline-flex items-center rounded px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-700;
+  }
+  .badge-feat {
+    @apply inline-flex items-center rounded px-2 py-0.5 text-xs font-bold bg-amber-100 text-amber-700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+[hidden] {
+  display: none !important;
+}
+html {
+  scroll-padding-top: 5rem;
+}
+.container {
+  width: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

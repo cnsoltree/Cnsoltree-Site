@@ -1,0 +1,103 @@
+{
+  "id": "STQ2-63-3P-220V-110V",
+  "name": "STQ2-63 63A 3P CB Class Auto Transfer Switch 110V/220V - Three-Phase ATS for Industrial Equipment & Motors",
+  "slug": "stq2-63-3p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "63A 3-pole CB class ATS for three-phase 110V/220V (no neutral). Mechanical interlock, ~2s auto transfer, max ~22kW – a cost-effective solution for industrial equipment, commercial elevators, and three-phase motors.",
+  "description": "The STQ2-63-3P is a CB class automatic transfer switch for three-phase 110V or 220V AC systems up to 63A, offering a cost-effective industrial solution for non-critical three-phase loads. All three poles switch simultaneously using a circuit breaker with mechanical interlock, physically preventing both power sources from connecting at the same time. When Normal Power (N/mains) fails, the unit automatically transfers to the backup supply (generator or PV inverter) in approximately 2 seconds; a brief ~2s power interruption occurs during switchover, which is acceptable for most industrial and commercial equipment. The unit automatically reverts to Normal Power priority once mains is restored. With a maximum load capacity of approximately 22kW across three phases and support for both auto and manual switching modes, the STQ2-63-3P is a straightforward, cost-effective choice for powering industrial equipment, commercial elevators, three-phase motors, and other heavy loads where PC class switching speed is not required.",
+  "features": [
+    "3-pole switching (3 Lines simultaneously, no neutral) – 2 inputs / 1 output",
+    "CB class – circuit breaker with mechanical interlock, prevents dual-power connection",
+    "~2s auto transfer time – brief 2s interruption acceptable for industrial loads",
+    "Dual voltage: supports both 110V and 220V AC three-phase",
+    "Auto & manual transfer modes; Normal Power (N) priority with auto return",
+    "Compatible with mains, generator, and PV inverter sources",
+    "Max load capacity: ~22kW (three-phase)",
+    "Cost-effective CB class solution for industrial and commercial applications"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "3P (Triple-Pole, Simultaneous Switching)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Working Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Three-Phase"
+    },
+    {
+      "name": "Type",
+      "value": "CB Class (Circuit Breaker + Mechanical Interlock)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Normal Power (N / Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Generator, PV Inverter"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Auto Transfer Time",
+      "value": "~2s"
+    },
+    {
+      "name": "Power Interruption",
+      "value": "Brief ~2s during transfer"
+    },
+    {
+      "name": "Max Load Power",
+      "value": "~22kW (Three-Phase)"
+    },
+    {
+      "name": "Internal Components",
+      "value": "PCB Control Board, Motor, Thermal Relay"
+    },
+    {
+      "name": "Applications",
+      "value": "Industrial Equipment, Commercial Elevators, Three-Phase Motors"
+    }
+  ],
+  "image": "/images/products/STQ2-63-3P(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/STQ2-63-3P(220V 110V)-1.jpg",
+    "/images/products/STQ2-63-3P(220V 110V)-2.jpg",
+    "/images/products/STQ2-63-3P(220V 110V)-3.jpg",
+    "/images/products/STQ2-63-3P(220V 110V)-4.jpg",
+    "/images/products/STQ2-63-3P(220V 110V)-5.jpg",
+    "/images/products/STQ2-63-3P(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "STQ2-63 63A 3P CB Class ATS 110V/220V | Three-Phase Auto Transfer Switch",
+  "metaDescription": "STQ2-63 series 63A 3-pole CB class ATS for three-phase 110V/220V. Mechanical interlock, ~2s transfer, max 22kW. For industrial equipment, commercial elevators and three-phase motors.",
+  "metaKeywords": "STQ2-63 3P ATS, three-phase CB class transfer switch, 63A 3 pole ATS, industrial auto transfer switch, commercial elevator ATS, three-phase motor ATS, mechanical interlock ATS, cost-effective industrial ATS",
+  "imageAlts": [
+    "STQ2-63 63A 3P CB class ATS 110V/220V front view – three-phase auto transfer switch",
+    "STQ2-63-3P wiring diagram – 3-pole 2 inputs 1 output connection",
+    "STQ2-63-3P internal components – PCB control board, motor and thermal relay",
+    "STQ2-63 three-phase mechanical interlock mechanism – prevents dual-power connection",
+    "63A three-phase STQ2 ATS auto and manual switching mode panel",
+    "STQ2-63-3P transfer switch for industrial equipment, elevators and three-phase motors"
+  ],
+  "published": true,
+  "sortOrder": 84
+}

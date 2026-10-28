@@ -1,0 +1,150 @@
+{
+  "id": "PN2-VA4",
+  "name": "PN2-VA4 Self-Resetting Voltage Protector 40A–80A with OEM Logo Support",
+  "slug": "pn2-va4-self-resetting-voltage-protector-oem",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Self-resetting over/under voltage and over-current protector with red + green dual digital display and full OEM logo customization — ideal for distributors, panel builders, and private-label electrical brands. 40A / 63A / 80A options.",
+  "description": "The Soltree PN2-VA4 is a self-resetting over/under voltage and over-current protector designed for electrical distributors, panel builders, and OEM customers who require a branded protection device at competitive wholesale quantities. It delivers the same automatic protection performance as the PN2-VA2 — 0.5-second fault disconnect, auto-restore after supply stabilization, and fully configurable trip thresholds — but is specifically offered with factory-level OEM logo customization on the housing and packaging, making it suitable for private-label electrical brands and distributor own-brand programs.\n\nThe high-resolution dual digital display shows real-time voltage in red and current in green for clear circuit health monitoring. All protection parameters — over-voltage (130–300V AC), under-voltage (80–210V AC), over-current, and reset delay (0–999s, default 60s) — are user-configurable via the front panel, with password lock to prevent unauthorized field changes.\n\nAvailable in 40A, 63A, and 80A variants on a standard 35mm DIN rail footprint. AC 110V customization also available for export markets. Contact us for MOQ, branding specifications, and sample requests.",
+  "features": [
+    "OEM logo customization — factory branding on housing and packaging for private-label programs",
+    "Self-resetting — auto-disconnects on fault, auto-restores when supply stabilizes",
+    "Dual digital display — real-time voltage (red) + current (green)",
+    "User-configurable trip points — over-voltage 130–300V, under-voltage 80–210V AC",
+    "Over-current protection with adjustable trip threshold",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s)",
+    "Password lock — prevents unauthorized parameter changes in the field",
+    "Energy-saving mode — reduces standby self-consumption",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable for export)",
+    "35mm DIN rail mounting",
+    "Flame-retardant PC housing (UL94 V-0)",
+    "Mechanical life ≥10,000 cycles",
+    "CE & RoHS certified — accepted in EU, UK, and global markets"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Self-Resetting Over/Under Voltage Protector"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VA4"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Voltage Trip Delay",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Dual Digital Display — Voltage (Red) + Current (Green)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "OEM Customization",
+      "value": "Logo customization on housing and packaging supported"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay Protection"
+    },
+    {
+      "name": "Application",
+      "value": "Wholesale Distribution Programs, Panel Builder OEM Projects, Private-Label Electrical Brands"
+    },
+    {
+      "name": "Target Buyer",
+      "value": "Electrical Distributors, Panel Builders, OEM Wholesale Customers"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VA4-1.jpg",
+  "images": [
+    "/images/products/PN2-VA4-1.jpg",
+    "/images/products/PN2-VA4-2.jpg",
+    "/images/products/PN2-VA4-3.jpg",
+    "/images/products/PN2-VA4-4.jpg",
+    "/images/products/PN2-VA4-5.jpg",
+    "/images/products/PN2-VA4-6.jpg",
+    "/images/products/PN2-VA4-7.jpg",
+    "/images/products/PN2-VA4-8.jpg"
+  ],
+  "metaTitle": "PN2-VA4 Voltage Protector OEM 40A–80A Self-Resetting | Soltree",
+  "metaDescription": "PN2-VA4 self-resetting over/under voltage protector 40A–80A with OEM logo customization. Auto-reconnect, dual display, password lock, CE & RoHS. For distributors and panel builders.",
+  "metaKeywords": "PN2-VA4 voltage protector, OEM voltage protector supplier, private label voltage relay, wholesale voltage protector 63A, self-resetting voltage relay OEM, over voltage protector factory, branded voltage protector distributor, voltage relay OEM customization",
+  "imageAlts": [
+    "Soltree PN2-VA4 OEM self-resetting over under voltage protector red green dual display front view",
+    "PN2-VA4 voltage protector dual screen voltage and current display",
+    "PN2-VA4 OEM voltage protector custom logo housing detail",
+    "PN2-VA4 voltage protector parameter setting and password lock panel",
+    "PN2-VA4 voltage protector DIN rail mounting side profile",
+    "PN2-VA4 self-resetting voltage protector installed in distribution board",
+    "PN2-VA4 protector wiring terminal connections detail",
+    "PN2-VA4 voltage protector 40A 63A 80A current rating options for OEM orders"
+  ],
+  "published": true,
+  "sortOrder": 34
+}

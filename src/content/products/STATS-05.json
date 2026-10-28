@@ -1,0 +1,139 @@
+{
+  "id": "STATS-05",
+  "name": "STATS-05 3-Way ATS Automatic Transfer Switch with Full 5-Parameter Display",
+  "slug": "stats-05-3-way-ats-automatic-transfer-switch-5-parameter-display",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Most advanced 3-way ATS in the STATS series — 5-parameter display shows three input voltages, output voltage, and output current simultaneously. Full source-and-load visibility for mission-critical installations. 63A / 80A / 100A options.",
+  "description": "When partial monitoring isn't enough, the Soltree STATS-05 gives you the complete picture. Where the STATS-03 shows three input voltages and the STATS-04 adds output current, the STATS-05 goes further — its 5-parameter display shows all three input voltages, the actual output voltage delivered to your load, and the real-time output current, all at once.\n\nThis matters in applications where you need to verify not just that your power sources are healthy, but that the correct voltage is actually reaching your equipment after switching. A source may appear within range at the input terminals, yet a wiring fault, contact issue, or cable voltage drop could still deliver the wrong voltage to your load. The STATS-05 eliminates that blind spot.\n\nDesigned for data center infrastructure managers overseeing UPS bypass panels, hospital facility engineers maintaining life-safety power systems, precision manufacturing lines where voltage at the machine matters as much as voltage at the panel, and industrial automation engineers commissioning multi-source control cabinets — the STATS-05 is the right choice where complete electrical visibility is non-negotiable. It carries all the protection and control features of the STATS series: adjustable over-voltage (130–300V) and under-voltage (80–210V) thresholds, configurable over-current protection, sub-0.2s switching response, customizable L1→L2→L3 priority sequence, and 1–600s adjustable startup and auto-recovery delays. CE and RoHS certified, DIN rail mounted, flame-retardant PC housing (UL94 V-0), rated for ≥10,000 mechanical cycles.",
+  "features": [
+    "5-parameter display — L1/L2/L3 input voltages + output voltage + output current, all simultaneously",
+    "Output voltage monitoring — verify correct voltage is actually delivered to the load after switching",
+    "3-way automatic transfer switch — L1→L2→L3 priority switching, fully customizable sequence",
+    "Sub-0.2s switching response — seamless source transfer with minimal load interruption",
+    "Over-voltage protection — configurable 130–300V AC trip threshold",
+    "Under-voltage protection — configurable 80–210V AC trip threshold",
+    "Over-current protection — adjustable 1–63A / 1–80A / 1–100A trip range",
+    "Adjustable startup delay (1–600s) and auto-recovery delay (1–600s)",
+    "35mm DIN rail mounting — standard panel installation",
+    "Flame-retardant PC housing (UL94 V-0), mechanical life ≥10,000 cycles",
+    "Available in 63A / 80A / 100A current ratings",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "STATS-05"
+    },
+    {
+      "name": "Product Type",
+      "value": "3-Input Automatic Transfer Switch with Full Monitoring Display"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Protection Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Protection Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Current Protection Range",
+      "value": "1–63A / 1–80A / 1–100A (Optional)"
+    },
+    {
+      "name": "Rated Working Current",
+      "value": "63A / 80A / 100A (Optional)"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Display Mode",
+      "value": "5-Parameter Display (3× Input Voltage + Output Voltage + Output Current)"
+    },
+    {
+      "name": "Priority Switching Sequence",
+      "value": "L1 → L2 → L3 (Customizable)"
+    },
+    {
+      "name": "Startup Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Auto-Recovery Delay Time",
+      "value": "1–600s (Adjustable)"
+    },
+    {
+      "name": "Switching Response Time",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mounting"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant PC Material (UL94 V-0)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25℃ to +50℃"
+    },
+    {
+      "name": "Relative Humidity",
+      "value": "≤50% at 40°C (Non-Condensing)"
+    },
+    {
+      "name": "Core Functions",
+      "value": "3-Way Priority Switching, Over/Under Voltage Protection, Over-Current Protection, Full Input/Output Voltage & Output Current Monitoring"
+    },
+    {
+      "name": "Application",
+      "value": "Data Center UPS Bypass Panels, Hospital Life-Safety Power Systems, Precision Manufacturing Lines, Industrial Automation Multi-Source Cabinets"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/STATS-05-1.jpg",
+  "images": [
+    "/images/products/STATS-05-1.jpg",
+    "/images/products/STATS-05-2.jpg",
+    "/images/products/STATS-05-3.jpg",
+    "/images/products/STATS-05-4.jpg",
+    "/images/products/STATS-05-5.jpg",
+    "/images/products/STATS-05-6.jpg",
+    "/images/products/STATS-05-7.jpg",
+    "/images/products/STATS-05-8.jpg"
+  ],
+  "metaTitle": "STATS-05 3-Way ATS 5-Parameter Display Input Output Voltage & Current 63A–100A | Soltree",
+  "metaDescription": "STATS-05 3-way ATS with 5-parameter display: L1/L2/L3 input voltages + output voltage + output current. Full source-and-load monitoring for data centers, hospitals, precision manufacturing. CE & RoHS.",
+  "metaKeywords": "STATS-05 automatic transfer switch, 3-way ATS 5 parameter display, ATS input output voltage current monitor, automatic transfer switch output voltage verification, ATS data center hospital, full monitoring ATS DIN rail, 5 display ATS 100A 80A 63A",
+  "imageAlts": [
+    "Soltree STATS-05 3-way ATS automatic transfer switch 5-parameter display front view",
+    "STATS-05 display showing L1 L2 L3 input voltages output voltage and output current simultaneously",
+    "STATS-05 ATS priority switching sequence and 5-parameter display configuration",
+    "STATS-05 over under voltage protection and over-current threshold settings",
+    "STATS-05 3-way ATS DIN rail mounting side profile",
+    "STATS-05 automatic transfer switch installed in data center distribution panel",
+    "STATS-05 ATS wiring connections for three 220V inputs output voltage and current monitoring",
+    "STATS-05 automatic transfer switch 63A 80A 100A full monitoring display options"
+  ],
+  "published": true,
+  "sortOrder": 40
+}

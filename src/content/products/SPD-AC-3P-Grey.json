@@ -1,0 +1,101 @@
+{
+  "id": "SPD-AC-3P-Grey",
+  "name": "3P AC Surge Protector 385V 40kA - Three-Phase L-PE SPD for Industrial Equipment & Motor Control",
+  "slug": "spd-ac-3p-385v-40ka-three-phase-lpe",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "3-pole 385VAC surge protector for three-phase 3-wire systems (no neutral). Independent L1-PE, L2-PE, L3-PE protection per phase. 40kA max discharge, – .5kV protection level, <25ns response – for industrial power equipment and motor control panels.",
+  "description": "The SPD-AC-3P-Grey is a 3-pole AC surge protection device for three-phase 3-wire low-voltage systems without neutral. It provides independent phase-to-earth (L-PE) protection on each of the three phases – L1-PE, L2-PE, and L3-PE – shielding industrial power devices and three-phase loads from surge transients caused by lightning strikes or switching events. The maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is – .5kV per phase. A metal oxide varistor (MOV) core delivers sub-25ns response for instantaneous transient clamping. The grey flame-retardant PC housing (UL94 V-0) mounts directly on a 35mm DIN rail with a modular, hot-swappable design – modules can be replaced individually during maintenance without full rewiring. Suitable for installation in power distribution cabinets and equipment control boxes serving three-phase industrial loads.",
+  "features": [
+    "3-pole independent L-PE protection per phase: L1-PE, L2-PE, L3-PE",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level – .5kV per phase – for three-phase industrial loads",
+    "<25ns ultra-fast response time – instantaneous transient suppression",
+    "Metal oxide varistor (MOV) core – excellent conductivity and corrosion resistance",
+    "Three-phase 3-wire system (no neutral) – suitable for industrial installations",
+    "Modular hot-swappable design – individual module replacement without rewiring",
+    "Flame-retardant PC housing (UL94 V-0), grey, 35mm DIN rail mounting"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "3P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": " – .5kV"
+    },
+    {
+      "name": "System Type",
+      "value": "Three-phase 3-wire Low-voltage System (No Neutral)"
+    },
+    {
+      "name": "Protection Mode",
+      "value": "L1-PE, L2-PE, L3-PE"
+    },
+    {
+      "name": "Wiring",
+      "value": "3 Phase Lines (L1, L2, L3), No Neutral"
+    },
+    {
+      "name": "Core Component",
+      "value": "Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Response Time",
+      "value": "<25ns"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0), Grey"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Design",
+      "value": "Modular, Hot-swappable"
+    },
+    {
+      "name": "Applications",
+      "value": "Power Distribution Cabinet, Equipment Control Box"
+    }
+  ],
+  "image": "/images/products/SPD-AC-3P-Grey-1.jpg",
+  "images": [
+    "/images/products/SPD-AC-3P-Grey-1.jpg",
+    "/images/products/SPD-AC-3P-Grey-2.jpg",
+    "/images/products/SPD-AC-3P-Grey-3.jpg",
+    "/images/products/SPD-AC-3P-Grey-4.jpg",
+    "/images/products/SPD-AC-3P-Grey-5.jpg",
+    "/images/products/SPD-AC-3P-Grey-6.jpg",
+    "/images/products/SPD-AC-3P-Grey-7.jpg"
+  ],
+  "metaTitle": "3P SPD 385V 40kA Three-Phase | L-PE AC Surge Protector | Soltree",
+  "metaDescription": "3-pole 385VAC three-phase L-PE surge protector for 3-wire systems. Independent L1-PE, L2-PE, L3-PE protection. 40kA max discharge, – .5kV, <25ns response. DIN rail, hot-swappable. For industrial equipment and motor control.",
+  "metaKeywords": "3P AC surge protector, three-phase SPD, L-PE SPD, 385V 3 phase SPD, 40kA industrial SPD, motor control SPD, power distribution cabinet SPD, DIN rail SPD, MOV three-phase surge protector",
+  "imageAlts": [
+    "SPD-AC-3P-Grey 3-pole AC surge protector front view – grey three-phase DIN rail SPD",
+    "SPD-AC-3P-Grey wiring diagram – L1 L2 L3 phase line connections",
+    "SPD-AC-3P-Grey independent L-PE protection per phase detail",
+    "SPD-AC-3P-Grey MOV core component detail – metal oxide varistor",
+    "SPD-AC-3P-Grey 385V 40kA three-phase surge protection module close-up",
+    "SPD-AC-3P-Grey modular hot-swappable design on 35mm DIN rail",
+    "SPD-AC-3P-Grey installed in industrial power distribution cabinet"
+  ],
+  "published": true,
+  "sortOrder": 10
+}

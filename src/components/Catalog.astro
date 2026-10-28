@@ -1,0 +1,234 @@
+---
+import { products, type Product } from '@/lib/data';
+import { allCategories } from '@/lib/taxonomy';
+import {
+  productGroups,
+  allProductGroups,
+  groupHref,
+  subcategoryHref,
+  matchesSubcategory,
+} from '@/lib/product-taxonomy';
+import ProductCard from './ProductCard.astro';
+interface Props {
+  category?: string;
+}
+const { category } = Astro.props;
+const current = allCategories.find((item) => item.slug === category);
+const memberships = (product: Product) => [
+  `${product.categorySlug}:`,
+  ...(product.additionalCategorySlugs ?? []).map((slug) => `${slug}:`),
+  ...allProductGroups.flatMap((group) =>
+    group.items
+      .filter((item) => matchesSubcategory(product, item))
+      .map((item) => `${item.category}:${'type' in item ? item.type : ''}`),
+  ),
+];
+---
+
+<div data-catalog data-category={category ?? ''}>
+  <section class="border-b border-gray-100 bg-gray-50 py-12">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap gap-2 text-xs text-gray-400">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/products">Products</a>
+        <span data-crumb-separator hidden>
+          /
+        </span>
+        <span data-crumb>{current?.name ?? ''}</span>
+      </nav>
+      <h1 data-catalog-title class="text-3xl font-bold text-gray-900 sm:text-4xl">
+        {current?.name ?? 'All Products'}
+      </h1>
+      <p data-catalog-description class="mt-3 max-w-2xl text-base leading-relaxed text-gray-500">
+        {current?.description ??
+          `${products.length} products across ${productGroups.length} product families. Wholesale & OEM pricing available.`}
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container flex flex-col gap-8 lg:flex-row">
+      <aside class="shrink-0 lg:w-64 xl:w-72">
+        <nav aria-label="Product categories">
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">Categories</h2>
+          <a
+            href="/products"
+            data-filter-link
+            data-all
+            class="mt-4 flex items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm font-medium text-gray-700"
+          >
+            All Products <span class="text-xs text-gray-400">{products.length}</span>
+          </a>
+          {productGroups.map((group, index) => (
+            <details class="category-family mt-1" data-family={group.slug} open={index === 0}>
+              <summary class="flex cursor-pointer list-none items-center rounded-xl text-gray-700">
+                <a
+                  href={groupHref(group.slug)}
+                  data-filter-link
+                  data-parent={group.slug}
+                  class="flex min-w-0 flex-1 items-center justify-between gap-3 py-3 pl-4 text-sm font-semibold"
+                >
+                  <span>{group.name}</span>
+                  <span class="text-xs font-normal text-gray-400">
+                    {
+                      products.filter((product) =>
+                        (
+                          allProductGroups.find((family) => family.slug === group.slug)?.items ?? []
+                        ).some((item) => matchesSubcategory(product, item)),
+                      ).length
+                    }
+                  </span>
+                </a>
+                <span
+                  class="flex h-11 w-10 shrink-0 items-center justify-center text-green-700"
+                  aria-hidden="true"
+                >
+                  ⌄
+                </span>
+              </summary>
+              <ul class="my-1 ml-4 border-l border-green-100 pl-2">
+                {group.items.map((item) => (
+                  <li>
+                    <a
+                      href={subcategoryHref(item, group.slug)}
+                      data-filter-link
+                      data-child={`${item.category}:${'type' in item ? item.type : ''}`}
+                      data-parent-group={group.slug}
+                      class="flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-500"
+                    >
+                      <span>{item.name}</span>
+                      <span class="text-xs text-gray-400">
+                        {products.filter((product) => matchesSubcategory(product, item)).length}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </nav>
+      </aside>
+      <div class="min-w-0 flex-1">
+        <p class="sr-only" role="status" aria-live="polite" data-results></p>
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {products.map((product) => (
+            <div
+              data-product-card
+              data-memberships={memberships(product).join(' ')}
+              data-groups={allProductGroups
+                .filter((group) => group.items.some((item) => matchesSubcategory(product, item)))
+                .map((group) => group.slug)
+                .join(' ')}
+              hidden={Boolean(
+                category &&
+                product.categorySlug !== category &&
+                !product.additionalCategorySlugs?.includes(category),
+              )}
+            >
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
+        <div data-empty hidden class="py-20 text-center text-gray-500">
+          <p data-empty-message>No products are listed online yet.</p>
+          <a href="/contact" class="btn-primary mt-5">
+            Contact us for product information
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  import { productGroups, getCategorySelection, getProductGroup } from '@/lib/product-taxonomy';
+  import { allCategories } from '@/lib/taxonomy';
+  function initCatalog() {
+    const root = document.querySelector<HTMLElement>('[data-catalog]');
+    if (!root) return;
+    const render = () => {
+      const url = new URL(location.href),
+        category = url.pathname.match(/^\/categories\/([^/]+)/)?.[1],
+        type = url.searchParams.get('type') ?? undefined;
+      const selection = category
+        ? getCategorySelection(category, type, url.searchParams.get('group') ?? undefined)
+        : { group: getProductGroup(url.searchParams.get('group') ?? undefined), item: undefined };
+      const group = selection.group,
+        item = selection.item,
+        key = item ? `${item.category}:${item.type ?? ''}` : undefined;
+      let count = 0;
+      root.querySelectorAll<HTMLElement>('[data-product-card]').forEach((card) => {
+        const memberships = card.dataset.memberships?.split(' ') ?? [];
+        const visible = key
+          ? memberships.includes(key)
+          : category
+            ? memberships.some((value) => value.startsWith(category + ':'))
+            : group
+              ? card.dataset.groups?.split(' ').includes(group.slug)
+              : true;
+        card.hidden = !visible;
+        if (visible) count++;
+      });
+      const title =
+        item?.name ??
+        (category
+          ? (allCategories.find((item) => item.slug === category)?.name ?? category)
+          : (group?.name ?? 'All Products'));
+      root.querySelector('[data-catalog-title]')!.textContent = title;
+      root.querySelector('[data-catalog-description]')!.textContent =
+        group?.description ??
+        `${count} products across ${productGroups.length} product families. Wholesale & OEM pricing available.`;
+      root.querySelector('[data-results]')!.textContent = `${count} products found`;
+      root.querySelector<HTMLElement>('[data-empty]')!.hidden = count > 0;
+      root.querySelector('[data-empty-message]')!.textContent =
+        `${title} products are not listed online yet.`;
+      root.querySelector('[data-crumb]')!.textContent = group
+        ? item
+          ? `${group.name} / ${item.name}`
+          : group.name
+        : '';
+      root.querySelector<HTMLElement>('[data-crumb-separator]')!.hidden = !group;
+      root.querySelectorAll<HTMLElement>('[data-filter-link]').forEach((link) => {
+        const active = link.hasAttribute('data-all')
+          ? !group && !category
+          : link.dataset.parent
+            ? link.dataset.parent === group?.slug && !item
+            : link.dataset.parentGroup === group?.slug && link.dataset.child === key;
+        link.classList.toggle('bg-green-50', active);
+        link.classList.toggle('text-green-700', active);
+        if (active) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      root.querySelectorAll<HTMLDetailsElement>('[data-family]').forEach((details) => {
+        if (details.dataset.family === group?.slug) details.open = true;
+        details
+          .querySelector('summary')
+          ?.classList.toggle('bg-green-50', details.dataset.family === group?.slug);
+      });
+      document.title = `${title} | Soltree`;
+      const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+      if (canonical) canonical.href = new URL(url.pathname, 'https://www.elesoltree.com').href;
+      const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+      if (description)
+        description.content = root.querySelector('[data-catalog-description]')!.textContent!;
+    };
+    render();
+    root.addEventListener('click', (event) => {
+      const e = event as MouseEvent;
+      const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('a[data-filter-link]');
+      if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const y = scrollY;
+      history.pushState({}, '', link.href);
+      render();
+      window.scrollTo({ top: y, behavior: 'instant' });
+    });
+    window.addEventListener('popstate', render);
+    document.addEventListener(
+      'astro:before-swap',
+      () => window.removeEventListener('popstate', render),
+      { once: true },
+    );
+  }
+  document.addEventListener('astro:page-load', initCatalog);
+</script>

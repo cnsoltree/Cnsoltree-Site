@@ -1,0 +1,89 @@
+{
+  "id": "PCB-M6in-05",
+  "name": "PV Combiner Box 6 PV Array Inputs, 125A DC Breaker, 15A Fuse & 40kA SPD (Steel, with Safety Lock)",
+  "slug": "pv-combiner-box-6in-1out-125a-15a-steel-lock",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "6-input PV combiner box in a heavy-duty steel enclosure with 125A DC breaker, 6×15A fuses, 500V/40kA SPD and lockable door.",
+  "description": "The PCB-M6in-05 is a 6-input PV combiner box built for higher-current commercial and small utility solar arrays. It integrates a 125A DC circuit breaker for overload and short-circuit protection, 6×15A PV fuses for independent per-string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The robust steel enclosure offers high impact resistance, is rated IP65 against dust and water, and ships with a safety lock and key to prevent unauthorized access. Suitable for outdoor installation on both grid-tied and off-grid PV systems.",
+  "features": [
+    "6 PV array inputs, 1 output configuration",
+    "125A DC circuit breaker for higher-current overload and short-circuit protection",
+    "6 × 15A PV fuses for independent per-string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Robust steel enclosure with high impact resistance",
+    "Integrated safety lock and key for tamper prevention",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both grid-tied and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "PCB-M6in-05"
+    },
+    {
+      "name": "PV Array Inputs",
+      "value": "6"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "125A"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "15A (6 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Robust steel (high impact resistance)"
+    },
+    {
+      "name": "Security",
+      "value": "Safety lock & key"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "Grid-tied / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/PCB-M6in-05-1.jpg",
+  "images": [
+    "/images/products/PCB-M6in-05-1.jpg",
+    "/images/products/PCB-M6in-05-2.jpg",
+    "/images/products/PCB-M6in-05-3.jpg",
+    "/images/products/PCB-M6in-05-4.jpg",
+    "/images/products/PCB-M6in-05-5.jpg",
+    "/images/products/PCB-M6in-05-6.jpg",
+    "/images/products/PCB-M6in-05-7.jpg"
+  ],
+  "metaTitle": "6-Input PV Combiner Box 125A DC Breaker 15A Fuse | Steel with Safety Lock | Soltree",
+  "metaDescription": "6-input PV combiner box in heavy-duty steel enclosure with 125A DC breaker, 6×15A PV fuses, 500V/40kA SPD and lockable door. IP65 outdoor-rated. OEM available.",
+  "metaKeywords": "PV combiner box, 6 input combiner box, 125A DC breaker, 15A PV fuse, 40kA SPD, steel combiner box, lockable combiner box, IP65, grid-tied off-grid PV",
+  "imageAlts": [
+    "PCB-M6in-05 6-input PV combiner box steel enclosure front view",
+    "PCB-M6in-05 combiner box interior with 125A DC breaker and 6×15A fuses",
+    "PCB-M6in-05 500V 40kA surge protection device detail",
+    "PCB-M6in-05 safety lock and key tamper prevention",
+    "PCB-M6in-05 wiring terminals for 6 PV array inputs",
+    "PCB-M6in-05 IP65 robust steel enclosure outdoor installation",
+    "PCB-M6in-05 side profile and mounting detail"
+  ],
+  "published": true,
+  "sortOrder": 74
+}

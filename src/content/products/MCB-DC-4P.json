@@ -1,0 +1,112 @@
+{
+  "id": "MCB-DC-4P",
+  "name": "MCB 4P DC 6 – 63A Circuit Breaker",
+  "slug": "4p-dc-mcb-industrial-pv-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Four-pole DC breaker for industrial solar plants and bipolar DC networks – maximum isolation safety with 500V per pole.",
+  "description": "The Soltree 4 Pole DC MCB delivers the highest level of DC circuit isolation available in a compact DIN-rail package. Designed for industrial-scale solar plants, utility-grade energy storage, and bipolar DC distribution networks, the four-pole configuration allows engineers to protect both the positive and negative buses of a bipolar system – or to achieve the maximum series voltage rating for extra-high-voltage DC strings. All four poles share a common linked toggle that guarantees simultaneous disconnection, a safety requirement in large installations where maintenance personnel must achieve a verified zero-energy state. With four independent enhanced magnetic arc chambers, the breaker can handle the extreme energy of industrial DC faults at up to 6kA. Each unit carries CE, TÜV PV, and IEC 60947-2 certification and is backed by Soltree's 18-year track record of 100% electrical testing. Available in 6A through 63A with full OEM customization, it is the professional's choice when no compromise on DC safety is acceptable.",
+  "features": [
+    "4-pole simultaneous disconnection – guarantees verified zero-energy state for safe maintenance lockout.",
+    "Bipolar DC network compatible – protects both positive and negative buses in bipolar distribution systems.",
+    "Maximum series voltage capability – four poles in series for extra-high-voltage DC string protection.",
+    "Industrial-grade 6kA breaking capacity – handles extreme fault energy from large PV arrays and battery farms.",
+    "Four independent arc chambers – each pole extinguishes DC arcs independently for redundant safety.",
+    "CE + TÜV PV + IEC 60947-2 – fully certified for utility-scale solar and industrial DC applications.",
+    "Complete OEM/ODM program – custom ratings, branded enclosures, and project-specific documentation available."
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A (DC)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "6 kA DC"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C (DC)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic, UV Resistant"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60947-2, TÜV (for PV)"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "Silver Alloy Contacts"
+    },
+    {
+      "name": "Application",
+      "value": "Solar PV System, DC Power Distribution, Marine Electrical System"
+    },
+    {
+      "name": "Arc Extinguishing System",
+      "value": "Enhanced Magnetic Arc Quenching for DC"
+    },
+    {
+      "name": "Wiring Method",
+      "value": "Screw Terminal, Compatible with Soft Silicone Wire (with Copper Crimp)"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +70°C"
+    },
+    {
+      "name": "IP Rating",
+      "value": "IP20"
+    }
+  ],
+  "image": "/images/products/MCB-DC-4P-01.jpg",
+  "images": [
+    "/images/products/MCB-DC-4P-01.jpg",
+    "/images/products/MCB-DC-4P-02.jpg",
+    "/images/products/MCB-DC-4P-03.jpg",
+    "/images/products/MCB-DC-4P-04.jpg",
+    "/images/products/MCB-DC-4P-05.jpg",
+    "/images/products/MCB-DC-4P-06.jpg",
+    "/images/products/MCB-DC-4P-07.jpg"
+  ],
+  "metaTitle": "4P DC MCB 6 – 63A Industrial Solar & Bipolar Breaker | Soltree",
+  "metaDescription": "Soltree 4 Pole DC MCB for industrial PV plants and bipolar DC networks. 500V/pole, 6kA, TÜV + CE certified. Full OEM support. Request bulk pricing today!",
+  "metaKeywords": "4P DC MCB, four pole DC circuit breaker, industrial solar breaker, bipolar DC MCB, utility scale PV breaker, 4 pole DC isolator, energy storage DC breaker",
+  "imageAlts": [
+    "Soltree 4P DC MCB industrial solar circuit breaker front view",
+    "Four pole DC breaker side profile showing linked 4-pole toggle",
+    "MCB-DC-4P quad terminal block for bipolar DC wiring",
+    "4 pole DC MCB four independent arc-quenching chambers detail",
+    "Soltree 4P DC circuit breaker in industrial PV distribution panel",
+    "MCB-DC-4P nameplate with CE TÜV IEC 60947-2 certification marks",
+    "Four pole 500V DC MCB bulk packaging for industrial projects"
+  ],
+  "published": true,
+  "sortOrder": 7
+}

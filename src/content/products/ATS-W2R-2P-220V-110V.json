@@ -1,0 +1,95 @@
+{
+  "id": "ATS-W2R-2P-220V-110V",
+  "name": "63A 2P Automatic Transfer Switch 110V/220V - PC Class 50ms Dual Power ATS for Home & RV",
+  "slug": "ats-w2r-2p-63a-110v-220v",
+  "categorySlug": "ats-dual-power-switch",
+  "categoryName": "ATS Dual Power Switch",
+  "shortDescription": "2-pole 63A PC class ATS for single-phase 110V/220V systems. Auto & manual transfer in 50ms, compatible with mains, generator and PV inverter – ideal for home emergency backup and RV.",
+  "description": "The ATS-W2R-2P is a PC class (load level) automatic transfer switch for single-phase 110V or 220V AC systems up to 63A. With a 50ms transfer time, it switches seamlessly between Source A (mains priority) and a backup supply – whether a generator or PV inverter – whenever a mains fault is detected, ensuring connected loads experience less than 50ms of interruption. The 2-pole design switches both Live and Neutral simultaneously, fully isolating the two sources and preventing any backfeed. Once mains power is restored, the unit automatically reverts to Source A priority. Built on a motor-driven mechanism with a PA6 flame-retardant housing, the W2R series delivers reliable automatic transfer performance for home emergency backup systems, RV setups, and off-grid solar PV applications.",
+  "features": [
+    "2-pole switching (Live + Neutral) – 2 inputs / 1 output",
+    "PC class (load level) – handles full rated load continuously",
+    "Fast 50ms (0.05s) transfer time – load interruption under 50ms",
+    "Dual voltage: supports both 110V and 220V AC single-phase",
+    "Auto & manual transfer modes; returns to Source A (mains) automatically",
+    "Compatible with mains, generator, and PV inverter sources",
+    "PA6 flame-retardant housing with motor-driven mechanism",
+    "Suitable for home emergency backup, RV, and off-grid solar systems"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "2P (Live + Neutral)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "63A (Operating Range: 6A – 63A)"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Phase",
+      "value": "Single Phase"
+    },
+    {
+      "name": "Type",
+      "value": "PC Class (Load Level)"
+    },
+    {
+      "name": "I/O Configuration",
+      "value": "2 Inputs / 1 Output"
+    },
+    {
+      "name": "Priority Source",
+      "value": "Source A (Mains)"
+    },
+    {
+      "name": "Compatible Sources",
+      "value": "Mains, Generator, PV Inverter"
+    },
+    {
+      "name": "Switching Mode",
+      "value": "Auto & Manual"
+    },
+    {
+      "name": "Transfer Time",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Housing",
+      "value": "PA6 Flame-retardant"
+    },
+    {
+      "name": "Applications",
+      "value": "Home Emergency Backup, RV"
+    }
+  ],
+  "image": "/images/products/ATS-W2R-2P(220V 110V)-1.jpg",
+  "images": [
+    "/images/products/ATS-W2R-2P(220V 110V)-1.jpg",
+    "/images/products/ATS-W2R-2P(220V 110V)-2.jpg",
+    "/images/products/ATS-W2R-2P(220V 110V)-3.jpg",
+    "/images/products/ATS-W2R-2P(220V 110V)-4.jpg",
+    "/images/products/ATS-W2R-2P(220V 110V)-5.jpg",
+    "/images/products/ATS-W2R-2P(220V 110V)-6.jpg"
+  ],
+  "metaTitle": "ATS-W2R 63A 2P ATS 110V/220V | PC Class 50ms PV Inverter Compatible",
+  "metaDescription": "ATS-W2R series single-phase 63A 2-pole PC class ATS for 110V and 220V. 50ms auto transfer, compatible with mains, generator and PV inverter. For home emergency backup and RV applications.",
+  "metaKeywords": "ATS-W2R 63A 2P ATS, dual power transfer switch, 110V 220V ATS, PC class ATS, single phase ATS, PV inverter ATS, home backup transfer switch, RV ATS, solar ATS",
+  "imageAlts": [
+    "63A 2P ATS-W2R 110V/220V front view – PC class dual power transfer switch",
+    "ATS-W2R-2P wiring diagram – 2-pole 2 inputs 1 output connection",
+    "ATS-W2R-2P internal structure – PCB, motor and PA6 flame-retardant housing",
+    "63A single-phase ATS-W2R auto and manual switching mode panel",
+    "ATS-W2R-2P compatible with mains, generator and PV inverter sources",
+    "63A 2-pole transfer switch for home emergency backup and RV use"
+  ],
+  "published": true,
+  "sortOrder": 77
+}

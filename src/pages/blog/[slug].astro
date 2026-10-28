@@ -1,0 +1,11 @@
+---
+import ArticleDetail from '@/components/ArticleDetail.astro';
+import { blogPosts } from '@/lib/data';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+---
+
+<ArticleDetail post={post} />

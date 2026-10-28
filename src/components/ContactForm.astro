@@ -1,0 +1,165 @@
+---
+interface Props {
+  showCountry?: boolean;
+  showInquiryType?: boolean;
+  buttonText?: string;
+}
+const { showCountry = false, showInquiryType = false, buttonText = 'Send Enquiry' } = Astro.props;
+const id = crypto.randomUUID();
+---
+
+<form data-contact-form class="space-y-4" method="post" action="/api/contact">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div>
+      <label for={`${id}-name`} class="label">
+        Full Name *
+      </label>
+      <input
+        id={`${id}-name`}
+        name="name"
+        required
+        maxlength="100"
+        autocomplete="name"
+        class="input"
+        placeholder="John Smith"
+      />
+    </div>
+    <div>
+      <label for={`${id}-phone`} class="label">
+        Phone / WhatsApp
+      </label>
+      <input
+        id={`${id}-phone`}
+        name="phone"
+        type="tel"
+        maxlength="80"
+        autocomplete="tel"
+        class="input"
+        placeholder="+1 555 0100"
+      />
+    </div>
+  </div>
+  <div>
+    <label for={`${id}-email`} class="label">
+      Email Address *
+    </label>
+    <input
+      id={`${id}-email`}
+      name="email"
+      type="email"
+      required
+      maxlength="254"
+      autocomplete="email"
+      class="input"
+      placeholder="john@company.com"
+    />
+  </div>
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div>
+      <label for={`${id}-company`} class="label">
+        Company
+      </label>
+      <input
+        id={`${id}-company`}
+        name="company"
+        autocomplete="organization"
+        maxlength="120"
+        class="input"
+        placeholder="Company name"
+      />
+    </div>
+    {showCountry && (
+      <div>
+        <label for={`${id}-country`} class="label">
+          Your Country
+        </label>
+        <input
+          id={`${id}-country`}
+          name="country"
+          autocomplete="country-name"
+          maxlength="100"
+          class="input"
+          placeholder="e.g. United States"
+        />
+      </div>
+    )}
+  </div>
+  {showInquiryType && (
+    <div>
+      <label for={`${id}-type`} class="label">
+        Inquiry Type *
+      </label>
+      <select id={`${id}-type`} name="inquiry_type" required class="input">
+        <option value="">Select inquiry type...</option>
+        {[
+          'Product Enquiry',
+          'Request for Quotation',
+          'OEM / Private Label',
+          'Sample Request',
+          'Technical Support',
+          'Distributor Partnership',
+          'Other',
+        ].map((type) => (
+          <option>{type}</option>
+        ))}
+      </select>
+    </div>
+  )}
+  <div>
+    <label for={`${id}-message`} class="label">
+      Message *
+    </label>
+    <textarea
+      id={`${id}-message`}
+      name="message"
+      required
+      minlength="10"
+      maxlength="5000"
+      rows={4}
+      class="textarea"
+      placeholder="Please describe your requirements, including product names, quantities, and any special specifications..."
+    ></textarea>
+  </div>
+  <input name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+  <button type="submit" class="btn-primary w-full justify-center py-3.5">
+    {buttonText}
+  </button>
+  <p data-form-status role="status" aria-live="polite" class="text-sm"></p>
+</form>
+<script>
+  document.addEventListener('astro:page-load', () =>
+    document.querySelectorAll<HTMLFormElement>('[data-contact-form]').forEach((form) =>
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!,
+          status = form.querySelector<HTMLElement>('[data-form-status]')!;
+        const label = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Sending...';
+        status.textContent = '';
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(form))),
+          });
+          const result = await response.json();
+          if (!response.ok || !result.success)
+            throw new Error(result.error ?? 'Please try again later.');
+          status.textContent =
+            'Thank you for your enquiry. We will get back to you within 24 hours.';
+          status.className = 'text-sm text-green-700';
+          form.reset();
+        } catch (error) {
+          status.textContent =
+            error instanceof Error ? error.message : 'Network error. Please try again.';
+          status.className = 'text-sm text-red-600';
+        } finally {
+          button.disabled = false;
+          button.textContent = label;
+        }
+      }),
+    ),
+  );
+</script>

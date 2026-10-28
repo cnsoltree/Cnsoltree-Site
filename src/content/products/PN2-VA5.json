@@ -1,0 +1,150 @@
+{
+  "id": "PN2-VA5",
+  "name": "PN2-VA5 Self-Resetting Voltage Protector with Digital Display Logo Customization",
+  "slug": "pn2-va5-self-resetting-voltage-protector-display-logo",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Self-resetting over/under voltage protector with digital display logo customization — your brand name or logo appears directly on the device screen, ideal for OEM electrical brands and premium panel builders. 40A / 63A / 80A options.",
+  "description": "The Soltree PN2-VA5 stands apart from other models in the PN2 series with one distinctive capability: digital display logo customization. Where the PN2-VA4 supports logo printing on the housing and packaging, the PN2-VA5 allows your brand name or logo to appear directly on the device's digital display screen — a premium branding feature that elevates the perceived quality of finished distribution boards and strengthens brand identity for OEM customers, panel builders, and electrical equipment manufacturers.\n\nThe core protection functionality is the same proven platform: continuous monitoring of supply voltage and current, 0.5-second disconnect on fault, and automatic power restoration once the supply stabilizes within safe parameters. The high-resolution dual digital display shows real-time voltage in red and current in green. All trip thresholds — over-voltage (130–300V AC), under-voltage (80–210V AC), and over-current — are user-configurable, with a password lock to prevent unauthorized field adjustments.\n\nReset delay is adjustable from 0 to 999 seconds (default 60s). Available in 40A, 63A, and 80A variants; AC 110V customizable for export markets. Contact us for branding specifications and MOQ details.",
+  "features": [
+    "Digital display logo customization — brand name or logo displayed directly on the device screen",
+    "Self-resetting — auto-disconnects on fault, auto-restores when supply stabilizes",
+    "Dual digital display — real-time voltage (red) + current (green)",
+    "User-configurable trip points — over-voltage 130–300V, under-voltage 80–210V AC",
+    "Over-current protection with adjustable trip threshold",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s)",
+    "Password lock — prevents unauthorized parameter changes in the field",
+    "Energy-saving mode — reduces standby self-consumption",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable for export)",
+    "35mm DIN rail mounting",
+    "Flame-retardant PC housing (UL94 V-0)",
+    "Mechanical life ≥10,000 cycles",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Self-Resetting Over/Under Voltage Protector"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VA5"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Voltage Trip Delay",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Dual Digital Display — Voltage (Red) + Current (Green)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "OEM Customization",
+      "value": "Digital display logo customization supported"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay Protection"
+    },
+    {
+      "name": "Application",
+      "value": "Premium OEM Electrical Brands, High-End Panel Manufacturing, Branded Distribution Boards"
+    },
+    {
+      "name": "Target Buyer",
+      "value": "Premium OEM Customers, Electrical Equipment Manufacturers, High-End Panel Builders"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VA5-1.jpg",
+  "images": [
+    "/images/products/PN2-VA5-1.jpg",
+    "/images/products/PN2-VA5-2.jpg",
+    "/images/products/PN2-VA5-3.jpg",
+    "/images/products/PN2-VA5-4.jpg",
+    "/images/products/PN2-VA5-5.jpg",
+    "/images/products/PN2-VA5-6.jpg",
+    "/images/products/PN2-VA5-7.jpg",
+    "/images/products/PN2-VA5-8.jpg"
+  ],
+  "metaTitle": "PN2-VA5 Voltage Protector Custom Display Logo OEM 40A–80A | Soltree",
+  "metaDescription": "PN2-VA5 self-resetting voltage protector 40A–80A with digital display logo customization. Your brand on the device screen — ideal for OEM panel builders. Auto-reconnect, CE & RoHS.",
+  "metaKeywords": "PN2-VA5 voltage protector, digital display logo voltage protector, custom display voltage relay, OEM voltage protector screen branding, branded voltage protector panel builder, self-resetting relay custom logo, voltage protector OEM display customization",
+  "imageAlts": [
+    "Soltree PN2-VA5 self-resetting voltage protector with custom digital display logo front view",
+    "PN2-VA5 voltage protector digital display showing custom brand logo",
+    "PN2-VA5 voltage protector dual screen voltage red and current green readings",
+    "PN2-VA5 voltage protector parameter setting panel",
+    "PN2-VA5 protector DIN rail mounting side profile",
+    "PN2-VA5 voltage protector installed in finished distribution board",
+    "PN2-VA5 protector wiring terminal connections detail",
+    "PN2-VA5 voltage protector 40A 63A 80A options for OEM orders"
+  ],
+  "published": true,
+  "sortOrder": 35
+}

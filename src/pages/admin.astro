@@ -1,0 +1,236 @@
+---
+import adminTheme from '../admin/theme.css?raw';
+import ProductTable from '../admin/ProductTable.astro';
+import ArticleTable from '../admin/ArticleTable.astro';
+import GroupManager from '../admin/GroupManager.astro';
+import groupManagerTheme from '../admin/group-manager.css?raw';
+import AnalyticsDashboard from '../admin/AnalyticsDashboard.astro';
+import analyticsTheme from '../admin/analytics-dashboard.css?raw';
+import SeoAssistant from '../admin/SeoAssistant.astro';
+import KnowledgeBase from '../admin/KnowledgeBase.astro';
+import seoTheme from '../admin/seo-workspace.css?raw';
+
+export const prerender = false;
+if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+Astro.response.headers.set('Cache-Control', 'no-store');
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Soltree 内容后台 · 本地版</title>
+    <style is:inline set:html={adminTheme}></style>
+    <style is:inline set:html={groupManagerTheme}></style>
+    <style is:inline set:html={analyticsTheme}></style>
+    <style is:inline set:html={seoTheme}></style>
+    <script is:inline>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script is:inline src="/__cms/decap-cms.js"></script>
+  </head>
+  <body class="soltree-admin" data-view="workspace">
+    <aside id="studio-sidebar" class="studio-sidebar" aria-label="后台导航">
+      <div class="studio-sidebar-brand">
+        <a
+          class="studio-brand"
+          href="/admin?view=workspace#/collections/products"
+          data-studio-nav="workspace"
+          aria-label="Soltree 工作台"
+        >
+          <img src="/images/logo.png" alt="Soltree" width="844" height="144" />
+        </a>
+        <button
+          class="studio-sidebar-toggle"
+          type="button"
+          data-studio-sidebar-toggle
+          aria-label="收起侧栏"
+          aria-expanded="true"
+          aria-controls="studio-primary-nav"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <rect x="3.5" y="4" width="17" height="16" rx="2" />
+            <path d="M9 4v16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="studio-primary-nav" class="studio-primary-nav" aria-label="管理功能">
+        <a
+          class="studio-nav-item"
+          href="/admin?view=workspace#/collections/products"
+          data-studio-nav="workspace"
+          aria-label="工作台"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4.2 17a8.5 8.5 0 1 1 15.6 0M12 12l4-4" />
+            <circle cx="12" cy="12" r="1.1" />
+          </svg>
+          <span class="studio-menu-label">工作台</span>
+        </a>
+        <a
+          class="studio-nav-item"
+          href="/admin?view=analytics#/collections/products"
+          data-studio-nav="analytics"
+          aria-label="数据看板"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 20V11M9.5 20V4M15 20v-7M20.5 20V8" />
+          </svg>
+          <span class="studio-menu-label">数据看板</span>
+        </a>
+        <a
+          class="studio-nav-item"
+          href="/admin?view=seo#/collections/articles"
+          data-studio-nav="seo"
+          aria-label="SEO 助手"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10" cy="10" r="6" />
+            <path d="m15 15 5 5M7 11l2-2 2 1 2-3" />
+          </svg>
+          <span class="studio-menu-label">SEO 助手</span>
+        </a>
+        <div class="studio-content-group">
+          <button
+            class="studio-nav-item studio-content-toggle"
+            type="button"
+            data-studio-content-toggle
+            aria-label="内容"
+            aria-expanded="true"
+            aria-controls="studio-content-links"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8M13 3v6h6M13 3l6 6M12 18l7-7 3 3-7 7-4 1z" />
+            </svg>
+            <span class="studio-menu-label">内容</span>
+            <svg
+              class="studio-nav-chevron"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="m5 7.5 5 5 5-5" />
+            </svg>
+          </button>
+          <div id="studio-content-links" class="studio-subnav">
+            <a href="/admin#/collections/products" data-studio-nav="products" aria-label="产品管理">
+              <span class="studio-menu-label">产品管理</span>
+            </a>
+            <a href="/admin#/collections/articles" data-studio-nav="articles" aria-label="文章管理">
+              <span class="studio-menu-label">文章管理</span>
+            </a>
+            <a
+              href="/admin?view=knowledge#/collections/articles"
+              data-studio-nav="knowledge"
+              aria-label="知识库"
+            >
+              <span class="studio-menu-label">知识库</span>
+            </a>
+            <a
+              href="/admin?view=groups#/collections/products"
+              data-studio-nav="groups"
+              aria-label="分组管理"
+            >
+              <span class="studio-menu-label">分组管理</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div class="studio-sidebar-footer">
+        <span class="studio-avatar" aria-hidden="true">
+          S
+        </span>
+        <div class="studio-account studio-menu-label">
+          <strong>Soltree</strong>
+          <span>内容管理</span>
+        </div>
+      </div>
+    </aside>
+    <header id="local-cms-note" class="studio-shell-header">
+      <span class="studio-page-label" data-studio-page-label></span>
+      <div class="studio-header-actions">
+        <span class="studio-environment" title="保存仅更新本机文件，线上更新仍需构建和部署。">
+          <i aria-hidden="true"></i>本地工作区
+        </span>
+        <a class="studio-website" href="/" target="_blank" rel="noopener">
+          查看网站
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M7 17 17 7M7 7h10v10" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main id="studio-workspace" class="studio-workspace" aria-labelledby="studio-greeting" hidden>
+      <section class="studio-welcome">
+        <div class="studio-welcome-copy">
+          <h1 id="studio-greeting">老板，上午好</h1>
+        </div>
+        <div class="studio-assistant">
+          <img src="/src/admin/assistant.svg" width="300" height="240" alt="" />
+        </div>
+      </section>
+      <div class="studio-workspace-blank" aria-hidden="true"></div>
+    </main>
+    <ProductTable />
+    <ArticleTable />
+    <GroupManager />
+    <AnalyticsDashboard />
+    <SeoAssistant />
+    <KnowledgeBase />
+    <div id="studio-article-editor-heading" class="article-editor-heading" hidden>
+      <h1>新建文章</h1>
+      <p>专注写作，轻松整理文章与搜索信息。</p>
+    </div>
+    <div id="nc-root" hidden inert></div>
+    <noscript>请启用 JavaScript 后使用内容后台。</noscript>
+    <script is:inline type="module" src="/src/admin/main.js"></script>
+  </body>
+</html>

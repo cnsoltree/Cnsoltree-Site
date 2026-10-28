@@ -1,0 +1,79 @@
+{
+  "id": "HA-8Way-2DCB-2SPD-White",
+  "name": "PV Combiner Box (White) 1 String Input 1 Output, Dual 40A DC Breakers & Dual 500V/40kA SPDs",
+  "slug": "pv-combiner-box-1in-1out-dual-40a-dual-spd-white",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "1-string PV combiner box in a white IP65 enclosure with dual 40A DC breakers and dual 500V/40kA SPDs for redundant protection.",
+  "description": "The HA-8Way-2DCB-2SPD-White is a 1-string, 1-output PV combiner box in a white, flame-retardant plastic enclosure, engineered with redundant protection. It integrates two 40A DC circuit breakers for overload and short-circuit protection and two 500V DC surge protection devices, each rated at 40kA max discharge current, for enhanced defence against lightning-induced transients. Rated IP65 against dust and water, it is built for outdoor installation on both on-grid and off-grid PV systems where extra redundancy or bipolar protection is required.",
+  "features": [
+    "1-string PV input, 1 output configuration",
+    "Dual 40A DC circuit breakers for redundant overload and short-circuit protection",
+    "Dual 500V DC SPDs, each with 40kA maximum discharge current",
+    "White flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HA-8Way-2DCB-2SPD-White"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "1"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "40A (2 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA (2 pcs)"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic (white)"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HA-8Way-2DCB-2SPD-White-1.jpg",
+  "images": [
+    "/images/products/HA-8Way-2DCB-2SPD-White-1.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-2.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-3.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-4.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-5.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-6.jpg",
+    "/images/products/HA-8Way-2DCB-2SPD-White-7.jpg"
+  ],
+  "metaTitle": "PV Combiner Box White Dual 40A DC Breakers & Dual 40kA SPDs | Soltree",
+  "metaDescription": "1-string PV combiner box in white IP65 enclosure with dual 40A DC breakers and dual 500V/40kA SPDs for redundant protection. On-grid / off-grid. OEM available.",
+  "metaKeywords": "PV combiner box, white combiner box, redundant DC breaker combiner box, dual SPD combiner box, 40A DC breaker, 40kA SPD, IP65, on-grid off-grid PV",
+  "imageAlts": [
+    "HA-8Way-2DCB-2SPD-White PV combiner box front view white enclosure",
+    "HA-8Way-2DCB-2SPD-White combiner box interior with dual 40A DC breakers",
+    "HA-8Way-2DCB-2SPD-White dual 500V 40kA surge protection devices detail",
+    "HA-8Way-2DCB-2SPD-White wiring layout with redundant protection",
+    "HA-8Way-2DCB-2SPD-White IP65 flame-retardant enclosure close-up",
+    "HA-8Way-2DCB-2SPD-White side profile",
+    "HA-8Way-2DCB-2SPD-White outdoor installation on PV system"
+  ],
+  "published": true,
+  "sortOrder": 68
+}

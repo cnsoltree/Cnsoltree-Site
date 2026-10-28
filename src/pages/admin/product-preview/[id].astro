@@ -1,0 +1,56 @@
+---
+import ProductDetail from '@/components/ProductDetail.astro';
+import { categories, type Product } from '@/lib/data';
+
+export const prerender = false;
+if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+Astro.response.headers.set('Cache-Control', 'no-store');
+const records = import.meta.glob('../../../content/products/*.json', {
+  eager: true,
+  import: 'default',
+});
+const record = Object.values(records).find(
+  (value) =>
+    value && typeof value === 'object' && (value as Record<string, unknown>).id === Astro.params.id,
+) as Record<string, unknown> | undefined;
+if (!record || record.deletedAt) return new Response('Product not found', { status: 404 });
+const text = (key: string) => (typeof record[key] === 'string' ? (record[key] as string) : '');
+const strings = (key: string) =>
+  Array.isArray(record[key])
+    ? (record[key] as unknown[]).filter((value): value is string => typeof value === 'string')
+    : [];
+const image = (value: string) => (value.startsWith('/images/') ? value : '');
+const category = categories.find((value) => value.slug === text('categorySlug'));
+const specs = Array.isArray(record.specs)
+  ? Object.fromEntries(
+      record.specs.flatMap((value) => {
+        if (!value || typeof value !== 'object') return [];
+        const pair = value as Record<string, unknown>;
+        return typeof pair.name === 'string' && typeof pair.value === 'string'
+          ? [[pair.name, pair.value]]
+          : [];
+      }),
+    )
+  : {};
+const product: Product = {
+  id: text('id'),
+  slug: text('slug') || text('id'),
+  name: text('name') || text('id'),
+  categorySlug: category?.slug ?? '',
+  categoryName: category?.name ?? '未选择分类',
+  shortDescription: text('shortDescription') || '尚未填写产品简介（预览提示）',
+  description: text('description') || '尚未填写产品详情（预览提示）',
+  features: strings('features'),
+  specs,
+  image: image(text('image')),
+  images: strings('images').map(image).filter(Boolean),
+  imageAlts: strings('imageAlts'),
+  descriptionImages: strings('descriptionImages').map(image).filter(Boolean),
+  metaTitle: text('metaTitle') || undefined,
+  metaDescription: text('metaDescription') || undefined,
+  metaKeywords: text('metaKeywords') || undefined,
+};
+---
+
+<ProductDetail product={product} preview />

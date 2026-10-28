@@ -1,0 +1,122 @@
+---
+---
+
+<main
+  id="studio-groups"
+  class="product-manager group-manager"
+  aria-labelledby="group-manager-title"
+  hidden
+>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="group-manager-title">分组管理</h1>
+      <p>统一维护一级分组与二级分类，产品和文章可分别调整显示与排序。</p>
+    </div>
+  </div>
+  <section class="product-panel" aria-label="分组管理列表">
+    <div class="group-tabs" role="tablist" aria-label="分组用途">
+      <button
+        id="group-products-tab"
+        type="button"
+        role="tab"
+        aria-selected="true"
+        aria-controls="group-list-panel"
+        data-group-tab="products"
+      >
+        产品分组
+      </button>
+      <button
+        id="group-articles-tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="group-list-panel"
+        tabindex="-1"
+        data-group-tab="articles"
+      >
+        文章分组
+      </button>
+    </div>
+    <div id="group-list-panel" role="tabpanel" aria-labelledby="group-products-tab">
+      <div class="product-toolbar group-toolbar">
+        <button type="button" class="product-create" data-group-create>
+          <span aria-hidden="true">＋</span> 新建一级分组
+        </button>
+        <button type="button" class="group-secondary" data-group-categories>
+          分类资料
+        </button>
+        <button type="button" class="product-refresh" data-group-refresh>
+          刷新列表
+        </button>
+      </div>
+      <div class="group-view-note">
+        <p data-group-surface>
+          产品分组用于产品导航、产品列表和 Resources；名称与分类资料在全站共用。
+        </p>
+        <label class="group-trash">
+          <input type="checkbox" data-group-trash /> 查看回收站
+        </label>
+      </div>
+      <p class="product-error" data-group-error role="alert" hidden></p>
+      <p class="group-feedback" data-group-feedback role="status" aria-live="polite"></p>
+      <div
+        class="product-table-scroll group-table-scroll"
+        tabindex="0"
+        aria-label="可横向滚动的分组表格"
+      >
+        <table class="product-table group-table" aria-label="一级分组与二级分类" aria-busy="true">
+          <colgroup>
+            <col class="group-column-name" />
+            <col class="group-column-id" />
+            <col class="group-column-count" />
+            <col class="group-column-visible" />
+            <col class="group-column-order" />
+            <col class="group-column-actions" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">分组 / 分类</th>
+              <th scope="col">标识 / 对应分类</th>
+              <th scope="col" data-group-count-heading>
+                产品数
+              </th>
+              <th scope="col">前台显示</th>
+              <th scope="col">排序</th>
+              <th scope="col">操作</th>
+            </tr>
+          </thead>
+          <tbody data-group-rows>
+            <tr>
+              <td colspan="6" class="product-empty">
+                正在加载分组…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="group-footer">
+        <span data-group-total>正在加载</span>
+        <span>拖动手柄或使用上下按钮排序；隐藏后原有链接仍可访问。</span>
+      </div>
+    </div>
+  </section>
+  <dialog
+    class="product-delete-dialog group-dialog"
+    data-group-dialog
+    aria-labelledby="group-dialog-title"
+  >
+    <form data-group-form>
+      <h2 id="group-dialog-title"></h2>
+      <fieldset data-group-fields></fieldset>
+      <p class="product-error" data-group-dialog-error role="alert" hidden></p>
+      <div class="product-dialog-actions">
+        <button type="button" data-group-dialog-cancel>
+          取消
+        </button>
+        <button type="submit" class="group-save" data-group-dialog-save>
+          保存
+        </button>
+      </div>
+    </form>
+  </dialog>
+</main>

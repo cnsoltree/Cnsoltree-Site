@@ -1,0 +1,125 @@
+{
+  "id": "RT18-32X-3P",
+  "name": "RT18-32X 3P DIN Rail Fuse Holder 32A 690V",
+  "slug": "dc-fuse-holder-rt18-32x-3p",
+  "categorySlug": "dc-fuse-holder",
+  "categoryName": "DC Fuse Holder",
+  "shortDescription": "Three-pole 32A 690V DIN rail fuse holder for 10x38mm fuse links — per-phase fuse isolation for three-phase motors and industrial control panels, with LED fuse-blow indication per phase.",
+  "description": "Three-phase motor starters, machinery control panels, and industrial distribution circuits require independent per-phase fuse protection — a blown fuse on one phase without isolation can leave the other two phases energizing a damaged motor. The Soltree RT18-32X 3P addresses this directly: three independent fuse positions in one compact 35mm DIN rail module, each with its own red LED indicator, so maintenance teams can identify exactly which phase has tripped without a multimeter. Rated at 32A and 500V–690V AC, it accepts standard 10x38mm ceramic fuse links suited to smaller three-phase loads, control transformers, and auxiliary circuits in motor control centers. Flame-retardant PVC housing and high-conductivity copper contacts maintain stable performance under continuous load, and the tool-free DIN rail clip allows fast installation in any standard control cabinet. Note: fuse links are sold separately.",
+  "features": [
+    "Three-pole design — independent per-phase fuse protection for three-phase circuits",
+    "Rated 32A / 500V–690V AC — suitable for smaller three-phase loads and control circuits",
+    "Compatible with standard 10x38mm ceramic fuse links",
+    "Individual LED indicator per phase — instantly identify which phase fuse has blown",
+    "Flame-retardant PVC housing — safe under fault conditions",
+    "High-conductivity copper contacts — stable three-phase current transmission",
+    "Tool-free 35mm DIN rail clip mounting",
+    "Compact modular structure — saves panel space in motor control centers",
+    "IP20 finger-safe design",
+    "Compliant with IEC 60269 and GB 13539",
+    "CE & RoHS certified",
+    "Fuse links sold separately"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Three-Phase Fuse Holder"
+    },
+    {
+      "name": "Model Number",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Pole Configuration",
+      "value": "3P (Three Pole)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "32A"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Compatible Fuse Size",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Mounting Type",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PVC (V0 Grade)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-Purity Copper"
+    },
+    {
+      "name": "Indicator Type",
+      "value": "LED Fault Indicator (per phase)"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-25°C to +70°C"
+    },
+    {
+      "name": "Protection Rating",
+      "value": "IP20 (Finger-Safe)"
+    },
+    {
+      "name": "Standards Compliance",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Application",
+      "value": "Three-Phase Motor Circuits, Industrial Control Panels"
+    },
+    {
+      "name": "Installation",
+      "value": "Tool-Free DIN Rail Clip"
+    },
+    {
+      "name": "Dimensions (per pole)",
+      "value": "18mm (W) x 78mm (H) x 65mm (D)"
+    },
+    {
+      "name": "Weight",
+      "value": "Approx. 85g"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fuse Inclusion",
+      "value": "Fuse links NOT included — sold separately"
+    }
+  ],
+  "image": "/images/products/RT18-32X-3P-1.jpg",
+  "images": [
+    "/images/products/RT18-32X-3P-1.jpg",
+    "/images/products/RT18-32X-3P-2.jpg",
+    "/images/products/RT18-32X-3P-3.jpg",
+    "/images/products/RT18-32X-3P-4.jpg",
+    "/images/products/RT18-32X-3P-5.jpg",
+    "/images/products/RT18-32X-3P-6.jpg",
+    "/images/products/RT18-32X-3P-7.jpg"
+  ],
+  "metaTitle": "RT18-32X 3P Fuse Holder 32A 690V Three-Phase DIN Rail | Soltree",
+  "metaDescription": "RT18-32X 3P three-phase DIN rail fuse holder 32A 690V for 10x38mm fuses. Per-phase LED fault indicator for motor starters and industrial control panels. CE & RoHS, OEM available.",
+  "metaKeywords": "RT18-32X 3P fuse holder, three phase fuse holder 32A, 10x38mm three phase fuse base, motor control fuse holder DIN rail, industrial three phase fuse holder 690V, per phase LED fuse indicator, control panel fuse protection",
+  "imageAlts": [
+    "Soltree RT18-32X 3P three-pole DIN rail fuse holder 32A 690V front view",
+    "RT18-32X 3P fuse holder side profile with DIN rail clip",
+    "RT18-32X 3P fuse holder per-phase LED indicators close-up",
+    "RT18-32X 3P fuse holder screw terminal wiring detail",
+    "RT18-32X 3P fuse holder installed in industrial motor control panel",
+    "RT18-32X 3P fuse holder with 10x38mm ceramic fuse links",
+    "RT18-32X 3P fuse holder product dimensions drawing"
+  ],
+  "published": true,
+  "sortOrder": 22
+}

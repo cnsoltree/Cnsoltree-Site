@@ -1,0 +1,92 @@
+{
+  "id": "MCB-AC-3P",
+  "name": "MCB 3P AC 6 – 63A Circuit breaker",
+  "slug": "mcb-3p-ac-6-63a-circuit-breaker",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "shortDescription": "Three-pole miniature circuit breaker, 6 – 63A, B/C/D-curve, designed for three-phase industrial equipment and motor protection.",
+  "description": "The Soltree 3 Pole MCB is purpose-built for three-phase industrial and commercial applications, protecting motors, HVAC equipment, pumps, and three-phase distribution sub-boards from overload and short-circuit faults. All three poles trip simultaneously on fault detection, preventing single-phasing damage to connected three-phase motors – a common cause of motor burnout. The D-curve option accommodates high inrush currents during motor start-up without nuisance tripping. With a compact 3-module DIN-rail footprint and CE-certified breaking capacity up to 6kA, it delivers industrial-grade protection in a space-efficient package suited to panel builders and system integrators worldwide.",
+  "features": [
+    "Simultaneous three-phase disconnection – prevents single-phasing motor damage",
+    "D-curve option for high inrush motor and transformer loads",
+    "Ideal for HVAC, pumps, compressors, and three-phase sub-boards",
+    "CE & RoHS certified – accepted in EU, UK, and global markets",
+    "Compact 3-module DIN footprint – optimises panel space in industrial enclosures",
+    "OEM / ODM customization available – logo, color, rating label",
+    "18-year ISO 9001 certified manufacturing facility"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "3P"
+    },
+    {
+      "name": "Rated Current",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A Customed"
+    },
+    {
+      "name": "Rated Voltage",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "4.5 kA, 6 kA Customed"
+    },
+    {
+      "name": "Trip Curve",
+      "value": "C, B, D Customed"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-Retardant Thermoplastic"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "20,000 operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "10,000 operations"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN-rail 35mm"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Mounting Method",
+      "value": "DIN Rail Mounting (35mm)"
+    },
+    {
+      "name": "Contact Material",
+      "value": "High-Conductivity Copper Alloy"
+    }
+  ],
+  "image": "/images/products/MCB-AC-3P-01.jpg",
+  "images": [
+    "/images/products/MCB-AC-3P-01.jpg",
+    "/images/products/MCB-AC-3P-02.jpg",
+    "/images/products/MCB-AC-3P-03.jpg",
+    "/images/products/MCB-AC-3P-04.jpg",
+    "/images/products/MCB-AC-3P-05.jpg",
+    "/images/products/MCB-AC-3P-06.jpg",
+    "/images/products/MCB-AC-3P-07.jpg"
+  ],
+  "metaTitle": "3 Pole MCB 6A-63A AC Circuit Breaker | Three Phase DIN Rail MCB | Soltree",
+  "metaDescription": "Soltree 3 pole MCB 6A to 63A, rated 120V/230V AC, B/C/D trip curve, CE & RoHS certified. Ideal for three-phase industrial systems. OEM available, ships worldwide.",
+  "metaKeywords": "3 pole MCB, three pole circuit breaker, MCB 3P 6A 63A, three phase DIN rail MCB, miniature circuit breaker supplier, CE certified MCB, industrial circuit breaker wholesale",
+  "imageAlts": [
+    "Soltree 3 pole MCB 6-63A three pole miniature circuit breaker front view",
+    "MCB-AC-3P three pole circuit breaker side view showing DIN rail clip",
+    "MCB-AC-3P trip curve B C D selection detail",
+    "MCB-AC-3P three phase terminal connection and wiring diagram",
+    "MCB-AC-3P installed on 35mm DIN rail in three-phase distribution board",
+    "MCB-AC-3P product dimensions and size drawing",
+    "MCB-AC-3P CE RoHS certification label and packaging"
+  ],
+  "published": true,
+  "sortOrder": 2
+}

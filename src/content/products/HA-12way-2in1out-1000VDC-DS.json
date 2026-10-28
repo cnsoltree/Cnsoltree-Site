@@ -1,0 +1,86 @@
+{
+  "id": "HA-12way-2in1out-1000VDC-DS",
+  "name": "PV Combiner Box 2 String Input 1 Output, 1000V DC, 32A Isolator Switch, 15A Fuse & 40kA SPD",
+  "slug": "pv-combiner-box-2in-1out-1000vdc-32a-isolator",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4×15A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+  "description": "The HA-12way-2in1out-1000VDC-DS is a 2-string, 1-output PV combiner box built around a 32A / 1200V DC isolator switch, providing safe on-site load-break disconnection for installation and maintenance. It integrates 4×15A PV fuses for independent per-pole string protection and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. The hard, flame-retardant plastic enclosure is IP65-rated, making it suitable for outdoor installation on both on-grid and off-grid PV systems rated up to 1000V DC.",
+  "features": [
+    "2-string PV input, 1 output configuration",
+    "32A / 1200V DC isolator switch for safe manual disconnection",
+    "4 × 15A PV fuses for individual per-pole string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Supports 1000V DC PV systems (on-grid / off-grid)"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HA-12way-2in1out-1000VDC-DS"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "2"
+    },
+    {
+      "name": "Outputs",
+      "value": "1"
+    },
+    {
+      "name": "Max System Voltage",
+      "value": "1000V DC"
+    },
+    {
+      "name": "DC Isolator Switch",
+      "value": "32A, 1200V DC"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "15A (4 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HA-12way-2in1out-1000VDC-DS-1.jpg",
+  "images": [
+    "/images/products/HA-12way-2in1out-1000VDC-DS-1.jpg",
+    "/images/products/HA-12way-2in1out-1000VDC-DS-2.jpg",
+    "/images/products/HA-12way-2in1out-1000VDC-DS-3.jpg",
+    "/images/products/HA-12way-2in1out-1000VDC-DS-4.jpg",
+    "/images/products/HA-12way-2in1out-1000VDC-DS-5.jpg",
+    "/images/products/HA-12way-2in1out-1000VDC-DS-6.jpg"
+  ],
+  "metaTitle": "PV Combiner Box 2-in-1-out 1000VDC | 32A Isolator, 15A Fuse, 40kA SPD | Soltree",
+  "metaDescription": "2-string 1000V DC PV combiner box with 32A/1200V isolator switch, 4×15A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+  "metaKeywords": "PV combiner box, 1000VDC combiner box, 2 string combiner box, isolator switch combiner box, DC isolator 32A, 15A PV fuse, 40kA SPD, IP65, on-grid off-grid PV",
+  "imageAlts": [
+    "HA-12way-2in1out-1000VDC-DS 2-string 1000V PV combiner box front view",
+    "HA-12way-2in1out-1000VDC-DS combiner box interior with 32A isolator switch and fuses",
+    "HA-12way-2in1out-1000VDC-DS wiring layout with 15A PV fuses",
+    "HA-12way-2in1out-1000VDC-DS 500V 40kA surge protection device detail",
+    "HA-12way-2in1out-1000VDC-DS IP65 flame-retardant plastic enclosure",
+    "HA-12way-2in1out-1000VDC-DS outdoor installation on 1000V PV system"
+  ],
+  "published": true,
+  "sortOrder": 65
+}

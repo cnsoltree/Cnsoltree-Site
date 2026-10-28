@@ -1,0 +1,123 @@
+{
+  "id": "CZVA1",
+  "name": "Adjustable Digital Voltage Protector Socket EU/UK/South Africa Plug Over/Under Voltage Protection",
+  "slug": "czva1-adjustable-digital-voltage-protector-socket-eu-uk-south-africa",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Plug-and-play digital voltage protector socket for home appliances — adjustable over-voltage (230–300V) and under-voltage (140–210V) protection with auto power restore. Available in EU (Schuko), UK, and South Africa plug standards. 2300W / 10A.",
+  "description": "Unstable grid voltage is one of the most common — and least visible — causes of premature appliance failure. When voltage spikes or sags occur, refrigerator compressors, air conditioner units, and televisions absorb the damage silently until they fail. The Soltree CZVA1 voltage protector socket sits between the wall outlet and your appliance, cutting power the instant voltage moves outside your set range and restoring it automatically once the grid stabilizes. No wiring, no electrician — just plug in, set your thresholds, and your appliance is protected.\n\nThe built-in digital LED display shows the live voltage reading at all times, so you always know what your grid is delivering. Over-voltage and under-voltage thresholds are independently adjustable: set over-voltage anywhere from 230V to 300V (factory default 260V) and under-voltage from 140V to 210V (factory default 175V). A ±20V voltage correction function lets you fine-tune the displayed reading against a calibrated reference. Recovery delay is configurable from 5 to 999 seconds — set a longer delay to protect compressor-based appliances like refrigerators and air conditioners from rapid cycling after a voltage event.\n\nAvailable in EU Schuko, UK, and South Africa plug formats to cover export markets and international installations. Rated for up to 2300W (10A), suitable for most household appliances including refrigerators, air conditioners, washing machines, and televisions. Operating temperature range -10℃ to +50℃.",
+  "features": [
+    "Plug-and-play — no installation or wiring required, plugs directly into wall socket",
+    "Digital LED display — shows live voltage reading at all times",
+    "Adjustable over-voltage protection — 230V–300V, default 260V",
+    "Adjustable under-voltage protection — 140V–210V, default 175V",
+    "Configurable recovery delay — 5s–999s, prevents rapid cycling for compressor appliances",
+    "Voltage correction function — ±20V offset for calibration against reference meter",
+    "Automatic power cutoff on fault — instant trip on over or under voltage",
+    "Automatic power restore — resumes after set delay once voltage stabilizes",
+    "Available in EU (Schuko), UK, and South Africa plug standards",
+    "Max load 2300W / 10A — suitable for refrigerators, air conditioners, TVs"
+  ],
+  "specs": [
+    {
+      "name": "Product Name",
+      "value": "Adjustable Digital Voltage Protector Socket"
+    },
+    {
+      "name": "Compatible Plug Standards",
+      "value": "EU (Schuko) / UK / South Africa"
+    },
+    {
+      "name": "Rated Input Voltage",
+      "value": "AC 140–300V"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "50Hz / 60Hz"
+    },
+    {
+      "name": "Max Rated Power",
+      "value": "2300W"
+    },
+    {
+      "name": "Max Rated Current",
+      "value": "10(2)A / 16A Max"
+    },
+    {
+      "name": "Over-Voltage Protection Range",
+      "value": "230V–300V (Default: 260V)"
+    },
+    {
+      "name": "Over-Voltage Recovery Offset",
+      "value": "-5V (Default: 255V)"
+    },
+    {
+      "name": "Under-Voltage Protection Range",
+      "value": "140V–210V (Default: 175V)"
+    },
+    {
+      "name": "Under-Voltage Recovery Offset",
+      "value": "+5V (Default: 180V)"
+    },
+    {
+      "name": "Recovery Delay Time",
+      "value": "5s–999s (Default: 10s)"
+    },
+    {
+      "name": "Voltage Correction Range",
+      "value": "-20V ~ +20V (Default: 0V)"
+    },
+    {
+      "name": "Display Type",
+      "value": "Digital LED Display"
+    },
+    {
+      "name": "Control Buttons",
+      "value": "Power / SET / Up / Down"
+    },
+    {
+      "name": "Automatic Power Cutoff",
+      "value": "Yes (On Over/Under Voltage)"
+    },
+    {
+      "name": "Automatic Power Restore",
+      "value": "Yes (After Set Delay)"
+    },
+    {
+      "name": "Plug & Play Installation",
+      "value": "Yes"
+    },
+    {
+      "name": "Application",
+      "value": "Home Appliances, Refrigerators, Air Conditioners, Televisions, Washing Machines"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-10℃ ~ +50℃"
+    }
+  ],
+  "image": "/images/products/CZVA1-1.jpg",
+  "images": [
+    "/images/products/CZVA1-1.jpg",
+    "/images/products/CZVA1-2.jpg",
+    "/images/products/CZVA1-3.jpg",
+    "/images/products/CZVA1-4.jpg",
+    "/images/products/CZVA1-5.jpg",
+    "/images/products/CZVA1-6.jpg",
+    "/images/products/CZVA1-7.jpg"
+  ],
+  "metaTitle": "CZVA1 Adjustable Voltage Protector Socket EU UK South Africa Plug 2300W | Soltree",
+  "metaDescription": "CZVA1 plug-and-play digital voltage protector socket — adjustable over/under voltage protection, auto power restore, LED display. EU Schuko, UK, South Africa plug. 2300W / 10A for home appliances.",
+  "metaKeywords": "adjustable voltage protector socket, over under voltage protection plug, EU plug voltage protector, UK plug voltage protector, South Africa plug voltage protector, digital voltage protector socket 2300W, refrigerator air conditioner voltage protector, plug-in voltage guard home appliance",
+  "imageAlts": [
+    "Soltree CZVA1 adjustable digital voltage protector socket EU plug front view with LED display",
+    "CZVA1 voltage protector socket digital display showing live voltage reading",
+    "CZVA1 over-voltage under-voltage threshold setting buttons and display",
+    "CZVA1 voltage protector socket EU Schuko UK South Africa plug variants",
+    "CZVA1 plug-in voltage protector connected to refrigerator power outlet",
+    "CZVA1 voltage protector socket recovery delay and voltage correction settings",
+    "CZVA1 adjustable voltage protector socket protecting air conditioner from unstable power"
+  ],
+  "published": true,
+  "sortOrder": 42
+}

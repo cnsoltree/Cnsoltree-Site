@@ -1,0 +1,86 @@
+{
+  "id": "HA-12Way-2in2out-500VDC-63A-30AFUSE",
+  "name": "PV Combiner Box 2 String Input 2 Output, 500V DC 63A Breaker, 30A Fuse & 40kA SPD",
+  "slug": "pv-combiner-box-2in-2out-500vdc-63a-30a",
+  "categorySlug": "pv-combiner-box",
+  "categoryName": "PV Combiner Box",
+  "shortDescription": "2-string, 2-output PV combiner box with 63A DC breaker, 4×30A fuses and 500V/40kA SPD in an IP65 flame-retardant enclosure.",
+  "description": "The HA-12Way-2in2out-500VDC-63A-30AFUSE is a 2-string input, 2-output PV combiner box that allows a single combiner to feed two independent inverter channels. It integrates a 63A DC circuit breaker for overload and short-circuit protection, 4×30A PV fuses for independent per-pole string protection, and a 500V DC surge protection device rated at 40kA max discharge current to defend the system against lightning-induced transients. Housed in a hard, flame-retardant plastic enclosure with IP65 ingress protection, it is built for outdoor installation on both on-grid and off-grid PV systems.",
+  "features": [
+    "2-string PV input, 2 output configuration",
+    "63A DC circuit breaker for overload and short-circuit protection",
+    "4 × 30A PV fuses for individual per-pole string protection",
+    "500V DC SPD with 40kA maximum discharge current (lightning protection)",
+    "Flame-retardant hard plastic housing",
+    "IP65 waterproof and dustproof – suitable for outdoor installation",
+    "Compatible with both on-grid and off-grid PV systems"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "HA-12Way-2in2out-500VDC-63A-30AFUSE"
+    },
+    {
+      "name": "PV String Inputs",
+      "value": "2"
+    },
+    {
+      "name": "Outputs",
+      "value": "2"
+    },
+    {
+      "name": "Max System Voltage",
+      "value": "500V DC"
+    },
+    {
+      "name": "DC Circuit Breaker",
+      "value": "63A"
+    },
+    {
+      "name": "PV Fuse Rating",
+      "value": "30A (4 pcs)"
+    },
+    {
+      "name": "Surge Protection (SPD)",
+      "value": "500V DC, 40kA max discharge current"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant hard plastic"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP65 (waterproof & dustproof)"
+    },
+    {
+      "name": "Installation",
+      "value": "Outdoor"
+    },
+    {
+      "name": "Applicable Systems",
+      "value": "On-grid / Off-grid PV systems"
+    }
+  ],
+  "image": "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-1.jpg",
+  "images": [
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-1.jpg",
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-2.jpg",
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-3.jpg",
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-4.jpg",
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-5.jpg",
+    "/images/products/HA-12Way-2in2out-500VDC-63A-30AFUSE-6.jpg"
+  ],
+  "metaTitle": "PV Combiner Box 2-in-2-out 500VDC 63A | 30A Fuse & 40kA SPD | Soltree",
+  "metaDescription": "2-string, 2-output PV combiner box with 63A DC breaker, 4×30A PV fuses, 500V/40kA SPD and IP65 flame-retardant enclosure. For on-grid and off-grid solar systems. OEM available.",
+  "metaKeywords": "PV combiner box, 2 string 2 output combiner box, 500VDC combiner box, solar combiner box with SPD, 63A DC breaker, 30A PV fuse, IP65 combiner box, on-grid off-grid PV",
+  "imageAlts": [
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE 2-in-2-out PV combiner box front view",
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE combiner box interior with 63A DC breaker and fuses",
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE wiring layout with 30A PV fuses",
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE 500V 40kA surge protection device detail",
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE IP65 flame-retardant plastic enclosure",
+    "HA-12Way-2in2out-500VDC-63A-30AFUSE outdoor installation on PV system"
+  ],
+  "published": true,
+  "sortOrder": 61
+}

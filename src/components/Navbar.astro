@@ -1,0 +1,329 @@
+---
+import { productGroups, subcategoryHref } from '@/lib/product-taxonomy';
+import Img from './Img.astro';
+import CompanyMenu from './CompanyMenu.astro';
+import { companyLinks } from '@/lib/company-navigation';
+const path = Astro.url.pathname;
+const links = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact Us', href: '/contact' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm" data-navbar>
+  <div class="container flex h-16 items-center justify-between">
+    <a href="/" aria-label="Soltree home">
+      <Img
+        src="/images/logo.png"
+        alt="Soltree Logo"
+        width={160}
+        height={40}
+        class="h-8 w-auto object-contain"
+        priority
+      />
+    </a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+      <a
+        href="/"
+        class:list={[
+          'rounded-md px-4 py-2 text-sm font-medium',
+          path === '/' ? 'text-green-700' : 'text-gray-600 hover:bg-gray-50',
+        ]}
+      >
+        Home
+      </a>
+      <div data-product-menu data-mega-menu>
+        <button
+          type="button"
+          class="flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-green-50 hover:text-green-700"
+          aria-expanded="false"
+          aria-controls="desktop-product-menu"
+          data-product-trigger
+          data-mega-trigger
+        >
+          Product{' '}
+          <svg
+            class="nav-chevron"
+            data-chevron
+            aria-hidden="true"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m5 7.5 5 5 5-5" />
+          </svg>
+        </button>
+        <div
+          id="desktop-product-menu"
+          data-mega-panel
+          hidden
+          class="absolute left-[5%] right-[5%] top-full border-t-2 border-green-700 bg-white shadow-xl"
+        >
+          <div class="grid max-h-[calc(100dvh-5rem)] w-full grid-cols-[220px_300px_minmax(0,1fr)] overflow-y-auto xl:grid-cols-[250px_330px_minmax(0,1fr)]">
+            <div class="flex flex-col items-start bg-gray-50 px-8 py-10">
+              <p class="text-xs font-semibold uppercase tracking-widest text-green-700">
+                Soltree Products
+              </p>
+              <h2 class="mt-3 text-3xl font-bold leading-tight text-gray-900">
+                Product
+                <br />
+                Range
+              </h2>
+              <p class="mt-5 text-sm leading-7 text-gray-500">
+                Explore our electrical protection products by family to find the right solution for
+                your project.
+              </p>
+              <a
+                href="/products"
+                class="mt-8 text-sm font-semibold text-green-700 hover:text-green-900"
+              >
+                View all products ↗
+              </a>
+            </div>
+            <div class="border-r border-gray-100 py-6" aria-label="Product families">
+              {productGroups.map((group, index) => (
+                <button
+                  type="button"
+                  id={`product-group-${index}`}
+                  data-group={index}
+                  aria-controls={`product-panel-${index}`}
+                  aria-pressed={index === 0 ? 'true' : 'false'}
+                  class:list={[
+                    'product-group flex min-h-18 w-full items-center gap-4 px-6 py-4 text-left text-sm font-semibold',
+                    index === 0 ? 'bg-green-50 text-green-700' : 'text-gray-700',
+                  ]}
+                >
+                  <svg
+                    class="h-6 w-6 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d={group.icon} />
+                  </svg>
+                  <span class="flex-1">{group.name}</span>
+                  <span aria-hidden="true">›</span>
+                </button>
+              ))}
+            </div>
+            <div>
+              {productGroups.map((group, index) => (
+                <div
+                  id={`product-panel-${index}`}
+                  data-panel={index}
+                  hidden={index !== 0}
+                  role="region"
+                  aria-labelledby={`product-group-${index}`}
+                  class="px-8 py-10 xl:px-10"
+                >
+                  <h2 class="border-b border-gray-100 pb-6 text-2xl font-bold text-gray-900">
+                    {group.name}
+                  </h2>
+                  <div class="mt-5 grid grid-cols-1 gap-x-8 xl:grid-cols-2">
+                    {group.items.map((item) => (
+                      <a
+                        href={subcategoryHref(item, group.slug)}
+                        class="flex items-center justify-between gap-3 border-b border-gray-100 py-5 text-sm font-medium text-gray-600 hover:text-green-700"
+                      >
+                        {item.name}
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      {links.slice(1, 2).map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'rounded-md px-4 py-2 text-sm font-medium',
+            path.startsWith(link.href) ? 'text-green-700' : 'text-gray-600 hover:bg-gray-50',
+          ]}
+        >
+          {link.name}
+        </a>
+      ))}
+      <CompanyMenu />
+      <a href="/contact" class="rounded-md px-4 py-2 text-sm font-medium text-gray-600">
+        Contact Us
+      </a>
+    </nav>
+    <a href="/contact" class="btn-primary hidden xl:inline-flex">
+      Contact Us
+    </a>
+    <button
+      type="button"
+      class="rounded-lg p-2 lg:hidden"
+      aria-label="Open menu"
+      aria-controls="mobile-navigation"
+      aria-expanded="false"
+      data-mobile-trigger
+    >
+      ☰
+    </button>
+  </div>
+  <nav
+    id="mobile-navigation"
+    hidden
+    class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-gray-100 px-4 py-4 lg:hidden"
+    aria-label="Mobile navigation"
+  >
+    <a href="/" class="block rounded-lg px-4 py-3 text-sm">
+      Home
+    </a>
+    <details>
+      <summary class="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-green-700">
+        Product
+      </summary>
+      <a href="/products" class="block px-8 py-3 text-sm font-semibold text-green-700">
+        All Products
+      </a>
+      {productGroups.map((group) => (
+        <details class="ml-4 border-l border-green-100">
+          <summary class="cursor-pointer px-4 py-3 text-sm font-semibold text-gray-700">
+            {group.name}
+          </summary>
+          {group.items.map((item) => (
+            <a
+              href={subcategoryHref(item, group.slug)}
+              class="block py-3 pl-10 text-sm text-gray-600 hover:text-green-700"
+            >
+              {item.name}
+            </a>
+          ))}
+        </details>
+      ))}
+    </details>
+    {links.slice(1, 2).map((link) => (
+      <a href={link.href} class="block rounded-lg px-4 py-3 text-sm">
+        {link.name}
+      </a>
+    ))}
+    <details class="border-t border-gray-100">
+      <summary class="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-gray-700">
+        Company
+      </summary>
+      {companyLinks.map((link) => (
+        <a
+          href={link.href}
+          class="block rounded-lg px-8 py-3 text-sm text-gray-600 hover:bg-green-50 hover:text-green-700"
+        >
+          {link.name}
+        </a>
+      ))}
+    </details>
+    <a href="/contact" class="block rounded-lg px-4 py-3 text-sm">
+      Contact Us
+    </a>
+  </nav>
+</header>
+<style>
+  [data-navbar] :global(.nav-chevron) {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    transition: transform 180ms ease;
+  }
+  [data-navbar] :global([data-mega-trigger][aria-expanded='true'] .nav-chevron) {
+    transform: rotate(180deg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-navbar] :global(.nav-chevron) {
+      transition: none;
+    }
+  }
+</style>
+<script>
+  function initNavbar() {
+    document.querySelectorAll<HTMLElement>('[data-mega-menu]').forEach((root) => {
+      const trigger = root.querySelector<HTMLButtonElement>('[data-mega-trigger]')!;
+      const panel = root.querySelector<HTMLElement>('[data-mega-panel]')!;
+      let timer: ReturnType<typeof setTimeout>;
+      function show(open: boolean) {
+        clearTimeout(timer);
+        if (open) {
+          document.querySelectorAll<HTMLElement>('[data-mega-menu]').forEach((other) => {
+            if (other !== root) other.dispatchEvent(new Event('close-mega-menu'));
+          });
+        }
+        panel.hidden = !open;
+        trigger.setAttribute('aria-expanded', String(open));
+        trigger.classList.toggle('bg-green-50', open);
+        trigger.classList.toggle('text-green-700', open);
+      }
+      root.addEventListener('close-mega-menu', () => show(false));
+      root.addEventListener('mouseenter', () => show(true));
+      root.addEventListener('mouseleave', () => {
+        timer = setTimeout(() => show(false), 180);
+      });
+      trigger.addEventListener('click', () => show(true));
+      root.addEventListener('focusout', (event) => {
+        if (!root.contains(event.relatedTarget as Node)) show(false);
+      });
+      root.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          show(false);
+          trigger.focus();
+        }
+        if (event.key === 'ArrowDown' && event.target === trigger) {
+          event.preventDefault();
+          show(true);
+          panel.querySelector<HTMLElement>('[data-group], a')?.focus();
+        }
+      });
+      root.addEventListener('click', (event) => {
+        if ((event.target as HTMLElement).closest('a')) show(false);
+      });
+      const outside = (event: PointerEvent) => {
+        if (!root.contains(event.target as Node)) show(false);
+      };
+      document.addEventListener('pointerdown', outside);
+      document.addEventListener(
+        'astro:before-swap',
+        () => {
+          document.removeEventListener('pointerdown', outside);
+          clearTimeout(timer);
+        },
+        { once: true },
+      );
+    });
+    const root = document.querySelector<HTMLElement>('[data-product-menu]')!;
+    root.querySelectorAll<HTMLButtonElement>('[data-group]').forEach((button) => {
+      function select() {
+        root!.querySelectorAll<HTMLButtonElement>('[data-group]').forEach((other) => {
+          const selected = other === button;
+          other.setAttribute('aria-pressed', String(selected));
+          other.classList.toggle('bg-green-50', selected);
+          other.classList.toggle('text-green-700', selected);
+        });
+        root!
+          .querySelectorAll<HTMLElement>('[data-panel]')
+          .forEach((panel) => (panel.hidden = panel.dataset.panel !== button.dataset.group));
+      }
+      button.addEventListener('mouseenter', select);
+      button.addEventListener('focus', select);
+      button.addEventListener('click', select);
+    });
+    const mobileTrigger = document.querySelector<HTMLButtonElement>('[data-mobile-trigger]');
+    const mobile = document.getElementById('mobile-navigation');
+    mobileTrigger?.addEventListener('click', () => {
+      if (!mobile) return;
+      mobile.hidden = !mobile.hidden;
+      mobileTrigger.setAttribute('aria-expanded', String(!mobile.hidden));
+      mobileTrigger.setAttribute('aria-label', mobile.hidden ? 'Open menu' : 'Close menu');
+    });
+  }
+  document.addEventListener('astro:page-load', initNavbar);
+</script>

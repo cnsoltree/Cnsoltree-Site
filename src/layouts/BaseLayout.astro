@@ -1,0 +1,53 @@
+---
+/**
+ * 全站基础布局：<head> SEO + 导航 + 主体 + 页脚 + 浮动 WhatsApp。
+ * 所有页面套这一层，保证结构与元数据一致。
+ */
+import BaseHead from '@/components/BaseHead.astro';
+import Navbar from '@/components/Navbar.astro';
+import Footer from '@/components/Footer.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
+import CookieConsent from '@/components/CookieConsent.astro';
+import { SITE } from '@/consts';
+
+interface Props {
+  title: string;
+  description?: string;
+  path?: string;
+  image?: string;
+  keywords?: string;
+  type?: 'website' | 'article';
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
+const props = Astro.props;
+// 标题模板：首页用完整品牌标题，其余页面拼 " | 品牌名"
+const fullTitle =
+  props.title === SITE.name
+    ? `${SITE.name} | ${SITE.tagline}`
+    : props.title.includes(SITE.name)
+      ? props.title
+      : `${props.title} | ${SITE.name}`;
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <BaseHead {...props} title={fullTitle} />
+  </head>
+  <body class="flex min-h-screen flex-col bg-white font-sans text-gray-800 antialiased">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppButton />
+    <CookieConsent />
+  </body>
+</html>

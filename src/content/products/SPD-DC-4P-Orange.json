@@ -1,0 +1,103 @@
+{
+  "id": "SPD-DC-4P-Orange",
+  "name": "4P DC Surge Protector 1000V/1500V 40kA - Dual-Input PV SPD for Dual MPPT Inverters & Energy Storage",
+  "slug": "spd-dc-4p-1000v-1500v-40ka-dual-mppt-orange",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "shortDescription": "4-pole dual-input DC surge protector for 1000VDC/1500VDC PV systems. Independent protection on two DC circuits (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). 40kA max discharge – for dual MPPT inverters, PV combiner boxes, and energy storage systems.",
+  "description": "The SPD-DC-4P-Orange is a 4-pole high-voltage DC surge protection device designed for photovoltaic systems with dual DC inputs, supporting both 1000VDC and 1500VDC. Unlike single-input DC SPDs, it provides two completely independent protection circuits – DC1 (DC1+/PE and DC1-/PE) and DC2 (DC2+/PE and DC2-/PE) – allowing a single unit to simultaneously protect both input channels of a dual MPPT inverter or two separate PV arrays in a combiner box. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is – .0kV per channel. The high-energy metal oxide varistor (MOV) core responds in under 25 nanoseconds. The modular hot-swappable design allows individual pole modules to be replaced without rewiring. The orange flame-retardant PC housing (UL94 V-0) mounts on a standard 35mm DIN rail and is built for installation in DC distribution cabinets and at inverter DC inputs in solar power and energy storage systems.",
+  "features": [
+    "4-pole dual-input protection: two independent DC circuits in one module",
+    "Protects DC1 (DC1+/PE, DC1-/PE) and DC2 (DC2+/PE, DC2-/PE) simultaneously",
+    "High voltage: supports 1000VDC and 1500VDC PV systems",
+    "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
+    "Voltage protection level – .0kV per channel",
+    "<25ns ultra-fast response – high-energy MOV core for instantaneous clamping",
+    "Ideal for dual MPPT inverters, PV combiner boxes and energy storage systems",
+    "Modular hot-swappable design, orange flame-retardant PC housing, 35mm DIN rail"
+  ],
+  "specs": [
+    {
+      "name": "Poles",
+      "value": "4P"
+    },
+    {
+      "name": "Max. Continuous Operating Voltage (Uc)",
+      "value": "1000VDC / 1500VDC"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Max. Discharge Current (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Voltage Protection Level (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "Application System",
+      "value": "Photovoltaic DC System (Dual Input)"
+    },
+    {
+      "name": "Protection Mode",
+      "value": "DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE (Dual Independent)"
+    },
+    {
+      "name": "Wiring",
+      "value": "4 Terminals: DC1+, DC1-, DC2+, DC2-"
+    },
+    {
+      "name": "Core Component",
+      "value": "High-energy Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Response Time",
+      "value": "<25ns"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0), Orange"
+    },
+    {
+      "name": "Mounting",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Design",
+      "value": "Modular, Hot-swappable"
+    },
+    {
+      "name": "Applications",
+      "value": "Dual MPPT Inverters, PV Combiner Boxes, Energy Storage Systems"
+    }
+  ],
+  "image": "/images/products/SPD-DC-4P-Orange-1.jpg",
+  "images": [
+    "/images/products/SPD-DC-4P-Orange-1.jpg",
+    "/images/products/SPD-DC-4P-Orange-2.jpg",
+    "/images/products/SPD-DC-4P-Orange-3.jpg",
+    "/images/products/SPD-DC-4P-Orange-4.jpg",
+    "/images/products/SPD-DC-4P-Orange-5.jpg",
+    "/images/products/SPD-DC-4P-Orange-6.jpg",
+    "/images/products/SPD-DC-4P-Orange-7.jpg",
+    "/images/products/SPD-DC-4P-Orange-8.jpg"
+  ],
+  "metaTitle": "4P Orange DC Surge Protector 1000V/1500V 40kA Dual MPPT | PV SPD | Soltree",
+  "metaDescription": "Four-pole dual-input orange DC SPD for 1000VDC and 1500VDC PV systems. Two independent protection circuits – DC1 (+/PE and – PE) and DC2 (+/PE and – PE) – in one DIN rail module. 40kA Imax, – .0kV per channel, <25ns MOV. Designed for dual MPPT inverters and battery storage systems.",
+  "metaKeywords": "4P DC surge protector, dual MPPT SPD, dual input DC SPD, 1000V DC SPD, 1500V DC SPD, PV combiner box SPD, energy storage SPD, inverter DC input SPD, orange DC SPD, high voltage DC surge protector",
+  "imageAlts": [
+    "SPD-DC-4P-Orange 4-pole dual-input DC surge protector front view – orange PV SPD",
+    "SPD-DC-4P-Orange dual circuit protection – DC1 and DC2 independent channels",
+    "SPD-DC-4P-Orange 4 terminal wiring – DC1+, DC1-, DC2+, DC2- connection",
+    "SPD-DC-4P-Orange high-energy MOV core for 1000V/1500V DC dual-input protection",
+    "SPD-DC-4P-Orange 40kA surge discharge and – .0kV protection level detail",
+    "SPD-DC-4P-Orange modular hot-swappable design on 35mm DIN rail",
+    "SPD-DC-4P-Orange installed on dual MPPT inverter DC input",
+    "SPD-DC-4P-Orange in PV combiner box and energy storage system"
+  ],
+  "published": true,
+  "sortOrder": 19
+}

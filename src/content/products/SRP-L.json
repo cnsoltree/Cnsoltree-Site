@@ -1,0 +1,131 @@
+{
+  "id": "SRP-L",
+  "name": "SRP-L Tuya WiFi Smart Reclosing Leakage Protector 63A with Prominent Physical Button and Energy Metering",
+  "slug": "srp-l-tuya-wifi-smart-reclosing-leakage-protector-63a-physical-button",
+  "categorySlug": "wifi-smart-low-voltage-device",
+  "categoryName": "Wifi Smart Low Voltage Device",
+  "shortDescription": "10-in-1 Tuya WiFi smart reclosing leakage protector with prominent raised physical button — designed for fast, reliable local manual operation without requiring app access. Leakage protection, over/under voltage, over-current, overload, full energy metering. 1.46\" TFT display, 63A, auto-reclose.",
+  "description": "The Soltree SRP-L delivers the same 10-in-1 smart protection and energy metering platform as the SRP series, with one key design difference: a prominent raised physical button built for fast, direct local operation. In workshops, industrial panels, rental property meter rooms, and outdoor distribution cabinets where reaching for a phone is inconvenient — or where a quick manual trip and reset needs to happen immediately — the raised button provides tactile, one-press control that can be operated with work gloves on or in low-visibility conditions.\n\nThis makes the SRP-L the preferred choice in environments where local hands-on access is part of the daily workflow, rather than installations where all control happens remotely through the app. The WiFi remote control, Tuya/Smart Life app integration, and Alexa/Google Assistant voice commands are all present — the SRP-L simply adds a more physically accessible local override for situations where the app is not the fastest path to control.\n\nAll protection and monitoring functions are identical: leakage (RCD) protection, over-voltage, under-voltage, over-current, overload, and delay protection, plus real-time tracking of voltage, current, active power, kWh, frequency, and power factor on the 1.46\" TFT color display. Auto-reclosing is configurable. Rated 0.1A–63A adjustable, AC 80–300V (110V/220V) 50/60Hz. Mechanical life 1,000,000 operations. Indoor AC use only, L+N wiring top entry, 2.4GHz WiFi only.",
+  "features": [
+    "Prominent raised physical button — fast local manual operation without app, works with gloves",
+    "Leakage (RCD) protection — earth fault safety for wet-area and industrial circuits",
+    "Auto-reclosing — automatically attempts power restoration after fault trip (configurable)",
+    "10-in-1: leakage, over/under voltage, over-current, overload, delay + V/I/W/kWh/Hz/PF monitoring",
+    "1.46\" TFT color display — full parameter readout on-device",
+    "Tuya / Smart Life app — remote on/off, scheduling, energy data from anywhere",
+    "Amazon Alexa and Google Assistant voice control",
+    "Adjustable rated current: 0.1A–63A",
+    "AC 80–300V (110V/220V), 50/60Hz",
+    "Mechanical life: 1,000,000 operations",
+    "35mm DIN rail mounting, IP20, -10℃ to +60℃",
+    "2.4GHz WiFi only. Indoor AC use only. L+N wiring, power from top."
+  ],
+  "specs": [
+    {
+      "name": "Product Model",
+      "value": "SRP-L"
+    },
+    {
+      "name": "Product Type",
+      "value": "Tuya WiFi Smart Reclosing Leakage Protector with Prominent Physical Button"
+    },
+    {
+      "name": "Physical Button",
+      "value": "Prominent Raised Button — Direct Local Manual Operation"
+    },
+    {
+      "name": "Operating Voltage",
+      "value": "AC 80–300V (110V/220V)"
+    },
+    {
+      "name": "Rated Current",
+      "value": "0.1A–63A (Adjustable)"
+    },
+    {
+      "name": "Frequency",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Display",
+      "value": "1.46\" TFT Color Screen"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Leakage, Over-Voltage, Under-Voltage, Over-Current, Overload, Delay"
+    },
+    {
+      "name": "Monitoring Parameters",
+      "value": "Voltage, Current, Power (W), Energy (kWh), Frequency, Power Factor"
+    },
+    {
+      "name": "Auto-Reclosing",
+      "value": "Yes (Configurable)"
+    },
+    {
+      "name": "Control Methods",
+      "value": "Raised Physical Button, WiFi App, Voice Control"
+    },
+    {
+      "name": "Compatible Apps",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Voice Control",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "WiFi Standard",
+      "value": "2.4GHz Only (5GHz Not Supported)"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail Mount"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "1,000,000 Operations"
+    },
+    {
+      "name": "Electrical Life",
+      "value": "100,000 Operations"
+    },
+    {
+      "name": "Protection Level",
+      "value": "IP20"
+    },
+    {
+      "name": "Operating Temperature",
+      "value": "-10℃ ~ +60℃"
+    },
+    {
+      "name": "Application",
+      "value": "Workshops, Industrial Panels, Outdoor Cabinets, Rental Property Meter Rooms"
+    },
+    {
+      "name": "Important Note",
+      "value": "Indoor AC use only. L+N wiring, power from top. 2.4GHz WiFi only."
+    }
+  ],
+  "image": "/images/products/SRP-L-1.jpg",
+  "images": [
+    "/images/products/SRP-L-1.jpg",
+    "/images/products/SRP-L-2.jpg",
+    "/images/products/SRP-L-3.jpg",
+    "/images/products/SRP-L-4.jpg",
+    "/images/products/SRP-L-5.jpg",
+    "/images/products/SRP-L-6.jpg"
+  ],
+  "metaTitle": "SRP-L Tuya WiFi Leakage Protector 63A Raised Physical Button TFT Display | Soltree",
+  "metaDescription": "SRP-L Tuya WiFi smart reclosing leakage protector with prominent raised physical button — 10-in-1 protection and metering, glove-friendly local control, 63A, 1.46\" TFT display, auto-reclose.",
+  "metaKeywords": "SRP-L WiFi leakage protector physical button, smart RCD breaker raised button DIN rail, leakage protector manual local control, WiFi smart breaker glove operation industrial, Tuya leakage protector workshop panel, smart reclosing RCBO physical button, DIN rail RCD WiFi 63A local control, leakage protector outdoor cabinet manual reset",
+  "imageAlts": [
+    "Soltree SRP-L Tuya WiFi smart leakage protector with prominent raised physical button front view",
+    "SRP-L raised physical button for direct local manual operation without app",
+    "SRP-L TFT color display showing voltage current power factor kWh frequency",
+    "SRP-L smart leakage protector auto-reclose and 10-in-1 protection settings in Tuya app",
+    "SRP-L WiFi leakage protector DIN rail installation in workshop distribution panel",
+    "SRP-L Tuya Smart Life app energy monitoring and remote control interface"
+  ],
+  "published": true,
+  "sortOrder": 53
+}

@@ -1,0 +1,146 @@
+{
+  "id": "PN2-VA2",
+  "name": "PN2-VA2 Self-Resetting Over/Under Voltage Protector 40A–80A",
+  "slug": "pn2-va2-self-resetting-over-under-voltage-protector",
+  "categorySlug": "over-voltage-protector",
+  "categoryName": "Over Voltage Protector",
+  "shortDescription": "Self-resetting over/under voltage and over-current protector with dual digital display — automatically disconnects on fault and restores power when the supply stabilizes, no manual reset needed. 40A / 63A / 80A options.",
+  "description": "The Soltree PN2-VA2 is a self-resetting over/under voltage and over-current protector designed for homes, light commercial premises, and distribution boards where continuous protection without manual intervention is essential. When the supply voltage exceeds the user-set over-voltage or under-voltage threshold — or when current surpasses the over-current trip point — the PN2-VA2 disconnects the circuit within 0.5 seconds to prevent damage to appliances and sensitive electronics.\n\nOnce the supply returns to a stable, safe range, the device automatically restores power after an adjustable reset delay (0–999 seconds, default 60s), eliminating the need for a manual reset call-out. The high-resolution dual-screen digital display shows real-time voltage in red and current in green simultaneously, giving installers and users immediate circuit health information at a glance.\n\nAll trip thresholds are user-configurable via the front panel: over-voltage from 130V to 300V AC, under-voltage from 80V to 210V AC. A password lock function prevents unauthorized changes to these settings — important in shared or rental properties. Additional features include an energy-saving mode to reduce self-consumption and full support for OEM logo customization. Available in 40A, 63A, and 80A variants; rated supply voltage AC 220V (AC 110V customizable).",
+  "features": [
+    "Self-resetting — automatically restores power after fault clears, no manual reset required",
+    "Dual digital display — real-time voltage (red) and current (green) on separate screens",
+    "User-configurable trip points — over-voltage 130–300V, under-voltage 80–210V AC",
+    "Over-current protection — adjustable current trip threshold",
+    "Fast 0.5-second disconnect on fault detection",
+    "Adjustable reset delay 0–999 seconds (default 60s) — prevents rapid cycling",
+    "Password lock — prevents unauthorized parameter changes",
+    "Energy-saving mode — reduces device self-consumption",
+    "Available in 40A / 63A / 80A current ratings",
+    "Rated supply voltage AC 220V (AC 110V customizable)",
+    "35mm DIN rail mounting — standard distribution board installation",
+    "Flame-retardant PC housing (UL94 V-0) — safe under fault conditions",
+    "Mechanical life ≥10,000 cycles",
+    "OEM logo customization supported",
+    "CE & RoHS certified"
+  ],
+  "specs": [
+    {
+      "name": "Product Type",
+      "value": "Self-Resetting Over/Under Voltage Protector"
+    },
+    {
+      "name": "Model",
+      "value": "PN2-VA2"
+    },
+    {
+      "name": "Rated Supply Voltage",
+      "value": "AC 220V (AC 110V Customizable)"
+    },
+    {
+      "name": "Rated Frequency",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Over-Voltage Setting Range",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Under-Voltage Setting Range",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Over-Voltage Trip Delay",
+      "value": "0.5 Seconds"
+    },
+    {
+      "name": "Voltage Accuracy",
+      "value": "<1%"
+    },
+    {
+      "name": "Max. Working Current",
+      "value": "40A / 63A / 80A (Optional)"
+    },
+    {
+      "name": "Reset Delay Time",
+      "value": "0–999 Seconds (Adjustable, Default 60s)"
+    },
+    {
+      "name": "Display Mode",
+      "value": "Dual Digital Display — Voltage (Red) + Current (Green)"
+    },
+    {
+      "name": "Password Protection",
+      "value": "Supported — prevents unauthorized parameter changes"
+    },
+    {
+      "name": "Energy-Saving Mode",
+      "value": "Switchable"
+    },
+    {
+      "name": "Housing Material",
+      "value": "Flame-retardant PC (UL94 V-0)"
+    },
+    {
+      "name": "Dimensions",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Installation",
+      "value": "35mm DIN Rail"
+    },
+    {
+      "name": "Ambient Temperature",
+      "value": "-25°C to +55°C"
+    },
+    {
+      "name": "Permitted Relative Humidity",
+      "value": "≤50% at 40°C (Non-condensing)"
+    },
+    {
+      "name": "Mechanical Life",
+      "value": "≥10,000 Cycles"
+    },
+    {
+      "name": "Protection Functions",
+      "value": "Over-voltage, Under-voltage, Over-current, Delay Protection"
+    },
+    {
+      "name": "OEM Customization",
+      "value": "Logo customization supported"
+    },
+    {
+      "name": "Application",
+      "value": "Residential Distribution Boards, Light Commercial Premises, Home Appliance Protection"
+    },
+    {
+      "name": "Certification",
+      "value": "CE, RoHS"
+    }
+  ],
+  "image": "/images/products/PN2-VA2-1.jpg",
+  "images": [
+    "/images/products/PN2-VA2-1.jpg",
+    "/images/products/PN2-VA2-2.jpg",
+    "/images/products/PN2-VA2-3.jpg",
+    "/images/products/PN2-VA2-4.jpg",
+    "/images/products/PN2-VA2-5.jpg",
+    "/images/products/PN2-VA2-6.jpg",
+    "/images/products/PN2-VA2-7.jpg",
+    "/images/products/PN2-VA2-8.jpg"
+  ],
+  "metaTitle": "PN2-VA2 Self-Resetting Voltage Protector 40A–80A 220V | Soltree",
+  "metaDescription": "PN2-VA2 self-resetting over/under voltage protector 40A–80A, AC 220V. Dual digital display, auto-reconnect, password lock, 0.5s trip. DIN rail, CE & RoHS. OEM available.",
+  "metaKeywords": "PN2-VA2 voltage protector, self-resetting over voltage protector, under voltage protector DIN rail, automatic voltage protector 220V, dual display voltage protector, over current protector 63A, auto reconnect voltage relay, appliance voltage protection",
+  "imageAlts": [
+    "Soltree PN2-VA2 self-resetting over under voltage protector dual digital display front view",
+    "PN2-VA2 voltage protector dual screen showing voltage and current readings",
+    "PN2-VA2 protector parameter setting panel over-voltage under-voltage trip points",
+    "PN2-VA2 voltage protector DIN rail mounting side profile",
+    "PN2-VA2 self-resetting voltage protector installed in distribution board",
+    "PN2-VA2 protector wiring terminal connections detail",
+    "PN2-VA2 voltage protector product dimensions 81x36x66mm drawing",
+    "PN2-VA2 voltage protector 40A 63A 80A current rating options comparison"
+  ],
+  "published": true,
+  "sortOrder": 32
+}
