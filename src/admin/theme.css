@@ -360,6 +360,9 @@
   color: #9aa8aa;
   font-size: 11px;
 }
+body[data-admin-mode='online'] .product-local-note {
+  color: #dc2626;
+}
 .product-filters {
   display: flex;
   align-items: end;

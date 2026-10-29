@@ -80,7 +80,7 @@ function initContentTable(manager) {
   const deleteCancel = manager.querySelector('[data-product-delete-cancel]');
   if (online) {
     manager.querySelector('.product-local-note').textContent =
-      '修改保存到云端；点击顶部“发布到网站”后更新正式网站。';
+      '任何修改，点击顶部“发布到网站”后更新正式网站。';
     table.tHead.rows[0].cells[3].textContent = '网站发布选择';
     dialog.querySelector('p:last-of-type').textContent =
       '删除后移入云端回收站，并从下一次网站发布中移除。你可以在回收站恢复内容。';
