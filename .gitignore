@@ -10,3 +10,5 @@ dist/
 *.log
 .content-backups/
 src/content/settings/seo-workspace.json
+public/__admin/
+src/admin/image-index.json

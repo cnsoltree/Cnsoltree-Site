@@ -710,6 +710,8 @@ function initSeoWorkspace(seo, knowledge) {
     render();
     try {
       const response = await fetch(api, { cache: 'no-store' });
+      if (document.body.dataset.adminMode === 'online' && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || '工作区加载失败，请重试。');
       if (version === requestVersion) {
@@ -753,6 +755,8 @@ function initSeoWorkspace(seo, knowledge) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ revision: data.revision, action: actionName, ...payload }),
       });
+      if (document.body.dataset.adminMode === 'online' && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       const result = await response.json();
       if (!response.ok) {
         if (response.status === 409) {
@@ -762,6 +766,12 @@ function initSeoWorkspace(seo, knowledge) {
         throw new Error(result.error || '操作未完成，请重试。');
       }
       data = result;
+      if (document.body.dataset.adminMode === 'online')
+        document.dispatchEvent(
+          new CustomEvent('studio:cloud-saved', {
+            detail: { savedAt: result.savedAt || new Date().toISOString() },
+          }),
+        );
       after?.(result);
       dialog?.close();
       feedback(main, message);

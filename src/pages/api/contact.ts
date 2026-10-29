@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { validContact, contactHtml } from '@/lib/contact';
 import { getSecret } from 'astro:env/server';
+import { supabaseServiceHeaders } from '@/lib/supabase.mjs';
 export const prerender = false;
 const json = (data: unknown, status = 200) =>
   new Response(JSON.stringify(data), {
@@ -68,8 +69,7 @@ export const POST: APIRoute = async ({ request }) => {
       const response = await fetch(`${databaseUrl}/rest/v1/contact_messages`, {
         method: 'POST',
         headers: {
-          apikey: serviceKey,
-          Authorization: `Bearer ${serviceKey}`,
+          ...supabaseServiceHeaders(serviceKey),
           'Content-Type': 'application/json',
           Prefer: 'return=minimal',
         },

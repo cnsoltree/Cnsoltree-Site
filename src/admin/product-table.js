@@ -56,6 +56,7 @@ if (typeof document !== 'undefined') {
 }
 
 function initContentTable(manager) {
+  const online = document.body.dataset.adminMode === 'online';
   const isArticle = manager.id === 'studio-articles';
   const collection = isArticle ? 'articles' : 'products';
   const label = isArticle ? '文章' : '产品';
@@ -75,6 +76,13 @@ function initContentTable(manager) {
   const dialog = manager.querySelector('[data-product-delete-dialog]');
   const deleteConfirm = manager.querySelector('[data-product-delete-confirm]');
   const deleteCancel = manager.querySelector('[data-product-delete-cancel]');
+  if (online) {
+    manager.querySelector('.product-local-note').textContent =
+      '修改保存到云端；点击顶部“发布到网站”后更新正式网站。';
+    table.tHead.rows[0].cells[3].textContent = '网站发布选择';
+    dialog.querySelector('p:last-of-type').textContent =
+      '删除后移入云端回收站，并从下一次网站发布中移除。你可以在回收站恢复内容。';
+  }
   const storageKey = `soltree.${isArticle ? 'article' : 'product'}-list.v1`;
   let restored = normalizeProductListState();
   try {
@@ -194,7 +202,15 @@ function initContentTable(manager) {
       element(
         'span',
         `product-status product-status-${state}`,
-        product.deletedAt ? '已删除' : product.published ? '已发布' : '未发布',
+        product.deletedAt
+          ? '已删除'
+          : product.published
+            ? online
+              ? '已选入发布'
+              : '已发布'
+            : online
+              ? '未选入发布'
+              : '未发布',
       ),
     );
     row.append(stateCell);
@@ -223,7 +239,13 @@ function initContentTable(manager) {
         actionButton(
           product,
           product.published ? 'unpublish' : 'publish',
-          product.published ? '下架' : '发布',
+          online
+            ? product.published
+              ? '移出发布'
+              : '加入发布'
+            : product.published
+              ? '下架'
+              : '发布',
         ),
       );
       if (busy.has(product.id)) {
@@ -278,6 +300,8 @@ function initContentTable(manager) {
     render();
     try {
       const response = await fetch(api, { cache: 'no-store' });
+      if (online && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || `${label}列表加载失败，请重试。`);
       if (version !== requestVersion) return;
@@ -310,6 +334,8 @@ function initContentTable(manager) {
         body: JSON.stringify({ id: product.id, action, revision: product.revision }),
       });
       const result = await response.json();
+      if (online && response.status === 401)
+        document.dispatchEvent(new Event('studio:session-expired'));
       if (!response.ok) {
         const message = result.error || '操作失败，请重试。';
         if (response.status === 409) {
@@ -318,6 +344,12 @@ function initContentTable(manager) {
         }
         throw new Error(message);
       }
+      if (online)
+        document.dispatchEvent(
+          new CustomEvent('studio:cloud-saved', {
+            detail: { savedAt: result.savedAt || new Date().toISOString() },
+          }),
+        );
       await load(false);
     } catch (failure) {
       setError(failure.message || '操作失败，请重试。');

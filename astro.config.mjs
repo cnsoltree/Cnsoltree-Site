@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel';
 import tailwindcss from '@tailwindcss/vite';
-import { createReadStream, readdirSync, readFileSync } from 'node:fs';
+import { createReadStream, existsSync, readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   createProductAdminHandler,
@@ -13,6 +14,21 @@ import { createSeoResearchProvider } from './scripts/seo-research-provider.mjs';
 import { loadEnv } from 'vite';
 
 const localRoot = fileURLToPath(new URL('.', import.meta.url));
+// Vercel's dependency tracer follows the reused filesystem handlers. Exclude every private source
+// file explicitly (the adapter accepts exact filenames, not directory globs).
+const privateBuildFiles = readdirSync(localRoot).filter((name) =>
+  /^\.env(?:\.|$)|^\.dev\.vars(?:\.|$)/.test(name),
+);
+privateBuildFiles.push('src/content/settings/seo-workspace.json');
+const backupRoot = path.join(localRoot, '.content-backups');
+if (existsSync(backupRoot))
+  privateBuildFiles.push(
+    ...readdirSync(backupRoot, { recursive: true, withFileTypes: true })
+      .filter((entry) => entry.isFile())
+      .map((entry) =>
+        path.relative(localRoot, path.join(entry.parentPath, entry.name)).split(path.sep).join('/'),
+      ),
+  );
 const seoResearch = createSeoResearchProvider({
   getConfig: () => {
     const settings = { ...loadEnv('development', localRoot, 'SEO_'), ...process.env };
@@ -34,7 +50,22 @@ export default defineConfig({
     },
   },
   // Keep catalog images generated at build time, alongside the prerendered public pages.
-  adapter: vercel({ imageService: false }),
+  adapter: vercel({ imageService: false, excludeFiles: privateBuildFiles }),
+  integrations: [
+    {
+      name: 'online-content-admin-route',
+      hooks: {
+        'astro:config:setup': ({ injectRoute }) => {
+          // Astro skips underscore directories in src/pages; register this compatibility URL explicitly.
+          injectRoute({
+            pattern: '/__cms/[...path]',
+            entrypoint: './src/pages/__cms/[...path].ts',
+            prerender: false,
+          });
+        },
+      },
+    },
+  ],
   vite: {
     optimizeDeps: { exclude: ['decap-cms-locales'] },
     plugins: [

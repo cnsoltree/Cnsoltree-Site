@@ -203,7 +203,10 @@ function publishedRecords(records: unknown[], key: 'id' | 'slug') {
     );
 }
 
-export function loadProducts(records: unknown[]): Product[] {
+export function loadProducts(
+  records: unknown[],
+  activeCategories: Category[] = categories,
+): Product[] {
   return publishedRecords(records, 'id').map((value) => {
     const label = `Product ${value.id}`;
     requireText(
@@ -211,7 +214,7 @@ export function loadProducts(records: unknown[]): Product[] {
       ['name', 'slug', 'categorySlug', 'categoryName', 'shortDescription', 'description', 'image'],
       label,
     );
-    const category = categories.find((category) => category.slug === value.categorySlug);
+    const category = activeCategories.find((category) => category.slug === value.categorySlug);
     if (!category) throw new Error(`${label}: unknown category.`);
     requireStrings(value.features, `${label}: features`);
     for (const key of [
@@ -225,7 +228,7 @@ export function loadProducts(records: unknown[]): Product[] {
     if (
       value.additionalCategorySlugs &&
       (value.additionalCategorySlugs as string[]).some(
-        (slug) => !categories.some((category) => category.slug === slug),
+        (slug) => !activeCategories.some((category) => category.slug === slug),
       )
     )
       throw new Error(`${label}: unknown additional category.`);
@@ -250,7 +253,10 @@ export function loadProducts(records: unknown[]): Product[] {
   });
 }
 
-export function loadBlogPosts(records: unknown[]): BlogPost[] {
+export function loadBlogPosts(
+  records: unknown[],
+  activeCategories: Category[] = categories,
+): BlogPost[] {
   return publishedRecords(records, 'slug').map((value) => {
     const label = `Article ${value.slug}`;
     requireText(
@@ -258,7 +264,7 @@ export function loadBlogPosts(records: unknown[]): BlogPost[] {
       ['title', 'excerpt', 'content', 'date', 'author', 'image', 'relatedCategorySlug'],
       label,
     );
-    if (!categories.some((category) => category.slug === value.relatedCategorySlug))
+    if (!activeCategories.some((category) => category.slug === value.relatedCategorySlug))
       throw new Error(`${label}: unknown category.`);
     for (const key of ['date', 'dateModified']) {
       if (
