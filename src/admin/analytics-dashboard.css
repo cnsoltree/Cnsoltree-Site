@@ -265,6 +265,19 @@
   color: #61766d;
   font-size: 11px;
 }
+.analytics-point-label {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  color: #24785f;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow:
+    0 0 3px #fff,
+    0 0 3px #fff;
+}
 .analytics-chart-message[hidden],
 .analytics-live-chart[hidden] {
   display: none;

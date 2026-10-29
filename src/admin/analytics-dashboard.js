@@ -255,6 +255,17 @@ function initAnalytics(manager) {
         dot.setAttribute('aria-label', title.textContent);
         dot.append(title);
         svg.append(dot);
+        if (metricKey === 'clicks' && row[metricKey] > 0) {
+          const label = node(
+            'span',
+            'analytics-point-label',
+            formatMetric(row[metricKey], metric.kind),
+          );
+          label.setAttribute('aria-hidden', 'true');
+          label.style.left = `${(x(row) / 900) * 100}%`;
+          label.style.top = `calc(${(y(row) / 230) * 100}% - 9px)`;
+          chart.append(label);
+        }
       }
       const line = document.createElementNS(svg.namespaceURI, 'path');
       line.setAttribute('d', points);
@@ -271,7 +282,9 @@ function initAnalytics(manager) {
     }
     manager.querySelector('[data-analytics-trend-title]').textContent = `${metric.label}趋势`;
     manager.querySelector('[data-analytics-trend-caption]').textContent =
-      '每日已确认数据；空缺日期尚无返回记录，不计为零。';
+      metricKey === 'clicks'
+        ? '每日已确认数据；非零点击量标在圆点上方，悬停查看日期和值。空缺日期不计为零。'
+        : '每日已确认数据；空缺日期尚无返回记录，不计为零。';
     manager.querySelector('[data-analytics-chart-empty-title]').textContent =
       currentReport?.status === 'connected'
         ? '所选日期暂无搜索记录'
