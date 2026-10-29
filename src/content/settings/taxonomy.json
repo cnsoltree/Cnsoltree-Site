@@ -147,7 +147,7 @@
       },
       "articles": {
         "visible": true,
-        "order": 0
+        "order": 1
       }
     },
     {
@@ -176,7 +176,7 @@
       },
       "articles": {
         "visible": true,
-        "order": 1
+        "order": 2
       }
     },
     {
@@ -246,7 +246,7 @@
       },
       "articles": {
         "visible": true,
-        "order": 2
+        "order": 3
       }
     },
     {
@@ -288,7 +288,7 @@
       },
       "articles": {
         "visible": true,
-        "order": 3
+        "order": 4
       }
     },
     {
@@ -317,7 +317,7 @@
       },
       "articles": {
         "visible": true,
-        "order": 4
+        "order": 5
       }
     },
     {
@@ -346,8 +346,23 @@
       },
       "articles": {
         "visible": true,
-        "order": 5
+        "order": 6
       }
+    },
+    {
+      "slug": "test",
+      "name": "test",
+      "description": "test",
+      "icon": "M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Zm1 4-4 6h4l-2 4",
+      "products": {
+        "visible": true,
+        "order": 6
+      },
+      "articles": {
+        "visible": true,
+        "order": 7
+      },
+      "items": []
     }
   ]
 }
