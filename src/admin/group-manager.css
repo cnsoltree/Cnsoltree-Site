@@ -1,24 +1,3 @@
-.group-tabs {
-  display: flex;
-  gap: 24px;
-  margin: -2px 0 22px;
-  border-bottom: 1px solid #e4eceb;
-}
-.group-tabs button {
-  padding: 5px 2px 14px;
-  border: 0;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: #849793;
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
-}
-.group-tabs button[aria-selected='true'] {
-  border-bottom-color: #1aaf89;
-  color: #1a9d7b;
-  font-weight: 600;
-}
 .group-secondary {
   min-height: 36px;
   padding: 8px 13px;
@@ -74,10 +53,20 @@
   width: 220px;
 }
 .group-column-count {
-  width: 85px;
+  width: 110px;
 }
 .group-column-visible {
-  width: 100px;
+  width: 135px;
+}
+.group-content-count span,
+.group-table td > .group-visibility,
+.group-table td > small {
+  display: flex;
+  margin-block: 4px;
+}
+.group-table td > small {
+  color: #94a4a3;
+  font-size: 10px;
 }
 .group-column-order {
   width: 125px;

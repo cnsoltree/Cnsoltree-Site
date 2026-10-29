@@ -10,34 +10,11 @@
   <div class="product-page-heading">
     <div>
       <h1 id="group-manager-title">分组管理</h1>
-      <p>统一维护一级分组与二级分类，产品和文章可分别调整显示与排序。</p>
+      <p>产品、文章和知识库共用一套分组与分类，在这里统一维护。</p>
     </div>
   </div>
   <section class="product-panel" aria-label="分组管理列表">
-    <div class="group-tabs" role="tablist" aria-label="分组用途">
-      <button
-        id="group-products-tab"
-        type="button"
-        role="tab"
-        aria-selected="true"
-        aria-controls="group-list-panel"
-        data-group-tab="products"
-      >
-        产品分组
-      </button>
-      <button
-        id="group-articles-tab"
-        type="button"
-        role="tab"
-        aria-selected="false"
-        aria-controls="group-list-panel"
-        tabindex="-1"
-        data-group-tab="articles"
-      >
-        文章分组
-      </button>
-    </div>
-    <div id="group-list-panel" role="tabpanel" aria-labelledby="group-products-tab">
+    <div id="group-list-panel">
       <div class="product-toolbar group-toolbar">
         <button type="button" class="product-create" data-group-create>
           <span aria-hidden="true">＋</span> 新建一级分组
@@ -51,7 +28,8 @@
       </div>
       <div class="group-view-note">
         <p data-group-surface>
-          产品分组用于产品导航、产品列表和 Resources；名称与分类资料在全站共用。
+          新增、编辑和排序统一维护；产品与文章可分别控制前台显示。Blog
+          前台只展示一级分组，二级分类用于后台文章归档、知识库与 SEO 规划。
         </p>
         <label class="group-trash">
           <input type="checkbox" data-group-trash /> 查看回收站
@@ -78,7 +56,7 @@
               <th scope="col">分组 / 分类</th>
               <th scope="col">标识 / 对应分类</th>
               <th scope="col" data-group-count-heading>
-                产品数
+                内容数量
               </th>
               <th scope="col">前台显示</th>
               <th scope="col">排序</th>
@@ -96,7 +74,7 @@
       </div>
       <div class="group-footer">
         <span data-group-total>正在加载</span>
-        <span>拖动手柄或使用上下按钮排序；隐藏后原有链接仍可访问。</span>
+        <span>排序调整同步用于产品与文章；隐藏后原有链接仍可访问。</span>
       </div>
     </div>
   </section>

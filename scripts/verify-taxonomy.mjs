@@ -4,7 +4,11 @@ import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
 import { createTaxonomyAdminHandler } from './taxonomy-admin-api.mjs';
-import { sortTaxonomyRecords, reorderTaxonomyRecords } from '../src/admin/group-manager.js';
+import {
+  sortTaxonomyRecords,
+  reorderTaxonomyRecords,
+  reorderSharedTaxonomyRecords,
+} from '../src/admin/group-manager.js';
 import {
   validateTaxonomy,
   getTaxonomyGroups,
@@ -86,6 +90,27 @@ assert.deepEqual(
   'Reordering must preserve its input and include hidden siblings',
 );
 validateTaxonomy(original);
+const shared = reorderSharedTaxonomyRecords(reorderFixture, 'c', 'a');
+assert.deepEqual(
+  sortTaxonomyRecords(shared, 'products').map(({ slug }) => slug),
+  ['c', 'a', 'b', 'retired'],
+);
+assert.deepEqual(
+  sortTaxonomyRecords(shared, 'articles').map(({ slug }) => slug),
+  ['c', 'a', 'b', 'retired'],
+);
+assert.deepEqual(
+  shared.at(-1),
+  reorderOriginal.at(-1),
+  'Shared moves must preserve deleted records',
+);
+assert.deepEqual(
+  shared.map(({ products }) => products.visible),
+  reorderOriginal.map(({ products }) => products.visible),
+  'Shared moves must retain independent visibility',
+);
+assert.deepEqual(reorderFixture, reorderOriginal, 'Shared moves must not mutate their input');
+assert.equal(reorderSharedTaxonomyRecords(reorderFixture, 'missing', 'a'), reorderFixture);
 const selected = clone(original);
 selected.groups[0].products.visible = false;
 selected.groups[1].articles.order = 5;

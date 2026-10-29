@@ -41,7 +41,6 @@ if (typeof document !== 'undefined') {
 
 function initPublication(panel) {
   panel.hidden = false;
-  const details = panel.querySelector('[data-publish-details]');
   const error = panel.querySelector('[data-publish-error]');
   const login = panel.querySelector('[data-publish-login]');
   const dialog = panel.querySelector('[data-publish-dialog]');
@@ -99,29 +98,21 @@ function initPublication(panel) {
   }
   function render() {
     panel.dataset.status = verified ? publication.status : 'unknown';
-    panel.querySelector('[data-publish-summary]').textContent = !verified
-      ? '核对发布状态'
-      : needsPublish && !inProgress()
-        ? '云端已保存，待发布'
-        : publicationLabels[publication.status];
-    panel.querySelector('[data-publish-state]').textContent = verified
-      ? publicationLabels[publication.status]
-      : checking
-        ? '正在读取…'
-        : '状态尚未确认';
-    panel.querySelector('[data-publish-message]').textContent = !verified
-      ? '正在核对最近的发布记录。'
-      : needsPublish && publication.status === 'ready'
-        ? '上次发布已完成，随后保存的修改等待下一次发布。'
-        : publication.message || '保存到云端后，点击发布更新正式网站。';
-    panel.querySelector('[data-publish-cloud]').textContent = savedAt
-      ? `已保存 · ${new Intl.DateTimeFormat('zh-CN', { timeZone: 'America/Los_Angeles', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(savedAt))}`
-      : '本次会话暂无保存记录';
-    panel.querySelector('[data-publish-site]').href =
-      safePublishedUrl(publication.url || '/', window.location.origin) || '/';
+    const summary = panel.querySelector('[data-publish-summary]');
+    summary.textContent = error.textContent
+      ? expired
+        ? '登录已过期'
+        : '发布状态核对失败'
+      : !verified
+        ? '核对发布状态'
+        : needsPublish && !inProgress()
+          ? '云端已保存，待发布'
+          : publicationLabels[publication.status];
+    summary.title = error.textContent || publication.message || '';
     open.disabled = busy || checking || expired || inProgress();
     open.textContent = inProgress() ? '正在发布…' : '发布到网站';
     refresh.disabled = busy || checking || expired;
+    refresh.hidden = !error.textContent || expired;
     confirm.disabled = cancel.disabled = busy;
     logout.disabled = busy;
     login.hidden = !expired;
@@ -129,7 +120,7 @@ function initPublication(panel) {
   }
   function schedule() {
     clearTimeout(timer);
-    // ponytail: poll only this active page for up to 30 minutes; manual refresh continues longer builds.
+    // ponytail: poll only this active page for up to 30 minutes; reopening the page checks again.
     if (inProgress() && !expired && pollCount < 360 && document.visibilityState !== 'hidden')
       timer = setTimeout(() => void status(), 5000);
   }
@@ -137,7 +128,6 @@ function initPublication(panel) {
     expired = true;
     login.href = adminLoginHref(window.location.href);
     showError('登录已过期，请重新登录后继续。');
-    details.open = true;
     clearTimeout(timer);
     render();
   }
@@ -165,7 +155,7 @@ function initPublication(panel) {
         return;
       }
       if (!response.ok || !validPublication(result))
-        throw new Error(result.error || '暂时无法读取发布状态，请稍后点击“检查状态”。');
+        throw new Error(result.error || '暂时无法读取发布状态，请稍后重试。');
       publication = result;
       verified = true;
       showError();
@@ -173,7 +163,6 @@ function initPublication(panel) {
       schedule();
     } catch (failure) {
       showError(failure.message || '暂时无法读取发布状态，请稍后重试。');
-      details.open = true;
     } finally {
       checking = false;
       render();
@@ -214,7 +203,6 @@ function initPublication(panel) {
       needsPublish = saveVersion !== captured;
       pollCount = 0;
       dialog.close();
-      details.open = true;
       schedule();
     } catch (failure) {
       showError(failure.message || '发布请求未完成，请重试。', dialogError);
@@ -262,7 +250,6 @@ function initPublication(panel) {
       window.location.replace(adminLoginHref(window.location.href));
     } catch (failure) {
       showError(failure.message || '退出登录未完成，请重试。');
-      details.open = true;
       logout.disabled = false;
     }
   });

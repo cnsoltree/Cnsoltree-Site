@@ -21,6 +21,20 @@ export function reorderTaxonomyRecords(records, surface, sourceSlug, targetSlug)
   );
 }
 
+/** A shared-list move aligns both placements without rewriting identities or deleted records. */
+export function reorderSharedTaxonomyRecords(records, sourceSlug, targetSlug) {
+  const moved = reorderTaxonomyRecords(records, 'products', sourceSlug, targetSlug);
+  if (moved === records) return records;
+  return moved.map((record) =>
+    record.deletedAt
+      ? record
+      : {
+          ...record,
+          articles: { ...record.articles, order: record.products.order },
+        },
+  );
+}
+
 if (typeof document !== 'undefined') {
   const manager = document.getElementById('studio-groups');
   if (manager) initGroupManager(manager);
@@ -36,7 +50,6 @@ function initGroupManager(manager) {
   const create = manager.querySelector('[data-group-create]');
   const categoriesButton = manager.querySelector('[data-group-categories]');
   const refresh = manager.querySelector('[data-group-refresh]');
-  const tabs = [...manager.querySelectorAll('[data-group-tab]')];
   const dialog = manager.querySelector('[data-group-dialog]');
   const form = manager.querySelector('[data-group-form]');
   const fields = manager.querySelector('[data-group-fields]');
@@ -44,11 +57,10 @@ function initGroupManager(manager) {
   const dialogSave = manager.querySelector('[data-group-dialog-save]');
   const dialogCancel = manager.querySelector('[data-group-dialog-cancel]');
   const storageKey = 'soltree.group-manager.v1';
-  let surface = 'products';
+  const surface = 'products';
   let expanded = new Set();
   try {
     const saved = JSON.parse(window.sessionStorage.getItem(storageKey));
-    if (saved?.surface === 'articles') surface = 'articles';
     if (Array.isArray(saved?.expanded))
       expanded = new Set(saved.expanded.filter((slug) => typeof slug === 'string').slice(0, 500));
     trash.checked = saved?.trash === true;
@@ -165,28 +177,38 @@ function initGroupManager(manager) {
     }
     const countKey = item ? `${group.slug}/${item.slug}` : group.slug;
     const scope = item ? 'items' : 'groups';
-    const count = counts[scope]?.[countKey]?.[surface] ?? 0;
-    const countCell = node('td', '', String(count));
+    const countCell = node('td', 'group-content-count');
+    for (const [view, label] of [
+      ['products', '产品'],
+      ['articles', '文章'],
+    ])
+      countCell.append(node('span', '', `${label} ${counts[scope]?.[countKey]?.[view] ?? 0}`));
     countCell.title = '当前已发布内容数量；跨分类内容在所属分组内去重统计';
     const visible = node('td');
     if (retired) visible.append(node('span', 'product-status product-status-deleted', '已删除'));
     else if (trash.checked) visible.textContent = '—';
-    else if (surface === 'articles' && item) visible.textContent = '仅后台分类';
     else {
-      const label = node('label', 'group-visibility');
-      const checkbox = node('input');
-      checkbox.type = 'checkbox';
-      checkbox.checked = record[surface].visible;
-      checkbox.disabled = busy || loading;
-      checkbox.dataset.groupAction = 'visibility';
-      checkbox.dataset.groupSlug = group.slug;
-      if (item) checkbox.dataset.itemSlug = item.slug;
-      checkbox.setAttribute(
-        'aria-label',
-        `${record.name} 在${surface === 'products' ? '产品' : '文章'}中显示`,
-      );
-      label.append(checkbox, node('span', '', record[surface].visible ? '显示' : '隐藏'));
-      visible.append(label);
+      for (const [view, text] of [
+        ['products', '产品'],
+        ['articles', '文章'],
+      ]) {
+        if (view === 'articles' && item) {
+          visible.append(node('small', '', '文章仅后台分类'));
+          continue;
+        }
+        const label = node('label', 'group-visibility');
+        const checkbox = node('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = record[view].visible;
+        checkbox.disabled = busy || loading;
+        checkbox.dataset.groupAction = 'visibility';
+        checkbox.dataset.groupSurface = view;
+        checkbox.dataset.groupSlug = group.slug;
+        if (item) checkbox.dataset.itemSlug = item.slug;
+        checkbox.setAttribute('aria-label', `${record.name} 在${text}中显示`);
+        label.append(checkbox, node('span', '', text));
+        visible.append(label);
+      }
     }
     const ordering = node('td');
     if (!trash.checked) {
@@ -230,21 +252,6 @@ function initGroupManager(manager) {
   }
 
   function render() {
-    for (const tab of tabs) {
-      const selected = tab.dataset.groupTab === surface;
-      tab.setAttribute('aria-selected', String(selected));
-      tab.tabIndex = selected ? 0 : -1;
-      tab.disabled = busy;
-    }
-    manager
-      .querySelector('#group-list-panel')
-      .setAttribute('aria-labelledby', `group-${surface}-tab`);
-    manager.querySelector('[data-group-count-heading]').textContent =
-      surface === 'products' ? '产品数' : '文章数';
-    manager.querySelector('[data-group-surface]').textContent =
-      surface === 'products'
-        ? '产品分组用于产品导航、产品列表和 Resources；名称与分类资料在全站共用。'
-        : 'Blog 前台只展示一级分类；二级分类保留在后台，用于文章归档、知识库与 SEO 规划。';
     create.disabled = categoriesButton.disabled = busy || loading || !taxonomy;
     refresh.disabled = busy || loading;
     trash.disabled = busy;
@@ -486,7 +493,7 @@ function initGroupManager(manager) {
       node(
         'p',
         'group-form-note',
-        '名称、简介和图标全站共用；显示与排序可分别在产品、文章标签页调整。',
+        '名称、简介和图标由产品、文章与知识库共用；列表中可分别控制产品与文章的前台显示。',
       ),
     );
     if (!group) defaultSlug(name, slug);
@@ -708,8 +715,8 @@ function initGroupManager(manager) {
     void save((next) => {
       if (item) {
         const target = next.groups.find((entry) => entry.slug === group.slug);
-        target.items = reorderTaxonomyRecords(target.items, surface, item.slug, targetSlug);
-      } else next.groups = reorderTaxonomyRecords(next.groups, surface, group.slug, targetSlug);
+        target.items = reorderSharedTaxonomyRecords(target.items, item.slug, targetSlug);
+      } else next.groups = reorderSharedTaxonomyRecords(next.groups, group.slug, targetSlug);
     });
   }
 
@@ -762,9 +769,11 @@ function initGroupManager(manager) {
     const { group, item } = locate(control);
     if (!group) return;
     const visible = control.checked;
+    const view = control.dataset.groupSurface;
+    if (!['products', 'articles'].includes(view)) return;
     void save((next) => {
       const target = next.groups.find((entry) => entry.slug === group.slug);
-      (item ? target.items.find((entry) => entry.slug === item.slug) : target)[surface].visible =
+      (item ? target.items.find((entry) => entry.slug === item.slug) : target)[view].visible =
         visible;
     });
   });
@@ -810,26 +819,6 @@ function initGroupManager(manager) {
     dragged = undefined;
     for (const row of rows.querySelectorAll('.group-drop-target'))
       row.classList.remove('group-drop-target');
-  });
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      surface = tab.dataset.groupTab;
-      feedback.textContent = '';
-      remember();
-      render();
-    });
-    tab.addEventListener('keydown', (event) => {
-      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-      event.preventDefault();
-      const target =
-        event.key === 'Home'
-          ? 0
-          : event.key === 'End'
-            ? tabs.length - 1
-            : (index + 1) % tabs.length;
-      tabs[target].click();
-      tabs[target].focus();
-    });
   });
   form.addEventListener('submit', (event) => {
     event.preventDefault();

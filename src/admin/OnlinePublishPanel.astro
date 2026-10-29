@@ -11,41 +11,18 @@ const { email } = Astro.props;
   data-email={email}
   aria-label="云端保存与网站发布"
 >
-  <details class="publish-details" data-publish-details>
-    <summary>
-      <span class="publish-dot" aria-hidden="true"></span>
-      <span data-publish-summary>发布状态</span>
-      <span aria-hidden="true">⌄</span>
-    </summary>
-    <div class="publish-popover">
-      <h2>保存与发布</h2>
-      <dl>
-        <div>
-          <dt>云端保存</dt>
-          <dd data-publish-cloud>本次会话暂无保存记录</dd>
-        </div>
-        <div>
-          <dt>网站发布</dt>
-          <dd data-publish-state>正在读取…</dd>
-        </div>
-      </dl>
-      <p data-publish-message role="status" aria-live="polite">
-        保存到云端后，点击发布更新正式网站。
-      </p>
-      <p class="publish-error" data-publish-error role="alert" hidden></p>
-      <a class="publish-login" href="/admin/login" data-publish-login hidden>
-        重新登录
-      </a>
-      <div class="publish-popover-actions">
-        <button type="button" data-publish-refresh>
-          检查状态
-        </button>
-        <a href="/" target="_blank" rel="noopener noreferrer" data-publish-site>
-          查看当前网站 ↗
-        </a>
-      </div>
-    </div>
-  </details>
+  <span class="publish-state" role="status" aria-live="polite">
+    <span class="publish-dot" aria-hidden="true"></span>
+    <span data-publish-summary></span>
+  </span>
+  <span class="publish-error-summary" data-publish-error role="alert" hidden></span>
+  <a class="publish-login" href="/admin/login" data-publish-login hidden>
+    重新登录
+  </a>
+  <button type="button" class="publish-retry" data-publish-refresh hidden>
+    重试
+  </button>
+
   <button type="button" class="publish-trigger" data-publish-open disabled>
     发布到网站
   </button>
@@ -74,6 +51,25 @@ const { email } = Astro.props;
 </script>
 
 <style>
+  .publish-error-summary {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .publish-retry {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #318664;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  .online-publish:has(.publish-error-summary:not([hidden])) .publish-state {
+    color: #a36250;
+  }
   .online-publish {
     display: flex;
     align-items: center;
@@ -87,21 +83,14 @@ const { email } = Astro.props;
   [hidden] {
     display: none !important;
   }
-  .publish-details {
-    position: relative;
-  }
-  summary {
+  .publish-state {
     display: inline-flex;
     align-items: center;
     gap: 7px;
     color: #647f70;
     font-size: 11px;
-    cursor: pointer;
     list-style: none;
     white-space: nowrap;
-  }
-  summary::-webkit-details-marker {
-    display: none;
   }
   .publish-dot {
     width: 6px;
@@ -119,62 +108,12 @@ const { email } = Astro.props;
   .online-publish[data-status='error'] .publish-dot {
     background: #d07a6b;
   }
-  .publish-popover {
-    position: absolute;
-    z-index: 10;
-    top: 30px;
-    right: -45px;
-    width: min(355px, calc(100vw - 30px));
-    padding: 21px;
-    border: 1px solid #e1eee5;
-    border-radius: 13px;
-    background: #fafffc;
-    box-shadow: 0 14px 50px #3e6b4e1f;
-    white-space: normal;
-  }
-  .publish-popover h2,
+
   .publish-dialog h2 {
     margin: 0 0 16px;
     color: #345b43;
     font-size: 16px;
   }
-  dl {
-    display: grid;
-    gap: 11px;
-    margin: 0 0 15px;
-  }
-  dl > div {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-    align-items: start;
-  }
-  dt {
-    flex-shrink: 0;
-    color: #70887a;
-    font-size: 11px;
-  }
-  dd {
-    margin: 0;
-    color: #42654e;
-    font-size: 11px;
-    line-height: 1.7;
-    text-align: right;
-  }
-  .publish-popover p {
-    margin: 0;
-    color: #647e6d;
-    font-size: 11px;
-    line-height: 1.9;
-  }
-  .publish-popover-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .publish-popover-actions :is(button, a),
   .publish-account button,
   .publish-login {
     border: 0;
@@ -251,7 +190,7 @@ const { email } = Astro.props;
     background: #249872;
     color: #fff;
   }
-  .publish-popover .publish-error,
+
   .publish-dialog .publish-error {
     margin-top: 13px;
     padding: 10px 12px;
@@ -280,20 +219,17 @@ const { email } = Astro.props;
     }
   }
   @media (max-width: 750px) {
-    .online-publish {
-      gap: 10px;
-    }
-    summary > [data-publish-summary] {
+    .publish-state [data-publish-summary] {
       max-width: 68px;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .online-publish {
+      gap: 10px;
+    }
     .publish-trigger {
       padding: 8px 9px;
       font-size: 11px;
-    }
-    .publish-popover {
-      right: -125px;
     }
   }
 </style>
