@@ -29,7 +29,7 @@
     "verify:products": "node scripts/verify-product-admin.mjs",
     "verify:taxonomy": "node scripts/verify-taxonomy.mjs",
     "verify:taxonomy:live": "node scripts/verify-taxonomy-live.mjs",
-    "verify:analytics": "node scripts/verify-analytics.mjs && node scripts/verify-analytics-navigation.mjs",
+    "verify:analytics": "node scripts/verify-analytics.mjs && node scripts/verify-analytics-navigation.mjs && node scripts/verify-gsc.mjs",
     "verify:seo": "node scripts/verify-seo-diagnostics.mjs && node scripts/verify-seo-admin.mjs && node scripts/verify-seo-research.mjs && node scripts/verify-analytics-navigation.mjs",
     "verify:deploy": "node scripts/verify.mjs && node scripts/check-built-images.mjs && node scripts/verify-contact-runtime.mjs && node scripts/verify-vercel-build.mjs",
     "build": "astro build",
@@ -41,12 +41,13 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/vercel": "11.0.16",
     "@astrojs/markdown-remark": "7.3.4",
     "@astrojs/rss": "4.0.19",
+    "@astrojs/vercel": "11.0.16",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.0",
     "astro": "7.4.2",
+    "google-auth-library": "11.3.2",
     "tailwindcss": "^4.1.0"
   },
   "devDependencies": {

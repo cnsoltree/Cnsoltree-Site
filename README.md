@@ -40,6 +40,12 @@ SUPABASE_SERVICE_ROLE_KEY
 
 The Vercel adapter emits `.vercel/output/config.json`, prerendered pages/assets in `.vercel/output/static/` and the on-demand Node function under `.vercel/output/functions/`. `/api/contact`, legacy blog-topic redirects and production 404 responses for the local admin use the function. Public catalog, article and information pages remain prerendered; images are generated with Sharp at build time. `npm run verify` checks the static output, and `node scripts/verify-vercel-build.mjs` checks the Vercel routes/function and production admin isolation without sending enquiries.
 
+## Private Search Console dashboard
+
+Set server-only `GSC_SERVICE_ACCOUNT_JSON` to a dedicated service-account JSON credential and `GSC_PROPERTY` to `sc-domain:elesoltree.com`. Enable the Search Console API and grant that account Restricted access to the property. Store the credential only in ignored local environment files or encrypted Vercel Production variables, never in Git or browser configuration.
+
+Authenticated `/api/admin/analytics` reads finalized web-search totals, daily trends and country/device/page/query breakdowns. Totals are queried independently from privacy-filtered dimension rows. The dashboard loads on opening or date changes and supports manual refresh; an instance-local 5-minute cache (30-second manual refresh cooldown) reduces repeated requests. There is no background sync job or historical archive in this version. Each dimension shows up to 1,000 top returned rows and labels truncation; GSC itself may omit anonymized queries. Missing recent dates remain gaps. Website sessions, inquiries, indexing inspection and automatic SEO recommendations are separate integrations. Run `npm run verify:analytics` for provider/date/cache contract checks.
+
 ## Vercel migration
 
 Keep the existing Git repository, Vercel project and production domains. Preserve the previous Next.js commit and any uncommitted files before merging the Astro migration on a separate branch. Replacing the application does not require creating a second repository or deleting the old history.

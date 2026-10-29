@@ -33,6 +33,11 @@ function initAnalytics(manager) {
   let detailKey;
   let metricKey;
   let lastDetailKey;
+  let currentReport;
+  let controller;
+  let requestId = 0;
+  const refreshButton = manager.querySelector('[data-analytics-refresh]');
+  const tablePages = {};
   try {
     const saved = JSON.parse(window.sessionStorage.getItem(storageKey));
     if (['search', 'traffic'].includes(saved?.source)) source = saved.source;
@@ -85,7 +90,7 @@ function initAnalytics(manager) {
   function emptyTable(config, { device = false, detailed = false } = {}) {
     const content = node('div');
     const wrapper = node('div', device ? 'analytics-device-content' : '');
-    if (device) {
+    if (device && currentReport?.status !== 'connected') {
       const donut = node('div', 'analytics-empty-donut');
       donut.setAttribute('role', 'img');
       donut.setAttribute('aria-label', '设备数据尚未接入，暂无占比数据');
@@ -106,17 +111,67 @@ function initAnalytics(manager) {
     }
     head.append(headings);
     const body = node('tbody');
+    const records = currentReport?.tables[config.key] || [];
+    const size = detailed ? 20 : 5;
+    const page = Math.min(
+      tablePages[config.key] || 0,
+      Math.max(0, Math.ceil(records.length / size) - 1),
+    );
+    for (const record of records.slice(page * size, (page + 1) * size)) {
+      const row = node('tr');
+      const cell = node('td');
+      cell.title = record.label;
+      if (config.key === 'page') {
+        try {
+          const url = new URL(record.label);
+          if (
+            ['https:', 'http:'].includes(url.protocol) &&
+            ['elesoltree.com', 'www.elesoltree.com'].includes(url.hostname)
+          ) {
+            const link = node('a', '', url.pathname);
+            link.href = url.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            cell.append(link);
+          } else cell.textContent = record.label;
+        } catch {
+          cell.textContent = record.label;
+        }
+      } else
+        cell.textContent =
+          { DESKTOP: '桌面端', MOBILE: '移动端', TABLET: '平板' }[record.label] || record.label;
+      row.append(cell);
+      for (const column of config.columns)
+        row.append(node('td', '', formatMetric(record[column.key], column.kind)));
+      body.append(row);
+    }
     const row = node('tr');
-    const cell = node('td', 'analytics-table-empty', '尚未接入数据源');
+    const cell = node(
+      'td',
+      'analytics-table-empty',
+      currentReport?.status === 'connected'
+        ? '所选日期暂无搜索记录'
+        : currentReport?.status === 'loading'
+          ? '正在读取 Google 数据…'
+          : '暂无可用数据',
+    );
     cell.colSpan = config.columns.length + 1;
-    cell.append(node('small', '', `接入${sourceNames[source]}后显示${config.label}数据`));
+    cell.append(node('small', '', currentReport?.statusDescription || ''));
     row.append(cell);
-    body.append(row);
+    if (!records.length) body.append(row);
     table.append(head, body);
     scroll.append(table);
     wrapper.append(scroll);
     const footer = node('div', 'analytics-table-footer');
-    footer.append(node('span', '', detailed ? '暂无可用记录' : '暂无可用数据'));
+    footer.append(
+      node(
+        'span',
+        '',
+        records.length
+          ? `共 ${records.length} 条${currentReport?.truncated?.[config.key] ? '（仅显示前 1,000 条）' : ''}`
+          : '暂无可用记录',
+      ),
+    );
     const pagination = node('div', 'analytics-pagination');
     for (const [text, label] of [
       ['‹', '上一页'],
@@ -124,9 +179,24 @@ function initAnalytics(manager) {
     ]) {
       const button = node('button', '', text);
       button.type = 'button';
-      button.disabled = true;
+      button.disabled = text === '‹' ? page === 0 : (page + 1) * size >= records.length;
+      button.addEventListener('click', () => {
+        tablePages[config.key] = page + (text === '‹' ? -1 : 1);
+        render();
+        const owner = detailed ? detail : manager.querySelector('[data-analytics-tables]');
+        [...owner.querySelectorAll('button')]
+          .find((item) => item.getAttribute('aria-label') === `${config.label}${label}`)
+          ?.focus();
+      });
       button.setAttribute('aria-label', `${config.label}${label}`);
-      if (text === '›') pagination.append(node('span', '', '— / —'));
+      if (text === '›')
+        pagination.append(
+          node(
+            'span',
+            '',
+            records.length ? `${page + 1} / ${Math.ceil(records.length / size)}` : '— / —',
+          ),
+        );
       pagination.append(button);
     }
     footer.append(pagination);
@@ -137,19 +207,80 @@ function initAnalytics(manager) {
   function renderTrend() {
     const metric = METRICS[source].find((item) => item.key === metricKey) || METRICS[source][0];
     metricKey = metric.key;
+    const chart = manager.querySelector('[data-analytics-live-chart]');
+    const message = manager.querySelector('.analytics-chart-message');
+    const records = (currentReport?.daily || []).filter(
+      (row) => typeof row[metricKey] === 'number',
+    );
+    chart.replaceChildren();
+    chart.hidden = !records.length;
+    message.hidden = Boolean(records.length);
+    if (records.length) {
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 900 230');
+      svg.setAttribute('preserveAspectRatio', 'none');
+      const maximum = Math.max(...records.map((row) => row[metricKey])) || 1;
+      const minDate = Date.parse(range.startDate);
+      const span = Math.max(86400000, Date.parse(range.endDate) - minDate);
+      const x = (row) => 35 + ((Date.parse(row.date) - minDate) / span) * 845;
+      const y = (row) => 210 - (row[metricKey] / maximum) * 185;
+      // Missing dates remain gaps: Google may not have processed recent days yet.
+      let points = '';
+      let previous;
+      for (const row of records) {
+        points +=
+          (previous && Date.parse(row.date) - Date.parse(previous.date) === 86400000
+            ? ' L'
+            : ' M') +
+          x(row) +
+          ' ' +
+          y(row);
+        previous = row;
+        const dot = document.createElementNS(svg.namespaceURI, 'circle');
+        dot.setAttribute('cx', x(row));
+        dot.setAttribute('cy', y(row));
+        dot.setAttribute('r', '4');
+        dot.setAttribute('fill', '#229e7d');
+        dot.setAttribute('tabindex', '0');
+        const title = document.createElementNS(svg.namespaceURI, 'title');
+        title.textContent =
+          row.date + ' · ' + metric.label + ' ' + formatMetric(row[metricKey], metric.kind);
+        dot.setAttribute('aria-label', title.textContent);
+        dot.append(title);
+        svg.append(dot);
+      }
+      const line = document.createElementNS(svg.namespaceURI, 'path');
+      line.setAttribute('d', points);
+      line.setAttribute('fill', 'none');
+      line.setAttribute('stroke', '#229e7d');
+      line.setAttribute('stroke-width', '2');
+      svg.prepend(line);
+      chart.append(svg);
+      const scale = node('span', 'analytics-chart-scale', formatMetric(maximum, metric.kind));
+      chart.append(scale);
+      manager
+        .querySelector('.analytics-empty-chart')
+        .setAttribute('aria-label', metric.label + '每日趋势，悬停数据点查看日期和值');
+    }
     manager.querySelector('[data-analytics-trend-title]').textContent = `${metric.label}趋势`;
     manager.querySelector('[data-analytics-trend-caption]').textContent =
       source === 'search'
-        ? '接入后可查看每日 Google 自然搜索表现。'
+        ? '每日已确认数据；空缺日期尚无返回记录，不计为零。'
         : '网站访问来自网站分析；询盘数据还需接入事件跟踪。';
     manager.querySelector('[data-analytics-chart-empty-title]').textContent =
-      `尚未接入${sourceNames[source]}`;
+      currentReport?.status === 'connected'
+        ? '所选日期暂无搜索记录'
+        : currentReport?.status === 'loading'
+          ? '正在读取 Google 数据…'
+          : currentReport?.status === 'error'
+            ? '数据读取未完成'
+            : `尚未接入${sourceNames[source]}`;
     manager.querySelector('[data-analytics-chart-empty-description]').textContent =
-      `接入真实数据后，这里会展示所选日期的${metric.label}趋势。`;
+      currentReport?.statusDescription || '暂无可用数据。';
   }
 
   function render() {
-    const report = createUnavailableReport({ source, range });
+    const report = currentReport || createUnavailableReport({ source, range });
     for (const tab of tabs) {
       const selected = tab.dataset.analyticsTab === source;
       tab.setAttribute('aria-selected', String(selected));
@@ -160,7 +291,13 @@ function initAnalytics(manager) {
       .setAttribute('aria-labelledby', `analytics-${source}-tab`);
     manager.querySelector('[data-analytics-source-label]').textContent =
       source === 'search'
-        ? 'Google Search Console 尚未接入'
+        ? report.status === 'connected'
+          ? `GSC 已接入 · 最新有记录日期：${report.latestDataDate || '暂无记录'} · 更新于 ${new Date(report.updatedAt).toLocaleString('zh-CN')}`
+          : report.status === 'loading'
+            ? '正在读取 GSC…'
+            : report.status === 'error'
+              ? 'GSC 读取失败，可重试'
+              : 'Google Search Console 尚未接入'
         : '网站分析与询盘跟踪尚未接入 · GSC 不提供访问与询盘数据';
     dateLabels();
     const cards = manager.querySelector('[data-analytics-metrics]');
@@ -171,13 +308,16 @@ function initAnalytics(manager) {
       const top = node('div', 'analytics-metric-top');
       const title = node('h2', '', metric.label);
       title.title = metric.description;
-      top.append(title, node('span', 'analytics-status-tag', '未接入'));
+      top.append(title, node('span', 'analytics-status-tag', report.statusLabel));
       const value = node(
         'strong',
         'analytics-metric-value',
         formatMetric(report.summary[metric.key], metric.kind),
       );
-      value.setAttribute('aria-label', `${metric.label}暂无可用数据`);
+      value.setAttribute(
+        'aria-label',
+        `${metric.label} ${formatMetric(report.summary[metric.key], metric.kind)}`,
+      );
       card.append(top, value, node('p', '', metric.description));
       cards.append(card);
       metricSelect.add(new Option(metric.label, metric.key));
@@ -206,6 +346,7 @@ function initAnalytics(manager) {
     overview.hidden = Boolean(selected);
     detail.hidden = !selected;
     if (selected) {
+      manager.querySelector('[data-analytics-detail-status]').textContent = report.statusLabel;
       manager.querySelector('[data-analytics-detail-title]').textContent = selected.label;
       manager.querySelector('[data-analytics-detail-description]').textContent =
         report.statusDescription;
@@ -216,6 +357,52 @@ function initAnalytics(manager) {
     remember();
   }
 
+  async function loadReport(refresh = false) {
+    const id = ++requestId;
+    controller?.abort();
+    controller = new AbortController();
+    currentReport = createUnavailableReport({ source, range });
+    if (source === 'traffic') {
+      refreshButton.disabled = true;
+      render();
+      return;
+    }
+    Object.assign(currentReport, {
+      status: 'loading',
+      statusLabel: '加载中',
+      statusDescription: '正在读取 Google 搜索数据，请稍候。',
+    });
+    refreshButton.disabled = true;
+    render();
+    try {
+      const response = await fetch(
+        '/api/admin/analytics?' +
+          new URLSearchParams({ source, ...range, refresh: String(refresh) }),
+        { credentials: 'same-origin', cache: 'no-store', signal: controller.signal },
+      );
+      const data = await response.json();
+      if (id !== requestId) return;
+      if (!response.ok) throw new Error(data.error || '数据读取失败，请重试。');
+      currentReport = data;
+      showError();
+    } catch (issue) {
+      if (id !== requestId || issue.name === 'AbortError') return;
+      currentReport = createUnavailableReport({ source, range });
+      Object.assign(currentReport, {
+        status: 'error',
+        statusLabel: '读取失败',
+        statusDescription: issue.message || '连接失败，请重试。',
+      });
+      showError(currentReport.statusDescription);
+    } finally {
+      if (id === requestId) {
+        refreshButton.disabled = false;
+        render();
+      }
+    }
+  }
+  refreshButton.addEventListener('click', () => loadReport(true));
+
   for (const [index, tab] of tabs.entries()) {
     tab.addEventListener('click', () => {
       source = tab.dataset.analyticsTab;
@@ -223,7 +410,7 @@ function initAnalytics(manager) {
       metricKey = undefined;
       showError();
       feedback.textContent = '';
-      render();
+      loadReport();
     });
     tab.addEventListener('keydown', (event) => {
       if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
@@ -244,8 +431,8 @@ function initAnalytics(manager) {
       range = defaultRange(days);
       rangeForm.hidden = true;
       showError();
-      feedback.textContent = '日期已更新；接入数据源后将显示该时段的数据。';
-      render();
+      feedback.textContent = '';
+      loadReport();
     });
   customButton.addEventListener('click', () => {
     rangeForm.hidden = !rangeForm.hidden;
@@ -266,8 +453,8 @@ function initAnalytics(manager) {
     range = next;
     days = 'custom';
     showError();
-    feedback.textContent = '自定义日期已应用；接入数据源后将显示该时段的数据。';
-    render();
+    feedback.textContent = '';
+    loadReport();
   });
   metricSelect.addEventListener('change', () => {
     metricKey = metricSelect.value;
@@ -298,8 +485,8 @@ function initAnalytics(manager) {
   }).observe(manager, { attributes: true, attributeFilter: ['hidden', 'inert'] });
   document.addEventListener('studio:analytics', () => {
     if (days !== 'custom') range = defaultRange(days);
-    render();
+    loadReport();
   });
   rangeForm.hidden = days !== 'custom';
-  if (!manager.hidden) render();
+  if (!manager.hidden) loadReport();
 }

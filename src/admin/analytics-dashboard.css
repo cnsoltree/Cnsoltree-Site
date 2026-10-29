@@ -249,6 +249,41 @@
   position: relative;
   height: 235px;
 }
+.analytics-live-chart {
+  position: absolute;
+  inset: 0;
+}
+.analytics-live-chart svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.analytics-chart-scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #61766d;
+  font-size: 11px;
+}
+.analytics-chart-message[hidden],
+.analytics-live-chart[hidden] {
+  display: none;
+}
+.analytics-table td:not(:first-child) {
+  text-align: right;
+}
+.analytics-table td:first-child {
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.analytics-table a {
+  color: #229e7d;
+}
+.analytics-apply:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
 .analytics-chart-grid {
   position: absolute;
   inset: 15px 0 0;

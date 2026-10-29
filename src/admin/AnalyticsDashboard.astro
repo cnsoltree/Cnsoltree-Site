@@ -13,9 +13,9 @@
       <h1 id="analytics-title">数据看板</h1>
       <p>搜索表现、网站访问与询盘，集中查看网站的运营情况。</p>
     </div>
-    <span class="analytics-connection">
-      <span aria-hidden="true"></span> 数据源未接入
-    </span>
+    <button type="button" class="analytics-apply" data-analytics-refresh>
+      刷新数据
+    </button>
   </div>
 
   <section class="analytics-controls" aria-label="看板筛选">
@@ -148,6 +148,7 @@
               接入真实数据后，这里会展示所选日期的趋势。
             </p>
           </div>
+          <div class="analytics-live-chart" data-analytics-live-chart hidden></div>
         </div>
         <div class="analytics-chart-dates" aria-hidden="true">
           <span data-analytics-chart-start></span>
@@ -170,7 +171,9 @@
           <h2 id="analytics-detail-title" tabindex="-1" data-analytics-detail-title></h2>
           <p data-analytics-detail-description></p>
         </div>
-        <span class="analytics-status-tag">未接入</span>
+        <span class="analytics-status-tag" data-analytics-detail-status>
+          未接入
+        </span>
       </div>
       <div data-analytics-detail-table></div>
     </section>
@@ -203,7 +206,9 @@
       </p>
     </div>
     <p class="analytics-source-notice">
-      当前看板仅提供布局与筛选。所有数据源尚未接入，「—」表示暂无可用数据，并非数值为零。
+      搜索表现从 GSC
+      只读获取，按太平洋时间展示已最终确认的数据。打开看板或切换日期时加载，服务端短暂缓存 5
+      分钟，可手动刷新。网站访问与询盘尚未接入。「—」表示暂无可用数据。
     </p>
     <div class="product-dialog-actions">
       <button type="button" data-analytics-source-close autofocus>
