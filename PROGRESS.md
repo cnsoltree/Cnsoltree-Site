@@ -344,3 +344,12 @@
 - Vercel Production dpl_BngKrHAxfXxbLWyALnqX1NXEqc1k 已 Ready，正式域名 www.elesoltree.com 已实际返回该部署资源。
 - 独立登录会话只读核验：产品编辑页、文章新建页 200，最新 JS 含产品图集、补充分类和 URL Slug 新标签；首页、Blog、ADD 产品详情页均 200。未写入云端内容，验证会话退出；未做真实浏览器视觉/拖拽验收。
 - 发布状态/核验辅助脚本保存在仓库外 artifacts，凭据未提交。本条记录随文档提交同步，功能及内容保持上述已验证版本。
+
+## 线上后台初始化故障排查（2026-10-29）
+
+- 用户报告后台无法读取云端分类。线上只读复现 taxonomy/products/content-index 500 空响应；Vercel 日志确认 sanitize-html 2.18.1 经 CommonJS require 加载 htmlparser2 12 的 ESM 时触发 ERR_REQUIRE_ESM，影响云端内容及发布接口模块初始化。数据读取前即失败，未改写云端内容。
+- 原有本地 Node 22 默认支持 require(ESM)，未复现 Vercel require hook 限制。使用 --no-experimental-require-module 在旧构建产物上明确复现 500；先前发布核验只覆盖页面与资源，遗漏了真实线上分类接口。
+- Vite SSR 显式打包 sanitizer 与直接依赖，兼顾 ESM 解析器和嵌套 escape-string-regexp 版本解析。独立 SSR 打包加载及脚本过滤断言通过；运行时回归补充未登录/登录的分类接口，发布检查强制运行禁用 require(ESM) 的完整后台函数测试。
+- 正在执行最终构建/部署检查，随后部署并在线只读验证；不降级依赖、不改写云端分类或产品数据。
+
+- 最终验证通过：代码检查 0 errors / 0 warnings / 1 个既有 hint；富文本回归、构建、完整 verify:deploy（含禁用 require(ESM) 的实际函数与云端分类初始化检查）通过。准备推送修复并核验线上。

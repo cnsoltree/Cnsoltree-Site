@@ -323,6 +323,12 @@ try {
   }
 
   await data(await request('/__cms/products'), 401);
+  await data(await request('/__cms/taxonomy'), 401);
+  const cloudTaxonomy = await data(
+    await request('/__cms/taxonomy', { cookie: activeCookies }),
+    200,
+  );
+  assert.deepEqual(cloudTaxonomy.taxonomy, taxonomy, 'CMS initialization can read cloud taxonomy.');
   const products = await data(await request('/__cms/products', { cookie: activeCookies }), 200);
   assert.equal(products.products.length, 1);
   assert.equal(products.products[0].id, productId);

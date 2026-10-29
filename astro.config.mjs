@@ -85,6 +85,19 @@ export default defineConfig({
     },
   ],
   vite: {
+    // Bundle the sanitizer and its direct dependencies: Vercel cannot require its ESM parser,
+    // and externalizing a nested dependency can resolve a different version after tracing.
+    ssr: {
+      noExternal: [
+        'sanitize-html',
+        'htmlparser2',
+        'escape-string-regexp',
+        'is-plain-object',
+        'parse-srcset',
+        'postcss',
+        'launder',
+      ],
+    },
     optimizeDeps: { exclude: ['decap-cms-locales'] },
     plugins: [
       tailwindcss(),
