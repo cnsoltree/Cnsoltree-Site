@@ -1413,6 +1413,15 @@
     padding: 0 22px 28px;
   }
 }
+@media (max-width: 750px) {
+  .studio-shell-header:has(.online-publish) .studio-website,
+  .studio-shell-header:has(.online-publish) .studio-environment {
+    display: none;
+  }
+  .studio-header-actions:has(.online-publish) {
+    gap: 10px;
+  }
+}
 @media (max-width: 600px) {
   .soltree-admin {
     --studio-sidebar: 154px;

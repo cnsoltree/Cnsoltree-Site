@@ -357,7 +357,10 @@ function initGroupManager(manager) {
           }),
         );
       if (dialog.open) dialog.close();
-      feedback.textContent = '已保存';
+      feedback.textContent =
+        document.body.dataset.adminMode === 'online'
+          ? '已保存到云端，点击右上角“发布到网站”后前台生效。'
+          : '已保存';
       document.dispatchEvent(new CustomEvent('studio:taxonomy-saved'));
       return true;
     } catch (failure) {

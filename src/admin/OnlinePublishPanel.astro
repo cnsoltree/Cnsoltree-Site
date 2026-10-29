@@ -10,7 +10,6 @@ const { email } = Astro.props;
   data-online-publish
   data-email={email}
   aria-label="云端保存与网站发布"
-  hidden
 >
   <details class="publish-details" data-publish-details>
     <summary>
@@ -47,7 +46,7 @@ const { email } = Astro.props;
       </div>
     </div>
   </details>
-  <button type="button" class="publish-trigger" data-publish-open>
+  <button type="button" class="publish-trigger" data-publish-open disabled>
     发布到网站
   </button>
   <div class="publish-account">
