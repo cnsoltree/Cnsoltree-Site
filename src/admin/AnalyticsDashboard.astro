@@ -11,7 +11,7 @@
   <div class="product-page-heading analytics-heading">
     <div>
       <h1 id="analytics-title">数据看板</h1>
-      <p>搜索表现、网站访问与询盘，集中查看网站的运营情况。</p>
+      <p>集中查看 Google 自然搜索表现，了解关键词与页面的搜索情况。</p>
     </div>
     <button type="button" class="analytics-apply" data-analytics-refresh>
       刷新数据
@@ -30,17 +30,6 @@
           data-analytics-tab="search"
         >
           搜索表现 <small>GSC</small>
-        </button>
-        <button
-          id="analytics-traffic-tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="analytics-report-panel"
-          tabindex="-1"
-          data-analytics-tab="traffic"
-        >
-          访问与询盘
         </button>
       </div>
       <div class="analytics-presets" role="group" aria-label="日期范围">
@@ -191,24 +180,10 @@
         提供 Google 自然搜索的点击、展示、点击率、平均排名，以及国家、设备、页面与搜索关键词数据。
       </p>
     </div>
-    <div class="analytics-source-item">
-      <h3>访问统计 · 网站分析</h3>
-      <p>
-        访问量、访客、国家、设备和来源网站需要另行接入网站分析工具。GSC
-        不提供网站访问量或完整的来源网站数据。
-      </p>
-    </div>
-    <div class="analytics-source-item">
-      <h3>询盘统计 · 事件跟踪</h3>
-      <p>
-        询盘数量和转化率需要接入表单提交等有效询盘事件。WhatsApp
-        按钮点击可单独记录为联系意向，接入后再确认哪些行为计入有效询盘。
-      </p>
-    </div>
     <p class="analytics-source-notice">
       搜索表现从 GSC
       只读获取，按太平洋时间展示已最终确认的数据。打开看板或切换日期时加载，服务端短暂缓存 5
-      分钟，可手动刷新。网站访问与询盘尚未接入。「—」表示暂无可用数据。
+      分钟，可手动刷新。「—」表示暂无可用数据。
     </p>
     <div class="product-dialog-actions">
       <button type="button" data-analytics-source-close autofocus>

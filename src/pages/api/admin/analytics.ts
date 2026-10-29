@@ -15,8 +15,8 @@ export const GET: APIRoute = async (context) => {
     const range = { startDate: query.get('startDate'), endDate: query.get('endDate') };
     const problem = validateRange(range);
     if (problem) throw adminProblem(422, problem);
-    if (!['search', 'traffic'].includes(source)) throw adminProblem(422, '数据来源无效。');
-    if (source === 'traffic' || !getSecret('GSC_SERVICE_ACCOUNT_JSON'))
+    if (source !== 'search') throw adminProblem(422, '数据来源无效。');
+    if (!getSecret('GSC_SERVICE_ACCOUNT_JSON'))
       return adminJson(createUnavailableReport({ source, range }));
     provider ??= createGscProvider({
       credential: getSecret('GSC_SERVICE_ACCOUNT_JSON'),

@@ -14,7 +14,7 @@ if (typeof document !== 'undefined') {
 
 function initAnalytics(manager) {
   const storageKey = 'soltree.analytics-view.v1';
-  const sourceNames = { search: 'Google Search Console', traffic: '网站分析与询盘跟踪' };
+  const sourceNames = { search: 'Google Search Console' };
   const tabs = [...manager.querySelectorAll('[data-analytics-tab]')];
   const presets = [...manager.querySelectorAll('[data-analytics-days]')];
   const customButton = manager.querySelector('[data-analytics-custom]');
@@ -40,7 +40,6 @@ function initAnalytics(manager) {
   const tablePages = {};
   try {
     const saved = JSON.parse(window.sessionStorage.getItem(storageKey));
-    if (['search', 'traffic'].includes(saved?.source)) source = saved.source;
     if ([7, 28, 90].includes(saved?.days)) {
       days = saved.days;
       range = defaultRange(days);
@@ -272,9 +271,7 @@ function initAnalytics(manager) {
     }
     manager.querySelector('[data-analytics-trend-title]').textContent = `${metric.label}趋势`;
     manager.querySelector('[data-analytics-trend-caption]').textContent =
-      source === 'search'
-        ? '每日已确认数据；空缺日期尚无返回记录，不计为零。'
-        : '网站访问来自网站分析；询盘数据还需接入事件跟踪。';
+      '每日已确认数据；空缺日期尚无返回记录，不计为零。';
     manager.querySelector('[data-analytics-chart-empty-title]').textContent =
       currentReport?.status === 'connected'
         ? '所选日期暂无搜索记录'
@@ -298,15 +295,13 @@ function initAnalytics(manager) {
       .querySelector('#analytics-report-panel')
       .setAttribute('aria-labelledby', `analytics-${source}-tab`);
     manager.querySelector('[data-analytics-source-label]').textContent =
-      source === 'search'
-        ? report.status === 'connected'
-          ? `GSC 已接入 · 最新有记录日期：${report.latestDataDate || '暂无记录'} · 更新于 ${new Date(report.updatedAt).toLocaleString('zh-CN')}`
-          : report.status === 'loading'
-            ? '正在读取 GSC…'
-            : report.status === 'error'
-              ? 'GSC 读取失败，可重试'
-              : 'Google Search Console 尚未接入'
-        : '网站分析与询盘跟踪尚未接入 · GSC 不提供访问与询盘数据';
+      report.status === 'connected'
+        ? `GSC 已接入 · 最新有记录日期：${report.latestDataDate || '暂无记录'} · 更新于 ${new Date(report.updatedAt).toLocaleString('zh-CN')}`
+        : report.status === 'loading'
+          ? '正在读取 GSC…'
+          : report.status === 'error'
+            ? 'GSC 读取失败，可重试'
+            : 'Google Search Console 尚未接入';
     dateLabels();
     const cards = manager.querySelector('[data-analytics-metrics]');
     cards.replaceChildren();
@@ -370,11 +365,6 @@ function initAnalytics(manager) {
     controller?.abort();
     controller = new AbortController();
     currentReport = createUnavailableReport({ source, range });
-    if (source === 'traffic') {
-      refreshButton.disabled = true;
-      render();
-      return;
-    }
     Object.assign(currentReport, {
       status: 'loading',
       statusLabel: '加载中',
