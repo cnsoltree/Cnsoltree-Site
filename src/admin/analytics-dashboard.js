@@ -215,6 +215,14 @@ function initAnalytics(manager) {
     chart.replaceChildren();
     chart.hidden = !records.length;
     message.hidden = Boolean(records.length);
+    manager
+      .querySelector('.analytics-empty-chart')
+      .setAttribute(
+        'aria-labelledby',
+        records.length
+          ? 'analytics-trend-title'
+          : 'analytics-chart-empty-title analytics-chart-empty-description',
+      );
     if (records.length) {
       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svg.setAttribute('viewBox', '0 0 900 230');
