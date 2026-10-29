@@ -31,7 +31,7 @@ if (typeof document !== 'undefined') {
       label: '数据分析 / 数据看板',
     },
     seo: { element: document.getElementById('studio-seo'), label: 'SEO 助手' },
-    knowledge: { element: document.getElementById('studio-knowledge'), label: '内容 / 知识库' },
+    knowledge: { element: document.getElementById('studio-knowledge'), label: '知识库' },
   };
   const articleHeading = document.getElementById('studio-article-editor-heading');
   const contentToggle = document.querySelector('[data-studio-content-toggle]');
@@ -94,7 +94,7 @@ if (typeof document !== 'undefined') {
             : '内容 / 产品管理';
     contentToggle?.classList.toggle(
       'is-active',
-      ['products', 'articles', 'groups', 'knowledge'].includes(current),
+      ['products', 'articles', 'groups'].includes(current),
     );
     if (showProducts) document.dispatchEvent(new Event('studio:products'));
     if (showArticles) document.dispatchEvent(new Event('studio:articles'));
