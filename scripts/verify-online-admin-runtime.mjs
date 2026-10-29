@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import os from 'node:os';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { safeAdminDestination } from '../src/admin/login.js';
 
@@ -11,8 +12,8 @@ assert.equal(
 );
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, '.vercel/output');
-const functionRoot = path.join(output, 'functions/_render.func');
-const config = JSON.parse(await fs.readFile(path.join(functionRoot, '.vc-config.json'), 'utf8'));
+const functionSource = path.join(output, 'functions/_render.func');
+const config = JSON.parse(await fs.readFile(path.join(functionSource, '.vc-config.json'), 'utf8'));
 assert.equal(config.runtime, 'nodejs22.x');
 const site = 'https://www.elesoltree.com';
 const database = 'https://offline.supabase.test';
@@ -158,7 +159,10 @@ globalThis.fetch = async (input, init) => {
   throw new Error('Unexpected offline Supabase endpoint.');
 };
 
+// Run outside the repository so ancestor node_modules cannot hide missing traced dependencies.
+const functionRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'soltree-function-runtime-'));
 try {
+  await fs.cp(functionSource, functionRoot, { recursive: true });
   const entry = await import(pathToFileURL(path.join(functionRoot, config.handler)).href);
   assert.equal(
     typeof entry.default?.fetch,
@@ -464,4 +468,6 @@ try {
   );
 } finally {
   globalThis.fetch = originalFetch;
+  assert.equal(path.dirname(path.resolve(functionRoot)), path.resolve(os.tmpdir()));
+  await fs.rm(functionRoot, { recursive: true, force: true });
 }

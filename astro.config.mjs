@@ -85,8 +85,8 @@ export default defineConfig({
     },
   ],
   vite: {
-    // Bundle the sanitizer and its direct dependencies: Vercel cannot require its ESM parser,
-    // and externalizing a nested dependency can resolve a different version after tracing.
+    // Bundle the sanitizer dependency tree: Vercel cannot require its ESM parser,
+    // and tracing transformed CommonJS can omit dependencies or lose nested versions.
     ssr: {
       noExternal: [
         'sanitize-html',
@@ -96,6 +96,15 @@ export default defineConfig({
         'parse-srcset',
         'postcss',
         'launder',
+        'dayjs',
+        'dom-serializer',
+        'domelementtype',
+        'domhandler',
+        'domutils',
+        'entities',
+        'nanoid',
+        'picocolors',
+        'source-map-js',
       ],
     },
     optimizeDeps: { exclude: ['decap-cms-locales'] },
