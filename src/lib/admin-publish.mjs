@@ -65,6 +65,15 @@ export function gitBlobSha(raw) {
   return createHash('sha1').update(`blob ${data.length}\0`).update(data).digest('hex');
 }
 
+/** Export only the public article; retain editorial targets in the private workspace. */
+export function publicContentRaw(file, raw) {
+  if (!file.startsWith('src/content/articles/')) return raw;
+  const record = JSON.parse(raw);
+  if (!Object.hasOwn(record, 'focusKeyword')) return raw;
+  delete record.focusKeyword;
+  return `${JSON.stringify(record, null, 2)}\n`;
+}
+
 function publicRecord(file, raw) {
   if (!jsonPath.test(file) || typeof raw !== 'string')
     throw problem(400, '发布仅允许产品、文章和分类的公开 JSON 快照。');

@@ -307,11 +307,138 @@
   color: #8e9ba3;
   font-size: 12px;
 }
+:is(#studio-articles, #studio-products) .product-page-heading > div {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+:is(#studio-articles, #studio-products) .product-page-heading h1 {
+  flex-shrink: 0;
+}
+:is(#studio-articles, #studio-products) .product-page-heading p {
+  margin: 0;
+}
 .product-panel {
   padding: 22px;
   border: 1px solid #fff;
   border-radius: 18px;
   background: #ffffffb3;
+}
+#nc-root .product-gallery-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+#nc-root :is(.product-gallery-card, .product-gallery-add) {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  border-radius: 10px;
+}
+#nc-root .product-gallery-card {
+  background: #f1f4f2;
+  border: 1px solid #e0e7e3;
+}
+#nc-root .product-gallery-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+#nc-root .product-gallery-card button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+}
+#nc-root .product-gallery-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50% !important;
+  background: #66706be6;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+#nc-root .product-gallery-position {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  padding: 2px 4px;
+  background: #fff;
+  border-radius: 4px;
+  color: #527064;
+  font-size: 10px;
+}
+#nc-root .product-gallery-alt {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  padding: 3px 5px;
+  color: #53625a;
+  background: #fffffff0;
+  font-size: 12px;
+}
+#nc-root .product-gallery-preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #ffffffe0;
+  filter: drop-shadow(0 1px 2px #0008);
+  opacity: 0;
+  pointer-events: none;
+}
+#nc-root
+  .product-gallery-card:is(:hover, :focus-within)
+  :is(.product-gallery-preview, .product-gallery-remove) {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (hover: none) {
+  #nc-root :is(.product-gallery-preview, .product-gallery-remove) {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+#nc-root .product-gallery-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+  background: #fafcfb;
+  border: 2px dashed #cdd5d0;
+  color: #929d97;
+  font-size: 30px;
+  cursor: pointer;
+}
+#nc-root .product-gallery-hint {
+  font-size: 12px;
+  color: #87948d;
+  line-height: 1.8;
+}
+#nc-root .product-gallery-alt-input {
+  display: grid;
+  gap: 8px;
+  color: #60756c;
+  font-size: 12px;
+}
+#nc-root .product-gallery-alt-input input {
+  width: 100%;
 }
 .product-toolbar {
   display: flex;
@@ -830,6 +957,9 @@ body[data-admin-mode='online'] .product-local-note {
   border-radius: 7px;
   color: #8a9ca4;
 }
+#nc-root button:is([title='同步滚动'], [title='Toggle scroll sync']) {
+  display: none;
+}
 #nc-root [class*='CardsGrid'] {
   gap: 10px;
 }
@@ -876,7 +1006,7 @@ body[data-admin-mode='online'] .product-local-note {
   font-weight: 500;
   line-height: 1.8;
 }
-#nc-root [class*='EditorContainer'] {
+#nc-root [class*='-EditorContainer'] {
   position: fixed;
   top: var(--studio-header);
   left: var(--studio-sidebar);
@@ -886,7 +1016,7 @@ body[data-admin-mode='online'] .product-local-note {
   background: #f0f4fa;
   padding-top: 66px;
 }
-#nc-root [class*='EditorContainer'] > [class*='ToolbarContainer'] {
+#nc-root [class*='-EditorContainer'] > [class*='ToolbarContainer'] {
   top: 0;
   min-width: 0;
   background: #ffffffc9;
@@ -914,10 +1044,10 @@ body[data-admin-mode='online'] .product-local-note {
   color: #fff;
   background: var(--studio-green);
 }
-#nc-root [class*='EditorContainer'] > [class*='ToolbarContainer'] [class*='DropdownButton'] {
+#nc-root [class*='-EditorContainer'] > [class*='ToolbarContainer'] [class*='DropdownButton'] {
   border-radius: 9px;
 }
-#nc-root [class*='EditorContainer'] > [class*='ToolbarContainer'] a {
+#nc-root [class*='-EditorContainer'] > [class*='ToolbarContainer'] a {
   font-size: 12px;
 }
 #nc-root [class*='StyledSplitPane'] {
@@ -939,6 +1069,7 @@ body[data-admin-mode='online'] .product-local-note {
   align-items: center;
 }
 #nc-root [class*='FieldLabel'] {
+  text-transform: none;
   background: transparent !important;
   padding: 0 !important;
   margin: 0;
@@ -1098,23 +1229,48 @@ body[data-admin-mode='online'] .product-local-note {
   left: calc(var(--studio-sidebar) + 32px);
   right: 32px;
 }
+.article-editor-heading:not([hidden]) {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
 .article-editor-heading h1 {
   margin: 0;
+  flex-shrink: 0;
   color: #253731;
   font-size: 27px;
   letter-spacing: -0.03em;
 }
 .article-editor-heading p {
-  margin: 8px 0 0;
+  margin: 0;
   color: #8e9ba3;
   font-size: 12px;
 }
+/* Match the article form's 32px outer + 30px inner horizontal spacing. */
+.soltree-admin[data-editor='product'] #nc-root [class*='ControlPaneContainer'] {
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 26px 62px 36px !important;
+}
+.soltree-admin[data-editor='product']
+  #nc-root
+  [class*='ControlPaneContainer']
+  [class*='ControlPaneContainer'] {
+  padding: 0 !important;
+}
+@media (max-width: 800px) {
+  .soltree-admin[data-editor='product'] #nc-root [class*='ControlPaneContainer'] {
+    padding-inline: 36px !important;
+  }
+}
 /* Keep Decap's native controls and save/leave validation in the article writing view. */
-.soltree-admin[data-editor='article'] #nc-root [class*='EditorContainer'] {
-  top: calc(var(--studio-header) + 102px);
+.soltree-admin[data-editor='article'] #nc-root [class*='-EditorContainer'] {
+  top: calc(var(--studio-header) + 78px);
   left: calc(var(--studio-sidebar) + 32px);
   width: calc(100% - var(--studio-sidebar) - 64px);
-  height: calc(100dvh - var(--studio-header) - 126px);
+  height: calc(100dvh - var(--studio-header) - 102px);
   padding: 0 0 72px;
   border: 1px solid #e5ebed;
   border-radius: 14px;
@@ -1151,10 +1307,49 @@ body[data-admin-mode='online'] .product-local-note {
 }
 .soltree-admin[data-editor='article']
   #nc-root
+  [class*='ControlPaneContainer']:has(> [class*='ControlContainer']) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 20px;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlPaneContainer']
+  > [class*='ControlContainer'] {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='date-field']) {
+  grid-column: 1;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='dateModified-field']) {
+  grid-column: 2;
+}
+.soltree-admin[data-editor='article'] #nc-root input[type='datetime-local'] {
+  width: 100%;
+  min-width: 0;
+}
+.soltree-admin[data-editor='article'] #nc-root input[type='datetime-local'][readonly] {
+  background: #f5f6f7;
+  color: #8a9390;
+}
+@media (max-width: 800px) {
+  .soltree-admin[data-editor='article']
+    #nc-root
+    [class*='ControlContainer']:is(:has([for^='date-field']), :has([for^='dateModified-field'])) {
+    grid-column: 1 / -1;
+  }
+}
+.soltree-admin[data-editor='article']
+  #nc-root
   [class*='ControlContainer']:has([for^='relatedCategorySlug-field'])::before,
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='ControlContainer']:has([for^='image-field'])::before {
+  [class*='ControlContainer']:has([for^='focusKeyword-field'])::before {
   display: block;
   margin-bottom: 22px;
   padding: 0 0 14px 12px;
@@ -1168,12 +1363,12 @@ body[data-admin-mode='online'] .product-local-note {
 }
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='ControlContainer']:has([for^='image-field']) {
+  [class*='ControlContainer']:has([for^='focusKeyword-field']) {
   margin-top: 36px;
 }
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='ControlContainer']:has([for^='image-field'])::before {
+  [class*='ControlContainer']:has([for^='focusKeyword-field'])::before {
   content: 'SEO 与发布设置';
 }
 .soltree-admin[data-editor='article'] #nc-root [class*='FieldLabel'] {
@@ -1203,7 +1398,232 @@ body[data-admin-mode='online'] .product-local-note {
   #nc-root
   [class*='ControlContainer']:has([for^='relatedCategorySlug-field'])
   > div:not([class*='ControlTopbar']) {
-  max-width: 480px;
+  max-width: 760px;
+}
+#nc-root .article-category-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+}
+#nc-root .article-tags > input {
+  width: 100%;
+}
+#nc-root .article-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+#nc-root .article-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #eff1f0;
+  color: #6a7470;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+#nc-root .article-tag button {
+  padding: 0 2px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* Restyle the native image widget so media selection, previews and removal stay intact. */
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:not([class*='ControlTopbar']) {
+  width: 50px;
+  max-width: 100%;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:not([class*='ControlTopbar']):not(:has([class*='ImageWrapper']))
+  button {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  max-width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: 2px dashed #cdd3d0;
+  border-radius: 12px;
+  background-color: #f0f2f1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48' fill='none' stroke='%23616965' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M26 8H11a4 4 0 0 0-4 4v25a4 4 0 0 0 4 4h25a4 4 0 0 0 4-4V24M8 34l10-10 8 8 7-7 7 7M36 5v14M29 12h14'/%3E%3Ccircle cx='18' cy='17' r='3'/%3E%3C/svg%3E");
+  background-position: center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  font-size: 0;
+  cursor: pointer;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:not([class*='ControlTopbar']):not(:has([class*='ImageWrapper']))
+  button:hover {
+  border-color: #11b48d;
+  background-color: #e9f4ef;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  [class*='ImageWrapper'] {
+  width: 50px;
+  max-width: 100%;
+  height: 50px;
+  margin: 0;
+  flex-shrink: 0;
+  border: 2px dashed #cdd3d0;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:not([class*='ControlTopbar']):has([class*='ImageWrapper']) {
+  width: auto;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:has([class*='ImageWrapper'])
+  > span
+  > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:has([class*='ImageWrapper'])
+  > span
+  > div
+  > div:not([class*='ImageWrapper']) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.soltree-admin[data-editor='article']
+  #nc-root
+  [class*='ControlContainer']:has([for^='image-field'])
+  > div:has([class*='ImageWrapper'])
+  button {
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+}
+#nc-root .article-category-level {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+#nc-root .article-category-level label {
+  color: #60756c;
+  font-size: 13px;
+}
+#nc-root .article-category-level select {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 10px 13px;
+  border: 1px solid #dce4e7;
+  border-radius: 6px;
+  color: #3e524b;
+  background: #fff;
+  font-size: 14px;
+}
+#nc-root .article-category-level select:focus-visible {
+  outline: 2px solid #11b48d;
+  outline-offset: 2px;
+}
+#nc-root .article-category-level select:disabled {
+  background: #f4f7f6;
+  color: #85938e;
+}
+#nc-root .article-rich-editor .jodit-container {
+  border: 1px solid #dce4e7;
+  border-radius: 8px;
+}
+#nc-root .article-editor-modes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+#nc-root :is(.article-editor-modes, .article-import-confirm) button {
+  padding: 8px 14px;
+  border: 1px solid #dce4e7;
+  border-radius: 6px;
+  background: #f8fafb;
+  color: #3e524b;
+  cursor: pointer;
+}
+#nc-root .article-editor-modes button[aria-pressed='true'] {
+  background: #e5f5ef;
+  border-color: #11b48d;
+  color: #128366;
+}
+#nc-root :is(.article-markdown-editor, .article-import-confirm) p {
+  color: #60756c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.soltree-admin[data-editor='article'] #nc-root .article-markdown-editor textarea {
+  width: 100%;
+  height: 440px;
+  min-height: 440px;
+  resize: vertical;
+  font-family: Consolas, monospace;
+  line-height: 1.8;
+}
+#nc-root .article-import-confirm {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid #e4c88a;
+  border-radius: 6px;
+  background: #fffbf0;
+}
+#nc-root .article-import-confirm button {
+  margin-right: 8px;
+}
+#nc-root .article-rich-editor .jodit-toolbar__box {
+  background: #f8fafb;
+}
+#nc-root .article-rich-editor .jodit-wysiwyg {
+  min-height: 440px;
+  padding: 22px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+#nc-root .article-rich-editor .jodit-wysiwyg img {
+  max-width: 100%;
+}
+#nc-root .article-rich-editor .jodit-wysiwyg table {
+  border-collapse: collapse;
+}
+#nc-root .article-rich-editor .jodit-wysiwyg :is(td, th) {
+  border: 1px solid #cfdad5;
+  padding: 8px;
+}
+.jodit_fullsize {
+  z-index: 2000 !important;
 }
 .soltree-admin[data-editor='article'] #nc-root .cms-editor-visual [contenteditable='true'],
 .soltree-admin[data-editor='article'] #nc-root .cms-editor-raw [contenteditable='true'] {
@@ -1231,7 +1651,7 @@ body[data-admin-mode='online'] .product-local-note {
 }
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='EditorContainer']
+  [class*='-EditorContainer']
   > [class*='ToolbarContainer'] {
   position: absolute;
   top: auto !important;
@@ -1285,7 +1705,7 @@ body[data-admin-mode='online'] .product-local-note {
 }
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='EditorContainer']
+  [class*='-EditorContainer']
   > [class*='ToolbarContainer']
   :is([class*='PublishButton'], [class*='PublishedToolbarButton'], [class*='SaveButton']) {
   min-width: 112px;
@@ -1299,7 +1719,7 @@ body[data-admin-mode='online'] .product-local-note {
 }
 .soltree-admin[data-editor='article']
   #nc-root
-  [class*='EditorContainer']
+  [class*='-EditorContainer']
   > [class*='ToolbarContainer']
   [class*='DropdownList'] {
   top: auto !important;
@@ -1314,9 +1734,14 @@ body[data-admin-mode='online'] .product-local-note {
     left: calc(var(--studio-sidebar) + 18px);
     right: 18px;
   }
-  .soltree-admin[data-editor='article'] #nc-root [class*='EditorContainer'] {
+  .article-editor-heading p {
+    flex-basis: 100%;
+  }
+  .soltree-admin[data-editor='article'] #nc-root [class*='-EditorContainer'] {
+    top: calc(var(--studio-header) + 102px);
     left: calc(var(--studio-sidebar) + 18px);
     width: calc(100% - var(--studio-sidebar) - 36px);
+    height: calc(100dvh - var(--studio-header) - 126px);
   }
   .soltree-admin[data-editor='article'] #nc-root [class*='ControlPaneContainer'] {
     padding-inline: 18px !important;
@@ -1326,7 +1751,7 @@ body[data-admin-mode='online'] .product-local-note {
   }
   .soltree-admin[data-editor='article']
     #nc-root
-    [class*='EditorContainer']
+    [class*='-EditorContainer']
     > [class*='ToolbarContainer'] {
     padding-inline: 14px;
   }

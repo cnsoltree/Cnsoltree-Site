@@ -1,4 +1,7 @@
 import { adminEntryHref } from '../admin/routes.mjs';
+import { articleSummary } from './article-excerpt.mjs';
+import { isRichArticle } from './article-format.mjs';
+import { renderRichArticle } from './rich-article.mjs';
 
 const site = 'https://www.elesoltree.com';
 const sameSite = new Set(['elesoltree.com', 'www.elesoltree.com']);
@@ -49,6 +52,8 @@ function headingsIn(content) {
   for (const [index, line] of lines.entries()) {
     const atx = /^ {0,3}(#{1,6})(?:\s+|$)/.exec(line);
     if (atx) headings.push(atx[1].length);
+    else if (/<h[1-6](?:\s|>)/i.test(line))
+      headings.push(...[...line.matchAll(/<h([1-6])(?:\s|>)/gi)].map((match) => Number(match[1])));
     else if (index > 0 && plain(lines[index - 1]) && /^ {0,3}(=+|-+)\s*$/.test(line))
       headings.push(line.trim()[0] === '=' ? 1 : 2);
   }
@@ -104,7 +109,7 @@ export function diagnoseContent({ articles = [], products = [], knownPaths } = {
     const title = plain(record.metaTitle) || plain(record[type === 'article' ? 'title' : 'name']);
     const description =
       plain(record.metaDescription) ||
-      plain(record[type === 'article' ? 'excerpt' : 'shortDescription']);
+      (type === 'article' ? articleSummary(record) : plain(record.shortDescription));
     const severity = record.published === true ? 'warning' : 'notice';
     if (!title || !description) {
       add(
@@ -131,7 +136,11 @@ export function diagnoseContent({ articles = [], products = [], knownPaths } = {
     }
     let content = '';
     if (type === 'article') {
-      content = proseWithoutCode(record.content);
+      content = proseWithoutCode(
+        isRichArticle(record.content)
+          ? renderRichArticle(record.content).analysisText
+          : record.content,
+      );
       const headings = headingsIn(content);
       if (headings.includes(1) || /<h1(?:\s|>)/i.test(content))
         add(

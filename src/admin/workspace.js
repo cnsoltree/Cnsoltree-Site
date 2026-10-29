@@ -57,7 +57,11 @@ if (typeof document !== 'undefined') {
     const showProducts = current === 'products' && route.mode === 'list';
     const showArticles = current === 'articles' && route.mode === 'list';
     document.body.dataset.view = showWorkspace ? 'workspace' : 'content';
-    document.body.dataset.editor = articleMode ? 'article' : '';
+    document.body.dataset.editor = articleMode
+      ? 'article'
+      : current === 'products' && ['new', 'edit'].includes(route.mode)
+        ? 'product'
+        : '';
     if (articleHeading) {
       articleHeading.hidden = !articleMode;
       articleHeading.querySelector('h1').textContent =

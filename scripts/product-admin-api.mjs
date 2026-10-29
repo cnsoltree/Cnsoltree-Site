@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
+import { articleSummary } from '../src/lib/article-excerpt.mjs';
 
 const idPattern = /^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/;
 const actions = new Set(['publish', 'unpublish', 'delete', 'restore']);
@@ -87,7 +88,7 @@ function tableArticle({ record, raw, filename }, images, categories) {
     slug: record.slug,
     entryKey: filename.slice(0, -5),
     title: typeof record.title === 'string' ? record.title : '',
-    excerpt: typeof record.excerpt === 'string' ? record.excerpt : '',
+    excerpt: articleSummary(record),
     image: tableImage(record, images),
     categorySlug: record.relatedCategorySlug ?? '',
     categoryName:

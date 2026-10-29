@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { getSecret } from 'astro:env/server';
 import { requireAdmin, adminFailure, adminStore } from '@/lib/admin-server';
 import { adminBody, adminJson, adminProblem } from '@/lib/admin-auth.mjs';
-import { createGitPublisher, manifestFromFiles } from '@/lib/admin-publish.mjs';
+import { createGitPublisher, manifestFromFiles, publicContentRaw } from '@/lib/admin-publish.mjs';
 import { createAdminMedia } from '@/lib/admin-media.mjs';
 import { loadCloudWorkspace } from '@/lib/admin-content';
 import { loadProducts, loadBlogPosts } from '@/lib/data';
@@ -104,7 +104,7 @@ export const POST: APIRoute = async (context) => {
         document,
       );
       (name.startsWith('src/content/products/') ? productRecords : articleRecords).push(record);
-      files.set(name, raw);
+      files.set(name, publicContentRaw(name, raw));
     }
     try {
       loadProducts(productRecords, categories);

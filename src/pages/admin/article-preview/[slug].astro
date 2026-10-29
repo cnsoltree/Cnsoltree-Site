@@ -1,5 +1,6 @@
 ---
 import ArticleDetail from '@/components/ArticleDetail.astro';
+import { articleSummary } from '@/lib/article-excerpt.mjs';
 import { categories, type BlogPost } from '@/lib/data';
 import { onlineAdminEnabled, requireAdmin } from '@/lib/admin-server';
 import { getCloudRecord } from '@/lib/admin-content';
@@ -39,7 +40,7 @@ const category = categories.find((item) => item.slug === text('relatedCategorySl
 const post: BlogPost = {
   slug: text('slug'),
   title: text('title') || text('slug'),
-  excerpt: text('excerpt') || '尚未填写文章摘要（预览提示）',
+  excerpt: articleSummary({ metaDescription: text('metaDescription'), content: text('content') }),
   content: text('content') || '尚未填写文章正文（预览提示）',
   date: date('date'),
   dateModified: date('dateModified') || undefined,

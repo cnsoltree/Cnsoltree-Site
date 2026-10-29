@@ -3,7 +3,9 @@
   "name": "D52-2066 Tuya WiFi Smart Energy Meter 6-in-1 DIN Rail Monitor with Remote App Control",
   "slug": "d52-2066-wifi-tuya-smart-energy-meter-din-rail-remote-app",
   "categorySlug": "power-meter",
-  "additionalCategorySlugs": ["wifi-smart-low-voltage-device"],
+  "additionalCategorySlugs": [
+    "wifi-smart-low-voltage-device"
+  ],
   "categoryName": "Power Meter",
   "shortDescription": "Tuya WiFi smart energy meter with 6-in-1 color display — monitor voltage, current, power, power factor, kWh, and frequency remotely via mobile app. Real-time data plus daily, monthly, and yearly consumption history. DIN rail, 100A, power-failure memory. Ideal for homes, rentals, hotels, and commercial spaces.",
   "description": "Knowing your electricity consumption in real time — from anywhere, without visiting the panel — is what separates a smart energy meter from a standard one. The Soltree D52-2066 WiFi edition adds Tuya 2.4GHz connectivity to the full 6-in-1 measurement platform, letting you monitor AC voltage, current, active power, power factor, frequency, and kWh consumption live through the Tuya mobile app on your phone or tablet.\n\nBeyond real-time readings, the app gives you detailed consumption history broken down by day, month, and year — making it practical for rental property owners tracking tenant usage, hotel facility managers reviewing floor-by-floor energy spend, and homeowners keeping tabs on monthly electricity costs without waiting for the utility bill. The high-definition color LED screen displays all six parameters simultaneously at the device for on-site readings, and built-in power-failure memory ensures kWh data is preserved through outages.\n\nSupports both built-in and external current transformers (CT) for flexible installation across different panel configurations. Measures up to 100A (0.01A resolution), 40–300V AC, with ±1% ±2-digit accuracy and 2 samples per second. 35mm DIN rail mount, compact 54×80×64mm footprint, 150g. Flame-retardant PC housing.",
@@ -127,5 +129,7 @@
     "D52-2066 WiFi meter power failure memory and remote monitoring features"
   ],
   "published": true,
-  "sortOrder": 46
+  "sortOrder": 46,
+  "createdAt": "2026-10-29T14:19:47.978Z",
+  "updatedAt": "2026-10-29T14:19:47.978Z"
 }

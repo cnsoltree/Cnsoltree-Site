@@ -1,5 +1,6 @@
 ---
 import adminTheme from '../admin/theme.css?raw';
+import richEditorTheme from 'jodit/es2021/jodit.min.css?raw';
 import ProductTable from '../admin/ProductTable.astro';
 import ArticleTable from '../admin/ArticleTable.astro';
 import GroupManager from '../admin/GroupManager.astro';
@@ -49,12 +50,18 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <title>{online ? 'Soltree 内容后台' : 'Soltree 内容后台 · 本地版'}</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/favicon.png" />
+    <style is:inline set:html={richEditorTheme}></style>
     <style is:inline set:html={adminTheme}></style>
     <style is:inline set:html={groupManagerTheme}></style>
     <style is:inline set:html={analyticsTheme}></style>
     <style is:inline set:html={seoTheme}></style>
     <script is:inline>
       window.CMS_MANUAL_INIT = true;
+      try {
+        window.localStorage.setItem('cms.scroll-sync-enabled', 'false');
+      } catch {
+        // Storage may be unavailable in a restricted browser session.
+      }
     </script>
     <script is:inline src={online ? '/__admin/decap-cms.js' : '/__cms/decap-cms.js'}></script>
   </head>

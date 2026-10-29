@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
-import { createGitPublisher, gitBlobSha, manifestFromFiles } from '../src/lib/admin-publish.mjs';
+import {
+  createGitPublisher,
+  gitBlobSha,
+  manifestFromFiles,
+  publicContentRaw,
+} from '../src/lib/admin-publish.mjs';
 
 const hash = (letter) => letter.repeat(40);
 const head = hash('a'),
@@ -13,6 +18,14 @@ const articlePath = 'src/content/articles/selection-guide.json';
 const taxonomyPath = 'src/content/settings/taxonomy.json';
 const product = { id: 'MCB-AC-1P', name: 'Original product', published: true };
 const article = { slug: 'selection-guide', title: 'Original guide', published: true };
+const editorialRaw = JSON.stringify({ ...article, focusKeyword: 'private editorial target' });
+const exportedRaw = publicContentRaw(articlePath, editorialRaw);
+assert(!exportedRaw.includes('focusKeyword'));
+assert.deepEqual(JSON.parse(exportedRaw), article);
+assert.equal(JSON.parse(editorialRaw).focusKeyword, 'private editorial target');
+assert.equal(publicContentRaw(articlePath, JSON.stringify(article)), JSON.stringify(article));
+assert.doesNotThrow(() => manifestFromFiles(new Map([[articlePath, exportedRaw]])));
+assert.throws(() => manifestFromFiles(new Map([[articlePath, editorialRaw]])), /私有字段/);
 const original = new Map([
   [productPath, JSON.stringify(product)],
   [articlePath, JSON.stringify(article)],

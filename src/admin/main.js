@@ -3,6 +3,13 @@ import './product-table.js';
 import './group-manager.js';
 import './analytics-dashboard.js';
 import './seo-workspace.js';
+import { registerArticleCategory, registerAdditionalCategories } from './article-category.js';
+import { registerRichArticle } from './rich-article-editor.js';
+import { registerArticleDates } from './article-dates.js';
+import { registerArticleTags } from './article-tags.js';
+import { registerProductGallery, productGalleryData } from './product-gallery.js';
+import { articleSummary } from '../lib/article-excerpt.mjs';
+import { articleWords } from '../lib/article-format.mjs';
 import { cmsConfig, categoryNames, familyName, configureOnlineCms } from './config';
 import chineseLocale from '../../node_modules/decap-cms-locales/dist/esm/zh_Hans/index.js';
 
@@ -15,6 +22,12 @@ if (!CMS)
   );
 const savedProductRevisions = new Map();
 const savedArticleRevisions = new Map();
+registerArticleCategory(CMS, h, createClass);
+registerAdditionalCategories(CMS, h, createClass);
+registerRichArticle(CMS, h, createClass);
+registerArticleDates(CMS, h, createClass);
+registerArticleTags(CMS, h, createClass);
+registerProductGallery(CMS, h, createClass);
 CMS.registerLocale('zh_Hans', {
   ...chineseLocale,
   auth: { ...chineseLocale.auth, login: online ? '进入内容后台' : '进入本地后台' },
@@ -74,34 +87,6 @@ CMS.registerWidget(
   }),
 );
 
-CMS.registerWidget(
-  'readonly-time',
-  createClass({
-    render() {
-      const value = this.props.value || '';
-      const display = /^\d{4}-\d{2}-\d{2}$/.test(value)
-        ? value
-        : value && Number.isFinite(Date.parse(value))
-          ? new Intl.DateTimeFormat('sv-SE', {
-              timeZone: 'America/Los_Angeles',
-              dateStyle: 'short',
-              timeStyle: 'short',
-            }).format(new Date(value))
-          : value;
-      return h('input', {
-        id: this.props.forID,
-        className: this.props.classNameWrapper,
-        type: 'text',
-        value: display,
-        readOnly: true,
-        'aria-readonly': true,
-        title: value,
-        placeholder: '首次保存后自动记录',
-      });
-    },
-  }),
-);
-
 CMS.registerPreviewStyle(
   `
   *{box-sizing:border-box}
@@ -125,11 +110,18 @@ function ContentPreview({ entry, widgetFor, getAsset }) {
   const data = entry.get('data');
   const product = entry.get('collection') === 'products' || Boolean(data.get('id'));
   const title = data.get(product ? 'name' : 'title') || '请输入标题';
-  const description = data.get(product ? 'shortDescription' : 'excerpt') || '';
+  const description = product
+    ? data.get('shortDescription') || ''
+    : articleSummary({
+        metaDescription: data.get('metaDescription'),
+        content: data.get('content'),
+      });
   const seoTitle = data.get('metaTitle') || `${title} | Soltree`;
   const seoDescription = data.get('metaDescription') || description;
   const path = `/${product ? 'products' : 'blog'}/${data.get(product ? 'id' : 'slug') || 'your-page-url'}`;
-  const cover = data.get('image');
+  const cover = product
+    ? productGalleryData(data.get('images'), data.get('image'), data.get('imageAlts')).image
+    : data.get('image');
   const category = data.get(product ? 'categorySlug' : 'relatedCategorySlug');
   return h(
     'div',
@@ -233,15 +225,17 @@ CMS.registerEventListener({
     }
     if (data.get('sortOrder') === '' || data.get('sortOrder') === null)
       data = data.delete('sortOrder');
+    if (isProduct) {
+      const gallery = productGalleryData(
+        data.get('images'),
+        data.get('image'),
+        data.get('imageAlts'),
+      );
+      if (gallery.images.length > 8) throw new Error('产品图片最多 8 张，请移除多余图片后再保存。');
+      for (const [key, value] of Object.entries(gallery)) data = data.set(key, value);
+    }
     const stringLists = isProduct
-      ? [
-          'features',
-          'images',
-          'descriptionImages',
-          'imageAlts',
-          'additionalCategorySlugs',
-          'productTypes',
-        ]
+      ? ['features', 'images', 'descriptionImages', 'additionalCategorySlugs', 'productTypes']
       : ['tags', 'relatedProductTypes'];
     for (const name of stringLists) {
       const values = data.get(name);
@@ -293,27 +287,28 @@ CMS.registerEventListener({
         )
           throw new Error('该文章已在其他位置更新，请刷新页面后重新编辑，避免覆盖最新内容。');
       }
-      if (/^#\s+/m.test(data.get('content') || ''))
+      if (/^#\s+|<h1(?:\s|>)/im.test(data.get('content') || ''))
         throw new Error('正文请从二级标题（##）开始；页面已自动使用文章标题作为唯一的大标题。');
+      if (typeof data.get('focusKeyword') === 'string')
+        data = data.set('focusKeyword', data.get('focusKeyword').trim());
       data = data.delete('deletedAt').set('dateModified', new Date().toISOString());
-      const words = (data.get('content') || '').trim().split(/\s+/).filter(Boolean).length;
+      const words = articleWords(data.get('content') || '');
       data = data.set('readingTime', Math.max(1, Math.ceil(words / 220)));
     }
     if (data.get('published')) {
       const required = isProduct
         ? {
             categorySlug: '产品分类',
-            image: '封面图片',
+            image: '产品图片',
             shortDescription: '产品简介',
             description: '产品详情',
           }
         : {
-            relatedCategorySlug: '文章产品分类',
+            relatedCategorySlug: '文章分类',
             image: '封面图片',
-            excerpt: '文章简介',
             content: '文章正文',
             author: '作者',
-            date: '发布日期',
+            date: '时间',
           };
       const missing = Object.entries(required)
         .filter(([name]) => typeof data.get(name) !== 'string' || !data.get(name).trim())
@@ -323,7 +318,7 @@ CMS.registerEventListener({
           `开启“前台显示”前请补全：${missing.join('、')}。也可以先关闭此开关保存草稿。`,
         );
       if (!isProduct && Number.isNaN(Date.parse(data.get('date'))))
-        throw new Error('请填写有效的发布日期后再开启“前台显示”。');
+        throw new Error('请填写有效的时间后再开启“前台显示”。');
       if (isProduct) {
         const specs = data.get('specs')?.toJS?.() ?? [];
         if (specs.some((spec) => !spec.name?.trim() || !spec.value?.trim()))

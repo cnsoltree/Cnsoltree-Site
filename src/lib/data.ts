@@ -1,4 +1,5 @@
 import { categories, allCategories } from './taxonomy';
+import { articleSummary } from './article-excerpt.mjs';
 import type { TaxonomyCategory as Category } from './taxonomy';
 export type { Category }; // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -85,6 +86,8 @@ export interface BlogPost {
   metaDescription?: string;
   metaKeywords?: string;
   relatedCategorySlug?: string;
+  /** Private editorial target; excluded from website publication snapshots. */
+  focusKeyword?: string;
   /** Product types covered by the article, e.g. ['MCB', 'DC']; used for topic filters. */
   relatedProductTypes?: string[];
 }
@@ -187,6 +190,12 @@ function publishedRecords(records: unknown[], key: 'id' | 'slug') {
         if (value[field] !== undefined && typeof value[field] !== 'string')
           throw new Error(`${id}: ${field} must be text.`);
       if (
+        key === 'slug' &&
+        value.focusKeyword !== undefined &&
+        (typeof value.focusKeyword !== 'string' || value.focusKeyword.length > 200)
+      )
+        throw new Error(`${id}: focus keyword must be text of at most 200 characters.`);
+      if (
         value.sortOrder !== undefined &&
         (typeof value.sortOrder !== 'number' || !Number.isFinite(value.sortOrder))
       )
@@ -232,6 +241,8 @@ export function loadProducts(
       )
     )
       throw new Error(`${label}: unknown additional category.`);
+    if (Array.isArray(value.images) && value.images.length > 8)
+      throw new Error(`${label}: product gallery accepts at most 8 images.`);
     if (
       value.productTypes &&
       (value.productTypes as string[]).some((type) => !['MCB', 'MCCB', 'RCCB', 'DC'].includes(type))
@@ -261,7 +272,7 @@ export function loadBlogPosts(
     const label = `Article ${value.slug}`;
     requireText(
       value,
-      ['title', 'excerpt', 'content', 'date', 'author', 'image', 'relatedCategorySlug'],
+      ['title', 'content', 'date', 'author', 'image', 'relatedCategorySlug'],
       label,
     );
     if (!activeCategories.some((category) => category.slug === value.relatedCategorySlug))
@@ -278,7 +289,7 @@ export function loadBlogPosts(
       requireStrings(value.relatedProductTypes, `${label}: product types`);
     if (!Number.isFinite(value.readingTime) || Number(value.readingTime) < 1)
       throw new Error(`${label}: reading time must be a positive number.`);
-    return value as unknown as BlogPost;
+    return { ...value, excerpt: articleSummary(value) } as unknown as BlogPost;
   });
 }
 

@@ -27,6 +27,8 @@
     "verify:online-admin": "node scripts/verify-admin-auth-proxy.mjs && node scripts/verify-admin-store.mjs && node scripts/verify-admin-content.mjs && node scripts/verify-admin-publish.mjs && node scripts/verify-online-admin-ui.mjs && node scripts/verify-admin-online-setup.mjs && node scripts/verify-admin-navigation.mjs && node scripts/verify-analytics-navigation.mjs",
     "verify:online-admin:runtime": "node scripts/verify-online-admin-runtime.mjs",
     "verify:products": "node scripts/verify-product-admin.mjs",
+    "verify:rich-article": "node scripts/verify-rich-article.mjs",
+    "verify:product-gallery": "node scripts/verify-product-gallery.mjs",
     "verify:taxonomy": "node scripts/verify-taxonomy.mjs",
     "verify:taxonomy:live": "node scripts/verify-taxonomy-live.mjs",
     "verify:analytics": "node scripts/verify-analytics.mjs && node scripts/verify-analytics-navigation.mjs && node scripts/verify-gsc.mjs",
@@ -48,6 +50,8 @@
     "@tailwindcss/vite": "^4.1.0",
     "astro": "7.4.2",
     "google-auth-library": "11.3.2",
+    "jodit": "4.18.12",
+    "sanitize-html": "2.18.1",
     "tailwindcss": "^4.1.0"
   },
   "devDependencies": {

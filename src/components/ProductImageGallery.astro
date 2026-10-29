@@ -15,7 +15,7 @@ const displayImages = images.slice(0, 8);
       <div data-slide={index} hidden={index !== 0}>
         <Img
           src={src}
-          alt={imageAlts?.[index] ?? `${productName} — image ${index + 1}`}
+          alt={imageAlts?.[index] || `${productName} — image ${index + 1}`}
           fill
           width={1000}
           priority={index === 0}
@@ -65,7 +65,7 @@ const displayImages = images.slice(0, 8);
         >
           <Img
             src={src}
-            alt={imageAlts?.[index] ?? `${productName} thumbnail ${index + 1}`}
+            alt={imageAlts?.[index] || `${productName} thumbnail ${index + 1}`}
             width={100}
             class="h-full w-full object-contain p-1"
           />

@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Img from '@/components/Img.astro';
 import BlogCard from '@/components/BlogCard.astro';
 import { blogPosts, type BlogPost } from '@/lib/data';
-import { markdownProcessor, availableMarkdown, articleFaqs } from '@/lib/markdown';
+import { renderArticleContent, articleFaqs } from '@/lib/markdown';
 import { allArticleGroups } from '@/lib/product-taxonomy';
 import { blogCategoryHref, matchesBlogGroup } from '@/lib/blog-taxonomy';
 interface Props {
@@ -11,8 +11,7 @@ interface Props {
   preview?: boolean;
 }
 const { post, preview = false } = Astro.props;
-const processor = await markdownProcessor;
-const rendered = await processor.render(availableMarkdown(post.content));
+const rendered = await renderArticleContent(post.content);
 const family = allArticleGroups.find((group) => matchesBlogGroup(post, group));
 const related = blogPosts
   .filter(

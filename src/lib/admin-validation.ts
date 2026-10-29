@@ -13,6 +13,8 @@ export function validateCloudRecord(
     JSON.parse(document.files['src/content/settings/taxonomy.json']),
   );
   const categories = taxonomy.categories.filter((item) => !item.deletedAt);
+  if (collection === 'products' && Array.isArray(record.images) && record.images.length > 8)
+    throw adminProblem(422, '产品图片最多 8 张，请移除多余图片后再保存。');
   if (collection === 'products')
     record.categoryName = categories.find((item) => item.slug === record.categorySlug)?.name ?? '';
   try {

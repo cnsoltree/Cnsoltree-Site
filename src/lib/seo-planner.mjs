@@ -1,5 +1,6 @@
 import { matchesTaxonomyProduct, matchesTaxonomyArticle } from './taxonomy-model.mjs';
 import { adminEntryHref } from '../admin/routes.mjs';
+import { articleSummary } from './article-excerpt.mjs';
 
 const active = (record) => record.published === true && !record.deletedAt;
 const normalize = (value) =>
@@ -202,7 +203,7 @@ export function planTopics(
         angle.key !== 'procurement'
           ? related.find((article) =>
               angle.pattern.test(
-                `${article.title ?? ''} ${article.excerpt ?? ''} ${article.metaKeywords ?? ''}`,
+                `${article.title ?? ''} ${articleSummary(article)} ${article.metaKeywords ?? ''}`,
               ),
             )
           : undefined;

@@ -156,8 +156,8 @@ for (const [path, view, panel, editor] of [
   ['/admin/groups', 'groups', 'studio-groups', ''],
   ['/admin/products', 'products', 'studio-products', ''],
   ['/admin/articles', 'articles', 'studio-articles', ''],
-  ['/admin/products/new', 'products', 'nc-root', ''],
-  ['/admin/products/example/edit', 'products', 'nc-root', ''],
+  ['/admin/products/new', 'products', 'nc-root', 'product'],
+  ['/admin/products/example/edit', 'products', 'nc-root', 'product'],
   ['/admin/articles/new', 'articles', 'nc-root', 'article'],
   ['/admin/articles/example/edit', 'articles', 'nc-root', 'article'],
 ]) {

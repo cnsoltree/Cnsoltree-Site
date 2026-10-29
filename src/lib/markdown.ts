@@ -1,5 +1,21 @@
 import { createMarkdownProcessor } from '@astrojs/markdown-remark';
+import { isRichArticle } from './article-format.mjs';
+import { isMarkdownArticle, markdownArticleSource, richArticleMarker } from './article-format.mjs';
+import { renderRichArticle } from './rich-article.mjs';
+import { micromark } from 'micromark';
+import { gfm, gfmHtml } from 'micromark-extension-gfm';
 export const markdownProcessor = createMarkdownProcessor({ syntaxHighlight: false });
+
+export async function renderArticleContent(content: string) {
+  if (isRichArticle(content)) return renderRichArticle(content);
+  if (isMarkdownArticle(content)) {
+    const rendered = await (
+      await markdownProcessor
+    ).render(availableMarkdown(markdownArticleSource(content)));
+    return renderRichArticle(`${richArticleMarker}\n${rendered.code}`);
+  }
+  return (await markdownProcessor).render(availableMarkdown(content));
+}
 
 // The source articles refer to seven illustrations that were never supplied.
 // Keep their source references, but omit broken images until the assets exist.
@@ -19,6 +35,15 @@ export function availableMarkdown(content: string) {
 }
 
 export function articleFaqs(content: string) {
+  if (isMarkdownArticle(content))
+    content = renderRichArticle(
+      `${richArticleMarker}\n${micromark(markdownArticleSource(content), {
+        allowDangerousHtml: true,
+        extensions: [gfm()],
+        htmlExtensions: [gfmHtml()],
+      })}`,
+    ).analysisText;
+  if (isRichArticle(content)) content = renderRichArticle(content).analysisText;
   const faqs: { question: string; answer: string }[] = [];
   let inFaq = false,
     question = '',

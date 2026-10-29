@@ -100,8 +100,9 @@ const product = {
 };
 const article = {
   slug: 'mcb-guide',
+  focusKeyword: 'mcb selection guide',
   title: 'MCB Guide',
-  excerpt: 'Fixture selection guide.',
+  metaDescription: 'Fixture selection guide.',
   content: '## Selection\n\nCheck the actual datasheet.',
   relatedCategorySlug: 'circuit-breaker',
   relatedProductTypes: ['MCB'],
@@ -156,6 +157,22 @@ try {
       './taxonomy': moduleUrl('export const categories=[];export const allCategories=[];'),
     }),
   );
+  const { loadBlogPosts, loadProducts } = await import(dataModule);
+  assert.throws(
+    () =>
+      loadProducts(
+        [{ ...product, published: true, images: Array(9).fill('/images/cover.jpg') }],
+        taxonomy.categories,
+      ),
+    /at most 8/,
+  );
+  assert.equal(
+    loadBlogPosts([{ ...article, published: true }], taxonomy.categories)[0].excerpt,
+    article.metaDescription,
+  );
+  for (const focusKeyword of [123, 'x'.repeat(201)])
+    assert.throws(() => loadBlogPosts([{ ...article, focusKeyword }]), /focus keyword/);
+  assert.doesNotThrow(() => loadBlogPosts([{ ...article, focusKeyword: '' }]));
   const imageModule = moduleUrl(
     'export default ["/images/COVER.JPG","/images/categories/fixture.png"];',
   );
@@ -233,6 +250,10 @@ try {
   assert.equal(result.status, 200, JSON.stringify(result.value));
   assert.equal(result.value.article.published, true);
   assert.equal(result.value.article.date, article.date);
+  assert.equal(
+    JSON.parse(state.current.document.files[articlePath]).focusKeyword,
+    article.focusKeyword,
+  );
   const bad = JSON.parse(state.current.document.files[productPath]);
   delete bad.description;
   bad.published = false;

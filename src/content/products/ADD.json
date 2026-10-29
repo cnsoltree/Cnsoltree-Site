@@ -1,22 +1,24 @@
 {
-  "id": "ADD",
+  "shortDescription": "Ultra-narrow 18mm single-phase DIN rail energy meter, 5(60)A, 230V, Class 1 accuracy. Three display options: analog roller, digital LCD, and backlit LCD with reset button. CE certified, flame-retardant nylon housing. Ideal for residential, rental, and small commercial metering.",
+  "imageAlts": [
+    "Soltree ADD 18mm single-phase DIN rail energy meter three display variants front view",
+    "ADD analog display energy meter mechanical roller counter kWh reading",
+    "ADD backlit LCD energy meter blue backlight red reset button",
+    "ADD digital LCD energy meter precise kWh readout 1600 imp/kWh",
+    "ADD 18mm energy meter 1P DIN rail slot width comparison",
+    "ADD energy meter installed in compact residential distribution board",
+    "ADD single-phase energy meter CE certification flame-retardant nylon housing"
+  ],
+  "categoryName": "Power Meter",
+  "categorySlug": "power-meter",
   "name": "ADD 18mm 1P Single-Phase DIN Rail Energy Meter 5(60)A 230V Class 1",
   "slug": "add-18mm-single-phase-din-rail-energy-meter-5-60a-230v",
-  "categorySlug": "power-meter",
-  "categoryName": "Power Meter",
-  "shortDescription": "Ultra-narrow 18mm single-phase DIN rail energy meter, 5(60)A, 230V, Class 1 accuracy. Three display options: analog roller, digital LCD, and backlit LCD with reset button. CE certified, flame-retardant nylon housing. Ideal for residential, rental, and small commercial metering.",
-  "description": "When panel space is limited, every millimeter counts. The Soltree ADD series energy meter fits into a single 18mm DIN rail slot — the same width as a standard 1P circuit breaker — making it the practical choice for dense distribution boards in apartments, rental properties, and small commercial premises where multiple meters need to fit in a compact enclosure. All models are rated 5(60)A, 230V (170–250V), Class 1 accuracy, 50/60Hz, and carry CE certification with flame-retardant high-insulation nylon housing.\n\nThe Analog Display model uses a mechanical roller counter for kWh readings — no power required for the counting mechanism, ensuring stable, long-lasting performance even in circuits with frequent outages. A pulse constant of 800 imp/kWh makes it compatible with external data logging systems. The mechanical display is highly readable and maintenance-free, favored for long-term installations where simplicity and reliability are priorities.\n\nThe Digital LCD Display model upgrades to a clear digital screen for precise kWh readings with a higher-resolution 1600 imp/kWh pulse constant. Top and bottom wiring support gives installers flexibility during panel layout. The compact digital format is well suited for residential sub-metering and rental billing where accurate numeric readings matter.\n\nThe Digital Backlight LCD model adds a blue backlit display for easy reading in low-light conditions such as enclosed meter cabinets and basement distribution rooms. A red reset button allows flexible monitoring cycles for tenant turnover and billing resets. The 1600 imp/kWh pulse constant matches the digital LCD model. High-visibility readout makes it the preferred option where quick at-a-glance checks are routine.",
-  "features": [
-    "Ultra-narrow 18mm width — fits 1P DIN rail slot, ideal for dense panel layouts",
-    "Class 1 accuracy, CE certified — reliable metering for residential and commercial billing",
-    "Flame-retardant high-insulation nylon housing",
-    "Rated 5(60)A, 230V (170–250V), 50/60Hz",
-    "Analog Display: mechanical roller counter, no power needed, 800 imp/kWh pulse",
-    "Digital LCD Display: clear digital kWh readout, 1600 imp/kWh, top/bottom wiring support",
-    "Backlight LCD Display: blue backlit screen, red reset button, 1600 imp/kWh",
-    "35mm DIN rail mounting — standard installation",
-    "Suitable for residential, rental property, and small commercial metering"
-  ],
+  "published": true,
+  "updatedAt": "2026-10-29T14:47:04.332Z",
+  "metaKeywords": "18mm DIN rail energy meter, single phase energy meter 18mm narrow, ADD energy meter 5 60A 230V, Class 1 kWh meter DIN rail, analog roller energy meter DIN rail, backlit LCD energy meter reset button, compact energy meter rental property, 1P DIN rail kWh meter CE",
+  "sortOrder": 49,
+  "metaTitle": "ADD 18mm Single-Phase DIN Rail Energy Meter 5(60)A 230V Class 1 CE | Soltree",
+  "metaDescription": "ADD 18mm ultra-narrow single-phase DIN rail energy meter, 5(60)A, 230V, Class 1. Analog roller, digital LCD, or backlit LCD with reset button. CE certified, for residential and rental metering.",
   "specs": [
     {
       "name": "Product Series",
@@ -79,28 +81,28 @@
       "value": "CE"
     }
   ],
-  "image": "/images/products/ADD-1.jpg",
   "images": [
     "/images/products/ADD-1.jpg",
     "/images/products/ADD-2.jpg",
-    "/images/products/ADD-3.jpg",
     "/images/products/ADD-4.jpg",
+    "/images/products/ADD-3.jpg",
     "/images/products/ADD-5.jpg",
     "/images/products/ADD-6.jpg",
     "/images/products/ADD-7.jpg"
   ],
-  "metaTitle": "ADD 18mm Single-Phase DIN Rail Energy Meter 5(60)A 230V Class 1 CE | Soltree",
-  "metaDescription": "ADD 18mm ultra-narrow single-phase DIN rail energy meter, 5(60)A, 230V, Class 1. Analog roller, digital LCD, or backlit LCD with reset button. CE certified, for residential and rental metering.",
-  "metaKeywords": "18mm DIN rail energy meter, single phase energy meter 18mm narrow, ADD energy meter 5 60A 230V, Class 1 kWh meter DIN rail, analog roller energy meter DIN rail, backlit LCD energy meter reset button, compact energy meter rental property, 1P DIN rail kWh meter CE",
-  "imageAlts": [
-    "Soltree ADD 18mm single-phase DIN rail energy meter three display variants front view",
-    "ADD analog display energy meter mechanical roller counter kWh reading",
-    "ADD digital LCD energy meter precise kWh readout 1600 imp/kWh",
-    "ADD backlit LCD energy meter blue backlight red reset button",
-    "ADD 18mm energy meter 1P DIN rail slot width comparison",
-    "ADD energy meter installed in compact residential distribution board",
-    "ADD single-phase energy meter CE certification flame-retardant nylon housing"
-  ],
-  "published": true,
-  "sortOrder": 49
+  "id": "ADD",
+  "createdAt": "2026-10-29T14:19:47.978Z",
+  "image": "/images/products/ADD-1.jpg",
+  "description": "When panel space is limited, every millimeter counts. The Soltree ADD series energy meter fits into a single 18mm DIN rail slot — the same width as a standard 1P circuit breaker — making it the practical choice for dense distribution boards in apartments, rental properties, and small commercial premises where multiple meters need to fit in a compact enclosure. All models are rated 5(60)A, 230V (170–250V), Class 1 accuracy, 50/60Hz, and carry CE certification with flame-retardant high-insulation nylon housing.\n\nThe Analog Display model uses a mechanical roller counter for kWh readings — no power required for the counting mechanism, ensuring stable, long-lasting performance even in circuits with frequent outages. A pulse constant of 800 imp/kWh makes it compatible with external data logging systems. The mechanical display is highly readable and maintenance-free, favored for long-term installations where simplicity and reliability are priorities.\n\nThe Digital LCD Display model upgrades to a clear digital screen for precise kWh readings with a higher-resolution 1600 imp/kWh pulse constant. Top and bottom wiring support gives installers flexibility during panel layout. The compact digital format is well suited for residential sub-metering and rental billing where accurate numeric readings matter.\n\nThe Digital Backlight LCD model adds a blue backlit display for easy reading in low-light conditions such as enclosed meter cabinets and basement distribution rooms. A red reset button allows flexible monitoring cycles for tenant turnover and billing resets. The 1600 imp/kWh pulse constant matches the digital LCD model. High-visibility readout makes it the preferred option where quick at-a-glance checks are routine.",
+  "features": [
+    "Ultra-narrow 18mm width — fits 1P DIN rail slot, ideal for dense panel layouts",
+    "Class 1 accuracy, CE certified — reliable metering for residential and commercial billing",
+    "Flame-retardant high-insulation nylon housing",
+    "Rated 5(60)A, 230V (170–250V), 50/60Hz",
+    "Analog Display: mechanical roller counter, no power needed, 800 imp/kWh pulse",
+    "Digital LCD Display: clear digital kWh readout, 1600 imp/kWh, top/bottom wiring support",
+    "Backlight LCD Display: blue backlit screen, red reset button, 1600 imp/kWh",
+    "35mm DIN rail mounting — standard installation",
+    "Suitable for residential, rental property, and small commercial metering"
+  ]
 }

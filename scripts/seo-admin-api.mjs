@@ -11,6 +11,7 @@ import {
   resolvePlanningScope,
 } from '../src/lib/seo-planner.mjs';
 import { diagnoseContent } from '../src/lib/seo-diagnostics.mjs';
+import { articleSummary } from '../src/lib/article-excerpt.mjs';
 
 const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const formats = new Set(['guide', 'comparison', 'faq', 'landing_page', 'update']);
@@ -253,7 +254,8 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
         ({
           slug,
           title,
-          excerpt,
+          metaDescription,
+          content,
           relatedCategorySlug,
           relatedProductTypes,
           tags,
@@ -264,7 +266,7 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
         }) => ({
           slug,
           title,
-          excerpt,
+          excerpt: articleSummary({ metaDescription, content }),
           relatedCategorySlug,
           relatedProductTypes,
           tags,
