@@ -1,16 +1,26 @@
-export function safeAdminDestination(value) {
+import { parseAdminUrl } from './routes.mjs';
+
+export function safeAdminDestination(value, inheritedHash = '') {
   const fallback = '/admin';
-  if (typeof value !== 'string' || !value.startsWith('/') || value.startsWith('//'))
+  if (
+    typeof value !== 'string' ||
+    !value.startsWith('/') ||
+    value.startsWith('//') ||
+    /[\\\u0000-\u001f\u007f]/.test(value)
+  )
     return fallback;
   try {
     const url = new URL(value, 'https://admin.invalid');
+    if (url.origin !== 'https://admin.invalid') return fallback;
+    // Browsers carry a bookmarked fragment through the server's login redirect.
     if (
-      url.origin !== 'https://admin.invalid' ||
-      !/^\/admin(?:\/|$)/.test(url.pathname) ||
-      /^\/admin\/login\/?$/.test(url.pathname)
+      /^\/admin\/?$/.test(url.pathname) &&
+      !url.hash &&
+      typeof inheritedHash === 'string' &&
+      inheritedHash.startsWith('#/collections/')
     )
-      return fallback;
-    return `${url.pathname}${url.search}${url.hash}`;
+      url.hash = inheritedHash;
+    return parseAdminUrl(url)?.path || fallback;
   } catch {
     return fallback;
   }
@@ -60,8 +70,9 @@ if (typeof document !== 'undefined') {
           );
         feedback.textContent = '登录成功，正在进入后台…';
         password.value = '';
-        const requested = new URL(window.location.href).searchParams.get('next');
-        window.location.replace(safeAdminDestination(requested || result.redirect));
+        const loginUrl = new URL(window.location.href);
+        const requested = loginUrl.searchParams.get('next');
+        window.location.replace(safeAdminDestination(requested || result.redirect, loginUrl.hash));
       } catch (failure) {
         feedback.textContent = '';
         error.textContent =

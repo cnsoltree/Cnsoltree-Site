@@ -1,3 +1,5 @@
+import { adminEntryHref } from './routes.mjs';
+
 const intentLabels = {
   informational: '信息了解',
   commercial: '采购比较',
@@ -553,9 +555,9 @@ function initSeoWorkspace(seo, knowledge) {
   function taskEditorHref(task) {
     if (task.topic.format === 'landing_page') return null;
     const slug = task.topic.existingArticleSlug;
-    if (!slug) return '/admin#/collections/articles/new';
+    if (!slug) return '/admin/articles/new';
     const article = data.inventory.articles.find((entry) => entry.slug === slug);
-    return `/admin#/collections/articles/entries/${encodeURIComponent(article?.entryKey || slug)}`;
+    return adminEntryHref('articles', article?.entryKey || slug);
   }
 
   function renderTasks() {

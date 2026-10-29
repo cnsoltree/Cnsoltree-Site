@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { safeAdminDestination } from '../src/admin/login.js';
 
 assert.equal(
   process.versions.node.split('.')[0],
@@ -206,6 +207,44 @@ try {
   const anonymous = await request('/admin');
   assert.equal(anonymous.status, 303);
   assert.equal(new URL(anonymous.headers.get('location'), site).pathname, '/admin/login');
+  const cleanRoutes = [
+    '/admin/analytics',
+    '/admin/seo',
+    '/admin/products',
+    '/admin/articles',
+    '/admin/groups',
+    '/admin/knowledge',
+    '/admin/products/new',
+    '/admin/articles/new',
+    `/admin/products/${productId}/edit`,
+    '/admin/articles/runtime-article/edit',
+  ];
+  for (const pathname of cleanRoutes) {
+    const response = await request(pathname);
+    assert.equal(response.status, 303, `Anonymous clean route must require login: ${pathname}`);
+    const login = new URL(response.headers.get('location'), site);
+    assert.equal(login.origin, site);
+    assert.equal(login.pathname, '/admin/login');
+    assert.equal(login.searchParams.get('next'), pathname);
+    assert.equal(safeAdminDestination(login.searchParams.get('next')), pathname);
+    assert(response.headers.get('x-robots-tag')?.includes('noindex'));
+    assert(/no-store/.test(response.headers.get('cache-control')));
+  }
+  for (const pathname of [
+    '/admin/unknown',
+    '/admin/analytics/extra',
+    '/admin/products/item/delete',
+    '/admin/products/item/edit/extra',
+    '/admin/products/%2F/edit',
+    '/admin/articles/%5Cevil/edit',
+  ]) {
+    assert.equal((await request(pathname)).status, 404, `Unknown admin route: ${pathname}`);
+    assert.equal(
+      (await request(pathname, { cookie: activeCookies })).status,
+      404,
+      `Authentication must not turn unknown routes into the editor: ${pathname}`,
+    );
+  }
   await data(
     await request('/api/admin/proxy', {
       method: 'POST',
@@ -260,6 +299,16 @@ try {
     !adminHtml.includes('/src/admin/main.js'),
     'Production admin must reference the bundled module',
   );
+  for (const pathname of cleanRoutes) {
+    const response = await request(pathname, { cookie: activeCookies });
+    assert.equal(response.status, 200, `Authenticated clean route should render: ${pathname}`);
+    assert(response.headers.get('x-robots-tag')?.includes('noindex'));
+    assert(/no-store/.test(response.headers.get('cache-control')));
+    const html = await response.text();
+    assert(html.includes('id="studio-sidebar"'), `Missing shared admin shell: ${pathname}`);
+    assert(/data-admin-mode="online"/.test(html));
+    assert(html.includes('/__admin/decap-cms.js'));
+  }
   const scriptPaths = [...adminHtml.matchAll(/<script\b[^>]*\bsrc="([^"]+)"/g)].map(
     (match) => new URL(match[1], site).pathname,
   );
@@ -338,6 +387,7 @@ try {
   assert((await preview.text()).includes('Runtime edit 2'));
   const privatePreview = await request(`/admin/product-preview/${productId}`);
   assert.equal(privatePreview.status, 303);
+  assert.equal((await request('/admin/article-preview/runtime-article')).status, 303);
 
   const refreshed = await request('/api/admin/session', {
     cookie: `soltree-admin-access=expired; soltree-admin-refresh=${refreshToken}`,
@@ -404,7 +454,7 @@ try {
   );
   assert(!calls.some((call) => call.includes('api.github.com') || call.includes('api.resend.com')));
   console.log(
-    'PASS: actual Node 22 Vercel fetch function, online secrets, closed login/cookies/refresh, bundled admin, private cloud drafts and previews, two SHA256 saves, origin protection and durable CAS conflict; all fetches stayed inside offline fixtures.',
+    'PASS: actual Node 22 Vercel fetch function, clean admin routes and login returns, unknown-route 404s, online secrets, closed login/cookies/refresh, bundled admin, private cloud drafts and previews, two SHA256 saves, origin protection and durable CAS conflict; all fetches stayed inside offline fixtures.',
   );
 } finally {
   globalThis.fetch = originalFetch;

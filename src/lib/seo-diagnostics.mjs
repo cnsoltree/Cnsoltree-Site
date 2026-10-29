@@ -1,3 +1,5 @@
+import { adminEntryHref } from '../admin/routes.mjs';
+
 const site = 'https://www.elesoltree.com';
 const sameSite = new Set(['elesoltree.com', 'www.elesoltree.com']);
 const plain = (value) => (typeof value === 'string' ? value.trim() : '');
@@ -94,7 +96,7 @@ export function diagnoseContent({ articles = [], products = [], knownPaths } = {
       recordType: item.type,
       recordId,
       href: `/${item.type === 'article' ? 'blog' : 'products'}/${encodeURIComponent(recordId)}`,
-      editHref: `/admin#/collections/${collection}/entries/${encodeURIComponent(entryKey)}`,
+      editHref: adminEntryHref(collection, entryKey),
     });
   }
   for (const item of records) {

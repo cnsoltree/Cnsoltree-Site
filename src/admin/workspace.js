@@ -1,7 +1,8 @@
-/** Keep a valid Decap route underneath the optional workbench view. */
+import { parseAdminUrl } from './routes.mjs';
+import { installAdminNavigation } from './navigation.js';
+
 export function initialWorkspaceView(url) {
-  if (url.searchParams.has('view')) return url.searchParams.get('view') === 'workspace';
-  return !url.hash || url.hash === '#' || url.hash === '#/';
+  return parseAdminUrl(url)?.view === 'workspace';
 }
 
 export function workspaceGreeting(hour) {
@@ -11,13 +12,14 @@ export function workspaceGreeting(hour) {
 }
 
 export function articleEditorMode(hash) {
-  const path = hash.split('?')[0];
-  if (/^#\/collections\/articles\/new\/?$/.test(path)) return 'new';
-  if (/^#\/collections\/articles\/entries\/[^/]+\/?$/.test(path)) return 'edit';
-  return null;
+  const route = parseAdminUrl(`/admin${hash}`);
+  return route?.collection === 'articles' && ['new', 'edit'].includes(route.mode)
+    ? route.mode
+    : null;
 }
 
 if (typeof document !== 'undefined') {
+  const navigation = installAdminNavigation();
   const workspace = document.getElementById('studio-workspace');
   const cms = document.getElementById('nc-root');
   const productsTable = document.getElementById('studio-products');
@@ -37,21 +39,6 @@ if (typeof document !== 'undefined') {
   const sidebarToggle = document.querySelector('[data-studio-sidebar-toggle]');
   const pageLabel = document.querySelector('[data-studio-page-label]');
   const greeting = document.getElementById('studio-greeting');
-  const startUrl = new URL(window.location.href);
-  let showWorkspace = initialWorkspaceView(startUrl);
-  const auxiliaryView = (url) => {
-    const view = url.searchParams.get('view');
-    return Object.hasOwn(auxiliaryViews, view) ? view : null;
-  };
-  let activeAuxiliary = auxiliaryView(startUrl);
-  let pendingContentHash = null;
-
-  // This query survives Decap's initial redirect to the first collection.
-  if (showWorkspace && startUrl.searchParams.get('view') !== 'workspace') {
-    startUrl.searchParams.set('view', 'workspace');
-    window.history.replaceState(window.history.state, '', startUrl);
-  }
-
   const hour = Number(
     new Intl.DateTimeFormat('en', {
       timeZone: 'America/Los_Angeles',
@@ -61,45 +48,33 @@ if (typeof document !== 'undefined') {
   );
   if (greeting) greeting.textContent = workspaceGreeting(hour);
 
-  function renderView() {
-    const current =
-      activeAuxiliary ||
-      (showWorkspace
-        ? 'workspace'
-        : window.location.hash.includes('/articles')
-          ? 'articles'
-          : 'products');
-    document.body.dataset.view = showWorkspace ? 'workspace' : 'content';
+  function renderView(route = navigation.route) {
+    const current = route.view;
+    const showWorkspace = current === 'workspace';
+    const activeAuxiliary = Object.hasOwn(auxiliaryViews, current) ? current : null;
     const articleMode =
-      !showWorkspace && !activeAuxiliary && articleEditorMode(window.location.hash);
+      current === 'articles' && ['new', 'edit'].includes(route.mode) ? route.mode : null;
+    const showProducts = current === 'products' && route.mode === 'list';
+    const showArticles = current === 'articles' && route.mode === 'list';
+    document.body.dataset.view = showWorkspace ? 'workspace' : 'content';
     document.body.dataset.editor = articleMode ? 'article' : '';
     if (articleHeading) {
       articleHeading.hidden = !articleMode;
       articleHeading.querySelector('h1').textContent =
         articleMode === 'new' ? '新建文章' : '编辑文章';
     }
-    const showProducts =
-      !showWorkspace &&
-      !activeAuxiliary &&
-      /^#\/collections\/products\/?$/.test(window.location.hash.split('?')[0]);
-    const showArticles =
-      !showWorkspace &&
-      !activeAuxiliary &&
-      /^#\/collections\/articles\/?$/.test(window.location.hash.split('?')[0]);
-    if (productsTable) {
-      productsTable.hidden = !showProducts;
-      productsTable.inert = !showProducts;
-    }
-    if (articlesTable) {
-      articlesTable.hidden = !showArticles;
-      articlesTable.inert = !showArticles;
-    }
-    if (workspace) workspace.hidden = !showWorkspace;
-    for (const [view, { element }] of Object.entries(auxiliaryViews)) {
-      if (element) {
-        element.hidden = activeAuxiliary !== view;
-        element.inert = element.hidden;
-      }
+    for (const [element, visible] of [
+      [workspace, showWorkspace],
+      [productsTable, showProducts],
+      [articlesTable, showArticles],
+      ...Object.entries(auxiliaryViews).map(([view, { element }]) => [
+        element,
+        activeAuxiliary === view,
+      ]),
+    ]) {
+      if (!element) continue;
+      element.hidden = !visible;
+      element.inert = !visible;
     }
     if (cms) {
       cms.hidden = showWorkspace || Boolean(activeAuxiliary) || showProducts || showArticles;
@@ -126,59 +101,29 @@ if (typeof document !== 'undefined') {
     if (activeAuxiliary) document.dispatchEvent(new Event(`studio:${activeAuxiliary}`));
   }
 
-  document.querySelectorAll('[data-studio-nav]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
-        return;
-      const nextWorkspace = link.dataset.studioNav === 'workspace';
-      const nextAuxiliary = Object.hasOwn(auxiliaryViews, link.dataset.studioNav)
-        ? link.dataset.studioNav
-        : null;
-      const url = new URL(window.location.href);
-      event.preventDefault();
-      if (nextWorkspace || nextAuxiliary) {
-        // Hiding a mounted editor preserves its draft; returning does not discard changes.
-        pendingContentHash = null;
-        url.searchParams.set('view', nextAuxiliary || 'workspace');
-        if (url.href !== window.location.href)
-          window.history.pushState(window.history.state, '', url);
-      } else {
-        url.searchParams.delete('view');
-        if (contentLinks) contentLinks.hidden = false;
-        contentToggle?.setAttribute('aria-expanded', 'true');
-        const targetHash = new URL(link.href, window.location.href).hash;
-        if (targetHash !== window.location.hash) {
-          // Native hash navigation lets Decap handle its unsaved-content guard. Keep
-          // the previous view on its history entry; strip it only from the new entry.
-          pendingContentHash = targetHash;
-          window.location.hash = targetHash;
-          return;
-        }
-        if (url.href !== window.location.href)
-          window.history.pushState(window.history.state, '', url);
-      }
-      showWorkspace = nextWorkspace;
-      activeAuxiliary = nextAuxiliary;
-      renderView();
-    });
-  });
-
-  window.addEventListener('hashchange', () => {
-    if (pendingContentHash === window.location.hash) {
-      const url = new URL(window.location.href);
-      url.searchParams.delete('view');
-      window.history.replaceState(window.history.state, '', url);
+  document.addEventListener('click', (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    const link = event.target.closest?.('a[href]');
+    if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+    const url = new URL(link.href, window.location.href);
+    if (url.origin !== window.location.origin || !parseAdminUrl(url)) return;
+    event.preventDefault();
+    if (navigation.navigate(url.href) && ['products', 'articles'].includes(navigation.route.view)) {
+      if (contentLinks) contentLinks.hidden = false;
+      contentToggle?.setAttribute('aria-expanded', 'true');
     }
-    pendingContentHash = null;
-    showWorkspace = new URL(window.location.href).searchParams.get('view') === 'workspace';
-    activeAuxiliary = auxiliaryView(new URL(window.location.href));
-    renderView();
   });
-  window.addEventListener('popstate', () => {
-    showWorkspace = initialWorkspaceView(new URL(window.location.href));
-    activeAuxiliary = auxiliaryView(new URL(window.location.href));
-    renderView();
-  });
+  navigation.listen(renderView);
   contentToggle?.addEventListener('click', () => {
     const open = contentToggle.getAttribute('aria-expanded') !== 'true';
     contentToggle.setAttribute('aria-expanded', String(open));

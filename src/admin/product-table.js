@@ -1,3 +1,5 @@
+import { adminEntryHref } from './routes.mjs';
+
 /** The management list includes drafts; public Astro data exports remain publication-filtered. */
 export function filterProductRows(products, { query = '', category = '', status = 'active' } = {}) {
   const search = query.trim().toLocaleLowerCase();
@@ -132,7 +134,7 @@ function initContentTable(manager) {
   }
 
   function entryHref(product) {
-    return `/admin#/collections/${collection}/entries/${encodeURIComponent(product.entryKey || product.id)}`;
+    return adminEntryHref(collection, product.entryKey || product.id);
   }
 
   function addDate(row, value, missingLabel) {
@@ -406,9 +408,5 @@ function initContentTable(manager) {
   });
   refresh.addEventListener('click', () => void load());
   document.addEventListener(`studio:${collection}`, () => void load());
-  window.addEventListener('hashchange', () => {
-    if (!manager.hidden && new RegExp(`^#/collections/${collection}/?$`).test(window.location.hash))
-      void load();
-  });
   if (!manager.hidden) void load();
 }

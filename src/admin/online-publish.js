@@ -1,3 +1,5 @@
+import { adminLoginHref } from './routes.mjs';
+
 export const publicationLabels = {
   idle: '暂无发布记录',
   queued: '等待构建',
@@ -133,6 +135,7 @@ function initPublication(panel) {
   }
   function sessionExpired() {
     expired = true;
+    login.href = adminLoginHref(window.location.href);
     showError('登录已过期，请重新登录后继续。');
     details.open = true;
     clearTimeout(timer);
@@ -256,7 +259,7 @@ function initPublication(panel) {
       } catch {
         /* Optional storage. */
       }
-      window.location.replace('/admin/login');
+      window.location.replace(adminLoginHref(window.location.href));
     } catch (failure) {
       showError(failure.message || '退出登录未完成，请重试。');
       details.open = true;

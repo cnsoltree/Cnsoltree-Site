@@ -3,10 +3,23 @@ const validSha = (value) => typeof value === 'string' && /^[a-f0-9]{64}$/.test(v
 
 /** Keep the revision that was actually opened, even when a later list refresh sees newer data. */
 export function createOnlineBackend(ProxyBackend) {
+  const NativeAuth = ProxyBackend.prototype.authComponent();
+  class SessionAuth extends NativeAuth {
+    componentDidMount() {
+      super.componentDidMount?.();
+      if (this.sessionLoginStarted) return;
+      this.sessionLoginStarted = true;
+      this.props.onLogin();
+    }
+  }
   return class OnlineBackend extends ProxyBackend {
     constructor(...args) {
       super(...args);
       this.fileRevisions = new Map();
+    }
+
+    authComponent() {
+      return SessionAuth;
     }
 
     authenticate() {
@@ -89,7 +102,10 @@ export function createOnlineBackend(ProxyBackend) {
   };
 }
 
-export async function registerOnlineBackend(CMS) {
-  const { ProxyBackend } = await import('decap-cms-backend-proxy');
+export function registerOnlineBackend(CMS) {
+  // Reuse Decap's bundled class so its auth UI shares the editor's React runtime.
+  const ProxyBackend = CMS.getBackend('proxy')?.BackendClass;
+  if (typeof ProxyBackend !== 'function')
+    throw new Error('The bundled content editor Proxy backend is unavailable.');
   CMS.registerBackend('soltree-online', createOnlineBackend(ProxyBackend));
 }

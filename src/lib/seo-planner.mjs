@@ -1,4 +1,5 @@
 import { matchesTaxonomyProduct, matchesTaxonomyArticle } from './taxonomy-model.mjs';
+import { adminEntryHref } from '../admin/routes.mjs';
 
 const active = (record) => record.published === true && !record.deletedAt;
 const normalize = (value) =>
@@ -160,7 +161,7 @@ function reference(kind, record) {
       kind,
       id: record.slug,
       title: record.title,
-      url: `/admin#/collections/articles/entries/${encodeURIComponent(record.entryKey ?? record.slug)}`,
+      url: adminEntryHref('articles', record.entryKey ?? record.slug),
     };
   return {
     kind,

@@ -12,16 +12,28 @@ import seoTheme from '../admin/seo-workspace.css?raw';
 import OnlinePublishPanel from '../admin/OnlinePublishPanel.astro';
 import assistant from '../admin/assistant.svg?url';
 import { onlineAdminEnabled, requireAdmin } from '../lib/admin-server';
+import { parseAdminUrl } from '../admin/routes.mjs';
 
 export const prerender = false;
+const privateHeaders = {
+  'X-Robots-Tag': 'noindex, nofollow, noarchive',
+  'Cache-Control': 'no-store',
+};
+for (const [name, value] of Object.entries(privateHeaders)) Astro.response.headers.set(name, value);
+if (!parseAdminUrl(Astro.request.url))
+  return new Response('Not found', { status: 404, headers: privateHeaders });
 const online = !import.meta.env.DEV || Astro.url.searchParams.get('mode') === 'online';
 let account;
 if (online) {
-  if (!onlineAdminEnabled()) return new Response('Not found', { status: 404 });
+  if (!onlineAdminEnabled())
+    return new Response('Not found', { status: 404, headers: privateHeaders });
   try {
     account = await requireAdmin(Astro);
   } catch {
-    return Astro.redirect('/admin/login', 303);
+    const next = Astro.url.pathname + Astro.url.search;
+    const location =
+      next === '/admin' ? '/admin/login' : `/admin/login?next=${encodeURIComponent(next)}`;
+    return new Response(null, { status: 303, headers: { ...privateHeaders, Location: location } });
   }
 }
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
@@ -51,7 +63,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
       <div class="studio-sidebar-brand">
         <a
           class="studio-brand"
-          href="/admin?view=workspace#/collections/products"
+          href="/admin"
           data-studio-nav="workspace"
           aria-label="Soltree 工作台"
         >
@@ -78,12 +90,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
         </button>
       </div>
       <nav id="studio-primary-nav" class="studio-primary-nav" aria-label="管理功能">
-        <a
-          class="studio-nav-item"
-          href="/admin?view=workspace#/collections/products"
-          data-studio-nav="workspace"
-          aria-label="工作台"
-        >
+        <a class="studio-nav-item" href="/admin" data-studio-nav="workspace" aria-label="工作台">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -100,7 +107,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
         </a>
         <a
           class="studio-nav-item"
-          href="/admin?view=analytics#/collections/products"
+          href="/admin/analytics"
           data-studio-nav="analytics"
           aria-label="数据看板"
         >
@@ -116,12 +123,7 @@ Astro.response.headers.set('Cache-Control', 'no-store');
           </svg>
           <span class="studio-menu-label">数据看板</span>
         </a>
-        <a
-          class="studio-nav-item"
-          href="/admin?view=seo#/collections/articles"
-          data-studio-nav="seo"
-          aria-label="SEO 助手"
-        >
+        <a class="studio-nav-item" href="/admin/seo" data-studio-nav="seo" aria-label="SEO 助手">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -169,24 +171,16 @@ Astro.response.headers.set('Cache-Control', 'no-store');
             </svg>
           </button>
           <div id="studio-content-links" class="studio-subnav">
-            <a href="/admin#/collections/products" data-studio-nav="products" aria-label="产品管理">
+            <a href="/admin/products" data-studio-nav="products" aria-label="产品管理">
               <span class="studio-menu-label">产品管理</span>
             </a>
-            <a href="/admin#/collections/articles" data-studio-nav="articles" aria-label="文章管理">
+            <a href="/admin/articles" data-studio-nav="articles" aria-label="文章管理">
               <span class="studio-menu-label">文章管理</span>
             </a>
-            <a
-              href="/admin?view=knowledge#/collections/articles"
-              data-studio-nav="knowledge"
-              aria-label="知识库"
-            >
+            <a href="/admin/knowledge" data-studio-nav="knowledge" aria-label="知识库">
               <span class="studio-menu-label">知识库</span>
             </a>
-            <a
-              href="/admin?view=groups#/collections/products"
-              data-studio-nav="groups"
-              aria-label="分组管理"
-            >
+            <a href="/admin/groups" data-studio-nav="groups" aria-label="分组管理">
               <span class="studio-menu-label">分组管理</span>
             </a>
           </div>

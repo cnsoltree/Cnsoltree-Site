@@ -17,7 +17,7 @@ assert.deepEqual(
   ['metadata-fallback'],
 );
 assert.equal(fallback[0].severity, 'notice');
-assert.equal(fallback[0].editHref, '/admin#/collections/articles/entries/original-file');
+assert.equal(fallback[0].editHref, '/admin/articles/original-file/edit');
 assert.deepEqual(
   diagnoseContent({ articles: [{ ...article, deletedAt: '2026-10-27T00:00:00.000Z' }] }),
   [],
@@ -90,6 +90,7 @@ const partialDraft = diagnoseContent({
   products: [{ entryKey: 'empty-draft', id: 'draft', published: false }],
 });
 assert.equal(partialDraft[0].severity, 'notice');
+assert.equal(partialDraft[0].editHref, '/admin/products/empty-draft/edit');
 const original = structuredClone(article);
 diagnoseContent({ articles: [article] });
 assert.deepEqual(article, original);

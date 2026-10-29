@@ -56,6 +56,24 @@ export default defineConfig({
       name: 'online-content-admin-route',
       hooks: {
         'astro:config:setup': ({ injectRoute }) => {
+          for (const pattern of [
+            '/admin/analytics',
+            '/admin/seo',
+            '/admin/products',
+            '/admin/articles',
+            '/admin/groups',
+            '/admin/knowledge',
+            '/admin/products/new',
+            '/admin/articles/new',
+            '/admin/products/[entryKey]/edit',
+            '/admin/articles/[entryKey]/edit',
+          ]) {
+            injectRoute({
+              pattern,
+              entrypoint: './src/pages/admin.astro',
+              prerender: false,
+            });
+          }
           // Astro skips underscore directories in src/pages; register this compatibility URL explicitly.
           injectRoute({
             pattern: '/__cms/[...path]',
@@ -183,7 +201,14 @@ export default defineConfig({
             );
             res.setHeader('X-Robots-Tag', 'noindex, nofollow');
             const stream = createReadStream(
-              fileURLToPath(new URL(`./node_modules/decap-cms/dist/${filename}`, import.meta.url)),
+              fileURLToPath(
+                new URL(
+                  filename === 'decap-cms.js'
+                    ? './public/__admin/decap-cms.js'
+                    : `./node_modules/decap-cms/dist/${filename}`,
+                  import.meta.url,
+                ),
+              ),
             );
             stream.on('error', () => {
               res.statusCode = 503;
