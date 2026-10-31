@@ -1,0 +1,130 @@
+{
+  "sourceHash": "4ac81c27eb08c840",
+  "name": "Protector de Sobretensión/Subtensión Autorreconectable PN2-VA2 40A–80A",
+  "shortDescription": "Protector autorreconectable contra sobretensión, subtensión y sobrecorriente con doble pantalla digital — desconecta automáticamente ante una falla y restablece la energía cuando el suministro se estabiliza, sin reinicio manual. Opciones de 40A / 63A / 80A.",
+  "description": "El PN2-VA2 de Soltree es un protector autorreconectable contra sobretensión, subtensión y sobrecorriente diseñado para viviendas, locales comerciales ligeros y tableros de distribución donde es esencial una protección continua sin intervención manual. Cuando la tensión de alimentación supera el umbral de sobretensión o subtensión configurado por el usuario – o cuando la corriente sobrepasa el punto de disparo por sobrecorriente –, el PN2-VA2 desconecta el circuito en 0.5 segundos para evitar daños en electrodomésticos y equipos electrónicos sensibles.\n\nCuando el suministro vuelve a un rango estable y seguro, el dispositivo restablece automáticamente la energía tras un retardo de reconexión ajustable (0–999 segundos, 60s por defecto), lo que elimina la necesidad de una visita técnica para el reinicio manual. La doble pantalla digital de alta resolución muestra a la vez la tensión en rojo y la corriente en verde, y brinda a instaladores y usuarios información inmediata del estado del circuito.\n\nTodos los umbrales de disparo se configuran desde el panel frontal: sobretensión de 130V a 300V AC y subtensión de 80V a 210V AC. Una función de bloqueo por contraseña impide cambios no autorizados en estos ajustes, algo importante en propiedades compartidas o de alquiler. Además incluye un modo de ahorro de energía para reducir el autoconsumo y admite personalización completa del logotipo OEM. Disponible en variantes de 40A, 63A y 80A; tensión de alimentación nominal AC 220V (AC 110V personalizable).",
+  "features": [
+    "Autorreconectable — restablece la energía automáticamente cuando se despeja la falla, sin reinicio manual",
+    "Doble pantalla digital — tensión (rojo) y corriente (verde) en tiempo real en pantallas separadas",
+    "Puntos de disparo configurables — sobretensión 130–300V, subtensión 80–210V AC",
+    "Protección contra sobrecorriente — umbral de disparo por corriente ajustable",
+    "Desconexión rápida en 0.5 segundos al detectar una falla",
+    "Retardo de reconexión ajustable de 0–999 segundos (60s por defecto) — evita arranques repetidos",
+    "Bloqueo por contraseña — impide cambios no autorizados de parámetros",
+    "Modo de ahorro de energía — reduce el autoconsumo del dispositivo",
+    "Disponible en corrientes nominales de 40A / 63A / 80A",
+    "Tensión de alimentación nominal AC 220V (AC 110V personalizable)",
+    "Montaje en riel DIN de 35mm — instalación estándar en tableros de distribución",
+    "Carcasa de PC retardante de llama (UL94 V-0) — segura en condiciones de falla",
+    "Vida mecánica ≥10.000 ciclos",
+    "Admite personalización del logotipo OEM",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector autorreconectable contra sobretensión/subtensión"
+    },
+    {
+      "name": "Modelo",
+      "value": "PN2-VA2"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Retardo de disparo por sobretensión",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Corriente máx. de trabajo",
+      "value": "40A / 63A / 80A (opcional)"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, 60s por defecto)"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Doble pantalla digital — tensión (rojo) + corriente (verde)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Compatible — impide cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Activable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25°C a +55°C"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Sobretensión, subtensión, sobrecorriente, protección con retardo"
+    },
+    {
+      "name": "Personalización OEM",
+      "value": "Admite personalización del logotipo"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Tableros de distribución residenciales, locales comerciales ligeros, protección de electrodomésticos"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje autorreconectable PN2-VA2 40A–80A 220V | Soltree",
+  "metaDescription": "Protector autorreconectable PN2-VA2 contra sobretensión/subtensión, 40A–80A, AC 220V. Doble pantalla, reconexión automática, contraseña y disparo en 0.5s. Riel DIN, CE y RoHS. OEM.",
+  "metaKeywords": "protector de voltaje PN2-VA2, protector de sobretensión autorreconectable, protector de subtensión riel DIN, protector de voltaje automático 220V, protector de voltaje con doble pantalla, protector de sobrecorriente 63A, relé de voltaje con reconexión automática, protección de voltaje para electrodomésticos",
+  "imageAlts": [
+    "Protector de sobretensión/subtensión autorreconectable PN2-VA2 Soltree con doble pantalla digital, vista frontal",
+    "Doble pantalla del protector de voltaje PN2-VA2 mostrando lecturas de tensión y corriente",
+    "Panel de ajuste de parámetros del PN2-VA2 con puntos de disparo por sobretensión y subtensión",
+    "Perfil lateral de montaje en riel DIN del protector de voltaje PN2-VA2",
+    "Protector de voltaje autorreconectable PN2-VA2 instalado en un tablero de distribución",
+    "Detalle de las conexiones de bornes del protector PN2-VA2",
+    "Plano de dimensiones 81x36x66mm del protector de voltaje PN2-VA2",
+    "Comparación de las opciones de corriente nominal de 40A, 63A y 80A del protector de voltaje PN2-VA2"
+  ]
+}

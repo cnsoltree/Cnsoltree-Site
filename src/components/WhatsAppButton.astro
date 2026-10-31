@@ -1,5 +1,7 @@
 ---
 import { CONTACT } from '@/consts';
+import { langFromUrl, t } from '@/i18n';
+const lang = langFromUrl(Astro.url);
 ---
 
 <details class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
@@ -21,20 +23,20 @@ import { CONTACT } from '@/consts';
   </summary>
   <div class="absolute bottom-16 right-0 w-[min(320px,calc(100vw-3rem))] overflow-hidden rounded-2xl bg-white shadow-2xl">
     <div class="bg-[#075E54] px-5 py-4 text-white">
-      <h2 class="font-bold">Chat with Soltree</h2>
-      <p class="mt-1 text-sm text-green-100">Product selection &amp; quotations</p>
+      <h2 class="font-bold">{t(lang, 'Chat with Soltree')}</h2>
+      <p class="mt-1 text-sm text-green-100">{t(lang, 'Product selection & quotations')}</p>
     </div>
     <p class="bg-[#ECE5DD] px-5 py-6 text-sm">
-      Tell us your product requirements. Our team will help you find the right solution.
+      {t(lang, 'Tell us your product requirements. Our team will help you find the right solution.')}
     </p>
     <div class="p-4">
       <a
-        href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent("Hi, I'm interested in your products. Can you help?")}`}
+        href={`https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(t(lang, "Hi, I'm interested in your products. Can you help?"))}`}
         target="_blank"
         rel="noopener noreferrer"
         class="btn-primary w-full"
       >
-        WhatsApp Us
+        {t(lang, 'WhatsApp Us')}
       </a>
     </div>
   </div>

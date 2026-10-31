@@ -1,19 +1,44 @@
 ---
-import { products, type Product } from '@/lib/data';
-import { allCategories } from '@/lib/taxonomy';
-import {
-  productGroups,
-  allProductGroups,
-  groupHref,
-  subcategoryHref,
-  matchesSubcategory,
-} from '@/lib/product-taxonomy';
+import { type Product } from '@/lib/data';
+import { groupHref, subcategoryHref, matchesSubcategory } from '@/lib/product-taxonomy';
 import ProductCard from './ProductCard.astro';
+import {
+  getAllProductGroups,
+  getCategories,
+  getProductGroups,
+  getProducts,
+  href,
+  langFromUrl,
+  t,
+} from '@/i18n';
 interface Props {
   category?: string;
 }
 const { category } = Astro.props;
-const current = allCategories.find((item) => item.slug === category);
+const lang = langFromUrl(Astro.url);
+const products = getProducts(lang);
+const productGroups = getProductGroups(lang);
+const allProductGroups = getAllProductGroups(lang);
+const current = getCategories(lang).find((item) => item.slug === category);
+// 客户端筛选时切换标题/说明所需的译文
+const labels = {
+  categories: Object.fromEntries(getCategories(lang).map((item) => [item.slug, item.name])),
+  groups: Object.fromEntries(
+    allProductGroups.map((group) => [
+      group.slug,
+      { name: group.name, description: group.description },
+    ]),
+  ),
+  items: Object.fromEntries(
+    allProductGroups.flatMap((group) =>
+      group.items.map((item) => [`${item.category}:${item.type ?? ''}`, item.name]),
+    ),
+  ),
+  all: t(lang, 'All Products'),
+  summary: t(lang, '{count} products across {families} product families. Wholesale & OEM pricing available.'),
+  found: t(lang, '{count} products found'),
+  empty: t(lang, '{title} products are not listed online yet.'),
+};
 const memberships = (product: Product) => [
   `${product.categorySlug}:`,
   ...(product.additionalCategorySlugs ?? []).map((slug) => `${slug}:`),
@@ -25,45 +50,47 @@ const memberships = (product: Product) => [
 ];
 ---
 
-<div data-catalog data-category={category ?? ''}>
+<div data-catalog data-category={category ?? ''} data-labels={JSON.stringify(labels)}>
   <section class="border-b border-gray-100 bg-gray-50 py-12">
     <div class="container">
       <nav aria-label="Breadcrumb" class="mb-4 flex flex-wrap gap-2 text-xs text-gray-400">
-        <a href="/">Home</a>
+        <a href={href(lang, '/')}>{t(lang, 'Home')}</a>
         <span>/</span>
-        <a href="/products">Products</a>
+        <a href={href(lang, '/products')}>{t(lang, 'Products')}</a>
         <span data-crumb-separator hidden>
           /
         </span>
         <span data-crumb>{current?.name ?? ''}</span>
       </nav>
       <h1 data-catalog-title class="text-3xl font-bold text-gray-900 sm:text-4xl">
-        {current?.name ?? 'All Products'}
+        {current?.name ?? labels.all}
       </h1>
       <p data-catalog-description class="mt-3 max-w-2xl text-base leading-relaxed text-gray-500">
         {current?.description ??
-          `${products.length} products across ${productGroups.length} product families. Wholesale & OEM pricing available.`}
+          labels.summary
+            .replace('{count}', String(products.length))
+            .replace('{families}', String(productGroups.length))}
       </p>
     </div>
   </section>
   <section class="section">
     <div class="container flex flex-col gap-8 lg:flex-row">
       <aside class="shrink-0 lg:w-64 xl:w-72">
-        <nav aria-label="Product categories">
-          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">Categories</h2>
+        <nav aria-label={t(lang, 'Product categories')}>
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">{t(lang, 'Categories')}</h2>
           <a
-            href="/products"
+            href={href(lang, '/products')}
             data-filter-link
             data-all
             class="mt-4 flex items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm font-medium text-gray-700"
           >
-            All Products <span class="text-xs text-gray-400">{products.length}</span>
+            {labels.all} <span class="text-xs text-gray-400">{products.length}</span>
           </a>
           {productGroups.map((group, index) => (
             <details class="category-family mt-1" data-family={group.slug} open={index === 0}>
               <summary class="flex cursor-pointer list-none items-center rounded-xl text-gray-700">
                 <a
-                  href={groupHref(group.slug)}
+                  href={href(lang, groupHref(group.slug))}
                   data-filter-link
                   data-parent={group.slug}
                   class="flex min-w-0 flex-1 items-center justify-between gap-3 py-3 pl-4 text-sm font-semibold"
@@ -90,7 +117,7 @@ const memberships = (product: Product) => [
                 {group.items.map((item) => (
                   <li>
                     <a
-                      href={subcategoryHref(item, group.slug)}
+                      href={href(lang, subcategoryHref(item, group.slug))}
                       data-filter-link
                       data-child={`${item.category}:${'type' in item ? item.type : ''}`}
                       data-parent-group={group.slug}
@@ -130,9 +157,9 @@ const memberships = (product: Product) => [
           ))}
         </div>
         <div data-empty hidden class="py-20 text-center text-gray-500">
-          <p data-empty-message>No products are listed online yet.</p>
-          <a href="/contact" class="btn-primary mt-5">
-            Contact us for product information
+          <p data-empty-message>{t(lang, 'No products are listed online yet.')}</p>
+          <a href={href(lang, '/contact')} class="btn-primary mt-5">
+            {t(lang, 'Contact us for product information')}
           </a>
         </div>
       </div>
@@ -141,13 +168,23 @@ const memberships = (product: Product) => [
 </div>
 <script>
   import { productGroups, getCategorySelection, getProductGroup } from '@/lib/product-taxonomy';
-  import { allCategories } from '@/lib/taxonomy';
   function initCatalog() {
     const root = document.querySelector<HTMLElement>('[data-catalog]');
     if (!root) return;
+    const labels = JSON.parse(root.dataset.labels!) as {
+      categories: Record<string, string>;
+      groups: Record<string, { name: string; description: string }>;
+      items: Record<string, string>;
+      all: string;
+      summary: string;
+      found: string;
+      empty: string;
+    };
+    const fill = (text: string, vars: Record<string, string | number>) =>
+      Object.entries(vars).reduce((value, [k, v]) => value.replaceAll("{" + k + "}", String(v)), text);
     const render = () => {
       const url = new URL(location.href),
-        category = url.pathname.match(/^\/categories\/([^/]+)/)?.[1],
+        category = url.pathname.match(/^(?:\/[a-z]{2}(?:-[a-z]{2})?)?\/categories\/([^/]+)/)?.[1],
         type = url.searchParams.get('type') ?? undefined;
       const selection = category
         ? getCategorySelection(category, type, url.searchParams.get('group') ?? undefined)
@@ -168,23 +205,24 @@ const memberships = (product: Product) => [
         card.hidden = !visible;
         if (visible) count++;
       });
+      const groupName = group && (labels.groups[group.slug]?.name ?? group.name);
+      const itemName = key && (labels.items[key] ?? item?.name);
       const title =
-        item?.name ??
+        itemName ??
         (category
-          ? (allCategories.find((item) => item.slug === category)?.name ?? category)
-          : (group?.name ?? 'All Products'));
+          ? (labels.categories[category] ?? category)
+          : (groupName ?? labels.all));
       root.querySelector('[data-catalog-title]')!.textContent = title;
       root.querySelector('[data-catalog-description]')!.textContent =
-        group?.description ??
-        `${count} products across ${productGroups.length} product families. Wholesale & OEM pricing available.`;
-      root.querySelector('[data-results]')!.textContent = `${count} products found`;
+        (group && (labels.groups[group.slug]?.description ?? group.description)) ??
+        fill(labels.summary, { count, families: productGroups.length });
+      root.querySelector('[data-results]')!.textContent = fill(labels.found, { count });
       root.querySelector<HTMLElement>('[data-empty]')!.hidden = count > 0;
-      root.querySelector('[data-empty-message]')!.textContent =
-        `${title} products are not listed online yet.`;
+      root.querySelector('[data-empty-message]')!.textContent = fill(labels.empty, { title });
       root.querySelector('[data-crumb]')!.textContent = group
-        ? item
-          ? `${group.name} / ${item.name}`
-          : group.name
+        ? itemName
+          ? `${groupName} / ${itemName}`
+          : groupName!
         : '';
       root.querySelector<HTMLElement>('[data-crumb-separator]')!.hidden = !group;
       root.querySelectorAll<HTMLElement>('[data-filter-link]').forEach((link) => {

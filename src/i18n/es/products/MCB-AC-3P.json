@@ -1,0 +1,77 @@
+{
+  "sourceHash": "b8f422a2aa6cb283",
+  "name": "Interruptor Termomagnético MCB 3P AC 6 – 63A",
+  "shortDescription": "Interruptor termomagnético tripolar de 6 – 63A con curva B/C/D, diseñado para equipos industriales trifásicos y protección de motores.",
+  "description": "El MCB tripolar de Soltree está diseñado para aplicaciones industriales y comerciales trifásicas, y protege motores, equipos de climatización (HVAC), bombas y subtableros trifásicos contra sobrecargas y cortocircuitos. Los tres polos disparan simultáneamente al detectar una falla, lo que evita daños por pérdida de fase en motores trifásicos, una causa frecuente de motores quemados. La opción de curva D admite las altas corrientes de arranque de los motores sin disparos intempestivos. Con un formato compacto de 3 módulos para riel DIN y un poder de corte certificado CE de hasta 6kA, ofrece protección de nivel industrial en poco espacio, ideal para fabricantes de tableros e integradores de sistemas de todo el mundo.",
+  "features": [
+    "Desconexión trifásica simultánea: evita daños por pérdida de fase en motores",
+    "Opción de curva D para motores y transformadores con alta corriente de arranque",
+    "Ideal para HVAC, bombas, compresores y subtableros trifásicos",
+    "Certificación CE y RoHS: aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Formato compacto de 3 módulos DIN: optimiza el espacio en gabinetes industriales",
+    "Personalización OEM / ODM disponible: logotipo, color y etiqueta de características",
+    "Planta de fabricación con certificación ISO 9001 y 18 años de trayectoria"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "3P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A, personalizable"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "4.5 kA, 6 kA, personalizable"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C, B, D, personalizable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Aleación de cobre de alta conductividad"
+    }
+  ],
+  "metaTitle": "MCB tripolar 6A-63A AC | Interruptor termomagnético trifásico | Soltree",
+  "metaDescription": "MCB tripolar Soltree de 6A a 63A, 120V/230V AC, curva B/C/D, certificación CE y RoHS. Ideal para sistemas industriales trifásicos. OEM disponible, envíos mundiales.",
+  "metaKeywords": "MCB 3 polos, interruptor termomagnético tripolar, MCB 3P 6A 63A, MCB trifásico riel DIN, proveedor de interruptores termomagnéticos, MCB certificado CE, interruptor industrial al por mayor",
+  "imageAlts": [
+    "Interruptor termomagnético tripolar MCB 6-63A Soltree, vista frontal",
+    "Interruptor tripolar MCB-AC-3P, vista lateral con clip para riel DIN",
+    "Detalle de selección de curva de disparo B C D del MCB-AC-3P",
+    "Conexión de bornes trifásica y diagrama de cableado del MCB-AC-3P",
+    "MCB-AC-3P instalado en riel DIN de 35mm en un tablero de distribución trifásico",
+    "Dimensiones y plano de medidas del MCB-AC-3P",
+    "Etiqueta de certificación CE RoHS y empaque del MCB-AC-3P"
+  ]
+}

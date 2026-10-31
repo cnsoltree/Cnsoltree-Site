@@ -1,0 +1,89 @@
+{
+  "sourceHash": "45bc4bd21daa6aaf",
+  "name": "Transferencia Automática STQ2-63 63A 2P Clase CB 110V/220V - ATS Monofásico Económico para Hogar y Casas Rodantes",
+  "shortDescription": "ATS bipolar clase CB de 63A para 110V/220V monofásico. Enclavamiento mecánico, transferencia automática en ~2s, máx. ~6.9kW – un ATS económico de uso civil para respaldo de emergencia en el hogar, casas rodantes, protección contra incendios y ascensores.",
+  "description": "El STQ2-63-2P es un interruptor de transferencia automática clase CB para sistemas monofásicos de 110V o 220V AC de hasta 63A, diseñado como una solución económica de respaldo de uso civil. Mediante un interruptor automático con mecanismo de enclavamiento mecánico, impide físicamente que ambas fuentes se conecten a la vez. Cuando falla la Fuente Normal (N/red), la unidad conmuta automáticamente al suministro de respaldo (generador o inversor FV) en aproximadamente 2 segundos; durante la transferencia se produce un breve corte de ~2s, aceptable para la mayoría de las cargas residenciales y ligeras. Al restablecerse la red, la unidad vuelve automáticamente a la prioridad de la Fuente Normal. Con una capacidad de carga máxima de aproximadamente 6930W ( – .9kW) y modos de conmutación automático y manual, el STQ2-63-2P es una opción sencilla y rentable para respaldo de emergencia en el hogar, sistemas eléctricos de casas rodantes, tableros de protección contra incendios, circuitos de ascensores y aplicaciones generales de respaldo.",
+  "features": [
+    "Conmutación bipolar (fase + neutro) – 2 entradas / 1 salida",
+    "Clase CB – interruptor automático con enclavamiento mecánico que impide la conexión de ambas fuentes",
+    "Transferencia automática en ~2s – breve interrupción de 2s aceptable para cargas civiles",
+    "Doble tensión: compatible con 110V y 220V AC monofásico",
+    "Modos de transferencia automático y manual; prioridad de la Fuente Normal (N) con retorno automático",
+    "Compatible con red eléctrica, generador e inversor FV",
+    "Capacidad de carga máxima: ~6930W ( – .9kW)",
+    "ATS económico de uso civil – alternativa rentable a los equipos clase PC"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "2P (fase + neutro)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de trabajo: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Monofásico"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase CB (interruptor automático + enclavamiento mecánico)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente Normal (N / red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, generador, inversor FV"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia automática",
+      "value": "~2s"
+    },
+    {
+      "name": "Interrupción de energía",
+      "value": "Breve, ~2s durante la transferencia"
+    },
+    {
+      "name": "Potencia máxima de carga",
+      "value": "~6930W ( – .9kW)"
+    },
+    {
+      "name": "Componentes internos",
+      "value": "Tarjeta de control PCB, motor, relé térmico"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Emergencia en el hogar, protección contra incendios, ascensores, casas rodantes"
+    }
+  ],
+  "metaTitle": "STQ2-63 63A 2P ATS clase CB 110V/220V | Transferencia monofásica económica",
+  "metaDescription": "ATS STQ2-63 de 63A, 2 polos, clase CB para 110V/220V monofásico. Enclavamiento mecánico, transferencia en ~2s, máx. 6.9kW. Para hogar, casas rodantes, incendios y ascensores.",
+  "metaKeywords": "ATS STQ2-63, transferencia clase CB 63A, ATS monofásico 2P, ATS 110V 220V, ATS con enclavamiento mecánico, ATS para respaldo en el hogar, transferencia para casa rodante, ATS para protección contra incendios, ATS económico",
+  "imageAlts": [
+    "ATS STQ2-63 63A 2P clase CB 110V/220V, vista frontal – interruptor de transferencia monofásico económico",
+    "Diagrama de cableado del STQ2-63-2P – conexión bipolar de 2 entradas y 1 salida",
+    "Componentes internos del STQ2-63-2P – tarjeta de control PCB, motor y relé térmico",
+    "Mecanismo de enclavamiento mecánico del STQ2-63 – impide la conexión de ambas fuentes",
+    "Panel de modos de conmutación automático y manual del ATS STQ2 monofásico de 63A",
+    "Interruptor de transferencia STQ2-63-2P para emergencias en el hogar, protección contra incendios, ascensores y casas rodantes"
+  ]
+}

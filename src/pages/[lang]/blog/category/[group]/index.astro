@@ -1,0 +1,16 @@
+---
+import BlogArchive from '@/components/BlogArchive.astro';
+import { allArticleGroups } from '@/lib/product-taxonomy';
+import { translatedLangs } from '@/i18n';
+export function getStaticPaths() {
+  return translatedLangs.flatMap((lang) =>
+    allArticleGroups.map((group) => ({
+      params: { lang, group: group.slug },
+      props: { groupSlug: group.slug },
+    })),
+  );
+}
+const { groupSlug } = Astro.props;
+---
+
+<BlogArchive groupSlug={groupSlug} />

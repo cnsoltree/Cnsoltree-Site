@@ -1,14 +1,16 @@
 ---
 import type { Product } from '@/lib/data';
 import Img from '@/components/Img.astro';
+import { href, langFromUrl, t } from '@/i18n';
 interface ProductCardProps {
   product: Product;
 }
 interface Props extends ProductCardProps {}
 const { product } = Astro.props;
+const lang = langFromUrl(Astro.url);
 ---
 
-<a href={`/products/${product.id}`} class="card group flex flex-col" aria-label={product.name}>
+<a href={href(lang, `/products/${product.id}`)} class="card group flex flex-col" aria-label={product.name}>
   {/* Image */}
   <div class="relative h-48 w-full overflow-hidden bg-gray-50">
     <Img
@@ -32,7 +34,7 @@ const { product } = Astro.props;
       {product.shortDescription}
     </p>
     <div class="mt-4 flex items-center gap-1 text-xs font-semibold text-green-700">
-      View Details
+      {t(lang, 'View Details')}
       <svg
         class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
         fill="none"

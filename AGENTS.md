@@ -37,3 +37,7 @@ Not lazy about: understanding the problem (read it fully and trace the real flow
 - `TASK.md` 记录当前任务、范围与验收条件；候选计划不等于已授权执行的任务。
 - 每次任务完成后更新 `PROGRESS.md`，记录实际改动、验证结果、遗留问题和下一步；同步 `TASK.md` 的任务状态。
 - 区分本地完成、验证通过和线上发布；未实际执行的检查或发布不得标为完成。文档中不记录密码、密钥或令牌。
+
+## 多语言
+
+- 翻译产品、文章、页面或新增语言时，先读并严格沿用 [.claude/skills/soltree-i18n/SKILL.md](./.claude/skills/soltree-i18n/SKILL.md) 的方案与验收步骤。

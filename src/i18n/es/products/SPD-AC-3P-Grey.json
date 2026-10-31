@@ -1,0 +1,86 @@
+{
+  "sourceHash": "d163b7a33e9a5315",
+  "name": "Protector contra Sobretensiones AC 3P 385V 40kA - SPD Trifásico L-PE para Equipos Industriales y Control de Motores",
+  "shortDescription": "Protector contra sobretensiones tripolar de 385VAC para sistemas trifásicos de 3 hilos (sin neutro). Protección independiente L1-PE, L2-PE, L3-PE por fase. Descarga máxima de 40kA, nivel de protección – .5kV, respuesta <25ns – para equipos de potencia industriales y tableros de control de motores.",
+  "description": "El SPD-AC-3P-Grey es un dispositivo de protección contra sobretensiones AC tripolar para sistemas trifásicos de baja tensión de 3 hilos sin neutro. Ofrece protección independiente fase-tierra (L-PE) en cada una de las tres fases – L1-PE, L2-PE y L3-PE – y protege los equipos de potencia industriales y las cargas trifásicas contra sobretensiones transitorias causadas por rayos o maniobras. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión es de – .5kV por fase. Su núcleo de varistor de óxido metálico (MOV) responde en menos de 25ns para limitar los transitorios al instante. La carcasa gris de PC retardante de llama (UL94 V-0) se monta directamente en riel DIN de 35mm con un diseño modular reemplazable en caliente: los módulos se sustituyen por separado durante el mantenimiento sin recablear todo el equipo. Apto para gabinetes de distribución de energía y cajas de control de equipos que alimentan cargas industriales trifásicas.",
+  "features": [
+    "Protección tripolar L-PE independiente por fase: L1-PE, L2-PE, L3-PE",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .5kV por fase: para cargas industriales trifásicas",
+    "Tiempo de respuesta ultrarrápido <25ns: supresión instantánea de transitorios",
+    "Núcleo de varistor de óxido metálico (MOV): excelente conductividad y resistencia a la corrosión",
+    "Sistema trifásico de 3 hilos (sin neutro): adecuado para instalaciones industriales",
+    "Diseño modular reemplazable en caliente: cada módulo se sustituye sin recablear",
+    "Carcasa de PC retardante de llama (UL94 V-0), gris, montaje en riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "3P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .5kV"
+    },
+    {
+      "name": "Tipo de sistema",
+      "value": "Sistema trifásico de baja tensión de 3 hilos (sin neutro)"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "L1-PE, L2-PE, L3-PE"
+    },
+    {
+      "name": "Cableado",
+      "value": "3 líneas de fase (L1, L2, L3), sin neutro"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV)"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), gris"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Gabinete de distribución de energía, caja de control de equipos"
+    }
+  ],
+  "metaTitle": "SPD 3P 385V 40kA trifásico L-PE | Protector AC | Soltree",
+  "metaDescription": "Protector contra sobretensiones trifásico L-PE 385VAC para sistemas de 3 hilos. Protección L1-PE, L2-PE, L3-PE. 40kA máx., – .5kV, <25ns. Riel DIN, para uso industrial.",
+  "metaKeywords": "protector contra sobretensiones AC 3P, SPD trifásico, SPD L-PE, SPD 385V trifásico, SPD industrial 40kA, SPD control de motores, SPD gabinete de distribución, SPD riel DIN, protector trifásico MOV",
+  "imageAlts": [
+    "Protector contra sobretensiones AC tripolar SPD-AC-3P-Grey, vista frontal – SPD trifásico gris para riel DIN",
+    "Diagrama de cableado del SPD-AC-3P-Grey – conexión de las fases L1 L2 L3",
+    "Detalle de la protección L-PE independiente por fase del SPD-AC-3P-Grey",
+    "Detalle del componente principal MOV del SPD-AC-3P-Grey – varistor de óxido metálico",
+    "Primer plano del módulo de protección trifásica 385V 40kA del SPD-AC-3P-Grey",
+    "Diseño modular reemplazable en caliente del SPD-AC-3P-Grey en riel DIN de 35mm",
+    "SPD-AC-3P-Grey instalado en un gabinete de distribución industrial"
+  ]
+}

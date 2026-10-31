@@ -1,0 +1,118 @@
+{
+  "sourceHash": "0bb8bde887bbe7ab",
+  "name": "Portafusibles RT18-63X 2P para Riel DIN 63A 690V",
+  "shortDescription": "Portafusibles bipolar de 63A para riel DIN y fusibles de 14x51mm — protección de alta corriente en dos líneas para grandes arreglos FV, sistemas de almacenamiento en baterías y circuitos AC/DC de dos líneas de servicio pesado, con indicación LED de falla.",
+  "description": "Los arreglos fotovoltaicos de gran escala, los bancos de baterías de alta capacidad y los circuitos industriales de dos líneas de servicio pesado exigen un portafusibles capaz de conducir 63A en forma continua mientras protege ambos conductores a la vez. El RT18-63X 2P de Soltree ofrece exactamente eso: dos posiciones de fusible independientes de 63A en un módulo compacto, con valores nominales de 690V AC o 500V DC, para fusibles cilíndricos de 14x51mm. Frente al RT18-32X 2P, el formato de fusible más grande de 14x51mm permite elegir fusibles de mayor poder de corte, adecuados para las elevadas corrientes de falla de las grandes cajas combinadoras de strings FV y la alimentación de inversores de baterías. La carcasa reforzada de PVC retardante de llama soporta las exigencias térmicas de altas corrientes sostenidas, mientras que los contactos de cobre de alta conductividad, con estañado opcional, reducen al mínimo la oxidación y la resistencia de contacto con el tiempo. Un indicador LED rojo de estado en cada polo confirma visualmente la falla de inmediato. El montaje a presión en riel DIN de 35mm y los bornes de apriete por tornillo de 4mm²–16mm² permiten una instalación rápida y conexiones de cable robustas. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño bipolar — protección simultánea de alta corriente en ambos conductores",
+    "Valores nominales de 63A / 690V AC o 500V DC — adecuado para grandes arreglos FV y almacenamiento en baterías",
+    "Compatible con fusibles cilíndricos estándar de 14x51mm",
+    "Indicador LED por polo — detección inmediata de fallas en cualquiera de los conductores",
+    "Carcasa reforzada de PVC retardante de llama — soporta cargas de alta corriente sostenida",
+    "Contactos de cobre de alta conductividad — baja oxidación y rendimiento DC estable a largo plazo",
+    "Montaje a presión en riel DIN de 35mm",
+    "Bornes de apriete por tornillo para cables de 4mm²–16mm²",
+    "Protección IP20 a prueba de contacto",
+    "Apto para grandes arreglos FV, alimentación de inversores de baterías y circuitos AC/DC de dos líneas",
+    "Conforme a IEC 60269 y GB/T 13539",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Base portafusible de alta corriente"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-63X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "2P (bipolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "690V AC / 500V DC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "14x51mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm (tipo omega)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta conductividad (estañado opcional)"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "Luz de estado LED (roja, por polo)"
+    },
+    {
+      "name": "Lógica del indicador",
+      "value": "Se enciende cuando falla el fusible"
+    },
+    {
+      "name": "Método de conexión",
+      "value": "Bornes de apriete por tornillo"
+    },
+    {
+      "name": "Calibre de cable adecuado",
+      "value": "4mm² – 16mm² (AWG 12-6)"
+    },
+    {
+      "name": "Clase de protección",
+      "value": "IP20 (a prueba de contacto)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +60°C"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB/T 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Grandes arreglos FV, almacenamiento en baterías, circuitos de dos líneas de servicio pesado"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje a presión"
+    },
+    {
+      "name": "Peso",
+      "value": "Aprox. 160g"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-63X 2P 63A 690V alta corriente | Soltree",
+  "metaDescription": "Portafusibles RT18-63X 2P para riel DIN, 63A 690V/500V DC, fusibles 14x51mm. Protección bipolar de alta corriente para grandes arreglos FV y baterías. Indicador LED, CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-63X 2P, portafusibles bipolar 63A, portafusibles DC 14x51mm, base portafusible para arreglo FV grande, portafusibles almacenamiento en baterías 63A, portafusibles bipolar de alta corriente, protección con fusibles de inversor solar 690V",
+  "imageAlts": [
+    "Portafusibles bipolar de alta corriente RT18-63X 2P Soltree para riel DIN 63A, vista frontal",
+    "Portafusibles RT18-63X 2P, perfil lateral con clip para riel DIN",
+    "Primer plano de los dos indicadores LED del portafusibles RT18-63X 2P",
+    "Borne de apriete por tornillo del RT18-63X 2P para fusible de 14x51mm",
+    "Portafusibles RT18-63X 2P instalado en una caja combinadora FV de gran tamaño",
+    "Portafusibles RT18-63X 2P con fusible cilíndrico de 14x51mm",
+    "Plano de dimensiones del portafusibles RT18-63X 2P"
+  ]
+}

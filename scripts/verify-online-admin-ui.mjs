@@ -150,7 +150,12 @@ theme.walkRules((rule) => {
 assert(!fixedMarkdown, 'Markdown must not inherit the fixed editor-shell layout.');
 assert(fixedShell, 'The outer editor must retain its fixed workspace layout.');
 
-assert.equal(safeAdminDestination('/admin?view=seo#/collections/articles'), '/admin/seo');
+assert.equal(
+  safeAdminDestination('/admin?view=operations#/collections/articles'),
+  '/admin/operations',
+  '/admin/seo-planning',
+  '/admin/settings',
+);
 assert.equal(
   safeAdminDestination('/admin', '#/collections/products/entries/Aerosol-DIN-Rail'),
   '/admin/products/Aerosol-DIN-Rail/edit',
@@ -160,7 +165,10 @@ assert.equal(
   safeAdminDestination('/admin?view=articles', '#/collections/articles/entries/fire-safety'),
   '/admin/articles/fire-safety/edit',
 );
-assert.equal(safeAdminDestination('/admin/seo', '#/collections/articles/new'), '/admin/seo');
+assert.equal(
+  safeAdminDestination('/admin/operations', '#/collections/articles/new'),
+  '/admin/operations',
+);
 assert.equal(
   safeAdminDestination('/admin#/collections/products', '#/collections/articles/new'),
   '/admin/products',
@@ -208,11 +216,10 @@ assert.equal(adminLoginHref('/api/admin/session'), '/admin/login');
 for (const pathname of [
   '/admin',
   '/admin/analytics',
-  '/admin/seo',
+  '/admin/operations',
   '/admin/products',
   '/admin/articles',
   '/admin/groups',
-  '/admin/knowledge',
   '/admin/products/new',
   '/admin/articles/new',
   '/admin/products/Aerosol-DIN-Rail/edit',

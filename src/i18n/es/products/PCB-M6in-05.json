@@ -1,0 +1,74 @@
+{
+  "sourceHash": "9b3046f472ed2b7c",
+  "name": "Caja Combinadora FV de 6 Entradas, Interruptor DC 125A, Fusibles 15A y SPD 40kA (Acero, con Cerradura de Seguridad)",
+  "shortDescription": "Caja combinadora FV de 6 entradas en gabinete de acero de alta resistencia con interruptor DC de 125A, 6 fusibles de 15A, SPD de 500V/40kA y puerta con cerradura.",
+  "description": "La PCB-M6in-05 es una caja combinadora FV de 6 entradas diseñada para arreglos solares comerciales y pequeñas plantas de mayor corriente. Integra un interruptor automático DC de 125A para protección contra sobrecarga y cortocircuito, 6 fusibles FV de 15A para proteger cada string por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para defender el sistema frente a transitorios inducidos por rayos. El robusto gabinete de acero ofrece alta resistencia a los impactos, tiene grado de protección IP65 contra polvo y agua, e incluye cerradura de seguridad con llave para impedir el acceso no autorizado. Apta para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 6 entradas de arreglo FV y 1 salida",
+    "Interruptor automático DC de 125A para protección contra sobrecarga y cortocircuito de mayor corriente",
+    "6 fusibles FV de 15A para proteger cada string por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Robusto gabinete de acero con alta resistencia a los impactos",
+    "Cerradura de seguridad con llave integrada para evitar manipulaciones",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "PCB-M6in-05"
+    },
+    {
+      "name": "Entradas de arreglo FV",
+      "value": "6"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "125A"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "15A (6 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Acero robusto (alta resistencia a los impactos)"
+    },
+    {
+      "name": "Seguridad",
+      "value": "Cerradura de seguridad con llave"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 6 entradas 125A fusible 15A acero | Soltree",
+  "metaDescription": "Caja combinadora FV de 6 entradas en gabinete de acero con interruptor DC de 125A, 6 fusibles FV de 15A, SPD 500V/40kA y puerta con cerradura. IP65 para exteriores. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 6 entradas, interruptor DC 125A, fusible FV 15A, SPD 40kA, caja combinadora de acero, caja combinadora con cerradura, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 6 entradas PCB-M6in-05 con gabinete de acero, vista frontal",
+    "Interior de la caja combinadora PCB-M6in-05 con interruptor DC de 125A y 6 fusibles de 15A",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la PCB-M6in-05",
+    "Cerradura de seguridad con llave antimanipulación de la PCB-M6in-05",
+    "Bornes de cableado para 6 entradas de arreglo FV de la PCB-M6in-05",
+    "Gabinete de acero robusto IP65 de la PCB-M6in-05 instalado en exteriores",
+    "Perfil lateral y detalle de montaje de la PCB-M6in-05"
+  ]
+}

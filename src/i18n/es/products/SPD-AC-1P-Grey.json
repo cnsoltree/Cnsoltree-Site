@@ -1,0 +1,86 @@
+{
+  "sourceHash": "49a66d1ef99da3fd",
+  "name": "Protector contra Sobretensiones AC 1P 385V 40kA - SPD Neutro-Tierra TN-S para Subtableros y Cajas de Protección contra Rayos",
+  "shortDescription": "Protector contra sobretensiones unipolar de 385VAC para protección neutro-tierra (N-PE) en sistemas TN-S. Corriente máxima de descarga de 40kA, nivel de protección – .0kV, respuesta <25ns – diseño modular para riel DIN, reemplazable en caliente, para subtableros y cajas combinadas de protección contra rayos.",
+  "description": "El SPD-AC-1P-Grey es un dispositivo de protección contra sobretensiones AC unipolar diseñado específicamente para la protección neutro-tierra (N-PE) en sistemas de distribución de baja tensión TN-S. Protege la línea de neutro de los sistemas monofásicos contra sobretensiones transitorias causadas por rayos o maniobras, con una corriente máxima de descarga de 40kA y una corriente nominal de descarga de 20kA. El nivel de protección de tensión de – .0kV mantiene los equipos aguas abajo dentro de límites seguros durante los eventos transitorios. Su núcleo es un varistor de óxido metálico (MOV) que responde en menos de 25 nanosegundos, una supresión prácticamente instantánea. La carcasa gris de PC retardante de llama (clasificación UL94 V-0) se monta a presión en un riel DIN estándar de 35mm y tiene un diseño modular reemplazable en caliente, que permite sustituirlo con tensión sin recablear. Apto para instalación en subtableros y cajas combinadas de protección contra rayos.",
+  "features": [
+    "Protección unipolar N-PE para sistemas de distribución de baja tensión TN-S",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .0kV: protege la línea de neutro contra sobretensiones transitorias",
+    "Tiempo de respuesta ultrarrápido <25ns: supresión instantánea de transitorios",
+    "Núcleo de varistor de óxido metálico (MOV): excelente conductividad y resistencia a la corrosión",
+    "Diseño modular reemplazable en caliente: se sustituye sin recablear",
+    "Carcasa de PC retardante de llama (UL94 V-0), gris, montaje en riel DIN de 35mm",
+    "Apto para subtableros y cajas combinadas de protección contra rayos"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "1P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "Tipo de sistema",
+      "value": "Sistema de distribución de baja tensión TN-S"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "N-PE (neutro a tierra)"
+    },
+    {
+      "name": "Cableado",
+      "value": "Superior: neutro / Inferior: tierra (PE)"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV)"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), gris"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Subtableros, cajas combinadas de protección contra rayos"
+    }
+  ],
+  "metaTitle": "SPD 1P 385V 40kA TN-S | Protector neutro-tierra AC | Soltree",
+  "metaDescription": "Protector contra sobretensiones AC 1P 385VAC para N-PE en TN-S. 40kA máx., nivel – .0kV, respuesta <25ns. Riel DIN, reemplazable en caliente.",
+  "metaKeywords": "protector contra sobretensiones AC, SPD 1P, SPD 385V, SPD TN-S, SPD neutro tierra, protector N-PE, SPD 40kA, SPD riel DIN, SPD caja de protección contra rayos, supresor de sobretensiones MOV",
+  "imageAlts": [
+    "Protector contra sobretensiones AC unipolar SPD-AC-1P-Grey, vista frontal – SPD gris para riel DIN",
+    "Diagrama de cableado del SPD-AC-1P-Grey – neutro arriba, tierra (PE) abajo",
+    "Detalle del componente principal MOV del SPD-AC-1P-Grey – varistor de óxido metálico",
+    "Primer plano del módulo de protección N-PE 385V 40kA del SPD-AC-1P-Grey",
+    "Diseño modular reemplazable en caliente del SPD-AC-1P-Grey en riel DIN de 35mm",
+    "Detalle de la carcasa de PC retardante de llama UL94 V-0 del SPD-AC-1P-Grey",
+    "SPD-AC-1P-Grey instalado en subtablero y caja combinada de protección contra rayos"
+  ]
+}

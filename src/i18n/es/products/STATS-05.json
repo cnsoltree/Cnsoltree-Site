@@ -1,0 +1,123 @@
+{
+  "sourceHash": "e9fd2624ec2bb6dc",
+  "name": "Interruptor de Transferencia Automática ATS de 3 Vías STATS-05 con Pantalla Completa de 5 Parámetros",
+  "shortDescription": "El ATS de 3 vías más avanzado de la serie STATS — pantalla de 5 parámetros que muestra a la vez las tres tensiones de entrada, la tensión de salida y la corriente de salida. Visibilidad total de fuentes y carga para instalaciones de misión crítica. Opciones de 63A / 80A / 100A.",
+  "description": "Cuando un monitoreo parcial no es suficiente, el STATS-05 de Soltree le ofrece el panorama completo. Mientras el STATS-03 muestra las tres tensiones de entrada y el STATS-04 añade la corriente de salida, el STATS-05 va más allá: su pantalla de 5 parámetros muestra a la vez las tres tensiones de entrada, la tensión de salida que realmente llega a su carga y la corriente de salida en tiempo real.\n\nEsto es importante en aplicaciones donde no basta con verificar que las fuentes estén sanas, sino que hay que confirmar que la tensión correcta llega efectivamente a los equipos después de la conmutación. Una fuente puede parecer dentro de rango en los bornes de entrada y, aun así, una falla de cableado, un problema de contacto o una caída de tensión en el cable podrían entregar una tensión incorrecta a la carga. El STATS-05 elimina ese punto ciego.\n\nDiseñado para responsables de infraestructura de centros de datos que supervisan tableros de bypass de UPS, ingenieros de mantenimiento hospitalario a cargo de sistemas de energía de seguridad vital, líneas de manufactura de precisión donde la tensión en la máquina importa tanto como la tensión en el tablero, e ingenieros de automatización industrial que ponen en marcha gabinetes de control con varias fuentes, el STATS-05 es la opción indicada cuando la visibilidad eléctrica completa no es negociable. Incluye todas las funciones de protección y control de la serie STATS: umbrales ajustables de sobretensión (130–300V) y subtensión (80–210V), protección configurable contra sobrecorriente, respuesta de conmutación inferior a 0.2s, secuencia de prioridad L1→L2→L3 personalizable y retardos de arranque y recuperación automática ajustables de 1–600s. Certificación CE y RoHS, montaje en riel DIN, carcasa de PC retardante de llama (UL94 V-0) y vida mecánica de ≥10.000 ciclos.",
+  "features": [
+    "Pantalla de 5 parámetros — tensiones de entrada L1/L2/L3 + tensión de salida + corriente de salida, todo a la vez",
+    "Monitoreo de la tensión de salida — verifique que la tensión correcta llegue realmente a la carga después de la conmutación",
+    "Interruptor de transferencia automática de 3 vías — conmutación por prioridad L1→L2→L3 con secuencia totalmente personalizable",
+    "Respuesta de conmutación inferior a 0.2s — transferencia de fuente sin interrupciones y con mínima interrupción de la carga",
+    "Protección contra sobretensión — umbral de disparo configurable de 130–300V AC",
+    "Protección contra subtensión — umbral de disparo configurable de 80–210V AC",
+    "Protección contra sobrecorriente — rango de disparo ajustable de 1–63A / 1–80A / 1–100A",
+    "Retardo de arranque (1–600s) y retardo de recuperación automática (1–600s) ajustables",
+    "Montaje en riel DIN de 35mm — instalación estándar en tablero",
+    "Carcasa de PC retardante de llama (UL94 V-0), vida mecánica ≥10.000 ciclos",
+    "Disponible en corrientes nominales de 63A / 80A / 100A",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "STATS-05"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Interruptor de transferencia automática de 3 entradas con pantalla de monitoreo completo"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de protección contra sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de protección contra subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Rango de protección contra sobrecorriente",
+      "value": "1–63A / 1–80A / 1–100A (opcional)"
+    },
+    {
+      "name": "Corriente nominal de trabajo",
+      "value": "63A / 80A / 100A (opcional)"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Pantalla de 5 parámetros (3× tensión de entrada + tensión de salida + corriente de salida)"
+    },
+    {
+      "name": "Secuencia de conmutación por prioridad",
+      "value": "L1 → L2 → L3 (personalizable)"
+    },
+    {
+      "name": "Tiempo de retardo de arranque",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de retardo de recuperación automática",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de respuesta de conmutación",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Material de PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25℃ a +50℃"
+    },
+    {
+      "name": "Humedad relativa",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Funciones principales",
+      "value": "Conmutación por prioridad de 3 vías, protección contra sobretensión/subtensión, protección contra sobrecorriente, monitoreo completo de tensión de entrada/salida y corriente de salida"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Tableros de bypass de UPS en centros de datos, sistemas de energía de seguridad vital en hospitales, líneas de manufactura de precisión, gabinetes de automatización industrial con varias fuentes"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "ATS de 3 vías STATS-05 pantalla de 5 parámetros 63A–100A | Soltree",
+  "metaDescription": "ATS de 3 vías STATS-05 con pantalla de 5 parámetros: tensiones L1/L2/L3 + tensión y corriente de salida. Monitoreo total para centros de datos, hospitales y manufactura de precisión.",
+  "metaKeywords": "interruptor de transferencia automática STATS-05, ATS 3 vías pantalla de 5 parámetros, ATS con monitor de tensión y corriente de entrada y salida, verificación de tensión de salida en ATS, ATS para centro de datos y hospital, ATS de monitoreo completo riel DIN, ATS 5 pantallas 100A 80A 63A",
+  "imageAlts": [
+    "ATS de 3 vías STATS-05 Soltree con pantalla de 5 parámetros, vista frontal",
+    "Pantalla del STATS-05 mostrando a la vez las tensiones de entrada L1 L2 L3, la tensión de salida y la corriente de salida",
+    "Secuencia de prioridad y configuración de la pantalla de 5 parámetros del ATS STATS-05",
+    "Ajustes de umbrales de sobretensión, subtensión y sobrecorriente del STATS-05",
+    "Perfil lateral de montaje en riel DIN del ATS de 3 vías STATS-05",
+    "Interruptor de transferencia automática STATS-05 instalado en tablero de distribución de un centro de datos",
+    "Conexiones de cableado del ATS STATS-05 para tres entradas de 220V y monitoreo de tensión y corriente de salida",
+    "Opciones de 63A, 80A y 100A con pantalla de monitoreo completo del interruptor de transferencia automática STATS-05"
+  ]
+}

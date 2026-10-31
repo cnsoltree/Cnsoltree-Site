@@ -1,0 +1,77 @@
+{
+  "sourceHash": "58703d75d85495c1",
+  "name": "Interruptor Termomagnético MCB 2P AC 6 – 63A",
+  "shortDescription": "Interruptor termomagnético bipolar de 6 – 63A con curva B/C/D, que desconecta a la vez fase y neutro para un aislamiento total del circuito.",
+  "description": "El MCB bipolar de Soltree ofrece un aislamiento completo del circuito monofásico al cortar simultáneamente los conductores de fase y neutro, un requisito de seguridad clave en circuitos de baños, instalaciones exteriores y cualquier aplicación donde la desconexión total sea obligatoria. Con tensión nominal de 120V/230V AC y corrientes de 6A a 63A, es la opción preferida para sistemas de puesta a tierra TT y para mercados cuya normativa exige protección bipolar (IEC 60364, BS 7671). Fabricado bajo el sistema de gestión de calidad ISO 9001, su robusta carcasa retardante de llama y sus contactos de aleación de cobre de alta conductividad garantizan un rendimiento constante durante 20.000 maniobras mecánicas.",
+  "features": [
+    "Desconexión simultánea de fase + neutro: aislamiento total del circuito en una sola maniobra",
+    "Obligatorio en baños, instalaciones exteriores y sistemas TT",
+    "Cumple los requisitos de protección bipolar de IEC 60364 y BS 7671",
+    "Certificación CE y RoHS: aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Contactos de aleación de cobre de alta conductividad: 20.000 maniobras mecánicas",
+    "Personalización OEM / ODM disponible: logotipo, color y etiqueta de características",
+    "Planta de fabricación con certificación ISO 9001 y 18 años de trayectoria"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "2P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A, personalizable"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "4.5 kA, 6 kA, personalizable"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C, B, D, personalizable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Aleación de cobre de alta conductividad"
+    }
+  ],
+  "metaTitle": "MCB bipolar 6A-63A AC | Interruptor termomagnético 2 polos | Soltree",
+  "metaDescription": "MCB bipolar Soltree de 6A a 63A, 120V/230V AC, curva B/C/D, certificación CE y RoHS. Fábrica ISO 9001, OEM disponible y envíos por volumen a todo el mundo.",
+  "metaKeywords": "MCB 2 polos, interruptor termomagnético bipolar, MCB 2P 6A 63A, MCB bipolar riel DIN, proveedor de interruptores termomagnéticos, MCB certificado CE, interruptor AC al por mayor",
+  "imageAlts": [
+    "Interruptor termomagnético bipolar MCB 6-63A Soltree, vista frontal",
+    "Interruptor bipolar MCB-AC-2P, vista lateral con clip para riel DIN",
+    "Detalle de selección de curva de disparo B C D del MCB-AC-2P",
+    "Conexión de bornes y diagrama de cableado del MCB-AC-2P",
+    "MCB-AC-2P instalado en riel DIN de 35mm en un tablero de distribución",
+    "Dimensiones y plano de medidas del MCB-AC-2P",
+    "Etiqueta de certificación CE RoHS y empaque del MCB-AC-2P"
+  ]
+}

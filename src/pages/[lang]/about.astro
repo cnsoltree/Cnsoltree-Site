@@ -1,0 +1,9 @@
+---
+import AboutPage from '@/components/AboutPage.astro';
+import { translatedLangs } from '@/i18n';
+export function getStaticPaths() {
+  return translatedLangs.map((lang) => ({ params: { lang } }));
+}
+---
+
+<AboutPage />

@@ -1,0 +1,81 @@
+{
+  "sourceHash": "c8ee7256f0394845",
+  "name": "Interruptor de Transferencia Automática 63A 3P 110V/220V - ATS Trifásico Clase PC de 50ms para Uso Comercial",
+  "shortDescription": "ATS tripolar clase PC de 63A para sistemas trifásicos de 110V/220V (sin neutro). Transferencia automática y manual en 50ms, compatible con red, generador e inversor FV – para hospitales, cámaras frigoríficas y centros de datos.",
+  "description": "El ATS-W2R-3P es un interruptor de transferencia automática clase PC (nivel de carga) para sistemas trifásicos sin neutro (solo 3L), con corriente nominal de 63A y compatible con 110V y 220V AC. Los tres polos de fase conmutan simultáneamente en 50ms, lo que garantiza el aislamiento completo entre fuentes y evita la retroalimentación entre la red y el suministro de respaldo. Cuando falla la Fuente A (red), la unidad transfiere al instante la carga a un generador o inversor FV; al restablecerse la red, vuelve automáticamente a la prioridad de la Fuente A sin intervención manual. Admite los modos de conmutación automático y manual para adaptarse a distintos requisitos de instalación. Con mecanismo motorizado alojado en una carcasa de PA6 retardante de llama, el W2R-3P está diseñado para una operación continua confiable en entornos comerciales exigentes – hospitales, cámaras frigoríficas, centros de datos y equipos industriales que requieren energía trifásica ininterrumpida.",
+  "features": [
+    "Conmutación tripolar (3 fases a la vez, sin neutro) – 2 entradas / 1 salida",
+    "Clase PC (nivel de carga) – soporta la carga nominal completa de forma continua",
+    "Tiempo de transferencia rápido de 50ms (0.05s) – interrupción de la carga inferior a 50ms",
+    "Doble tensión: compatible con 110V y 220V AC trifásico",
+    "Modos de transferencia automático y manual; vuelve automáticamente a la Fuente A (red)",
+    "Compatible con red eléctrica, generador e inversor FV",
+    "Carcasa de PA6 retardante de llama con mecanismo motorizado",
+    "Apto para hospitales, cámaras frigoríficas, centros de datos y equipos industriales"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "3P (3 fases, sin neutro)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de operación: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Trifásico (sin neutro)"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase PC (nivel de carga)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente A (red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, generador, inversor FV"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Carcasa",
+      "value": "PA6 retardante de llama"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Hospitales, cámaras frigoríficas, centros de datos"
+    }
+  ],
+  "metaTitle": "ATS-W2R 63A 3P 110V/220V | ATS trifásico sin neutro clase PC 50ms",
+  "metaDescription": "ATS trifásico ATS-W2R de 63A, 3 polos (sin neutro), clase PC para 110V y 220V. Transferencia en 50ms, compatible con red, generador e inversor FV. Para hospitales y centros de datos.",
+  "metaKeywords": "ATS-W2R 63A 3P, transferencia trifásica sin neutro, ATS 3 polos 110V 220V, ATS clase PC, ATS para inversor FV, transferencia para hospital, ATS para centro de datos, ATS comercial",
+  "imageAlts": [
+    "ATS-W2R 63A 3P 110V/220V, vista frontal – interruptor de transferencia trifásico clase PC",
+    "Diagrama de cableado del ATS-W2R-3P – conexión tripolar de 2 entradas y 1 salida",
+    "Estructura interna del ATS-W2R-3P – PCB, motor y carcasa de PA6 retardante de llama",
+    "Panel de modos de conmutación automático y manual del ATS-W2R trifásico de 63A",
+    "ATS-W2R-3P compatible con red eléctrica, generador e inversor FV",
+    "Interruptor de transferencia tripolar de 63A para hospitales, cámaras frigoríficas y centros de datos"
+  ]
+}

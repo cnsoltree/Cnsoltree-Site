@@ -1,0 +1,72 @@
+---
+---
+
+<main
+  id="studio-settings"
+  class="product-manager ai-settings"
+  aria-labelledby="ai-settings-title"
+  hidden
+  inert
+>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="ai-settings-title">设置</h1>
+      <p>配置网站 AI 服务，供后续翻译与 SEO 检查使用。</p>
+    </div>
+    <button type="button" class="product-refresh" data-ai-refresh>
+      刷新设置
+    </button>
+  </div>
+  <p class="product-error" data-ai-error role="alert" hidden></p>
+  <p class="ai-settings-feedback" data-ai-feedback role="status" aria-live="polite"></p>
+  <section class="product-panel">
+    <h2>AI 设置</h2>
+    <p class="ai-settings-description">OpenAI · 官方接口</p>
+    <p class="ai-settings-description" data-ai-scope></p>
+    <form data-ai-form autocomplete="off">
+      <fieldset disabled>
+        <label class="ai-settings-field">
+          <span>API Key</span>
+          <input
+            name="apiKey"
+            type="password"
+            autocomplete="off"
+            spellcheck="false"
+            maxlength="403"
+            placeholder="填写 OpenAI API Key"
+            aria-describedby="ai-key-help"
+          />
+        </label>
+        <p id="ai-key-help" class="ai-settings-description" data-ai-key-status>
+          正在读取配置…
+        </p>
+        <label class="ai-settings-field">
+          <span>默认模型</span>
+          <select name="model" aria-describedby="ai-model-help">
+            <option value="">请先获取模型列表</option>
+          </select>
+        </label>
+        <p id="ai-model-help" class="ai-settings-description">
+          列表显示此 Key 可访问的文字模型；能否用于具体功能，以实际调用结果为准。
+        </p>
+        <div class="ai-settings-actions">
+          <button type="button" class="product-refresh" data-ai-models>
+            获取模型列表
+          </button>
+          <button type="button" class="product-refresh" data-ai-test>
+            测试连接
+          </button>
+          <button type="submit" class="product-create">
+            保存设置
+          </button>
+          <button type="button" class="product-refresh" data-ai-delete>
+            删除已保存配置
+          </button>
+        </div>
+        <p class="ai-settings-description">
+          测试连接会发送一条简短请求，可能产生少量 API 费用；获取列表和测试不会自动保存配置。
+        </p>
+      </fieldset>
+    </form>
+  </section>
+</main>

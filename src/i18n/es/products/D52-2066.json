@@ -1,0 +1,118 @@
+{
+  "sourceHash": "e04e72ab29baf04c",
+  "name": "Monitor de Energía AC 6 en 1 D52-2066 para Riel DIN 110V 220V 380V 100A Voltaje Corriente Factor de Potencia kWh Frecuencia",
+  "shortDescription": "Monitor de energía AC 6 en 1 para riel DIN — muestra a la vez en una pantalla a color tensión, corriente, potencia activa (W), factor de potencia, consumo de energía (kWh) y frecuencia. Compatible con 110V/220V monofásico y 380V trifásico. 100A, precisión de ±1%. Certificación CE.",
+  "description": "Administrar un circuito de forma eficaz implica conocer más que la tensión. El D52-2066 de Soltree es un monitor de energía AC multifunción 6 en 1 que ofrece una visión completa y en tiempo real del desempeño eléctrico del circuito – tensión, corriente, potencia activa en watts, factor de potencia, energía acumulada en kWh y frecuencia de alimentación –, todo mostrado a la vez en una pantalla a color de alta resolución, sin necesidad de instrumentos separados para cada parámetro.\n\nEl D52-2066 es compatible con sistemas monofásicos (110V/220V) y trifásicos (380V), con dos rangos de tensión seleccionables: 40–300V para aplicaciones monofásicas estándar y de baja tensión, y 250–450V para circuitos trifásicos e industriales. La medición de corriente cubre de 0 a 100A (resolución de 0.01A) y es compatible con transformadores de corriente (CT) integrados y externos para una instalación flexible. La frecuencia de muestreo es de 2 veces por segundo, con una precisión de ±1% ±2 dígitos en todos los parámetros.\n\nLos datos de consumo de energía se guardan automáticamente durante los cortes de energía: no se pierden lecturas cuando se interrumpe el circuito. El botón SAM CK reinicia el contador de kWh cuando sea necesario (manteniéndolo presionado 5 segundos). Su formato compacto de 54×80×64mm se instala en riel DIN estándar de 35mm. Apto para monitoreo energético doméstico, análisis de circuitos industriales y seguimiento del rendimiento de sistemas fotovoltaicos. Certificación CE, carcasa de PC retardante de llama y temperatura de operación de -10℃ a +50℃.",
+  "features": [
+    "Pantalla 6 en 1 — tensión, corriente, potencia (W), factor de potencia, kWh y frecuencia a la vez",
+    "Pantalla digital a color multiparámetro — todos los valores visibles de un vistazo en una sola pantalla",
+    "Doble rango de tensión — 40–300V (monofásico) o 250–450V (trifásico 380V), seleccionable",
+    "Rango de corriente de 100A con resolución de 0.01A",
+    "Funciona con transformadores de corriente (CT) integrados o externos",
+    "Precisión de ±1% ±2 dígitos en todos los parámetros medidos",
+    "2 muestras por segundo — monitoreo en tiempo real con respuesta ágil",
+    "Guarda automáticamente los datos de energía durante los cortes — sin pérdida de datos de kWh",
+    "Botón SAM CK para reiniciar los kWh (mantener presionado 5 segundos)",
+    "Montaje en riel DIN de 35mm — formato compacto de 54×80×64mm",
+    "Apto para sistemas monofásicos de 110V/220V y trifásicos de 380V",
+    "Certificación CE, carcasa de PC retardante de llama"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "D52-2066"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Monitor de energía AC multifunción 6 en 1 para riel DIN"
+    },
+    {
+      "name": "Tipo de instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Sistemas compatibles",
+      "value": "Monofásico 110V/220V, trifásico 380V"
+    },
+    {
+      "name": "Opciones de rango de tensión",
+      "value": "40.0–300.0V / 250.0–450.0V (seleccionable)"
+    },
+    {
+      "name": "Rango de corriente",
+      "value": "0–100.0A (resolución: 0.01A)"
+    },
+    {
+      "name": "Rango de frecuencia",
+      "value": "45.0–65.0Hz"
+    },
+    {
+      "name": "Rango de factor de potencia",
+      "value": "0.00–1.00 FP"
+    },
+    {
+      "name": "Rango de potencia activa",
+      "value": "0–450.000W (0–9999.9W: resolución de 0.1W; ≥10.000W: resolución de 1W)"
+    },
+    {
+      "name": "Rango de consumo de energía",
+      "value": "0–99.999 kWh (resolución: 0.01 / 0.1 / 1 kWh según el valor)"
+    },
+    {
+      "name": "Velocidad de muestreo",
+      "value": "2 veces por segundo"
+    },
+    {
+      "name": "Precisión",
+      "value": "±1% ±2 dígitos"
+    },
+    {
+      "name": "Tipo de pantalla",
+      "value": "Pantalla digital a color multiparámetro"
+    },
+    {
+      "name": "Función de reinicio",
+      "value": "Botón SAM CK para reiniciar la energía (mantener 5s)"
+    },
+    {
+      "name": "Retención de datos",
+      "value": "Guarda automáticamente los datos de energía durante los cortes"
+    },
+    {
+      "name": "Compatibilidad con CT",
+      "value": "Transformadores de corriente integrados o externos"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Monitoreo energético doméstico, análisis de circuitos industriales, sistemas fotovoltaicos"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-10℃ ~ +50℃"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "54 × 80 × 64mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE"
+    }
+  ],
+  "metaTitle": "Monitor de energía AC 6 en 1 D52-2066 riel DIN 110V/220V/380V 100A | Soltree",
+  "metaDescription": "Monitor de energía AC 6 en 1 D52-2066 para riel DIN: tensión, corriente, potencia, factor de potencia, kWh y frecuencia en una pantalla a color. 110V/220V/380V, 100A, CT externo, ±1%.",
+  "metaKeywords": "monitor de energía D52-2066, medidor de energía AC 6 en 1 riel DIN, medidor de voltaje corriente factor de potencia kWh frecuencia, monitor de energía riel DIN 380V, medidor de energía multifunción 100A, monitor de energía AC monofásico y trifásico, medidor kWh riel DIN con pantalla a color, medidor de energía fotovoltaica riel DIN",
+  "imageAlts": [
+    "Monitor de energía AC 6 en 1 D52-2066 Soltree para riel DIN con pantalla a color, vista frontal",
+    "Pantalla a color del D52-2066 mostrando a la vez tensión, corriente, factor de potencia, kWh y frecuencia",
+    "Selección del rango de tensión 40-300V y 250-450V del monitor de energía D52-2066",
+    "Cableado de conexión del transformador de corriente CT del monitor de energía D52-2066 para riel DIN",
+    "Perfil de montaje en riel DIN de 35mm del monitor de energía AC D52-2066",
+    "Monitor de energía D52-2066 instalado en un tablero de distribución industrial",
+    "Dimensiones 54x80x64mm y certificación CE del monitor de energía 6 en 1 D52-2066"
+  ]
+}

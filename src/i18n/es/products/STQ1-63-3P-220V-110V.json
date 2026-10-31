@@ -1,0 +1,89 @@
+{
+  "sourceHash": "dfaae0a1ffe8597a",
+  "name": "Transferencia Automática STQ1-63 63A 3P Clase CB 110V/220V - ATS Trifásico para Equipos Industriales y Motores",
+  "shortDescription": "ATS tripolar clase CB de 63A para 110V/220V trifásico. Enclavamiento mecánico, transferencia automática en ~2s, máx. ~22kW – una solución rentable para equipos industriales, ascensores comerciales y motores trifásicos.",
+  "description": "El STQ1-63-3P es un interruptor de transferencia automática clase CB para sistemas trifásicos de 110V o 220V AC de hasta 63A, que ofrece una solución industrial rentable para cargas trifásicas no críticas. Los tres polos conmutan simultáneamente mediante un interruptor automático con enclavamiento mecánico, que impide físicamente que ambas fuentes se conecten al mismo tiempo. Cuando falla la Fuente Normal (N/red), la unidad transfiere automáticamente al suministro de respaldo (generador o inversor FV) en aproximadamente 2 segundos; durante la conmutación se produce una breve interrupción de ~2s, aceptable para la mayoría de los equipos industriales y comerciales. La unidad vuelve automáticamente a la prioridad de la Fuente Normal cuando se restablece la red. Con una capacidad de carga máxima de aproximadamente 22kW en las tres fases, el STQ1-63-3P es adecuado para alimentar equipos industriales, ascensores comerciales, motores trifásicos y otras cargas pesadas donde no se requiere la velocidad de conmutación de un equipo clase PC.",
+  "features": [
+    "Conmutación tripolar (3 fases a la vez, sin neutro) – 2 entradas / 1 salida",
+    "Clase CB – interruptor automático con enclavamiento mecánico que impide la conexión de ambas fuentes",
+    "Transferencia automática en ~2s – breve interrupción de 2s aceptable para cargas industriales",
+    "Doble tensión: compatible con 110V y 220V AC trifásico",
+    "Modos de transferencia automático y manual; prioridad de la Fuente Normal (N) con retorno automático",
+    "Compatible con red eléctrica, generador e inversor FV",
+    "Capacidad de carga máxima: ~22kW (trifásico)",
+    "Solución clase CB rentable para aplicaciones industriales y comerciales"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "3P (tripolar, conmutación simultánea)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de trabajo: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Trifásico"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase CB (interruptor automático + enclavamiento mecánico)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente Normal (N / red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, generador, inversor FV"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia automática",
+      "value": "~2s"
+    },
+    {
+      "name": "Interrupción de energía",
+      "value": "Breve, ~2s durante la transferencia"
+    },
+    {
+      "name": "Potencia máxima de carga",
+      "value": "~22kW (trifásico)"
+    },
+    {
+      "name": "Componentes internos",
+      "value": "Tarjeta de control PCB, motor, relé térmico"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Equipos industriales, ascensores comerciales, motores trifásicos"
+    }
+  ],
+  "metaTitle": "STQ1-63 63A 3P ATS clase CB 110V/220V | Transferencia trifásica",
+  "metaDescription": "ATS STQ1-63 de 63A, 3 polos, clase CB para 110V/220V trifásico. Enclavamiento mecánico, transferencia en ~2s, máx. 22kW. Para equipos industriales, ascensores y motores trifásicos.",
+  "metaKeywords": "ATS STQ1-63 3P, transferencia trifásica clase CB, ATS 63A 3 polos, interruptor de transferencia automática industrial, ATS para ascensor comercial, ATS para motor trifásico, ATS con enclavamiento mecánico, ATS rentable",
+  "imageAlts": [
+    "ATS STQ1-63 63A 3P clase CB 110V/220V, vista frontal – interruptor de transferencia automática trifásico",
+    "Diagrama de cableado del STQ1-63-3P – conexión tripolar de 2 entradas y 1 salida",
+    "Componentes internos del STQ1-63-3P – tarjeta de control PCB, motor y relé térmico",
+    "Mecanismo de enclavamiento mecánico trifásico del STQ1-63 – impide la conexión de ambas fuentes",
+    "Panel de modos de conmutación automático y manual del ATS trifásico de 63A",
+    "Interruptor de transferencia STQ1-63-3P para equipos industriales, ascensores y motores trifásicos"
+  ]
+}

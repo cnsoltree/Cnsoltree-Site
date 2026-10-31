@@ -59,7 +59,7 @@ export function articleFaqs(content: string) {
   for (const line of content.split('\n').map((line) => line.trim())) {
     if (line.startsWith('## ')) {
       flush();
-      inFaq = /frequently asked|faq/i.test(line);
+      inFaq = /frequently asked|faq|preguntas frecuentes/i.test(line);
     } else if (inFaq && line.startsWith('### ')) {
       flush();
       question = line.slice(4);

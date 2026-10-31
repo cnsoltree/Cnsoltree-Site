@@ -1,0 +1,77 @@
+{
+  "sourceHash": "b43c88ab083cb98f",
+  "name": "Interruptor Termomagnético MCB 4P AC 6 – 63A",
+  "shortDescription": "Interruptor termomagnético tetrapolar de 6 – 63A con curva B/C/D, protección trifásica + neutro completa para sistemas TN-S y TN-C-S.",
+  "description": "El MCB tetrapolar de Soltree ofrece una protección completa para sistemas trifásicos de cuatro hilos (3P+N) al aislar simultáneamente los tres conductores de fase y el neutro, el mayor nivel de aislamiento disponible en un interruptor termomagnético. Es la opción conforme a la normativa para sistemas de puesta a tierra TN-S y TN-C-S donde se exige el corte del neutro, como edificios comerciales, centros de datos, hospitales e instalaciones industriales con cargas electrónicas sensibles. El diseño de 4 polos elimina el riesgo de elevación de tensión en el neutro durante fallas asimétricas y protege los equipos aguas abajo contra sobretensiones dañinas. Disponible de 6A a 63A con curvas de disparo B, C y D para cualquier perfil de carga.",
+  "features": [
+    "Desconexión simultánea completa 3P+N: máximo nivel de aislamiento para sistemas de cuatro hilos",
+    "Exigido en sistemas TN-S y TN-C-S donde la normativa requiere el corte del neutro",
+    "Elimina el riesgo de elevación de tensión en el neutro durante fallas asimétricas",
+    "Ideal para centros de datos, hospitales y edificios comerciales con cargas sensibles",
+    "Certificación CE y RoHS: aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Personalización OEM / ODM disponible: logotipo, color y etiqueta de características",
+    "Planta de fabricación con certificación ISO 9001 y 18 años de trayectoria"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A, personalizable"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "4.5 kA, 6 kA, personalizable"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C, B, D, personalizable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Aleación de cobre de alta conductividad"
+    }
+  ],
+  "metaTitle": "MCB tetrapolar 6A-63A AC | Interruptor termomagnético 4 polos | Soltree",
+  "metaDescription": "MCB tetrapolar Soltree de 6A a 63A, 120V/230V AC, curva B/C/D, certificación CE y RoHS. Ideal para sistemas trifásicos con neutro. OEM disponible, envíos mundiales.",
+  "metaKeywords": "MCB 4 polos, interruptor termomagnético tetrapolar, MCB 4P 6A 63A, MCB 4 polos riel DIN, proveedor de interruptores termomagnéticos, MCB certificado CE, interruptor trifásico con neutro",
+  "imageAlts": [
+    "Interruptor termomagnético tetrapolar MCB 6-63A Soltree, vista frontal",
+    "Interruptor tetrapolar MCB-AC-4P, vista lateral con clip para riel DIN",
+    "Detalle de selección de curva de disparo B C D del MCB-AC-4P",
+    "Conexión de bornes de 4 polos y diagrama de cableado del MCB-AC-4P",
+    "MCB-AC-4P instalado en riel DIN de 35mm en un tablero de distribución",
+    "Dimensiones y plano de medidas del MCB-AC-4P",
+    "Etiqueta de certificación CE RoHS y empaque del MCB-AC-4P"
+  ]
+}

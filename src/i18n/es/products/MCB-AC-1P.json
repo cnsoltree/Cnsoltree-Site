@@ -1,0 +1,77 @@
+{
+  "sourceHash": "5394029b07cc32b4",
+  "name": "Interruptor Termomagnético MCB 1P AC 6 – 63A",
+  "shortDescription": "Interruptor termomagnético unipolar de 6 – 63A con curva B/C/D, ideal para proteger circuitos de iluminación y tomacorrientes residenciales.",
+  "description": "El MCB unipolar de Soltree está diseñado para circuitos monofásicos residenciales y comerciales ligeros, y ofrece una protección confiable contra sobrecarga y cortocircuito en ramales de iluminación, tomacorrientes y pequeños electrodomésticos. Su ancho de un solo módulo (18mm) permite la máxima densidad de circuitos en tableros de distribución compactos. Fabricado en nuestra planta con certificación ISO 9001 y 18 años de experiencia, cada unidad se somete a pruebas eléctricas al 100 % antes del envío. Disponible con curvas de disparo B, C y D para distintos tipos de carga: curva B para cargas resistivas sensibles, curva C para uso general y curva D para equipos con alta corriente de arranque.",
+  "features": [
+    "Ancho de un solo módulo de 18mm: maximiza la densidad de circuitos en tableros compactos",
+    "Curvas de disparo B / C / D: cubre cargas de iluminación, generales y de motores",
+    "Ideal para tableros de distribución residenciales y protección de circuitos de tomacorrientes",
+    "Certificación CE y RoHS: aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Prueba eléctrica al 100 % en fábrica antes del envío",
+    "Personalización OEM / ODM disponible: logotipo, color y etiqueta de características",
+    "Planta de fabricación con certificación ISO 9001 y 18 años de trayectoria"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "1P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A, personalizable"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "120V / 230V AC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "4.5 kA, 6 kA, personalizable"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C, B, D, personalizable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60898-1"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Aleación de cobre de alta conductividad"
+    }
+  ],
+  "metaTitle": "MCB unipolar 6A-63A AC | Interruptor termomagnético riel DIN | Soltree",
+  "metaDescription": "MCB unipolar Soltree de 6A a 63A, 120V/230V AC, curva B/C/D, certificación CE y RoHS. Fábrica ISO 9001, OEM disponible y envíos por volumen a todo el mundo.",
+  "metaKeywords": "MCB 1 polo, interruptor termomagnético unipolar, MCB 6A 63A, MCB riel DIN, proveedor de interruptores termomagnéticos, MCB certificado CE, interruptor AC al por mayor",
+  "imageAlts": [
+    "Interruptor termomagnético unipolar MCB 6-63A Soltree, vista frontal",
+    "Interruptor unipolar MCB-AC-1P, vista lateral con clip para riel DIN",
+    "Detalle de selección de curva de disparo B C D del MCB-AC-1P",
+    "Conexión de bornes y diagrama de cableado del MCB-AC-1P",
+    "MCB-AC-1P instalado en riel DIN de 35mm en un tablero de distribución",
+    "Dimensiones y plano de medidas del MCB-AC-1P",
+    "Etiqueta de certificación CE RoHS y empaque del MCB-AC-1P"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "sourceHash": "125f20cbaac59d08",
+  "name": "Portafusibles RT18-125AM 4P para Riel DIN 125A 690V",
+  "shortDescription": "Portafusibles tetrapolar de 125A 690V para riel DIN y fusibles de Φ22×58mm — desconexión completa 3P+N por fusible para sistemas TN-S/TN-C-S, cuatro indicadores amarillos independientes, ideal para grandes equipos HVAC, CCM y tableros complejos de cuatro hilos.",
+  "description": "En los sistemas de distribución TN-S y TN-C-S, el aislamiento completo implica desconectar los tres conductores de fase y el neutro: dejar uno sin fusible crea un riesgo cuando el neutro se desplaza con cargas desequilibradas. El RT18-125AM 4P de Soltree resuelve esto con cuatro posiciones de fusible independientes en una sola carcasa de 140mm de ancho (4 módulos), que ofrece protección completa 3P+N por fusible en un solo componente para riel DIN. Sus aplicaciones típicas incluyen la alimentación de grandes sistemas HVAC, centros de control de motores con cargas desequilibradas, tableros principales de edificios comerciales y cualquier tablero donde el diseño del sistema o la normativa local exijan el seccionamiento completo por fusible de los cuatro hilos. Cuatro ventanas indicadoras amarillas, una por polo, permiten al equipo de mantenimiento identificar un fusible de fase o de neutro dañado sin tocar conductores energizados. Los conductores de cobre reforzado (conductividad >98%) mantienen la resistencia de contacto por debajo de 5mΩ y la eficiencia de transmisión por encima del 99.5% en los cuatro polos a la vez. Con valores nominales de 125A / 690V, admite fusibles cilíndricos de Φ22×58mm (63A / 80A / 100A / 125A, se venden por separado). Los grandes bornes de cableado y los tornillos de alta calidad proporcionan conexiones firmes y resistentes a las vibraciones. Cada unidad se prueba eléctricamente al 100 % en nuestra planta con certificación ISO 9001 antes del envío. Nota: los fusibles NO están incluidos.",
+  "features": [
+    "Diseño tetrapolar 3P+N — protección por fusible independiente para tres fases y neutro en una sola unidad",
+    "Valores nominales de 125A / 690V — soporta cargas industriales trifásicas de cuatro hilos exigentes",
+    "Compatible con fusibles cilíndricos estándar de Φ22×58mm — repuestos fáciles de conseguir en todo el mundo",
+    "Conductores de cobre reforzado, conductividad >98% — transmisión de energía eficiente",
+    "Resistencia de contacto <5mΩ, eficiencia de transmisión de corriente >99.5% — mínima pérdida de calor",
+    "Cuatro ventanas amarillas independientes de estado del fusible — diagnóstico inmediato de fallas por polo",
+    "4 módulos de 140mm de ancho, montaje a presión en riel DIN de 35mm — instalación rápida",
+    "Carcasa aislante retardante de llama y resistente a altas temperaturas — segura en condiciones de falla",
+    "Bornes de cableado de gran tamaño + tornillos de alta calidad — conexiones firmes y resistentes a las vibraciones",
+    "Certificación CE y RoHS — aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Personalización OEM / ODM disponible — logotipo, etiqueta y empaque",
+    "Fábrica con certificación ISO 9001 y 15 años de trayectoria, más de 200 proyectos entregados en más de 10 países"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "RT18-125AM"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "4P (tetrapolar / 3P+N)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "125A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "690V"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "Φ22×58mm"
+    },
+    {
+      "name": "Capacidades de fusible opcionales",
+      "value": "63A / 80A / 100A / 125A (se venden por separado)"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se compran por separado"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Material aislante altamente retardante de llama y resistente a altas temperaturas"
+    },
+    {
+      "name": "Material del conductor",
+      "value": "Cobre reforzado"
+    },
+    {
+      "name": "Conductividad",
+      "value": ">98%"
+    },
+    {
+      "name": "Resistencia de contacto",
+      "value": "<5mΩ"
+    },
+    {
+      "name": "Eficiencia de transmisión de corriente",
+      "value": ">99.5%"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Riel DIN estándar de 35mm"
+    },
+    {
+      "name": "Dimensiones del producto",
+      "value": "140mm (ancho) × 127mm (alto) × 76mm (prof.)"
+    },
+    {
+      "name": "Indicación del fusible",
+      "value": "Ventana indicadora de estado amarilla (por polo, 4 posiciones)"
+    },
+    {
+      "name": "Diseño de cableado",
+      "value": "Bornes de gran tamaño + tornillos de alta calidad"
+    },
+    {
+      "name": "Características de seguridad",
+      "value": "Retardante de llama, resistente a altas temperaturas, aislamiento seguro"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas trifásicos de cuatro hilos, gabinetes de control industrial, cajas de distribución"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-125AM 4P 125A 690V 3P+N riel DIN | Soltree",
+  "metaDescription": "Portafusibles RT18-125AM 4P para riel DIN, 125A 690V: desconexión completa 3P+N por fusible para sistemas TN-S/TN-C-S, HVAC y CCM, con 4 indicadores amarillos.",
+  "metaKeywords": "portafusibles RT18-125AM 4P, portafusibles 3P+N 125A, portafusibles tetrapolar riel DIN, desconexión por fusible TN-S, portafusibles de neutro 690V, base portafusible cuatro hilos, portafusibles HVAC, portafusibles CCM 4 polos, base portafusible desconexión completa",
+  "imageAlts": [
+    "Portafusibles tetrapolar RT18-125AM 4P Soltree para riel DIN 125A 690V, vista frontal",
+    "Portafusibles RT18-125AM 4P, perfil lateral con clip para riel DIN",
+    "Primer plano de las cuatro ventanas amarillas de estado del fusible del RT18-125AM 4P",
+    "Detalle de los bornes y tornillos de cableado del portafusibles RT18-125AM 4P",
+    "Portafusibles RT18-125AM 4P instalado en riel DIN de 35mm en una caja de distribución",
+    "Plano de dimensiones 140x127x76mm del portafusibles RT18-125AM 4P"
+  ]
+}

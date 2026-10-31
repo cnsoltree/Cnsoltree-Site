@@ -1,0 +1,80 @@
+{
+  "sourceHash": "f37438af44c7e01c",
+  "name": "Medidor de Energía Monofásico QY2P para Riel DIN con Pantalla LED/LCD y Precisión de 0.5%",
+  "shortDescription": "Serie de medidores de energía monofásicos para riel DIN con alta precisión de 0.5% — disponible en tres modelos: QY2P-E (LED, monitoreo completo de 5 parámetros), QY2P-UID (LCD, V/I/kWh simplificado) y QY2P-UIDY (LCD a color mejorada, lectura optimizada). Calibrados en fábrica, aptos para medición residencial, comercial e industrial.",
+  "description": "La serie QY2P es una gama de medidores de energía monofásicos para riel DIN construidos sobre una plataforma común de medición de alta precisión de 0.5%, calibrados en fábrica para un desempeño estable y uniforme. Hay tres modelos disponibles para adaptarse a distintas preferencias de pantalla y necesidades de monitoreo, desde el monitoreo eléctrico completo de 5 parámetros hasta una medición simplificada centrada en los kWh.\n\nEl QY2P-E cuenta con una pantalla LED multicolor y es el modelo más completo de la serie: mide a la vez la tensión, la corriente, la potencia activa, el factor de potencia y el consumo total de energía en tiempo real. Es la opción indicada para quienes necesitan una visión completa del desempeño eléctrico de su circuito: identificar cargas ineficientes, verificar el factor de potencia y seguir el costo de la energía en un solo equipo.\n\nEl QY2P-UID utiliza una pantalla LCD a color de alto contraste y se centra en los tres parámetros de medición principales: tensión, corriente y consumo total de energía (kWh). Su pantalla simplificada y su posicionamiento rentable lo hacen muy adecuado para el seguimiento sencillo del consumo en submedición residencial, propiedades de alquiler y circuitos comerciales ligeros donde no se requiere monitorear el factor de potencia.\n\nEl QY2P-UIDY comparte el mismo conjunto de parámetros V/I/kWh que el QY2P-UID, pero incorpora una LCD a color mejorada con una disposición optimizada y mayor legibilidad. Es la opción de pantalla premium de la serie, pensada para instalaciones donde importan la visibilidad a largo plazo, la nitidez de los dígitos y la estética del tablero. Los tres modelos se instalan en riel DIN estándar de 35mm.",
+  "features": [
+    "Alta precisión de 0.5% en todos los modelos — calibrados en fábrica para mediciones confiables y uniformes",
+    "Montaje en riel DIN de 35mm — compatible con tableros de distribución estándar",
+    "QY2P-E: pantalla LED multicolor — tensión, corriente, potencia activa, factor de potencia y kWh",
+    "QY2P-UID: pantalla LCD a color — tensión, corriente y kWh (simplificado y rentable)",
+    "QY2P-UIDY: pantalla LCD a color mejorada — tensión, corriente y kWh (lectura premium)",
+    "QY2P-E — ideal para el monitoreo completo de parámetros eléctricos y el análisis de calidad de energía",
+    "QY2P-UID — ideal para el seguimiento sencillo del consumo de energía en circuitos residenciales y de alquiler",
+    "QY2P-UIDY — ideal para instalaciones que requieren una pantalla premium y legibilidad a largo plazo",
+    "Medición monofásica para aplicaciones residenciales, comerciales e industriales ligeras"
+  ],
+  "specs": [
+    {
+      "name": "Serie de producto",
+      "value": "QY2P"
+    },
+    {
+      "name": "Modelos disponibles",
+      "value": "QY2P-E / QY2P-UID / QY2P-UIDY"
+    },
+    {
+      "name": "Tipo de instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Fase",
+      "value": "Monofásico"
+    },
+    {
+      "name": "Precisión",
+      "value": "0.5% (alta precisión, calibrado en fábrica)"
+    },
+    {
+      "name": "Pantalla del QY2P-E",
+      "value": "Pantalla LED multicolor"
+    },
+    {
+      "name": "Parámetros del QY2P-E",
+      "value": "Tensión, corriente, potencia activa, factor de potencia, energía (kWh)"
+    },
+    {
+      "name": "Pantalla del QY2P-UID",
+      "value": "Pantalla LCD a color avanzada"
+    },
+    {
+      "name": "Parámetros del QY2P-UID",
+      "value": "Tensión, corriente, energía (kWh)"
+    },
+    {
+      "name": "Pantalla del QY2P-UIDY",
+      "value": "Pantalla LCD a color mejorada (lectura optimizada)"
+    },
+    {
+      "name": "Parámetros del QY2P-UIDY",
+      "value": "Tensión, corriente, energía (kWh)"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Submedición residencial, propiedades de alquiler, circuitos comerciales, medición en industria ligera"
+    }
+  ],
+  "metaTitle": "Medidor de energía monofásico QY2P riel DIN LED LCD precisión 0.5% | Soltree",
+  "metaDescription": "Medidor de energía monofásico QY2P para riel DIN con precisión de 0.5% y tres pantallas: LED (V/I/W/FP/kWh), LCD básica (V/I/kWh) y LCD premium. Para viviendas, alquileres y comercios.",
+  "metaKeywords": "medidor de energía monofásico QY2P riel DIN, medidor kWh monofásico riel DIN precisión 0.5%, medidor de energía LED riel DIN, medidor de energía LCD monofásico, medidor de energía para submedición riel DIN, monitor de energía residencial riel DIN, medidor de voltaje corriente y kWh monofásico, QY2P-E QY2P-UID QY2P-UIDY",
+  "imageAlts": [
+    "Serie de medidores de energía monofásicos QY2P Soltree para riel DIN con pantalla LED y LCD, vista frontal",
+    "Medidor de energía QY2P-E con LED multicolor mostrando lecturas de tensión, corriente, factor de potencia y kWh",
+    "Medidor de energía QY2P-UID con LCD a color avanzada mostrando tensión, corriente y kWh",
+    "Medidor de energía QY2P-UIDY con LCD a color mejorada y disposición de lectura optimizada",
+    "Perfil de montaje en riel DIN de 35mm del medidor de energía serie QY2P",
+    "Medidor de energía QY2P para riel DIN instalado en un tablero de distribución residencial",
+    "Medición monofásica con precisión de 0.5% y calibración de fábrica del medidor de energía QY2P",
+    "Comparación de las tres variantes QY2P-E, QY2P-UID y QY2P-UIDY"
+  ]
+}

@@ -2,18 +2,28 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Img from '@/components/Img.astro';
 import BlogCard from '@/components/BlogCard.astro';
-import { blogPosts, type BlogPost } from '@/lib/data';
+import { type BlogPost } from '@/lib/data';
 import { renderArticleContent, articleFaqs } from '@/lib/markdown';
-import { allArticleGroups } from '@/lib/product-taxonomy';
 import { blogCategoryHref, matchesBlogGroup } from '@/lib/blog-taxonomy';
+import {
+  getAllArticleGroups,
+  getBlogPosts,
+  href,
+  langFromUrl,
+  localizeLinks,
+  locales,
+  t,
+} from '@/i18n';
 interface Props {
   post: BlogPost;
   preview?: boolean;
 }
 const { post, preview = false } = Astro.props;
+const lang = langFromUrl(Astro.url);
+const site = 'https://www.elesoltree.com';
 const rendered = await renderArticleContent(post.content);
-const family = allArticleGroups.find((group) => matchesBlogGroup(post, group));
-const related = blogPosts
+const family = getAllArticleGroups(lang).find((group) => matchesBlogGroup(post, group));
+const related = getBlogPosts(lang)
   .filter(
     (other) => other.slug !== post.slug && other.relatedCategorySlug === post.relatedCategorySlug,
   )
@@ -50,24 +60,24 @@ const breadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { name: 'Home', item: 'https://www.elesoltree.com/' },
-    { name: 'Blog', item: 'https://www.elesoltree.com/blog' },
+    { name: t(lang, 'Home'), item: new URL(href(lang, '/'), `${site}/`).href },
+    { name: t(lang, 'Blog'), item: new URL(href(lang, '/blog'), site).href },
     ...(family
       ? [
           {
             name: family.name,
-            item: new URL(blogCategoryHref(family.slug), 'https://www.elesoltree.com').href,
+            item: new URL(href(lang, blogCategoryHref(family.slug)), site).href,
           },
         ]
       : []),
-    { name: post.title, item: `https://www.elesoltree.com/blog/${post.slug}` },
+    { name: post.title, item: new URL(href(lang, `/blog/${post.slug}`), site).href },
   ].map((item, index) => ({ '@type': 'ListItem', position: index + 1, ...item })),
 };
 ---
 
 <BaseLayout
   noindex={preview}
-  path={preview ? `/admin/article-preview/${post.slug}` : `/blog/${post.slug}`}
+  path={preview ? `/admin/article-preview/${post.slug}` : href(lang, `/blog/${post.slug}`)}
   title={post.metaTitle ?? post.title}
   description={post.metaDescription ?? post.excerpt}
   image={post.image}
@@ -90,20 +100,20 @@ const breadcrumb = {
   <section class="border-b border-gray-100 bg-gray-50 py-12">
     <div class="container">
       <nav aria-label="Breadcrumb" class="mb-4 flex gap-2 text-xs text-gray-400">
-        <a href="/">Home</a>
+        <a href={href(lang, '/')}>{t(lang, 'Home')}</a>
         <span>/</span>
-        <a href="/blog">Blog</a>
+        <a href={href(lang, '/blog')}>{t(lang, 'Blog')}</a>
         {family && (
           <>
             <span>/</span>
-            <a href={blogCategoryHref(family.slug)}>{family.name}</a>
+            <a href={href(lang, blogCategoryHref(family.slug))}>{family.name}</a>
           </>
         )}
       </nav>
       <div class="flex flex-wrap gap-2 text-xs font-semibold text-green-700">
         {family && (
           <a
-            href={blogCategoryHref(family.slug)}
+            href={href(lang, blogCategoryHref(family.slug))}
             class="rounded-full bg-green-50 px-3 py-1.5 hover:bg-green-100"
           >
             {family.name}
@@ -114,14 +124,14 @@ const breadcrumb = {
       <p class="mt-5 text-sm text-gray-500">
         {post.author} ·{' '}
         {post.date
-          ? new Date(post.date).toLocaleDateString('en-US', {
+          ? new Date(post.date).toLocaleDateString(lang === 'en' ? 'en-US' : locales[lang].hreflang, {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
               timeZone: 'UTC',
             })
           : '尚未设置发布日期'}{' '}
-        · {post.readingTime} min read
+        · {t(lang, '{n} min read', { n: post.readingTime })}
       </p>
     </div>
   </section>
@@ -143,15 +153,15 @@ const breadcrumb = {
         )}
         <div
           class="prose prose-sm max-w-none prose-headings:scroll-mt-24 prose-headings:text-gray-900 prose-a:text-green-700 prose-img:rounded-xl"
-          set:html={rendered.code}
+          set:html={localizeLinks(lang, rendered.code)}
         />
       </article>
       <aside>
         <nav
-          aria-label="Table of contents"
+          aria-label={t(lang, 'Table of contents')}
           class="sticky top-24 rounded-xl border border-gray-100 p-5"
         >
-          <h2 class="text-sm font-bold">On this page</h2>
+          <h2 class="text-sm font-bold">{t(lang, 'On this page')}</h2>
           <ul class="mt-4 space-y-3">
             {rendered.metadata.headings
               .filter((heading) => heading.depth === 2)
@@ -166,8 +176,8 @@ const breadcrumb = {
                 </li>
               ))}
           </ul>
-          <a href="/contact" class="btn-primary mt-6 w-full">
-            Ask an Engineer
+          <a href={href(lang, '/contact')} class="btn-primary mt-6 w-full">
+            {t(lang, 'Ask an Engineer')}
           </a>
         </nav>
       </aside>
@@ -175,7 +185,7 @@ const breadcrumb = {
   </section>
   <section class="section-alt">
     <div class="container">
-      <h2 class="section-heading">Related Articles</h2>
+      <h2 class="section-heading">{t(lang, 'Related Articles')}</h2>
       <div class="mt-8 grid gap-5 sm:grid-cols-3">
         {related.map((post) => (
           <BlogCard post={post} />

@@ -1,0 +1,124 @@
+{
+  "sourceHash": "f73d095beabce00a",
+  "name": "Interruptor de Transferencia Automática ATS de 3 Vías STATS-04 con Triple Pantalla de Voltaje y Corriente de Salida",
+  "shortDescription": "ATS de 3 vías con pantalla de 4 parámetros que muestra las tres tensiones de entrada más la corriente de salida en tiempo real — añade visibilidad de la corriente de carga en instalaciones donde monitorear el consumo real es tan crítico como conmutar la fuente. Opciones de 63A / 80A / 100A.",
+  "description": "El STATS-04 de Soltree está diseñado para ingenieros y administradores de instalaciones que necesitan saber no solo qué fuente está activa, sino cuánta corriente consume realmente su carga en cada momento. Su pantalla de 4 parámetros añade la corriente de salida en tiempo real a las tres lecturas de tensión de entrada, lo que elimina la necesidad de una pinza amperimétrica o un submedidor aparte para seguir el comportamiento de la carga durante las transferencias y la operación normal.\n\nPor eso el STATS-04 es preferible al STATS-03 en aplicaciones donde los datos de corriente de carga orientan las decisiones: verificación del dimensionamiento de generadores, puesta en marcha de tableros nuevos por contratistas eléctricos, submedición con ATS en propiedades de alquiler, sistemas solares con almacenamiento que requieren monitorear el equilibrio entre carga y generación, e instalaciones industriales donde la tendencia de sobrecorriente ayuda a anticipar el mantenimiento antes de un disparo.\n\nCuando se detecta una falla en la fuente activa — tensión fuera del rango de sobretensión de 130–300V o de subtensión de 80–210V, o corriente superior al umbral configurado —, el STATS-04 conmuta a la siguiente fuente disponible en menos de 0.2 segundos. La secuencia de prioridad es personalizable, y los retardos de arranque y de recuperación (cada uno de 1–600s) se configuran de forma independiente. Disponible en 63A, 80A y 100A para riel DIN de 35mm.",
+  "features": [
+    "Pantalla de 4 parámetros — 3 tensiones de entrada (L1/L2/L3) + corriente de salida a la vez",
+    "Interruptor de transferencia automática de 3 vías — conmutación por prioridad L1→L2→L3 con secuencia personalizable",
+    "Respuesta de conmutación inferior a 0.2s — transferencia de fuente sin interrupciones y con mínimo tiempo de inactividad",
+    "Protección contra sobretensión — umbral de disparo configurable de 130–300V AC",
+    "Protección contra subtensión — umbral de disparo configurable de 80–210V AC",
+    "Protección contra sobrecorriente — configurable de 1A al máximo nominal",
+    "Retardo de arranque ajustable de 1–600s",
+    "Retardo de recuperación automática ajustable de 1–600s",
+    "Monitoreo de la corriente de carga — corriente de salida en tiempo real visible sin medición adicional",
+    "Montaje en riel DIN de 35mm — compatible con tableros de distribución estándar",
+    "Carcasa de PC retardante de llama (UL94 V-0), vida mecánica ≥10.000 ciclos",
+    "Disponible en corrientes nominales de 63A / 80A / 100A",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "STATS-04"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Interruptor de transferencia automática de 3 entradas con pantalla de corriente"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de protección contra sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de protección contra subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Rango de protección contra sobrecorriente",
+      "value": "1–63A / 1–80A / 1–100A (según el modelo)"
+    },
+    {
+      "name": "Corriente nominal de trabajo",
+      "value": "63A / 80A / 100A (opcional)"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Pantalla de 4 parámetros — tensión de entrada L1/L2/L3 + corriente de salida"
+    },
+    {
+      "name": "Secuencia de conmutación por prioridad",
+      "value": "L1 → L2 → L3 (personalizable)"
+    },
+    {
+      "name": "Tiempo de retardo de arranque",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de retardo de recuperación automática",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de respuesta de conmutación",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +50°C"
+    },
+    {
+      "name": "Humedad relativa",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Funciones principales",
+      "value": "Conmutación por prioridad de 3 vías, protección contra sobretensión/subtensión, protección contra sobrecorriente, monitoreo de tres tensiones + corriente de salida"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Verificación del dimensionamiento de generadores, puesta en marcha de tableros eléctricos, submedición en propiedades de alquiler, monitoreo de carga solar"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "ATS de 3 vías STATS-04 con pantalla de voltaje y corriente 63A–100A | Soltree",
+  "metaDescription": "ATS de 3 vías STATS-04 con pantalla de 4 parámetros: tensiones de entrada L1/L2/L3 más corriente de salida. Protección de voltaje, conmutación <0.2s, 63A–100A. CE y RoHS.",
+  "metaKeywords": "interruptor de transferencia automática STATS-04, ATS 3 vías con pantalla de corriente, ATS con monitor de corriente de salida, ATS con pantalla de voltaje y corriente, ATS 3 entradas 100A riel DIN, ATS monitoreo de carga generador solar, ATS con conmutación por prioridad y medidor de corriente",
+  "imageAlts": [
+    "ATS de 3 vías STATS-04 Soltree con pantalla de 4 parámetros, vista frontal",
+    "Pantalla del STATS-04 mostrando a la vez las tensiones de entrada L1 L2 L3 y la corriente de salida",
+    "Panel de secuencia de prioridad y ajuste de parámetros del ATS STATS-04",
+    "Configuración de los umbrales de protección contra sobretensión y subtensión del STATS-04",
+    "Perfil lateral de montaje en riel DIN del ATS de 3 vías STATS-04",
+    "Interruptor de transferencia automática STATS-04 instalado en el tablero de distribución de una fábrica",
+    "Conexiones de bornes del ATS STATS-04 para tres entradas de 220V y salida de carga",
+    "Opciones de corriente nominal de 63A, 80A y 100A del interruptor de transferencia automática STATS-04"
+  ]
+}

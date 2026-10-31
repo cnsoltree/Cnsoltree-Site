@@ -1,0 +1,64 @@
+{
+  "sourceHash": "eb48728e17a2b684",
+  "name": "Caja Combinadora FV (Blanca) 1 Entrada de String 1 Salida, Doble Interruptor DC 40A y Doble SPD 500V/40kA",
+  "shortDescription": "Caja combinadora FV de 1 string en gabinete blanco IP65 con dos interruptores DC de 40A y dos SPD de 500V/40kA para una protección redundante.",
+  "description": "La HA-8Way-2DCB-2SPD-White es una caja combinadora FV de 1 string y 1 salida con gabinete blanco de plástico retardante de llama, diseñada con protección redundante. Integra dos interruptores automáticos DC de 40A para protección contra sobrecarga y cortocircuito y dos protectores contra sobretensiones de 500V DC, cada uno con corriente máxima de descarga de 40kA, para una defensa reforzada frente a transitorios inducidos por rayos. Con grado de protección IP65 contra polvo y agua, está diseñada para instalación en exteriores en sistemas FV conectados a la red y aislados donde se requiere redundancia adicional o protección bipolar.",
+  "features": [
+    "Configuración de 1 entrada de string FV y 1 salida",
+    "Dos interruptores automáticos DC de 40A para una protección redundante contra sobrecarga y cortocircuito",
+    "Dos SPD de 500V DC, cada uno con corriente máxima de descarga de 40kA",
+    "Carcasa blanca de plástico rígido retardante de llama",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "HA-8Way-2DCB-2SPD-White"
+    },
+    {
+      "name": "Entradas de string FV",
+      "value": "1"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "40A (2 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, 40kA (2 uds.)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Plástico rígido retardante de llama (blanco)"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV blanca doble interruptor 40A y doble SPD | Soltree",
+  "metaDescription": "Caja combinadora FV de 1 string en gabinete blanco IP65 con dos interruptores DC de 40A y dos SPD 500V/40kA para protección redundante. Conectada a la red / aislada. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora blanca, caja combinadora con interruptor DC redundante, caja combinadora doble SPD, interruptor DC 40A, SPD 40kA, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV HA-8Way-2DCB-2SPD-White con gabinete blanco, vista frontal",
+    "Interior de la caja combinadora HA-8Way-2DCB-2SPD-White con dos interruptores DC de 40A",
+    "Detalle de los dos protectores contra sobretensiones de 500V 40kA de la HA-8Way-2DCB-2SPD-White",
+    "Disposición del cableado con protección redundante de la HA-8Way-2DCB-2SPD-White",
+    "Primer plano del gabinete retardante de llama IP65 de la HA-8Way-2DCB-2SPD-White",
+    "Perfil lateral de la HA-8Way-2DCB-2SPD-White",
+    "HA-8Way-2DCB-2SPD-White instalada en exteriores en un sistema FV"
+  ]
+}

@@ -230,6 +230,33 @@ const routes = [
   ...allCategories.map((category) => `/categories/${category.slug}`),
   ...blogPosts.map((post) => `/blog/${post.slug}`),
 ];
+// 西语页面与英文页面一一对应；没有译文的产品不生成西语页面
+const translated = (folder) =>
+  new Set(
+    fs.existsSync(`src/i18n/es/${folder}`)
+      ? fs.readdirSync(`src/i18n/es/${folder}`).map((name) => name.replace(/\.json$/, ''))
+      : [],
+  );
+const translatedIds = translated('products');
+const translatedSlugs = translated('articles');
+const localizedPosts = blogPosts.filter((post) => translatedSlugs.has(post.slug));
+const localizedPairs = [
+  '/',
+  '/products',
+  '/contact',
+  '/about',
+  '/privacy',
+  '/terms',
+  '/solutions/aerosol-fire-extinguisher',
+  ...(localizedPosts.length ? ['/blog'] : []),
+  ...allCategories.filter((category) => !category.deletedAt).map((c) => `/categories/${c.slug}`),
+  ...products.filter((product) => translatedIds.has(product.id)).map((p) => `/products/${p.id}`),
+  ...localizedPosts.map((post) => `/blog/${post.slug}`),
+  ...allArticleGroups
+    .filter((group) => localizedPosts.some((post) => matchesBlogGroup(post, group)))
+    .map((group) => blogCategoryHref(group.slug)),
+].map((route) => [route, route === '/' ? '/es' : `/es${route}`]);
+routes.push(...localizedPairs.map(([, localized]) => localized));
 const root = path.resolve('.vercel/output/static');
 const outputConfig = JSON.parse(fs.readFileSync('.vercel/output/config.json', 'utf8'));
 const redirects = (outputConfig.routes ?? []).filter((route) =>
@@ -330,6 +357,27 @@ for (const group of allArticleGroups) {
 assert(
   fs.readFileSync(path.join(root, 'robots.txt'), 'utf8').includes('www.elesoltree.com/sitemap.xml'),
 );
+const pageHtml = (route) => fs.readFileSync(path.join(root, route, 'index.html'), 'utf8');
+for (const [english, localized] of localizedPairs) {
+  const site = 'https://www.elesoltree.com';
+  const en = pageHtml(english);
+  const es = pageHtml(localized);
+  assert(es.includes('<html lang="es"'), `Spanish page language: ${localized}`);
+  assert(es.includes(`rel="canonical" href="${site}${localized}"`), `Spanish canonical: ${localized}`);
+  for (const html of [en, es])
+    assert(
+      html.includes(`hreflang="en" href="${site}${english}"`) &&
+        html.includes(`hreflang="es" href="${site}${localized}"`),
+      `Reciprocal hreflang: ${english} / ${localized}`,
+    );
+  assert(sitemap.includes(`<loc>${site}${localized}</loc>`), `Spanish sitemap entry: ${localized}`);
+}
+for (const post of blogPosts.filter((item) => !translatedSlugs.has(item.slug)))
+  assert(!exists(`/es/blog/${post.slug}`), `Untranslated article page: ${post.slug}`);
+for (const product of products.filter((item) => !translatedIds.has(item.id))) {
+  assert(!exists(`/es/products/${product.id}`), `Untranslated product page: ${product.id}`);
+  assert(!pageHtml(`/products/${product.id}`).includes('hreflang="es"'), `Dangling hreflang: ${product.id}`);
+}
 const jsFiles = fs.readdirSync(path.join(root, '_astro')).filter((file) => file.endsWith('.js'));
 const clientJs = jsFiles
   .map((file) => fs.readFileSync(path.join(root, '_astro', file), 'utf8'))

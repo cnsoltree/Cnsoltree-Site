@@ -1,0 +1,72 @@
+{
+  "sourceHash": "bb2fe200912ec97d",
+  "name": "Caja Combinadora FV 2 Entradas de String 2 Salidas, Interruptor 500V DC 32A, Fusibles 15A y SPD 40kA",
+  "shortDescription": "Caja combinadora FV de 2 strings y 2 salidas con interruptor DC de 32A, 4 fusibles de 15A y SPD de 500V/40kA en gabinete retardante de llama IP65.",
+  "description": "La HA-12Way-2in2out-500VDC-32A-15AFUSE es una caja combinadora FV de 2 entradas de string y 2 salidas que permite que una sola caja alimente dos canales independientes del inversor. Integra un interruptor automático DC de 32A para protección contra sobrecarga y cortocircuito, 4 fusibles FV de 15A para proteger cada polo del string por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para defender el sistema frente a transitorios inducidos por rayos. Alojada en un gabinete de plástico rígido retardante de llama con grado de protección IP65, está diseñada para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 2 entradas de string FV y 2 salidas",
+    "Interruptor automático DC de 32A para protección contra sobrecarga y cortocircuito",
+    "4 fusibles FV de 15A para proteger cada polo del string por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Carcasa de plástico rígido retardante de llama",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "HA-12Way-2in2out-500VDC-32A-15AFUSE"
+    },
+    {
+      "name": "Entradas de string FV",
+      "value": "2"
+    },
+    {
+      "name": "Salidas",
+      "value": "2"
+    },
+    {
+      "name": "Tensión máxima del sistema",
+      "value": "500V DC"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "32A"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "15A (4 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Plástico rígido retardante de llama"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 2 entradas 2 salidas 500VDC 32A fusible 15A | Soltree",
+  "metaDescription": "Caja combinadora FV de 2 strings y 2 salidas con interruptor DC de 32A, 4 fusibles FV de 15A, SPD 500V/40kA y gabinete IP65. Para sistemas conectados a la red y aislados.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 2 strings 2 salidas, caja combinadora 500VDC, caja combinadora solar con SPD, interruptor DC 32A, fusible FV 15A, caja combinadora IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 2 entradas y 2 salidas HA-12Way-2in2out-500VDC-32A-15AFUSE, vista frontal",
+    "Interior de la caja combinadora HA-12Way-2in2out-500VDC-32A-15AFUSE con interruptor DC de 32A y fusibles",
+    "Disposición del cableado con fusibles FV de 15A de la HA-12Way-2in2out-500VDC-32A-15AFUSE",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la HA-12Way-2in2out-500VDC-32A-15AFUSE",
+    "Gabinete de plástico retardante de llama IP65 de la HA-12Way-2in2out-500VDC-32A-15AFUSE",
+    "HA-12Way-2in2out-500VDC-32A-15AFUSE instalada en exteriores en un sistema FV"
+  ]
+}

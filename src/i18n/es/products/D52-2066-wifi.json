@@ -1,0 +1,114 @@
+{
+  "sourceHash": "9bad4858d80d70c0",
+  "name": "Medidor de Energía Inteligente Tuya WiFi D52-2066 Monitor 6 en 1 para Riel DIN con Control Remoto por App",
+  "shortDescription": "Medidor de energía inteligente Tuya WiFi con pantalla a color 6 en 1 — supervise a distancia tensión, corriente, potencia, factor de potencia, kWh y frecuencia desde la app móvil. Datos en tiempo real e historial de consumo diario, mensual y anual. Riel DIN, 100A, memoria ante cortes de energía. Ideal para hogares, alquileres, hoteles y espacios comerciales.",
+  "description": "Conocer su consumo eléctrico en tiempo real – desde cualquier lugar y sin acudir al tablero – es lo que distingue a un medidor de energía inteligente de uno convencional. La edición WiFi del D52-2066 de Soltree añade conectividad Tuya de 2.4GHz a la plataforma completa de medición 6 en 1, y le permite monitorear en vivo la tensión AC, la corriente, la potencia activa, el factor de potencia, la frecuencia y el consumo en kWh a través de la app móvil Tuya en su teléfono o tableta.\n\nAdemás de las lecturas en tiempo real, la app ofrece un historial detallado del consumo desglosado por día, mes y año, algo práctico para propietarios de inmuebles de alquiler que siguen el consumo de sus inquilinos, administradores de hoteles que revisan el gasto energético por piso y propietarios de viviendas que controlan su costo eléctrico mensual sin esperar la factura. La pantalla LED a color de alta definición muestra a la vez los seis parámetros en el equipo para lecturas en sitio, y la memoria integrada ante cortes de energía conserva los datos de kWh durante las interrupciones.\n\nCompatible con transformadores de corriente (CT) integrados y externos para una instalación flexible en distintas configuraciones de tablero. Mide hasta 100A (resolución de 0.01A) y 40–300V AC, con una precisión de ±1% ±2 dígitos y 2 muestras por segundo. Montaje en riel DIN de 35mm, formato compacto de 54×80×64mm, 150g. Carcasa de PC retardante de llama.",
+  "features": [
+    "Tuya WiFi (2.4GHz) — monitoreo remoto desde la app móvil desde cualquier lugar",
+    "Pantalla a color 6 en 1 — tensión, corriente, potencia (W), factor de potencia, kWh y frecuencia",
+    "Historial de consumo en la app — estadísticas de consumo de energía diarias, mensuales y anuales",
+    "Memoria ante cortes de energía — los datos de kWh se conservan durante las interrupciones",
+    "Funciona con transformadores de corriente (CT) integrados o externos",
+    "Rango de corriente de 100A, resolución de 0.01A",
+    "Rango de tensión de 40–300V AC",
+    "Precisión de ±1% ±2 dígitos, 2 muestras por segundo",
+    "Montaje en riel DIN de 35mm — compacto, de 54×80×64mm y 150g",
+    "Carcasa de PC retardante de llama",
+    "Apto para hogares, propiedades de alquiler, hoteles, oficinas y edificios comerciales"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "D52-2066 (edición WiFi)"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Medidor de energía inteligente Tuya WiFi 6 en 1 para riel DIN"
+    },
+    {
+      "name": "Protocolo de conexión",
+      "value": "Tuya WiFi 2.4GHz"
+    },
+    {
+      "name": "Tipos de CT compatibles",
+      "value": "Integrado / externo (opcional)"
+    },
+    {
+      "name": "Rango de tensión AC",
+      "value": "40.0–300.0V"
+    },
+    {
+      "name": "Rango de corriente AC",
+      "value": "0–100.0A (resolución: 0.01A)"
+    },
+    {
+      "name": "Rango de frecuencia",
+      "value": "45.0–65.0Hz"
+    },
+    {
+      "name": "Rango de factor de potencia",
+      "value": "0.00–1.00 FP"
+    },
+    {
+      "name": "Rango de potencia activa",
+      "value": "0–45.000W (0–9999.9W: resolución de 0.1W; ≥10.000W: resolución de 1W)"
+    },
+    {
+      "name": "Rango de consumo de energía",
+      "value": "0–99.999 kWh (0–999.99 kWh: 0.01 kWh; 1.000–9.999.9 kWh: 0.1 kWh; ≥10.000 kWh: 1 kWh)"
+    },
+    {
+      "name": "Velocidad de muestreo",
+      "value": "2 veces por segundo"
+    },
+    {
+      "name": "Precisión",
+      "value": "±1% ±2 dígitos"
+    },
+    {
+      "name": "Pantalla",
+      "value": "Pantalla LED a color de alta definición"
+    },
+    {
+      "name": "Memoria ante cortes de energía",
+      "value": "Sí — conserva los datos de consumo de energía"
+    },
+    {
+      "name": "Monitoreo remoto",
+      "value": "App Tuya — datos en tiempo real, historial diario/mensual/anual"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "54 × 80 × 64mm"
+    },
+    {
+      "name": "Peso",
+      "value": "150g"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Hogares, propiedades de alquiler, hoteles, oficinas, edificios comerciales"
+    }
+  ],
+  "metaTitle": "Medidor de energía WiFi D52-2066 app Tuya 6 en 1 riel DIN 100A | Soltree",
+  "metaDescription": "Medidor de energía inteligente Tuya WiFi D52-2066: pantalla a color 6 en 1 con monitoreo remoto por app, historial de kWh diario/mensual y memoria ante cortes. Riel DIN, 100A, 40–300V.",
+  "metaKeywords": "medidor de energía Tuya WiFi riel DIN, monitor de energía inteligente con control por app, medidor kWh remoto WiFi, medidor de energía WiFi 100A riel DIN, monitor eléctrico inteligente Tuya, medidor de energía WiFi para propiedades de alquiler, monitoreo de energía para hoteles riel DIN, medidor de energía WiFi 6 en 1 con pantalla a color",
+  "imageAlts": [
+    "Medidor de energía inteligente Tuya WiFi 6 en 1 D52-2066 Soltree para riel DIN con pantalla a color, vista frontal",
+    "App Tuya del medidor WiFi D52-2066 mostrando en el celular tensión, corriente y kWh en tiempo real",
+    "Pantalla a color del medidor inteligente D52-2066 mostrando tensión, corriente, factor de potencia, kWh y frecuencia",
+    "Historial de consumo diario, mensual y anual del medidor de energía WiFi D52-2066 en la app Tuya",
+    "Montaje en riel DIN y cableado de conexión del CT del medidor inteligente Tuya D52-2066",
+    "Medidor de energía WiFi D52-2066 instalado en el tablero de distribución de una propiedad de alquiler",
+    "Formato compacto de 54x80x64mm para riel DIN del monitor de energía inteligente D52-2066",
+    "Funciones de memoria ante cortes de energía y monitoreo remoto del medidor WiFi D52-2066"
+  ]
+}

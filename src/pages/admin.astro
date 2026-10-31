@@ -7,9 +7,10 @@ import GroupManager from '../admin/GroupManager.astro';
 import groupManagerTheme from '../admin/group-manager.css?raw';
 import AnalyticsDashboard from '../admin/AnalyticsDashboard.astro';
 import analyticsTheme from '../admin/analytics-dashboard.css?raw';
-import SeoAssistant from '../admin/SeoAssistant.astro';
-import KnowledgeBase from '../admin/KnowledgeBase.astro';
-import seoTheme from '../admin/seo-workspace.css?raw';
+import AiSettings from '../admin/AiSettings.astro';
+import SeoPlanning from '../admin/SeoPlanning.astro';
+import topicPlanningTheme from '../admin/topic-planning.css?raw';
+import aiSettingsTheme from '../admin/ai-settings.css?raw';
 import OnlinePublishPanel from '../admin/OnlinePublishPanel.astro';
 import assistant from '../admin/assistant.svg?url';
 import { onlineAdminEnabled, requireAdmin } from '../lib/admin-server';
@@ -54,7 +55,8 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <style is:inline set:html={adminTheme}></style>
     <style is:inline set:html={groupManagerTheme}></style>
     <style is:inline set:html={analyticsTheme}></style>
-    <style is:inline set:html={seoTheme}></style>
+    <style is:inline set:html={aiSettingsTheme}></style>
+    <style is:inline set:html={topicPlanningTheme}></style>
     <script is:inline>
       window.CMS_MANUAL_INIT = true;
       try {
@@ -130,7 +132,12 @@ Astro.response.headers.set('Cache-Control', 'no-store');
           </svg>
           <span class="studio-menu-label">数据看板</span>
         </a>
-        <a class="studio-nav-item" href="/admin/seo" data-studio-nav="seo" aria-label="SEO 助手">
+        <a
+          class="studio-nav-item"
+          href="/admin/seo-planning"
+          data-studio-nav="seo-planning"
+          aria-label="SEO文章规划"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -140,10 +147,29 @@ Astro.response.headers.set('Cache-Control', 'no-store');
             stroke-linejoin="round"
             aria-hidden="true"
           >
-            <circle cx="10" cy="10" r="6" />
-            <path d="m15 15 5 5M7 11l2-2 2 1 2-3" />
+            <path d="M14 3H5v18h14V8ZM14 3v5h5M8 12h8M8 16h5" />
           </svg>
-          <span class="studio-menu-label">SEO 助手</span>
+          <span class="studio-menu-label">SEO文章规划</span>
+        </a>
+        <a
+          class="studio-nav-item"
+          href="/admin/operations"
+          data-studio-nav="operations"
+          aria-label="运营计划"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="5" width="18" height="16" rx="2" />
+            <path d="M7 3v4M17 3v4M3 11h18M7 15h1M12 15h1M17 15h1M7 18h1M12 18h1" />
+          </svg>
+          <span class="studio-menu-label">运营计划</span>
         </a>
         <div class="studio-content-group">
           <button
@@ -191,9 +217,9 @@ Astro.response.headers.set('Cache-Control', 'no-store');
         </div>
         <a
           class="studio-nav-item"
-          href="/admin/knowledge"
-          data-studio-nav="knowledge"
-          aria-label="知识库"
+          href="/admin/settings"
+          data-studio-nav="settings"
+          aria-label="设置"
         >
           <svg
             viewBox="0 0 24 24"
@@ -204,10 +230,10 @@ Astro.response.headers.set('Cache-Control', 'no-store');
             stroke-linejoin="round"
             aria-hidden="true"
           >
-            <path d="M12 6.5c-2.5-2-6-2-9-1v14c3-1 6.5-1 9 1 2.5-2 6-2 9-1v-14c-3-1-6.5-1-9 1Z" />
-            <path d="M12 6.5v14M6 9h3M15 9h3M6 12.5h3M15 12.5h3" />
+            <path d="m9 3-.6 2.4-2 .9-2.2-.7-2 3.4 1.7 1.8v2.4L2.2 15l2 3.4 2.2-.7 2 .9L9 21h4l.6-2.4 2-.9 2.2.7 2-3.4-1.7-1.8v-2.4L19.8 9l-2-3.4-2.2.7-2-.9L13 3Z" />
+            <circle cx="11" cy="12" r="3" />
           </svg>
-          <span class="studio-menu-label">知识库</span>
+          <span class="studio-menu-label">设置</span>
         </a>
       </nav>
       <div class="studio-sidebar-footer">
@@ -264,8 +290,8 @@ Astro.response.headers.set('Cache-Control', 'no-store');
     <ArticleTable />
     <GroupManager />
     <AnalyticsDashboard />
-    <SeoAssistant />
-    <KnowledgeBase />
+    <AiSettings />
+    <SeoPlanning />
     <div id="studio-article-editor-heading" class="article-editor-heading" hidden>
       <h1>新建文章</h1>
       <p>专注写作，轻松整理文章与搜索信息。</p>

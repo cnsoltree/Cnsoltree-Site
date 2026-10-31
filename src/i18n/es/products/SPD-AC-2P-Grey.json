@@ -1,0 +1,86 @@
+{
+  "sourceHash": "eed700f30e7e348a",
+  "name": "Protector contra Sobretensiones AC 2P 385V 40kA - SPD Modo Completo L-N/L-PE/N-PE para Circuitos Residenciales e Industriales",
+  "shortDescription": "Protector contra sobretensiones bipolar de 385VAC en modo completo, con protección L-N, L-PE y N-PE. Descarga máxima de 40kA, nivel de protección – .0kV, respuesta <25ns – SPD modular para riel DIN, reemplazable en caliente, para tableros residenciales e industriales pequeños.",
+  "description": "El SPD-AC-2P-Grey es un dispositivo de protección contra sobretensiones AC bipolar que ofrece protección en modo completo en las tres rutas – L-N, L-PE y N-PE – en un solo módulo. Esta cobertura integral asegura que los equipos eléctricos monofásicos y los instrumentos de precisión queden protegidos contra sobretensiones transitorias, sin importar en qué conductor aparezca la sobretensión. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión se mantiene en – .0kV. Su núcleo es un varistor de óxido metálico (MOV) que responde en menos de 25 nanosegundos para una supresión instantánea. Compatible con sistemas AC monofásicos y sistemas IT, el SPD-AC-2P se conecta mediante bornes L (entrada/salida) y N (entrada/salida) y se monta a presión en un riel DIN estándar de 35mm. La carcasa gris de PC retardante de llama (UL94 V-0) tiene un diseño modular reemplazable en caliente para el mantenimiento sin recablear. Apto para tableros principales, subtableros y tableros de circuitos industriales pequeños.",
+  "features": [
+    "Protección bipolar en modo completo: L-N, L-PE y N-PE en un solo módulo",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .0kV: protege equipos monofásicos e instrumentos de precisión",
+    "Tiempo de respuesta ultrarrápido <25ns: supresión instantánea de transitorios",
+    "Núcleo de varistor de óxido metálico (MOV): excelente conductividad y resistencia a la corrosión",
+    "Compatible con sistemas AC monofásicos y sistemas IT",
+    "Diseño modular reemplazable en caliente: se sustituye sin recablear",
+    "Carcasa de PC retardante de llama (UL94 V-0), gris, montaje en riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "2P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "Tipo de sistema",
+      "value": "Sistema AC monofásico, sistema IT"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "L-N, L-PE, N-PE (modo completo)"
+    },
+    {
+      "name": "Cableado",
+      "value": "L (entrada/salida), N (entrada/salida)"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV)"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), gris"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Tablero principal, subtablero, circuitos industriales pequeños"
+    }
+  ],
+  "metaTitle": "SPD 2P 385V 40kA modo completo L-N L-PE N-PE | Soltree",
+  "metaDescription": "Protector contra sobretensiones AC 2P 385VAC en modo completo: L-N, L-PE y N-PE en un módulo. 40kA máx., – .0kV, <25ns. Riel DIN, reemplazable en caliente.",
+  "metaKeywords": "protector contra sobretensiones AC 2P, SPD modo completo, SPD L-N L-PE N-PE, SPD 385V, SPD 40kA, SPD monofásico, SPD residencial, protector contra sobretensiones riel DIN, SPD MOV, SPD sistema IT",
+  "imageAlts": [
+    "Protector contra sobretensiones AC bipolar SPD-AC-2P-Grey, vista frontal – SPD gris para riel DIN",
+    "Diagrama de cableado del SPD-AC-2P-Grey – conexión de bornes L y N de entrada/salida",
+    "Rutas de protección en modo completo del SPD-AC-2P-Grey – L-N, L-PE y N-PE",
+    "Detalle del componente principal MOV del SPD-AC-2P-Grey – varistor de óxido metálico",
+    "Primer plano del módulo de protección en modo completo 385V 40kA del SPD-AC-2P-Grey",
+    "Diseño modular reemplazable en caliente del SPD-AC-2P-Grey en riel DIN de 35mm",
+    "SPD-AC-2P-Grey instalado en un tablero principal residencial"
+  ]
+}

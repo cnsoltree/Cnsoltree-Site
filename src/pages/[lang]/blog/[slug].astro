@@ -1,0 +1,11 @@
+---
+import ArticleDetail from '@/components/ArticleDetail.astro';
+import { getBlogPosts, translatedLangs } from '@/i18n';
+export function getStaticPaths() {
+  return translatedLangs.flatMap((lang) =>
+    getBlogPosts(lang).map((post) => ({ params: { lang, slug: post.slug }, props: { post } })),
+  );
+}
+---
+
+<ArticleDetail post={Astro.props.post} />

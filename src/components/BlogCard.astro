@@ -1,21 +1,25 @@
 ---
 import type { BlogPost } from '@/lib/data';
 import Img from '@/components/Img.astro';
-import { allArticleGroups } from '@/lib/product-taxonomy';
 import { matchesBlogGroup } from '@/lib/blog-taxonomy';
+import { getAllArticleGroups, href, langFromUrl, locales, t } from '@/i18n';
 interface Props {
   post: BlogPost;
 }
 const { post } = Astro.props;
-const family = allArticleGroups.find((group) => matchesBlogGroup(post, group));
-const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-});
+const lang = langFromUrl(Astro.url);
+const family = getAllArticleGroups(lang).find((group) => matchesBlogGroup(post, group));
+const formattedDate = new Date(post.date).toLocaleDateString(
+  lang === 'en' ? 'en-US' : locales[lang].hreflang,
+  {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  },
+);
 ---
 
-<a href={`/blog/${post.slug}`} class="card group flex flex-col" aria-label={post.title}>
+<a href={href(lang, `/blog/${post.slug}`)} class="card group flex flex-col" aria-label={post.title}>
   {/* Cover Image */}
   <div class="relative h-48 w-full overflow-hidden bg-gray-100">
     <Img
@@ -48,7 +52,7 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     {/* Meta */}
     <div class="mt-4 flex items-center justify-between text-xs text-gray-400">
       <span>{formattedDate}</span>
-      <span>{post.readingTime} min read</span>
+      <span>{t(lang, '{n} min read', { n: post.readingTime })}</span>
     </div>
   </div>
 </a>

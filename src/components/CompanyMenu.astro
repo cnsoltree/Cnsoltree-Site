@@ -1,5 +1,7 @@
 ---
 import { companyLinks } from '@/lib/company-navigation';
+import { href, langFromUrl, t } from '@/i18n';
+const lang = langFromUrl(Astro.url);
 ---
 
 <div data-mega-menu>
@@ -10,7 +12,7 @@ import { companyLinks } from '@/lib/company-navigation';
     aria-controls="desktop-company-menu"
     class="flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-gray-600 hover:bg-green-50 hover:text-green-700"
   >
-    Company
+    {t(lang, 'Company')}
     <svg
       class="nav-chevron"
       viewBox="0 0 20 20"
@@ -33,27 +35,29 @@ import { companyLinks } from '@/lib/company-navigation';
     <div class="grid max-h-[calc(100dvh-5rem)] grid-cols-[230px_minmax(0,1fr)] overflow-y-auto xl:grid-cols-[250px_minmax(0,1fr)]">
       <div class="flex flex-col items-start bg-gray-50 px-8 py-10">
         <p class="text-xs font-bold uppercase tracking-widest text-green-700">
-          Meet Your Supply Partner
+          {t(lang, 'Meet Your Supply Partner')}
         </p>
-        <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900">Inside Soltree</h2>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900">{t(lang, 'Inside Soltree')}</h2>
         <p class="mt-5 text-sm leading-7 text-gray-500">
-          Get to know the people, processes and manufacturing support behind our electrical
-          products.
+          {t(
+            lang,
+            'Get to know the people, processes and manufacturing support behind our electrical products.',
+          )}
         </p>
         <a
-          href="/about"
+          href={href(lang, '/about')}
           class="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-green-700 hover:text-green-900"
         >
-          Discover Soltree <span aria-hidden="true">↗</span>
+          {t(lang, 'Discover Soltree')} <span aria-hidden="true">↗</span>
         </a>
       </div>
       <nav
-        aria-label="Company information"
+        aria-label={t(lang, 'Company information')}
         class="grid grid-cols-2 divide-gray-100 px-6 py-5 xl:grid-cols-4"
       >
         {companyLinks.map((link, index) => (
           <a
-            href={link.href}
+            href={href(lang, link.href)}
             class="group flex min-h-40 flex-col border-b border-gray-100 px-5 py-6 transition-colors hover:bg-green-50 focus-visible:bg-green-50 focus-visible:outline-green-700 xl:border-r xl:[&:nth-child(4n)]:border-r-0"
           >
             <span class="text-xs font-bold tracking-wider text-green-700">
@@ -62,9 +66,9 @@ import { companyLinks } from '@/lib/company-navigation';
             <div class="mt-3 flex items-start gap-4">
               <div class="flex-1">
                 <h3 class="text-sm font-semibold text-gray-900 group-hover:text-green-700">
-                  {link.name}
+                  {t(lang, link.name)}
                 </h3>
-                <p class="mt-2 text-xs leading-6 text-gray-500">{link.description}</p>
+                <p class="mt-2 text-xs leading-6 text-gray-500">{t(lang, link.description)}</p>
               </div>
               <span class="mt-0.5 text-gray-400 group-hover:text-green-700" aria-hidden="true">
                 ↗

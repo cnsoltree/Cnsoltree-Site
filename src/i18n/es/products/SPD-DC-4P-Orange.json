@@ -1,0 +1,87 @@
+{
+  "sourceHash": "1f6602cf2cdee992",
+  "name": "Protector contra Sobretensiones DC 4P 1000V/1500V 40kA - SPD FV de Doble Entrada para Inversores con Doble MPPT y Almacenamiento de Energía",
+  "shortDescription": "Protector contra sobretensiones DC tetrapolar de doble entrada para sistemas FV de 1000VDC/1500VDC. Protección independiente de dos circuitos DC (DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE). Descarga máxima de 40kA – para inversores con doble MPPT, cajas combinadoras FV y sistemas de almacenamiento de energía.",
+  "description": "El SPD-DC-4P-Orange es un dispositivo de protección contra sobretensiones DC tetrapolar de alta tensión diseñado para sistemas fotovoltaicos con doble entrada DC, compatible con 1000VDC y 1500VDC. A diferencia de los SPD DC de una sola entrada, ofrece dos circuitos de protección totalmente independientes – DC1 (DC1+/PE y DC1-/PE) y DC2 (DC2+/PE y DC2-/PE) – de modo que una sola unidad protege a la vez los dos canales de entrada de un inversor con doble MPPT o dos arreglos FV distintos en una caja combinadora. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión es de – .0kV por canal. El núcleo de varistor de óxido metálico (MOV) de alta energía responde en menos de 25 nanosegundos. El diseño modular reemplazable en caliente permite sustituir cada módulo de polo sin recablear. La carcasa naranja de PC retardante de llama (UL94 V-0) se monta en un riel DIN estándar de 35mm y está pensada para gabinetes de distribución DC y entradas DC de inversores en sistemas solares y de almacenamiento de energía.",
+  "features": [
+    "Protección tetrapolar de doble entrada: dos circuitos DC independientes en un solo módulo",
+    "Protege a la vez DC1 (DC1+/PE, DC1-/PE) y DC2 (DC2+/PE, DC2-/PE)",
+    "Alta tensión: compatible con sistemas FV de 1000VDC y 1500VDC",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .0kV por canal",
+    "Respuesta ultrarrápida <25ns: núcleo MOV de alta energía para una limitación instantánea",
+    "Ideal para inversores con doble MPPT, cajas combinadoras FV y sistemas de almacenamiento de energía",
+    "Diseño modular reemplazable en caliente, carcasa naranja de PC retardante de llama, riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "1000VDC / 1500VDC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "Sistema de aplicación",
+      "value": "Sistema fotovoltaico DC (doble entrada)"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "DC1+/PE, DC1-/PE, DC2+/PE, DC2-/PE (doble independiente)"
+    },
+    {
+      "name": "Cableado",
+      "value": "4 bornes: DC1+, DC1-, DC2+, DC2-"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV) de alta energía"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), naranja"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Inversores con doble MPPT, cajas combinadoras FV, sistemas de almacenamiento de energía"
+    }
+  ],
+  "metaTitle": "SPD DC 4P naranja 1000V/1500V 40kA doble MPPT | Soltree",
+  "metaDescription": "SPD DC tetrapolar naranja de doble entrada para FV de 1000VDC y 1500VDC. Dos circuitos independientes DC1 y DC2 en un módulo DIN. 40kA Imax, – .0kV por canal, MOV <25ns.",
+  "metaKeywords": "protector contra sobretensiones DC 4P, SPD doble MPPT, SPD DC doble entrada, SPD 1000V DC, SPD 1500V DC, SPD caja combinadora FV, SPD almacenamiento de energía, SPD entrada DC inversor, SPD DC naranja, protector DC alta tensión",
+  "imageAlts": [
+    "Protector contra sobretensiones DC tetrapolar de doble entrada SPD-DC-4P-Orange, vista frontal – SPD FV naranja",
+    "Protección de doble circuito del SPD-DC-4P-Orange – canales independientes DC1 y DC2",
+    "Cableado de 4 bornes del SPD-DC-4P-Orange – conexión DC1+, DC1-, DC2+, DC2-",
+    "Núcleo MOV de alta energía del SPD-DC-4P-Orange para protección DC de doble entrada 1000V/1500V",
+    "Detalle de la descarga de 40kA y del nivel de protección – .0kV del SPD-DC-4P-Orange",
+    "Diseño modular reemplazable en caliente del SPD-DC-4P-Orange en riel DIN de 35mm",
+    "SPD-DC-4P-Orange instalado en la entrada DC de un inversor con doble MPPT",
+    "SPD-DC-4P-Orange en caja combinadora FV y sistema de almacenamiento de energía"
+  ]
+}

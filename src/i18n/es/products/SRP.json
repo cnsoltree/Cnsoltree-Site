@@ -1,0 +1,113 @@
+{
+  "sourceHash": "658c4d04957daac6",
+  "name": "Protector Diferencial Inteligente con Reconexión Tuya WiFi SRP 63A 10 en 1 con Pantalla TFT y Medición de Energía",
+  "shortDescription": "Protector diferencial inteligente 10 en 1 con reconexión y Tuya WiFi — protección contra fugas, sobretensión/subtensión, sobrecorriente y sobrecarga, además de tensión, corriente, potencia, kWh, frecuencia y factor de potencia en tiempo real. Pantalla a color TFT de 1.46\", reconexión automática, 63A, vida mecánica de 1.000.000 de maniobras. Alexa y Google Assistant.",
+  "description": "Los interruptores inteligentes estándar se ocupan de la conmutación y del monitoreo básico. El SRP de Soltree va más allá: añade protección contra fugas (diferencial) y reconexión automática al conjunto completo de funciones de un interruptor inteligente, por lo que es la opción indicada para circuitos donde la seguridad ante fallas a tierra es un requisito junto con el control remoto y el monitoreo de energía. Integra diez funciones en una unidad compacta para riel DIN: protección contra fugas, sobretensión, subtensión, sobrecorriente, sobrecarga y protección con retardo, además del seguimiento en tiempo real de tensión, corriente, potencia activa, kWh acumulados, frecuencia y factor de potencia.\n\nLa pantalla a color TFT de 1.46\" es un diferenciador clave: una pantalla a color de alta definición y gran ángulo de visión montada en el propio dispositivo muestra de un vistazo todos los parámetros eléctricos principales sin abrir la app, algo útil durante la instalación, la puesta en marcha y las inspecciones rutinarias del tablero con poca luz. La función de reconexión automática permite que el dispositivo intente restablecer la energía tras un disparo por falla, configurable para circuitos donde los cortes breves son aceptables y se busca minimizar las visitas para el reinicio manual.\n\nLa conectividad WiFi funciona con Tuya/Smart Life para encendido/apagado remoto, programación horaria y acceso a los datos de energía desde cualquier lugar. Compatible con control por voz de Amazon Alexa y Google Assistant. Corriente nominal ajustable de 0.1A–63A, AC 80–300V (110V/220V) 50/60Hz. Vida mecánica de 1.000.000 de maniobras y vida eléctrica de 100.000 maniobras, muy superiores a las de los interruptores inteligentes estándar. IP20, temperatura de operación de -10℃ a +60℃, solo para uso interior en AC. Requiere WiFi de 2.4GHz; no es compatible con 5GHz.",
+  "features": [
+    "Protección contra fugas (diferencial) — seguridad ante fallas a tierra para circuitos de cocinas, baños y zonas húmedas",
+    "Reconexión automática — intenta restablecer la energía automáticamente tras un disparo por falla (configurable)",
+    "10 en 1: protección contra fugas, sobretensión/subtensión, sobrecorriente, sobrecarga y con retardo + monitoreo de V/I/W/kWh/Hz/FP",
+    "Pantalla a color TFT de 1.46\" — lectura completa de parámetros en el dispositivo sin abrir la app",
+    "App Tuya / Smart Life — encendido/apagado remoto, programación y datos de energía desde cualquier lugar",
+    "Control por voz con Amazon Alexa y Google Assistant",
+    "Corriente nominal ajustable: 0.1A–63A",
+    "AC 80–300V (110V/220V), 50/60Hz",
+    "Vida mecánica: 1.000.000 de maniobras — 10 veces más que los interruptores inteligentes estándar",
+    "Vida eléctrica: 100.000 maniobras",
+    "Montaje en riel DIN de 35mm, IP20, -10℃ a +60℃",
+    "Solo WiFi de 2.4GHz. Solo para uso interior en AC. Cableado L+N, alimentación por la parte superior."
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "SRP"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Protector diferencial inteligente con reconexión Tuya WiFi y medición de energía"
+    },
+    {
+      "name": "Tensión de operación",
+      "value": "AC 80–300V (110V/220V)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "0.1A–63A (ajustable)"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Pantalla",
+      "value": "Pantalla a color TFT de 1.46\""
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Fugas, sobretensión, subtensión, sobrecorriente, sobrecarga, retardo"
+    },
+    {
+      "name": "Parámetros de monitoreo",
+      "value": "Tensión, corriente, potencia (W), energía (kWh), frecuencia, factor de potencia"
+    },
+    {
+      "name": "Reconexión automática",
+      "value": "Sí (configurable)"
+    },
+    {
+      "name": "Métodos de control",
+      "value": "App WiFi, control por voz, botón local"
+    },
+    {
+      "name": "Apps compatibles",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Control por voz",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "Estándar WiFi",
+      "value": "Solo 2.4GHz (5GHz no compatible)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "1.000.000 de maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "100.000 maniobras"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-10℃ ~ +60℃"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Viviendas, oficinas, bodegas, circuitos de zonas húmedas, pequeños entornos industriales"
+    },
+    {
+      "name": "Nota importante",
+      "value": "Solo para uso interior en AC. Cableado L+N, alimentación por la parte superior. Solo WiFi de 2.4GHz."
+    }
+  ],
+  "metaTitle": "Protector diferencial inteligente Tuya WiFi SRP 63A pantalla TFT | Soltree",
+  "metaDescription": "Protector diferencial inteligente SRP con reconexión y Tuya WiFi, 10 en 1: fugas, sobretensión/subtensión, sobrecorriente y monitoreo V/I/W/kWh/Hz/FP. Pantalla TFT de 1.46\", 63A.",
+  "metaKeywords": "protector diferencial inteligente Tuya WiFi, interruptor diferencial inteligente WiFi riel DIN, interruptor diferencial con reconexión inteligente, interruptor WiFi con reconexión automática 63A, interruptor inteligente con protección contra fugas y monitoreo de energía, interruptor inteligente 10 en 1 con pantalla TFT, protector de falla a tierra WiFi riel DIN, RCBO inteligente app Tuya Alexa",
+  "imageAlts": [
+    "Protector diferencial inteligente con reconexión Tuya WiFi SRP Soltree con pantalla a color TFT de 1.46 pulgadas, vista frontal",
+    "Pantalla TFT del protector diferencial inteligente SRP mostrando tensión, corriente, factor de potencia, kWh y frecuencia",
+    "Función de reconexión automática y ajustes de umbrales de protección del protector diferencial WiFi SRP en la app Tuya",
+    "Interruptor inteligente 10 en 1 SRP con protección contra fugas, sobretensión, subtensión, sobrecorriente y sobrecarga",
+    "Instalación en riel DIN del protector diferencial inteligente con reconexión SRP en una caja de distribución",
+    "Interfaz de la app Tuya Smart Life del SRP para control remoto, monitoreo de energía y programación"
+  ]
+}

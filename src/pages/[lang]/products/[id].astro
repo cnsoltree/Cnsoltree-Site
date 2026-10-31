@@ -1,0 +1,11 @@
+---
+import ProductDetail from '@/components/ProductDetail.astro';
+import { getProducts, translatedLangs } from '@/i18n';
+export function getStaticPaths() {
+  return translatedLangs.flatMap((lang) =>
+    getProducts(lang).map((product) => ({ params: { lang, id: product.id }, props: { product } })),
+  );
+}
+---
+
+<ProductDetail product={Astro.props.product} />

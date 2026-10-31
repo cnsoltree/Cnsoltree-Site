@@ -1,0 +1,89 @@
+{
+  "sourceHash": "4411012732a32dc9",
+  "name": "Interruptor de Transferencia Automática 63A 2P 110V/220V - ATS Clase PC con Conmutación Rápida de 50ms para Hogar y Casas Rodantes",
+  "shortDescription": "ATS bipolar clase PC de 63A para sistemas monofásicos de 110V/220V. Transferencia automática y manual en 50ms con protección integrada contra sobretensión y subtensión – ideal para respaldo de emergencia en el hogar, casas rodantes y aplicaciones con generador.",
+  "description": "El ATS-ST-2P-63A es un interruptor de transferencia automática clase PC (nivel de carga) diseñado para sistemas monofásicos de 110V o 220V AC de hasta 63A. Con un tiempo de transferencia de solo 50ms, conmuta sin interrupciones entre la red eléctrica y una fuente de respaldo (inversor o generador) cuando detecta una falla, manteniendo las cargas conectadas en funcionamiento con una interrupción mínima. El diseño bipolar conmuta a la vez la fase y el neutro, lo que garantiza el aislamiento completo de la fuente de respaldo. La protección integrada contra sobretensión y subtensión supervisa el suministro de forma continua: en sistemas de 110V los umbrales son de 85V – 145V y en sistemas de 220V de 175V – 260V. Admite los modos de conmutación automático y manual, con la Fuente I (red) como prioritaria, y vuelve automáticamente a la red cuando se restablece el suministro. El mecanismo motorizado está alojado en una carcasa de PA6 retardante de llama para un funcionamiento confiable a largo plazo.",
+  "features": [
+    "Conmutación bipolar (fase + neutro) – 2 entradas / 1 salida",
+    "Clase PC (nivel de carga) – soporta la carga nominal completa de forma continua",
+    "Tiempo de transferencia rápido de 50ms (0.05s) – interrupción mínima de la carga",
+    "Doble tensión: compatible con 110V y 220V AC",
+    "Modos de transferencia automático y manual; vuelve a la red automáticamente",
+    "Protección contra sobretensión y subtensión (110V: 85V – 145V; 220V: 175V – 260V)",
+    "Compatible con red eléctrica, inversor y generador",
+    "Carcasa de PA6 retardante de llama con mecanismo motorizado"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "2P (fase + neutro)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de operación: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Monofásico"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase PC (nivel de carga)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente I (red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, inversor, generador"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Protección contra sobretensión",
+      "value": "145V (modo 110V) / 260V (modo 220V)"
+    },
+    {
+      "name": "Protección contra subtensión",
+      "value": "85V (modo 110V) / 175V (modo 220V)"
+    },
+    {
+      "name": "Carcasa",
+      "value": "PA6 retardante de llama"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Respaldo de emergencia en el hogar, casas rodantes"
+    }
+  ],
+  "metaTitle": "ATS-ST 63A 2P 110V/220V | ATS clase PC 50ms con protección de voltaje",
+  "metaDescription": "ATS monofásico ATS-ST de 63A, 2 polos, clase PC para 110V y 220V. Transferencia automática en 50ms y protección contra sobretensión/subtensión. Para hogar, casas rodantes y generadores.",
+  "metaKeywords": "ATS-ST 63A, interruptor de transferencia automática 2P, ATS 110V 220V, ATS clase PC, transferencia automática monofásica, interruptor de respaldo para el hogar, ATS para casa rodante, transferencia en 50ms, ATS con protección de voltaje",
+  "imageAlts": [
+    "ATS 63A 2P 110V/220V, vista frontal – interruptor de transferencia automática clase PC",
+    "Diagrama de cableado del ATS-ST-2P-63A – conexión de 2 entradas y 1 salida",
+    "Estructura interna del ATS 2P – PCB, motor y carcasa de PA6 retardante de llama",
+    "Ajustes de protección de voltaje del ATS monofásico de 63A – 110V y 220V",
+    "Modos de conmutación automático y manual del ATS-ST-2P-63A",
+    "Interruptor de transferencia 63A 2P para respaldo en el hogar y casas rodantes"
+  ]
+}

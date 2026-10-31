@@ -1,0 +1,102 @@
+{
+  "sourceHash": "e830f06a46c43fb2",
+  "name": "Portafusibles RT18-32X 4P para Riel DIN 32A 690V",
+  "shortDescription": "Portafusibles tetrapolar de 32A 690V para riel DIN y fusibles de 10x38mm — desconexión completa 3P+N por fusible para sistemas TN-S y tableros de distribución comerciales, con indicación LED de falla en cada polo.",
+  "description": "En los sistemas de cableado TN-S y TN-C-S, el aislamiento completo del circuito exige proteger con fusible los tres conductores de fase y el neutro: dejar el neutro sin fusible crea un riesgo de desplazamiento de tensión con cargas desequilibradas. El RT18-32X 4P de Soltree ofrece protección completa 3P+N por fusible en una sola carcasa de cuatro módulos, por lo que es la opción correcta para tableros de distribución de iluminación comercial, pequeños tableros de control HVAC y cualquier instalación de cuatro hilos donde la normativa local o el diseño del sistema exijan la desconexión total. Cada uno de los cuatro polos tiene un indicador LED rojo independiente, de modo que un fusible de neutro dañado se identifica con la misma facilidad que una falla de fase. Con valores nominales de 32A y 500V–690V AC, admite fusibles cerámicos estándar de 10x38mm y se instala sin herramientas en cualquier riel DIN de 35mm. La carcasa de PVC retardante de llama y los bornes de tornillo garantizan una operación segura y resistente a las vibraciones. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño tetrapolar 3P+N — protección completa por fusible de fases y neutro en un solo módulo",
+    "Valores nominales de 32A / 500V–690V AC — adecuado para distribución comercial y sistemas de control de 4 hilos",
+    "Compatible con fusibles cerámicos estándar de 10x38mm",
+    "Indicador LED individual en cada polo — incluida la detección de fallas en el neutro",
+    "Carcasa de PVC retardante de llama — segura en condiciones de falla",
+    "Contactos de cobre de alta conductividad — rendimiento estable en los cuatro polos",
+    "Montaje en riel DIN de 35mm sin herramientas",
+    "Estructura compacta de 4 módulos — uso eficiente del espacio en el tablero",
+    "Diseño IP20 a prueba de contacto con los dedos",
+    "Conforme a IEC 60269 y GB 13539",
+    "Certificación CE y RoHS",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Portafusibles tetrapolar"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "4P (tetrapolar / 3P+N)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "32A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (grado V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta conductividad"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "LED (por polo, incluido el neutro)"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP20 (a prueba de contacto)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-5°C a +40°C"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas 3P+N, tableros de distribución comerciales, instalaciones TN-S"
+    },
+    {
+      "name": "Instalación",
+      "value": "Clip para riel DIN sin herramientas"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-32X 4P 32A 690V 3P+N riel DIN | Soltree",
+  "metaDescription": "Portafusibles RT18-32X 4P para riel DIN, 32A 690V, fusibles 10x38mm. Desconexión completa 3P+N para sistemas TN-S y tableros comerciales. Indicador LED por polo, CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-32X 4P, portafusibles 3P+N 32A, portafusibles tetrapolar riel DIN, desconexión por fusible TN-S, portafusibles de neutro, base portafusible distribución comercial, portafusibles cuatro hilos 690V",
+  "imageAlts": [
+    "Portafusibles tetrapolar RT18-32X 4P Soltree para riel DIN 32A 690V, vista frontal",
+    "Portafusibles RT18-32X 4P, perfil lateral con clip para riel DIN",
+    "Primer plano de los cuatro indicadores LED del portafusibles RT18-32X 4P",
+    "Detalle del cableado en bornes de tornillo del portafusibles RT18-32X 4P",
+    "Portafusibles RT18-32X 4P instalado en un tablero de distribución comercial",
+    "Portafusibles RT18-32X 4P con fusibles cerámicos de 10x38mm",
+    "Plano de dimensiones del portafusibles RT18-32X 4P"
+  ]
+}

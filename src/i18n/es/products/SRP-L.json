@@ -1,0 +1,117 @@
+{
+  "sourceHash": "50d307cfb39eeb88",
+  "name": "Protector Diferencial Inteligente con Reconexión Tuya WiFi SRP-L 63A con Botón Físico Prominente y Medición de Energía",
+  "shortDescription": "Protector diferencial inteligente 10 en 1 con reconexión y Tuya WiFi, con botón físico elevado prominente — diseñado para una operación manual local rápida y confiable sin necesidad de la app. Protección contra fugas, sobretensión/subtensión, sobrecorriente y sobrecarga, con medición de energía completa. Pantalla TFT de 1.46\", 63A, reconexión automática.",
+  "description": "El SRP-L de Soltree ofrece la misma plataforma de protección inteligente 10 en 1 y medición de energía que la serie SRP, con una diferencia clave de diseño: un botón físico elevado y prominente pensado para una operación local rápida y directa. En talleres, tableros industriales, cuartos de medidores de propiedades de alquiler y gabinetes de distribución exteriores, donde sacar el teléfono resulta incómodo – o donde hay que hacer un disparo y una reconexión manual de inmediato –, el botón elevado brinda un control táctil de una sola pulsación que puede operarse con guantes de trabajo o con poca visibilidad.\n\nPor eso el SRP-L es la opción preferida en entornos donde el acceso manual local forma parte del trabajo diario, a diferencia de las instalaciones donde todo el control se hace de forma remota desde la app. El control remoto por WiFi, la integración con la app Tuya/Smart Life y los comandos de voz de Alexa/Google Assistant siguen presentes: el SRP-L simplemente añade un mando local más accesible físicamente para situaciones en las que la app no es el camino más rápido.\n\nTodas las funciones de protección y monitoreo son idénticas: protección contra fugas (diferencial), sobretensión, subtensión, sobrecorriente, sobrecarga y protección con retardo, además del seguimiento en tiempo real de tensión, corriente, potencia activa, kWh, frecuencia y factor de potencia en la pantalla a color TFT de 1.46\". La reconexión automática es configurable. Corriente nominal ajustable de 0.1A–63A, AC 80–300V (110V/220V) 50/60Hz. Vida mecánica de 1.000.000 de maniobras. Solo para uso interior en AC, cableado L+N con entrada superior, solo WiFi de 2.4GHz.",
+  "features": [
+    "Botón físico elevado prominente — operación manual local rápida sin la app, funciona con guantes",
+    "Protección contra fugas (diferencial) — seguridad ante fallas a tierra para circuitos de zonas húmedas e industriales",
+    "Reconexión automática — intenta restablecer la energía automáticamente tras un disparo por falla (configurable)",
+    "10 en 1: protección contra fugas, sobretensión/subtensión, sobrecorriente, sobrecarga y con retardo + monitoreo de V/I/W/kWh/Hz/FP",
+    "Pantalla a color TFT de 1.46\" — lectura completa de parámetros en el dispositivo",
+    "App Tuya / Smart Life — encendido/apagado remoto, programación y datos de energía desde cualquier lugar",
+    "Control por voz con Amazon Alexa y Google Assistant",
+    "Corriente nominal ajustable: 0.1A–63A",
+    "AC 80–300V (110V/220V), 50/60Hz",
+    "Vida mecánica: 1.000.000 de maniobras",
+    "Montaje en riel DIN de 35mm, IP20, -10℃ a +60℃",
+    "Solo WiFi de 2.4GHz. Solo para uso interior en AC. Cableado L+N, alimentación por la parte superior."
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "SRP-L"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Protector diferencial inteligente con reconexión Tuya WiFi y botón físico prominente"
+    },
+    {
+      "name": "Botón físico",
+      "value": "Botón elevado prominente — operación manual local directa"
+    },
+    {
+      "name": "Tensión de operación",
+      "value": "AC 80–300V (110V/220V)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "0.1A–63A (ajustable)"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Pantalla",
+      "value": "Pantalla a color TFT de 1.46\""
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Fugas, sobretensión, subtensión, sobrecorriente, sobrecarga, retardo"
+    },
+    {
+      "name": "Parámetros de monitoreo",
+      "value": "Tensión, corriente, potencia (W), energía (kWh), frecuencia, factor de potencia"
+    },
+    {
+      "name": "Reconexión automática",
+      "value": "Sí (configurable)"
+    },
+    {
+      "name": "Métodos de control",
+      "value": "Botón físico elevado, app WiFi, control por voz"
+    },
+    {
+      "name": "Apps compatibles",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Control por voz",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "Estándar WiFi",
+      "value": "Solo 2.4GHz (5GHz no compatible)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "1.000.000 de maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "100.000 maniobras"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-10℃ ~ +60℃"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Talleres, tableros industriales, gabinetes exteriores, cuartos de medidores de propiedades de alquiler"
+    },
+    {
+      "name": "Nota importante",
+      "value": "Solo para uso interior en AC. Cableado L+N, alimentación por la parte superior. Solo WiFi de 2.4GHz."
+    }
+  ],
+  "metaTitle": "Protector diferencial Tuya WiFi SRP-L 63A con botón físico y TFT | Soltree",
+  "metaDescription": "Protector diferencial inteligente SRP-L con reconexión y Tuya WiFi y botón físico elevado: protección y medición 10 en 1, control local con guantes, 63A, pantalla TFT de 1.46\".",
+  "metaKeywords": "protector diferencial WiFi SRP-L con botón físico, interruptor diferencial inteligente con botón elevado riel DIN, protector contra fugas con control manual local, interruptor inteligente WiFi para uso industrial con guantes, protector diferencial Tuya para tablero de taller, RCBO inteligente con reconexión y botón físico, diferencial WiFi 63A riel DIN con control local, protector contra fugas para gabinete exterior con reinicio manual",
+  "imageAlts": [
+    "Protector diferencial inteligente Tuya WiFi SRP-L Soltree con botón físico elevado prominente, vista frontal",
+    "Botón físico elevado del SRP-L para operación manual local directa sin la app",
+    "Pantalla a color TFT del SRP-L mostrando tensión, corriente, factor de potencia, kWh y frecuencia",
+    "Ajustes de reconexión automática y protección 10 en 1 del protector diferencial inteligente SRP-L en la app Tuya",
+    "Instalación en riel DIN del protector diferencial WiFi SRP-L en el tablero de distribución de un taller",
+    "Interfaz de la app Tuya Smart Life del SRP-L para monitoreo de energía y control remoto"
+  ]
+}

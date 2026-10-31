@@ -1,0 +1,87 @@
+{
+  "sourceHash": "0b30443b93b3d56e",
+  "name": "Protector contra Sobretensiones DC 3P 1000V/1500V 40kA - SPD FV Modo Completo para Lado DC del Inversor y Plantas Solares",
+  "shortDescription": "Protector contra sobretensiones DC tripolar de alta tensión para sistemas FV de 1000VDC y 1500VDC. Protección en modo completo: DC+/PE, DC-/PE y DC+/DC-. Descarga máxima de 40kA, nivel de protección – .0kV – para cajas combinadoras FV, lado DC de inversores y plantas solares.",
+  "description": "El SPD-DC-3P-Orange es un dispositivo de protección contra sobretensiones DC tripolar de alta tensión para sistemas fotovoltaicos comerciales y de gran escala, compatible con tensiones de operación de 1000VDC y 1500VDC. Ofrece protección en modo completo en las tres rutas DC a la vez – DC+ a PE, DC- a PE y DC+ a DC- – y garantiza que los inversores, los arreglos FV y las cargas DC queden completamente protegidos frente a sobretensiones inducidas por rayos, transitorios de maniobra y eventos de sobretensión, sin importar qué conductor resulte afectado. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión es de – .0kV. Su núcleo es un varistor de óxido metálico (MOV) de alta energía que responde en menos de 25 nanosegundos. El diseño modular reemplazable en caliente permite sustituir cada módulo sin recablear y reduce al mínimo el tiempo de inactividad en instalaciones energizadas. La carcasa naranja de PC retardante de llama (UL94 V-0) se monta en un riel DIN estándar de 35mm y es apta para gabinetes de distribución DC y cajas combinadoras FV en plantas solares.",
+  "features": [
+    "Protección DC tripolar en modo completo: DC+/PE, DC-/PE y DC+/DC- en una sola unidad",
+    "Alta tensión: compatible con sistemas FV de 1000VDC y 1500VDC",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .0kV: para arreglos FV e inversores de alta tensión",
+    "Respuesta ultrarrápida <25ns: núcleo MOV de alta energía para una limitación instantánea",
+    "Protege inversores, arreglos FV y cargas DC contra rayos y sobretensiones transitorias",
+    "Diseño modular reemplazable en caliente: minimiza el tiempo de inactividad en instalaciones solares energizadas",
+    "Carcasa naranja de PC retardante de llama (UL94 V-0), montaje en riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "3P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "1000VDC / 1500VDC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .0kV"
+    },
+    {
+      "name": "Sistema de aplicación",
+      "value": "Sistema fotovoltaico DC"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "DC+/PE, DC-/PE, DC+/DC- (modo completo)"
+    },
+    {
+      "name": "Cableado",
+      "value": "3 bornes: DC+, DC-, PE"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV) de alta energía"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), naranja"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Caja combinadora FV, lado DC del inversor, planta solar"
+    }
+  ],
+  "metaTitle": "SPD DC 3P naranja 1000V/1500V 40kA modo completo | Soltree",
+  "metaDescription": "SPD DC tripolar naranja en modo completo para FV de 1000VDC y 1500VDC: DC+/PE, DC-/PE y DC+/DC-. 40kA Imax, Up – .0kV, respuesta MOV <25ns. Para inversores y cajas combinadoras.",
+  "metaKeywords": "protector contra sobretensiones DC 3P, SPD 1000V DC, SPD 1500V DC, SPD DC modo completo, SPD caja combinadora FV, SPD lado DC inversor, SPD planta solar, SPD DC alta tensión, SPD DC naranja, protector DC MOV",
+  "imageAlts": [
+    "Protector contra sobretensiones DC tripolar SPD-DC-3P-Orange, vista frontal – SPD FV de alta tensión naranja",
+    "Rutas de protección en modo completo del SPD-DC-3P-Orange – DC+/PE, DC-/PE y DC+/DC-",
+    "Cableado de 3 bornes del SPD-DC-3P-Orange – conexión DC+, DC- y PE",
+    "Núcleo MOV de alta energía del SPD-DC-3P-Orange para protección DC de 1000V/1500V",
+    "Detalle de la descarga de 40kA y del nivel de protección – .0kV del SPD-DC-3P-Orange",
+    "Diseño modular reemplazable en caliente del SPD-DC-3P-Orange en riel DIN de 35mm",
+    "SPD-DC-3P-Orange instalado en caja combinadora FV de una planta solar",
+    "SPD-DC-3P-Orange en el lado DC del inversor de un sistema FV comercial"
+  ]
+}

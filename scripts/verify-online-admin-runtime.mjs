@@ -22,6 +22,7 @@ Object.assign(process.env, {
   ADMIN_ONLINE_ENABLED: 'true',
   NEXT_PUBLIC_SUPABASE_URL: database,
   SUPABASE_SERVICE_ROLE_KEY: 'test-service-key',
+  AI_SETTINGS_ENCRYPTION_KEY: Buffer.alloc(32, 5).toString('base64'),
   ADMIN_GITHUB_TOKEN: 'test-github-token',
 });
 
@@ -75,6 +76,8 @@ let passwordCalls = 0;
 let refreshCalls = 0;
 let writes = 0;
 let conflictNextSave = false;
+let aiSettingsRow = null;
+let planningAiCalls = 0;
 const originalFetch = globalThis.fetch;
 const notFoundHtml = await fs.readFile(path.join(output, 'static/404.html'), 'utf8');
 const publicHome = await fs.readFile(path.join(output, 'static/index.html'), 'utf8');
@@ -95,6 +98,38 @@ globalThis.fetch = async (input, init) => {
       status: 404,
       headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
+  if (url.origin === 'https://api.openai.com' && url.pathname === '/v1/responses') {
+    planningAiCalls++;
+    const body = await request.json();
+    assert.equal(body.store, false);
+    assert.equal(body.text.format.name, 'seo_article_topics');
+    const input = JSON.parse(body.input);
+    return json({
+      status: 'completed',
+      output: [
+        {
+          type: 'message',
+          content: [
+            {
+              type: 'output_text',
+              text: JSON.stringify({
+                topics: [
+                  {
+                    title: 'Offline fixture buyer selection checklist',
+                    keyword: 'fixture selection',
+                    priorityReason: 'Match buyer selection needs.',
+                    intent: 'commercial',
+                    format: 'guide',
+                    topicSlug: input.items[0].slug,
+                  },
+                ],
+              }),
+            },
+          ],
+        },
+      ],
+    });
+  }
   if (url.origin !== database) {
     unexpected.push(`${request.method} ${url.origin}${url.pathname}`);
     throw new Error(
@@ -130,6 +165,19 @@ globalThis.fetch = async (input, init) => {
   }
   if (url.pathname === '/auth/v1/logout') return new Response(null, { status: 204 });
   assert.equal(request.headers.get('authorization'), 'Bearer test-service-key');
+  if (url.pathname === '/rest/v1/soltree_ai_settings') {
+    if (request.method === 'GET')
+      return json(aiSettingsRow ? [structuredClone(aiSettingsRow)] : []);
+    const row = await request.json();
+    if (
+      request.method === 'POST'
+        ? aiSettingsRow
+        : Number(url.searchParams.get('revision')?.slice(3)) !== aiSettingsRow?.revision
+    )
+      return json([]);
+    aiSettingsRow = row;
+    return json([structuredClone(row)]);
+  }
   if (url.pathname === '/rest/v1/soltree_admin_workspace') {
     if (request.method === 'GET') {
       assert.equal(url.searchParams.get('key'), 'eq.main');
@@ -213,11 +261,12 @@ try {
   assert.equal(new URL(anonymous.headers.get('location'), site).pathname, '/admin/login');
   const cleanRoutes = [
     '/admin/analytics',
-    '/admin/seo',
+    '/admin/operations',
+    '/admin/seo-planning',
+    '/admin/settings',
     '/admin/products',
     '/admin/articles',
     '/admin/groups',
-    '/admin/knowledge',
     '/admin/products/new',
     '/admin/articles/new',
     `/admin/products/${productId}/edit`,
@@ -293,6 +342,61 @@ try {
     assert(/;\s*SameSite=Strict/i.test(cookie));
     assert(/;\s*Path=\//i.test(cookie));
   }
+  await data(await request('/api/admin/seo-planning'), 401);
+  await data(
+    await request('/api/admin/seo-planning', { headers: { 'X-Soltree-AI-Mode': 'local' } }),
+    401,
+  );
+  await data(await request('/api/admin/ai-settings'), 401);
+  await data(
+    await request('/api/admin/ai-settings', { headers: { 'X-Soltree-AI-Mode': 'local' } }),
+    401,
+  );
+  const ai = () => request('/api/admin/ai-settings', { cookie: activeCookies });
+  assert.equal((await data(await ai(), 200)).configured, false);
+  const aiKey = `sk-${'runtime-fixture-only'.repeat(3)}`;
+  const savedAi = await data(
+    await request('/api/admin/ai-settings', {
+      cookie: activeCookies,
+      method: 'POST',
+      body: { action: 'save', revision: 0, apiKey: aiKey, model: 'gpt-test' },
+    }),
+    200,
+  );
+  assert.equal(savedAi.configured, true);
+  assert(!JSON.stringify(savedAi).includes(aiKey));
+  assert(!JSON.stringify(aiSettingsRow).includes(aiKey));
+  assert.equal((await data(await ai(), 200)).model, 'gpt-test');
+  await data(
+    await request('/api/admin/ai-settings', {
+      cookie: activeCookies,
+      method: 'POST',
+      body: { action: 'save', revision: 0, model: 'gpt-other' },
+    }),
+    409,
+  );
+  await data(
+    await request('/api/admin/ai-settings', {
+      cookie: activeCookies,
+      method: 'POST',
+      origin: 'https://evil.example',
+      body: { action: 'delete', revision: 1 },
+    }),
+    403,
+  );
+  assert.equal(
+    (
+      await data(
+        await request('/api/admin/ai-settings', {
+          cookie: activeCookies,
+          method: 'POST',
+          body: { action: 'delete', revision: 1 },
+        }),
+        200,
+      )
+    ).configured,
+    false,
+  );
   const admin = await request('/admin', { cookie: activeCookies });
   assert.equal(admin.status, 200);
   assert(admin.headers.get('x-robots-tag')?.includes('noindex'));
@@ -457,6 +561,83 @@ try {
     publicHome,
     'Runtime cloud saves must not mutate deployed static pages',
   );
+  await data(
+    await request('/api/admin/ai-settings', {
+      cookie: activeCookies,
+      method: 'POST',
+      body: { action: 'save', revision: 2, apiKey: aiKey, model: 'gpt-test' },
+    }),
+    200,
+  );
+  const planningUrl = '/api/admin/seo-planning';
+  const readPlanning = () => request(planningUrl, { cookie: activeCookies });
+  const initialPlanning = await data(await readPlanning(), 200);
+  const planningGroup = taxonomy.groups.find(
+    (g) =>
+      !g.deletedAt &&
+      g.items.some(
+        (i) => !i.deletedAt && !taxonomy.categories.find((c) => c.slug === i.category)?.deletedAt,
+      ),
+  );
+  const planningInput = { groupSlug: planningGroup.slug, count: 1, language: 'en' };
+  const planningPost = (body) =>
+    request(planningUrl, { cookie: activeCookies, method: 'POST', body });
+  const generatedPlanning = await data(
+    await planningPost({
+      action: 'generate',
+      revision: initialPlanning.revision,
+      input: planningInput,
+    }),
+    200,
+  );
+  assert.equal(generatedPlanning.batches.length, initialPlanning.batches.length + 1);
+  assert.equal(generatedPlanning.plans.length, 0);
+  const plannedBatch = generatedPlanning.batches.at(-1);
+  const addedPlanning = await data(
+    await planningPost({
+      action: 'addToOperations',
+      revision: generatedPlanning.revision,
+      batchId: plannedBatch.id,
+      ids: [plannedBatch.topics[0].id],
+    }),
+    200,
+  );
+  assert.equal(addedPlanning.plans.length, 1);
+  const updatedPlanning = await data(
+    await planningPost({
+      action: 'updatePlan',
+      revision: addedPlanning.revision,
+      id: addedPlanning.plans[0].id,
+      patch: { status: 'done' },
+    }),
+    200,
+  );
+  assert.equal(updatedPlanning.plans[0].status, 'done');
+  await data(
+    await planningPost({
+      action: 'addToOperations',
+      revision: updatedPlanning.revision,
+      batchId: plannedBatch.id,
+      ids: [plannedBatch.topics[0].id],
+    }),
+    409,
+  );
+  await data(
+    await planningPost({
+      action: 'generate',
+      revision: initialPlanning.revision,
+      input: planningInput,
+    }),
+    409,
+  );
+  assert.equal(planningAiCalls, 1, 'A stale generation request must not spend another API call.');
+  assert.equal(workspace.document.files[productPath], beforeConflict);
+  assert(
+    !Object.keys(workspace.document.files).some(
+      (name) => name.startsWith('src/content/articles/') && !name.includes('runtime-article'),
+    ),
+  );
+  assert.equal(workspace.document.publication, null);
   assert.deepEqual(
     unexpected,
     [],

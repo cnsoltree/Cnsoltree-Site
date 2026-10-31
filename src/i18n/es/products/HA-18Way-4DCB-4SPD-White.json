@@ -1,0 +1,64 @@
+{
+  "sourceHash": "4b1bc6b1674a60f7",
+  "name": "Caja Combinadora FV (Blanca) 1 Entrada de String 1 Salida, 4 Interruptores DC 40A y 4 SPD 500V/40kA",
+  "shortDescription": "Caja combinadora FV de 1 string en gabinete blanco IP65 con 4 interruptores DC de 40A y 4 SPD de 500V/40kA para una protección de alta redundancia.",
+  "description": "La HA-18Way-4DCB-4SPD-White es una caja combinadora FV de 1 string y 1 salida con gabinete blanco de plástico retardante de llama, diseñada para instalaciones que exigen una protección de alta redundancia. Integra cuatro interruptores automáticos DC de 40A para protección contra sobrecarga y cortocircuito y cuatro protectores contra sobretensiones de 500V DC, cada uno con corriente máxima de descarga de 40kA, para una defensa escalonada frente a transitorios inducidos por rayos. Con grado de protección IP65 contra polvo y agua, está diseñada para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 1 entrada de string FV y 1 salida",
+    "4 interruptores automáticos DC de 40A para una protección de alta redundancia contra sobrecarga y cortocircuito",
+    "4 SPD de 500V DC, cada uno con corriente máxima de descarga de 40kA",
+    "Carcasa blanca de plástico rígido retardante de llama",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "HA-18Way-4DCB-4SPD-White"
+    },
+    {
+      "name": "Entradas de string FV",
+      "value": "1"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "40A (4 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, 40kA (4 uds.)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Plástico rígido retardante de llama (blanco)"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV blanca 4 interruptores DC 40A y 4 SPD 40kA | Soltree",
+  "metaDescription": "Caja combinadora FV de 1 string en gabinete blanco IP65 con 4 interruptores DC de 40A y 4 SPD 500V/40kA para protección de alta redundancia. Conectada a la red / aislada. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora blanca, caja combinadora de alta redundancia, cuatro interruptores DC, cuatro SPD, interruptor DC 40A, SPD 40kA, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV HA-18Way-4DCB-4SPD-White con gabinete blanco, vista frontal",
+    "Interior de la caja combinadora HA-18Way-4DCB-4SPD-White con 4 interruptores DC de 40A",
+    "Detalle de los 4 protectores contra sobretensiones de 500V 40kA de la HA-18Way-4DCB-4SPD-White",
+    "Disposición del cableado con protección de alta redundancia de la HA-18Way-4DCB-4SPD-White",
+    "Primer plano del gabinete retardante de llama IP65 de la HA-18Way-4DCB-4SPD-White",
+    "Perfil lateral de la HA-18Way-4DCB-4SPD-White",
+    "HA-18Way-4DCB-4SPD-White instalada en exteriores en un sistema FV"
+  ]
+}

@@ -9,6 +9,7 @@ import {
   createArticleAdminHandler,
 } from './scripts/product-admin-api.mjs';
 import { createTaxonomyAdminHandler } from './scripts/taxonomy-admin-api.mjs';
+import { redirects } from './src/lib/redirects.mjs';
 import { createSeoAdminHandler } from './scripts/seo-admin-api.mjs';
 import { createSeoResearchProvider } from './scripts/seo-research-provider.mjs';
 import { loadEnv } from 'vite';
@@ -42,13 +43,9 @@ export default defineConfig({
   // Preserve existing inline text spacing across the Astro 7 compiler upgrade.
   compressHTML: true,
   trailingSlash: 'never',
-  redirects: {
-    '/landing-pages': { status: 301, destination: '/resources' },
-    '/products/din-rail-aerosol-fire-extinguisher': {
-      status: 301,
-      destination: '/products/Aerosol-DIN-Rail',
-    },
-  },
+  redirects: Object.fromEntries(
+    Object.entries(redirects).map(([from, destination]) => [from, { status: 301, destination }]),
+  ),
   // Keep catalog images generated at build time, alongside the prerendered public pages.
   adapter: vercel({ imageService: false, excludeFiles: privateBuildFiles }),
   integrations: [
@@ -58,11 +55,12 @@ export default defineConfig({
         'astro:config:setup': ({ injectRoute }) => {
           for (const pattern of [
             '/admin/analytics',
-            '/admin/seo',
+            '/admin/operations',
+            '/admin/seo-planning',
+            '/admin/settings',
             '/admin/products',
             '/admin/articles',
             '/admin/groups',
-            '/admin/knowledge',
             '/admin/products/new',
             '/admin/articles/new',
             '/admin/products/[entryKey]/edit',
@@ -85,6 +83,11 @@ export default defineConfig({
     },
   ],
   vite: {
+    server: {
+      fs: {
+        deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/Astro-elesoltree-private/**'],
+      },
+    },
     // Bundle the sanitizer dependency tree: Vercel cannot require its ESM parser,
     // and tracing transformed CommonJS can omit dependencies or lose nested versions.
     ssr: {

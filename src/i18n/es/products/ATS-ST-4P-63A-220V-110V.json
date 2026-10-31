@@ -1,0 +1,89 @@
+{
+  "sourceHash": "0c59024b11dd8b07",
+  "name": "Interruptor de Transferencia Automática 63A 4P 110V/220V - ATS Trifásico Clase PC de 50ms para Uso Comercial",
+  "shortDescription": "ATS tetrapolar clase PC de 63A para sistemas trifásicos de 110V/220V. Conmuta a la vez las 3 fases y el neutro en 50ms – diseñado para hospitales, cámaras frigoríficas y centros de datos.",
+  "description": "El ATS-ST-4P-63A es un interruptor de transferencia automática clase PC (nivel de carga) para sistemas trifásicos con neutro (3L+N), con corriente nominal de 63A y compatible con 110V y 220V AC. Los cuatro polos – tres fases y neutro – conmutan simultáneamente en 50ms, lo que garantiza el aislamiento completo entre fuentes y evita cualquier retroalimentación entre los dos suministros. Cuando falla la red, la unidad transfiere al instante la carga a la fuente de respaldo (inversor o generador); al restablecerse la red, vuelve automáticamente a la prioridad de la Fuente I. La supervisión de tensión integrada ofrece protección contra sobretensión y subtensión en ambos ajustes de tensión: en sistemas de 110V los umbrales son de 85V – 145V y en sistemas de 220V de 175V – 260V. El mecanismo de conmutación motorizado, alojado en una carcasa de PA6 retardante de llama, asegura una operación confiable y segura en entornos comerciales exigentes como hospitales, cámaras frigoríficas y centros de datos.",
+  "features": [
+    "Conmutación tetrapolar (3 fases + neutro a la vez) – 2 entradas / 1 salida",
+    "Clase PC (nivel de carga) – soporta la carga nominal completa de forma continua",
+    "Tiempo de transferencia rápido de 50ms (0.05s) – interrupción de cargas críticas inferior a 50ms",
+    "Doble tensión: compatible con sistemas trifásicos de 110V y 220V AC",
+    "Modos de transferencia automático y manual; vuelve automáticamente a la prioridad de red",
+    "Protección contra sobretensión y subtensión (110V: 85V – 145V; 220V: 175V – 260V)",
+    "Compatible con red eléctrica, inversor y generador",
+    "Carcasa de PA6 retardante de llama con mecanismo motorizado para una larga vida útil"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P (3 fases + neutro)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de operación: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Trifásico con neutro"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase PC (nivel de carga)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente I (red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, inversor, generador"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia",
+      "value": " – .05s (50ms)"
+    },
+    {
+      "name": "Protección contra sobretensión",
+      "value": "145V (modo 110V) / 260V (modo 220V)"
+    },
+    {
+      "name": "Protección contra subtensión",
+      "value": "85V (modo 110V) / 175V (modo 220V)"
+    },
+    {
+      "name": "Carcasa",
+      "value": "PA6 retardante de llama"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Hospitales, cámaras frigoríficas, centros de datos"
+    }
+  ],
+  "metaTitle": "ATS-ST 63A 4P 110V/220V | ATS trifásico clase PC 50ms",
+  "metaDescription": "ATS trifásico ATS-ST de 63A, 4 polos (3L+N), clase PC para 110V y 220V. Transferencia en 50ms, conmutación simultánea 3L+N y protección de voltaje. Para hospitales y centros de datos.",
+  "metaKeywords": "ATS-ST 63A 4P, interruptor de transferencia automática trifásico, ATS 4 polos 110V 220V, ATS clase PC, transferencia trifásica, ATS para hospital, transferencia para centro de datos, ATS con protección de voltaje",
+  "imageAlts": [
+    "ATS 63A 4P 110V/220V, vista frontal – interruptor de transferencia automática trifásico clase PC",
+    "Diagrama de cableado del ATS-ST-4P-63A – conexión tetrapolar de 2 entradas y 1 salida",
+    "Estructura interna del ATS 4P – PCB, motor y carcasa de PA6 retardante de llama",
+    "Ajustes de protección de voltaje del ATS trifásico de 63A – modos de 110V y 220V",
+    "Panel de modos de conmutación automático y manual del ATS-ST-4P-63A",
+    "Interruptor de transferencia tetrapolar de 63A para hospitales, cámaras frigoríficas y centros de datos"
+  ]
+}

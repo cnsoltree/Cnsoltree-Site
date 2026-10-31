@@ -1,0 +1,97 @@
+{
+  "sourceHash": "b8ee9169bdb367b8",
+  "name": "Interruptor Termomagnético MCB 1P DC 6 – 63A",
+  "shortDescription": "Interruptor DC unipolar ultracompacto para proteger strings solares FV: solo 18mm de ancho y 500V DC nominales.",
+  "description": "El MCB DC unipolar de Soltree es la solución que menos espacio ocupa para proteger strings fotovoltaicos individuales y circuitos DC de una sola línea. Con solo 18mm de ancho, cabe donde los interruptores multipolares no caben, por lo que es la opción preferida en cajas combinadoras muy llenas y en gabinetes compactos de baterías aisladas de la red. Con tensión nominal de 500V DC y extinción magnética del arco reforzada, este interruptor corta de forma confiable los persistentes arcos DC que dañarían a los dispositivos diseñados para AC. Cada unidad sale de nuestra fábrica con certificación ISO 9001 solo después de superar una verificación eléctrica al 100 %, lo que da a los instaladores la seguridad de una precisión de disparo uniforme en todo el rango de 6 – 63A. Ya sea que esté cableando un arreglo solar en techo, un rack de telecomunicaciones de 48V o la batería auxiliar de una casa rodante, el MCB DC 1P ofrece protección contra sobrecorriente conforme a la normativa sin desperdiciar espacio en el tablero.",
+  "features": [
+    "Ancho ultracompacto de un solo módulo (18mm): ahorra espacio en el riel DIN de cajas combinadoras saturadas.",
+    "Cámara de extinción del arco para 500V DC: extingue con seguridad arcos DC persistentes que los interruptores AC estándar no pueden manejar.",
+    "9 corrientes nominales (6A – 63A): una sola familia cubre desde pequeños sistemas aislados hasta grandes inversores de string.",
+    "Pruebas eléctricas al 100 % en fábrica: cada unidad se verifica con la curva de disparo correcta antes del envío.",
+    "Programa OEM/ODM completo: impresión personalizada, empaque de marca propia y curvas de disparo modificadas.",
+    "Doble protección termomagnética: respuesta rápida ante cortocircuito y disparo confiable por sobrecarga.",
+    "Montaje a presión en riel DIN de 35mm: instalación y retiro sin herramientas para un mantenimiento rápido en campo."
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "1P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A (DC)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V DC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "6 kA DC"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C (DC)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama, resistente a los rayos UV"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60947-2, TÜV (para FV)"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Contactos de aleación de plata"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas solares FV, distribución de energía DC, sistemas eléctricos marinos"
+    },
+    {
+      "name": "Sistema de extinción del arco",
+      "value": "Extinción magnética del arco reforzada para DC"
+    },
+    {
+      "name": "Método de cableado",
+      "value": "Borne de tornillo, compatible con cable de silicona flexible (con terminal de cobre crimpado)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +70°C"
+    },
+    {
+      "name": "Grado de protección IP",
+      "value": "IP20"
+    }
+  ],
+  "metaTitle": "MCB DC 1P 6 – 63A 500V: interruptor solar | Soltree",
+  "metaDescription": "MCB DC unipolar Soltree: 500V nominales, poder de corte de 6kA, certificación CE y TÜV para solar FV. Diseño ultracompacto de 18mm. OEM disponible. ¡Cotice hoy!",
+  "metaKeywords": "MCB DC 1P, interruptor automático DC unipolar, interruptor 500V DC, MCB solar FV, interruptor fotovoltaico, mini interruptor DC, interruptor DC riel DIN",
+  "imageAlts": [
+    "Interruptor solar MCB DC 1P 500V Soltree, vista frontal",
+    "Interruptor termomagnético DC unipolar, perfil lateral con clip para riel DIN",
+    "Detalle de los bornes de tornillo del MCB-DC-1P",
+    "Primer plano de la cámara interna de extinción del arco del MCB DC unipolar",
+    "Interruptor DC 1P Soltree montado en riel DIN de 35mm",
+    "Etiqueta del MCB-DC-1P con marcas de certificación CE y TÜV",
+    "Empaque y accesorios del MCB DC unipolar 500V"
+  ]
+}

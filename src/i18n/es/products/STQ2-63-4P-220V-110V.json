@@ -1,0 +1,93 @@
+{
+  "sourceHash": "923ff32dacdb2e62",
+  "name": "Transferencia Automática STQ2-63 63A 4P Clase CB 110V/220V - ATS Trifásico+N para Hospitales y Cámaras Frigoríficas",
+  "shortDescription": "ATS tetrapolar clase CB de 63A para 110V/220V trifásico con neutro. Enclavamiento mecánico + protección contra sobretensión/subtensión, transferencia automática en ~2s, admite cargas mixtas trifásicas y monofásicas – para hospitales, cámaras frigoríficas y centros de datos.",
+  "description": "El STQ2-63-4P es un interruptor de transferencia automática clase CB para sistemas trifásicos con neutro (3L+N), con corriente nominal de 63A y compatible con 110V y 220V AC. Al conmutar simultáneamente los cuatro polos – tres fases y neutro –, permite alimentar cargas trifásicas y monofásicas mixtas en la misma instalación, por lo que es muy adecuado para instalaciones como hospitales, plantas frigoríficas y centros de datos, donde el neutro es esencial para una distribución equilibrada. El enclavamiento mecánico integrado impide físicamente que ambas fuentes se conecten al mismo tiempo. Una protección adicional contra sobretensión y subtensión supervisa el suministro de forma continua y suma una capa extra de seguridad. Cuando falla la Fuente Normal (N/red), la unidad transfiere al suministro de respaldo (generador o inversor FV) en aproximadamente 2 segundos; durante la conmutación se produce un breve corte de ~2s. Al restablecerse la red, vuelve automáticamente a la prioridad de la Fuente Normal. La capacidad de carga máxima es de aproximadamente 13.9kW (13870W).",
+  "features": [
+    "Conmutación tetrapolar (3 fases + neutro a la vez) – 2 entradas / 1 salida",
+    "Clase CB – interruptor automático con enclavamiento mecánico que impide la conexión de ambas fuentes",
+    "Protección contra sobretensión y subtensión – seguridad adicional respecto de la versión 3P",
+    "Transferencia automática en ~2s – breve interrupción de 2s aceptable para cargas comerciales",
+    "Doble tensión: compatible con 110V y 220V AC; admite cargas trifásicas y monofásicas",
+    "Modos de transferencia automático y manual; prioridad de la Fuente Normal (N) con retorno automático",
+    "Compatible con red eléctrica, generador e inversor FV",
+    "Capacidad de carga máxima: ~13.9kW (13870W)"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P (3 fases + neutro)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A (rango de trabajo: 6A – 63A)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 220V AC"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Fase",
+      "value": "Trifásico con neutro (compatible con cargas trifásicas y monofásicas)"
+    },
+    {
+      "name": "Tipo",
+      "value": "Clase CB (interruptor automático + enclavamiento mecánico)"
+    },
+    {
+      "name": "Configuración de E/S",
+      "value": "2 entradas / 1 salida"
+    },
+    {
+      "name": "Fuente prioritaria",
+      "value": "Fuente Normal (N / red)"
+    },
+    {
+      "name": "Fuentes compatibles",
+      "value": "Red eléctrica, generador, inversor FV"
+    },
+    {
+      "name": "Modo de conmutación",
+      "value": "Automático y manual"
+    },
+    {
+      "name": "Tiempo de transferencia automática",
+      "value": "~2s"
+    },
+    {
+      "name": "Interrupción de energía",
+      "value": "Breve, ~2s durante la transferencia"
+    },
+    {
+      "name": "Protección",
+      "value": "Enclavamiento mecánico, sobretensión y subtensión"
+    },
+    {
+      "name": "Potencia máxima de carga",
+      "value": "~13.9kW (13870W)"
+    },
+    {
+      "name": "Componentes internos",
+      "value": "Tarjeta de control PCB, motor, relé térmico"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Hospitales, cámaras frigoríficas, centros de datos"
+    }
+  ],
+  "metaTitle": "STQ2-63 63A 4P ATS clase CB 110V/220V | Transferencia trifásica+N",
+  "metaDescription": "ATS STQ2-63 de 63A, 4 polos (3L+N), clase CB para 110V/220V. Enclavamiento mecánico, protección de voltaje, transferencia en ~2s, máx. 13.9kW. Para hospitales y centros de datos.",
+  "metaKeywords": "ATS STQ2-63 4P, transferencia tetrapolar clase CB, ATS 63A 3L+N, interruptor de transferencia para hospital, ATS para cámara frigorífica, ATS para centro de datos, ATS trifásico con neutro, ATS con enclavamiento mecánico",
+  "imageAlts": [
+    "ATS STQ2-63 63A 4P clase CB 110V/220V, vista frontal – interruptor de transferencia trifásico con neutro",
+    "Diagrama de cableado del STQ2-63-4P – conexión tetrapolar 3L+N de 2 entradas y 1 salida",
+    "Componentes internos del STQ2-63-4P – tarjeta de control PCB, motor y relé térmico",
+    "Ajustes de protección contra sobretensión y subtensión del STQ2-63-4P",
+    "Panel de modos de conmutación automático y manual del ATS STQ2 tetrapolar de 63A",
+    "Interruptor de transferencia STQ2-63-4P para hospitales, cámaras frigoríficas y centros de datos"
+  ]
+}

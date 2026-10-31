@@ -10,6 +10,7 @@ import {
   matchesResource,
 } from '@/lib/landing-pages';
 import { blogCategoryHref, matchesBlogGroup } from '@/lib/blog-taxonomy';
+import { alternates, translatedLangs } from '@/i18n';
 export const GET: APIRoute = () => {
   const routes = [
     '/',
@@ -38,6 +39,14 @@ export const GET: APIRoute = () => {
     ...products.map((product) => `/products/${product.id}`),
     ...blogPosts.map((post) => `/blog/${post.slug}`),
   ];
+  // 其他语言只收录真实存在的翻译页面
+  routes.push(
+    ...routes.flatMap((route) =>
+      alternates(route)
+        .filter((version) => translatedLangs.includes(version.lang))
+        .map((version) => version.path),
+    ),
+  );
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes
       .map((route) => {

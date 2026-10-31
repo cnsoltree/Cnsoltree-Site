@@ -1,0 +1,6 @@
+{
+  "folders": [
+    { "name": "Soltree 网站代码", "path": "." },
+    { "name": "云端产品与文章（私有同步区）", "path": "../Astro-elesoltree-content" },
+  ],
+}

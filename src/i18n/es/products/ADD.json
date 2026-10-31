@@ -1,0 +1,91 @@
+{
+  "sourceHash": "4184751dec308cfa",
+  "name": "Medidor de Energía ADD 18mm 1P Monofásico para Riel DIN 5(60)A 230V Clase 1",
+  "shortDescription": "Medidor de energía monofásico ultradelgado de 18mm para riel DIN, 5(60)A, 230V, precisión Clase 1. Tres opciones de pantalla: rodillo analógico, LCD digital y LCD retroiluminada con botón de reinicio. Certificación CE, carcasa de nailon retardante de llama. Ideal para medición residencial, en propiedades de alquiler y en pequeños comercios.",
+  "description": "Cuando el espacio en el tablero es limitado, cada milímetro cuenta. El medidor de energía de la serie ADD de Soltree cabe en una sola posición de 18mm del riel DIN – el mismo ancho que un interruptor automático 1P estándar –, por lo que es la opción práctica para tableros de distribución densos en departamentos, propiedades de alquiler y pequeños comercios donde varios medidores deben caber en un gabinete compacto. Todos los modelos tienen valores nominales de 5(60)A, 230V (170–250V), precisión Clase 1 y 50/60Hz, cuentan con certificación CE y carcasa de nailon de alto aislamiento retardante de llama.\n\nEl modelo con pantalla analógica utiliza un contador mecánico de rodillos para las lecturas de kWh: el mecanismo de conteo no requiere energía, lo que garantiza un funcionamiento estable y duradero incluso en circuitos con cortes frecuentes. Su constante de impulsos de 800 imp/kWh lo hace compatible con sistemas externos de registro de datos. La pantalla mecánica es muy legible y no requiere mantenimiento, por lo que se prefiere en instalaciones de largo plazo donde la sencillez y la confiabilidad son prioritarias.\n\nEl modelo con pantalla LCD digital ofrece una pantalla digital clara para lecturas precisas de kWh, con una constante de impulsos de mayor resolución de 1600 imp/kWh. El cableado superior e inferior da flexibilidad a los instaladores al distribuir el tablero. El formato digital compacto es muy adecuado para la submedición residencial y la facturación en alquileres, donde importan las lecturas numéricas precisas.\n\nEl modelo con LCD digital retroiluminada añade una pantalla con iluminación azul para leer con facilidad en condiciones de poca luz, como gabinetes de medidores cerrados y cuartos de distribución en sótanos. Un botón rojo de reinicio permite ciclos de monitoreo flexibles para cambios de inquilino y reinicios de facturación. La constante de impulsos de 1600 imp/kWh coincide con la del modelo LCD digital. Su lectura de alta visibilidad la convierte en la opción preferida donde las revisiones rápidas a simple vista son rutina.",
+  "features": [
+    "Ancho ultradelgado de 18mm — cabe en una posición 1P del riel DIN, ideal para tableros densos",
+    "Precisión Clase 1, certificación CE — medición confiable para facturación residencial y comercial",
+    "Carcasa de nailon de alto aislamiento retardante de llama",
+    "Valores nominales de 5(60)A, 230V (170–250V), 50/60Hz",
+    "Pantalla analógica: contador mecánico de rodillos, no requiere energía, impulsos de 800 imp/kWh",
+    "Pantalla LCD digital: lectura digital clara de kWh, 1600 imp/kWh, cableado superior/inferior",
+    "Pantalla LCD retroiluminada: pantalla con iluminación azul, botón rojo de reinicio, 1600 imp/kWh",
+    "Montaje en riel DIN de 35mm — instalación estándar",
+    "Apto para medición residencial, en propiedades de alquiler y en pequeños comercios"
+  ],
+  "specs": [
+    {
+      "name": "Serie de producto",
+      "value": "ADD"
+    },
+    {
+      "name": "Modelos disponibles",
+      "value": "Pantalla analógica / LCD digital / LCD digital retroiluminada"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "AC 230V (170–250V)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "5(60)A"
+    },
+    {
+      "name": "Clase de precisión",
+      "value": "Clase 1"
+    },
+    {
+      "name": "Frecuencia",
+      "value": "50/60Hz"
+    },
+    {
+      "name": "Ancho",
+      "value": "18mm (módulo 1P de riel DIN)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Nailon de alto aislamiento retardante de llama"
+    },
+    {
+      "name": "Constante de impulsos (pantalla analógica)",
+      "value": "800 imp/kWh"
+    },
+    {
+      "name": "Constante de impulsos (LCD digital)",
+      "value": "1600 imp/kWh"
+    },
+    {
+      "name": "Constante de impulsos (LCD retroiluminada)",
+      "value": "1600 imp/kWh"
+    },
+    {
+      "name": "Característica especial (LCD retroiluminada)",
+      "value": "Pantalla con iluminación azul, botón rojo de reinicio"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Submedición residencial, facturación en propiedades de alquiler, pequeños comercios"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE"
+    }
+  ],
+  "metaTitle": "Medidor de energía ADD 18mm monofásico riel DIN 5(60)A 230V Clase 1 | Soltree",
+  "metaDescription": "Medidor de energía monofásico ultradelgado ADD de 18mm para riel DIN, 5(60)A, 230V, Clase 1. Rodillo analógico, LCD digital o LCD retroiluminada con reinicio. Certificación CE.",
+  "metaKeywords": "medidor de energía 18mm riel DIN, medidor de energía monofásico delgado 18mm, medidor de energía ADD 5 60A 230V, medidor kWh Clase 1 riel DIN, medidor de energía de rodillo analógico riel DIN, medidor de energía LCD retroiluminado con botón de reinicio, medidor de energía compacto para propiedades de alquiler, medidor kWh 1P riel DIN CE",
+  "imageAlts": [
+    "Medidor de energía monofásico ADD de 18mm Soltree para riel DIN, vista frontal de las tres variantes de pantalla",
+    "Lectura de kWh en el contador mecánico de rodillos del medidor de energía ADD con pantalla analógica",
+    "Medidor de energía ADD con LCD retroiluminada en azul y botón rojo de reinicio",
+    "Lectura precisa de kWh del medidor de energía ADD con LCD digital, 1600 imp/kWh",
+    "Comparación del ancho de una posición 1P de riel DIN del medidor de energía ADD de 18mm",
+    "Medidor de energía ADD instalado en un tablero de distribución residencial compacto",
+    "Certificación CE y carcasa de nailon retardante de llama del medidor de energía monofásico ADD"
+  ]
+}

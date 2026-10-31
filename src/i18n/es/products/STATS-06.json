@@ -1,0 +1,119 @@
+{
+  "sourceHash": "9538ee34ee16095c",
+  "name": "Protector de Sobretensión/Subtensión y Corriente STATS-06 Trifásico 4 Hilos con Protección Múltiple",
+  "shortDescription": "Relé de protección inteligente trifásico de 4 hilos para sistemas AC380V — combina protección contra sobretensión/subtensión, sobrecorriente, pérdida de fase, neutro abierto, secuencia de fases y desequilibrio trifásico en una sola unidad. Pantalla a color con tensión y corriente L1/L2/L3 en tiempo real. 63A / 100A.",
+  "description": "Los sistemas trifásicos pueden fallar de más formas que los monofásicos, y rara vez basta con una sola función de protección. El STATS-06 de Soltree está diseñado específicamente para circuitos trifásicos de 4 hilos AC380V e integra seis funciones de protección en un solo dispositivo para riel DIN: sobretensión, subtensión, sobrecorriente, pérdida de fase, neutro abierto, error de secuencia de fases y detección de desequilibrio trifásico. Cuando ocurre cualquiera de estas fallas, el STATS-06 dispara de inmediato y desconecta la carga antes de que se dañen los equipos. Una vez despejada la falla, restablece automáticamente la energía tras el retardo de recuperación configurado.\n\nLa pantalla a color de alta definición muestra en tiempo real la tensión y la corriente de las tres fases a la vez; los valores de corriente inferiores a 1A se ocultan para mantener la pantalla limpia y legible. Todos los umbrales de protección se configuran en campo: sobretensión de 230–300V (270V por defecto), subtensión de 120–210V (170V por defecto), sobrecorriente de 1–63A o 1–100A, además de tiempo de actuación y retardo de recuperación ajustables. Una función integrada de calibración de tensión y corriente trifásica corrige los errores de medición durante la instalación y garantiza la precisión durante toda la vida útil del equipo.\n\nAmpliamente utilizado en sistemas fotovoltaicos con almacenamiento de energía, donde el desequilibrio trifásico es un modo de falla frecuente; en tableros de distribución industrial que protegen equipos accionados por motores; en suministros de edificios comerciales donde una pérdida de fase podría dañar los compresores HVAC; y en cualquier aplicación donde un protector de una sola función deja demasiados modos de falla sin cubrir. Disponible con carcasa blanca o gris oscuro, admite LOGO personalizado para integración OEM y cuenta con 3 años de garantía.",
+  "features": [
+    "Protección 6 en 1 — sobretensión, subtensión, sobrecorriente, pérdida de fase, neutro abierto, secuencia de fases y desequilibrio trifásico",
+    "Pantalla a color de alta definición — tensión y corriente L1/L2/L3 en tiempo real (corriente oculta por debajo de 1A para una lectura limpia)",
+    "Umbrales totalmente configurables — sobretensión 230–300V, subtensión 120–210V, sobrecorriente 1–63A o 1–100A",
+    "Tiempo de actuación (0.1–10s) y retardo de recuperación (1–600s) ajustables",
+    "Calibración de tensión y corriente trifásica — corrige los errores de medición durante la instalación",
+    "Contador de protección por sobrecorriente continua — 0–20 disparos antes del bloqueo (configurable)",
+    "Recuperación automática tras despejarse la falla — restablece la energía sin reinicio manual",
+    "Montaje en riel DIN de 35mm — instalación estándar en tableros industriales",
+    "Carcasa disponible en blanco o gris oscuro, admite LOGO personalizado para OEM",
+    "Para sistemas trifásicos de 4 hilos AC 380V, 63A o 100A",
+    "3 años de garantía",
+    "Certificación CE"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "STATS-06"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Protector trifásico de 4 hilos contra sobretensión/subtensión y sobrecorriente"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "AC 380V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60Hz"
+    },
+    {
+      "name": "Opciones de corriente nominal",
+      "value": "63A / 100A"
+    },
+    {
+      "name": "Rango de protección contra sobretensión",
+      "value": "AC 230–300V (por defecto: 270V)"
+    },
+    {
+      "name": "Rango de recuperación por sobretensión",
+      "value": "AC 225–295V (por defecto: 265V)"
+    },
+    {
+      "name": "Rango de protección contra subtensión",
+      "value": "AC 120–210V (por defecto: 170V)"
+    },
+    {
+      "name": "Rango de recuperación por subtensión",
+      "value": "AC 125–215V (por defecto: 175V)"
+    },
+    {
+      "name": "Rango de protección contra sobrecorriente",
+      "value": "1–63A / 1–100A (por defecto: 63A)"
+    },
+    {
+      "name": "Tiempo de actuación por sobrecorriente",
+      "value": "0.1s–10s (por defecto: 0.5s)"
+    },
+    {
+      "name": "Número de protecciones por sobrecorriente continua",
+      "value": "0–20 veces (por defecto: OFF)"
+    },
+    {
+      "name": "Retardo de encendido",
+      "value": "1–600s (por defecto: 5s)"
+    },
+    {
+      "name": "Retardo de recuperación de la protección",
+      "value": "1–600s (por defecto: 30s)"
+    },
+    {
+      "name": "Función de visualización",
+      "value": "Pantalla de tensión y corriente trifásica en tiempo real (la corriente no se muestra por debajo de 1A)"
+    },
+    {
+      "name": "Funciones de protección principales",
+      "value": "Sobretensión/subtensión, sobrecorriente, pérdida de fase, neutro abierto, secuencia de fases, desequilibrio trifásico"
+    },
+    {
+      "name": "Función de calibración",
+      "value": "Calibración de tensión y corriente trifásica"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Opciones de color de la carcasa",
+      "value": "Blanco / gris oscuro"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Almacenamiento de energía fotovoltaica, tableros de distribución de motores industriales, alimentación de HVAC comercial, protección de equipos trifásicos"
+    },
+    {
+      "name": "Garantía",
+      "value": "3 años"
+    }
+  ],
+  "metaTitle": "Protector trifásico STATS-06 4 hilos voltaje y corriente 63A 100A | Soltree",
+  "metaDescription": "Protector inteligente trifásico de 4 hilos STATS-06 para AC380V: sobretensión/subtensión, sobrecorriente, pérdida de fase, neutro abierto, secuencia y desequilibrio. Pantalla a color. 63A / 100A.",
+  "metaKeywords": "protector trifásico STATS-06, protector de sobretensión trifásico 4 hilos AC380V, relé de protección por pérdida de fase riel DIN, protector de desequilibrio trifásico, relé de protección de neutro abierto, protector de sobrecorriente y secuencia de fases, protector trifásico con pantalla de voltaje y corriente, protección trifásica fotovoltaica",
+  "imageAlts": [
+    "Protector trifásico de 4 hilos STATS-06 Soltree contra sobretensión, subtensión y corriente con pantalla a color, vista frontal",
+    "Pantalla a color del STATS-06 mostrando valores de tensión y corriente L1 L2 L3 en tiempo real",
+    "Configuración de umbrales de sobretensión, subtensión y sobrecorriente del protector trifásico STATS-06",
+    "Relé de protección STATS-06 contra pérdida de fase, neutro abierto, secuencia de fases y desequilibrio",
+    "Perfil lateral de montaje en riel DIN del protector trifásico STATS-06",
+    "Protector STATS-06 instalado en un tablero de distribución trifásico industrial AC380V",
+    "Diagrama de cableado del STATS-06 para conexiones trifásicas de 4 hilos L1 L2 L3 y neutro",
+    "Opciones de carcasa blanca y gris oscuro con LOGO personalizado del protector trifásico STATS-06"
+  ]
+}

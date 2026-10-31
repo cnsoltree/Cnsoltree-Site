@@ -1,0 +1,110 @@
+{
+  "sourceHash": "8b006f3ccc8c5224",
+  "name": "Portafusibles DC RT18-32X 2P 32A 500V",
+  "shortDescription": "Portafusibles DC bipolar de 32A 500V para fusibles de 10x38mm — protección simultánea de las líneas positiva y negativa en arreglos FV, bancos de baterías y circuitos de control DC, con indicación de falla por LED rojo.",
+  "description": "Los sistemas DC se diferencian de los AC en un aspecto clave: tanto el conductor positivo como el negativo transportan corriente de falla, por lo que proteger con fusible un solo polo deja un conductor energizado sin protección durante una falla. El RT18-32X 2P de Soltree está diseñado específicamente para circuitos DC de dos hilos y protege ambas líneas a la vez en un solo módulo compacto. Se utiliza ampliamente en la protección de strings fotovoltaicos, la alimentación de bancos de baterías, fuentes de alimentación DC y tableros de control DC donde se requiere el aislamiento seguro de ambos conductores. Fabricado con carcasa de PVC retardante de llama y contactos de cobre de alta pureza, mantiene una baja resistencia de contacto y una transmisión estable bajo carga DC continua. Con valores nominales de 32A y 500V DC, admite fusibles estándar de 10x38mm. El indicador LED rojo integrado se enciende en el momento en que se funde un fusible y localiza la falla sin herramientas. El diseño de montaje a presión en riel DIN de 35mm y los bornes de tornillo permiten una instalación rápida en gabinetes de inversores solares, gabinetes de almacenamiento de energía y tableros de distribución DC. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño bipolar — protección simultánea de los conductores positivo y negativo en circuitos DC",
+    "Valores nominales de 32A / 500V DC — diseñado específicamente para sistemas de corriente continua de dos hilos",
+    "Compatible con fusibles estándar de 10x38mm",
+    "Indicador LED rojo — detección visual inmediata de fallas en cualquiera de los polos",
+    "Carcasa de PVC retardante de llama — segura ante fallas por arco DC",
+    "Contactos de cobre de alta pureza — baja resistencia y transmisión DC estable",
+    "Montaje a presión en riel DIN de 35mm — instalación rápida en gabinetes FV y de baterías",
+    "Bloque de bornes de tornillo — cableado firme para aplicaciones DC",
+    "Protección IP20 a prueba de contacto",
+    "Apto para arreglos FV, almacenamiento en baterías y fuentes de alimentación DC",
+    "Conforme a IEC 60269 y GB 13539",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Base portafusible DC"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "2P (bipolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "32A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V DC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm (TH35)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (clasificación V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta pureza"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "Indicador visual LED (rojo)"
+    },
+    {
+      "name": "Función del indicador",
+      "value": "Se enciende cuando se funde el fusible"
+    },
+    {
+      "name": "Tipo de conexión",
+      "value": "Bloque de bornes de tornillo"
+    },
+    {
+      "name": "Capacidad de cable",
+      "value": "2.5mm² – 10mm²"
+    },
+    {
+      "name": "Grado de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-5°C a +40°C"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas FV, almacenamiento en baterías, fuentes de alimentación DC"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles DC RT18-32X 2P 32A 500V riel DIN | Soltree",
+  "metaDescription": "Portafusibles DC RT18-32X 2P de 32A 500V para fusibles de 10x38mm. Protección bipolar positivo y negativo para arreglos FV, baterías y circuitos DC. Indicador LED, CE y RoHS.",
+  "metaKeywords": "portafusibles DC RT18-32X 2P, portafusibles DC bipolar 32A, base portafusible DC 10x38mm, portafusibles para string FV, portafusibles almacenamiento en baterías 500V DC, portafusibles solar riel DIN, protección con fusibles de circuitos DC",
+  "imageAlts": [
+    "Portafusibles DC bipolar RT18-32X 2P Soltree 32A 500V, vista frontal",
+    "Portafusibles DC RT18-32X 2P, perfil lateral con clip para riel DIN",
+    "Primer plano del indicador LED rojo del portafusibles DC RT18-32X 2P",
+    "Detalle del cableado en bornes de tornillo del portafusibles DC RT18-32X 2P",
+    "Portafusibles DC RT18-32X 2P instalado en caja de conexiones de paneles solares FV",
+    "Portafusibles DC RT18-32X 2P con fusible de 10x38mm",
+    "Plano de dimensiones del portafusibles DC RT18-32X 2P"
+  ]
+}

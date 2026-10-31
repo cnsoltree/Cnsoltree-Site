@@ -1,0 +1,125 @@
+{
+  "sourceHash": "08dce022313824b0",
+  "name": "Protector de Sobretensión/Subtensión Autorreconectable PN2-VA3 40A–80A",
+  "shortDescription": "Protector de voltaje autorreconectable para contratistas eléctricos profesionales e instalaciones en tableros comerciales — su doble pantalla digital blanca + verde ofrece un contraste nítido de los dígitos bajo la iluminación fluorescente intensa típica de los gabinetes comerciales. Umbrales configurables de sobretensión/subtensión y sobrecorriente, reconexión automática, bloqueo por contraseña. Certificación CE y RoHS. 40A / 63A / 80A.",
+  "description": "Los contratistas eléctricos que trabajan en tableros de distribución comerciales, adecuaciones de oficinas e instalaciones eléctricas de locales comerciales necesitan dispositivos de protección fáciles de inspeccionar y poner en marcha en sitio. El PN2-VA3 de Soltree está diseñado pensando en los instaladores profesionales: su doble pantalla digital usa dígitos blancos para la tensión y verdes para la corriente, una combinación que ofrece un contraste notablemente más nítido bajo la intensa iluminación fluorescente de los cuartos eléctricos comerciales, los gabinetes de tableros y los entornos de inspección.\n\nMientras el PN2-VA2 se especifica para uso residencial y doméstico, el PN2-VA3 es la opción preferida por contratistas eléctricos comerciales que abastecen edificios de oficinas y cadenas minoristas, fabricantes de tableros que trabajan con estándares profesionales de instalación y proyectos de exportación donde la certificación CE y RoHS es un requisito de compra.\n\nLa plataforma de protección es totalmente configurable: el umbral de sobretensión (130–300V AC), el umbral de subtensión (80–210V AC) y el disparo por sobrecorriente se ajustan desde el panel frontal, con desconexión automática en 0.5 segundos ante una falla y restablecimiento automático de la energía cuando el suministro se estabiliza. El retardo de reconexión se ajusta de 0 a 999 segundos (60s por defecto) para evitar disparos intempestivos en circuitos comerciales. Un bloqueo por contraseña impide cambios no autorizados en locales comerciales con varios inquilinos. Disponible en variantes de 40A, 63A y 80A; AC 110V personalizable para mercados de exportación internacionales. Montaje en riel DIN de 35mm. Certificación CE y RoHS.",
+  "features": [
+    "Doble pantalla digital blanca + verde — contraste más nítido de los dígitos en gabinetes comerciales muy iluminados y cuartos eléctricos con luz fluorescente",
+    "Autorreconectable — restablece la energía automáticamente cuando se despeja la falla, sin reinicio manual",
+    "Puntos de disparo configurables — sobretensión 130–300V, subtensión 80–210V AC",
+    "Protección contra sobrecorriente — umbral de disparo por corriente ajustable",
+    "Desconexión rápida en 0.5 segundos al detectar una falla",
+    "Retardo de reconexión ajustable de 0–999 segundos (60s por defecto) — evita disparos intempestivos en circuitos comerciales",
+    "Bloqueo por contraseña — impide cambios no autorizados en locales comerciales con varios inquilinos",
+    "Modo de ahorro de energía — reduce el autoconsumo del dispositivo",
+    "Disponible en corrientes nominales de 40A / 63A / 80A",
+    "Tensión de alimentación nominal AC 220V (AC 110V personalizable para exportación internacional)",
+    "Montaje en riel DIN de 35mm — instalación estándar en tableros de distribución comerciales",
+    "Carcasa de PC retardante de llama (UL94 V-0)",
+    "Vida mecánica ≥10.000 ciclos",
+    "Certificación CE y RoHS — aceptado en proyectos para la UE, el Reino Unido y exportación internacional"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector autorreconectable contra sobretensión/subtensión"
+    },
+    {
+      "name": "Modelo",
+      "value": "PN2-VA3"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Retardo de disparo por sobretensión",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Corriente máx. de trabajo",
+      "value": "40A / 63A / 80A (opcional)"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, 60s por defecto)"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Doble pantalla digital — tensión (blanco) + corriente (verde)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Compatible — impide cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Activable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25°C a +55°C"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Sobretensión, subtensión, sobrecorriente, protección con retardo"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Instalaciones eléctricas comerciales, armado de tableros por contratistas, edificios de oficinas, proyectos de exportación"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje PN2-VA3 para contratistas pantalla blanca 40A–80A | Soltree",
+  "metaDescription": "Protector autorreconectable PN2-VA3 para contratistas eléctricos comerciales: doble pantalla blanca + verde de lectura clara, reconexión automática, 40A–80A. CE y RoHS para exportación.",
+  "metaKeywords": "protector de voltaje PN2-VA3 comercial, relé de voltaje para contratistas riel DIN, protector de voltaje para tablero comercial con pantalla blanca, protector de sobretensión para instaladores, protector de voltaje CE RoHS para exportación, relé de voltaje para tablero de distribución comercial, relé de voltaje 63A para fabricantes de tableros, relé de protección de voltaje para oficinas y comercios",
+  "imageAlts": [
+    "Protector de sobretensión/subtensión autorreconectable PN2-VA3 Soltree con doble pantalla blanca y verde, vista frontal",
+    "Doble pantalla del protector de voltaje PN2-VA3 mostrando la tensión en blanco y la corriente en verde",
+    "Panel de ajuste de parámetros y puntos de disparo del protector PN2-VA3",
+    "Perfil lateral de montaje en riel DIN del protector de voltaje PN2-VA3",
+    "Protector de voltaje autorreconectable PN2-VA3 instalado en un tablero de distribución doméstico",
+    "Detalle de las conexiones de bornes del protector PN2-VA3",
+    "Plano de dimensiones 81x36x66mm del protector de voltaje PN2-VA3",
+    "Opciones de corriente nominal de 40A, 63A y 80A del protector de voltaje PN2-VA3"
+  ]
+}

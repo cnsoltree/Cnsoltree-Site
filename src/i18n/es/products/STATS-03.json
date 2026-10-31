@@ -1,0 +1,124 @@
+{
+  "sourceHash": "41d8f03e674a871f",
+  "name": "Interruptor de Transferencia Automática ATS de 3 Vías STATS-03 con Protección contra Sobretensión/Subtensión y Triple Pantalla de Voltaje",
+  "shortDescription": "Interruptor de transferencia automática (ATS) de 3 vías con conmutación por prioridad (L1→L2→L3) y triple pantalla de tensión de entrada — diseñado para la redundancia de fuentes de energía y el monitoreo de la calidad del suministro en fábricas, salas de servidores, generadores y sistemas solares con almacenamiento.",
+  "description": "Cuando la continuidad del suministro depende de que varias fuentes estén sanas y disponibles, el STATS-03 de Soltree le brinda visibilidad total y control automático. Admite tres entradas independientes de AC 220V (L1, L2, L3) y supervisa continuamente la tensión de cada fuente: la triple pantalla digital muestra a la vez las tres tensiones de entrada, para que los operadores evalúen de un vistazo el estado de cada suministro sin equipos de medición adicionales.\n\nPor eso el STATS-03 es la opción indicada en instalaciones donde el monitoreo de la calidad de las fuentes es tan importante como la conmutación: líneas de producción que alimentan equipos CNC sensibles, comercios con red y generador de respaldo, salas de servidores que requieren conmutación sin interrupciones y sistemas híbridos solar + red donde la estabilidad de la tensión de cada fuente debe verificarse constantemente.\n\nCuando la fuente activa sale del rango de tensión configurado (sobretensión 130–300V AC, subtensión 80–210V AC) o supera el umbral de sobrecorriente, el STATS-03 transfiere a la siguiente fuente disponible en menos de 0.2 segundos. La secuencia de prioridad (L1→L2→L3 por defecto) es totalmente personalizable, y el retardo de arranque y el retardo de recuperación automática (cada uno de 1–600s) se ajustan de forma independiente para evitar conmutaciones innecesarias por fluctuaciones momentáneas. Disponible en 63A, 80A y 100A, en formato estándar para riel DIN de 35mm.",
+  "features": [
+    "Triple pantalla de tensión de entrada — supervise a la vez el estado de los suministros L1/L2/L3 sin medición adicional",
+    "Interruptor de transferencia automática de 3 vías — conmutación por prioridad L1→L2→L3 con secuencia totalmente personalizable",
+    "Respuesta de conmutación inferior a 0.2s — transferencia de fuente sin interrupciones que protege los equipos sensibles",
+    "Protección contra sobretensión — configurable de 130–300V AC, aísla las cargas de los picos de la red",
+    "Protección contra subtensión — configurable de 80–210V AC, evita daños por caídas de tensión",
+    "Protección contra sobrecorriente — configurable de 1A al máximo nominal (63A / 80A / 100A)",
+    "Retardo de arranque ajustable de 1–600s — evita conmutaciones innecesarias por caídas momentáneas",
+    "Retardo de recuperación automática ajustable de 1–600s — retorno controlado a la fuente principal",
+    "Ideal para maquinaria CNC, salas de servidores, comercios con generador de respaldo y sistemas híbridos solar-red",
+    "Montaje en riel DIN de 35mm — encaja directamente en tableros de distribución estándar",
+    "Carcasa de PC retardante de llama (UL94 V-0), vida mecánica ≥10.000 ciclos",
+    "Disponible en corrientes nominales de 63A / 80A / 100A",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "STATS-03"
+    },
+    {
+      "name": "Tipo de producto",
+      "value": "Interruptor de transferencia automática de 3 entradas con triple pantalla de tensión"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 3×220V (N-L1/L2/L3)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de protección contra sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de protección contra subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Rango de protección contra sobrecorriente",
+      "value": "1–63A / 1–80A / 1–100A (según el modelo)"
+    },
+    {
+      "name": "Corriente nominal de trabajo",
+      "value": "63A / 80A / 100A (opcional)"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Triple pantalla digital — solo tensión de entrada L1 / L2 / L3"
+    },
+    {
+      "name": "Secuencia de conmutación por prioridad",
+      "value": "L1 → L2 → L3 (personalizable)"
+    },
+    {
+      "name": "Tiempo de retardo de arranque",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de retardo de recuperación automática",
+      "value": "1–600s (ajustable)"
+    },
+    {
+      "name": "Tiempo de respuesta de conmutación",
+      "value": "<0.2s"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +50°C"
+    },
+    {
+      "name": "Humedad relativa",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Funciones principales",
+      "value": "Conmutación por prioridad de 3 vías, protección contra sobretensión/subtensión, protección contra sobrecorriente, monitoreo de la tensión de las tres entradas"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Maquinaria CNC, salas de servidores, comercios con generador de respaldo, sistemas híbridos solar-red"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "ATS de 3 vías STATS-03 triple pantalla 63A–100A riel DIN | Soltree",
+  "metaDescription": "ATS de 3 vías STATS-03 con triple pantalla de tensión L1/L2/L3: supervise las tres fuentes a la vez. Conmutación por prioridad, respuesta <0.2s, 63A–100A. Para servidores, CNC y solar-red.",
+  "metaKeywords": "interruptor de transferencia automática STATS-03, ATS 3 vías con triple pantalla, ATS con monitoreo de tensión de entrada 220V, transferencia de 3 fuentes riel DIN, ATS para maquinaria CNC y sala de servidores, ATS solar-red, ATS con conmutación por prioridad y pantalla de voltaje",
+  "imageAlts": [
+    "Interruptor de transferencia automática de 3 vías STATS-03 Soltree con triple pantalla de tensión, vista frontal",
+    "Triple pantalla del STATS-03 mostrando las tensiones de las fuentes L1 L2 L3 para monitorear la calidad de la energía",
+    "Panel de personalización de la secuencia de prioridad L1 L2 L3 del ATS STATS-03",
+    "Ajuste de parámetros de retardo de arranque y retardo de recuperación automática del STATS-03",
+    "Perfil de montaje en riel DIN del ATS de 3 vías STATS-03 con formato compacto",
+    "STATS-03 instalado en tablero de distribución de sala de servidores con tres entradas de energía cableadas",
+    "Diagrama de cableado de los bornes de entrada L1 L2 L3 del ATS STATS-03",
+    "Variantes de modelo de 63A, 80A y 100A del interruptor de transferencia automática STATS-03"
+  ]
+}

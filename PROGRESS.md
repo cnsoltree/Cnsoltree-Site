@@ -1,5 +1,70 @@
 # 项目开发进度
 
+## 本地修改发布准备（2026-10-30，America/Los_Angeles）
+
+- 用户已确认 Supabase 迁移执行成功；实际 soltree_ai_settings 表读取返回 200、0 行，Production 加密密钥再次核验通过且保留原值。发布前重新 fetch，准备提交并发布全部已验证改动。
+
+- 后续：用户确认全部上线并完成 Vercel 设备登录，已核验原正式项目访问恢复。仅为 Production 创建并回读核验 AI_SETTINGS_ENCRYPTION_KEY，值未打印或写入代码。完整 verify:online-admin 和 verify:content-sync 补充通过，线上只读验收脚本已准备在仓库外 artifacts/elesoltree-check-full-release.mjs。
+- 已向用户提供原 Supabase 项目 SQL Editor 及已有迁移文件，等待执行结果；现有业务数据权限无法执行 DDL。尚未提交、推送或部署。
+
+- 用户请求发布另一工具修改的网站，已确认当前项目为 Astro-elesoltree，目标为原有 Vercel 项目及正式域名。获取 origin/main 后与当前 HEAD 一致，未提交、推送、部署或改写云端内容。
+- 使用 Node 22.23.4：代码检查 0 errors / 0 warnings / 2 hints；构建、完整 verify:deploy（含仓库外隔离的真实生产函数）、AI 设置及 SEO 文章规划回归均通过。产物验证覆盖 276 路由、87 产品、19 文章和 5823 图片引用；西语译文状态正常。
+- 原 Vercel 凭据返回 403，使用已有中文电脑名兼容补丁启动官方设备登录，等待用户完成授权。线上 AI 设置表只读查询返回 404 / PGRST205，需要应用 supabase/migrations/202610290001_ai_settings.sql，并配置 Production 的 AI_SETTINGS_ENCRYPTION_KEY。尚未修改线上配置或数据库。
+- 检查日志在仓库外 artifacts/soltree-upload-{check,build,verify}.log。后续恢复平台访问、补齐依赖后发布，并核验正式站和受保护后台接口。
+
+## 多语言架构与西班牙语样板（2026-10-29，进行中）
+
+- 新增 `src/i18n/`：语言列表与路径/翻译工具（index.ts）、译文指纹（source-hash.mjs）、西语界面文案 ui.json、分类 taxonomy.json、87 个产品译文 products/*.json、术语表 GLOSSARY.md。英文仍是根路径，西语为 `/es/`；产品 URL 不翻译，只有存在译文的产品生成西语页面。
+- 新增 `src/pages/[lang]/` 路由（首页、产品列表、分类、产品详情、联系页）；首页与联系页内容移入 HomePage/ContactPage 组件供两种语言共用。导航新增语言切换器（LanguageSwitcher）。
+- BaseLayout/BaseHead：`<html lang/dir>`、og:locale、hreflang 只列出真实存在的语言版本并加 x-default；sitemap 增加西语页面。Catalog 客户端筛选的标题/说明改为读取当前语言译文。
+- 询盘表单附带 `language` 字段，邮件标题对非英文询盘加语言标记；西语界面错误提示用通用文案，选项值保持英文方便销售阅读。
+- 新增 `scripts/i18n-status.mjs`（缺失/过期/结构不一致检查，`--stamp` 标记为最新）；`scripts/verify.mjs` 增加西语页面 lang、canonical、双向 hreflang、sitemap 及未翻译产品不生成页面的检查。
+- 已验证：类型检查 0 errors；仅含 1 个产品译文时的构建通过，英文 153 页可见文字与改动前基线完全一致，西语页 head 标签正确，构建日志无缺失译文提示。
+- 已验证（全量 87 个产品译文）：`i18n-status` 结构检查通过并已打指纹（exit 0）；代码检查 0 errors / 0 warnings / 1 个既有 hint；构建通过且无缺失译文提示；`npm run verify` PASS（251 页，含 98 个西语页面的 lang/canonical/双向 hreflang/sitemap 检查）；英文 153 页可见文字与基线一致。未做真实浏览器视觉验收。
+- 已知问题：部分英文源数据含乱码（如 SPD 的 “ – .0kV”、ATS 的 “ – .05s”、STQ 的 “ – .9kW”），译文按原样保留，需在英文后台修正后重新翻译对应字段。
+- 第二批（博客与静态页）：新增 `src/i18n/es/articles/*.json`（19 篇）、`ui-about/ui-legal/ui-aerosol/ui-blog.json`、`ARTICLES.md`（文章翻译规则）；`getBlogPosts(lang)` 合并文章译文；新增 `[lang]/blog`、`blog/[slug]`、`blog/category/[group]`、`about`、`privacy`、`terms`、`solutions/aerosol-fire-extinguisher` 路由，页面内容移入 AboutPage/PrivacyPage/TermsPage/AerosolSolutionPage 组件；文章内站内链接自动指向西语版本；FAQ 结构化数据识别“Preguntas frecuentes”。`i18n-status` 增加文章结构检查（标题层级、图片、链接、标签数）。
+- 已验证（第二批）：`i18n-status` 19/19 篇结构一致并已打指纹；代码检查 0 errors / 0 warnings；构建通过且无缺失译文提示；`npm run verify` PASS（278 页，其中西语 130 页）；英文 153 页可见文字与基线一致。未做真实浏览器视觉验收。
+- 修复（2026-10-30）：“test” 分类早已在后台回收站，但 `src/lib/taxonomy.ts` 的 allProductGroups/allArticleGroups 未排除回收站分类，仍生成 `/blog/category/test`、`/resources/category/test`（含西语）；已在源头过滤（后台自身已过滤，不受影响）。重定向表移到 `src/lib/redirects.mjs`，astro.config 与 `localizeLinks` 共用，西语文章里的 `/products/din-rail-aerosol-fire-extinguisher` 现直接指向 `/es/products/Aerosol-DIN-Rail`；英文 301 跳转保留。验证：代码检查 0 errors，构建通过，verify PASS（276 页），英文除 2 个 test 分类页被移除外其余 151 页可见文字与基线一致。
+- 下一步：用户本地浏览 `/es/` 确认样板；之后再做后台翻译状态管理和其他语言。
+
+## 主题生成后保存格式报错已恢复（2026-10-29）
+
+- 用户反馈生成主题后出现「提交格式不正确」。实际本地 Node SEO 中间件仍驻留旧版字段白名单，不认识 importAiCandidates/topics；页面经 Vite 已更新，配置热重载没有刷新原生模块缓存。无写入探针复现旧服务 400，修复后同一旧 revision 探针返回预期 409。
+- 用 Astro 自身 dev stop 停止本项目服务，再以正常网络权限、仅监听 127.0.0.1 隐藏启动 Node 22 服务，确认 capabilities.aiPlanningImport 为 true，规划读取接口 200。原失败批次没有保存，未通过真实请求重新生成或写入测试主题。
+- 保存服务增加 AI 候选导入能力标记，生成接口在调用模型前检查本地服务能力；版本过旧时提示重启，避免付费生成后才发现保存协议不兼容。增加能力标记回归断言；主题规划、原 SEO 后端回归通过。
+
+## 独立 SEO文章规划与运营计划（2026-10-29）
+
+- 用户限定本轮只做主题规划，并明确新增独立「SEO文章规划」模块，认可的主题再加入「运营计划」。新增 /admin/seo-planning 菜单/页面，运营计划从空页改为已确认主题列表，支持待安排、进行中、已完成。
+- 复用 AI 设置中保存的 Key/默认模型，通过 Responses 结构化输出生成每批 1–10 个候选；按分类、语言、受众、目标和方向，使用匹配的已发布产品摘要与已有标题。校验字段长度、分类范围和重复标题，拒绝截断、无效 JSON 或结构错误；不执行实时搜索、不提供搜索量或排名数据，不引入知识库或配图。
+- 候选自动保存历史批次，用户单项/勾选批量加入才创建运营事项；已加入项不可重复加入。复用既有私有 SEO 工作区、批次/事项格式及持久 CAS，不新增规划数据表，不创建或修改文章、不触发发布。
+- 新 API /api/admin/seo-planning 与设置 API 共用管理员认证/本地隔离和服务端凭据入口。开发环境复用原 Node SEO 中间件及写队列，避免 Vite 对 sanitizer 的 CommonJS 模块加载错误；云端继续使用现有工作区服务。
+- 新增 verify:topic-planning，验证模拟 AI 生成、分类与结果校验、历史保存、明确加入、重复/过期/并发拒绝、事项状态及无文章写入。原 SEO 后端、AI 设置、导航和登录返回回归通过；Node 22 检查 0 errors / 0 warnings / 1 个既有 hint，格式/diff、构建及产物隐私检查通过。
+- 真实 Vercel Node 22 函数离线回归覆盖认证、生成候选→加入计划→更新进度、重复加入和过期生成请求不再次调用模型，并确认产品/文章/发布状态不受影响；所有网络均为离线模拟。本地两个页面及规划/设置读取接口 200，当前未添加测试主题到真实历史。
+- 未执行真实付费生成、未改写云端内容、未提交或部署，未做真实浏览器视觉验收。上线仍需先完成上一轮 AI 设置的独立迁移与加密密钥配置；规划本身复用已存在的私有工作区。
+
+## 本地 AI 设置连接失败已恢复（2026-10-29）
+
+- 用户反馈获取模型列表提示连接失败。定位原 Astro 进程由受限网络环境启动，Node 出站请求触发 EACCES；正常网络进程访问 OpenAI 可收到 HTTP 响应。
+- 仅停止已核对的本项目 4323 Astro 进程，使用 Node 22 在正常网络权限下隐藏启动同一本地服务，仍仅监听 127.0.0.1。未修改业务代码或网络代理设置。
+- 通过后台 /api/admin/ai-settings 使用用户提供的 Key 执行 models 操作，返回 200 和 73 个文字模型；只输出模型数与部分名称，不记录密钥。未执行文字生成、未保存真实 Key 或默认模型、未修改线上配置。
+
+## 后台 AI 设置（2026-10-29）
+
+- 新增设置菜单、/admin/settings 页面及 /api/admin/ai-settings 接口；支持填写/更换 OpenAI Key、动态获取可访问文字模型、选择默认模型、短请求测试、保存和删除。测试及获取模型均不自动保存，不预选模型；翻译及 SEO 具体功能尚未开发。
+- 固定调用 OpenAI 官方 /v1/models 与 /v1/responses，测试使用 store:false，最多 512 输出 token。API 上游错误不回显原文，防止密钥片段泄露；密钥不存入浏览器 Storage，保存后仅返回末四位掩码，空输入保留已保存 Key。
+- 密钥及模型使用 AES-256-GCM 加密。本地文件与加密密钥位于仓库外 ../Astro-elesoltree-private，并禁止 Vite 直接读取该目录；线上独立私有表 soltree_ai_settings，使用服务端 AI_SETTINGS_ENCRYPTION_KEY，保持与文章、同步、发布内容隔离。独立 revision 和条件更新防止并发覆盖。
+- 新增数据库迁移 202610290001_ai_settings.sql、环境变量模板与使用说明；线上认证复用管理员登录、同源和 JSON 校验。生产中本地模式标记不能绕过认证。
+- verify:ai-settings 离线验证加密持久化、掩码、空 Key 保留、更换/删除、调研草稿不保存、上游失败脱敏、密文篡改和云端 CAS；导航、登录返回检查通过。Node 22 代码检查 0 errors / 0 warnings / 1 个既有 hint，构建、真实 Vercel 函数离线回归及产物隐私检查通过；函数回归覆盖 AI 匿名访问拒绝、保存/读取/删除、过期版本及跨站写入。
+- 本地 /admin/settings 和读取 API 返回 200，跨站修改及私有密钥文件下载返回 403。未保存聊天中的真实 API Key，未发起付费请求、未改写线上数据或应用迁移、未提交或部署；未做真实浏览器视觉验收。线上启用前需应用该迁移并配置固定加密密钥。
+
+## 移除 SEO 助手、知识库，新增运营计划（2026-10-29）
+
+- 移除两项菜单、页面组件及专用 JS/CSS，取消旧页面路由注册和登录返回路径许可；不清理历史私有记录或底层存储兼容逻辑。
+- 数据看板下方新增日历图标的运营计划，路径 /admin/operations；复用后台布局，暂显示“暂无运营计划”，尚无新增、编辑功能。
+- 更新共享路由、页面切换、登录返回和实际函数回归。导航切换、前进/后退、编辑草稿保留和旧 URL 拒绝检查通过；Node 22 代码检查 0 errors / 0 warnings / 1 个既有 hint，构建及真实 Vercel 函数离线回归通过。
+- 本地运营计划返回 200，UTF-8 文案及图标检查正常，HTML 不含旧模块。未做浏览器视觉验收、未改写云端内容、未提交或部署；保留其他未提交改动。
+
 更新日期：2026-10-29（America/Los_Angeles）
 
 ## 当前基线与证据范围
@@ -359,3 +424,35 @@
 - 打包范围扩大到 sanitizer 的完整 16 个依赖包（包含嵌套解析器/CSS 工具的依赖），保持原版本与 HTML 安全策略，正在最终隔离回归。
 
 - 完整依赖树打包后的隔离运行时检查通过。一次本地构建因构建期间新增备份导致私有文件检查失败，已停止该产物发布；重新构建并确认全部 verify:deploy 通过（含私有文件扫描与隔离函数运行时），准备第二次部署并在线复测。
+
+## 后台初始化故障已恢复（2026-10-29）
+
+- 最终修复提交 907ec36ebdadb9132c5a9db6ad0a0e8fac381ac3 已推送；Vercel Production dpl_9ZP1XBPRXKrps8UCsu2ceLUEwVkd 为 Ready。
+- 正式域名 www.elesoltree.com 使用独立登录会话只读验证：/__cms/taxonomy、/__cms/products、/__cms/articles、/__cms/content-index 全部 200 且返回正常 JSON，原初始化错误已恢复；验证会话已退出。
+- 已将禁用 require(ESM)、复制至仓库外隔离目录及分类初始化的回归纳入 verify:deploy，避免宿主 node_modules 掩盖产物缺依赖。未改写云端内容，未做真实浏览器视觉交互验收。
+
+## 批量双向内容同步（2026-10-29）
+
+- 用户接受“整批同步、整批优化、统一发布”流程。新增 content:pull / content:push，默认只预览，--apply 才执行。复用 cloudProxy、线上内容验证和 Supabase CAS，20 篇文章一次保存，保留原发布/网址/回收站状态，不触发网站发布。
+- 私有工作目录为仓库外 ../Astro-elesoltree-content，包含 src/content/products、articles、只读 taxonomy、云端上传图片、state.json 共同版本与备份，目录 .gitignore 忽略全部。Soltree.code-workspace 可同时打开网站代码与私有内容。
+- 先按云端来源 Git blob、GitHub 最新公开快照、云端草稿做三方字段比较，再比较上次同步基线/本地编辑/云端最新。不同字段可合并，正文及数组整体冲突时停止；无法找回共同版本时不猜测。回写前核对 Git 最新快照和本地文件，云端整批保存使用原 revision 做一次 CAS。同步并核对公开来源 manifest，避免已有 Git 内容改动导致下次后台发布 409。
+- 新增 verify:content-sync：20 篇单次提交、默认预览无写入、草稿/内部字段/发布状态保留、同字段冲突、校验失败整批不保存、云端 CAS 竞争、Git 漂移、本地编辑竞争、分类只读及直接删文件拒绝均通过。复用媒体读取校验，符号链接与越界路径拒绝。
+- 实际执行首次 pull --apply：云端 revision 19，87 产品、19 文章、1 分类，107 JSON；当前无私有云端上传图片。云端与 Git 来源有历史差异但可无冲突合并。随后 push 仅预览通过整批后台校验，未保存云端、未改变正式网站；既有公开 Git 内容改动将于以后实际回写时一起校准。
+- 代码检查 0 errors / 0 warnings，初次含既有 main.js 及两处同步 await hint；后两处已用异步快照签名修正。格式与 diff 检查通过。文档补充命令与私有同步区说明；工具无需新增线上接口，未部署本轮改动。
+
+## 内容优化工作流约定
+
+- 用户确认：今后要求优化内容时默认拉取最新云端内容、批量优化并整批回写云端，无需再次要求回写；正式网站仍由用户最后点击顶部发布。有冲突或需要内容决策时停止确认。此约定不代表本轮 UI 调整需要修改文章或发布网站。
+
+## 数据看板点击量标注（2026-10-29）
+
+- 原图表已有 SVG title 悬停日期和值；新增非零点击数的 HTML 小字标签，按同一坐标比例定位在数据点上方，零值不标注。使用 HTML 避免 SVG 非等比拉伸使文字变形，标签忽略指针并隐藏重复无障碍朗读；原圆点键盘访问及悬停提示保留。
+- 只在点击量指标显示数量，切换指标时沿用原图表行为；说明文案同步。不改变统计接口、日期缺口或 GSC 数据口径。
+- verify:analytics（模型/导航/GSC）、格式及 diff 检查通过；未做真实浏览器视觉验收，尚未部署。已有同步工具及私有内容副本保留，未回写云端内容。
+
+## 点击量标注正式部署（2026-10-29）
+
+- 用户授权“部署吧”。仅提交 analytics-dashboard.js/css 两个界面文件，提交 c8fa4f4e9579660a82a8f9447cf5ed48839db370 已推送 main；内容同步工具、文档等其他本地改动保留。
+- 代码检查 0 errors / 0 warnings / 1 个既有 hint，统计/导航/GSC 回归、构建与完整 verify:deploy（含仓库外隔离的实际后台函数）通过，152 页面及 2950 图片引用检查正常。
+- Vercel Production dpl_CDv2oCsoWZDyDe6mAcfpqtuh1Nsd Ready。正式域名 /admin/analytics 返回 200，HTML 包含 analytics-point-label 样式，实际加载 BM5o6TnY.js 含新数值标注与说明。
+- 独立登录会话只读核验 /api/admin/analytics：connected，近 7 天返回 6 条日记录，未补零；验证后退出会话。未写入云端内容、未修改私有同步副本，未做真实浏览器视觉验收。

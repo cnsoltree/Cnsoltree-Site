@@ -1,0 +1,108 @@
+{
+  "sourceHash": "f9fe8145a6db48b0",
+  "name": "Medidor Digital Multifunción AC Serie DDR de 18mm para Riel DIN: Voltaje, Corriente y Frecuencia",
+  "shortDescription": "Medidor digital AC ultradelgado de 18mm para riel DIN de la serie DDR — 5 configuraciones de modelo que cubren tensión, corriente, frecuencia y monitoreo de corriente en 3 canales. Pantalla LED roja brillante, 80–500V, 0–100A, conforme a CE. Ideal para monitorear parámetros en tiempo real en gabinetes de distribución, talleres y tableros comerciales.",
+  "description": "No todas las aplicaciones de medición requieren registrar el consumo de energía. Cuando la tarea consiste en monitorear en tiempo real la tensión, la corriente o la frecuencia AC en un gabinete de distribución – sin la complejidad de un medidor de energía completo –, la serie DDR ofrece justo eso en un formato ultradelgado de 18mm para riel DIN. Cinco modelos funcionales permiten especificar exactamente lo que el tablero debe mostrar, desde un medidor combinado 3 en 1 V+A+Hz hasta instrumentos dedicados a un solo parámetro de tensión, corriente o frecuencia.\n\nLa pantalla LED roja brillante es la característica distintiva de la serie DDR: lecturas digitales de alta visibilidad que siguen siendo fáciles de leer en gabinetes con poca luz, entornos industriales y talleres con iluminación ambiental limitada. Con 18mm de ancho y un perfil de 81×66mm, cada unidad ocupa una sola posición 1P del riel DIN, lo que hace práctico al DDR en tableros de distribución saturados donde el espacio escasea.\n\nEl amplio rango de medición cubre tensión de AC 80–500V, corriente de 0–100A y frecuencia de 50/60Hz, abarcando el monitoreo de sistemas monofásicos y trifásicos. La precisión de medición es ≤2% con una actualización de 1 muestra por segundo para lecturas estables en tiempo real. El modelo de corriente de 3 canales es especialmente útil para verificar el equilibrio de cargas trifásicas sin un analizador de energía dedicado. Tensión nominal de aislamiento de 660V, protección IP20 y rango de temperatura de operación de -50℃ a +55℃. Carcasa de nailon retardante de llama, conforme a CE. Nota: no es apto para variadores de frecuencia, inversores ni entornos con altos armónicos.",
+  "features": [
+    "5 configuraciones funcionales — V+A+Hz combinado, corriente de 3 canales, V+A, solo tensión, solo corriente, solo frecuencia",
+    "Pantalla LED roja brillante — alta visibilidad en gabinetes con poca luz y entornos industriales",
+    "Ancho ultradelgado de 18mm — cabe en una posición 1P del riel DIN y ahorra espacio en tableros saturados",
+    "Amplio rango de tensión: AC 80–500V (cubre sistemas monofásicos y trifásicos)",
+    "Rango de corriente: 0–100A",
+    "Rango de frecuencia: 50/60Hz",
+    "Precisión de medición ≤2%, actualización de 1 muestra/segundo",
+    "Tensión nominal de aislamiento de 660V, consumo de energía ≤2VA",
+    "Protección IP20, temperatura de operación de -50℃ a +55℃",
+    "Carcasa de nailon retardante de llama, conforme a CE",
+    "No apto para variadores de frecuencia, inversores ni entornos con altos armónicos"
+  ],
+  "specs": [
+    {
+      "name": "Serie de producto",
+      "value": "DDR"
+    },
+    {
+      "name": "Modelos disponibles",
+      "value": "V+A+Hz (3 en 1) / corriente de 3 canales / V+A / solo tensión / solo corriente / solo frecuencia"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "AC 80V–500V"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "AC 0–100A (modelos amperímetro)"
+    },
+    {
+      "name": "Rango de frecuencia",
+      "value": "AC 50–60Hz"
+    },
+    {
+      "name": "Precisión",
+      "value": "Error ≤2%"
+    },
+    {
+      "name": "Frecuencia de muestreo",
+      "value": "1 vez/segundo"
+    },
+    {
+      "name": "Tipo de pantalla",
+      "value": "Pantalla digital LED roja"
+    },
+    {
+      "name": "Tensión nominal de aislamiento",
+      "value": "660V"
+    },
+    {
+      "name": "Consumo de energía",
+      "value": "≤2VA"
+    },
+    {
+      "name": "Ancho",
+      "value": "18mm (módulo 1P de riel DIN)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "18 × 81 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Grado de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-50℃ ~ +55℃"
+    },
+    {
+      "name": "Humedad",
+      "value": "1–80% (sin condensación)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Nailon retardante de llama"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Gabinetes de distribución, talleres, tableros comerciales, monitoreo de cargas trifásicas"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE"
+    }
+  ],
+  "metaTitle": "Medidor DDR 18mm riel DIN de voltaje, corriente y frecuencia LED rojo | Soltree",
+  "metaDescription": "Medidor digital AC serie DDR de 18mm para riel DIN, 5 configuraciones: V+A+Hz, corriente de 3 canales, V+A y un solo parámetro. LED rojo, 80–500V, 0–100A, 50/60Hz, ≤2%. CE.",
+  "metaKeywords": "medidor AC DDR riel DIN voltaje corriente frecuencia, medidor de tablero 18mm riel DIN LED rojo, voltímetro amperímetro AC riel DIN 500V, amperímetro de 3 canales riel DIN, frecuencímetro riel DIN 50 60Hz, medidor de tablero compacto 18mm para gabinete de distribución, medidor multifunción AC para taller industrial, medidor de tablero LED monofásico y trifásico",
+  "imageAlts": [
+    "Medidor digital AC serie DDR de 18mm Soltree para riel DIN con pantalla LED roja, vista frontal",
+    "Medidor combinado 3 en 1 DDR V+A+Hz mostrando a la vez tensión, corriente y frecuencia",
+    "Amperímetro de 3 canales DDR para monitorear cargas trifásicas en un gabinete de distribución",
+    "Voltímetro DDR con pantalla LED roja y rango de 80-500V AC",
+    "Medidor ultradelgado DDR de 18mm para riel DIN instalado en un tablero de distribución saturado",
+    "Carcasa de nailon retardante de llama, IP20 y certificación CE del medidor serie DDR"
+  ]
+}

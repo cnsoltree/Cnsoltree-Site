@@ -6,6 +6,8 @@ export interface ContactBody {
   phone?: string;
   country?: string;
   inquiry_type?: string;
+  /** Site language the enquiry was sent from, e.g. es. */
+  language?: string;
   website?: string;
 }
 export function validContact(body: unknown): body is ContactBody {
@@ -21,7 +23,7 @@ export function validContact(body: unknown): body is ContactBody {
     typeof data.message === 'string' &&
     data.message.trim().length >= 10 &&
     data.message.length <= 5000 &&
-    ['company', 'phone', 'country', 'inquiry_type'].every(
+    ['company', 'phone', 'country', 'inquiry_type', 'language'].every(
       (key) =>
         data[key] === undefined || (typeof data[key] === 'string' && data[key].length <= 200),
     )

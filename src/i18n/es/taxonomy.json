@@ -1,0 +1,90 @@
+{
+  "categories": {
+    "circuit-breaker": {
+      "name": "Interruptor Automático",
+      "shortDescription": "Protección confiable contra sobrecarga y cortocircuito para sistemas de baja tensión.",
+      "description": "Nuestros interruptores automáticos ofrecen una protección confiable para sistemas de distribución de baja tensión en aplicaciones industriales, comerciales y residenciales. Diseñados para una larga vida útil y conformes con las normas IEC/EN."
+    },
+    "surge-protector-device": {
+      "name": "Protector contra Sobretensiones (SPD)",
+      "shortDescription": "Supresión de sobretensiones transitorias para equipos sensibles.",
+      "description": "Los dispositivos de protección contra sobretensiones (SPD) de Soltree protegen las instalaciones eléctricas y los equipos conectados frente a sobretensiones causadas por rayos y transitorios de maniobra, cumpliendo los requisitos de IEC 61643 Tipo 1/2/3."
+    },
+    "dc-fuse-holder": {
+      "name": "Portafusibles DC",
+      "shortDescription": "Montaje de fusibles seguro y compacto para circuitos DC de hasta 1500V.",
+      "description": "Diseñados para sistemas fotovoltaicos y de almacenamiento en baterías, nuestros portafusibles DC garantizan un montaje seguro del fusible con protección IP, operación a prueba de contacto y compatibilidad con fusibles cilíndricos estándar."
+    },
+    "over-voltage-protector": {
+      "name": "Protector de Voltaje",
+      "shortDescription": "Desconexión automática de la carga ante sobretensiones sostenidas.",
+      "description": "Nuestros relés de protección de voltaje supervisan continuamente la tensión de alimentación y desconectan las cargas al instante cuando detectan niveles peligrosos, protegiendo motores, electrodomésticos y equipos electrónicos."
+    },
+    "power-meter": {
+      "name": "Medidor de Energía",
+      "shortDescription": "Medición de energía de precisión para uso industrial y comercial.",
+      "description": "Medidores de energía multifunción para riel DIN que miden tensión, corriente, potencia, energía, factor de potencia y armónicos. Ideales para gestión energética, distribución de costos y monitoreo de demanda en edificios inteligentes."
+    },
+    "wifi-smart-low-voltage-device": {
+      "name": "Dispositivo Inteligente WiFi de Baja Tensión",
+      "shortDescription": "Dispositivos de baja tensión con IoT para el control de edificios inteligentes.",
+      "description": "Integre la conmutación y el monitoreo de baja tensión en su edificio inteligente o plataforma de gestión energética mediante Wi-Fi. Compatibles con los protocolos de domótica más populares y con paneles en la nube."
+    },
+    "pv-combiner-box": {
+      "name": "Caja Combinadora Fotovoltaica",
+      "shortDescription": "Soluciones de combinación de strings para arreglos solares fotovoltaicos.",
+      "description": "Nuestras cajas combinadoras fotovoltaicas agrupan varias entradas de strings FV en una sola salida e incorporan protección contra sobrecorriente, protección contra sobretensiones y seccionamiento DC para instalaciones solares seguras y eficientes."
+    },
+    "ats-dual-power-switch": {
+      "name": "Transferencia Automática ATS",
+      "shortDescription": "Transferencia automática para un suministro eléctrico sin interrupciones.",
+      "description": "Los interruptores de transferencia automática (ATS) realizan una conmutación fluida entre dos fuentes de energía independientes y garantizan el suministro continuo a las cargas críticas. Disponibles para sistemas monofásicos y trifásicos."
+    },
+    "aerosol-fire-extinguisher": {
+      "name": "Extintor de Aerosol",
+      "shortDescription": "Supresión de incendios compacta por aerosol para una respuesta rápida.",
+      "description": "Los extintores de aerosol de Soltree ofrecen una supresión de incendios rápida y eficaz con agentes de aerosol respetuosos con el medio ambiente. Aptos para tableros eléctricos, vehículos, salas de servidores y gabinetes industriales. No requieren recipiente a presión: seguros, fáciles de instalar y libres de mantenimiento."
+    }
+  },
+  "groups": {
+    "circuit-protection": {
+      "name": "Protección de Circuitos",
+      "description": "Descubra interruptores automáticos, protectores contra sobretensiones y protectores de voltaje para sistemas eléctricos de baja tensión."
+    },
+    "switching-isolation": {
+      "name": "Conmutación y Seccionamiento",
+      "description": "Encuentre interruptores de transferencia automática para la conmutación entre fuentes de energía."
+    },
+    "solar-pv-components": {
+      "name": "Componentes Solares FV",
+      "description": "Vea interruptores automáticos DC, protectores contra sobretensiones DC, portafusibles y cajas combinadoras para instalaciones solares fotovoltaicas."
+    },
+    "metering-smart-control": {
+      "name": "Medición y Control Inteligente",
+      "description": "Descubra medidores de energía y dispositivos inteligentes WiFi para el monitoreo energético y el control remoto."
+    },
+    "enclosures-boxes": {
+      "name": "Gabinetes y Cajas",
+      "description": "Explore cajas combinadoras fotovoltaicas para la agrupación de strings solares y la protección eléctrica."
+    },
+    "fire-suppression": {
+      "name": "Supresión de Incendios",
+      "description": "Descubra extintores de aerosol para tableros eléctricos y equipos en espacios cerrados."
+    }
+  },
+  "items": {
+    "mcb": "Interruptor Termomagnético (MCB)",
+    "mccb": "Interruptor en Caja Moldeada (MCCB)",
+    "rccb": "Interruptor Diferencial (RCCB)",
+    "surge-protector": "Protector contra Sobretensiones",
+    "voltage-protector": "Protector de Voltaje",
+    "automatic-transfer-switch": "Interruptor de Transferencia Automática",
+    "dc-circuit-breaker": "Interruptor Automático DC",
+    "dc-surge-protector": "Protector contra Sobretensiones DC",
+    "dc-fuse-holder": "Portafusibles DC",
+    "pv-combiner-box": "Caja Combinadora Fotovoltaica",
+    "power-meter": "Medidor de Energía",
+    "wifi-smart-devices": "Dispositivos Inteligentes WiFi",
+    "aerosol-fire-extinguisher": "Extintor de Aerosol"
+  }
+}

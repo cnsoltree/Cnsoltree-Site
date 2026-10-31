@@ -1,0 +1,110 @@
+{
+  "sourceHash": "4cf00577bb8c28af",
+  "name": "Portafusibles RT18-125AM 2P para Riel DIN 125A 690V",
+  "shortDescription": "Portafusibles bipolar de 125A 690V para riel DIN y fusibles de Φ22×58mm — desconexión simultánea de fase + neutro, conforme a los requisitos de protección bipolar de IEC 60364 / BS 7671, ideal para sistemas de puesta a tierra TT y circuitos exteriores.",
+  "description": "Ciertas instalaciones exigen más que una protección unipolar con fusibles: los sistemas de puesta a tierra TT, los circuitos de baños, los tableros de distribución exteriores y cualquier proyecto regido por IEC 60364 o BS 7671 requieren la desconexión bipolar simultánea de los conductores de fase y neutro. El RT18-125AM 2P de Soltree está diseñado precisamente para estas aplicaciones. Al proteger con fusible tanto la fase como el neutro en una sola carcasa de 70mm de ancho (2 módulos), cumple el requisito normativo de aislamiento monofásico completo sin componentes de maniobra adicionales. La carcasa retardante de llama integra conductores de cobre reforzado (conductividad >98%), que mantienen la resistencia de contacto por debajo de 5mΩ y la eficiencia de transmisión por encima del 99.5%. Con valores nominales de 125A / 690V, admite fusibles cilíndricos estándar de Φ22×58mm (63A / 80A / 100A / 125A, se venden por separado) y se monta a presión en cualquier riel DIN de 35mm. Una ventana indicadora amarilla en cada polo muestra el estado de cada conductor a simple vista, mientras que los bornes de gran tamaño y los tornillos de alta calidad garantizan conexiones a prueba de vibraciones en entornos exigentes. Cada unidad supera pruebas eléctricas al 100 % en nuestra planta con certificación ISO 9001 antes del envío. Nota: los fusibles NO están incluidos.",
+  "features": [
+    "Diseño bipolar — protección simultánea por fusible de fase + neutro en una sola unidad",
+    "Cumple los requisitos de protección bipolar de IEC 60364 / BS 7671",
+    "Valores nominales de 125A / 690V — soporta cargas industriales monofásicas exigentes",
+    "Compatible con fusibles cilíndricos estándar de Φ22×58mm — repuestos fáciles de conseguir en todo el mundo",
+    "Conductores de cobre reforzado, conductividad >98% — transmisión de energía eficiente",
+    "Resistencia de contacto <5mΩ, eficiencia de transmisión de corriente >99.5% — mínima pérdida de calor",
+    "Ventana amarilla indicadora del estado del fusible en cada polo — diagnóstico visual inmediato de fallas",
+    "2 módulos de 70mm de ancho, montaje a presión en riel DIN de 35mm — instalación rápida",
+    "Carcasa aislante retardante de llama y resistente a altas temperaturas — segura en condiciones de falla",
+    "Bornes de cableado de gran tamaño + tornillos de alta calidad — conexiones firmes y resistentes a las vibraciones",
+    "Certificación CE y RoHS — aceptado en la UE, el Reino Unido y mercados de todo el mundo",
+    "Personalización OEM / ODM disponible — logotipo, etiqueta y empaque",
+    "Fábrica con certificación ISO 9001 y 15 años de trayectoria, más de 200 proyectos entregados en más de 10 países"
+  ],
+  "specs": [
+    {
+      "name": "Modelo de producto",
+      "value": "RT18-125AM"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "2P (bipolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "125A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "690V"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "Φ22×58mm"
+    },
+    {
+      "name": "Capacidades de fusible opcionales",
+      "value": "63A / 80A / 100A / 125A (se venden por separado)"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusible NO incluido — se compra por separado"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Material aislante altamente retardante de llama y resistente a altas temperaturas"
+    },
+    {
+      "name": "Material del conductor",
+      "value": "Cobre reforzado"
+    },
+    {
+      "name": "Conductividad",
+      "value": ">98%"
+    },
+    {
+      "name": "Resistencia de contacto",
+      "value": "<5mΩ"
+    },
+    {
+      "name": "Eficiencia de transmisión de corriente",
+      "value": ">99.5%"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Riel DIN estándar de 35mm"
+    },
+    {
+      "name": "Dimensiones del producto",
+      "value": "70mm (ancho) × 127mm (alto) × 76mm (prof.)"
+    },
+    {
+      "name": "Indicación del fusible",
+      "value": "Ventana indicadora de estado amarilla (por polo)"
+    },
+    {
+      "name": "Diseño de cableado",
+      "value": "Bornes de gran tamaño + tornillos de alta calidad"
+    },
+    {
+      "name": "Características de seguridad",
+      "value": "Retardante de llama, resistente a altas temperaturas, aislamiento seguro"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas de puesta a tierra TT, circuitos exteriores, instalaciones en baños, tableros con protección bipolar obligatoria"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-125AM 2P 125A 690V bipolar riel DIN | Soltree",
+  "metaDescription": "Portafusibles bipolar RT18-125AM 2P para riel DIN, 125A 690V: protección simultánea de fase + neutro, conforme a IEC 60364 / BS 7671. Para sistemas TT y exteriores.",
+  "metaKeywords": "portafusibles RT18-125AM 2P, portafusibles bipolar 125A, protección con fusible fase neutro, portafusibles IEC 60364, base portafusible bipolar BS 7671, portafusibles sistema TT, portafusibles 690V para exteriores, base portafusible cilíndrica 2P",
+  "imageAlts": [
+    "Portafusibles bipolar RT18-125AM 2P Soltree para riel DIN 125A 690V, vista frontal",
+    "Portafusibles RT18-125AM 2P, perfil lateral con clip para riel DIN",
+    "Primer plano de las dos ventanas amarillas de estado del fusible del RT18-125AM 2P",
+    "Detalle de los bornes y tornillos de cableado del portafusibles RT18-125AM 2P",
+    "Portafusibles RT18-125AM 2P instalado en riel DIN de 35mm en una caja de distribución",
+    "Plano de dimensiones 70x127x76mm del portafusibles RT18-125AM 2P"
+  ]
+}

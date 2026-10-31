@@ -2,8 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ProductCard from '@/components/ProductCard.astro';
 import ProductImageGallery from '@/components/ProductImageGallery.astro';
-import { getProductsByCategory, type Product } from '@/lib/data';
+import { type Product } from '@/lib/data';
 import Img from '@/components/Img.astro';
+import { getProducts, href, langFromUrl, t } from '@/i18n';
 
 interface Props {
   product: Product;
@@ -11,7 +12,13 @@ interface Props {
 }
 const { product, preview = false } = Astro.props;
 
-const related = getProductsByCategory(product.categorySlug)
+const lang = langFromUrl(Astro.url);
+const related = getProducts(lang)
+  .filter(
+    (p) =>
+      p.categorySlug === product.categorySlug ||
+      p.additionalCategorySlugs?.includes(product.categorySlug),
+  )
   .filter((p) => p.id !== product.id)
   .slice(0, 4);
 const galleryImages = (
@@ -21,7 +28,7 @@ const galleryImages = (
 
 <BaseLayout
   noindex={preview}
-  path={preview ? `/admin/product-preview/${product.id}` : `/products/${product.id}`}
+  path={preview ? `/admin/product-preview/${product.id}` : href(lang, `/products/${product.id}`)}
   title={product.metaTitle ?? product.name}
   description={product.metaDescription ?? product.shortDescription}
   image={product.image}
@@ -51,16 +58,19 @@ const galleryImages = (
     <div class="border-b border-gray-100 bg-gray-50 py-3">
       <div class="container">
         <nav class="flex items-center gap-2 text-xs text-gray-400" aria-label="Breadcrumb">
-          <a href="/" class="hover:text-gray-600">
-            Home
+          <a href={href(lang, '/')} class="hover:text-gray-600">
+            {t(lang, 'Home')}
           </a>
           <span>/</span>
-          <a href="/products" class="hover:text-gray-600">
-            Products
+          <a href={href(lang, '/products')} class="hover:text-gray-600">
+            {t(lang, 'Products')}
           </a>
           <span>/</span>
           {product.categorySlug ? (
-            <a href={`/categories/${product.categorySlug}`} class="hover:text-gray-600">
+            <a
+              href={href(lang, `/categories/${product.categorySlug}`)}
+              class="hover:text-gray-600"
+            >
               {product.categoryName}
             </a>
           ) : (
@@ -108,7 +118,7 @@ const galleryImages = (
                   <div class="relative aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 bg-gray-50">
                     <Img
                       src={src}
-                      alt={`${product.name} detail image ${i + 1}`}
+                      alt={t(lang, '{name} detail image {n}', { name: product.name, n: i + 1 })}
                       fill
                       class="object-cover"
                       sizes="(max-width: 640px) 50vw, 200px"
@@ -121,7 +131,7 @@ const galleryImages = (
             {/* Key Features */}
             <div class="mt-8">
               <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">
-                Key Features
+                {t(lang, 'Key Features')}
               </h2>
               <ul class="mt-3 space-y-2">
                 {product.features.map((f) => (
@@ -147,23 +157,23 @@ const galleryImages = (
 
             {/* CTA */}
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="/contact" class="btn-primary-lg flex-1 justify-center">
-                Request Quotation
+              <a href={href(lang, '/contact')} class="btn-primary-lg flex-1 justify-center">
+                {t(lang, 'Request Quotation')}
               </a>
-              <a href="/contact" class="btn-outline-lg flex-1 justify-center">
-                Ask Technical Question
+              <a href={href(lang, '/contact')} class="btn-outline-lg flex-1 justify-center">
+                {t(lang, 'Ask Technical Question')}
               </a>
             </div>
 
             <p class="mt-4 text-xs text-gray-400">
-              Samples available · OEM pricing on request · Ships worldwide
+              {t(lang, 'Samples available · OEM pricing on request · Ships worldwide')}
             </p>
           </div>
         </div>
 
         {/* Specifications Table */}
         <div class="mt-16">
-          <h2 class="text-xl font-bold text-gray-900">Technical Specifications</h2>
+          <h2 class="text-xl font-bold text-gray-900">{t(lang, 'Technical Specifications')}</h2>
           <div class="mt-4 overflow-hidden rounded-xl border border-gray-200">
             <table class="w-full text-sm">
               <tbody class="divide-y divide-gray-100">
@@ -184,7 +194,9 @@ const galleryImages = (
     {related.length > 0 && (
       <section class="section-alt">
         <div class="container">
-          <h2 class="text-xl font-bold text-gray-900">More in {product.categoryName}</h2>
+          <h2 class="text-xl font-bold text-gray-900">
+            {t(lang, 'More in {category}', { category: product.categoryName })}
+          </h2>
           <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((p) => (
               <ProductCard product={p} />

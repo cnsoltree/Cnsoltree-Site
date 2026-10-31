@@ -1,0 +1,106 @@
+{
+  "sourceHash": "73b768b3567ddf3d",
+  "name": "Portafusibles RT18-32X 1P para Riel DIN 32A 690V",
+  "shortDescription": "Portafusibles unipolar de 32A 690V para riel DIN y fusibles de 10x38mm — la opción más compacta de la serie RT18-32X, ideal para circuitos de control monofásicos, tableros de iluminación y la protección individual de equipos.",
+  "description": "Cuando un circuito de control monofásico o un ramal de iluminación necesita una protección confiable con fusible sin ocupar espacio adicional en el riel, el RT18-32X 1P de Soltree es la opción indicada. Con solo un módulo de riel DIN de ancho, es la configuración más compacta de la serie RT18-32X y cabe en gabinetes de control reducidos donde cada milímetro cuenta. Fabricado con carcasa de PVC retardante de llama y contactos de cobre de alta conductividad, garantiza una resistencia de contacto mínima y una transmisión de corriente estable bajo carga continua. Con valores nominales de 32A y 500V–690V AC, admite fusibles cerámicos estándar de 10x38mm para una protección confiable contra sobrecarga y cortocircuito. El indicador LED rojo integrado se enciende en cuanto se funde el fusible, lo que permite al personal de mantenimiento localizar la falla a simple vista sin tocar bornes energizados. El diseño de montaje a presión en riel DIN de 35mm y los bornes de tornillo completan una instalación rápida y sin herramientas. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño unipolar de 1 módulo — la opción más compacta de la serie RT18-32X",
+    "Valores nominales de 32A / 500V–690V AC — adecuado para circuitos de control e iluminación monofásicos",
+    "Compatible con fusibles cerámicos estándar de 10x38mm",
+    "Indicador LED rojo — se enciende al instante cuando se funde el fusible para detectar fallas rápidamente",
+    "Carcasa de PVC retardante de llama — segura en condiciones de falla y sobrecarga",
+    "Contactos de cobre de alta conductividad — transmisión de corriente estable y baja generación de calor",
+    "Montaje a presión en riel DIN de 35mm — instalación sin herramientas",
+    "Bornes de tornillo — conexiones de cableado firmes",
+    "Protección IP20 a prueba de contacto con los dedos",
+    "Conforme a IEC 60269 y GB 13539",
+    "Certificación CE y RoHS",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Portafusibles"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "1P (unipolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "32A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (clasificación V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta conductividad"
+    },
+    {
+      "name": "Indicador",
+      "value": "LED (se enciende cuando se funde el fusible)"
+    },
+    {
+      "name": "Grado de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +60°C"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Circuitos de control monofásicos, tableros de distribución de iluminación"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje a presión en riel DIN"
+    },
+    {
+      "name": "Peso",
+      "value": "Aprox. 80g"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-32X 1P 32A 690V riel DIN | Soltree",
+  "metaDescription": "Portafusibles unipolar RT18-32X 1P para riel DIN, 32A 690V, fusibles cerámicos 10x38mm. Diseño compacto de un módulo para control e iluminación. Indicador LED, CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-32X 1P, portafusibles unipolar 32A, portafusibles 10x38mm, portafusibles riel DIN 690V, portafusibles circuito de control, base portafusible circuito de iluminación, portafusibles monofásico con indicador LED",
+  "imageAlts": [
+    "Portafusibles unipolar RT18-32X 1P Soltree para riel DIN 32A 690V, vista frontal",
+    "Portafusibles RT18-32X 1P, perfil lateral con clip para riel DIN",
+    "Primer plano del indicador LED del portafusibles RT18-32X 1P",
+    "Detalle del cableado en bornes de tornillo del portafusibles RT18-32X 1P",
+    "Portafusibles RT18-32X 1P instalado en riel DIN de 35mm en un tablero de control",
+    "Portafusibles RT18-32X 1P con fusible cerámico de 10x38mm",
+    "Plano de dimensiones del portafusibles RT18-32X 1P"
+  ]
+}

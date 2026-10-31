@@ -9,6 +9,7 @@ import Footer from '@/components/Footer.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import CookieConsent from '@/components/CookieConsent.astro';
 import { SITE } from '@/consts';
+import { langFromUrl, locales } from '@/i18n';
 
 interface Props {
   title: string;
@@ -37,7 +38,7 @@ const fullTitle =
 ---
 
 <!doctype html>
-<html lang={SITE.lang}>
+<html lang={locales[langFromUrl(Astro.url)].hreflang} dir={locales[langFromUrl(Astro.url)].dir}>
   <head>
     <BaseHead {...props} title={fullTitle} />
   </head>

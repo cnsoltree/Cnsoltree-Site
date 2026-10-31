@@ -40,7 +40,7 @@ const files = filesIn(output);
 for (const file of files) {
   const relative = path.relative(output, file).replaceAll('\\', '/');
   assert(
-    !/(?:^|\/)(?:\.env(?:\.[^/]*)?|\.dev\.vars(?:\.[^/]*)?|\.content-backups|seo-workspace\.json)(?:\/|$)/i.test(
+    !/(?:^|\/)(?:\.env(?:\.[^/]*)?|\.dev\.vars(?:\.[^/]*)?|\.content-backups|seo-workspace\.json|Astro-elesoltree-private|ai-settings\.json|ai-encryption-key)(?:\/|$)/i.test(
       relative,
     ),
     `Private file included in deployable output: ${relative}`,
@@ -57,6 +57,10 @@ assert(!publicText.includes('/src/admin/main.js'), 'Local editor entry leaked in
 assert(
   !publicText.includes('SEO_OPENAI_API_KEY'),
   'Private research settings leaked into public output.',
+);
+assert(
+  !publicText.includes('AI_SETTINGS_ENCRYPTION_KEY'),
+  'AI encryption key configuration leaked into public output.',
 );
 
 const routes = config.routes ?? [];

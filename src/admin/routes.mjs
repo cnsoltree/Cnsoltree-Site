@@ -1,4 +1,11 @@
-const views = new Set(['workspace', 'analytics', 'seo', 'groups', 'knowledge']);
+const views = new Set([
+  'workspace',
+  'analytics',
+  'operations',
+  'groups',
+  'settings',
+  'seo-planning',
+]);
 const collections = new Set(['products', 'articles']);
 const entryPattern = /^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/;
 const base = 'https://www.elesoltree.com';
@@ -59,7 +66,7 @@ export function parseAdminUrl(input) {
     if (match[3] && !key) return null;
     return route(match[1], match[2] === 'new' ? 'new' : key ? 'edit' : 'list', key, search());
   }
-  const view = /^\/admin\/(analytics|seo|groups|knowledge)$/.exec(pathname)?.[1];
+  const view = /^\/admin\/(analytics|operations|groups|settings|seo-planning)$/.exec(pathname)?.[1];
   if (view) return route(view, null, null, search());
   const match = /^\/admin\/(products|articles)(?:\/(new|([^/]+)\/edit))?$/.exec(pathname);
   if (!match) return null;

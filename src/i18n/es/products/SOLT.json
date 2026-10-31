@@ -1,0 +1,99 @@
+{
+  "sourceHash": "7b5b11f138eb1f68",
+  "name": "Interruptor Automático Inteligente Tuya WiFi SOLT para Riel DIN con Monitoreo de Energía y Protección de Voltaje",
+  "shortDescription": "Interruptor automático inteligente WiFi Tuya/Smart Life para riel DIN — tres modelos: SOLT-OF (encendido/apagado remoto), SOLT-M (monitoreo de energía) y SOLT-MV (protección completa + medición). Control por app, compatible con Alexa y Google Assistant. AC 90–300V, 1A–63A, ≥100.000 maniobras.",
+  "description": "La serie SOLT de Soltree reúne control remoto, monitoreo de energía y protección eléctrica en un solo interruptor automático para riel DIN que funciona con el ecosistema de apps Tuya y Smart Life. Los tres modelos se conectan a redes WiFi estándar de 2.4GHz y son compatibles con Amazon Alexa y Google Assistant para el control por voz, por lo que son una mejora práctica para instalaciones de hogar inteligente, administración de propiedades de alquiler y automatización eléctrica comercial sin reemplazar el equipo de distribución existente.\n\nEl SOLT-OF es el modelo de control remoto de entrada: añade a cualquier circuito encendido/apagado por WiFi, programación horaria y memoria del último estado del relé. Con más de 100.000 maniobras mecánicas nominales, está diseñado para aplicaciones de larga duración y muchos ciclos, como circuitos de iluminación, control de bombas y automatización de cargas no críticas donde el requisito principal es un acceso remoto sencillo.\n\nEl SOLT-M añade monitoreo de energía en tiempo real a la base de control remoto: registra tensión, corriente, potencia activa y consumo acumulado en kWh a través de la app. Los datos históricos de consumo y la programación inteligente lo hacen muy adecuado para la gestión energética del hogar, el control de cargas en sistemas solares y la submedición en propiedades de alquiler, donde entender los patrones de consumo es tan importante como la conmutación remota.\n\nEl SOLT-MV es el modelo más completo: combina todas las funciones de medición del SOLT-M con protección eléctrica 4 en 1 contra sobretensión, subtensión, sobrecorriente y sobrepotencia, cada una con umbrales de disparo configurables directamente en la app. La función de disparo automático protege equipos electrónicos sensibles y electrodomésticos de alta potencia frente a anomalías de la red. Notas importantes: el cableado debe ser L+N (entrada superior), no L+L. No es compatible con Home Assistant. Solo WiFi de 2.4GHz; no es compatible con 5GHz.",
+  "features": [
+    "SOLT-OF: encendido/apagado remoto, programación horaria y memoria del último estado del relé — control inteligente básico",
+    "SOLT-M: todas las funciones del SOLT-OF + monitoreo en tiempo real de tensión, corriente, potencia y kWh",
+    "SOLT-MV: todas las funciones del SOLT-M + protección contra sobretensión, subtensión, sobrecorriente y sobrepotencia",
+    "SOLT-MV: umbrales de protección configurables desde la app — seguridad a medida para cada instalación",
+    "App Tuya / Smart Life — control remoto, programación y registro de datos de energía desde cualquier lugar",
+    "Control por voz con Amazon Alexa y Google Assistant",
+    "Conectividad WiFi de 2.4GHz — emparejamiento sencillo con redes domésticas estándar",
+    "Montaje en riel DIN de 35mm — se instala en cajas de distribución estándar",
+    "AC 90–300V, 1A–63A, 50/60Hz",
+    "≥100.000 maniobras mecánicas — larga vida útil",
+    "Protección IP20, carcasa retardante de llama",
+    "Cableado: solo L+N con entrada superior (no L+L). No es compatible con Home Assistant."
+  ],
+  "specs": [
+    {
+      "name": "Serie de producto",
+      "value": "SOLT"
+    },
+    {
+      "name": "Modelos disponibles",
+      "value": "SOLT-OF (control remoto) / SOLT-M (medición) / SOLT-MV (protección + medición)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "AC 90–300V, 50/60Hz"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "1A–63A"
+    },
+    {
+      "name": "Estándar inalámbrico",
+      "value": "WiFi 2.4GHz (5GHz no compatible)"
+    },
+    {
+      "name": "Apps compatibles",
+      "value": "Smart Life / Tuya"
+    },
+    {
+      "name": "Control por voz",
+      "value": "Amazon Alexa, Google Assistant"
+    },
+    {
+      "name": "Funciones del SOLT-OF",
+      "value": "Encendido/apagado remoto, programación horaria, memoria del último estado"
+    },
+    {
+      "name": "Funciones del SOLT-M",
+      "value": "Control remoto + monitoreo de tensión, corriente, potencia y kWh"
+    },
+    {
+      "name": "Funciones del SOLT-MV",
+      "value": "Medición completa + protección contra sobretensión/subtensión, sobrecorriente y sobrepotencia"
+    },
+    {
+      "name": "Umbrales de protección del SOLT-MV",
+      "value": "Configurables por el usuario desde la app"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥100.000 maniobras"
+    },
+    {
+      "name": "Grado de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Automatización del hogar inteligente, administración de propiedades de alquiler, control de cargas solares, protección de electrodomésticos"
+    },
+    {
+      "name": "Nota importante",
+      "value": "Solo cableado L+N (entrada superior). No es compatible con Home Assistant. Solo WiFi de 2.4GHz."
+    }
+  ],
+  "metaTitle": "Interruptor inteligente Tuya WiFi SOLT riel DIN con monitoreo de energía | Soltree",
+  "metaDescription": "Interruptor inteligente Tuya WiFi SOLT para riel DIN: SOLT-OF (control remoto), SOLT-M (medición) y SOLT-MV (protección de voltaje y sobrecorriente). Alexa y Google Assistant, 90–300V, 63A.",
+  "metaKeywords": "interruptor automático inteligente Tuya WiFi riel DIN, interruptor inteligente riel DIN con monitoreo de energía, interruptor WiFi con protección de sobretensión, interruptor Smart Life riel DIN 63A, interruptor automático con control remoto por app, interruptor SOLT-MV de sobretensión y subtensión, interruptor riel DIN para hogar inteligente con Alexa, interruptor WiFi para control de cargas solares",
+  "imageAlts": [
+    "Interruptor automático inteligente Tuya WiFi SOLT Soltree para riel DIN, vista frontal de las tres variantes",
+    "Interruptor WiFi SOLT-OF para riel DIN con encendido/apagado remoto y programación en la app Smart Life",
+    "Interruptor WiFi con monitoreo de energía SOLT-M mostrando tensión, corriente, potencia y kWh en la app Tuya",
+    "Ajustes de protección contra sobretensión, subtensión, sobrecorriente y sobrepotencia del interruptor SOLT-MV",
+    "Instalación del interruptor inteligente SOLT en riel DIN de 35mm dentro de una caja de distribución",
+    "Configuración del control por voz con Amazon Alexa y Google Assistant del interruptor WiFi SOLT",
+    "Umbrales de protección configurables del SOLT-MV en la app Smart Life",
+    "Diagrama de cableado L+N con entrada superior del interruptor inteligente Tuya WiFi serie SOLT"
+  ]
+}

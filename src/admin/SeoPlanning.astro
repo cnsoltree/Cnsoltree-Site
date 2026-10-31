@@ -1,0 +1,163 @@
+---
+---
+
+<main
+  id="studio-seo-planning"
+  class="product-manager topic-planning"
+  aria-labelledby="seo-planning-title"
+  hidden
+  inert
+>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="seo-planning-title">SEO文章规划</h1>
+      <p>生成候选主题，认可后加入运营计划。</p>
+    </div>
+    <button type="button" class="product-refresh" data-planning-refresh>
+      刷新规划
+    </button>
+  </div>
+  <p class="product-error" data-planning-error role="alert" hidden></p>
+  <p class="planning-feedback" data-planning-feedback role="status" aria-live="polite"></p>
+  <section class="product-panel">
+    <form data-topic-form>
+      <fieldset disabled>
+        <div class="planning-fields">
+          <label>
+            一级分类<select name="groupSlug" required></select>
+          </label>
+          <label>
+            二级分类
+            <select name="topicSlug">
+              <option value="">全部二级分类</option>
+            </select>
+          </label>
+          <label>
+            候选数量
+            <input type="number" name="count" min="1" max="10" value="6" required />
+          </label>
+          <label>
+            文章语言
+            <select name="language">
+              <option value="en">English</option>
+              <option value="zh">中文</option>
+            </select>
+          </label>
+          <label>
+            目标客户
+            <input name="audience" maxlength="300" placeholder="例如：电气经销商、OEM 采购" />
+          </label>
+          <label>
+            业务目标
+            <input name="goal" maxlength="500" placeholder="例如：获得产品选型及采购询盘" />
+          </label>
+          <label class="planning-wide">
+            内容方向
+            <input name="direction" maxlength="200" placeholder="例如：选型、应用场景、方案比较" />
+          </label>
+        </div>
+        <div class="planning-actions">
+          <button class="product-create" type="submit">
+            AI 生成主题
+          </button>
+          <a href="/admin/settings">管理 API 与模型</a>
+        </div>
+      </fieldset>
+    </form>
+    <p class="planning-note">
+      使用设置中的默认模型。生成时会将所选分类、产品摘要和已有标题发送至 OpenAI，可能产生 API
+      费用。选题未经实时搜索调研，不代表真实搜索量、排名或竞争难度。
+    </p>
+  </section>
+  <section class="product-panel">
+    <div class="planning-section-heading">
+      <h2>候选主题</h2>
+      <label>
+        历史批次
+        <select data-planning-batch>
+          <option value="">暂无批次</option>
+        </select>
+      </label>
+    </div>
+    <div class="planning-actions">
+      <span data-planning-count>正在读取规划…</span>
+      <button type="button" class="product-create" data-planning-add disabled>
+        加入运营计划
+      </button>
+      <a href="/admin/operations">查看运营计划 →</a>
+    </div>
+    <div class="product-table-scroll" tabindex="0" aria-label="主题表格，可横向滚动">
+      <table class="product-table" aria-label="候选文章主题">
+        <thead>
+          <tr>
+            <th>
+              <input
+                type="checkbox"
+                data-planning-all
+                aria-label="选择本批全部未加入的主题"
+                disabled
+              />
+            </th>
+            <th>候选标题 / 核心关键词</th>
+            <th>搜索意图 / 类型</th>
+            <th>推荐理由</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody data-planning-rows>
+          <tr>
+            <td colspan="5" class="product-empty">
+              正在读取规划…
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<main
+  id="studio-operations"
+  class="product-manager topic-planning"
+  aria-labelledby="operations-title"
+  hidden
+  inert
+>
+  <div class="product-page-heading">
+    <div>
+      <h1 id="operations-title">运营计划</h1>
+      <p>收录已确认的文章主题，跟进执行进度。</p>
+    </div>
+    <button type="button" class="product-refresh" data-planning-refresh>
+      刷新计划
+    </button>
+  </div>
+  <p class="product-error" data-planning-error role="alert" hidden></p>
+  <p class="planning-feedback" data-planning-feedback role="status" aria-live="polite"></p>
+  <section class="product-panel">
+    <div class="planning-actions">
+      <a class="product-create" href="/admin/seo-planning">
+        去规划文章主题
+      </a>
+      <span data-operations-count></span>
+    </div>
+    <div class="product-table-scroll" tabindex="0" aria-label="运营计划表格，可横向滚动">
+      <table class="product-table" aria-label="运营计划">
+        <thead>
+          <tr>
+            <th>文章主题</th>
+            <th>核心关键词</th>
+            <th>执行状态</th>
+            <th>加入时间</th>
+          </tr>
+        </thead>
+        <tbody data-operations-rows>
+          <tr>
+            <td colspan="4" class="product-empty">
+              正在读取计划…
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

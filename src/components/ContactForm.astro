@@ -4,15 +4,30 @@ interface Props {
   showInquiryType?: boolean;
   buttonText?: string;
 }
-const { showCountry = false, showInquiryType = false, buttonText = 'Send Enquiry' } = Astro.props;
+import { langFromUrl, t } from '@/i18n';
+const lang = langFromUrl(Astro.url);
+const {
+  showCountry = false,
+  showInquiryType = false,
+  buttonText = t(lang, 'Send Enquiry'),
+} = Astro.props;
 const id = crypto.randomUUID();
 ---
 
-<form data-contact-form class="space-y-4" method="post" action="/api/contact">
+<form
+  data-contact-form
+  class="space-y-4"
+  method="post"
+  action="/api/contact"
+  data-sending={t(lang, 'Sending...')}
+  data-success={t(lang, 'Thank you for your enquiry. We will get back to you within 24 hours.')}
+  data-error={lang === 'en' ? '' : t(lang, 'Unable to send your enquiry. Please try again later.')}
+>
+  <input type="hidden" name="language" value={lang} />
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div>
       <label for={`${id}-name`} class="label">
-        Full Name *
+        {t(lang, "Full Name *")}
       </label>
       <input
         id={`${id}-name`}
@@ -26,7 +41,7 @@ const id = crypto.randomUUID();
     </div>
     <div>
       <label for={`${id}-phone`} class="label">
-        Phone / WhatsApp
+        {t(lang, "Phone / WhatsApp")}
       </label>
       <input
         id={`${id}-phone`}
@@ -41,7 +56,7 @@ const id = crypto.randomUUID();
   </div>
   <div>
     <label for={`${id}-email`} class="label">
-      Email Address *
+      {t(lang, "Email Address *")}
     </label>
     <input
       id={`${id}-email`}
@@ -57,7 +72,7 @@ const id = crypto.randomUUID();
   <div class="grid gap-4 sm:grid-cols-2">
     <div>
       <label for={`${id}-company`} class="label">
-        Company
+        {t(lang, "Company")}
       </label>
       <input
         id={`${id}-company`}
@@ -65,13 +80,13 @@ const id = crypto.randomUUID();
         autocomplete="organization"
         maxlength="120"
         class="input"
-        placeholder="Company name"
+        placeholder={t(lang, 'Company name')}
       />
     </div>
     {showCountry && (
       <div>
         <label for={`${id}-country`} class="label">
-          Your Country
+          {t(lang, "Your Country")}
         </label>
         <input
           id={`${id}-country`}
@@ -79,7 +94,7 @@ const id = crypto.randomUUID();
           autocomplete="country-name"
           maxlength="100"
           class="input"
-          placeholder="e.g. United States"
+          placeholder={t(lang, 'e.g. United States')}
         />
       </div>
     )}
@@ -87,10 +102,10 @@ const id = crypto.randomUUID();
   {showInquiryType && (
     <div>
       <label for={`${id}-type`} class="label">
-        Inquiry Type *
+        {t(lang, "Inquiry Type *")}
       </label>
       <select id={`${id}-type`} name="inquiry_type" required class="input">
-        <option value="">Select inquiry type...</option>
+        <option value="">{t(lang, 'Select inquiry type...')}</option>
         {[
           'Product Enquiry',
           'Request for Quotation',
@@ -100,14 +115,14 @@ const id = crypto.randomUUID();
           'Distributor Partnership',
           'Other',
         ].map((type) => (
-          <option>{type}</option>
+          <option value={type}>{t(lang, type)}</option>
         ))}
       </select>
     </div>
   )}
   <div>
     <label for={`${id}-message`} class="label">
-      Message *
+      {t(lang, "Message *")}
     </label>
     <textarea
       id={`${id}-message`}
@@ -117,7 +132,10 @@ const id = crypto.randomUUID();
       maxlength="5000"
       rows={4}
       class="textarea"
-      placeholder="Please describe your requirements, including product names, quantities, and any special specifications..."
+      placeholder={t(
+        lang,
+        'Please describe your requirements, including product names, quantities, and any special specifications...',
+      )}
     ></textarea>
   </div>
   <input name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
@@ -136,7 +154,7 @@ const id = crypto.randomUUID();
           status = form.querySelector<HTMLElement>('[data-form-status]')!;
         const label = button.textContent;
         button.disabled = true;
-        button.textContent = 'Sending...';
+        button.textContent = form.dataset.sending!;
         status.textContent = '';
         try {
           const response = await fetch('/api/contact', {
@@ -147,13 +165,13 @@ const id = crypto.randomUUID();
           const result = await response.json();
           if (!response.ok || !result.success)
             throw new Error(result.error ?? 'Please try again later.');
-          status.textContent =
-            'Thank you for your enquiry. We will get back to you within 24 hours.';
+          status.textContent = form.dataset.success!;
           status.className = 'text-sm text-green-700';
           form.reset();
         } catch (error) {
           status.textContent =
-            error instanceof Error ? error.message : 'Network error. Please try again.';
+            form.dataset.error ||
+            (error instanceof Error ? error.message : 'Network error. Please try again.');
           status.className = 'text-sm text-red-600';
         } finally {
           button.disabled = false;

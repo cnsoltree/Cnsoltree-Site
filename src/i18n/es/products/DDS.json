@@ -1,0 +1,94 @@
+{
+  "sourceHash": "6d73cb420155343f",
+  "name": "Medidor de Energía Monofásico DDS para Riel DIN Serie DDS662 DDS667 DDS668 110V 230V",
+  "shortDescription": "Medidores de energía monofásicos para riel DIN de la serie DDS662/DDS667/DDS668 — 110V/230V, 50/60Hz, 5(80)A. Tres modelos que van desde la medición básica de kWh hasta el monitoreo multiparámetro completo (kWh, V, I, W, FP, Hz). Opciones con LCD retroiluminada y salida de impulsos, aptos para viviendas, facturación de alquileres y sistemas de distribución eléctrica de todo el mundo.",
+  "description": "La serie DDS comprende tres modelos de medidores de energía monofásicos compactos para riel DIN, diseñados para una medición precisa y confiable en instalaciones residenciales, de alquiler, comerciales e industriales ligeras. Todos los modelos tienen una corriente nominal de 5(80)A y son compatibles con sistemas eléctricos de 110V/230V 50/60Hz, por lo que sirven tanto para el mercado local como para la exportación a todo el mundo.\n\nEl DDS662 es el modelo base: un medidor de energía sencillo y de entrada amplia con una pantalla LCD clara que muestra kWh, tensión, corriente y potencia. Admite 110V y 230V a 50/60Hz e incluye una salida de impulsos de 1600 imp/kWh para sistemas externos de registro de datos y submedición. Su larga vida útil y alta confiabilidad lo convierten en una opción probada para la submedición residencial y el monitoreo energético en comercios ligeros.\n\nEl DDS667 añade una LCD retroiluminada para una lectura clara en condiciones de poca luz, como gabinetes de distribución cerrados y cuartos de medidores en sótanos. Un botón de operación permite cambiar los datos mostrados y reiniciarlos manualmente, lo que da al usuario control directo sobre el parámetro visualizado y los registros de consumo. Disponible en versiones de 110V/60Hz y 230V/50Hz para cubrir los estándares de red norteamericanos e internacionales.\n\nEl DDS668 es el modelo más completo de la serie y muestra el conjunto total de parámetros: kWh, tensión, corriente, potencia activa, factor de potencia y frecuencia. Su LCD retroiluminada admite modos de visualización manual y de desplazamiento automático, y una función de reinicio permite un monitoreo flexible del consumo para facturación de alquileres, submedición de inquilinos y aplicaciones de gestión energética. Certificado para sistemas de distribución eléctrica internacionales.",
+  "features": [
+    "Disponible en tres modelos: DDS662 (básico), DDS667 (retroiluminado + botón), DDS668 (multiparámetro completo)",
+    "Compatible con 110V/230V 50/60Hz — apto para sistemas eléctricos de todo el mundo",
+    "Corriente nominal: 5(80)A — soporta las cargas residenciales y comerciales ligeras típicas",
+    "Montaje en riel DIN de 35mm — instalación estándar en tableros de distribución",
+    "DDS662: medidor LCD de entrada amplia, pantalla de kWh/V/I/W, salida de impulsos de 1600 imp/kWh",
+    "DDS667: LCD retroiluminada, botón para cambiar y reiniciar los datos manualmente, 110V/60Hz o 230V/50Hz",
+    "DDS668: pantalla de parámetros completos — kWh, tensión, corriente, potencia, factor de potencia y frecuencia",
+    "DDS668: modos de visualización manual y de desplazamiento automático",
+    "Alta precisión y desempeño estable a largo plazo",
+    "Tamaño compacto, fácil instalación en cajas de distribución",
+    "Ideal para facturación de alquileres, submedición de inquilinos y gestión energética",
+    "Cumple las normas internacionales de seguridad y desempeño"
+  ],
+  "specs": [
+    {
+      "name": "Serie de producto",
+      "value": "DDS"
+    },
+    {
+      "name": "Modelos disponibles",
+      "value": "DDS662 / DDS667 / DDS668"
+    },
+    {
+      "name": "Tipo de instalación",
+      "value": "Montaje en riel DIN de 35mm"
+    },
+    {
+      "name": "Fase",
+      "value": "Monofásico"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "5(80)A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "110V / 230V (50/60Hz)"
+    },
+    {
+      "name": "Pantalla del DDS662",
+      "value": "LCD — kWh, tensión, corriente, potencia"
+    },
+    {
+      "name": "Característica especial del DDS662",
+      "value": "Salida de impulsos: 1600 imp/kWh"
+    },
+    {
+      "name": "Pantalla del DDS667",
+      "value": "LCD retroiluminada — kWh, tensión, corriente, potencia"
+    },
+    {
+      "name": "Característica especial del DDS667",
+      "value": "Botón de operación para cambiar y reiniciar los datos"
+    },
+    {
+      "name": "Versiones del DDS667",
+      "value": "110V/60Hz o 230V/50Hz"
+    },
+    {
+      "name": "Pantalla del DDS668",
+      "value": "LCD retroiluminada — kWh, tensión, corriente, potencia, factor de potencia, frecuencia"
+    },
+    {
+      "name": "Característica especial del DDS668",
+      "value": "Visualización manual / con desplazamiento automático, función de reinicio"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Submedición residencial, facturación de alquileres, monitoreo eléctrico de inquilinos, industria ligera"
+    },
+    {
+      "name": "Cumplimiento",
+      "value": "Cumple las normas internacionales de seguridad y desempeño"
+    }
+  ],
+  "metaTitle": "Medidor de energía monofásico DDS662 DDS667 DDS668 riel DIN 5(80)A | Soltree",
+  "metaDescription": "Medidores de energía monofásicos DDS para riel DIN: DDS662 (salida de impulsos), DDS667 (LCD retroiluminada, botón de reinicio), DDS668 (V/I/W/FP/Hz). 110V/230V, 5(80)A, para alquileres.",
+  "metaKeywords": "medidor de energía DDS662 riel DIN, medidor de energía DDS667 con LCD retroiluminada, medidor de energía multiparámetro DDS668, medidor monofásico riel DIN 110V 230V, medidor de energía para facturación de alquileres, medidor kWh para submedición riel DIN, medidor eléctrico serie DDS 5 80A, medidor de energía con salida de impulsos 1600 imp kWh",
+  "imageAlts": [
+    "Medidor de energía monofásico serie DDS Soltree para riel DIN, DDS662 DDS667 DDS668, vista frontal",
+    "Medidor de energía LCD DDS662 mostrando lecturas de kWh, tensión, corriente y potencia",
+    "Medidor de energía DDS667 con LCD retroiluminada y botón de operación para cambiar los datos",
+    "Medidor de energía multiparámetro DDS668 mostrando kWh, tensión, corriente, factor de potencia y frecuencia",
+    "Perfil de montaje en riel DIN de 35mm del medidor de energía serie DDS",
+    "Medidor de energía monofásico DDS instalado en un tablero residencial para facturación de alquileres",
+    "Comparación de las tres variantes DDS662, DDS667 y DDS668 para 110V 230V 50 60Hz"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "sourceHash": "a3563a27cc19bc43",
+  "name": "Interruptor Termomagnético MCB 4P DC 6 – 63A",
+  "shortDescription": "Interruptor DC tetrapolar para plantas solares industriales y redes DC bipolares: máxima seguridad de aislamiento con 500V por polo.",
+  "description": "El MCB DC tetrapolar de Soltree ofrece el mayor nivel de aislamiento de circuitos DC disponible en un formato compacto para riel DIN. Diseñado para plantas solares a escala industrial, almacenamiento de energía de gran escala y redes de distribución DC bipolares, su configuración de cuatro polos permite proteger tanto el bus positivo como el negativo de un sistema bipolar, o alcanzar la máxima tensión en serie para strings DC de muy alta tensión. Los cuatro polos comparten una palanca acoplada que garantiza la desconexión simultánea, un requisito de seguridad en grandes instalaciones donde el personal de mantenimiento debe verificar un estado de energía cero. Con cuatro cámaras independientes de extinción magnética del arco reforzada, el interruptor soporta la energía extrema de las fallas DC industriales de hasta 6kA. Cada unidad cuenta con certificación CE, TÜV para FV e IEC 60947-2, y está respaldada por los 18 años de trayectoria de Soltree con pruebas eléctricas al 100 %. Disponible de 6A a 63A con personalización OEM completa, es la elección profesional cuando no se acepta ningún compromiso en la seguridad DC.",
+  "features": [
+    "Desconexión simultánea de 4 polos: garantiza un estado verificado de energía cero para un bloqueo seguro durante el mantenimiento.",
+    "Compatible con redes DC bipolares: protege los buses positivo y negativo en sistemas de distribución bipolares.",
+    "Máxima capacidad de tensión en serie: cuatro polos en serie para proteger strings DC de muy alta tensión.",
+    "Poder de corte industrial de 6kA: soporta la energía extrema de falla de grandes arreglos FV y bancos de baterías.",
+    "Cuatro cámaras de arco independientes: cada polo extingue el arco DC por separado para una seguridad redundante.",
+    "CE + TÜV para FV + IEC 60947-2: totalmente certificado para solar a gran escala y aplicaciones DC industriales.",
+    "Programa OEM/ODM completo: corrientes personalizadas, gabinetes con su marca y documentación específica para su proyecto."
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "6A, 10A, 16A, 20A, 25A, 32A, 40A, 50A, 63A (DC)"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V DC"
+    },
+    {
+      "name": "Poder de corte",
+      "value": "6 kA DC"
+    },
+    {
+      "name": "Curva de disparo",
+      "value": "C (DC)"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Termoplástico retardante de llama, resistente a los rayos UV"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "20.000 maniobras"
+    },
+    {
+      "name": "Vida eléctrica",
+      "value": "10.000 maniobras"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN 35mm"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS, IEC 60947-2, TÜV (para FV)"
+    },
+    {
+      "name": "Método de montaje",
+      "value": "Montaje en riel DIN (35mm)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Contactos de aleación de plata"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Sistemas solares FV, distribución de energía DC, sistemas eléctricos marinos"
+    },
+    {
+      "name": "Sistema de extinción del arco",
+      "value": "Extinción magnética del arco reforzada para DC"
+    },
+    {
+      "name": "Método de cableado",
+      "value": "Borne de tornillo, compatible con cable de silicona flexible (con terminal de cobre crimpado)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +70°C"
+    },
+    {
+      "name": "Grado de protección IP",
+      "value": "IP20"
+    }
+  ],
+  "metaTitle": "MCB DC 4P 6 – 63A solar industrial y bipolar | Soltree",
+  "metaDescription": "MCB DC tetrapolar Soltree para plantas FV industriales y redes DC bipolares. 500V/polo, 6kA, certificación TÜV + CE. Soporte OEM completo. ¡Solicite precios por volumen!",
+  "metaKeywords": "MCB DC 4P, interruptor automático DC tetrapolar, interruptor solar industrial, MCB DC bipolar, interruptor FV gran escala, seccionador DC 4 polos, interruptor DC almacenamiento de energía",
+  "imageAlts": [
+    "Interruptor solar industrial MCB DC 4P Soltree, vista frontal",
+    "Interruptor DC tetrapolar, perfil lateral con palanca acoplada de 4 polos",
+    "Bloque de bornes cuádruple del MCB-DC-4P para cableado DC bipolar",
+    "Detalle de las cuatro cámaras independientes de extinción del arco del MCB DC tetrapolar",
+    "Interruptor DC 4P Soltree en tablero de distribución FV industrial",
+    "Placa de características del MCB-DC-4P con marcas de certificación CE, TÜV e IEC 60947-2",
+    "Empaque por volumen del MCB DC tetrapolar 500V para proyectos industriales"
+  ]
+}

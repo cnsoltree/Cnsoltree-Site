@@ -30,8 +30,12 @@ if (typeof document !== 'undefined') {
       element: document.getElementById('studio-analytics'),
       label: '数据分析 / 数据看板',
     },
-    seo: { element: document.getElementById('studio-seo'), label: 'SEO 助手' },
-    knowledge: { element: document.getElementById('studio-knowledge'), label: '知识库' },
+    operations: { element: document.getElementById('studio-operations'), label: '运营计划' },
+    'seo-planning': {
+      element: document.getElementById('studio-seo-planning'),
+      label: 'SEO文章规划',
+    },
+    settings: { element: document.getElementById('studio-settings'), label: '设置 / AI 设置' },
   };
   const articleHeading = document.getElementById('studio-article-editor-heading');
   const contentToggle = document.querySelector('[data-studio-content-toggle]');

@@ -1,0 +1,118 @@
+{
+  "sourceHash": "90a16a27d91ba407",
+  "name": "Portafusibles RT18-63X 1P para Riel DIN 63A 690V",
+  "shortDescription": "Portafusibles unipolar de 63A 690V para riel DIN y fusibles de 14x51mm — protección de alta corriente para circuitos principales monofásicos, subtableros y alimentación de equipos pesados, con indicación LED de fusible fundido.",
+  "description": "Cuando un circuito monofásico transporta cargas pesadas – derivaciones del alimentador principal, subtableros, grandes equipos HVAC o máquinas herramienta de alta potencia – un portafusibles de 32A no es suficiente. El RT18-63X 1P de Soltree tiene una corriente nominal de 63A y está diseñado para fusibles cilíndricos de 14x51mm, por lo que es la opción adecuada para aplicaciones monofásicas de alta corriente que requieren una protección robusta contra sobrecarga y cortocircuito. Su carcasa de PVC retardante de llama y sus contactos de cobre de alta pureza garantizan baja resistencia de contacto, mínima generación de calor y un rendimiento estable bajo carga pesada continua de hasta 690V AC. El indicador LED rojo integrado se enciende en el momento en que se funde el fusible, para que el personal de mantenimiento identifique y resuelva la falla rápidamente sin equipos de prueba. El diseño de montaje a presión en riel DIN de 35mm y los bornes de tornillo – para cables de 4mm²–16mm² – permiten una instalación sencilla en tableros de distribución principales y gabinetes de control industrial. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño unipolar para la protección de circuitos monofásicos de alta corriente",
+    "Valores nominales de 63A / 500V–690V AC — soporta circuitos principales y equipos pesados",
+    "Compatible con fusibles cilíndricos estándar de 14x51mm",
+    "Indicador LED rojo — detección visual inmediata de fusible fundido",
+    "Carcasa de PVC retardante de llama — segura ante fallas de alta corriente",
+    "Contactos de cobre de alta pureza — baja resistencia para una transmisión estable con cargas pesadas",
+    "Montaje a presión en riel DIN de 35mm",
+    "Bornes de tornillo para cables de 4mm²–16mm²",
+    "Protección IP20 a prueba de contacto con los dedos",
+    "Conforme a IEC 60269 y GB 13539",
+    "Certificación CE y RoHS",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Portafusibles de alta corriente"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-63X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "1P (unipolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "14x51mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (clasificación V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta pureza"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "Indicador visual LED (rojo)"
+    },
+    {
+      "name": "Función del indicador",
+      "value": "Se ilumina cuando se funde el fusible"
+    },
+    {
+      "name": "Tipo de conexión",
+      "value": "Bornes de tornillo"
+    },
+    {
+      "name": "Capacidad de cable",
+      "value": "4mm² – 16mm²"
+    },
+    {
+      "name": "Grado de protección",
+      "value": "IP20"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +70°C"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Circuitos principales, subtableros, equipos de alta potencia"
+    },
+    {
+      "name": "Instalación",
+      "value": "Montaje a presión en riel DIN"
+    },
+    {
+      "name": "Peso",
+      "value": "Aprox. 95g"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-63X 1P 63A 690V alta corriente | Soltree",
+  "metaDescription": "Portafusibles unipolar RT18-63X 1P para riel DIN, 63A 690V, fusibles 14x51mm. Protección de alta corriente para circuitos principales y subtableros. Indicador LED, CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-63X 1P, portafusibles unipolar 63A, portafusibles 14x51mm, base portafusible alta corriente riel DIN, portafusibles circuito principal 690V, portafusibles monofásico de servicio pesado, protección con fusibles de subtableros",
+  "imageAlts": [
+    "Portafusibles unipolar de alta corriente RT18-63X 1P Soltree para riel DIN 63A 690V, vista frontal",
+    "Portafusibles RT18-63X 1P, perfil lateral con clip para riel DIN",
+    "Primer plano del indicador LED del portafusibles RT18-63X 1P",
+    "Detalle del cableado en bornes de tornillo del RT18-63X 1P para fusible de 14x51mm",
+    "Portafusibles RT18-63X 1P instalado en un tablero de distribución principal",
+    "Portafusibles RT18-63X 1P con fusible cilíndrico de 14x51mm",
+    "Plano de dimensiones del portafusibles RT18-63X 1P"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "sourceHash": "bafe9694daecd71e",
+  "name": "Caja Combinadora FV de 6 Entradas, Interruptor DC 100A, Fusibles 15A y SPD 40kA (Acero, con Disipador)",
+  "shortDescription": "Caja combinadora FV de 6 entradas en gabinete de acero laminado en frío con interruptor DC de 100A, 6 fusibles de 15A, SPD de 500V/40kA y disipador de calor integrado.",
+  "description": "La PCB-M6in-01 es una caja combinadora FV de 6 entradas diseñada para arreglos solares comerciales en los que varios strings deben agruparse en una sola alimentación. Integra un interruptor automático DC de 100A para protección contra sobrecarga y cortocircuito, 6 fusibles FV de 15A para proteger cada string por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para defender el sistema frente a transitorios inducidos por rayos. El robusto gabinete de acero laminado en frío tiene grado de protección IP65 contra polvo y agua y cuenta con un disipador de calor integrado para un funcionamiento estable bajo carga continua. Apta para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 6 entradas de arreglo FV y 1 salida",
+    "Interruptor automático DC de 100A para protección contra sobrecarga y cortocircuito",
+    "6 fusibles FV de 15A para proteger cada string por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Gabinete de acero laminado en frío de alta resistencia",
+    "Disipador de calor integrado para un desempeño térmico estable bajo carga continua",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "PCB-M6in-01"
+    },
+    {
+      "name": "Entradas de arreglo FV",
+      "value": "6"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "100A"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "15A (6 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Acero laminado en frío"
+    },
+    {
+      "name": "Refrigeración",
+      "value": "Disipador de calor integrado"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 6 entradas 100A acero con disipador | Soltree",
+  "metaDescription": "Caja combinadora FV de 6 entradas en acero laminado en frío con interruptor DC de 100A, 6 fusibles FV de 15A, SPD 500V/40kA y disipador integrado. IP65 para exteriores. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 6 entradas, interruptor DC 100A, fusible FV 15A, SPD 40kA, caja combinadora de acero, caja combinadora con disipador, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 6 entradas PCB-M6in-01 con gabinete de acero, vista frontal",
+    "Interior de la caja combinadora PCB-M6in-01 con interruptor DC de 100A y 6 fusibles de 15A",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la PCB-M6in-01",
+    "Disipador de calor integrado de la PCB-M6in-01 para la disipación térmica",
+    "Bornes de cableado para 6 entradas de arreglo FV de la PCB-M6in-01",
+    "Gabinete de acero laminado en frío IP65 de la PCB-M6in-01 instalado en exteriores"
+  ]
+}

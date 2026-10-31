@@ -1,0 +1,72 @@
+{
+  "sourceHash": "a863b78eb532ab5e",
+  "name": "Caja Combinadora FV 1 Entrada de String 1 Salida, Interruptor 600V DC 63A, Fusibles 15A y SPD 40kA",
+  "shortDescription": "Caja combinadora FV de 1 string con interruptor DC de 63A, 2 fusibles de 15A y SPD de 500V/40kA en gabinete retardante de llama IP65.",
+  "description": "La HT-8Way-1in1out-600VDC es una caja combinadora FV compacta de 1 string diseñada para proteger y consolidar un string solar antes de que llegue al inversor. Integra un interruptor automático DC de 63A para protección contra sobrecarga y cortocircuito, 2 fusibles FV de 15A para proteger cada polo por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para proteger el sistema frente a transitorios inducidos por rayos. La carcasa de plástico rígido retardante de llama tiene grado de protección IP65 – totalmente sellada contra polvo y agua – por lo que es ideal para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 1 entrada de string FV y 1 salida",
+    "Interruptor automático DC de 63A para protección contra sobrecarga y cortocircuito",
+    "2 fusibles FV de 15A para proteger cada polo por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Carcasa de plástico rígido retardante de llama",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "HT-8Way-1in1out-600VDC"
+    },
+    {
+      "name": "Entradas de string FV",
+      "value": "1"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Tensión máxima del sistema",
+      "value": "600V DC"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "63A"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "15A (2 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Plástico rígido retardante de llama"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 1 entrada 600VDC 63A fusible 15A SPD 40kA | Soltree",
+  "metaDescription": "Caja combinadora FV de 1 string con interruptor DC de 63A, 2 fusibles FV de 15A, SPD 500V/40kA y gabinete IP65. Para sistemas solares conectados a la red y aislados. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 1 string, caja combinadora 600VDC, caja combinadora solar con SPD, interruptor DC 63A, fusible FV 15A, caja combinadora IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 1 string HT-8Way-1in1out-600VDC, vista frontal",
+    "Interior de la caja combinadora HT-8Way-1in1out-600VDC con interruptor DC de 63A y fusibles",
+    "Disposición del cableado con fusibles FV de 15A de la HT-8Way-1in1out-600VDC",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la HT-8Way-1in1out-600VDC",
+    "Gabinete de plástico retardante de llama IP65 de la HT-8Way-1in1out-600VDC",
+    "HT-8Way-1in1out-600VDC instalada en exteriores en un sistema FV"
+  ]
+}

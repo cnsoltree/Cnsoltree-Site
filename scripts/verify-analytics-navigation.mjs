@@ -40,7 +40,28 @@ const source = fs
   .readFileSync(new URL('../src/admin/workspace.js', import.meta.url), 'utf8')
   .replace(/^import .*;\r?\n/gm, '')
   .replace(/^export /gm, '');
-const views = ['workspace', 'analytics', 'seo', 'knowledge', 'products', 'articles', 'groups'];
+const views = [
+  'workspace',
+  'analytics',
+  'operations',
+  'seo-planning',
+  'settings',
+  'products',
+  'articles',
+  'groups',
+];
+const adminPage = fs.readFileSync(new URL('../src/pages/admin.astro', import.meta.url), 'utf8');
+assert(
+  adminPage.indexOf('data-studio-nav="analytics"') <
+    adminPage.indexOf('data-studio-nav="operations"'),
+);
+assert(
+  adminPage.indexOf('data-studio-nav="operations"') <
+    adminPage.indexOf('data-studio-content-toggle'),
+);
+assert(!/id="studio-(seo|knowledge)"|SeoAssistant|KnowledgeBase|seo-workspace/.test(adminPage));
+for (const path of ['/admin/seo', '/admin/knowledge', '/admin?view=seo', '/admin?view=knowledge'])
+  assert.equal(parseAdminUrl(path), null);
 const panelIds = views.map((view) => `studio-${view}`);
 function shell(path) {
   const ids = Object.fromEntries(
@@ -151,8 +172,9 @@ function shell(path) {
 for (const [path, view, panel, editor] of [
   ['/admin', 'workspace', 'studio-workspace', ''],
   ['/admin/analytics', 'analytics', 'studio-analytics', ''],
-  ['/admin/seo', 'seo', 'studio-seo', ''],
-  ['/admin/knowledge', 'knowledge', 'studio-knowledge', ''],
+  ['/admin/operations', 'operations', 'studio-operations', ''],
+  ['/admin/seo-planning', 'seo-planning', 'studio-seo-planning', ''],
+  ['/admin/settings', 'settings', 'studio-settings', ''],
   ['/admin/groups', 'groups', 'studio-groups', ''],
   ['/admin/products', 'products', 'studio-products', ''],
   ['/admin/articles', 'articles', 'studio-articles', ''],
@@ -238,7 +260,7 @@ assert.equal(draft.document.body.dataset.editor, 'article');
 assert.equal(editor.unsavedDraft.title, 'Unsaved text');
 assert.equal(draft.current().length, 1);
 
-for (const view of ['seo', 'knowledge', 'groups', 'analytics']) {
+for (const view of ['operations', 'seo-planning', 'settings', 'groups', 'analytics']) {
   const legacy = shell(`/admin?view=${view}#/collections/articles/new`);
   assert.equal(legacy.window.location.pathname, `/admin/${view}`);
   assert.equal(legacy.window.location.search, '');

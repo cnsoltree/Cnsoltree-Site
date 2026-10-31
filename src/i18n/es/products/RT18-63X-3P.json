@@ -1,0 +1,110 @@
+{
+  "sourceHash": "932207f1b077ad06",
+  "name": "Portafusibles RT18-63X 3P para Riel DIN 63A 690V",
+  "shortDescription": "Portafusibles tripolar de 63A 690V para riel DIN y fusibles de 14x51mm — protección de alta corriente por fase para grandes motores industriales, compresores y maquinaria trifásica pesada, con indicación LED de falla por fase.",
+  "description": "Los grandes motores industriales, los compresores de aire, las estaciones de bombeo y la maquinaria trifásica pesada consumen corrientes sostenidas que superan la capacidad de los portafusibles de 32A. El RT18-63X 3P de Soltree tiene una corriente nominal de 63A por fase y admite fusibles cilíndricos de 14x51mm, el formato adecuado para fusibles de alto poder de corte capaces de interrumpir con seguridad las grandes corrientes de falla de las cargas inductivas de gran tamaño. Tres posiciones de fusible independientes, cada una con su propio indicador LED rojo, permiten a los ingenieros de mantenimiento identificar al instante la fase con falla y reemplazar solo el fusible fundido, reduciendo al mínimo el tiempo de inactividad de los equipos de producción. El diseño compacto para riel DIN de 35mm se adapta a tableros de centros de control de motores (CCM) y tableros de distribución industrial estándar sin necesidad de un gabinete dedicado. La carcasa de PVC retardante de llama y el cableado en bornes de tornillo para cables de hasta 16mm² cubren las exigencias de los circuitos trifásicos de alta corriente. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño tripolar — protección de alta corriente independiente en cada fase",
+    "Valores nominales de 63A / 500V–690V AC — diseñado para grandes motores, compresores y maquinaria pesada",
+    "Compatible con fusibles cilíndricos estándar de 14x51mm",
+    "Indicador LED rojo individual por fase — identificación rápida de la fase con falla",
+    "Carcasa de PVC retardante de llama — segura ante fallas de alta corriente",
+    "Contactos de cobre de alta conductividad — rendimiento estable con cargas trifásicas pesadas",
+    "Montaje a presión en riel DIN de 35mm sin herramientas",
+    "Cableado en bornes de tornillo para cables de hasta 16mm²",
+    "Diseño IP20 a prueba de contacto con los dedos",
+    "Conforme a IEC 60269 y GB 13539",
+    "Certificación CE y RoHS",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Portafusibles trifásico de alta corriente"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-63X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "3P (tripolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "63A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "14x51mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (grado V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta pureza"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "Indicador LED de falla (rojo, por fase)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +70°C"
+    },
+    {
+      "name": "Clasificación de protección",
+      "value": "IP20 (a prueba de contacto)"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Grandes motores industriales, compresores, maquinaria trifásica pesada"
+    },
+    {
+      "name": "Instalación",
+      "value": "Clip para riel DIN sin herramientas"
+    },
+    {
+      "name": "Dimensiones (ancho total)",
+      "value": "Aprox. 54mm (3 módulos x 18mm)"
+    },
+    {
+      "name": "Peso",
+      "value": "Aprox. 240g"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-63X 3P 63A 690V trifásico pesado | Soltree",
+  "metaDescription": "Portafusibles RT18-63X 3P para riel DIN, 63A 690V, fusibles 14x51mm. Protección de alta corriente por fase para grandes motores, compresores y maquinaria. Indicador LED, CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-63X 3P, portafusibles trifásico 63A, base portafusible trifásica 14x51mm, portafusibles protección de motores grandes, base portafusible compresor industrial, portafusibles trifásico servicio pesado 690V, portafusibles CCM 63A",
+  "imageAlts": [
+    "Portafusibles tripolar de alta corriente RT18-63X 3P Soltree para riel DIN 63A 690V, vista frontal",
+    "Portafusibles RT18-63X 3P, perfil lateral con clip para riel DIN",
+    "Primer plano de los indicadores LED por fase del portafusibles RT18-63X 3P",
+    "Cableado en bornes de tornillo del RT18-63X 3P para fusible de 14x51mm",
+    "Portafusibles RT18-63X 3P instalado en un centro de control de motores industrial",
+    "Portafusibles RT18-63X 3P con fusibles cilíndricos de 14x51mm",
+    "Plano de dimensiones del portafusibles RT18-63X 3P"
+  ]
+}

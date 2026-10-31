@@ -1,0 +1,143 @@
+{
+  "sourceHash": "853bfb4ea27c635c",
+  "name": "Protector de Voltaje Autorreconectable 5 en 1 PN2-VAFD con Medidor de Voltaje, Corriente, Potencia, Frecuencia y kWh",
+  "shortDescription": "Protector de voltaje autorreconectable 5 en 1 con medidor multifunción — muestra a la vez tensión, corriente, potencia (W), frecuencia (Hz) y kWh acumulados en un solo equipo. El modelo más completo de la serie PN2. Opciones de 40A / 63A / 80A.",
+  "description": "El PN2-VAFD de Soltree es el modelo más avanzado de la serie PN2: un verdadero dispositivo 5 en 1 que combina protección completa contra sobretensión, subtensión y sobrecorriente con un medidor de energía multifunción en una sola unidad para riel DIN. Mientras el PN2-VAK muestra tensión, corriente y kWh, el PN2-VAFD añade a la pantalla la potencia (W) en tiempo real y la frecuencia de alimentación (Hz), y ofrece a instaladores y usuarios finales una visión completa del desempeño del circuito sin equipos de medición adicionales.\n\nPor eso es ideal para locales comerciales ligeros, propiedades de alquiler que requieren submedición, sistemas domésticos de monitoreo energético y cualquier instalación donde se necesite conocer en detalle la calidad y el consumo de energía junto con la protección automática ante fallas. La pantalla multicolor presenta las cinco mediciones a la vez: tensión, corriente, potencia activa en watts, frecuencia de alimentación en hertz y energía acumulada en kWh. Otras funciones inteligentes incluyen el conteo de sobrecorrientes, alertas por nivel de potencia preestablecido y protección de corte rápido.\n\nLos parámetros de protección son totalmente configurables – sobretensión (240–300V AC), subtensión (140–230V AC), sobrecorriente (1A al máximo nominal) –, con bloqueo por contraseña y retardo de reconexión ajustable (0–999s, 60s por defecto). Disponible en variantes de 40A, 63A y 80A; AC 110V personalizable para mercados de exportación.",
+  "features": [
+    "Pantalla 5 en 1 — tensión, corriente, potencia (W), frecuencia (Hz) y kWh a la vez",
+    "Autorreconectable — se desconecta automáticamente ante una falla y se reconecta cuando el suministro se estabiliza",
+    "Protección contra sobretensión — umbral de disparo configurable de 240–300V AC",
+    "Protección contra subtensión — umbral de disparo configurable de 140–230V AC",
+    "Protección contra sobrecorriente — ajustable de 1A al máximo nominal",
+    "Medidor de energía kWh integrado — registro del consumo eléctrico acumulado",
+    "Pantalla de potencia (W) y frecuencia (Hz) en tiempo real — sin equipos de medición adicionales",
+    "Funciones de conteo de sobrecorrientes y alerta por nivel de potencia preestablecido",
+    "Desconexión rápida en 0.5 segundos al detectar una falla",
+    "Retardo de reconexión ajustable de 0–999 segundos (60s por defecto)",
+    "Bloqueo por contraseña — impide cambios no autorizados de parámetros",
+    "Modo de ahorro de energía — reduce el autoconsumo en espera",
+    "Disponible en corrientes nominales de 40A / 63A / 80A",
+    "Tensión de alimentación nominal AC 220V (AC 110V personalizable)",
+    "Montaje en riel DIN de 35mm, carcasa de PC retardante de llama (UL94 V-0)",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector de voltaje autorreconectable 5 en 1 con medidor multifunción"
+    },
+    {
+      "name": "Modelo",
+      "value": "PN2-VAFD"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 240–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 140–230V"
+    },
+    {
+      "name": "Rango de ajuste de sobrecorriente",
+      "value": "1–40A / 1–63A / 1–80A (según el modelo)"
+    },
+    {
+      "name": "Corriente máx. de trabajo",
+      "value": "40A / 63A / 80A (opcional)"
+    },
+    {
+      "name": "Retardo de disparo (sobretensión)",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Multicolor — tensión + corriente + potencia (W) + frecuencia (Hz) + kWh"
+    },
+    {
+      "name": "Nota sobre la corriente mostrada",
+      "value": "No se muestra cuando la corriente es inferior a 1A"
+    },
+    {
+      "name": "Nota sobre los kWh mostrados",
+      "value": "Acumulados; no se muestran por debajo de 0.01 kWh"
+    },
+    {
+      "name": "Funciones adicionales",
+      "value": "Conteo de sobrecorrientes, nivel de potencia preestablecido, protección de corte rápido"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, 60s por defecto)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Compatible — impide cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Activable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25°C a +55°C"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Funciones de protección y medición",
+      "value": "Sobretensión, subtensión, sobrecorriente, retardo, kWh, potencia (W), frecuencia (Hz), conteo de sobrecorrientes, nivel de potencia preestablecido"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Monitoreo energético doméstico, análisis de calidad de energía en comercios ligeros, instalaciones solares FV"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje 5 en 1 PN2-VAFD con medidor de potencia y kWh | Soltree",
+  "metaDescription": "Protector autorreconectable 5 en 1 PN2-VAFD con pantalla de tensión, corriente, potencia, frecuencia y kWh. 40A–80A, AC 220V, reconexión automática. CE y RoHS.",
+  "metaKeywords": "protector de voltaje PN2-VAFD 5 en 1, protector de voltaje con medidor de potencia y frecuencia, relé autorreconectable con medidor de watts y kWh, protector de voltaje multímetro riel DIN, protector de sobretensión con pantalla de potencia y frecuencia, relé medidor de energía 5 en 1 voltaje corriente potencia frecuencia",
+  "imageAlts": [
+    "Protector de voltaje autorreconectable 5 en 1 PN2-VAFD Soltree con pantalla multicolor, vista frontal",
+    "Pantalla del PN2-VAFD mostrando a la vez tensión, corriente, potencia en watts, frecuencia en Hz y kWh",
+    "Lectura del consumo acumulado en el medidor de energía kWh del protector 5 en 1 PN2-VAFD",
+    "Panel de ajuste de parámetros del PN2-VAFD con puntos de disparo por sobretensión y subtensión",
+    "Perfil lateral de montaje en riel DIN del protector de voltaje PN2-VAFD",
+    "Protector 5 en 1 PN2-VAFD instalado en un tablero de distribución",
+    "Detalle de las conexiones de bornes del protector PN2-VAFD",
+    "Opciones de corriente nominal de 40A, 63A y 80A del protector de voltaje PN2-VAFD"
+  ]
+}

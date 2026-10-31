@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Catalog from '@/components/Catalog.astro';
+import { getCategories, translatedLangs } from '@/i18n';
+export function getStaticPaths() {
+  return translatedLangs.flatMap((lang) =>
+    getCategories(lang).map((category) => ({
+      params: { lang, slug: category.slug },
+      props: { category },
+    })),
+  );
+}
+const { category } = Astro.props;
+---
+
+<BaseLayout title={category.name} description={category.description}>
+  <Catalog category={category.slug} />
+</BaseLayout>

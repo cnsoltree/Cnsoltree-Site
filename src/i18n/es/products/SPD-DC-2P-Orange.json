@@ -1,0 +1,83 @@
+{
+  "sourceHash": "0b75c20bba107859",
+  "name": "Protector contra Sobretensiones DC 2P 500V/1000V 40kA - SPD Solar FV para Casas Rodantes y Sistemas Solares Residenciales",
+  "shortDescription": "Protector contra sobretensiones DC bipolar para sistemas FV de 500VDC y 1000VDC. Protege a la vez los conductores positivo y negativo. Descarga máxima de 40kA y respuesta rápida – para cajas de distribución solares de casas rodantes y residenciales.",
+  "description": "El SPD-DC-2P-Orange es un dispositivo de protección contra sobretensiones DC bipolar para sistemas fotovoltaicos, compatible con tensiones de operación de 500VDC y 1000VDC. Al actuar sobre ambos polos a la vez, protege por completo los conductores positivo y negativo de un circuito DC – resguardando el sistema eléctrico solar y los equipos conectados frente a sobretensiones inducidas por rayos, transitorios de maniobra y eventos de sobretensión. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión es de 2.8kV a 500VDC y de 3.6kV a 1000VDC. El núcleo de cobre garantiza una excelente conductividad y resistencia a la corrosión para un funcionamiento confiable en exteriores a largo plazo. La carcasa naranja de PC retardante de llama se monta a presión en un riel DIN estándar de 35mm y es compatible con sistemas FV e interruptores automáticos DC. Ideal para cajas de distribución en sistemas solares de casas rodantes e instalaciones solares residenciales en techo.",
+  "features": [
+    "Protección DC bipolar contra sobretensiones: protege a la vez los conductores positivo y negativo",
+    "Doble tensión: compatible con sistemas FV de 500VDC y 1000VDC",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión: 2.8kV (500VDC) / 3.6kV (1000VDC)",
+    "Protección contra rayos, supresión de sobretensiones y limitación de sobretensiones transitorias",
+    "Núcleo de cobre: excelente conductividad y resistencia a la corrosión",
+    "Compatible con sistemas FV e interruptores automáticos DC",
+    "Carcasa naranja de PC retardante de llama, montaje en riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "2P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "500VDC / 1000VDC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": "2.8kV (500VDC) / 3.6kV (1000VDC)"
+    },
+    {
+      "name": "Sistema de aplicación",
+      "value": "Sistema fotovoltaico (FV)"
+    },
+    {
+      "name": "Función de protección",
+      "value": "Protección contra rayos, supresión de sobretensiones, sobretensiones transitorias"
+    },
+    {
+      "name": "Material del núcleo",
+      "value": "Cobre"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama, naranja"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Compatibilidad",
+      "value": "Sistemas FV, interruptores automáticos DC"
+    },
+    {
+      "name": "Lugar de instalación",
+      "value": "Caja de distribución"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Casas rodantes, sistemas solares residenciales"
+    }
+  ],
+  "metaTitle": "SPD DC 2P naranja 500V/1000V 40kA | SPD solar FV | Soltree",
+  "metaDescription": "SPD DC bipolar naranja para sistemas FV de 500VDC y 1000VDC. Protege DC+ y DC– a la vez. 40kA Imax, Up 2.8kV/3.6kV, núcleo de cobre. Para casas rodantes y hogares.",
+  "metaKeywords": "protector contra sobretensiones DC 2P, SPD solar FV, SPD 500V DC, SPD 1000V DC, SPD solar 40kA, SPD DC bipolar, protector de sobretensiones para casa rodante, SPD solar residencial, SPD DC naranja, SPD DC riel DIN",
+  "imageAlts": [
+    "Protector contra sobretensiones DC bipolar SPD-DC-2P-Orange, vista frontal – SPD solar FV naranja",
+    "Diagrama de protección de los conductores positivo y negativo del SPD-DC-2P-Orange",
+    "SPD-DC-2P-Orange compatible con tensiones FV de 500VDC y 1000VDC",
+    "Detalle del núcleo de cobre del SPD-DC-2P-Orange – excelente conductividad",
+    "Detalle de la descarga de 40kA y del nivel de protección de tensión del SPD-DC-2P-Orange",
+    "Conexión de cableado del SPD-DC-2P-Orange en una caja de distribución",
+    "SPD-DC-2P-Orange en riel DIN de 35mm dentro de una caja de distribución solar",
+    "SPD-DC-2P-Orange instalado en un sistema solar FV de casa rodante y residencial"
+  ]
+}

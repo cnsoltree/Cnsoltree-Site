@@ -1,0 +1,86 @@
+{
+  "sourceHash": "37f85ffa8eca9fc5",
+  "name": "Protector contra Sobretensiones AC 4P 385V 40kA - SPD Modo Completo Trifásico+N para Fábricas, Centros de Datos y Grandes Edificios",
+  "shortDescription": "Protector contra sobretensiones tetrapolar de 385VAC en modo completo para sistemas trifásicos de 4 hilos TT/TN-S. Protección L1-PE, L2-PE, L3-PE y N-PE en una sola unidad. Descarga máxima de 40kA, – .5kV, respuesta <25ns – para tableros principales de fábricas, centros de datos y acometidas de grandes edificios.",
+  "description": "El SPD-AC-4P-Grey es un dispositivo de protección contra sobretensiones AC tetrapolar que ofrece protección completa en modo total en los cuatro conductores – L1-PE, L2-PE, L3-PE y N-PE – en sistemas trifásicos de baja tensión de 4 hilos TT y TN-S. Al cubrir a la vez las tres fases y el neutro, protege los equipos eléctricos trifásicos, los instrumentos de precisión y el conductor neutro contra sobretensiones transitorias causadas por rayos o maniobras. La corriente máxima de descarga es de 40kA con una nominal de 20kA, y el nivel de protección de tensión es de – .5kV por modo. Su núcleo de varistor de óxido metálico (MOV) responde en menos de 25 nanosegundos para limitar al instante las sobretensiones transitorias. La carcasa gris de PC retardante de llama (UL94 V-0) se monta en un riel DIN estándar de 35mm y tiene un diseño modular reemplazable en caliente que facilita el mantenimiento en sitio. Diseñado para el máximo nivel de protección en la acometida de tableros principales de fábricas, centros de datos y edificios comerciales de gran tamaño.",
+  "features": [
+    "Protección tetrapolar en modo completo: L1-PE, L2-PE, L3-PE y N-PE en una sola unidad",
+    "Corriente máxima de descarga (Imax) de 40kA y corriente nominal de descarga (In) de 20kA",
+    "Nivel de protección de tensión – .5kV: cubre todas las fases y el neutro",
+    "Tiempo de respuesta ultrarrápido <25ns: supresión instantánea de transitorios",
+    "Núcleo de varistor de óxido metálico (MOV): excelente conductividad y resistencia a la corrosión",
+    "Compatible con sistemas trifásicos de baja tensión de 4 hilos TT y TN-S",
+    "Diseño modular reemplazable en caliente: cada módulo se sustituye sin recablear",
+    "Carcasa de PC retardante de llama (UL94 V-0), gris, montaje en riel DIN de 35mm"
+  ],
+  "specs": [
+    {
+      "name": "Polos",
+      "value": "4P"
+    },
+    {
+      "name": "Tensión máxima de operación continua (Uc)",
+      "value": "385V AC"
+    },
+    {
+      "name": "Corriente nominal de descarga (In)",
+      "value": "20kA"
+    },
+    {
+      "name": "Corriente máxima de descarga (Imax)",
+      "value": "40kA"
+    },
+    {
+      "name": "Nivel de protección de tensión (Up)",
+      "value": " – .5kV"
+    },
+    {
+      "name": "Tipo de sistema",
+      "value": "Sistema trifásico de baja tensión de 4 hilos (TT / TN-S)"
+    },
+    {
+      "name": "Modo de protección",
+      "value": "L1-PE, L2-PE, L3-PE, N-PE (modo completo)"
+    },
+    {
+      "name": "Cableado",
+      "value": "3 líneas de fase (L1, L2, L3) + neutro (N)"
+    },
+    {
+      "name": "Componente principal",
+      "value": "Varistor de óxido metálico (MOV)"
+    },
+    {
+      "name": "Tiempo de respuesta",
+      "value": "<25ns"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0), gris"
+    },
+    {
+      "name": "Montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Diseño",
+      "value": "Modular, reemplazable en caliente"
+    },
+    {
+      "name": "Aplicaciones",
+      "value": "Tablero principal de fábrica, centro de datos, acometida de grandes edificios"
+    }
+  ],
+  "metaTitle": "SPD 4P 385V 40kA modo completo trifásico+N | Soltree",
+  "metaDescription": "Protector contra sobretensiones AC 4P 385VAC en modo completo para sistemas TT/TN-S de 4 hilos. L1-PE, L2-PE, L3-PE y N-PE. 40kA máx., – .5kV, <25ns.",
+  "metaKeywords": "protector contra sobretensiones AC 4P, SPD trifásico con neutro, SPD modo completo, SPD TT TN-S, SPD 385V 4 polos, SPD 40kA, SPD tablero de fábrica, SPD centro de datos, SPD grandes edificios, protector contra sobretensiones riel DIN",
+  "imageAlts": [
+    "Protector contra sobretensiones AC tetrapolar SPD-AC-4P-Grey, vista frontal – SPD trifásico+N gris para riel DIN",
+    "Diagrama de cableado del SPD-AC-4P-Grey – fases L1 L2 L3 y conexión de neutro",
+    "Rutas de protección en modo completo del SPD-AC-4P-Grey – L1-PE L2-PE L3-PE y N-PE",
+    "Detalle del componente principal MOV del SPD-AC-4P-Grey – varistor de óxido metálico",
+    "Primer plano del módulo de protección tetrapolar 385V 40kA del SPD-AC-4P-Grey",
+    "Diseño modular reemplazable en caliente del SPD-AC-4P-Grey en riel DIN de 35mm",
+    "SPD-AC-4P-Grey instalado en el tablero principal de distribución de una fábrica"
+  ]
+}

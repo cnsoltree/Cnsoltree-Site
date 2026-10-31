@@ -1,0 +1,110 @@
+{
+  "sourceHash": "0b3cb52650621cfb",
+  "name": "Portafusibles RT18-32X 3P para Riel DIN 32A 690V",
+  "shortDescription": "Portafusibles tripolar de 32A 690V para riel DIN y fusibles de 10x38mm — seccionamiento por fusible en cada fase para motores trifásicos y tableros de control industrial, con indicación LED de fusible fundido por fase.",
+  "description": "Los arrancadores de motores trifásicos, los tableros de control de maquinaria y los circuitos de distribución industrial requieren protección por fusible independiente en cada fase: un fusible fundido en una fase sin seccionamiento puede dejar las otras dos fases alimentando un motor dañado. El RT18-32X 3P de Soltree resuelve esto directamente: tres posiciones de fusible independientes en un módulo compacto para riel DIN de 35mm, cada una con su propio indicador LED rojo, para que el equipo de mantenimiento identifique exactamente qué fase se disparó sin necesidad de multímetro. Con valores nominales de 32A y 500V–690V AC, admite fusibles cerámicos estándar de 10x38mm adecuados para cargas trifásicas pequeñas, transformadores de control y circuitos auxiliares en centros de control de motores. La carcasa de PVC retardante de llama y los contactos de cobre de alta conductividad mantienen un rendimiento estable bajo carga continua, y el clip para riel DIN sin herramientas permite una instalación rápida en cualquier gabinete de control estándar. Nota: los fusibles se venden por separado.",
+  "features": [
+    "Diseño tripolar — protección por fusible independiente en cada fase de circuitos trifásicos",
+    "Valores nominales de 32A / 500V–690V AC — adecuado para cargas trifásicas pequeñas y circuitos de control",
+    "Compatible con fusibles cerámicos estándar de 10x38mm",
+    "Indicador LED individual por fase — identifique al instante qué fusible de fase se fundió",
+    "Carcasa de PVC retardante de llama — segura en condiciones de falla",
+    "Contactos de cobre de alta conductividad — transmisión estable de corriente trifásica",
+    "Montaje a presión en riel DIN de 35mm sin herramientas",
+    "Estructura modular compacta — ahorra espacio en centros de control de motores",
+    "Diseño IP20 a prueba de contacto con los dedos",
+    "Conforme a IEC 60269 y GB 13539",
+    "Certificación CE y RoHS",
+    "Fusibles se venden por separado"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Portafusibles trifásico"
+    },
+    {
+      "name": "Número de modelo",
+      "value": "RT18-32X"
+    },
+    {
+      "name": "Configuración de polos",
+      "value": "3P (tripolar)"
+    },
+    {
+      "name": "Corriente nominal",
+      "value": "32A"
+    },
+    {
+      "name": "Tensión nominal",
+      "value": "500V–690V AC"
+    },
+    {
+      "name": "Tamaño de fusible compatible",
+      "value": "10x38mm"
+    },
+    {
+      "name": "Tipo de montaje",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PVC retardante de llama (grado V0)"
+    },
+    {
+      "name": "Material de contactos",
+      "value": "Cobre de alta pureza"
+    },
+    {
+      "name": "Tipo de indicador",
+      "value": "Indicador LED de falla (por fase)"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-25°C a +70°C"
+    },
+    {
+      "name": "Clasificación de protección",
+      "value": "IP20 (a prueba de contacto)"
+    },
+    {
+      "name": "Cumplimiento normativo",
+      "value": "IEC 60269, GB 13539"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Circuitos de motores trifásicos, tableros de control industrial"
+    },
+    {
+      "name": "Instalación",
+      "value": "Clip para riel DIN sin herramientas"
+    },
+    {
+      "name": "Dimensiones (por polo)",
+      "value": "18mm (ancho) x 78mm (alto) x 65mm (prof.)"
+    },
+    {
+      "name": "Peso",
+      "value": "Aprox. 85g"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    },
+    {
+      "name": "Fusible incluido",
+      "value": "Fusibles NO incluidos — se venden por separado"
+    }
+  ],
+  "metaTitle": "Portafusibles RT18-32X 3P 32A 690V trifásico riel DIN | Soltree",
+  "metaDescription": "Portafusibles trifásico RT18-32X 3P para riel DIN, 32A 690V, fusibles 10x38mm. Indicador LED de falla por fase para arrancadores de motores y tableros de control. CE y RoHS.",
+  "metaKeywords": "portafusibles RT18-32X 3P, portafusibles trifásico 32A, base portafusible trifásica 10x38mm, portafusibles control de motores riel DIN, portafusibles trifásico industrial 690V, indicador LED de fusible por fase, protección con fusibles de tableros de control",
+  "imageAlts": [
+    "Portafusibles tripolar RT18-32X 3P Soltree para riel DIN 32A 690V, vista frontal",
+    "Portafusibles RT18-32X 3P, perfil lateral con clip para riel DIN",
+    "Primer plano de los indicadores LED por fase del portafusibles RT18-32X 3P",
+    "Detalle del cableado en bornes de tornillo del portafusibles RT18-32X 3P",
+    "Portafusibles RT18-32X 3P instalado en un tablero de control de motores industrial",
+    "Portafusibles RT18-32X 3P con fusibles cerámicos de 10x38mm",
+    "Plano de dimensiones del portafusibles RT18-32X 3P"
+  ]
+}

@@ -14,7 +14,12 @@ export { validateTaxonomy, getTaxonomyGroups } from './taxonomy-model.mjs';
 export const taxonomy = validateTaxonomy(source);
 export const allCategories = taxonomy.categories;
 export const categories = allCategories.filter((category) => !category.deletedAt);
-export const allProductGroups = getTaxonomyGroups(taxonomy, 'products', false);
+// “all” = hidden groups included (noindex pages); groups in the recycle bin never get pages.
+export const allProductGroups = getTaxonomyGroups(taxonomy, 'products', false).filter(
+  (group) => !group.deletedAt,
+);
 export const productGroups = getTaxonomyGroups(taxonomy, 'products');
-export const allArticleGroups = getTaxonomyGroups(taxonomy, 'articles', false);
+export const allArticleGroups = getTaxonomyGroups(taxonomy, 'articles', false).filter(
+  (group) => !group.deletedAt,
+);
 export const articleGroups = getTaxonomyGroups(taxonomy, 'articles');

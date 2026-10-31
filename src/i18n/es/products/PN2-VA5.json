@@ -1,0 +1,134 @@
+{
+  "sourceHash": "1e904ecb161488e2",
+  "name": "Protector de Voltaje Autorreconectable PN2-VA5 con Logotipo Personalizado en la Pantalla Digital",
+  "shortDescription": "Protector autorreconectable contra sobretensión/subtensión con logotipo personalizado en la pantalla digital — el nombre o logotipo de su marca aparece directamente en la pantalla del equipo, ideal para marcas eléctricas OEM y fabricantes de tableros de gama alta. Opciones de 40A / 63A / 80A.",
+  "description": "El PN2-VA5 de Soltree se distingue de los demás modelos de la serie PN2 por una capacidad exclusiva: la personalización del logotipo en la pantalla digital. Mientras el PN2-VA4 admite la impresión del logotipo en la carcasa y el empaque, el PN2-VA5 permite que el nombre o el logotipo de su marca aparezca directamente en la pantalla digital del dispositivo, una característica de marca premium que eleva la calidad percibida de los tableros terminados y refuerza la identidad de marca de clientes OEM, fabricantes de tableros y fabricantes de equipos eléctricos.\n\nLa protección se basa en la misma plataforma probada: supervisión continua de la tensión y la corriente de alimentación, desconexión en 0.5 segundos ante una falla y restablecimiento automático de la energía cuando el suministro se estabiliza dentro de parámetros seguros. La doble pantalla digital de alta resolución muestra en tiempo real la tensión en rojo y la corriente en verde. Todos los umbrales de disparo – sobretensión (130–300V AC), subtensión (80–210V AC) y sobrecorriente – son configurables por el usuario, con bloqueo por contraseña para impedir ajustes no autorizados en campo.\n\nEl retardo de reconexión se ajusta de 0 a 999 segundos (60s por defecto). Disponible en variantes de 40A, 63A y 80A; AC 110V personalizable para mercados de exportación. Contáctenos para conocer las especificaciones de marca y el MOQ.",
+  "features": [
+    "Logotipo personalizado en la pantalla digital — nombre o logotipo de la marca visible directamente en la pantalla del equipo",
+    "Autorreconectable — se desconecta automáticamente ante una falla y se reconecta cuando el suministro se estabiliza",
+    "Doble pantalla digital — tensión (rojo) + corriente (verde) en tiempo real",
+    "Puntos de disparo configurables — sobretensión 130–300V, subtensión 80–210V AC",
+    "Protección contra sobrecorriente con umbral de disparo ajustable",
+    "Desconexión rápida en 0.5 segundos al detectar una falla",
+    "Retardo de reconexión ajustable de 0–999 segundos (60s por defecto)",
+    "Bloqueo por contraseña — impide cambios no autorizados de parámetros en campo",
+    "Modo de ahorro de energía — reduce el autoconsumo en espera",
+    "Disponible en corrientes nominales de 40A / 63A / 80A",
+    "Tensión de alimentación nominal AC 220V (AC 110V personalizable para exportación)",
+    "Montaje en riel DIN de 35mm",
+    "Carcasa de PC retardante de llama (UL94 V-0)",
+    "Vida mecánica ≥10.000 ciclos",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector autorreconectable contra sobretensión/subtensión"
+    },
+    {
+      "name": "Modelo",
+      "value": "PN2-VA5"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Retardo de disparo por sobretensión",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Corriente máx. de trabajo",
+      "value": "40A / 63A / 80A (opcional)"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, 60s por defecto)"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Doble pantalla digital — tensión (rojo) + corriente (verde)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Compatible — impide cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Activable"
+    },
+    {
+      "name": "Personalización OEM",
+      "value": "Admite logotipo personalizado en la pantalla digital"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25°C a +55°C"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Sobretensión, subtensión, sobrecorriente, protección con retardo"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Marcas eléctricas OEM premium, fabricación de tableros de gama alta, tableros de distribución con marca"
+    },
+    {
+      "name": "Comprador objetivo",
+      "value": "Clientes OEM premium, fabricantes de equipos eléctricos, fabricantes de tableros de gama alta"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje PN2-VA5 logotipo en pantalla OEM 40A–80A | Soltree",
+  "metaDescription": "Protector autorreconectable PN2-VA5, 40A–80A, con logotipo personalizado en la pantalla digital. Su marca en la pantalla del equipo, ideal para tableristas OEM. Reconexión automática, CE y RoHS.",
+  "metaKeywords": "protector de voltaje PN2-VA5, protector de voltaje con logotipo en pantalla, relé de voltaje con pantalla personalizada, protector de voltaje OEM con marca en pantalla, protector de voltaje de marca para tableristas, relé autorreconectable con logotipo personalizado, personalización OEM de pantalla de protector de voltaje",
+  "imageAlts": [
+    "Protector de voltaje autorreconectable PN2-VA5 Soltree con logotipo personalizado en la pantalla digital, vista frontal",
+    "Pantalla digital del protector de voltaje PN2-VA5 mostrando un logotipo de marca personalizado",
+    "Doble pantalla del protector de voltaje PN2-VA5 con lecturas de tensión en rojo y corriente en verde",
+    "Panel de ajuste de parámetros del protector de voltaje PN2-VA5",
+    "Perfil lateral de montaje en riel DIN del protector PN2-VA5",
+    "Protector de voltaje PN2-VA5 instalado en un tablero de distribución terminado",
+    "Detalle de las conexiones de bornes del protector PN2-VA5",
+    "Opciones de 40A, 63A y 80A del protector de voltaje PN2-VA5 para pedidos OEM"
+  ]
+}

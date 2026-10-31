@@ -1,5 +1,7 @@
 ---
 import Img from './Img.astro';
+import { langFromUrl, t } from '@/i18n';
+const lang = langFromUrl(Astro.url);
 interface Props {
   images: string[];
   productName: string;
@@ -15,7 +17,7 @@ const displayImages = images.slice(0, 8);
       <div data-slide={index} hidden={index !== 0}>
         <Img
           src={src}
-          alt={imageAlts?.[index] || `${productName} — image ${index + 1}`}
+          alt={imageAlts?.[index] || t(lang, '{name} — image {n}', { name: productName, n: index + 1 })}
           fill
           width={1000}
           priority={index === 0}
@@ -28,7 +30,7 @@ const displayImages = images.slice(0, 8);
         <button
           type="button"
           data-gallery-prev
-          aria-label="Previous image"
+          aria-label={t(lang, 'Previous image')}
           class="absolute left-3 top-1/2 rounded-full bg-white/90 p-3 shadow"
         >
           ‹
@@ -36,7 +38,7 @@ const displayImages = images.slice(0, 8);
         <button
           type="button"
           data-gallery-next
-          aria-label="Next image"
+          aria-label={t(lang, 'Next image')}
           class="absolute right-3 top-1/2 rounded-full bg-white/90 p-3 shadow"
         >
           ›
@@ -56,7 +58,7 @@ const displayImages = images.slice(0, 8);
         <button
           type="button"
           data-thumb={index}
-          aria-label={`Show image ${index + 1}`}
+          aria-label={t(lang, 'Show image {n}', { n: index + 1 })}
           aria-pressed={index === 0 ? 'true' : 'false'}
           class:list={[
             'relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border-2 bg-gray-50',
@@ -65,7 +67,7 @@ const displayImages = images.slice(0, 8);
         >
           <Img
             src={src}
-            alt={imageAlts?.[index] || `${productName} thumbnail ${index + 1}`}
+            alt={imageAlts?.[index] || t(lang, '{name} thumbnail {n}', { name: productName, n: index + 1 })}
             width={100}
             class="h-full w-full object-contain p-1"
           />

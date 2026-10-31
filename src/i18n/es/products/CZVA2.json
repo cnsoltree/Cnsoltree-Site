@@ -1,0 +1,109 @@
+{
+  "sourceHash": "af9136507aeed22f",
+  "name": "Protector de Voltaje Enchufable UE/Reino Unido/Sudáfrica Universal con Corte por Sobretensión y Subtensión",
+  "shortDescription": "Protector de voltaje enchufable de umbral fijo con 3 indicadores LED de estado — no requiere configuración: se conecta y protege al instante. Corta por debajo de 165V±5V o por encima de 265V±5V y se restablece automáticamente a los 30s. UE Schuko, Reino Unido, Sudáfrica. 10A / 13A, obturador de seguridad para niños opcional. CE y RoHS.",
+  "description": "No todas las situaciones de protección de voltaje requieren umbrales ajustables y un menú de programación. A veces solo se necesita una protección confiable y sin configuración que funcione en cuanto se conecta. El CZVA2 de Soltree está pensado exactamente para eso: un protector de voltaje tipo enchufe con lógica fija que desconecta automáticamente el electrodoméstico cuando la tensión baja de 165V±5V o sube de 265V±5V, y restablece la energía tras un retardo integrado de 30 segundos, sin botones que configurar ni umbrales que ajustar.\n\nTres indicadores LED muestran el estado de un vistazo: verde para operación normal, aviso de baja tensión cuando la red cae y aviso de alta tensión cuando se producen picos. Esto hace del CZVA2 la opción ideal para quienes buscan una protección sin intervención: inquilinos que protegen su refrigerador, hogares en regiones con fluctuaciones ocasionales de tensión, oficinas que resguardan sus equipos de cómputo o viajeros que lo llevan como protección portátil para tomacorrientes de tipo europeo, británico y sudafricano. El obturador de seguridad para niños opcional lo hace adecuado para hogares con niños pequeños.\n\nDisponible en versiones de 10A (2200W) y 13A (2860W) para cubrir una gama más amplia de electrodomésticos: la variante de 13A admite equipos de mayor consumo, como grandes aires acondicionados y lavadoras, donde la versión de 10A no alcanza. Certificación CE y RoHS, acabado blanco, temperatura de operación de -10℃ a +50℃.",
+  "features": [
+    "Sin configuración — la lógica de protección fija funciona en cuanto se conecta",
+    "3 indicadores LED de estado — normal (verde) / baja tensión / alta tensión para identificar fallas al instante",
+    "Corte fijo por sobretensión a 265V±5V — protege contra picos de la red",
+    "Corte fijo por subtensión a 165V±5V — protege contra caídas de la red",
+    "Retardo de recuperación automática de 30 segundos — evita arranques repetidos tras un evento de tensión",
+    "Control de encendido con un solo botón",
+    "Obturador de seguridad para niños opcional — seguro para hogares con niños pequeños",
+    "Disponible en versiones de 10A (2200W) y 13A (2860W)",
+    "Disponible en configuraciones de tomacorriente universal UE Schuko, Reino Unido y Sudáfrica",
+    "Listo para usar — no requiere instalación ni cableado",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector de voltaje enchufable"
+    },
+    {
+      "name": "Tomacorrientes compatibles",
+      "value": "UE Schuko / Reino Unido / Sudáfrica universal"
+    },
+    {
+      "name": "Tensión nominal de entrada",
+      "value": "AC 220–240V"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "50Hz"
+    },
+    {
+      "name": "Opciones de corriente nominal",
+      "value": "10(2)A / 13A"
+    },
+    {
+      "name": "Potencia nominal máxima",
+      "value": "2200W (10A) / 2860W (13A)"
+    },
+    {
+      "name": "Corte por baja tensión",
+      "value": "165V ±5V"
+    },
+    {
+      "name": "Corte por alta tensión",
+      "value": "265V ±5V"
+    },
+    {
+      "name": "Tiempo de retardo de recuperación automática",
+      "value": "30 segundos (fijo)"
+    },
+    {
+      "name": "Función de protección",
+      "value": "Corte por sobretensión y subtensión"
+    },
+    {
+      "name": "Indicadores de funcionamiento",
+      "value": "3 indicadores LED (normal / baja tensión / alta tensión)"
+    },
+    {
+      "name": "Control de energía",
+      "value": "Interruptor de encendido de un botón"
+    },
+    {
+      "name": "Obturador de seguridad para niños",
+      "value": "Opcional (con / sin)"
+    },
+    {
+      "name": "Tipo de tomacorriente",
+      "value": "Tomacorriente universal de 3 patas"
+    },
+    {
+      "name": "Instalación",
+      "value": "Lista para usar"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Propiedades de alquiler, electrodomésticos, equipos de oficina, uso en viajes, refrigeradores, televisores, aires acondicionados"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-10℃ ~ +50℃"
+    },
+    {
+      "name": "Color",
+      "value": "Blanco"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje enchufable CZVA2 UE/RU/Sudáfrica 10A 13A | Soltree",
+  "metaDescription": "Protector de voltaje enchufable CZVA2 con 3 LED de estado: corte fijo por sobretensión (265V) y subtensión (165V), restablecimiento a los 30s. Schuko, RU, Sudáfrica. 10A / 13A. CE y RoHS.",
+  "metaKeywords": "protector de voltaje enchufable CE RoHS, protector de corte de voltaje fijo UE RU, protector de sobretensión y subtensión 220V 240V, tomacorriente con indicador LED de voltaje, protector de voltaje con obturador de seguridad, protector de voltaje 13A 2860W, protector de voltaje clavija Sudáfrica, protector de voltaje sin configuración para el hogar",
+  "imageAlts": [
+    "Protector de voltaje enchufable CZVA2 Soltree con clavija europea y 3 indicadores LED de estado, vista frontal",
+    "Indicadores LED del protector de voltaje CZVA2 mostrando estado normal, baja tensión y alta tensión",
+    "Variantes blancas de clavija UE Schuko, Reino Unido y Sudáfrica del protector de voltaje enchufable CZVA2",
+    "Protector de voltaje CZVA2 con obturador de seguridad para niños opcional",
+    "Opciones de 10A y 13A del protector de voltaje CZVA2 para electrodomésticos",
+    "Protector de voltaje CZVA2 conectado a un refrigerador protegiéndolo de las fluctuaciones de la red",
+    "Etiqueta de certificación CE RoHS del protector de voltaje enchufable CZVA2"
+  ]
+}

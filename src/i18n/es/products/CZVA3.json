@@ -1,0 +1,118 @@
+{
+  "sourceHash": "ac549b34fc3b94a7",
+  "name": "Protector de Voltaje tipo Enchufe CZVA3 Clavija Europea 16A con Doble Pantalla de Voltaje y Corriente y Bloqueo por Contraseña",
+  "shortDescription": "Protector de voltaje avanzado con clavija europea y pantalla bicolor que muestra a la vez la tensión (rojo) y la corriente (verde) — además de bloqueo por contraseña, protección contra sobrecorriente y modo de ahorro de energía. Umbrales totalmente ajustables, 16A / 3680W. Ideal para electrodomésticos de alta potencia y entornos compartidos o comerciales.",
+  "description": "Proteger un electrodoméstico de las anomalías de tensión es sencillo. Conocer al mismo tiempo la corriente que consume el circuito, bloquear los ajustes de protección para que nadie los cambie y cortar la energía en medio segundo ante una falla requiere un dispositivo más completo. El CZVA3 de Soltree está diseñado para quienes necesitan algo más que una protección básica de voltaje.\n\nSu pantalla digital bicolor de alta resolución muestra la tensión en rojo y la corriente en verde a la vez, ofreciendo una imagen en tiempo real de la calidad de la red y del comportamiento de la carga sin cambiar de pantalla ni de menú. Los umbrales de disparo por sobretensión y subtensión son totalmente ajustables (130–300V y 80–210V respectivamente), y la protección contra sobrecorriente añade una tercera capa de defensa para electrodomésticos sensibles a los picos de carga. La función de bloqueo por contraseña impide cambios no autorizados en los ajustes de protección, algo fundamental en viviendas compartidas, propiedades de alquiler o pequeños negocios donde varias personas tienen acceso al dispositivo.\n\nCon valores nominales de 16A / 3680W, admite cargas de mayor consumo que superan la capacidad de los protectores enchufables estándar de 10A: lavadoras grandes, calefactores eléctricos potentes y herramientas de taller. Su amplio rango de temperatura de operación (-25℃ a +55℃) y la compatibilidad con varias frecuencias (40/50/60/70Hz) lo hacen apto para entornos más allá del hogar típico. Carcasa retardante de llama UL94 V-0, vida mecánica de ≥10.000 ciclos y LOGO personalizado disponible para pedidos OEM.",
+  "features": [
+    "Pantalla digital bicolor — tensión en rojo y corriente en verde, visibles a la vez",
+    "Bloqueo por contraseña — impide cambios no autorizados en los ajustes de protección",
+    "Protección contra sobrecorriente — dispara en 0.5s ante una falla de tensión o corriente",
+    "Umbral de sobretensión totalmente ajustable: 130–300V",
+    "Umbral de subtensión totalmente ajustable: 80–210V",
+    "Retardo de reconexión ajustable: 0–999s (60s por defecto)",
+    "Modo de ahorro de energía — reduce el autoconsumo en espera",
+    "16A / 3680W nominales — admite electrodomésticos de alto consumo que superan el límite de los protectores de 10A",
+    "Compatible con varias frecuencias: 40/50/60/70Hz",
+    "Amplio rango de temperatura de operación: -25℃ a +55℃",
+    "Carcasa de PC retardante de llama (UL94 V-0), ≥10.000 ciclos mecánicos",
+    "LOGO personalizado disponible para pedidos OEM",
+    "Clavija europea Schuko, AC 220V (110V personalizable)"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector enchufable autorreconectable contra sobretensión/subtensión y sobrecorriente"
+    },
+    {
+      "name": "Estándar de clavija/tomacorriente",
+      "value": "UE Schuko"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 130–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 80–210V"
+    },
+    {
+      "name": "Retardo de disparo por sobretensión",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Corriente máxima de trabajo",
+      "value": "16A"
+    },
+    {
+      "name": "Potencia nominal máxima",
+      "value": "3680W"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Doble pantalla digital — tensión (rojo) + corriente (verde)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Sí — admite bloqueo por contraseña para impedir cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Sí — activable para reducir el autoconsumo"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, por defecto: 60s)"
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Sobretensión, subtensión, sobrecorriente, protección con retardo"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25℃ a +55℃"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Viviendas compartidas, propiedades de alquiler, pequeños negocios, electrodomésticos de alta potencia, equipos de taller"
+    },
+    {
+      "name": "LOGO personalizable",
+      "value": "Sí"
+    }
+  ],
+  "metaTitle": "Protector de voltaje CZVA3 clavija UE doble pantalla y contraseña 16A | Soltree",
+  "metaDescription": "Protector de voltaje CZVA3 con clavija europea, pantalla bicolor (voltaje + corriente), bloqueo por contraseña, protección contra sobrecorriente y ahorro de energía. 16A / 3680W, OEM disponible.",
+  "metaKeywords": "protector de voltaje clavija europea doble pantalla, tomacorriente protector con pantalla de voltaje y corriente, protector de voltaje con contraseña, protector de voltaje 16A 3680W, protector de sobrecorriente Schuko, protector de voltaje ajustable con pantalla de corriente, protector de voltaje con ahorro de energía, protector de voltaje OEM clavija europea",
+  "imageAlts": [
+    "Protector de voltaje CZVA3 Soltree con clavija europea y pantalla bicolor, tensión en rojo y corriente en verde, vista frontal",
+    "Doble pantalla del CZVA3 mostrando a la vez la tensión en rojo y la corriente en verde",
+    "Ajustes de umbrales de sobretensión y subtensión y bloqueo por contraseña del protector de voltaje CZVA3",
+    "Protector de voltaje CZVA3 con clavija Schuko 16A 3680W para electrodomésticos de alta potencia",
+    "Panel de configuración del modo de ahorro de energía y retardo de reconexión del protector CZVA3",
+    "Carcasa retardante de llama UL94 V-0 del protector de voltaje y corriente CZVA3 con clavija europea"
+  ]
+}

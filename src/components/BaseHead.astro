@@ -4,6 +4,7 @@
  * 统一输出：title / description / canonical / keywords / OpenGraph / Twitter / JSON-LD。
  */
 import { SITE, CONTACT, SOCIAL } from '@/consts';
+import { alternates, basePath, langFromUrl, locales } from '@/i18n';
 import { ClientRouter } from 'astro:transitions';
 import '@/styles/global.css';
 
@@ -44,6 +45,10 @@ const {
 const normalizedPath = path === '/' ? '/' : path.replace(/\/$/, '');
 const canonical = new URL(normalizedPath, SITE.url).href;
 const ogImageUrl = new URL(image, SITE.url).href;
+const lang = langFromUrl(Astro.url);
+// 预览等 noindex 页面不输出语言版本；其余页面只列出真实存在的语言版本
+const versions = noindex ? [] : alternates(basePath(Astro.url));
+const englishVersion = versions.find((version) => version.lang === 'en');
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -58,7 +63,7 @@ const organizationSchema = {
     contactType: 'sales',
     email: CONTACT.email,
     telephone: CONTACT.phone,
-    availableLanguage: ['English'],
+    availableLanguage: Object.values(locales).map((locale) => locale.name),
   },
   address: {
     '@type': 'PostalAddress',
@@ -82,8 +87,16 @@ const allSchema = [organizationSchema, ...schema];
 <meta name="description" content={description} />
 {keywords && <meta name="keywords" content={keywords} />}
 <link rel="canonical" href={canonical} />
-<link rel="alternate" hreflang="en" href={canonical} />
-<link rel="alternate" hreflang="x-default" href={canonical} />
+{versions.map((version) => (
+  <link
+    rel="alternate"
+    hreflang={version.hreflang}
+    href={new URL(version.path, SITE.url).href}
+  />
+))}
+{englishVersion && (
+  <link rel="alternate" hreflang="x-default" href={new URL(englishVersion.path, SITE.url).href} />
+)}
 {noindex ? (
   <meta name="robots" content="noindex, nofollow" />
 ) : (
@@ -101,7 +114,12 @@ const allSchema = [organizationSchema, ...schema];
 <!-- Open Graph -->
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={SITE.name} />
-<meta property="og:locale" content={SITE.locale} />
+<meta property="og:locale" content={locales[lang].ogLocale} />
+{versions
+  .filter((version) => version.lang !== lang)
+  .map((version) => (
+    <meta property="og:locale:alternate" content={locales[version.lang].ogLocale} />
+  ))}
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />

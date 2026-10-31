@@ -1,0 +1,72 @@
+{
+  "sourceHash": "4884eb203630d5f5",
+  "name": "Caja Combinadora FV 2 Entradas de String 1 Salida, 1000V DC, Seccionador 32A, Fusibles 15A y SPD 40kA",
+  "shortDescription": "Caja combinadora FV de 2 strings para 1000V DC con seccionador de 32A/1200V, 4 fusibles de 15A y SPD de 500V/40kA en gabinete retardante de llama IP65.",
+  "description": "La HA-12way-2in1out-1000VDC-DS es una caja combinadora FV de 2 strings y 1 salida construida en torno a un seccionador DC de 32A / 1200V, que permite desconectar con carga de forma segura en sitio durante la instalación y el mantenimiento. Integra 4 fusibles FV de 15A para proteger cada polo del string por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para defender el sistema frente a transitorios inducidos por rayos. El gabinete de plástico rígido retardante de llama tiene grado de protección IP65, lo que la hace apta para instalación en exteriores en sistemas FV conectados a la red y aislados de hasta 1000V DC.",
+  "features": [
+    "Configuración de 2 entradas de string FV y 1 salida",
+    "Seccionador DC de 32A / 1200V para una desconexión manual segura",
+    "4 fusibles FV de 15A para proteger cada polo del string por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Carcasa de plástico rígido retardante de llama",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV de 1000V DC (conectados a la red / aislados)"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "HA-12way-2in1out-1000VDC-DS"
+    },
+    {
+      "name": "Entradas de string FV",
+      "value": "2"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Tensión máxima del sistema",
+      "value": "1000V DC"
+    },
+    {
+      "name": "Seccionador DC",
+      "value": "32A, 1200V DC"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "15A (4 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Plástico rígido retardante de llama"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 2 entradas 1000VDC seccionador 32A SPD 40kA | Soltree",
+  "metaDescription": "Caja combinadora FV de 2 strings para 1000V DC con seccionador 32A/1200V, 4 fusibles FV de 15A, SPD 500V/40kA y gabinete IP65. Para sistemas solares conectados a la red y aislados.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 1000VDC, caja combinadora 2 strings, caja combinadora con seccionador, seccionador DC 32A, fusible FV 15A, SPD 40kA, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 2 strings 1000V HA-12way-2in1out-1000VDC-DS, vista frontal",
+    "Interior de la caja combinadora HA-12way-2in1out-1000VDC-DS con seccionador de 32A y fusibles",
+    "Disposición del cableado con fusibles FV de 15A de la HA-12way-2in1out-1000VDC-DS",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la HA-12way-2in1out-1000VDC-DS",
+    "Gabinete de plástico retardante de llama IP65 de la HA-12way-2in1out-1000VDC-DS",
+    "HA-12way-2in1out-1000VDC-DS instalada en exteriores en un sistema FV de 1000V"
+  ]
+}

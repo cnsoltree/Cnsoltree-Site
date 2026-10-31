@@ -12,6 +12,8 @@ import {
 } from '../src/lib/seo-planner.mjs';
 import { diagnoseContent } from '../src/lib/seo-diagnostics.mjs';
 import { articleSummary } from '../src/lib/article-excerpt.mjs';
+import { validateAiCandidates, planningInput } from '../src/lib/seo-topic-planning.mjs';
+export { planningInput } from '../src/lib/seo-topic-planning.mjs';
 
 const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const formats = new Set(['guide', 'comparison', 'faq', 'landing_page', 'update']);
@@ -84,37 +86,6 @@ function selectedTopics(workspace, input) {
     return topic;
   });
   return { batch, topics };
-}
-function planningInput(value, taxonomy) {
-  object(value, ['groupSlug', 'topicSlug', 'count', 'audience', 'goal', 'direction', 'language']);
-  if (value.topicSlug !== undefined && typeof value.topicSlug !== 'string')
-    throw problem(422, '二级分类标识无效。');
-  if (
-    !Number.isSafeInteger(value.count) ||
-    value.count < 1 ||
-    value.count > 30 ||
-    !['en', 'zh'].includes(value.language)
-  )
-    throw problem(422, '请填写 1–30 的选题数量，并选择中文或英文。');
-  const input = {
-    groupSlug: text(value.groupSlug, 100, true),
-    ...(value.topicSlug ? { topicSlug: text(value.topicSlug, 100, true) } : {}),
-    count: value.count,
-    audience: text(value.audience ?? '', 300),
-    goal: text(value.goal ?? '', 500),
-    direction: text(value.direction ?? '', 200),
-    language: value.language,
-  };
-  const group = taxonomy.groups.find(
-    (record) => record.slug === input.groupSlug && !record.deletedAt,
-  );
-  if (
-    !group ||
-    (input.topicSlug &&
-      !group.items.some((item) => item.slug === input.topicSlug && !item.deletedAt))
-  )
-    throw problem(422, '请选择有效的一级和二级分类。');
-  return input;
 }
 
 /** Local development only. Research is an explicit, separately configured external action. */
@@ -326,6 +297,7 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
       ? await getCapabilities()
       : { researchConfigured: typeof researchTopics === 'function' };
     return {
+      aiPlanningImport: true,
       researchConfigured:
         configured?.researchConfigured === true && typeof researchTopics === 'function',
       ...(typeof configured?.researchProvider === 'string'
@@ -436,6 +408,39 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
         topics: result.topics.map((topic) => ({
           ...topic,
           id: randomUUID(),
+          createdAt: now,
+          updatedAt: now,
+        })),
+      });
+    } else if (input.action === 'importAiCandidates') {
+      const selection = planningInput(input.input, ctx.taxonomy);
+      if (selection.count > 10) throw problem(422, '每批最多生成 10 个选题。');
+      const existing = [
+        ...workspace.batches.flatMap((batch) => batch.topics.filter((topic) => !topic.deletedAt)),
+        ...ctx.articles.filter((article) => !article.deletedAt),
+      ];
+      const topics = validateAiCandidates(input.topics, selection, ctx.taxonomy, existing);
+      workspace.batches.push({
+        id: randomUUID(),
+        input: selection,
+        createdAt: now,
+        updatedAt: now,
+        notes: ['AI 建议选题，未进行实时搜索调研；不代表搜索量、排名或竞争难度。'],
+        topics: topics.map((topic) => ({
+          ...topic,
+          id: randomUUID(),
+          groupSlug: selection.groupSlug,
+          newOrUpdate: 'new',
+          sources: [
+            {
+              kind: 'taxonomy',
+              id: `${selection.groupSlug}/${topic.topicSlug}`,
+              title: topic.topicSlug,
+            },
+          ],
+          missingInformation: ['尚未进行当前搜索结果与外部资料调研。'],
+          status: 'pending_research',
+          selected: false,
           createdAt: now,
           updatedAt: now,
         })),
@@ -706,6 +711,7 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
         'batchId',
         'ids',
         'patch',
+        'topics',
       ]);
       if (
         typeof input.revision !== 'string' ||
@@ -715,6 +721,7 @@ export function createSeoAdminHandler({ root, researchTopics, getCapabilities })
           'deleteKnowledge',
           'restoreKnowledge',
           'generateCandidates',
+          'importAiCandidates',
           'updateCandidate',
           'deleteCandidate',
           'researchCandidates',

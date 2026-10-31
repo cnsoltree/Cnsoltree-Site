@@ -1,0 +1,108 @@
+{
+  "sourceHash": "4a8e5e8e1ca90650",
+  "name": "Protector de Voltaje Digital Ajustable tipo Enchufe UE/Reino Unido/Sudáfrica con Protección contra Sobretensión y Subtensión",
+  "shortDescription": "Protector de voltaje digital tipo enchufe, listo para usar, para electrodomésticos — protección ajustable contra sobretensión (230–300V) y subtensión (140–210V) con restablecimiento automático. Disponible en clavija UE (Schuko), Reino Unido y Sudáfrica. 2300W / 10A.",
+  "description": "La tensión inestable de la red es una de las causas más comunes – y menos visibles – de las fallas prematuras de los electrodomésticos. Cuando se producen picos o caídas de tensión, los compresores de refrigeradores, los equipos de aire acondicionado y los televisores absorben el daño en silencio hasta que fallan. El protector de voltaje tipo enchufe CZVA1 de Soltree se coloca entre el tomacorriente y el electrodoméstico, corta la energía en el instante en que la tensión sale del rango configurado y la restablece automáticamente cuando la red se estabiliza. Sin cableado ni electricista: solo conéctelo, ajuste sus umbrales y su electrodoméstico quedará protegido.\n\nLa pantalla LED digital integrada muestra la tensión en todo momento, para que siempre sepa qué entrega su red. Los umbrales de sobretensión y subtensión se ajustan de forma independiente: sobretensión entre 230V y 300V (260V de fábrica) y subtensión entre 140V y 210V (175V de fábrica). Una función de corrección de tensión de ±20V permite afinar la lectura frente a una referencia calibrada. El retardo de recuperación es configurable de 5 a 999 segundos: use un retardo más largo para proteger electrodomésticos con compresor, como refrigeradores y aires acondicionados, de los arranques repetidos tras un evento de tensión.\n\nDisponible con clavija UE Schuko, Reino Unido y Sudáfrica para cubrir mercados de exportación e instalaciones internacionales. Admite hasta 2300W (10A), adecuado para la mayoría de los electrodomésticos, como refrigeradores, aires acondicionados, lavadoras y televisores. Rango de temperatura de operación de -10℃ a +50℃.",
+  "features": [
+    "Listo para usar — no requiere instalación ni cableado, se conecta directamente al tomacorriente",
+    "Pantalla LED digital — muestra la tensión en tiempo real en todo momento",
+    "Protección ajustable contra sobretensión — 230V–300V, 260V por defecto",
+    "Protección ajustable contra subtensión — 140V–210V, 175V por defecto",
+    "Retardo de recuperación configurable — 5s–999s, evita arranques repetidos en equipos con compresor",
+    "Función de corrección de tensión — ajuste de ±20V para calibrar frente a un medidor de referencia",
+    "Corte automático de energía ante fallas — disparo instantáneo por sobretensión o subtensión",
+    "Restablecimiento automático de energía — se reanuda tras el retardo configurado cuando la tensión se estabiliza",
+    "Disponible con clavija UE (Schuko), Reino Unido y Sudáfrica",
+    "Carga máxima de 2300W / 10A — apto para refrigeradores, aires acondicionados y televisores"
+  ],
+  "specs": [
+    {
+      "name": "Nombre del producto",
+      "value": "Protector de voltaje digital ajustable tipo enchufe"
+    },
+    {
+      "name": "Clavijas compatibles",
+      "value": "UE (Schuko) / Reino Unido / Sudáfrica"
+    },
+    {
+      "name": "Tensión nominal de entrada",
+      "value": "AC 140–300V"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "50Hz / 60Hz"
+    },
+    {
+      "name": "Potencia nominal máxima",
+      "value": "2300W"
+    },
+    {
+      "name": "Corriente nominal máxima",
+      "value": "10(2)A / 16A máx."
+    },
+    {
+      "name": "Rango de protección contra sobretensión",
+      "value": "230V–300V (por defecto: 260V)"
+    },
+    {
+      "name": "Diferencial de recuperación por sobretensión",
+      "value": "-5V (por defecto: 255V)"
+    },
+    {
+      "name": "Rango de protección contra subtensión",
+      "value": "140V–210V (por defecto: 175V)"
+    },
+    {
+      "name": "Diferencial de recuperación por subtensión",
+      "value": "+5V (por defecto: 180V)"
+    },
+    {
+      "name": "Tiempo de retardo de recuperación",
+      "value": "5s–999s (por defecto: 10s)"
+    },
+    {
+      "name": "Rango de corrección de tensión",
+      "value": "-20V ~ +20V (por defecto: 0V)"
+    },
+    {
+      "name": "Tipo de pantalla",
+      "value": "Pantalla LED digital"
+    },
+    {
+      "name": "Botones de control",
+      "value": "Encendido / SET / Arriba / Abajo"
+    },
+    {
+      "name": "Corte automático de energía",
+      "value": "Sí (por sobretensión/subtensión)"
+    },
+    {
+      "name": "Restablecimiento automático de energía",
+      "value": "Sí (tras el retardo configurado)"
+    },
+    {
+      "name": "Instalación lista para usar",
+      "value": "Sí"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Electrodomésticos, refrigeradores, aires acondicionados, televisores, lavadoras"
+    },
+    {
+      "name": "Temperatura de operación",
+      "value": "-10℃ ~ +50℃"
+    }
+  ],
+  "metaTitle": "Protector de voltaje tipo enchufe CZVA1 UE/RU/Sudáfrica 2300W | Soltree",
+  "metaDescription": "Protector de voltaje digital tipo enchufe CZVA1: protección ajustable contra sobretensión/subtensión, restablecimiento automático y pantalla LED. Clavija Schuko, RU o Sudáfrica. 2300W / 10A.",
+  "metaKeywords": "protector de voltaje ajustable tipo enchufe, protector de sobretensión y subtensión enchufable, protector de voltaje clavija europea, protector de voltaje clavija británica, protector de voltaje clavija Sudáfrica, protector de voltaje digital 2300W, protector de voltaje para refrigerador y aire acondicionado, protector de voltaje para electrodomésticos",
+  "imageAlts": [
+    "Protector de voltaje digital ajustable tipo enchufe CZVA1 Soltree con clavija europea y pantalla LED, vista frontal",
+    "Pantalla digital del protector de voltaje CZVA1 mostrando la tensión en tiempo real",
+    "Botones y pantalla de ajuste de umbrales de sobretensión y subtensión del CZVA1",
+    "Variantes de clavija UE Schuko, Reino Unido y Sudáfrica del protector de voltaje CZVA1",
+    "Protector de voltaje enchufable CZVA1 conectado al tomacorriente de un refrigerador",
+    "Ajustes de retardo de recuperación y corrección de tensión del protector de voltaje CZVA1",
+    "Protector de voltaje ajustable CZVA1 protegiendo un aire acondicionado de la energía inestable"
+  ]
+}

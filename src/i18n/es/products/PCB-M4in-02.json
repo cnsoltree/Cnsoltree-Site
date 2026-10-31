@@ -1,0 +1,73 @@
+{
+  "sourceHash": "6cb4e86515212375",
+  "name": "Caja Combinadora FV de 4 Entradas, Interruptor DC 63A, Fusibles 20A y SPD 40kA (Acero, con Cerradura de Seguridad)",
+  "shortDescription": "Caja combinadora FV de 4 entradas en gabinete de acero de alta resistencia con interruptor DC de 63A, 4 fusibles de 20A, SPD de 500V/40kA y puerta con cerradura.",
+  "description": "La PCB-M4in-02 es una caja combinadora FV de 4 entradas diseñada para arreglos solares comerciales donde la seguridad y la robustez son prioritarias. Integra un interruptor automático DC de 63A para protección contra sobrecarga y cortocircuito, 4 fusibles FV de 20A para proteger cada string por separado y un protector contra sobretensiones de 500V DC con corriente máxima de descarga de 40kA para defender el sistema frente a transitorios inducidos por rayos. El robusto gabinete de acero ofrece alta resistencia a los impactos, tiene grado de protección IP65 contra polvo y agua, e incluye cerradura de seguridad con llave para impedir el acceso no autorizado. Apta para instalación en exteriores en sistemas FV conectados a la red y aislados.",
+  "features": [
+    "Configuración de 4 entradas de arreglo FV y 1 salida",
+    "Interruptor automático DC de 63A para protección contra sobrecarga y cortocircuito",
+    "4 fusibles FV de 20A para proteger cada string por separado",
+    "SPD de 500V DC con corriente máxima de descarga de 40kA (protección contra rayos)",
+    "Robusto gabinete de acero con alta resistencia a los impactos",
+    "Cerradura de seguridad con llave integrada para evitar manipulaciones",
+    "IP65 a prueba de agua y polvo – apta para instalación en exteriores",
+    "Compatible con sistemas FV conectados a la red y aislados"
+  ],
+  "specs": [
+    {
+      "name": "Modelo",
+      "value": "PCB-M4in-02"
+    },
+    {
+      "name": "Entradas de arreglo FV",
+      "value": "4"
+    },
+    {
+      "name": "Salidas",
+      "value": "1"
+    },
+    {
+      "name": "Interruptor automático DC",
+      "value": "63A"
+    },
+    {
+      "name": "Capacidad de fusibles FV",
+      "value": "20A (4 uds.)"
+    },
+    {
+      "name": "Protección contra sobretensiones (SPD)",
+      "value": "500V DC, corriente máxima de descarga 40kA"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "Acero robusto (alta resistencia a los impactos)"
+    },
+    {
+      "name": "Seguridad",
+      "value": "Cerradura de seguridad con llave"
+    },
+    {
+      "name": "Nivel de protección",
+      "value": "IP65 (a prueba de agua y polvo)"
+    },
+    {
+      "name": "Instalación",
+      "value": "Exterior"
+    },
+    {
+      "name": "Sistemas aplicables",
+      "value": "Sistemas FV conectados a la red / aislados"
+    }
+  ],
+  "metaTitle": "Caja combinadora FV 4 entradas 63A fusible 20A acero | Soltree",
+  "metaDescription": "Caja combinadora FV de 4 entradas en gabinete de acero con interruptor DC de 63A, 4 fusibles FV de 20A, SPD 500V/40kA y puerta con cerradura. IP65 para exteriores. OEM disponible.",
+  "metaKeywords": "caja combinadora FV, caja combinadora 4 entradas, interruptor DC 63A, fusible FV 20A, SPD 40kA, caja combinadora de acero, caja combinadora con cerradura, IP65, FV conectado a la red y aislado",
+  "imageAlts": [
+    "Caja combinadora FV de 4 entradas PCB-M4in-02 con gabinete de acero, vista frontal",
+    "Interior de la caja combinadora PCB-M4in-02 con interruptor DC de 63A y 4 fusibles de 20A",
+    "Detalle del protector contra sobretensiones de 500V 40kA de la PCB-M4in-02",
+    "Cerradura de seguridad con llave antimanipulación de la PCB-M4in-02",
+    "Bornes de cableado para 4 entradas de arreglo FV de la PCB-M4in-02",
+    "Gabinete de acero robusto IP65 de la PCB-M4in-02 instalado en exteriores"
+  ]
+}

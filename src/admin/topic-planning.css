@@ -1,0 +1,111 @@
+.topic-planning {
+  max-width: 1800px;
+}
+.topic-planning .product-panel {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.topic-planning fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.planning-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.topic-planning label {
+  display: grid;
+  gap: 8px;
+  color: #52685f;
+  font-size: 14px;
+}
+.topic-planning input:not([type='checkbox']),
+.topic-planning select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #dfe7df;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+  color: #3e5747;
+  background: #fcfdfb;
+}
+.topic-planning :is(input, select, button, a):focus-visible {
+  outline: 2px solid #229e7d;
+  outline-offset: 2px;
+}
+.planning-wide {
+  grid-column: span 2;
+}
+.planning-actions,
+.planning-section-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+}
+.planning-section-heading {
+  justify-content: space-between;
+  margin-top: 0;
+}
+.planning-section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.planning-section-heading select {
+  max-width: 520px;
+}
+.planning-note,
+.planning-feedback,
+.planning-actions {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.planning-note {
+  color: #6e8078;
+}
+.planning-feedback {
+  color: #237e61;
+  min-height: 20px;
+}
+.topic-planning .product-table {
+  min-width: 850px;
+}
+.topic-planning .product-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+.planning-keyword {
+  display: block;
+  color: #6e8078;
+  margin-top: 7px;
+}
+.planning-reason {
+  max-width: 500px;
+}
+.topic-planning button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 900px) {
+  .planning-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .planning-fields {
+    grid-template-columns: 1fr;
+  }
+  .planning-wide {
+    grid-column: auto;
+  }
+  .topic-planning .product-panel {
+    padding: 18px;
+  }
+}

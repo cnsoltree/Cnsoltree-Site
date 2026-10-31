@@ -1,0 +1,139 @@
+{
+  "sourceHash": "0b1e9002320b7ebc",
+  "name": "Protector de Voltaje Autorreconectable PN2-VAK con Medidor de Energía kWh 40A–80A",
+  "shortDescription": "Protector autorreconectable contra sobretensión, subtensión y sobrecorriente con medidor de energía kWh integrado — pantalla tricolor que muestra a la vez la tensión (rojo), la corriente (verde) y el consumo de energía acumulado (azul). Opciones de 40A / 63A / 80A.",
+  "description": "El PN2-VAK de Soltree es el modelo más completo de la serie PN2: combina protección contra sobretensión y subtensión, control de sobrecorriente y medición de energía kWh en tiempo real en un solo dispositivo compacto para riel DIN. Mientras los modelos PN2-VA2 a VA5 se centran únicamente en la protección y el restablecimiento automático, el PN2-VAK añade un medidor kWh integrado que registra el consumo eléctrico acumulado, por lo que es adecuado para la submedición en propiedades de alquiler, circuitos individuales de inquilinos, locales comerciales ligeros y cualquier instalación que requiera protección y monitoreo del consumo en una sola unidad.\n\nLa pantalla digital tricolor permite ver a la vez tres mediciones: tensión en tiempo real en rojo, corriente en verde y kWh totales en azul. La corriente no se muestra por debajo de 1A y los kWh no se muestran por debajo de 0.01 kWh, lo que mantiene la pantalla limpia en espera.\n\nLos parámetros de protección son totalmente configurables: sobretensión de 240V a 300V AC, subtensión de 140V a 230V AC y sobrecorriente de 1A hasta el máximo nominal. Ante una falla se activa una desconexión en 0.5 segundos, con restablecimiento automático de la energía tras el retardo de reconexión ajustable (0–999 segundos, 60s por defecto). El bloqueo por contraseña impide cambios no autorizados. Disponible en variantes de 40A, 63A y 80A; AC 110V personalizable para mercados de exportación.",
+  "features": [
+    "Medidor de energía kWh integrado — registro del consumo eléctrico acumulado en un solo equipo",
+    "Pantalla digital tricolor — tensión (rojo), corriente (verde) y kWh (azul) a la vez",
+    "Autorreconectable — se desconecta automáticamente ante una falla y se reconecta cuando el suministro se estabiliza",
+    "Protección contra sobretensión — umbral de disparo configurable de 240–300V AC",
+    "Protección contra subtensión — umbral de disparo configurable de 140–230V AC",
+    "Protección contra sobrecorriente — ajustable de 1A al máximo nominal",
+    "Desconexión rápida en 0.5 segundos al detectar una falla",
+    "Retardo de reconexión ajustable de 0–999 segundos (60s por defecto)",
+    "Bloqueo por contraseña — impide cambios no autorizados de parámetros",
+    "Modo de ahorro de energía — reduce el autoconsumo en espera",
+    "Pantalla limpia — corriente oculta por debajo de 1A y kWh ocultos por debajo de 0.01 kWh",
+    "Disponible en corrientes nominales de 40A / 63A / 80A",
+    "Tensión de alimentación nominal AC 220V (AC 110V personalizable)",
+    "Montaje en riel DIN de 35mm",
+    "Carcasa de PC retardante de llama (UL94 V-0), vida mecánica ≥10.000 ciclos",
+    "Certificación CE y RoHS"
+  ],
+  "specs": [
+    {
+      "name": "Tipo de producto",
+      "value": "Protector de voltaje autorreconectable con medidor de energía kWh"
+    },
+    {
+      "name": "Modelo",
+      "value": "PN2-VAK"
+    },
+    {
+      "name": "Tensión de alimentación nominal",
+      "value": "AC 220V (AC 110V personalizable)"
+    },
+    {
+      "name": "Frecuencia nominal",
+      "value": "40 / 50 / 60 / 70Hz"
+    },
+    {
+      "name": "Rango de ajuste de sobretensión",
+      "value": "AC 240–300V"
+    },
+    {
+      "name": "Rango de ajuste de subtensión",
+      "value": "AC 140–230V"
+    },
+    {
+      "name": "Rango de ajuste de sobrecorriente",
+      "value": "1–40A / 1–63A / 1–80A (según el modelo)"
+    },
+    {
+      "name": "Corriente máx. de trabajo",
+      "value": "40A / 63A / 80A (opcional)"
+    },
+    {
+      "name": "Retardo de disparo (sobretensión)",
+      "value": "0.5 segundos"
+    },
+    {
+      "name": "Precisión de tensión",
+      "value": "<1%"
+    },
+    {
+      "name": "Modo de visualización",
+      "value": "Tricolor — tensión (rojo) + corriente (verde) + kWh (azul)"
+    },
+    {
+      "name": "Nota sobre la corriente mostrada",
+      "value": "No se muestra cuando la corriente es inferior a 1A"
+    },
+    {
+      "name": "Nota sobre los kWh mostrados",
+      "value": "Acumulados; no se muestran por debajo de 0.01 kWh"
+    },
+    {
+      "name": "Tiempo de retardo de reconexión",
+      "value": "0–999 segundos (ajustable, 60s por defecto)"
+    },
+    {
+      "name": "Protección por contraseña",
+      "value": "Compatible — impide cambios no autorizados de parámetros"
+    },
+    {
+      "name": "Modo de ahorro de energía",
+      "value": "Activable"
+    },
+    {
+      "name": "Material de la carcasa",
+      "value": "PC retardante de llama (UL94 V-0)"
+    },
+    {
+      "name": "Dimensiones",
+      "value": "81 × 36 × 66mm"
+    },
+    {
+      "name": "Instalación",
+      "value": "Riel DIN de 35mm"
+    },
+    {
+      "name": "Temperatura ambiente",
+      "value": "-25°C a +55°C"
+    },
+    {
+      "name": "Humedad relativa permitida",
+      "value": "≤50% a 40°C (sin condensación)"
+    },
+    {
+      "name": "Vida mecánica",
+      "value": "≥10.000 ciclos"
+    },
+    {
+      "name": "Funciones de protección",
+      "value": "Sobretensión, subtensión, sobrecorriente, protección con retardo, medición de kWh"
+    },
+    {
+      "name": "Aplicación",
+      "value": "Submedición en propiedades de alquiler, facturación eléctrica a inquilinos, locales comerciales ligeros"
+    },
+    {
+      "name": "Certificación",
+      "value": "CE, RoHS"
+    }
+  ],
+  "metaTitle": "Protector de voltaje PN2-VAK con medidor kWh 40A–80A riel DIN | Soltree",
+  "metaDescription": "Protector autorreconectable PN2-VAK con medidor de energía kWh integrado, 40A–80A. Pantalla tricolor: tensión, corriente y consumo. Reconexión automática, CE y RoHS.",
+  "metaKeywords": "protector de voltaje PN2-VAK con medidor kWh, protector de voltaje con medidor de energía, relé autorreconectable con pantalla kWh, protector de sobretensión con medidor eléctrico, protector de voltaje riel DIN kWh, protector de voltaje para submedición, relé con pantalla de voltaje corriente y kWh",
+  "imageAlts": [
+    "Protector de voltaje autorreconectable PN2-VAK Soltree con medidor kWh y pantalla tricolor, vista frontal",
+    "Pantalla tricolor del PN2-VAK mostrando a la vez tensión en rojo, corriente en verde y kWh en azul",
+    "Lectura del consumo de energía acumulado en el medidor kWh del protector PN2-VAK",
+    "Panel de ajuste de parámetros del PN2-VAK con puntos de disparo por sobretensión y subtensión",
+    "Perfil lateral de montaje en riel DIN del protector de voltaje PN2-VAK",
+    "Protector de voltaje autorreconectable PN2-VAK instalado en un tablero de distribución",
+    "Detalle de las conexiones de bornes del protector PN2-VAK",
+    "Opciones de corriente nominal de 40A, 63A y 80A con medición kWh del protector de voltaje PN2-VAK"
+  ]
+}
