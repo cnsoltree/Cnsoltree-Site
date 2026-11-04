@@ -225,8 +225,7 @@ const routes = [
   '/contact',
   '/privacy',
   '/terms',
-  '/mcb',
-  '/solutions/aerosol-fire-extinguisher',
+  ...landingPages.map((page) => page.href),
   ...products.map((product) => `/products/${product.id}`),
   ...allCategories.map((category) => `/categories/${category.slug}`),
   ...blogPosts.map((post) => `/blog/${post.slug}`),
@@ -359,12 +358,61 @@ assert(
   fs.readFileSync(path.join(root, 'robots.txt'), 'utf8').includes('www.elesoltree.com/sitemap.xml'),
 );
 const pageHtml = (route) => fs.readFileSync(path.join(root, route, 'index.html'), 'utf8');
+for (const [route, type, otherRoute, otherType] of [
+  ['/ac-mcb', 'AC', '/dc-mcb', 'DC'],
+  ['/dc-mcb', 'DC', '/ac-mcb', 'AC'],
+]) {
+  const html = pageHtml(route);
+  const range = html.match(/<section\b[^>]*id="series"[\s\S]*?<\/section>/)?.[0];
+  assert(range, `Missing MCB range: ${route}`);
+  const family = products.filter((product) => product.id.startsWith(`MCB-${type}-`));
+  assert.equal(family.length, 4, `Expected four ${type} pole options`);
+  for (const product of family)
+    assert(
+      range.includes(`href="/products/${product.id}"`),
+      `Missing ${type} model: ${product.id}`,
+    );
+  assert(!range.includes(`/products/MCB-${otherType}-`), `Mixed AC/DC product range: ${route}`);
+  assert(html.includes(`href="${otherRoute}"`), `Missing AC/DC cross-link: ${route}`);
+  assert(html.includes(`rel="canonical" href="https://www.elesoltree.com${route}"`));
+  assert(sitemap.includes(`<loc>https://www.elesoltree.com${route}</loc>`));
+  const data = [
+    ...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g),
+  ].flatMap((match) => JSON.parse(match[1]));
+  const faq = data.find((item) => item['@type'] === 'FAQPage');
+  assert.equal(faq?.mainEntity.length, 6, `MCB FAQ count: ${route}`);
+  const faqSection = html.match(/<section\b[^>]*id="faq"[\s\S]*?<\/section>/)?.[0];
+  assert.equal(
+    (faqSection?.match(/<details\b/g) ?? []).length,
+    6,
+    `Visible MCB FAQ count: ${route}`,
+  );
+}
+const dcMcbTable = pageHtml('/dc-mcb').match(/<table\b[\s\S]*?<\/table>/)?.[0];
+for (const product of products.filter((item) => item.id.startsWith('MCB-DC-')))
+  for (const key of ['Poles', 'Rated Voltage', 'Rated Current', 'Breaking Capacity', 'Trip Curve'])
+    assert(dcMcbTable?.includes(product.specs[key]), `DC comparison must use product data: ${key}`);
+assert(landingPages.find((page) => page.href === '/ac-mcb')?.nav);
+assert(landingPages.find((page) => page.href === '/dc-mcb')?.nav);
+assert(!landingPages.some((page) => page.href === '/mcb'));
+assert(!sitemap.includes('<loc>https://www.elesoltree.com/mcb</loc>'));
+const legacyMcbRedirect = redirects.find(
+  (route) => route.src && new RegExp(route.src).test('/mcb'),
+);
+assert.equal(legacyMcbRedirect?.status, 301, 'Legacy /mcb must permanently redirect');
+assert.equal(
+  Object.entries(legacyMcbRedirect.headers).find(([key]) => key.toLowerCase() === 'location')?.[1],
+  '/ac-mcb',
+);
 for (const [english, localized] of localizedPairs) {
   const site = 'https://www.elesoltree.com';
   const en = pageHtml(english);
   const es = pageHtml(localized);
   assert(es.includes('<html lang="es"'), `Spanish page language: ${localized}`);
-  assert(es.includes(`rel="canonical" href="${site}${localized}"`), `Spanish canonical: ${localized}`);
+  assert(
+    es.includes(`rel="canonical" href="${site}${localized}"`),
+    `Spanish canonical: ${localized}`,
+  );
   for (const html of [en, es])
     assert(
       html.includes(`hreflang="en" href="${site}${english}"`) &&
@@ -377,7 +425,10 @@ for (const post of blogPosts.filter((item) => !translatedSlugs.has(item.slug)))
   assert(!exists(`/es/blog/${post.slug}`), `Untranslated article page: ${post.slug}`);
 for (const product of products.filter((item) => !translatedIds.has(item.id))) {
   assert(!exists(`/es/products/${product.id}`), `Untranslated product page: ${product.id}`);
-  assert(!pageHtml(`/products/${product.id}`).includes('hreflang="es"'), `Dangling hreflang: ${product.id}`);
+  assert(
+    !pageHtml(`/products/${product.id}`).includes('hreflang="es"'),
+    `Dangling hreflang: ${product.id}`,
+  );
 }
 const jsFiles = fs.readdirSync(path.join(root, '_astro')).filter((file) => file.endsWith('.js'));
 const clientJs = jsFiles

@@ -13,12 +13,22 @@ export const landingPages: {
   description: string;
 }[] = [
   {
-    title: 'MCB Miniature Circuit Breakers',
-    href: '/mcb',
+    title: 'AC MCB Miniature Circuit Breakers',
+    href: '/ac-mcb',
     groupSlug: 'circuit-protection',
     topics: ['mcb'],
+    nav: true,
     description:
-      'Compare AC and DC miniature circuit breakers, explore 1P to 4P models and request an OEM quote.',
+      'Compare AC miniature circuit breakers, STA/STB/STC series and 1P to 4P options for distribution projects.',
+  },
+  {
+    title: 'DC MCB for Solar PV & DC Circuits',
+    href: '/dc-mcb',
+    groupSlug: 'solar-pv-components',
+    topics: ['dc-circuit-breaker'],
+    nav: true,
+    description:
+      'Compare 1P to 4P DC miniature circuit breakers, review listed ratings and plan compatible PV and DC circuit protection.',
   },
   {
     title: 'DC Surge Protector for Solar PV',
