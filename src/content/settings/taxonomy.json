@@ -73,7 +73,7 @@
       "icon": "M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Zm1 4-4 6h4l-2 4",
       "items": [
         {
-          "name": "MCB",
+          "name": "AC MCB",
           "category": "circuit-breaker",
           "type": "MCB",
           "slug": "mcb",
@@ -87,7 +87,7 @@
           }
         },
         {
-          "name": "MCCB",
+          "name": "AC MCCB",
           "category": "circuit-breaker",
           "type": "MCCB",
           "slug": "mccb",
@@ -115,7 +115,7 @@
           }
         },
         {
-          "name": "Surge Protector",
+          "name": "AC Surge Protector",
           "category": "surge-protector-device",
           "slug": "surge-protector",
           "products": {
@@ -172,7 +172,7 @@
       ],
       "products": {
         "visible": true,
-        "order": 1
+        "order": 2
       },
       "articles": {
         "visible": true,
@@ -242,7 +242,7 @@
       ],
       "products": {
         "visible": true,
-        "order": 2
+        "order": 1
       },
       "articles": {
         "visible": true,

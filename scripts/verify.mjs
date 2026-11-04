@@ -225,6 +225,7 @@ const routes = [
   '/contact',
   '/privacy',
   '/terms',
+  '/mcb',
   '/solutions/aerosol-fire-extinguisher',
   ...products.map((product) => `/products/${product.id}`),
   ...allCategories.map((category) => `/categories/${category.slug}`),

@@ -2,6 +2,7 @@ export interface ContactBody {
   name: string;
   email: string;
   message: string;
+  subject?: string;
   company?: string;
   phone?: string;
   country?: string;
@@ -23,6 +24,11 @@ export function validContact(body: unknown): body is ContactBody {
     typeof data.message === 'string' &&
     data.message.trim().length >= 10 &&
     data.message.length <= 5000 &&
+    (data.subject === undefined ||
+      (typeof data.subject === 'string' &&
+        data.subject.trim().length > 0 &&
+        data.subject.length <= 200 &&
+        !/[\r\n]/.test(data.subject))) &&
     ['company', 'phone', 'country', 'inquiry_type', 'language'].every(
       (key) =>
         data[key] === undefined || (typeof data[key] === 'string' && data[key].length <= 200),

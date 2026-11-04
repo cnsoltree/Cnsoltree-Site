@@ -43,7 +43,7 @@ export const POST: APIRoute = async ({ request }) => {
         from,
         to: [to],
         reply_to: body.email,
-        subject: `[Soltree${body.language && body.language !== 'en' ? ' · ' + body.language.toUpperCase() : ''}] New enquiry from ${body.name}${body.company ? ' · ' + body.company : ''}`,
+        subject: `[Soltree${body.language && body.language !== 'en' ? ' · ' + body.language.toUpperCase() : ''}] ${body.subject ? body.subject.trim() : `New enquiry from ${body.name}${body.company ? ' · ' + body.company : ''}`}`,
         html: contactHtml(body),
       }),
     });
@@ -78,10 +78,12 @@ export const POST: APIRoute = async ({ request }) => {
           email: body.email,
           message: [
             body.message,
-            ...['company', 'phone', 'country', 'inquiry_type', 'language'].flatMap((key) => {
-              const value = body[key as keyof typeof body];
-              return value ? [`${key}: ${value}`] : [];
-            }),
+            ...['subject', 'company', 'phone', 'country', 'inquiry_type', 'language'].flatMap(
+              (key) => {
+                const value = body[key as keyof typeof body];
+                return value ? [`${key}: ${value}`] : [];
+              },
+            ),
           ].join('\n'),
         }),
       });

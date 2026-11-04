@@ -95,6 +95,12 @@ try {
     { ...lead, message: 'short' },
     { ...lead, name: ' ' },
     { ...lead, phone: 123 },
+    { ...lead, subject: 123 },
+    { ...lead, subject: '' },
+    { ...lead, subject: '   ' },
+    { ...lead, subject: 'x'.repeat(201) },
+    { ...lead, subject: 'Enquiry\r\nBcc: other@example.com' },
+    { ...lead, subject: 'Enquiry\nOther line' },
   ])
     assert.equal((await submit(invalid)).status, 422);
   assert.equal(state.calls.length, 0);
@@ -130,6 +136,21 @@ try {
   assert.equal(email.body.from, 'noreply@cnsoltree.com');
   assert.deepEqual(email.body.to, ['shawn@cnsoltree.com']);
   assert.equal(email.body.reply_to, lead.email);
+  assert.equal(email.body.subject, `[Soltree] New enquiry from ${lead.name}`);
+
+  const subjectLead = { ...lead, subject: ' DC SPD <OEM> & pricing ' };
+  reset({ ...emailSecrets, ...databaseSecrets }, [
+    { json: { id: 'fixture-confirmed-email-id' } },
+    { status: 201 },
+  ]);
+  assert.deepEqual(await submit(subjectLead), { status: 200, data: { success: true } });
+  assert.equal(state.calls[0].body.subject, '[Soltree] DC SPD <OEM> & pricing');
+  assert(state.calls[0].body.html.includes('DC SPD &lt;OEM&gt; &amp; pricing'));
+  assert.equal(state.calls[1].body.message, `${lead.message}\nsubject: ${subjectLead.subject}`);
+
+  reset(emailSecrets, [{ json: { id: 'fixture-confirmed-email-id' } }]);
+  assert.equal((await submit({ ...lead, subject: 'x'.repeat(200), language: 'es' })).status, 200);
+  assert.equal(state.calls[0].body.subject, `[Soltree · ES] ${'x'.repeat(200)}`);
 
   const detailedLead = {
     ...lead,

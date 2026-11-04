@@ -1,11 +1,19 @@
 ---
-import { subcategoryHref } from '@/lib/product-taxonomy';
+import { subcategoryHref, type ProductSubcategory } from '@/lib/product-taxonomy';
+import { landingPages, matchesResource } from '@/lib/landing-pages';
 import Img from './Img.astro';
 import CompanyMenu from './CompanyMenu.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import { companyLinks } from '@/lib/company-navigation';
-import { basePath, getProductGroups, href, langFromUrl, t } from '@/i18n';
+import { basePath, getProductGroups, hasPage, href, langFromUrl, t } from '@/i18n';
 const lang = langFromUrl(Astro.url);
+// Landing pages replace the category link only in languages where the landing page exists.
+const itemHref = (item: ProductSubcategory, group: string) => {
+  const landing = landingPages.find(
+    (page) => page.nav && matchesResource(page, group, item.slug) && hasPage(lang, page.href),
+  );
+  return href(lang, landing?.href ?? subcategoryHref(item, group));
+};
 const path = basePath(Astro.url);
 const productGroups = getProductGroups(lang);
 const links = [
@@ -136,7 +144,7 @@ const links = [
                   <div class="mt-5 grid grid-cols-1 gap-x-8 xl:grid-cols-2">
                     {group.items.map((item) => (
                       <a
-                        href={href(lang, subcategoryHref(item, group.slug))}
+                        href={itemHref(item, group.slug)}
                         class="flex items-center justify-between gap-3 border-b border-gray-100 py-5 text-sm font-medium text-gray-600 hover:text-green-700"
                       >
                         {item.name}
@@ -162,7 +170,10 @@ const links = [
         </a>
       ))}
       <CompanyMenu />
-      <a href={href(lang, '/contact')} class="rounded-md px-4 py-2 text-sm font-medium text-gray-600">
+      <a
+        href={href(lang, '/contact')}
+        class="rounded-md px-4 py-2 text-sm font-medium text-gray-600"
+      >
         {t(lang, 'Contact Us')}
       </a>
     </nav>
@@ -171,18 +182,18 @@ const links = [
       <a href={href(lang, '/contact')} class="btn-primary hidden xl:inline-flex">
         {t(lang, 'Contact Us')}
       </a>
-    <button
-      type="button"
-      class="rounded-lg p-2 lg:hidden"
-      aria-label={t(lang, 'Open menu')}
-      aria-controls="mobile-navigation"
-      aria-expanded="false"
-      data-mobile-trigger
-      data-open-label={t(lang, 'Open menu')}
-      data-close-label={t(lang, 'Close menu')}
-    >
-      ☰
-    </button>
+      <button
+        type="button"
+        class="rounded-lg p-2 lg:hidden"
+        aria-label={t(lang, 'Open menu')}
+        aria-controls="mobile-navigation"
+        aria-expanded="false"
+        data-mobile-trigger
+        data-open-label={t(lang, 'Open menu')}
+        data-close-label={t(lang, 'Close menu')}
+      >
+        ☰
+      </button>
     </div>
   </div>
   <nav
@@ -198,7 +209,10 @@ const links = [
       <summary class="cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold text-green-700">
         {t(lang, 'Product')}
       </summary>
-      <a href={href(lang, '/products')} class="block px-8 py-3 text-sm font-semibold text-green-700">
+      <a
+        href={href(lang, '/products')}
+        class="block px-8 py-3 text-sm font-semibold text-green-700"
+      >
         {t(lang, 'All Products')}
       </a>
       {productGroups.map((group) => (
@@ -208,7 +222,7 @@ const links = [
           </summary>
           {group.items.map((item) => (
             <a
-              href={href(lang, subcategoryHref(item, group.slug))}
+              href={itemHref(item, group.slug)}
               class="block py-3 pl-10 text-sm text-gray-600 hover:text-green-700"
             >
               {item.name}

@@ -1,14 +1,18 @@
 ---
 interface Props {
+  showCompany?: boolean;
   showCountry?: boolean;
   showInquiryType?: boolean;
+  showSubject?: boolean;
   buttonText?: string;
 }
 import { langFromUrl, t } from '@/i18n';
 const lang = langFromUrl(Astro.url);
 const {
+  showCompany = true,
   showCountry = false,
   showInquiryType = false,
+  showSubject = false,
   buttonText = t(lang, 'Send Enquiry'),
 } = Astro.props;
 const id = crypto.randomUUID();
@@ -27,7 +31,7 @@ const id = crypto.randomUUID();
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div>
       <label for={`${id}-name`} class="label">
-        {t(lang, "Full Name *")}
+        {t(lang, 'Full Name *')}
       </label>
       <input
         id={`${id}-name`}
@@ -41,7 +45,7 @@ const id = crypto.randomUUID();
     </div>
     <div>
       <label for={`${id}-phone`} class="label">
-        {t(lang, "Phone / WhatsApp")}
+        {t(lang, 'Phone / WhatsApp')}
       </label>
       <input
         id={`${id}-phone`}
@@ -56,7 +60,7 @@ const id = crypto.randomUUID();
   </div>
   <div>
     <label for={`${id}-email`} class="label">
-      {t(lang, "Email Address *")}
+      {t(lang, 'Email Address *')}
     </label>
     <input
       id={`${id}-email`}
@@ -69,40 +73,44 @@ const id = crypto.randomUUID();
       placeholder="john@company.com"
     />
   </div>
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div>
-      <label for={`${id}-company`} class="label">
-        {t(lang, "Company")}
-      </label>
-      <input
-        id={`${id}-company`}
-        name="company"
-        autocomplete="organization"
-        maxlength="120"
-        class="input"
-        placeholder={t(lang, 'Company name')}
-      />
+  {(showCompany || showCountry) && (
+    <div class="grid gap-4 sm:grid-cols-2">
+      {showCompany && (
+        <div>
+          <label for={`${id}-company`} class="label">
+            {t(lang, 'Company')}
+          </label>
+          <input
+            id={`${id}-company`}
+            name="company"
+            autocomplete="organization"
+            maxlength="120"
+            class="input"
+            placeholder={t(lang, 'Company name')}
+          />
+        </div>
+      )}
+      {showCountry && (
+        <div>
+          <label for={`${id}-country`} class="label">
+            {t(lang, 'Your Country')}
+          </label>
+          <input
+            id={`${id}-country`}
+            name="country"
+            autocomplete="country-name"
+            maxlength="100"
+            class="input"
+            placeholder={t(lang, 'e.g. United States')}
+          />
+        </div>
+      )}
     </div>
-    {showCountry && (
-      <div>
-        <label for={`${id}-country`} class="label">
-          {t(lang, "Your Country")}
-        </label>
-        <input
-          id={`${id}-country`}
-          name="country"
-          autocomplete="country-name"
-          maxlength="100"
-          class="input"
-          placeholder={t(lang, 'e.g. United States')}
-        />
-      </div>
-    )}
-  </div>
+  )}
   {showInquiryType && (
     <div>
       <label for={`${id}-type`} class="label">
-        {t(lang, "Inquiry Type *")}
+        {t(lang, 'Inquiry Type *')}
       </label>
       <select id={`${id}-type`} name="inquiry_type" required class="input">
         <option value="">{t(lang, 'Select inquiry type...')}</option>
@@ -120,9 +128,24 @@ const id = crypto.randomUUID();
       </select>
     </div>
   )}
+  {showSubject && (
+    <div>
+      <label for={`${id}-subject`} class="label">
+        {t(lang, 'Subject *')}
+      </label>
+      <input
+        id={`${id}-subject`}
+        name="subject"
+        required
+        maxlength="200"
+        class="input"
+        placeholder={t(lang, 'e.g. DC SPD quotation or OEM enquiry')}
+      />
+    </div>
+  )}
   <div>
     <label for={`${id}-message`} class="label">
-      {t(lang, "Message *")}
+      {t(lang, 'Message *')}
     </label>
     <textarea
       id={`${id}-message`}

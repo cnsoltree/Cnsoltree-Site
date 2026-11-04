@@ -5,12 +5,12 @@
   "categorySlug": "surge-protector-device",
   "categoryName": "Surge Protector Device",
   "shortDescription": "2-pole DC surge protector supporting 500VDC and 1000VDC PV systems. Simultaneously protects both positive and negative conductors. 40kA max discharge, fast response – for RV and residential solar distribution boxes.",
-  "description": "The SPD-DC-2P-Orange is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit – shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.6kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The orange flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
+  "description": "The SPD-DC-2P-Orange is a 2-pole DC surge protection device for photovoltaic systems, supporting both 500VDC and 1000VDC operating voltages. By switching both poles simultaneously, it provides complete protection of both the positive and negative conductors in a DC circuit – shielding solar electrical systems and connected load equipment from lightning-induced surges, switching transients, and overvoltage events. Maximum discharge current is 40kA with a nominal of 20kA, and the voltage protection level is 2.8kV at 500VDC and 3.8kV at 1000VDC. The copper core ensures excellent conductivity and corrosion resistance for reliable long-term outdoor operation. The orange flame-retardant PC housing clips onto a standard 35mm DIN rail and is compatible with PV systems and DC circuit breakers. Ideal for distribution boxes in RV solar setups and residential rooftop solar installations.",
   "features": [
     "2-pole DC surge protection – simultaneous positive and negative conductor protection",
     "Dual voltage: supports 500VDC and 1000VDC PV systems",
     "40kA max discharge current (Imax), 20kA nominal discharge current (In)",
-    "Voltage protection level: 2.8kV (500VDC) / 3.6kV (1000VDC)",
+    "Voltage protection level: 2.8kV (500VDC) / 3.8kV (1000VDC)",
     "Lightning protection, surge suppression and transient overvoltage clamping",
     "Copper core – excellent conductivity and corrosion resistance",
     "Compatible with PV systems and DC circuit breakers",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Voltage Protection Level (Up)",
-      "value": "2.8kV (500VDC) / 3.6kV (1000VDC)"
+      "value": "2.8kV (500VDC) / 3.8kV (1000VDC)"
     },
     {
       "name": "Application System",
@@ -82,7 +82,7 @@
     "/images/products/SPD-DC-2P-Orange-8.jpg"
   ],
   "metaTitle": "2P Orange DC Surge Protector 500V/1000V 40kA | PV Solar SPD | Soltree",
-  "metaDescription": "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC – conductors in a single circuit loop. 40kA Imax, 2.8kV/3.6kV Up, copper core. Orange housing aids cable identification. For two-wire DC circuits in RV and home solar installations.",
+  "metaDescription": "Two-pole orange DC SPD for 500VDC and 1000VDC PV systems. Dual-pole simultaneous protection on both DC+ and DC – conductors in a single circuit loop. 40kA Imax, 2.8kV/3.8kV Up, copper core. Orange housing aids cable identification. For two-wire DC circuits in RV and home solar installations.",
   "metaKeywords": "2P DC surge protector, PV solar SPD, 500V DC SPD, 1000V DC SPD, 40kA solar SPD, two pole DC SPD, RV solar surge protector, residential solar SPD, orange DC SPD, DIN rail DC SPD",
   "imageAlts": [
     "SPD-DC-2P-Orange 2-pole DC surge protector front view – orange PV solar SPD",
@@ -94,7 +94,7 @@
     "SPD-DC-2P-Orange on 35mm DIN rail in solar distribution box",
     "SPD-DC-2P-Orange installed in RV and residential solar PV system"
   ],
-  "published": true,
+  "published": false,
   "sortOrder": 17,
   "createdAt": "2026-10-29T14:19:47.978Z",
   "updatedAt": "2026-10-29T14:19:47.978Z"

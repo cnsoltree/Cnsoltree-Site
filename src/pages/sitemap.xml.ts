@@ -34,6 +34,8 @@ export const GET: APIRoute = () => {
     '/contact',
     '/privacy',
     '/terms',
+    '/mcb',
+    '/dc-surge-protector',
     '/solutions/aerosol-fire-extinguisher',
     ...categories.map((category) => `/categories/${category.slug}`),
     ...products.map((product) => `/products/${product.id}`),
