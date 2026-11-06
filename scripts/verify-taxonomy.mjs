@@ -149,6 +149,16 @@ assert(
   !matchesTaxonomyArticleGroup({ relatedCategorySlug: 'circuit-breaker' }, original.groups[1]),
 );
 assert(!matchesTaxonomyProduct({}, original.groups[0].items[0]));
+const acSPD = { category: 'surge-protector-device', slug: 'surge-protector' };
+const dcSPD = { ...acSPD, slug: 'dc-surge-protector', type: 'DC' };
+for (const product of [
+  { categorySlug: acSPD.category, name: '600V DC SPD' },
+  { categorySlug: acSPD.category, name: 'STD-40-PV', productTypes: ['DC'] },
+]) {
+  assert(!matchesTaxonomyProduct(product, acSPD), 'DC SPD must not appear in AC SPD');
+  assert(matchesTaxonomyProduct(product, dcSPD), 'DC SPD must appear in DC SPD');
+}
+assert(matchesTaxonomyProduct({ categorySlug: acSPD.category, name: 'AC SPD' }, acSPD));
 assert(!matchesTaxonomyArticle({}, original.groups[0].items[0]));
 const invalid = clone(original);
 invalid.groups[0].items.push(clone(invalid.groups[0].items[0]));

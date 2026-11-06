@@ -98,7 +98,7 @@
     "SPD-DC-4P-White installed on dual MPPT inverter DC input",
     "SPD-DC-4P-White in PV combiner box and energy storage system"
   ],
-  "published": true,
+  "published": false,
   "sortOrder": 15,
   "createdAt": "2026-10-29T14:19:47.978Z",
   "updatedAt": "2026-10-29T14:19:47.978Z"

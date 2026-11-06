@@ -1,0 +1,349 @@
+{
+  "id": "STD-40-PV-600V",
+  "name": "Type 2 600V 2P DC Surge Protector SPD STD-40-PV",
+  "slug": "std-40-pv-600v-dc-surge-protector",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "productTypes": ["DC"],
+  "shortDescription": "DIN rail installation, for 600V DC power system, high discharge capacity due to Metal Oxide Varistor (MOV)",
+  "description": "DIN rail installation, for 600V DC power system, high discharge capacity due to Metal Oxide Varistor (MOV)",
+  "features": [
+    "Location of Use: String box, inverter",
+    "Network Systems: (DC+)-PE, (DC-)-PE",
+    "Surge Ratings: In = 20kA (8/20 μs), Imax = 40kA (8/20 μs)",
+    "IEC/EN Category: Class II / Type 2",
+    "Protective Elements: High Energy MOV",
+    "Housing: Pluggable Design",
+    "Compliance: IEC/EN 61643-31"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "STD-40-PV"
+    },
+    {
+      "name": "DC System Voltage",
+      "value": "600V DC"
+    },
+    {
+      "name": "IEC/EN Category",
+      "value": "Class II / Type 2"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA (8/20 μs)"
+    },
+    {
+      "name": "Maximum Discharge Current (Imax)",
+      "value": "40kA (8/20 μs)"
+    },
+    {
+      "name": "Network Systems",
+      "value": "(DC+)-PE, (DC-)-PE"
+    },
+    {
+      "name": "Protective Elements",
+      "value": "High Energy Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Housing",
+      "value": "Pluggable Design"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN Rail"
+    },
+    {
+      "name": "Location of Use",
+      "value": "String Box, Inverter"
+    },
+    {
+      "name": "Compliance",
+      "value": "IEC/EN 61643-31"
+    }
+  ],
+  "image": "/images/uploads/std-40-pv-600v-orange.png",
+  "customizationOptions": ["Custom Color", "Custom Packaging", "Custom Printing"],
+  "colorVariants": [
+    {
+      "name": "Orange",
+      "image": "/images/uploads/std-40-pv-600v-orange.png",
+      "alt": "STD-40-PV 600V DC surge protector with orange modules and orange base"
+    },
+    {
+      "name": "Black / Green",
+      "image": "/images/uploads/std-40-pv-600v-black-green.png",
+      "alt": "STD-40-PV 600V DC surge protector with black modules and green base"
+    },
+    {
+      "name": "White / Green",
+      "image": "/images/uploads/std-40-pv-600v-white-green.png",
+      "alt": "STD-40-PV 600V DC surge protector with white modules and green base"
+    },
+    {
+      "name": "Orange / Green",
+      "image": "/images/uploads/std-40-pv-600v-orange-green.png",
+      "alt": "STD-40-PV 600V DC surge protector with orange modules and green base"
+    },
+    {
+      "name": "White",
+      "image": "/images/uploads/std-40-pv-600v-white.png",
+      "alt": "STD-40-PV 600V DC surge protector with white modules and white base"
+    },
+    {
+      "name": "Red / Gray",
+      "image": "/images/uploads/std-40-pv-600v-red-gray.png",
+      "alt": "STD-40-PV 600V DC surge protector with red modules and gray base"
+    },
+    {
+      "name": "White / Gray",
+      "image": "/images/uploads/std-40-pv-600v-white-gray.png",
+      "alt": "STD-40-PV 600V DC surge protector with white modules and gray base"
+    },
+    {
+      "name": "Orange / Gray",
+      "image": "/images/uploads/std-40-pv-600v-orange-gray.png",
+      "alt": "STD-40-PV 600V DC surge protector with orange modules and gray base"
+    }
+  ],
+  "images": [
+    "/images/uploads/std-40-pv-600v-orange.png",
+    "/images/uploads/std-40-pv-600v-surge-protection.png",
+    "/images/uploads/std-40-pv-600v-plug-in-modules.png",
+    "/images/uploads/std-40-pv-600v-terminal-guide.png",
+    "/images/uploads/std-40-pv-600v-key-benefits.png",
+    "/images/uploads/std-40-pv-600v-mov-comparison.png"
+  ],
+  "imageAlts": [
+    "STD-40-PV 600V DC surge protector with orange modules and orange base",
+    "STD-40-PV 600V DC surge protection and 40kA maximum discharge current overview",
+    "STD-40-PV plug-in module replacement and locking clip detail",
+    "STD-40-PV positive, negative and earth terminals with indicator and label guide",
+    "STD-40-PV key product benefits and surge ratings infographic",
+    "Standard MOV and epoxy-encapsulated MOV comparison infographic"
+  ],
+  "metaTitle": "Type 2 600V 2P DC Surge Protector SPD STD-40-PV | Soltree",
+  "metaDescription": "STD-40-PV Type 2 600V DC surge protector with high-energy MOV, In 20kA and Imax 40kA. Pluggable DIN rail SPD for PV string boxes and inverters.",
+  "metaKeywords": "600V DC surge protector, STD-40-PV, Type 2 SPD, 40kA DC SPD, MOV surge protector, DIN rail PV SPD",
+  "published": true,
+  "badge": "New",
+  "sortOrder": 12.5,
+  "detailSections": [
+    {
+      "title": "Application",
+      "id": "application",
+      "content": "The STD-40-PV is a Type 2, 2-pole 600V DC surge protector for photovoltaic (PV) circuits. Designed for installation in PV string boxes, combiner boxes and at inverter DC inputs, it protects connected equipment against transient overvoltages caused by induced lightning surges.\n\nConnect the SPD in parallel with the DC circuit, following the 2-pole wiring diagram for the positive, negative and protective earth connections. For long outdoor DC cable runs, plan protection at both the PV array side and the inverter/converter side, and confirm that the circuit voltage is within the selected SPD rating.\n\nHigh-energy metal oxide varistors (MOVs), dedicated thermal disconnectors and failure indicators provide surge protection, thermal disconnection and a visible indication of device status."
+    },
+    {
+      "title": "Specifications",
+      "id": "specifications",
+      "content": "Compare the STD-40-PV 2P DC surge protector ratings below, including 600V and 800V options and a customized 12/24V option. The table lists the Class II test classification, nominal discharge current (In), maximum discharge current (Imax) and voltage protection level (Up) to help you review the configuration for your PV circuit.",
+      "table": {
+        "caption": "STD-40-PV Surge protector 2P",
+        "rows": [
+          ["Pole", "2P", "2P", "2P（Customized）"],
+          ["Classified Test", "Class II", "Class II", "Class II"],
+          ["Ucpv (VDC)", "600", "800", "12/24"],
+          ["In (8/20)μs (kA)", "20", "20", "20"],
+          ["Imax (8/20)μs (kA)", "40", "40", "40"],
+          ["Up (kV)", "2.8", "3.2", "2.0"]
+        ]
+      }
+    },
+    {
+      "title": "Installation and Dimensions",
+      "id": "installation-and-dimensions",
+      "content": "Check the wiring capacity, terminal tightening torque, operating conditions and DIN rail mounting requirements below when planning your DC SPD installation.",
+      "table": {
+        "caption": "Installation and Dimensions",
+        "rows": [
+          [
+            {
+              "text": "Wiring capacity (mm²)",
+              "rowSpan": 2
+            },
+            {
+              "text": "Hard wire",
+              "header": true
+            },
+            "4~25",
+            "4~25"
+          ],
+          [
+            {
+              "text": "Flexible wire",
+              "header": true
+            },
+            "4~16",
+            "4~16"
+          ],
+          [
+            {
+              "text": "Stripping length (mm)",
+              "colSpan": 2
+            },
+            "10",
+            "10"
+          ],
+          [
+            {
+              "text": "Terminal screw",
+              "colSpan": 2
+            },
+            "M5",
+            "M5"
+          ],
+          [
+            {
+              "text": "Torque (N·m)",
+              "rowSpan": 2
+            },
+            {
+              "text": "Main circuit",
+              "header": true
+            },
+            "3.5",
+            "3.5"
+          ],
+          [
+            {
+              "text": "Remote signal contact",
+              "header": true
+            },
+            "0.25",
+            "0.25"
+          ],
+          [
+            {
+              "text": "Protection class",
+              "rowSpan": 2
+            },
+            {
+              "text": "All profile",
+              "header": true
+            },
+            "IP40",
+            "IP40"
+          ],
+          [
+            {
+              "text": "Connection port",
+              "header": true
+            },
+            "IP20",
+            "IP20"
+          ],
+          [
+            {
+              "text": "Installation environment",
+              "colSpan": 2
+            },
+            {
+              "text": "No obvious shock and vibration",
+              "colSpan": 2,
+              "header": false
+            }
+          ],
+          [
+            {
+              "text": "Altitude (m)",
+              "colSpan": 2
+            },
+            "≤2000",
+            "≤2000"
+          ],
+          [
+            {
+              "text": "Working temperature",
+              "colSpan": 2
+            },
+            "-30°C ~ +70°C",
+            "-30°C ~ +70°C"
+          ],
+          [
+            {
+              "text": "Relative humidity",
+              "colSpan": 2
+            },
+            "30%~90%",
+            "30%~90%"
+          ],
+          [
+            {
+              "text": "How to install",
+              "colSpan": 2
+            },
+            {
+              "text": "Installed with H 35-7.5/DIN35 steel mounting rail",
+              "colSpan": 2,
+              "header": false
+            }
+          ],
+          [
+            {
+              "text": "Size (mm) (W × H × L)",
+              "rowSpan": 3
+            },
+            {
+              "text": "W",
+              "header": true
+            },
+            "36",
+            "54"
+          ],
+          [
+            {
+              "text": "H",
+              "header": true
+            },
+            "90",
+            "90"
+          ],
+          [
+            {
+              "text": "L",
+              "header": true
+            },
+            "67.6",
+            "67.6"
+          ],
+          [
+            {
+              "text": "Weight (kg)",
+              "colSpan": 2
+            },
+            "0.24",
+            "0.36"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Wiring Diagram",
+      "id": "wiring-diagram",
+      "content": "The wiring diagram shows the DC surge protector connections alongside the MCB, fuse and protective earth. The installation image below illustrates a 600V STD-40-PV inside a PV combiner box; confirm the final wiring against the instructions for the selected model.",
+      "image": "/images/uploads/std-40-pv-wiring-diagram.png",
+      "imageAlt": "STD-40-PV DC surge protector wiring diagram showing MCB, fuse, SPD, earth connection and load circuits",
+      "images": [
+        {
+          "src": "/images/uploads/std-40-pv-combiner-installation-v2.png",
+          "alt": "STD-40-PV installation example showing a 600V Type 2 PV SPD connected inside a PV combiner box"
+        }
+      ]
+    },
+    {
+      "title": "Dimensions",
+      "id": "dimensions",
+      "content": "Use the 2-pole SPD dimension drawing to check enclosure clearance and DIN rail space before installation; dimensions are shown in millimetres.",
+      "image": "/images/uploads/std-40-pv-2p-dimensions.png",
+      "imageAlt": "STD-40-PV 2-pole DC surge protector dimensions showing the side view and front view"
+    },
+    {
+      "title": "Drawing",
+      "id": "drawing",
+      "content": "Compare the illustrated 2-pole PV connection arrangements for grounded and ungrounded DC circuits when reviewing the system layout with your installer.",
+      "image": "/images/uploads/std-40-pv-2p-drawing.png",
+      "imageAlt": "STD-40-PV 2-pole DC surge protector drawing showing ungrounded and grounded PV array connections to inverters"
+    }
+  ]
+}

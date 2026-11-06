@@ -8,7 +8,7 @@ interface Props {
   imageAlts?: string[];
 }
 const { images, productName, imageAlts } = Astro.props;
-const displayImages = images.slice(0, 8);
+const displayImages = images;
 ---
 
 <div data-gallery>
@@ -17,7 +17,9 @@ const displayImages = images.slice(0, 8);
       <div data-slide={index} hidden={index !== 0}>
         <Img
           src={src}
-          alt={imageAlts?.[index] || t(lang, '{name} — image {n}', { name: productName, n: index + 1 })}
+          alt={
+            imageAlts?.[index] || t(lang, '{name} — image {n}', { name: productName, n: index + 1 })
+          }
           fill
           width={1000}
           priority={index === 0}
@@ -67,7 +69,10 @@ const displayImages = images.slice(0, 8);
         >
           <Img
             src={src}
-            alt={imageAlts?.[index] || t(lang, '{name} thumbnail {n}', { name: productName, n: index + 1 })}
+            alt={
+              imageAlts?.[index] ||
+              t(lang, '{name} thumbnail {n}', { name: productName, n: index + 1 })
+            }
             width={100}
             class="h-full w-full object-contain p-1"
           />
@@ -77,28 +82,10 @@ const displayImages = images.slice(0, 8);
   )}
 </div>
 <script>
+  import { initProductGallery } from '@/lib/product-gallery.js';
   function initGallery() {
     document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((root) => {
-      const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
-      let active = 0;
-      function show(index: number) {
-        active = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => (slide.hidden = i !== active));
-        root.querySelectorAll<HTMLButtonElement>('[data-thumb]').forEach((thumb, i) => {
-          thumb.classList.toggle('border-green-700', i === active);
-          thumb.classList.toggle('border-transparent', i !== active);
-          thumb.setAttribute('aria-pressed', String(i === active));
-        });
-        const count = root.querySelector('[data-gallery-count]');
-        if (count) count.textContent = `${active + 1} / ${slides.length}`;
-      }
-      root.querySelector('[data-gallery-prev]')?.addEventListener('click', () => show(active - 1));
-      root.querySelector('[data-gallery-next]')?.addEventListener('click', () => show(active + 1));
-      root
-        .querySelectorAll<HTMLElement>('[data-thumb]')
-        .forEach((thumb) =>
-          thumb.addEventListener('click', () => show(Number(thumb.dataset.thumb))),
-        );
+      initProductGallery(root);
     });
   }
   document.addEventListener('astro:page-load', initGallery);

@@ -1,0 +1,55 @@
+---
+import Img from '@/components/Img.astro';
+import { CONTACT } from '@/consts';
+import { t, type Lang } from '@/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<aside data-company-intro aria-labelledby="company-intro-heading" class="min-w-0 lg:self-stretch">
+  <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm lg:sticky lg:top-28 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto">
+    <Img
+      src="/images/factory.jpg"
+      alt={t(lang, 'Soltree factory building')}
+      width={640}
+      height={640}
+      class="aspect-video w-full object-cover"
+      sizes="(min-width: 1024px) 320px, (min-width: 640px) 640px, 100vw"
+    />
+    <div class="p-6">
+      <p class="text-xs font-semibold uppercase tracking-widest text-green-700">Soltree</p>
+      <h2 id="company-intro-heading" class="mt-2 text-xl font-bold text-gray-900">
+        {t(lang, 'Hi there! I’m Shawn')}
+      </h2>
+      <div class="mt-4 space-y-4 text-sm leading-relaxed text-gray-600">
+        <p>
+          {t(
+            lang,
+            'I’m representing Soltree and passionate about electrical equipment. With solid experience in the electrical industry, we’re committed to providing quality products at affordable prices.',
+          )}
+        </p>
+        <p>
+          {t(
+            lang,
+            'We’re proud to have maintained a 98.9% customer satisfaction rate through dedication and excellent service.',
+          )}
+        </p>
+        <p>{t(lang, 'Let’s build reliable electrical solutions, together!')}</p>
+      </div>
+      <div class="mt-6 border-t border-gray-100 pt-5">
+        <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">
+          {t(lang, 'Contact')}
+        </p>
+        <a
+          href={`mailto:${CONTACT.email}`}
+          class="mt-2 inline-block break-all text-sm font-semibold text-green-700 underline-offset-4 hover:underline"
+        >
+          {CONTACT.email}
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>

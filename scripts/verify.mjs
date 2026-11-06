@@ -45,6 +45,23 @@ function sourceModule(file) {
 const { products, blogPosts, loadProducts, loadBlogPosts, contentFile } =
   sourceModule('src/lib/data.ts');
 assert.deepEqual(loadProducts([{ id: 'draft-product', published: false }]), []);
+const stdRecord = JSON.parse(fs.readFileSync('src/content/products/STD-40-PV-600V.json', 'utf8'));
+assert.deepEqual(loadProducts([stdRecord])[0].colorVariants, stdRecord.colorVariants);
+for (const colorVariants of [
+  {},
+  [{ name: 'Blue' }],
+  [{ name: 'Blue', image: 'https://example.com/blue.png' }],
+  [
+    { name: 'Orange', image: stdRecord.image },
+    { name: 'orange', image: stdRecord.image },
+  ],
+  Array.from({ length: 13 }, (_, i) => ({ name: `Color ${i}`, image: stdRecord.image })),
+])
+  assert.throws(() => loadProducts([{ ...stdRecord, colorVariants }]));
+for (const id of ['main-specification', 'application', 'invalid anchor']) {
+  const sections = [{ id, title: 'Test', content: 'Test' }, ...stdRecord.detailSections];
+  assert.throws(() => loadProducts([{ ...stdRecord, detailSections: sections }]), /unique anchors/);
+}
 assert.deepEqual(loadBlogPosts([{ slug: 'draft-article', published: false }]), []);
 assert.deepEqual(
   loadBlogPosts([
@@ -404,6 +421,29 @@ assert.equal(
   Object.entries(legacyMcbRedirect.headers).find(([key]) => key.toLowerCase() === 'location')?.[1],
   '/ac-mcb',
 );
+const stdHtml = pageHtml('/products/STD-40-PV-600V');
+for (const paragraph of stdRecord.detailSections[0].content.split('\n\n'))
+  assert(stdHtml.includes(paragraph), 'Application must match supplied copy');
+assert(
+  !stdHtml.includes('id="main-specification"'),
+  'Configured specifications must not be duplicated',
+);
+for (const anchor of stdRecord.detailSections.map((section) => section.id)) {
+  assert(
+    stdHtml.includes(`href="#${anchor}"`) && stdHtml.includes(`id="${anchor}"`),
+    `Product section anchor: ${anchor}`,
+  );
+}
+assert(stdHtml.includes(stdRecord.description), 'Product summary must match supplied copy');
+assert(!stdHtml.includes('/products/SPD-AC-'), 'DC SPD recommendations must exclude AC');
+assert(stdHtml.includes('More in DC Surge Protector'), 'DC SPD category label');
+const stdCard = pageHtml('/categories/surge-protector-device').match(
+  /<div\s+data-product-card\s+data-memberships="([^"]*)"[^>]*>\s*<a[^>]*href="\/products\/STD-40-PV-600V"/,
+);
+assert(stdCard, 'STD product must have a catalog card');
+const stdMemberships = stdCard[1].split(' ');
+assert(stdMemberships.includes('surge-protector-device:DC'), 'STD must appear in DC SPD filter');
+assert(!stdMemberships.includes('surge-protector-device:'), 'STD must not appear in AC SPD filter');
 for (const [english, localized] of localizedPairs) {
   const site = 'https://www.elesoltree.com';
   const en = pageHtml(english);
@@ -426,7 +466,7 @@ for (const post of blogPosts.filter((item) => !translatedSlugs.has(item.slug)))
 for (const product of products.filter((item) => !translatedIds.has(item.id))) {
   assert(!exists(`/es/products/${product.id}`), `Untranslated product page: ${product.id}`);
   assert(
-    !pageHtml(`/products/${product.id}`).includes('hreflang="es"'),
+    !/<link\b[^>]*\bhreflang="es"/.test(pageHtml(`/products/${product.id}`)),
     `Dangling hreflang: ${product.id}`,
   );
 }

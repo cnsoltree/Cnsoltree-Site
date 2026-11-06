@@ -23,6 +23,7 @@ export function validateCloudRecord(
     for (const key of collection === 'products'
       ? [
           'features',
+          'customizationOptions',
           'images',
           'descriptionImages',
           'imageAlts',
@@ -36,6 +37,20 @@ export function validateCloudRecord(
           record[key].some((value: unknown) => typeof value !== 'string'))
       )
         throw new Error();
+    if (
+      collection === 'products' &&
+      record.colorVariants !== undefined &&
+      (!Array.isArray(record.colorVariants) ||
+        record.colorVariants.length > 12 ||
+        record.colorVariants.some(
+          (color: any) =>
+            !color ||
+            typeof color.name !== 'string' ||
+            !color.name.trim() ||
+            typeof color.image !== 'string',
+        ))
+    )
+      throw new Error();
   } catch {
     throw adminProblem(422, '内容资料无效，请核对分类、标题、图片、正文与必填信息。');
   }
@@ -43,6 +58,9 @@ export function validateCloudRecord(
     record.image,
     ...(record.images ?? []),
     ...(record.descriptionImages ?? []),
+    ...(collection === 'products'
+      ? (record.colorVariants ?? []).map((color: any) => color.image)
+      : []),
   ]) {
     if (!name && !record.published) continue;
     if (

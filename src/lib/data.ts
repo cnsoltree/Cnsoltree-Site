@@ -20,7 +20,21 @@ export interface Product {
   deletedAt?: string;
   shortDescription: string;
   description: string;
+  detailSections?: {
+    id: string;
+    title: string;
+    content: string;
+    image?: string;
+    imageAlt?: string;
+    images?: { src: string; alt: string }[];
+    table?: {
+      caption: string;
+      rows: (string | { text: string; rowSpan?: number; colSpan?: number; header?: boolean })[][];
+    };
+  }[];
   features: string[];
+  customizationOptions?: string[];
+  colorVariants?: { name: string; image: string; alt?: string }[];
   specs: Record<string, string>;
   /**
    * 封面图（必填） – 用于产品列表卡片封面，也作为详情页第一张图
@@ -226,6 +240,83 @@ export function loadProducts(
     const category = activeCategories.find((category) => category.slug === value.categorySlug);
     if (!category) throw new Error(`${label}: unknown category.`);
     requireStrings(value.features, `${label}: features`);
+    if (value.customizationOptions !== undefined)
+      requireStrings(value.customizationOptions, `${label}: customizationOptions`);
+    if (value.colorVariants !== undefined) {
+      if (!Array.isArray(value.colorVariants) || value.colorVariants.length > 12)
+        throw new Error(`${label}: colorVariants accepts at most 12 colors.`);
+      const colors = new Set<string>();
+      for (const entry of value.colorVariants) {
+        const color = record(entry);
+        requireText(color, ['name', 'image'], `${label} color variant`);
+        const name = (color.name as string).trim().toLowerCase();
+        if (colors.has(name)) throw new Error(`${label}: duplicate color name.`);
+        colors.add(name);
+        if (!/^\/images\/.+\.(?:png|jpe?g|webp|avif)$/i.test(color.image as string))
+          throw new Error(`${label}: color image must be a local product image.`);
+        if (color.alt !== undefined && typeof color.alt !== 'string')
+          throw new Error(`${label}: color alt must be text.`);
+      }
+    }
+    if (value.detailSections !== undefined) {
+      if (!Array.isArray(value.detailSections))
+        throw new Error(`${label}: detailSections must be a list.`);
+      const ids = new Set(['main-specification']);
+      for (const entry of value.detailSections) {
+        const section = record(entry);
+        requireText(section, ['id', 'title'], `${label} detail section`);
+        if (typeof section.content !== 'string')
+          throw new Error(`${label}: detail section content must be text.`);
+        if (section.image !== undefined) {
+          if (
+            typeof section.image !== 'string' ||
+            !/^\/images\/.+\.(?:png|jpe?g|webp|avif)$/i.test(section.image)
+          )
+            throw new Error(`${label}: detail section image must be a local image.`);
+          requireText(section, ['imageAlt'], `${label} detail section image`);
+        }
+        if (section.images !== undefined) {
+          if (!Array.isArray(section.images))
+            throw new Error(`${label}: detail section images must be a list.`);
+          for (const entry of section.images) {
+            const image = record(entry);
+            requireText(image, ['src', 'alt'], `${label} detail section image`);
+            if (!/^\/images\/.+\.(?:png|jpe?g|webp|avif)$/i.test(image.src as string))
+              throw new Error(`${label}: detail section image must be a local image.`);
+          }
+        }
+        if (section.table !== undefined) {
+          const table = record(section.table);
+          requireText(table, ['caption'], `${label} detail table`);
+          const rows = table.rows;
+          if (
+            !Array.isArray(rows) ||
+            rows.length === 0 ||
+            !rows.every(
+              (row) =>
+                Array.isArray(row) &&
+                row.length > 0 &&
+                row.every((cell) => {
+                  if (typeof cell === 'string') return true;
+                  if (!cell || typeof cell !== 'object' || typeof cell.text !== 'string')
+                    return false;
+                  return (
+                    (cell.header === undefined || typeof cell.header === 'boolean') &&
+                    ['rowSpan', 'colSpan'].every(
+                      (key) =>
+                        cell[key] === undefined || (Number.isInteger(cell[key]) && cell[key] > 0),
+                    )
+                  );
+                }),
+            )
+          )
+            throw new Error(`${label}: detail table must contain text cells with valid spans.`);
+        }
+        if (!/^[a-z][a-z0-9-]*$/.test(section.id as string) || ids.has(section.id as string))
+          throw new Error(`${label}: detail section IDs must be unique anchors.`);
+        ids.add(section.id as string);
+      }
+    }
     for (const key of [
       'additionalCategorySlugs',
       'images',

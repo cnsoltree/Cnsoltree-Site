@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { initProductGallery } from '../src/lib/product-gallery.js';
 import fs from 'node:fs/promises';
 import { fromJS } from 'immutable';
 import {
@@ -107,6 +108,84 @@ for (const file of await fs.readdir(new URL('../src/content/products/', import.m
   assert.equal(JSON.stringify(product), copy);
   count++;
 }
+// Exercise real gallery handlers: color selection, arrows, thumbnail sync and repeated page loads.
+function galleryControl(dataset = {}) {
+  const listeners = [];
+  return {
+    dataset,
+    attributes: {},
+    classList: { toggle() {} },
+    setAttribute(name, value) {
+      this.attributes[name] = value;
+    },
+    addEventListener(type, handler) {
+      if (type === 'click') listeners.push(handler);
+    },
+    click() {
+      listeners.forEach((handler) => handler());
+    },
+  };
+}
+function galleryFixture(withColors = true) {
+  const slides = [{}, {}, {}];
+  const thumbs = slides.map((_, i) => galleryControl({ thumb: String(i) }));
+  const colors = withColors
+    ? [
+        galleryControl({ gallerySelect: '0', colorName: 'Orange' }),
+        galleryControl({ gallerySelect: '2', colorName: 'Blue' }),
+      ]
+    : [];
+  const selected = {};
+  const count = {};
+  const prev = galleryControl();
+  const next = galleryControl();
+  const scope = {
+    querySelectorAll: () => colors,
+    querySelector: () => (withColors ? selected : null),
+  };
+  const root = {
+    dataset: {},
+    closest: () => (withColors ? scope : null),
+    querySelectorAll: (selector) =>
+      selector === '[data-slide]' ? slides : selector === '[data-thumb]' ? thumbs : [],
+    querySelector: (selector) =>
+      ({ '[data-gallery-prev]': prev, '[data-gallery-next]': next, '[data-gallery-count]': count })[
+        selector
+      ],
+  };
+  initProductGallery(root);
+  return { root, slides, thumbs, colors, selected, count, prev, next };
+}
+const fixture = galleryFixture();
+assert.equal(fixture.selected.textContent, 'Orange');
+fixture.colors[1].click();
+assert.deepEqual(
+  fixture.slides.map((slide) => slide.hidden),
+  [true, true, false],
+);
+assert.equal(fixture.selected.textContent, 'Blue');
+assert.equal(fixture.thumbs[2].attributes['aria-pressed'], 'true');
+assert.equal(fixture.colors[0].attributes['aria-pressed'], 'false');
+assert.equal(fixture.count.textContent, '3 / 3');
+initProductGallery(fixture.root);
+fixture.next.click();
+assert.equal(
+  fixture.count.textContent,
+  '1 / 3',
+  'Repeated initialization must not double-bind arrows.',
+);
+fixture.prev.click();
+assert.equal(fixture.selected.textContent, 'Blue');
+fixture.thumbs[1].click();
+assert.equal(fixture.selected.textContent, '—');
+assert(fixture.colors.every((button) => button.attributes['aria-pressed'] === 'false'));
+const legacyFixture = galleryFixture(false);
+legacyFixture.next.click();
+assert.equal(legacyFixture.count.textContent, '2 / 3');
+assert.equal(fixture.count.textContent, '2 / 3', 'Galleries are isolated.');
+console.log(
+  'PASS: color selection, main-image visibility, thumbnail/arrow sync, wrapping, legacy galleries and repeat initialization.',
+);
 console.log(
   `PASS: ${count} existing galleries preserved; image/Alt alignment, reorder/main image, batch selection, deduplication, 8-image limit, removal and empty-gallery normalization.`,
 );

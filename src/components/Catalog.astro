@@ -35,13 +35,16 @@ const labels = {
     ),
   ),
   all: t(lang, 'All Products'),
-  summary: t(lang, '{count} products across {families} product families. Wholesale & OEM pricing available.'),
+  summary: t(
+    lang,
+    '{count} products across {families} product families. Wholesale & OEM pricing available.',
+  ),
   found: t(lang, '{count} products found'),
   empty: t(lang, '{title} products are not listed online yet.'),
 };
 const memberships = (product: Product) => [
-  `${product.categorySlug}:`,
-  ...(product.additionalCategorySlugs ?? []).map((slug) => `${slug}:`),
+  `${product.categorySlug}:*`,
+  ...(product.additionalCategorySlugs ?? []).map((slug) => `${slug}:*`),
   ...allProductGroups.flatMap((group) =>
     group.items
       .filter((item) => matchesSubcategory(product, item))
@@ -77,7 +80,9 @@ const memberships = (product: Product) => [
     <div class="container flex flex-col gap-8 lg:flex-row">
       <aside class="shrink-0 lg:w-64 xl:w-72">
         <nav aria-label={t(lang, 'Product categories')}>
-          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">{t(lang, 'Categories')}</h2>
+          <h2 class="text-sm font-semibold uppercase tracking-wider text-gray-900">
+            {t(lang, 'Categories')}
+          </h2>
           <a
             href={href(lang, '/products')}
             data-filter-link
@@ -181,7 +186,10 @@ const memberships = (product: Product) => [
       empty: string;
     };
     const fill = (text: string, vars: Record<string, string | number>) =>
-      Object.entries(vars).reduce((value, [k, v]) => value.replaceAll("{" + k + "}", String(v)), text);
+      Object.entries(vars).reduce(
+        (value, [k, v]) => value.replaceAll('{' + k + '}', String(v)),
+        text,
+      );
     const render = () => {
       const url = new URL(location.href),
         category = url.pathname.match(/^(?:\/[a-z]{2}(?:-[a-z]{2})?)?\/categories\/([^/]+)/)?.[1],
@@ -209,9 +217,7 @@ const memberships = (product: Product) => [
       const itemName = key && (labels.items[key] ?? item?.name);
       const title =
         itemName ??
-        (category
-          ? (labels.categories[category] ?? category)
-          : (groupName ?? labels.all));
+        (category ? (labels.categories[category] ?? category) : (groupName ?? labels.all));
       root.querySelector('[data-catalog-title]')!.textContent = title;
       root.querySelector('[data-catalog-description]')!.textContent =
         (group && (labels.groups[group.slug]?.description ?? group.description)) ??

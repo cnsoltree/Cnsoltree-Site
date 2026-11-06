@@ -171,8 +171,15 @@ export function matchesTaxonomyProduct(product, item) {
     (Array.isArray(product.additionalCategorySlugs) &&
       product.additionalCategorySlugs.includes(item.category));
   const types = Array.isArray(product.productTypes) ? product.productTypes : [];
+  const isDC = types.length
+    ? types.includes('DC')
+    : String(product.name ?? '')
+        .toUpperCase()
+        .split(/[^A-Z0-9]+/)
+        .includes('DC');
   return Boolean(
     inCategory &&
+    !(item.category === 'surge-protector-device' && item.slug === 'surge-protector' && isDC) &&
     (!item.type ||
       (types.length
         ? types.includes(item.type)

@@ -8,18 +8,26 @@ interface ProductCardProps {
 interface Props extends ProductCardProps {}
 const { product } = Astro.props;
 const lang = langFromUrl(Astro.url);
+const isDCSPD =
+  product.categorySlug === 'surge-protector-device' && product.productTypes?.includes('DC');
 ---
 
-<a href={href(lang, `/products/${product.id}`)} class="card group flex flex-col" aria-label={product.name}>
+<a
+  href={href(lang, `/products/${product.id}`)}
+  class="card group flex flex-col"
+  aria-label={product.name}
+>
   {/* Image */}
-  <div class="relative h-48 w-full overflow-hidden bg-gray-50">
+  <div
+    class:list={['relative w-full overflow-hidden bg-gray-50', isDCSPD ? 'aspect-square' : 'h-48']}
+  >
     <Img
       src={product.image}
       alt={
         (product.images?.[0] === product.image ? product.imageAlts?.[0] : undefined) || product.name
       }
       fill
-      class="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+      class={`object-contain transition-transform duration-300 group-hover:scale-105 ${isDCSPD ? 'p-2' : 'p-4'}`}
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
     />
   </div>

@@ -1,5 +1,258 @@
 # 项目开发进度
 
+## SPD 更新发布前验收（2026-11-05）
+
+- 用户明确要求上传服务器更新网站。现有 Vercel 项目 `cnsoltree-site-pnst`，生产分支 main；本地与远端起点一致（b3207ea）。
+- Node 22.23.4 构建通过，Astro check 182 文件零错误/警告（2 hints）；完整 verify:deploy 通过，265 页 / 81 产品 / 19 文章、5588 图片引用、联系表单及 Vercel/在线后台离线运行回归通过；产品管理、图库、分类与后台回归通过。
+- 修正 verify.mjs 的过时断言：旧简介的通用开头也出现在已批准的 Application 中，删除全页禁用该短语的误报检查，保留完整简介与 Application 逐段匹配检查。
+- 发布日志：release-spd-check.log、release-spd-build.log、release-spd-verify.log、release-spd-admin.log。生产部署及线上验收待完成。
+
+## Product Range 改为紧凑横排（2026-11-05）
+
+- 两款卡片由双列大图改为每行一款，桌面左侧图片宽 224–288px、右侧介绍与链接；参数在大屏分两列，缩小内边距与卡片前间距。窄屏保留上下布局，图片高 256px，完整显示产品。
+- 本地实际页面确认两行横排、左右区域及移除大正方形图区；两款产品入口/Schema 回归、格式与 diff 检查通过。未重新构建、未部署。
+
+## 3P 主图后追加四张展示图（2026-11-05）
+
+- 用户四张原图同步至 Astro 与公开上传目录，1000V 产品 images 第 2–5 张依次为 surge-protection、terminal-guide、plug-in-modules、mov-comparison，补齐逐图 Alt；橙色首图和 8 款配色保留。
+- 图片顺序、Alt、响应 200、配色按钮及现有图库切换回归通过，后台图片索引与 diff 检查通过。未重新构建、未部署。
+
+## 1000V 3P 独立选型文案优化（2026-11-05）
+
+- 重写 shortDescription、description、Application 和 Meta Description（151 字符）；围绕 Type 2 1000V 3P、20kA/40kA、插拔式 MOV、54mm 宽度、PV 汇流箱及逆变器 DC 侧展开。600V 2P 文案不变。
+- 补齐 Specifications、Remote Signal Contact、Installation and Dimensions、Wiring Diagram、Dimensions、Drawing 六个说明区块，分别解释选型参数、远程触点确认、安装准备及图纸用途；明确 1500V 为独立系列对比参数，不扩展本款 1000V 额定值，不将示意图中的 SPD 数量作为所有项目的固定要求。
+- 参数、图片、表格、8 款配色及布局保持现状；未新增认证或性能承诺。远程触点旧表中 30V AC/DC 标注差异仍待厂家资料确认，本次未改参数。
+- 本地页面七个模块逐段文案、独立简介与 Meta、原图归属、配色和规格列核验通过；两款 DC 专项回归、Prettier 及 diff 检查通过。未重新构建、未部署。
+
+## 1000V 3P Wiring Diagram 更新（2026-11-05）
+
+- 用户原图保存为 `std-40-pv-3p-wiring-diagram.png`（1318×534），同步 Astro/公开上传目录，替换 1000V 产品 Wiring Diagram 并更新 Alt。
+- 本地模块引用、图片响应 200、原始比例及 diff 检查通过；后台图片索引已同步。未重新构建、未部署。
+
+## 3P 规格表首列缩窄并居中（2026-11-05）
+
+- 按最新截图，1000V 产品 Specifications 首列桌面宽度从 46% 改为 26%，六行参数名称统一居中、不换行；窄屏保留足够标签空间。
+- 本地实际页面确认六个首列单元格宽度及居中、不换行样式，格式与 diff 检查通过。未重新构建、未部署。
+
+## 1000V 产品单独 3P Dimensions（2026-11-05）
+
+- 用户原图保存为 `std-40-pv-3p-dimensions.png`（1344×540），同步 Astro/公开上传目录；1000V 产品 Dimensions 替换为该侧视与 3P 正视尺寸图，更新 Alt。
+- 本地 Dimensions 模块图片引用、响应 200 与原图比例检查通过；后台图片索引已同步，diff 检查通过。未重新构建、未部署。
+
+## 1000V 产品单独 3P Drawing（2026-11-05）
+
+- 用户上传原图保存为 `std-40-pv-3p-drawing.png`（1164×412），同步 Astro/公开上传目录，替换 1000V 产品 Drawing 图片并更新 Alt。
+- 本地 Drawing 图片归属、响应 200 与原始比例检查通过；后台图片索引已同步，diff 检查通过。未重新构建、未部署。
+
+## 3P 规格表删除 2P 信息（2026-11-05）
+
+- 1000V 产品 Specifications 删除 600V、800V、12/24V 定制 2P 三列，只保留 1000V / 1500V 两列，保留对应 Up 3.8 / 5.4。表名改为 `STD-40-PV Surge protector 3P`。
+- 仅本产品的 Specifications 首列加宽（桌面 46%、窄屏 56%）并保持参数名一行显示，其余表格布局不变。本地实际页面逐格、首列样式及无 2P 信息核验通过；600V 规格表、Drawing 和合并安装表既有回归、格式及 diff 检查通过。未重新构建、未部署。
+
+## 1000V 3P 最新主图与定制配色（2026-11-05）
+
+- 橙色封面及图库首图使用本次第一张原图，沿用文件地址同步分类卡片及 DC Surge Protector 产品卡；新增后七张原图到 Astro 与公开上传目录。8 款配色按上传顺序为橙、橙灰、黑绿、白灰、全白、红灰、白绿、橙绿，沿用现有颜色图片按钮及主图切换逻辑。
+- 原图均为 1254×1254，未改图上标签；600V 产品不变。颜色切换/缩略图/箭头及 85 份历史图库回归通过；本地产品页确认 8 个配色按钮、顺序、图片响应与原图尺寸，DC 两款专项回归及 diff 检查通过。后台图片索引已同步，未重新构建、未部署。
+
+## DC SPD 列表放大主图（2026-11-05）
+
+- ProductCard 中 DC SPD 图片区域由固定 192px 高改为正方形，内边距从 16px 缩为 8px；其他产品保持原尺寸。DC Surge Protector 两款卡片同步采用正方形展示区并缩小内边距，使用 object-contain 完整展示原图。
+- 本地响应核验两款分类卡片与落地页大图布局、原 AC 卡片尺寸；两款产品专项回归、格式及 diff 检查通过。未重新构建、未部署。
+
+## 1000V 3P 产品更换主图（2026-11-05）
+
+- 用户原图保存为 `std-40-pv-1000v-orange.png`，同步 Astro 资源及公开图片目录；1000V 产品封面、图库第一张、Alt 与 DC Surge Protector 卡片及对应 Schema 图片同步更新，替换之前的系列示意图。
+- 原图保持 1000×1000；本地产品页与落地页确认使用新图、无旧示意图引用，新图响应 200；两款产品专项回归、后台图片索引同步及 diff 检查通过。未重新构建、未部署。
+
+## DC SPD 聚焦两款 Type 2 主力型号（2026-11-05）
+
+- `dc-surge-protector.astro` 仅推荐 STD-40-PV 600V 2P / 1000V 3P，双列产品卡分别说明配置、模块维护和详情页资料；两款均链接现有详情页。首页标题、SEO、两行选型表与 Product 结构化数据同步，不再推荐 STO 或其他电压/极数组合。保护类型说明保留为选型背景，不作为供应型号展示。
+- 旧 SPD-DC-1P/2P/3P/4P-White 设为 `published: false`，从产品目录和相关推荐撤下，原资料保留。600V / 1000V 详情内容及 AC SPD 不变；1000V 继续使用既有系列示意图，待专用成品图替换。
+- `npm.cmd run check` 通过（181 文件，0 errors / 0 warnings，2 个既有 hints）；新增可重复执行的 `node scripts/verify-dc-spd-range.mjs`，验证仅两款发布、两张卡片、详情页 200、Schema 名称/URL/极数准确，本地 4400 服务通过。格式及 diff 检查通过。未提交、未部署。
+- 分类回归 `node scripts/verify-taxonomy.mjs` 通过。使用工作区 Node 22.23.4 执行构建，静态页面与 749 张图片处理完成；Vercel 函数打包仍在等待，完整构建暂未确认通过。全站 `verify.mjs` 因构建尚未生成 `.vercel/output/config.json` 未完成。构建日志：`.dc-spd-build.log`。
+
+- 七模块调整验证：Astro check 180 文件、0 errors / 0 warnings（2 个既有 hints）；本地核验七个模块及导航顺序、Application 三段原文、11 行参数且不重复输出；既有 AC SPD 默认参数区保留。diff 检查通过。本次未重新构建、未提交或部署。
+
+- 2026-11-04：STD-40-PV 600V 详情改为用户指定的七个模块与同序页内导航。Application 原文分三段显示；Specifications 复用现有参数表，不重复显示 Main Specification；Remote Signal Contact、Installation and Dimensions、Wiring Diagram、Dimensions、Drawing 仅显示标题，等待真实资料。共用详情支持在配置的 specifications 模块位置输出参数表，其他产品保留默认参数区。段落校验允许空字符串用于待补资料标题，不允许非字符串内容；未部署。
+
+- 2026-11-04：按最新上传从左到右的顺序，将雷电防护、模块更换、部位标注、产品优势、MOV 对比图加入 STD-40-PV 600V 的 images 第 2–6 张；全橙色首图和现有配色保留。复制用户原图到上传目录与 Astro 资源目录，补齐 Alt、更新后台图片索引。图库切换及 84 份历史图库兼容检查通过，diff 检查通过；未重新构建、未部署。
+
+- 2026-11-04：按用户截图移除 STD-40-PV 600V 的旧斜角参考图引用，将全橙色正面图设置为 image、images 首图，并移到 colorVariants 第一项，Alt 同步。原图片文件保留供其他页面使用；未部署。
+
+- 2026-11-04：按用户最新要求，将 `Housing: Pluggable Design` 恢复至 STD-40-PV 600V 特点列表，位于 Protective Elements 与 Compliance 之间；未部署。
+
+- 2026-11-04：按用户要求移除 STD-40-PV 600V 特点列表中的 `Housing: Pluggable Design`；JSON 解析与 diff 检查通过，未部署。
+
+## 产品定制说明与颜色切换（2026-11-04）
+
+- 已将用户提供的 8 张配色原图复制到 public/images/uploads 与 src/assets/uploads，按黑绿、白绿、橙绿、全白、红灰、白灰、橙灰、全橙顺序配置 STD-40-PV 600V 的 colorVariants，补充对应 Alt。默认主图保留；选色仍为 48px 小图且隐藏可见名称。更新后台媒体索引；图库切换回归、历史图库兼容、源数据校验与 diff 检查通过；本地详情 HTTP 200、输出 8 个选色按钮、8 张图片均可访问。本次图片更新未重新构建或部署。
+
+- 按用户截图收紧定制区：去掉可见的 Color: Orange 与缩略图下方颜色名；图片选项改为 48×48px 小方块，保留无障碍名称与原有切图行为；缩小标签、容器内边距、选色行与 CTA 间距，减少右侧高度。详情页 HTTP 200、紧凑尺寸及名称隐藏输出核验、Prettier 与 diff 检查通过；本次纯样式调整未重新构建、未部署。
+
+- 产品详情增加可选 customizationOptions 与 colorVariants，特点下方显示定制服务标签和颜色缩略图；STD-40-PV 600V 先启用三项服务及现有橙色图。其他产品未配置时不显示新模块。
+- 复用现有图库，将颜色图片合并进大图列表，颜色、原缩略图、左右箭头保持同步；重复初始化不会绑定多次事件。后台可上传颜色图、填写名称与 Alt；本地内容校验、云端图片检查、公开发布字段同步支持新增数据。
+- 主图切换回归覆盖选色、缩略图、箭头循环、重复初始化与旧图库；84 份历史图库兼容通过。Astro check 0 errors / 0 warnings（2 个既有 hints）；云端内容及发布离线回归通过；本地详情 HTTP 200，新模块及按钮输出正确。Node 22 构建通过。
+- 其他颜色图待用户提供。未做浏览器视觉验收，未提交、推送或部署。
+- 构建后站内回归通过（272 路由、84 产品、19 文章，无断链），5766 个本地图片引用核验通过；格式与 git diff --check 通过。
+
+## 产品详情共用公司侧栏（2026-11-04）
+
+- 新增 CompanyIntro.astro，在 ProductDetail 参数与详情区域右侧共用：1024px 及以上宽 300px，1280px 及以上 320px；顶部偏移 7rem 吸顶，受详情区底部约束。短视口为卡片预留内部滚动，窄屏移至详情之后，相关推荐之前。
+- 复用与用户附件一致的 src/assets/factory.jpg，保留用户提供的 Shawn 介绍、98.9% 满意度和 shawn@cnsoltree.com 邮箱；图片使用现有优化组件，邮箱复用 CONTACT 配置。添加 ui-company-intro.json 西语译文，英文与西语产品页均使用共用卡片。
+- 参数表保留各产品原参数，行标题改为 th scope=row，表格容器支持横向滚动，避免侧栏挤压造成整页溢出。保留三个详情锚点。
+- Astro check：179 文件、0 errors / 0 warnings / 2 个既有 hints；Node 22 构建成功；verify PASS（272 路由、84 产品、19 文章，无断链），5765 图片引用检查通过。i18n-status 仅有既存未译 STD 产品和两个既存表单 UI 字符串；新卡片无缺失译文。git diff --check 通过。
+- 无头 Chrome 检查未能完成 CDP 连接并超时，未宣称通过浏览器吸顶/尺寸视觉验收；预留验证脚本 ../artifacts/verify-product-company-intro.mjs。未提交、推送或部署。
+
+## STD-40-PV 详情区块与 DC 分类试版（2026-11-04）
+
+- 按用户要求将标题下三段正文替换为指定 DIN rail 安装单句，移除原图片电压说明正文。
+- 根因：AC SPD 无 type，原共享分类匹配会包含 DC；Catalog 又将无 type 分类 key 作为通用成员，绕过主题筛选。共享匹配排除 AC SPD 主题下的 DC 产品，通用分类 key 改为 `:*`，保留无主题分类回退。详情分类名、面包屑链接及相关推荐沿用同一主题规则，STD 显示 DC Surge Protector。
+- 新增产品可选 detailSections（纯文本标题/正文、唯一锚点），接入产品读取校验及后台发布字段允许列表。仅本款启用三项导航：Main Specification 展示现有参数，Installation Instructions 与 Wiring Diagram & Installation 保留待补充正文；不编造接线图或安装参数。导航原生锚点、继承平滑滚动与减少动态偏好、区块预留顶部导航偏移。
+- Astro check 178 文件：0 errors / 0 warnings / 2 个既有 hints；分类回归通过。本地详情 HTTP 200，三个导航与目标、DC 相关推荐核验通过。新增锚点校验、AC/DC 分类、列表成员标记及详情输出回归。最终 Node 22 构建成功，无缺失译文日志；verify PASS（272 路由、84 产品、19 文章，无断链），5598 图片引用检查通过；git diff --check 通过。分类名称复用现有 taxonomy 译名。未提交、推送或部署。
+
+## STD-40-PV 600V 产品页（2026-11-04）
+
+- 新增 `src/content/products/STD-40-PV-600V.json`，使用用户指定标题，合并重复简介，保留七项特点并整理 11 行参数、SEO 元数据、DC 分类与 New 标记。未补写极数、Up、电压适用范围或证书。
+- 复用现有产品详情、图库、参数和询价组件；DC 落地页 STD 卡片和结构化数据链接到新页，将与本次资料冲突的一体封装说明改为可插拔设计，并调整系列区导读。
+- 主图暂用既有 STD 系列图片，其标签为 1000V；详情和 alt 明确说明为系列外观参考，600V 图片待用户补充。未使用参考截图中的其他品牌图片。
+- Astro check：178 文件、0 errors、0 warnings、2 个既有 hints；git diff --check 通过。Node 22 构建通过；verify PASS（272 路由、84 产品、19 文章，无断链）；5610 图片引用与新页标题、特点及图片说明检查通过。修复 verify 对未翻译产品 hreflang 的误判：只检查 head 的 link 标签，避免把语言切换器回落西语首页的普通链接误判为译文页面。未提交、推送或部署。
+
+## AC MCB 地址迁移为 /ac-mcb（2026-11-04）
+
+- 按用户要求将 AC 页从 `src/pages/mcb.astro` 移至 `src/pages/ac-mcb.astro`；页面 path、自指 canonical、面包屑 URL 统一改为 `/ac-mcb`。
+- 更新 landingPages 导航/资源中心入口和 DC 页的 AC 链接；sitemap 从注册表收录新路径、排除旧路径。共用 `src/lib/redirects.mjs` 加入 `/mcb` → `/ac-mcb`，沿用既有 301 机制。同步两个相关文案稿中的当前路径。
+- 扩展站内检查：新 AC/DC 路径、互链和导航、旧地址未进入 sitemap、构建配置中旧地址 301 目标正确。Node 22 构建成功，verify PASS（271 路由、83 产品、19 文章，无断链）；格式与 diff 检查通过。
+- 本地原 Astro CLI 进程在配置热重载后仍缓存旧 redirects 模块；读取进程命令行确认仅 PID 31980 属于本项目 4400 服务后停止该进程，以 Node 22 隐藏启动同项目、同端口、仅监听 127.0.0.1 的预览。未终止其他 Node 服务。已实际核验 `/mcb` HTTP 301 Location=/ac-mcb；新页、首页、DC 页及 AC 资源主题页 HTTP 200、链接正确；sitemap 仅含新地址。
+- 构建日志 `../artifacts/ac-mcb-route-build.log`，本地预览日志 `../artifacts/ac-mcb-dev.{stdout,stderr}.log`。未提交、推送或部署。
+
+## AC / DC MCB 落地页拆分（2026-11-04）
+
+- 保留 `/mcb` 作为 AC 落地页，更新标题、description、H1、面包屑、首屏图片与应用内容；只展示 4 款 AC 产品，保留用户确认的 STA-63/STB-63/STC-63 对比数据与原 URL，增加 DC 页入口。
+- 新增 `src/pages/dc-mcb.astro`：独立 DC 首屏、4 款产品卡、直接读取现有产品 specs 的参数表、三步选型、PV/DC/电池项目评估场景、OEM、分组 FAQ 和询盘。DC 记录当前均列 500V DC、6kA，不从极数推导新电压，也未套用 AC 系列、SPD 的认证/MOQ/交期。新文案说明保存为 `../SEO-Articles/_landing-pages/dc-mcb-copy.md`。
+- `landing-pages.ts` 分别归入 Circuit Protection / AC MCB 与 Solar PV Components / DC Circuit Breaker，两项均启用英文导航入口；资源中心自动关联。sitemap 与 verify 路由统一从 landingPages 读取，收录新页。已有西语导航仍按真实页面存在情况回落至原分类入口；本轮未新增翻译或改写产品与分类数据。
+- 在现有 `scripts/verify.mjs` 增加 AC/DC 产品范围隔离、4 款产品链接、互链、canonical、sitemap、6 条 FAQ、DC 参数数据来源及导航配置检查。
+- 验证：Node 22 Astro check 178 文件 0 errors / 0 warnings / 2 个既有 hints；构建成功（沿用既有 bundle size 提示）；verify PASS（271 路由、83 产品、19 文章，无断链），5593 张本地图片引用检查通过。两落地页与两资源主题页 HTTP 200，首页导航和 sitemap 入口正确，DC 表格按型号与源数据逐项一致。
+- 保留本轮开始前已有的 TASK/PROGRESS 修改以及已提交的 DC SPD SEO/GEO 改动。未做浏览器桌面/手机视觉验收，未提交、推送或部署。构建日志：`../artifacts/mcb-split-build.log`。
+
+## DC 落地页询盘表单 Subject 调整（2026-11-04）
+
+- DC 页移除红框内 Company / Your Country 与 Inquiry Type，替换为全宽 Subject * 输入框（最多 200 字符），保留姓名、电话、邮箱和留言。共用 ContactForm 新增默认不启用的 showSubject 与默认启用的 showCompany 开关，其他调用页面配置保持不变。
+- Subject 接入输入校验、邮件标题和询盘记录，邮件正文沿用既有 HTML 转义；未填 Subject 的旧页面继续使用原邮件标题。不改变数据库结构，不发送测试邮件。
+- 扩展现有离线 contact runtime 回归：主题类型/长度/空值/换行校验、邮件标题、HTML 转义、数据库记录、多语言前缀及旧标题兼容全部通过。DC、Contact、MCB、西语 Contact 页面均 200，字段输出核验通过。
+- Astro 检查 177 文件 0 errors / 0 warnings / 2 个既有 hints；Prettier、diff 检查通过。文案稿第 11 节已同步。未做浏览器视觉或实际提交复核，未构建、提交或部署。
+
+## DC 落地页 OEM 模块布局与内容扩充（2026-11-04）
+
+- 标题与导读独立置顶，主体左侧保留现有完整产品图并增加品牌呈现说明，右侧先突出 100 pcs/model 与 7 days 两项信息，四项定制内容使用两列排列；手机纵向显示。
+- 配色、Logo/标签、包装及产品配置说明补充客户需提供的参考色、Logo、型号命名、包装数量和电气需求。底部增加“提供需求—确认规格与设计—确认订单和排期”三步流程，以及跳转询盘的 Request OEM Pricing 入口。
+- 保留既有 7 天交期信息，注明最终交期由配置、设计与数量确定，并在具体报价中确认；未增加免费样品、额外认证或固定回复时间承诺。文案稿第 9 节同步更新。
+- 本地页面 200，2 项订货信息、4 项定制内容、3 步流程与询盘入口完整，模板输出、Prettier 和 diff 检查通过。未做浏览器视觉复核，未重新全站构建、提交或部署。
+
+## DC 落地页 STO 图片替换（2026-11-04）
+
+- 按用户两图对照，将 STO-40-PV 卡片中的旧白色产品宣传图替换为本次提供的白底座、橙色插拔模块 PNG，保存为 `src/assets/uploads/sto-40-pv-product.png`。复用现有 Img 组件，完整显示，布局与文案不变。
+- 页面和优化图片响应 200，图片路径与卡片位置核验通过；未构建、提交或部署。新图标签实际为 STA-40 / 385V AC，已保留用户指定原图，此处 DC 版本图片待后续确认替换。
+
+## DC 落地页 FAQ 布局与问答优化（2026-11-04）
+
+- FAQ 改用页面统一 container 左右边界，增加导读；按 Selection & installation（6 题）和 Maintenance & ordering（4 题）分组，桌面两栏、手机单列。继续使用原生 details/summary，首题默认展开，提供右侧加减号和键盘焦点样式；底部增加跳转询盘的入口。
+- 原 8 题调整为 10 题，新增询价资料和预接线汇流箱问答；按官方通用技术资料修正电压档位、Type 1/2、安装位置、极数和雷击后维护的绝对表述。未添加认证或性能承诺，OEM 交付日期由具体报价确认。
+- 分组数据为唯一来源，平铺后生成 FAQPage；已核验 10 条页面问题和答案与结构化数据逐项一致、默认仅展开一题、询盘链接存在，并与文案稿第 10 节同步。顺带将三步选型区及文案稿同一 Pole count 表述改为按电路和接地方案确认，消除与 FAQ 的矛盾。
+- 技术来源：DEHN 屋顶光伏指南、安装维护 FAQ、Ucpv 术语说明及 Phoenix Contact 光伏电路示例，具体链接记录在文案稿。
+- 本地页面 200，Astro 检查 177 文件 0 errors / 0 warnings / 2 个既有 hints，Prettier 和 diff 检查通过。未做浏览器视觉和实际点击复核，未构建、提交或部署。
+
+## DC 落地页应用场景布局与内容扩充（2026-11-04）
+
+- 原左右长列表改为统一全宽标题和导读，下面为 5 个应用场景卡片及 1 个汇流箱入口；桌面三列、平板两列、手机一列。各场景补充使用位置、维护/布局考虑和 Selection focus，汇流箱入口使用深绿色背景。
+- 底部独立为四项 Installation planning checklist，涵盖连接布局、导线与端子、后备保护、检查与更换；以选定型号说明和安装人员确认作为实施依据。
+- 根据 Phoenix Contact 官方屋顶光伏保护指南及光伏防雷/浪涌手册核对通用选型原则，移除应用与极数/电压的固定绑定，尤其不再写“双 MPPT 固定 4P”；混合逆变器场景明确只描述光伏输入侧。未增加 Soltree 产品性能或认证承诺。
+- 同步更新 `../SEO-Articles/_landing-pages/dc-surge-protector-copy.md` 第 8 节及参考来源。应用模块本地页面 200、5 场景 + 1 入口、5 个选型提示、4 项清单核验通过；汇流箱分类页 200，Prettier 和 diff 检查通过。未做浏览器视觉复核，未构建、提交或部署。
+- Astro 检查 177 个文件：0 errors / 0 warnings / 2 个既有 hints；文案稿第 8 节完整性检查通过。
+
+## DC 落地页测试与认证模块优化（2026-11-04）
+
+- 主标题独立置顶，下方采用 2:3 两栏：左侧浅灰认证信息面板，突出 CE/TÜV/CB，并用分隔线组织标准和 CE 说明；右侧四项测试使用有序列表，统一行距和分隔线。
+- 测试要求独立放在底部浅绿说明条；手机纵向排列，原有认证、标准、测试文案全部保留，证书图片仍待提供。
+- 本地页面 200、修改前后可见文字一致、四项测试与独立要求完整；Prettier 和 diff 检查通过。未做浏览器视觉复核，未构建、提交或部署。
+
+## DC 落地页系列图片与排列（2026-11-04）
+
+- 按最新两图对照，将刚替换的 STD-40-PV 全橙色图片再次替换为用户本次提供的绿底座与橙色模块原图（1400×1400），沿用 std-40-pv-product.png 路径和原布局。原图已检查，页面和优化图片均返回 200；未构建、提交或部署。
+
+- 按用户指定将原左侧 STD-40-PV 图片替换为新上传的橙色产品图，原文件保存为 `src/assets/uploads/std-40-pv-product.png`，复用 Img 优化并完整显示。
+- 系列卡片改为每行一个，STD-40-PV 在上、STO-40-PV 在下；桌面保留左图右文，手机上下排列，原有文案与询价入口保留。
+- 本地页面及优化图片 200，卡片数量、排列顺序、文案一致性与 diff 检查通过。未做浏览器视觉复核，未构建、提交或部署。
+
+## DC 落地页材料对比表优化（2026-11-04）
+
+- 固定组件列为 176px，并为优选材料、替代材料分别分配 28% / 23% 列宽，说明列占剩余空间；组件名称居中且不拆行，长文本保持左对齐，所有单元格垂直居中。
+- 优选材料列增加浅绿色背景与深绿色文字；保留全部原文，手机继续使用表格内横向滚动。
+- 本地页面 200、四列五行材料完整、修改前后文案一致，Prettier 和 diff 检查通过。未做浏览器视觉复核，未构建、提交或部署。
+
+## DC 落地页三步选型区排版（2026-11-04）
+
+- 在 DC SPD Selection Table 标题和表格之间增加英文导读，介绍极数、Ucpv、Up 和放电电流对比，衔接下方三步指南；使用全宽正文与既有字号、行距。本地页面输出与 diff 检查通过；未构建、提交或部署。
+
+- Step 2 类型表调整列宽：前三列固定为 160/160/112px，说明列使用剩余宽度；前三列居中且不拆行，说明左对齐，所有单元格垂直居中。保留 Type 2 高亮和手机横向滚动。本地输出及格式核验通过；未做浏览器视觉复核，未构建、提交或部署。
+
+- 三个步骤左侧编号和标题统一添加 lg:self-center，在桌面分栏时相对各自右侧内容垂直居中。手机保持上下排列。本地页面输出与 diff 检查通过；未做浏览器视觉复核，未构建、提交或部署。
+
+- 按用户要求删除选型表下方 “1P and 4P configurations are available in the same voltage classes. Other voltages on request.” 说明及其段落。本地页面确认该句不再输出，diff 检查通过；未构建、提交或部署。
+
+- 按用户截图将上方 DC SPD Selection Table 表头和单元格文字统一水平居中；保留原有数据与横向滚动。本地页面输出、diff 检查通过，未做浏览器视觉复核，未构建、提交或部署。
+
+- 将选型指南标题从手机 30px / 桌面 36px 调至 24px / 30px，限宽并平衡换行。
+- 原先左侧 Step 1、右侧 Step 2/3 的不对称排版改为三个独立步骤行；桌面共用 18rem 标题列与右侧内容列，手机上下排列，使用细分隔线统一层次。
+- 选型表格保留横向滚动，并约束所在网格列以防撑出页面；原有参数、说明及警示文案全部保留。
+- 本地页面 200，修改前后选型区可见文字一致，三步布局与表格滚动容器检查通过；Prettier、git diff --check 通过。未做浏览器视觉复核，未重新构建、提交或部署。
+
+## DC 落地页工作原理区排版调整（2026-11-04）
+
+- 三步流程上方间距统一为 mt-6（24px），与流程下方说明块的间距一致，桌面和手机使用相同间距。本地页面输出与 diff 检查通过；未做浏览器视觉复核，未构建、提交或部署。
+
+- 最新调整：简介移出标题的 max-w-2xl 容器，以模块全宽显示为一个完整段落，自然换行；标题保持原有左对齐和宽度。本地页面输出核验通过，未做浏览器视觉复核，未构建、提交或部署。
+
+- 按最新截图将顶部 How it works 标题与简介改为左对齐，宽度统一为下方 Product range 的 `max-w-2xl`，文字间距与字号沿用产品区样式。本地页面输出核验通过，未做浏览器视觉复核，未构建、提交或部署。
+
+- 底部说明块继续微调：桌面左侧标题垂直居中，右侧正文移除 `max-w-3xl`，铺满剩余列宽。本地页面输出核验通过；未做浏览器视觉复核，未构建、提交或部署。
+
+- 后续按用户截图移除工作原理区额外的 `max-w-6xl` 限制，流程与底部说明复用页面 `container` 宽度，与下方产品模块左右对齐。保留标题与简介的阅读宽度。本地页面输出和 diff 核验通过；未做浏览器视觉复核，未重新构建、提交或部署。
+
+- 移除标题单独占左列的布局，改为居中标题与限宽简介，下方三步流程横向铺开，中间浪涌步骤使用浅绿色背景；手机纵向排列。
+- “Why PV systems need it” 独立为底部说明块；正文由 18px 调至 16px，统一段落间距，保留原有全部可见文案。
+- 本地页面 200、修改前后可见文字一致、三步流程完整、Prettier 和 diff 检查通过；Astro 检查 177 个文件，0 errors / 0 warnings / 2 个既有 hints。未做浏览器视觉验收，未构建、提交或部署。
+
+## DC 落地页首屏合照替换（2026-11-04）
+
+- 将首屏右侧两张产品卡片替换为用户指定的八款 DC SPD 完整合照，原文件保存在 `src/assets/uploads/dc-surge-protector-range.png`，复用 Img 组件优化输出。
+- 图片按原始 3:2 比例自适应宽度，不裁切；保留上方 DC SPD range / Type 2 与下方认证说明。
+- 本地页面及优化图片响应核验通过；未做浏览器视觉验收，未构建、提交或部署。
+
+## DC 落地页首屏标题字号微调（2026-11-04）
+
+- 按用户截图缩小首屏 H1：桌面 60px → 54px，手机 36px → 34px；保持文案、字重及行高不变。
+- 源码与本地页面输出核验通过；未做浏览器视觉验收，未构建、提交或部署。
+
+## DC 浪涌保护器落地页（2026-11-04）
+
+- 新增 `src/pages/dc-surge-protector.astro`（英文），版式沿用 `/mcb`，文案按已定稿的 `../SEO-Articles/_landing-pages/dc-surge-protector-copy.md`。共 11 个模块，带 FAQPage 和 BreadcrumbList 结构化数据。
+- 已加入 `src/lib/landing-pages.ts`（solar-pv-components / dc-surge-protector），也加进了 sitemap。
+- 验证：astro check 0 errors / 0 warnings；本地 dev 下 /dc-surge-protector 返回 200，各模块、FAQ schema、sitemap 和资源中心入口都检查过。
+- 遗留：产品图暂用旧的 SPD-DC 产品图；证书图片、新产品页链接待补；没有做浏览器视觉验收；没有构建、提交或部署。
+
+## SPD 产品 Up 参数修正（2026-11-03）
+
+- 12 款 SPD 产品（英文 `src/content/products/SPD-*.json` 和西语 `src/i18n/es/products/SPD-*.json`）的 Up 已按知识库统一：DC 1P/2P 1000V 从 3.6kV 改为 3.8kV；DC 3P/4P 原先是乱码 “– .0kV”，改为 3.8kV (1000VDC) / 5.0kV (1500VDC)；AC 1P–4P 原先是乱码 “– .0/.5kV”，改为 1.8kV。参数表、简介、正文、卖点和 meta 描述都已修改。
+- 修改前的备份在仓库外 `../artifacts/spd-up-fix-backup-202611032313/`。JSON 校验通过，并已执行 `i18n-status --stamp`，西语 87/87 为最新。
+- 未运行构建，未推送云端内容（content:push），未提交，也未部署。云端工作区里还是旧值，执行 content:pull 前要先推送，否则会被覆盖回旧值。
+
+## 全部本地改动正式上线（2026-10-30，America/Los_Angeles）
+
+- 功能提交 60efb6876100bd18a389864c32a3ec917c15248c 已推送 main，包含西班牙语站、独立 AI 设置、SEO 文章规划、运营计划以及内容同步工具；保留原有公开内容。Vercel Production dpl_4dFgHuxVrrbrjU67auh7XjNmm5g5 已 READY。
+- 用户完成 Supabase 建表，实际 soltree_ai_settings 表读取 200、发布前为 0 行。Production 专用 AI_SETTINGS_ENCRYPTION_KEY 已配置并核验，未打印或提交密钥。线上 Key/模型需用户在新后台设置，本地配置未自动上传。
+- 正式域名 www.elesoltree.com 只读验收 17 项通过：首页、西语首页/列表/产品详情/博客/关于/联系及 sitemap；登录后的设置、SEO 规划、运营计划页面；分类、产品、文章、内容索引、AI 设置和 SEO 规划 API 全部 200。西语 lang、自指 canonical 和英文 hreflang 断言通过，接口 no-store 通过；独立验证会话已退出。
+- 本轮未改写云端产品或文章，未执行真实 AI 生成或付费调用；未做浏览器视觉交互验收。发布前 Node 22 代码检查、构建、完整 verify:deploy、AI/规划、后台全套及内容同步回归通过。发布后文档记录保留在本地，线上运行功能对应上述提交。
+
 ## 本地修改发布准备（2026-10-30，America/Los_Angeles）
 
 - 用户已确认 Supabase 迁移执行成功；实际 soltree_ai_settings 表读取返回 200、0 行，Production 加密密钥再次核验通过且保留原值。发布前重新 fetch，准备提交并发布全部已验证改动。
@@ -456,3 +709,205 @@
 - 代码检查 0 errors / 0 warnings / 1 个既有 hint，统计/导航/GSC 回归、构建与完整 verify:deploy（含仓库外隔离的实际后台函数）通过，152 页面及 2950 图片引用检查正常。
 - Vercel Production dpl_CDv2oCsoWZDyDe6mAcfpqtuh1Nsd Ready。正式域名 /admin/analytics 返回 200，HTML 包含 analytics-point-label 样式，实际加载 BM5o6TnY.js 含新数值标注与说明。
 - 独立登录会话只读核验 /api/admin/analytics：connected，近 7 天返回 6 条日记录，未补零；验证后退出会话。未写入云端内容、未修改私有同步副本，未做真实浏览器视觉验收。
+
+## MCB 专题落地页（2026-10-31，America/Los_Angeles）
+
+- 新增英文 `/mcb`：深绿品牌首屏、MCB 原理介绍、AC/DC 共 8 款产品、实时读取现有产品数据的参数对比、选型步骤、应用、OEM、6 条 FAQ 和复用现有接口的询盘表单。
+- 复用 BaseLayout、Img 和 ContactForm；落地页注册到资源中心 Circuit Protection / MCB，加入 sitemap 和页面链接回归。只生成英文页面，未添加不存在的西语版本或 hreflang。
+- Node 22 Astro check 0 errors / 0 warnings（2 个既有 hints），完整构建成功；verify PASS：277 页、87 产品、19 文章，站内链接/资源与结构化数据检查通过。未发送真实询盘。
+- 浏览器检查脚本位于仓库外 `artifacts/verify-mcb-page.mjs`；Chrome 调试端口无法连接，已停止检查，未声称桌面/手机视觉验收通过。本地开发预览另行启动供用户查看。
+- 未提交、推送或部署；开始前 TASK.md / PROGRESS.md 已有改动，原记录保留。正式网站仍使用现有线上版本。
+
+### 首屏参考文案调整
+
+- 按用户提供的第二张图，首屏改为 Miniature Circuit Breakers (MCB)，原样采用 VOB3-63 / VOB3-63H / VOE3-63 选型说明、四个带图标卖点及两个 CTA；移除原宣传标语、副标题和底部三项标签。其余区块和现有产品记录未修改。
+- 格式与 diff 检查通过；本地 Astro 开发服务 `/mcb` 返回 200，响应包含新选型文案。独立编译检查因项目未安装 @astrojs/compiler 而未执行，未新增依赖；未重新执行完整构建或浏览器视觉验收，未提交或部署。参考图型号/参数为用户指定文案，下方参数表仍来自现有 AC/DC 产品资料。
+
+### 三系列参数对比区
+
+- 按用户截图重做 `#selection`：左侧标题/右侧说明、浅灰首列、三型号列、产品占位图、红色入口文字和经济型分断能力补充说明；逐项使用用户参考文案。左到右型号为 STA-63 / STB-63 / STC-63（Economy / Standard / High breaking），首屏型号同步，移除原对比表与其下三步说明。
+- 表头产品图片共用现有 MCB-AC-1P-01.jpg，后续可替换。未提供系列详情或 PDF 文件，相关入口保留参考图文案并设为不可点击占位，未链接到不相符产品或伪造文件。
+- Prettier、git diff --check 通过；本地 `/mcb` 200，确认三个新型号均存在、VOB3/VOE3 旧型号已移除。未执行完整重建或浏览器视觉验收，未提交、推送、部署。
+
+### Circuit Protection 菜单名称
+
+- 按用户截图，将共用 taxonomy 中的三项名称改为 AC MCB / AC MCCB / AC Surge Protector，桌面与移动导航及共用分类名称自动沿用。保留原 slug、type、链接和产品筛选规则；未改动其他条目或西语翻译。
+- verify-taxonomy 回归、git diff --check 通过；本地首页 200 且含三项新名称。未提交、回写云端或部署。
+
+### Solar PV Components 上移
+
+- 按截图箭头，将产品菜单分组顺序调整为 Circuit Protection → Solar PV Components → Switching & Isolation；仅交换 taxonomy 的 products.order，桌面和移动产品菜单及共用产品分类顺序自动沿用，文章分组顺序保持原值。
+- verify-taxonomy 和 git diff --check 通过，本地首页返回 200 并核验 Solar PV Components 在 Switching & Isolation 之前。未提交、回写云端或部署。
+
+## DC 落地页 SEO / GEO 优化（2026-11-04）
+
+- 改动：`src/pages/dc-surge-protector.astro` 新增两条 Product JSON-LD（manufacturer 指向站点 Organization @id）、OG 图换为 dc-surge-protector-range 横图、description 缩短；Step 1 示例改为"exceeds the 1000V class"；FAQ"What Ucpv do I need for a 1000V system?"和"Type 1 or Type 2 for solar?"先给直接结论。文案稿 `SEO-Articles/_landing-pages/dc-surge-protector-copy.md` 同步。
+- 验证：本地 /dc-surge-protector 200，JSON-LD 5 段全部可解析，OG 图 200 image/jpeg，Astro check 0 errors / 0 warnings（2 个既有 hints）。未做完整构建、Rich Results 测试、浏览器视觉验收；未提交或部署。
+- 遗留：选型表只有 2P/3P 行，与 1P–4P 表述不一致；STO 图片标签为 STA-40 / 385V AC；系列未链接到现有 SPD-DC-* 产品页；BaseHead 全站 og:image 尺寸写死 1200×630。
+
+## DC 落地页证书图片位（2026-11-04）
+
+- 测试与认证模块底部新增 CE / TÜV / CB 三栏证书位（3:4 竖版），数据在页面顶部 `certificates` 数组；填入 `/images/uploads/<文件名>`（文件放 src/assets/uploads/）即显示图片。空位仅本地开发显示虚线占位，生产构建自动隐藏。
+- 验证：本地页面渲染 Certificates 标题与 3 个占位；未构建、提交或部署。CB 说明文案（IECEE CB Scheme）为新增，待用户确认。
+
+## 产品菜单 DC Surge Protector 指向落地页（2026-11-04）
+
+- `landing-pages.ts` 新增可选 `nav` 标记（仅 DC SPD 开启）；Navbar 桌面/移动菜单中匹配的条目改链 /dc-surge-protector，仅在该语言有落地页时生效（西语保持原分类链接）。MCB、Aerosol 未开启。
+- 落地页 Product range 区新增 "Browse all DC SPD models" 链到 DC SPD 分类列表，保留到产品页的入口。
+- 验证：英文首页与落地页菜单链接为 /dc-surge-protector，西语首页仍为分类链接，分类页 200，Astro check 0 errors / 0 warnings（2 个既有 hints）。未构建、提交或部署。
+
+## DC 落地页询盘区联系方式（2026-11-04）
+
+- 询盘区左栏用邮箱 / 电话 / WhatsApp 三项（读 SITE 常量，均可点击，WhatsApp 新窗口打开 wa.me）替换 "View all contact options" 链接；左栏与表单在桌面端上下居中。
+- 验证：本地页面输出 mailto、tel、wa.me 链接及居中样式，旧链接已移除；未做浏览器视觉复核，未构建、提交或部署。
+
+## DC SPD 橙色重复产品下架（2026-11-04）
+
+- SPD-DC-1P/2P/3P/4P-Orange 四个英文产品记录设为 `published: false`（文件与西语译文、图片保留，可在后台恢复）；`redirects.mjs` 新增英文与西语共 8 条 301，橙色页跳到同极数白色页。保留 SPD-DC-1P/2P/3P/4P-White 四个产品，内容和图片由用户逐步优化。
+- 验证：本地 DC SPD 分类英/西语列表仅剩 4 个白色产品，sitemap 不含橙色页，落地页 200。新增跳转需重启 dev 服务后生效（旧跳转 301 正常，配置可正常加载），本地未实测新 301；未构建、未推送云端内容（content:push）、未提交或部署。线上橙色页目前仍 200。
+
+## DC 落地页及橙色 SPD 合并正式上线（2026-11-04）
+
+- 提交 706acfc 推送 main（含 /dc-surge-protector、/mcb、询盘 Subject、AC/DC SPD 数据、taxonomy 菜单、导航落地页链接、8 条橙色 301）；TASK.md / PROGRESS.md 未提交。Vercel 自动部署 dpl_EaHeSJgRXfQdTyiskoEMSkfZoDVR。
+- 发布前 Node 22.23.4：astro check 0 errors / 0 warnings / 2 hints，构建成功，verify:deploy 全部 PASS（269 页、83 产品、19 文章，5589 图片引用，14 条 301）。日志在 ../artifacts/dcsp-release-*.log。
+- 线上验收：8 条橙色页 301 到对应白色页（英/西），首页、落地页、/mcb、产品页、分类页、sitemap、联系页 200；落地页 5 段 JSON-LD（含 2 个 Product），OG 图 200 image/jpeg，联系方式链接与 Subject 字段在线，证书空位不输出；首页菜单指向落地页；sitemap 无橙色页；分类页仅 4 个白色产品。
+- 未执行 content:push --apply（预览涉及大量无关产品，风险大）。遗留问题：公开仓库约定只保存 published=true 记录，4 个橙色文件以 published:false 留在 git，导致 content-sync 预览报"草稿和回收站内容不得写入公开仓库"；云端后台里橙色仍为已发布，后台再次发布可能把它们重新加回列表（URL 仍会被 301 拦截）。待用户确认处理方式。
+
+## 橙色 SPD 后台下架与仓库清理（2026-11-04）
+
+- 云端后台：仅改 4 条 SPD-DC-*-Orange 记录为 published:false，sourceManifest 对应项设为 null（与后台下架结果一致）；revision 19→20，写入前完整备份在 ../artifacts/cloud-workspace-backup-2026-11-04T15-45-21-097Z.json，脚本 ../artifacts/scripts/unpublish-orange-spd.mjs。
+- 仓库：提交 3f54eb2 只删除 4 个英文橙色产品文件并推送 main（西语译文保留，i18n-status 83/83 正常）；新部署 dpl_Aweyue657MkxaAQoAuaZzgbZDdiG 已上线，橙色 301 与落地页/白色产品页正常。未单独构建（删除的是已被过滤的未发布记录，产物不变）。工作区内他人未上线改动（mcb.astro 删除、landing-pages/redirects/verify.mjs、/dc-mcb）未提交。
+- content:push 预览已无冲突（84 个文件，其中内容差异只有本次上线的 8 个 SPD 产品，其余为时间戳），但 --apply 被权限拦截，未执行。云端 sourceManifest 仍落后 Git，后台发布会提示"请先同步"，需用户执行 `npm run content:push -- --apply`。
+
+## 工作方式调整：暂停云端后台（2026-11-04）
+
+- 用户将 MCB 拆为 /ac-mcb 与 /dc-mcb（/mcb 301 到 /ac-mcb，sitemap 改为读取 landingPages，菜单两项均指向落地页）；本地两页 200、/mcb 301。用户改动尚未提交或部署。
+- 用户决定短期内产品、文章、页面全部在本地 VS Code 修改并通过 git 推送上线，暂停使用云端后台；不再执行 content:push / content:pull。云端停留在 revision 20（sourceManifest 落后 Git），后台发布会被"请先同步"拦截，不会覆盖本地内容。恢复使用后台前先执行一次 `npm run content:push -- --apply`。
+- 下架产品的做法：删除 src/content/products 里的 JSON（公开仓库只放 published:true），并在 redirects.mjs 加 301。
+
+## AC / DC MCB 落地页拆分上线（2026-11-04）
+
+- 提交 b3207ea 推送 main：新增 /ac-mcb、/dc-mcb，/mcb 301 到 /ac-mcb，菜单两项指向落地页，sitemap 读取 landingPages。TASK.md / PROGRESS.md 未提交。
+- 发布前 Node 22：astro check 0 errors / 0 warnings / 2 hints，构建成功，verify:deploy 全部 PASS（271 页、83 产品、19 文章、5593 图片引用）。
+- 线上验收：/ac-mcb、/dc-mcb、/dc-surge-protector、首页、sitemap 200；/mcb 与橙色 SPD 页 301；首页菜单含三个落地页链接；sitemap 含 /ac-mcb、/dc-mcb，不含 /mcb。未做浏览器视觉验收。
+## DC SPD 详情模块复核与本地预览（2026-11-04）
+
+- 复核现有修改，无需再改业务代码。`/products/STD-40-PV-600V` 返回 200，7 个详情模块锚点按用户要求排列，Application 三段原文均存在，Specifications 参数表正常输出；另外 5 个模块仅有标题，等待内容资料。
+- 启动检查发现本项目已有 Astro 开发服务（4400），复用现有服务；`/dc-surge-protector` 同样返回 200。未做浏览器视觉验收，未提交或部署。
+
+## STD-40-PV Specifications 对比表（2026-11-04）
+
+- Specifications 使用用户提供的 6 行、5 档电压对比数据，标题 STD-40-PV Surge protector；保留最后一列空 Pole 和 Up 5.4，统一 Imax / μs 排版。仅该产品配置新表，其余产品继续使用原参数表。
+- 详情区支持可选结构化表格及数据校验，窄屏可横向滚动。新增 `scripts/verify-product-detail-table.mjs`，本地 4400 页面返回 200，逐单元格核验通过；未部署。
+- Astro check：181 文件，0 errors / 0 warnings / 2 个既有 hints；格式与 git diff --check 通过。未做浏览器视觉验收或完整构建。
+
+## Specifications 表格微调（2026-11-04）
+
+- 按用户标注将表格标题居中；12/24 列 Pole 改为 `2P（Customized）`，Up 从 `2` 改为 `2.0`。本地表格逐单元格检查通过，未部署。
+
+## Drawing 原图（2026-11-04）
+
+- 原样保存用户上传的 1318×990 PNG 为 `src/assets/uploads/std-40-pv-drawing.png`，通过产品详情可选图片字段放在 Drawing 标题下，补充 Alt，保持完整比例、随正文缩放。
+- 本地产品页和图片响应核验、表格回归通过；未部署。
+
+## Dimensions 原图（2026-11-05）
+
+- 用户上传的 1298×558 PNG 原样保存为 `src/assets/uploads/std-40-pv-dimensions.png`，复用详情图片显示在 Dimensions 标题下，补充 Alt，保留完整比例。
+- 本地产品页与尺寸图均返回 200，图片宽高为 1298×558；未部署。
+
+## Wiring Diagram 原图（2026-11-05）
+
+- 用户上传的接线 PNG 原样保存为 `src/assets/uploads/std-40-pv-wiring-diagram.png`，复用详情图片显示在 Wiring Diagram 标题下，补充 Alt，保持完整比例。
+- 本地产品页和接线图加载核验通过，未部署。
+
+## Remote Signal Contact 文字表格（2026-11-05）
+
+- 从用户截图提取三行、两组数据，复用详情表格配置，未使用图片。统一字符空格，保留原图 30V 行左侧 DC、右侧 AC 的标注差异，未自行更改电气参数。
+- 本地实际页面逐单元格核验通过，无图片；未部署。
+
+## Installation and Dimensions 文字表格（2026-11-05）
+
+- 用户截图提取为 17 行、两组参数的文字表格，复用详情表格配置。保留所有数值，规范 mm²、N·m、温度及范围符号；原图合并项在两数据列分别展示。
+- 本地产品页逐单元格检查通过，无图片；未部署。
+
+## 详情表格取消横向滚动（2026-11-05）
+
+- 自定义详情表格使用 `table-fixed`、100% 宽度，移除单元格禁止换行，长文字可断行，窄屏减小左右内边距；共用 Specifications、Remote Signal Contact、Installation and Dimensions 同步生效。
+- 本地页面输出确认固定布局及换行样式，原表格数据回归通过；未做浏览器视觉验收，未部署。
+
+## 安装参数表合并单元格（2026-11-05）
+
+- 详情表格支持带 rowSpan / colSpan 的文字单元格，保留原字符串表兼容。Installation and Dimensions 改为参考图的四列：Wiring capacity、Torque、Protection class、Size 纵向合并；普通参数名称跨前两列；安装环境和安装方式内容跨后两列。
+- 添加该区块专用绿色前两行、灰白交替行、紧凑内边距和网格线；继续固定宽度、自动换行。
+- 本地实际响应逐项核验参数与跨度，并验证所有 17 行完整占据四列、无重叠；原 Specifications 和 Drawing 回归通过。Astro check 181 文件 0 errors / 0 warnings / 2 个既有 hints，git diff --check 通过。未做浏览器视觉验收或部署。
+
+## 安装表字符损坏修复（2026-11-05）
+
+- 用户截图暴露实际编码问题：此前合并表格时经 PowerShell 管道传递的脚本含 Unicode 字符，写入 JSON 后已变为字面量问号；旧逐格检查只比较同一数据源，未发现源数据损坏。使用补丁直接恢复 mm²、N·m、≤2000、°C、×，范围采用用户要求的 `~`。
+- 回归增加独立的正确字符断言，禁止安装表实际 HTML 出现问号或替换字符；本地实际响应检查通过，同时保留原表格、图片和合并布局检查。未部署。
+
+## 安装表文字居中（2026-11-05）
+
+- 在安装表专用单元格样式中设置 text-align:center，参数名称、纵向分组与子项统一水平居中，继续垂直居中。
+- 本地页面样式输出和既有表格回归通过；未部署。
+
+## 新增 STD-40-PV 1000V 产品（2026-11-05）
+
+- 新建 `src/content/products/STD-40-PV-1000V.json`，使用用户指定标题，单独 ID/slug，简介、DC System Voltage、SEO 更新为 1000V；保留已完成的系列参数表、合并安装表和三张技术图。600V 产品不变。
+- 图库暂用现有 1000V 系列示意图 `std-40-pv-product.png`（图上为 ST-40Z，非专用 STD-40-PV 1000V 成品图），不复制 600V 图片和配色，后续待专用图片替换。
+- 本地新详情页、图片、DC 分类页均返回 200；新页标题、简介、7 个模块及分类入口核验通过。未新增翻译，未提交或部署。
+
+## 1000V 产品追加接线场景图（2026-11-05）
+
+- 用户原图保存为 `src/assets/uploads/std-40-pv-combiner-installation.png`（1645×956）。1000V 页 Wiring Diagram 原图后追加该图；图上 600V 标注原样保留，Alt 明确为 600V 安装示例。
+- 详情区支持附加图片列表，复用现有 Img 组件及本地图片校验。本地新页 Wiring Diagram 精确输出两图且顺序正确，图片均返回 200，追加图比例正确；格式与 diff 检查通过。未部署。
+
+## 汇流箱示意图产品归属更正（2026-11-05）
+
+- 按用户澄清将附加汇流箱示意图从 1000V 产品移至 600V 产品 Wiring Diagram 原图下方，共用原文件。
+- 本地 600V 页核验为两图且顺序正确，1000V 页恢复为一图；未部署。
+
+## 替换 600V 接线场景图（2026-11-05）
+
+- 用户最新原图保存为 `std-40-pv-combiner-installation-v2.png`，替换 600V 产品 Wiring Diagram 第二张图。保留第一张图，1000V 产品不变。
+- 本地新图片响应、图序及实际比例核验通过，未部署。
+
+## 600V 规格表仅保留 2P（2026-11-05）
+
+- 删除 600V 产品 Specifications 中 3P 对应的 1000V、1500V 整列及各行参数；保留 600V、800V、12/24V（Customized）三列。标题改为 `STD-40-PV Surge protector 2P`，1000V 产品不变。
+- 本地实际页面参数表及原合并布局、图片回归通过；未部署。
+
+## 600V 产品 2P 尺寸图（2026-11-05）
+
+- Dimensions 替换为用户原图 `std-40-pv-2p-dimensions.png`，仅侧视图与 2P 正视图，更新 Alt；1000V 产品不变。
+- 本地页面图片地址、原始比例及图片响应核验通过；未部署。
+
+## 600V 产品 2P Drawing（2026-11-05）
+
+- Drawing 使用用户最新原图 `std-40-pv-2p-drawing.png`，更新 Alt，保留原图比例；1000V 产品不变。
+- 本地 Drawing 图片地址、比例与图片响应检查通过；未部署。
+
+## 安装表移除绿色背景（2026-11-05）
+
+- Installation and Dimensions 前两行绿色背景改为白色，移除白字覆盖，沿用深色单元格文字。居中、合并结构及参数不变，共用样式同时作用于 600V / 1000V 页。
+- 本地样式响应核验通过；未部署。
+
+## 移除 600V 远程信号模块（2026-11-05）
+
+- 按用户要求删除 600V 产品的 Remote Signal Contact 独立详情模块，页内导航随配置自动移除。安装参数表中原有的远程触点扭矩条目保持原值，1000V 产品不变。
+- 本地响应确认模块锚点与导航入口均不存在，其余详情及表格回归通过；未部署。
+
+## 600V 产品图表说明文案（2026-11-05）
+
+- Specifications 增加 2P 电压选项和参数含义说明；Wiring Diagram 解释 MCB、熔断器、接地及汇流箱示例。安装参数、尺寸、Drawing 各加一句用途说明，关键词自然融入，不添加未经支持的性能或排名承诺。
+- Application 原文不变，Remote Signal Contact 保持删除；仅修改 600V 产品。实际页面五处文字、导航及原表格/图片回归核验通过；未部署。
+
+## Application 按极数及电压区分（2026-11-05）
+
+- 用户明确 600V 页针对常规 2P，1000V 页针对 3P。两款 Application 分别突出 Type 2、极数、电压、PV 安装位置与对应接线图，保留并联连接、长线两端布置及 MOV/热脱扣/失效指示信息。
+- 不按极数推断未经确认的内部保护拓扑或性能优劣。仅改两款 Application；本地两页独立文案及三段结构核验通过，未部署。
+
+## 产品标题增加极数（2026-11-05）
+
+- 按用户原文更新 600V / 1000V 产品名称，分别加入 2P / 3P；SEO 标题同步，产品 ID 与 URL 保持不变。
+- 本地两页 H1、SEO title 逐项核验通过；未部署。

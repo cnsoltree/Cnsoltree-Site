@@ -5,73 +5,59 @@ import ContactForm from '@/components/ContactForm.astro';
 import { CONTACT, SITE } from '@/consts';
 import { getImage } from 'astro:assets';
 import rangeImage from '@/assets/uploads/dc-surge-protector-range.png';
-import stdImage from '@/assets/uploads/std-40-pv-product.png';
-import stoImage from '@/assets/uploads/sto-40-pv-product.png';
+import stdImage from '@/assets/uploads/std-40-pv-1000v-orange.png';
+import std600Image from '@/assets/uploads/std-40-pv-600v-orange.png';
 
-// Copy approved 2026-11-04: SEO-Articles/_landing-pages/dc-surge-protector-copy.md
-// Product page links and certificate images are pending; series artwork supplied by user.
+// Two core Type 2 configurations; keep links aligned with the product detail pages.
 const badges = [
   [
     'Type 2 / Class II',
     'For induced lightning and switching surges',
     'M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6l-8-3Zm-4 9 3 3 5-6',
   ],
-  ['In 20kA · Imax 40kA', '8/20μs discharge ratings', 'M13 2 4 14h7l-1 8 9-12h-7l1-8Z'],
-  ['500V to 1500V DC', 'Ucpv 500 / 600 / 800 / 1000 / 1500V', 'M3 19h18M5 15l5-5 4 2 5-8M15 4h4v4'],
-  ['1P–4P · ≤25ns', '35mm DIN rail mounting', 'M6 3v18M18 3v18M6 7h12M6 17h12M9 10l3 3 3-3'],
+  ['In 20kA / Imax 40kA', '8/20μs discharge ratings', 'M13 2 4 14h7l-1 8 9-12h-7l1-8Z'],
+  ['600V 2P / 1000V 3P', 'Two core PV configurations', 'M3 19h18M5 15l5-5 4 2 5-8M15 4h4v4'],
+  ['Pluggable design', '35mm DIN rail mounting', 'M6 3v18M18 3v18M6 7h12M6 17h12M9 10l3 3 3-3'],
 ];
 const series = [
   {
     model: 'STD-40-PV',
-    type: 'Shield type',
-    image: '/images/uploads/std-40-pv-product.png',
-    asset: stdImage,
+    name: 'Type 2 600V 2P DC Surge Protector SPD STD-40-PV',
+    type: 'Type 2 / 600V DC / 2P',
+    voltage: '600',
+    poles: '2P',
+    up: '2.8',
+    href: '/products/STD-40-PV-600V',
+    image: '/images/uploads/std-40-pv-600v-orange.png',
+    asset: std600Image,
+    description:
+      'A 2-pole Type 2 DC SPD for 600V PV circuits, installed in a string combiner box or near the inverter DC input. Review its specifications, 2P drawings and combiner-box installation example on the product page.',
     rows: [
-      ['Structure', 'One-piece encapsulated design'],
-      ['Maintenance', 'Replace the complete unit'],
-      ['Chip', '34S square MOV, epoxy encapsulated'],
-      ['Best for', 'Cost-sensitive residential and RV systems, compact combiner boxes'],
+      ['Configuration', '600V DC / 2P / Type 2'],
+      ['Surge ratings', 'In 20kA / Imax 40kA (8/20μs)'],
+      ['Maintenance', 'Replaceable plug-in MOV modules'],
+      ['Product guide', 'Specifications, wiring, installation and 2P dimensions'],
     ],
   },
   {
-    model: 'STO-40-PV',
-    type: 'Pluggable type',
-    image: '/images/uploads/sto-40-pv-product.png',
-    asset: stoImage,
+    model: 'STD-40-PV',
+    name: 'Type 2 1000V 3P DC Surge Protector SPD STD-40-PV',
+    type: 'Type 2 / 1000V DC / 3P',
+    voltage: '1000',
+    poles: '3P',
+    up: '3.8',
+    href: '/products/STD-40-PV-1000V',
+    image: '/images/uploads/std-40-pv-1000v-orange.png',
+    asset: stdImage,
+    description:
+      'A 3-pole Type 2 DC SPD for 1000V PV circuits, for use at the string combiner box or inverter DC side. Review the electrical ratings and wiring diagram against your PV circuit and earthing arrangement before ordering.',
     rows: [
-      ['Structure', 'Pluggable module on a fixed base'],
-      ['Maintenance', 'Replace the module without rewiring'],
-      ['Chip', 'MOV module'],
-      ['Best for', 'C&I systems, power stations, sites with scheduled maintenance'],
+      ['Configuration', '1000V DC / 3P / Type 2'],
+      ['Surge ratings', 'In 20kA / Imax 40kA (8/20μs)'],
+      ['Maintenance', 'Replaceable plug-in MOV modules'],
+      ['Product guide', 'Specifications, wiring, installation and dimensions'],
     ],
   },
-];
-const selection = [
-  ['2P', '500 / 600', '2.8'],
-  ['2P', '800', '3.2'],
-  ['2P', '1000', '3.8'],
-  ['3P', '1000', '3.8'],
-  ['3P', '1500', '5.0'],
-];
-const types = [
-  [
-    'Type 1 (Class I)',
-    '10/350μs',
-    'Iimp',
-    'Sites with an external lightning protection system or high direct-strike risk',
-  ],
-  [
-    'Type 2 (Class II)',
-    '8/20μs',
-    'In, Imax',
-    'Combiner boxes and inverter DC input. Correct for most rooftop and ground-mount systems',
-  ],
-  [
-    'Type 3 (Class III)',
-    'Combination wave',
-    'Uoc',
-    'Fine protection close to sensitive electronics',
-  ],
 ];
 // Certificate scans: put the file in src/assets/uploads/ and set image to '/images/uploads/<file>'.
 // Empty slots show a placeholder in local dev only and are left out of the production page.
@@ -90,7 +76,7 @@ const materials = [
   ],
   [
     'Contact pins',
-    'Phosphor bronze (shield type) / brass (pluggable type)',
+    'Brass (pluggable type)',
     'Iron',
     'Better conductivity, spring force and corrosion resistance',
   ],
@@ -150,11 +136,11 @@ const faqGroups = [
       ],
       [
         'What Ucpv do I need for a 1000V system?',
-        'Choose a Ucpv equal to or higher than the maximum PV string open-circuit voltage. Calculate that voltage at the lowest expected site temperature: if it stays within 1000V, a 1000V-rated SPD can fit; if it exceeds 1000V, move to the 1500V class. The protection level Up and circuit arrangement must also suit the equipment. Do not select a voltage class from the inverter nameplate alone. Share the string calculation and inverter data for selection support.',
+        'Choose a Ucpv equal to or higher than the maximum PV string open-circuit voltage. Calculate that voltage at the lowest expected site temperature: if it stays within 1000V, a 1000V-rated SPD can fit; if it exceeds 1000V, neither of the two models on this page is suitable. The protection level Up and circuit arrangement must also suit the equipment. Do not select a voltage class from the inverter nameplate alone. Share the string calculation and inverter data for selection support.',
       ],
       [
         'Type 1 or Type 2 for solar?',
-        'Most rooftop and ground-mount PV systems without an external lightning protection system use Type 2 SPDs, which address induced and switching surges. Where lightning currents can enter the installation, Type 1 or combined Type 1+2 protection may be needed. The external lightning protection system and its separation distance affect this decision. The Soltree series shown on this page are Type 2; have your designer confirm the protection concept.',
+        'Most rooftop and ground-mount PV systems without an external lightning protection system use Type 2 SPDs, which address induced and switching surges. Where lightning currents can enter the installation, Type 1 or combined Type 1+2 protection may be needed. The external lightning protection system and its separation distance affect this decision. Both STD-40-PV models shown on this page are Type 2; have your designer confirm the protection concept.',
       ],
       [
         'Where should the DC SPD be installed?',
@@ -208,22 +194,22 @@ const schema = [
   ...series.map((item, index) => ({
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: `Soltree ${item.model} DC Surge Protector (${item.type})`,
-    description: `Type 2 DC surge protector for solar PV systems, ${item.type.toLowerCase()}. Ucpv 500–1500V DC, In 20kA / Imax 40kA (8/20μs), 1P–4P, 35mm DIN rail.`,
+    name: item.name,
+    description: item.description,
     image: new URL(seriesImages[index].src, SITE.url).href,
     model: item.model,
     category: 'Surge Protective Device (SPD)',
-    url: `${pageUrl}#series`,
+    url: new URL(item.href, SITE.url).href,
     brand: { '@type': 'Brand', name: 'Soltree' },
     manufacturer: { '@id': `${SITE.url}/#organization` },
     additionalProperty: [
       ['SPD type', 'Type 2 / Class II'],
-      ['Max. continuous PV voltage (Ucpv)', '500 / 600 / 800 / 1000 / 1500 V DC'],
-      ['Voltage protection level (Up)', '2.8–5.0 kV'],
+      ['Max. continuous PV voltage (Ucpv)', `${item.voltage} V DC`],
+      ['Voltage protection level (Up)', `${item.up} kV`],
       ['Nominal discharge current (In, 8/20μs)', '20 kA'],
       ['Maximum discharge current (Imax, 8/20μs)', '40 kA'],
       ['Response time', '≤25 ns'],
-      ['Poles', '1P–4P'],
+      ['Poles', item.poles],
       ['Standard', 'IEC 61643-31 / EN 61643-31'],
       ['Certifications', 'CE, TÜV, CB'],
       ...item.rows.filter(([label]) => label !== 'Best for'),
@@ -246,8 +232,8 @@ const schema = [
 ---
 
 <BaseLayout
-  title="DC Surge Protector for Solar PV | 500–1500V Type 2 SPD | Soltree"
-  description="Type 2 DC surge protectors for solar PV, 500V to 1500V DC, In 20kA / Imax 40kA, 1P–4P DIN rail. CE, TÜV and CB certified. OEM from 100 pcs, 7-day lead time."
+  title="DC Surge Protector for Solar PV | 600V 2P &amp; 1000V 3P Type 2 SPD | Soltree"
+  description="Type 2 DC surge protectors for solar PV: 600V 2P and 1000V 3P STD-40-PV, In 20kA / Imax 40kA. Compare specifications, wiring diagrams and installation details."
   path="/dc-surge-protector"
   image={ogImage.src}
   schema={schema}
@@ -270,7 +256,7 @@ const schema = [
           </p>
           <h1 class="mt-4 text-[2.125rem] font-bold leading-tight sm:text-[3.375rem]">
             DC Surge Protectors for Solar PV Systems,{' '}
-            <span class="text-green-300">500V to 1500V</span>
+            <span class="text-green-300">600V 2P &amp; 1000V 3P</span>
           </h1>
           <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-200">
             Type 2 DC SPDs that protect inverters, PV modules and combiner boxes against induced
@@ -403,36 +389,32 @@ const schema = [
     <div class="container">
       <div class="max-w-2xl">
         <p class="section-eyebrow">Product range</p>
-        <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Two Structures, One Rating Platform</h2>
+        <h2 class="mt-3 text-3xl font-bold sm:text-4xl">DC Surge Protector Product Range</h2>
         <p class="mt-5 leading-relaxed text-gray-600">
-          Both series share the same electrical ratings (In 20kA / Imax 40kA, 1P–4P). They differ in
-          structure and how they are maintained.
+          Choose between two STD-40-PV Type 2 models: 600V 2P and 1000V 3P. Each has a dedicated
+          product page with electrical specifications, installation information and wiring diagrams
+          to help you review the right configuration for your project.
         </p>
-        <a
-          href="/categories/surge-protector-device?group=solar-pv-components&type=DC"
-          class="mt-4 inline-block text-sm font-semibold text-green-700"
-        >
-          Browse all DC SPD models <span aria-hidden="true">→</span>
-        </a>
       </div>
-      <div class="mt-12 grid gap-6">
+      <div class="mt-8 grid gap-5">
         {series.map((item) => (
-          <article class="overflow-hidden rounded-xl border border-gray-200 bg-white sm:flex">
-            <div class="relative h-56 bg-white sm:h-auto sm:w-2/5">
+          <article class="grid overflow-hidden rounded-xl border border-gray-200 bg-white sm:grid-cols-[14rem_minmax(0,1fr)] lg:grid-cols-[18rem_minmax(0,1fr)]">
+            <div class="relative h-64 bg-white sm:h-auto">
               <Img
                 src={item.image}
-                alt={`Soltree ${item.model} DC surge protector`}
+                alt={`Soltree ${item.type} STD-40-PV DC surge protector`}
                 fill
                 width={960}
-                class="object-contain p-6"
+                class="object-contain p-4"
               />
             </div>
-            <div class="border-t border-gray-100 p-6 sm:w-3/5 sm:border-l sm:border-t-0">
+            <div class="flex flex-col border-t border-gray-100 p-6 sm:border-l sm:border-t-0">
               <p class="text-xs font-semibold uppercase tracking-wider text-green-700">
                 {item.type}
               </p>
-              <h3 class="mt-2 text-2xl font-bold">{item.model}</h3>
-              <dl class="mt-4 space-y-3 text-sm">
+              <h3 class="mt-2 text-2xl font-bold">{item.name}</h3>
+              <p class="mt-4 text-sm leading-relaxed text-gray-600">{item.description}</p>
+              <dl class="mt-4 grid gap-x-6 gap-y-3 text-sm lg:grid-cols-2">
                 {item.rows.map(([label, value]) => (
                   <div>
                     <dt class="text-gray-500">{label}</dt>
@@ -440,8 +422,11 @@ const schema = [
                   </div>
                 ))}
               </dl>
-              <a href="#inquiry" class="mt-5 inline-block text-sm font-semibold text-green-700">
-                Request {item.model} pricing <span aria-hidden="true">→</span>
+              <a
+                href={item.href}
+                class="mt-auto inline-block pt-6 text-sm font-semibold text-green-700"
+              >
+                {`View ${item.voltage}V ${item.poles} details`} <span aria-hidden="true">→</span>
               </a>
             </div>
           </article>
@@ -457,8 +442,8 @@ const schema = [
     </h2>
     <p class="mt-5 leading-relaxed text-gray-600">
       Compare pole counts, PV voltage ratings (Ucpv), protection levels (Up) and discharge current
-      ratings for the STD-40-PV and STO-40-PV series. Use this table to shortlist a configuration,
-      then follow the three-step guide below to review your selection.
+      ratings for the 600V 2P and 1000V 3P STD-40-PV models. Use this table to shortlist a
+      configuration, then follow the three-step guide below to review your selection.
     </p>
     <div
       class="mt-10 overflow-x-auto"
@@ -481,12 +466,16 @@ const schema = [
           </tr>
         </thead>
         <tbody>
-          {selection.map(([poles, ucpv, up]) => (
+          {series.map((item) => (
             <tr>
-              <th scope="row">STD/STO-40-PV</th>
-              <td>{poles}</td>
-              <td>{ucpv}</td>
-              <td>{up}</td>
+              <th scope="row">
+                <a href={item.href} class="text-green-700 underline underline-offset-4">
+                  STD-40-PV {item.voltage}V
+                </a>
+              </th>
+              <td>{item.poles}</td>
+              <td>{item.voltage}</td>
+              <td>{item.up}</td>
               <td>20</td>
               <td>40</td>
             </tr>
@@ -519,9 +508,10 @@ const schema = [
             temperature, not at 25°C.
           </p>
           <p class="text-sm leading-relaxed text-gray-600">
-            A common rule of thumb is Voc,max ≈ 1.2 × Voc(STC). For example, a string of 18 modules
-            at 49.5V Voc gives 891V at STC, about 1,069V at low temperature, which exceeds the 1000V
-            class, so the 1500V class is the correct choice.
+            Compare the calculated maximum string voltage with the selected model: 600V DC for the
+            2P version or 1000V DC for the 3P version. If the maximum exceeds 1000V, neither model
+            on this page is suitable. Use the module temperature coefficient and site design data
+            for the calculation.
           </p>
           <p class="rounded-lg border-l-2 border-red-400 bg-red-50 p-4 text-sm leading-relaxed text-red-800">
             Never choose an SPD whose Ucpv is below the maximum string voltage. It will conduct
@@ -535,37 +525,15 @@ const schema = [
           <h3 class="mt-3 text-xl font-semibold leading-snug">Choose the protection type</h3>
         </div>
         <div class="min-w-0">
-          <div class="overflow-x-auto" role="region" aria-label="SPD protection types" tabindex="0">
-            <table class="spd-table spd-types-table w-full min-w-[760px] table-fixed text-center text-sm">
-              <colgroup>
-                <col class="w-40" />
-                <col class="w-40" />
-                <col class="w-28" />
-                <col />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col">Type</th>
-                  <th scope="col">Test waveform</th>
-                  <th scope="col">Key rating</th>
-                  <th scope="col">Where it goes</th>
-                </tr>
-              </thead>
-              <tbody>
-                {types.map(([type, wave, rating, where]) => (
-                  <tr class={type.startsWith('Type 2') ? 'spd-highlight' : undefined}>
-                    <th scope="row">{type}</th>
-                    <td>{wave}</td>
-                    <td>{rating}</td>
-                    <td>{where}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <p class="text-sm leading-relaxed text-gray-600">
+            Both models on this page are Type 2 / Class II SPDs for induced lightning and switching
+            surges, with 8/20μs discharge ratings. Confirm that your project requires Type 2
+            protection before choosing between the 600V 2P and 1000V 3P models.
+          </p>
           <p class="mt-4 text-sm leading-relaxed text-gray-600">
-            Soltree DC SPDs are Type 2. For sites with a lightning rod or air termination system,
-            ask us about Type 1+2 coordination.
+            If the site design requires Type 1, combined Type 1+2 or Type 3 protection, have your
+            designer specify the appropriate device and coordination. These two models are Type 2
+            only.
           </p>
         </div>
       </li>
@@ -992,7 +960,7 @@ const schema = [
         </p>
         <ul class="mt-8 space-y-4 text-sm text-gray-200">
           <li>01 — Maximum string voltage and system type</li>
-          <li>02 — Pole count and structure (shield or pluggable)</li>
+          <li>02 — Selected model: 600V 2P or 1000V 3P</li>
           <li>03 — Quantities, destination and target certifications</li>
           <li>04 — Color, logo, packaging or sample requirements</li>
         </ul>

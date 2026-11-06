@@ -2,9 +2,11 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ProductCard from '@/components/ProductCard.astro';
 import ProductImageGallery from '@/components/ProductImageGallery.astro';
+import CompanyIntro from '@/components/CompanyIntro.astro';
 import { type Product } from '@/lib/data';
 import Img from '@/components/Img.astro';
-import { getProducts, href, langFromUrl, t } from '@/i18n';
+import { getProducts, getProductGroups, href, langFromUrl, t } from '@/i18n';
+import { matchesSubcategory, subcategoryHref } from '@/lib/product-taxonomy';
 
 interface Props {
   product: Product;
@@ -13,6 +15,27 @@ interface Props {
 const { product, preview = false } = Astro.props;
 
 const lang = langFromUrl(Astro.url);
+const spdTopic =
+  product.categorySlug === 'surge-protector-device'
+    ? getProductGroups(lang)
+        .flatMap((group) => group.items.map((item) => ({ group, item })))
+        .find(({ item }) => matchesSubcategory(product, item))
+    : undefined;
+const categoryLabel = spdTopic ? spdTopic.item.name : product.categoryName;
+const categoryLink = spdTopic
+  ? subcategoryHref(spdTopic.item, spdTopic.group.slug)
+  : `/categories/${product.categorySlug}`;
+const detailSections = product.detailSections ?? [];
+const displaySections = detailSections.some((section) => section.id === 'specifications')
+  ? detailSections
+  : [
+      {
+        id: 'main-specification',
+        title: detailSections.length ? 'Main Specification' : t(lang, 'Technical Specifications'),
+        content: '',
+      },
+      ...detailSections,
+    ];
 const related = getProducts(lang)
   .filter(
     (p) =>
@@ -20,10 +43,21 @@ const related = getProducts(lang)
       p.additionalCategorySlugs?.includes(product.categorySlug),
   )
   .filter((p) => p.id !== product.id)
+  .filter((p) => !spdTopic || matchesSubcategory(p, spdTopic.item))
   .slice(0, 4);
-const galleryImages = (
+const baseImages = (
   product.images && product.images.length > 0 ? product.images : [product.image]
 ).filter(Boolean);
+const colorVariants = product.colorVariants ?? [];
+const galleryImages = [...new Set([...baseImages, ...colorVariants.map((color) => color.image)])];
+const galleryAlts = galleryImages.map((src) => {
+  const baseIndex = baseImages.indexOf(src);
+  return (
+    (baseIndex >= 0 ? product.imageAlts?.[baseIndex] : undefined) ||
+    colorVariants.find((color) => color.image === src)?.alt ||
+    product.name
+  );
+});
 ---
 
 <BaseLayout
@@ -67,11 +101,8 @@ const galleryImages = (
           </a>
           <span>/</span>
           {product.categorySlug ? (
-            <a
-              href={href(lang, `/categories/${product.categorySlug}`)}
-              class="hover:text-gray-600"
-            >
-              {product.categoryName}
+            <a href={href(lang, categoryLink)} class="hover:text-gray-600">
+              {categoryLabel}
             </a>
           ) : (
             <span>未选择分类</span>
@@ -85,13 +116,13 @@ const galleryImages = (
     {/* Product Main */}
     <section class="section">
       <div class="container">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div data-product-main class="grid grid-cols-1 gap-10 lg:grid-cols-2">
           {/* ── Image Gallery (client component) ─────────────────── */}
           {galleryImages.length ? (
             <ProductImageGallery
               images={galleryImages}
               productName={product.name}
-              imageAlts={product.imageAlts}
+              imageAlts={galleryAlts}
             />
           ) : (
             <div class="grid aspect-square place-items-center rounded-2xl border border-dashed border-gray-200 bg-gray-50 text-sm text-gray-400">
@@ -101,7 +132,7 @@ const galleryImages = (
 
           {/* ── Info ─────────────────────────────────────────────── */}
           <div>
-            <p class="section-eyebrow">{product.categoryName}</p>
+            <p class="section-eyebrow">{categoryLabel}</p>
             <h1 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">{product.name}</h1>
 
             {/* Description text */}
@@ -155,8 +186,51 @@ const galleryImages = (
               </ul>
             </div>
 
+            {Boolean(product.customizationOptions?.length || colorVariants.length) && (
+              <div class="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-3">
+                {Boolean(product.customizationOptions?.length) && (
+                  <div class="flex flex-wrap gap-2">
+                    {product.customizationOptions!.map((option) => (
+                      <span class="rounded-full border border-green-200 bg-white px-2.5 py-1 text-xs font-medium text-green-800">
+                        {option}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {colorVariants.length > 0 && (
+                  <fieldset class="mt-2">
+                    <legend class="sr-only">Color</legend>
+                    <div class="flex flex-wrap gap-2">
+                      {colorVariants.map((color) => (
+                        <button
+                          type="button"
+                          data-gallery-select={galleryImages.indexOf(color.image)}
+                          data-color-name={color.name}
+                          aria-label={`${lang === 'es' ? 'Ver color' : 'Show color'}: ${color.name}`}
+                          aria-pressed={color.image === galleryImages[0] ? 'true' : 'false'}
+                          class="h-12 w-12 rounded-md border-2 border-gray-200 bg-white p-1 transition hover:border-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 aria-pressed:border-green-700 aria-pressed:bg-green-50"
+                        >
+                          <Img
+                            src={color.image}
+                            alt={color.alt || `${product.name} — ${color.name}`}
+                            width={100}
+                            class="h-full w-full object-contain"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  </fieldset>
+                )}
+              </div>
+            )}
+
             {/* CTA */}
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div
+              class:list={[
+                'flex flex-col gap-3 sm:flex-row',
+                product.customizationOptions?.length || colorVariants.length ? 'mt-5' : 'mt-8',
+              ]}
+            >
               <a href={href(lang, '/contact')} class="btn-primary-lg flex-1 justify-center">
                 {t(lang, 'Request Quotation')}
               </a>
@@ -170,32 +244,133 @@ const galleryImages = (
             </p>
           </div>
         </div>
-
-        {/* Specifications Table */}
-        <div class="mt-16">
-          <h2 class="text-xl font-bold text-gray-900">{t(lang, 'Technical Specifications')}</h2>
-          <div class="mt-4 overflow-hidden rounded-xl border border-gray-200">
-            <table class="w-full text-sm">
-              <tbody class="divide-y divide-gray-100">
-                {Object.entries(product.specs).map(([key, value], idx) => (
-                  <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td class="w-1/3 px-5 py-3 font-medium text-gray-700">{key}</td>
-                    <td class="px-5 py-3 text-gray-600">{value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </div>
     </section>
+
+    {detailSections.length > 0 && (
+      <nav aria-label="Product detail sections" class="border-y border-gray-200 bg-gray-50">
+        <div class="container flex flex-wrap gap-x-8 gap-y-3 py-5 text-sm font-semibold text-gray-600">
+          {displaySections.map((section) => (
+            <a class="hover:text-green-700" href={`#${section.id}`}>
+              {section.title}
+            </a>
+          ))}
+        </div>
+      </nav>
+    )}
+
+    <div class="container grid gap-10 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_320px]">
+      <div class="min-w-0">
+        {displaySections.map((section, index) => (
+          <section
+            id={section.id}
+            class:list={[
+              'scroll-mt-32',
+              index > 0 && 'mt-12',
+              section.id !== 'main-specification' && 'rounded-2xl p-6 sm:p-8',
+              section.id !== 'main-specification' && index % 2 === 0 && 'bg-gray-50',
+            ]}
+            aria-labelledby={`${section.id}-heading`}
+          >
+            <div>
+              <h2 id={`${section.id}-heading`} class="text-2xl font-bold text-gray-900 sm:text-3xl">
+                {section.title}
+              </h2>
+              {section.content && (
+                <div class="mt-6 max-w-4xl space-y-4 leading-relaxed text-gray-600">
+                  {section.content.split('\n\n').map((paragraph) => (
+                    <p>{paragraph}</p>
+                  ))}
+                </div>
+              )}
+              {section.image && (
+                <div class="mt-6 bg-white">
+                  <Img
+                    src={section.image}
+                    alt={section.imageAlt ?? section.title}
+                    width={1318}
+                    height={990}
+                    class="mx-auto h-auto w-full"
+                  />
+                </div>
+              )}
+              {section.images?.map((image) => (
+                <div class="mt-6 bg-white">
+                  <Img src={image.src} alt={image.alt} width={1645} class="mx-auto h-auto w-full" />
+                </div>
+              ))}
+              {section.table && (
+                <div class="mt-4 overflow-hidden rounded-xl border border-gray-200">
+                  <table class="w-full table-fixed text-sm">
+                    <caption class="bg-gray-100 px-5 py-4 text-center font-semibold text-gray-900">
+                      {section.table.caption}
+                    </caption>
+                    <tbody class="divide-y divide-gray-200">
+                      {section.table.rows.map((row) => (
+                        <tr>
+                          {row.map((cell, index) => {
+                            const value = typeof cell === 'string' ? { text: cell } : cell;
+                            const isHeader = value.header ?? index === 0;
+                            const is3PSpecLabel =
+                              product.id === 'STD-40-PV-1000V' &&
+                              section.id === 'specifications' &&
+                              index === 0;
+                            const Tag = isHeader ? 'th' : 'td';
+                            return (
+                              <Tag
+                                rowspan={value.rowSpan}
+                                colspan={value.colSpan}
+                                scope={isHeader ? (value.rowSpan ? 'rowgroup' : 'row') : undefined}
+                                class:list={[
+                                  'break-words border-l border-gray-200 px-2 py-3 sm:px-4',
+                                  is3PSpecLabel && 'w-[56%] whitespace-nowrap sm:w-[26%]',
+                                  isHeader
+                                    ? `bg-gray-50 font-medium text-gray-700 ${is3PSpecLabel ? 'text-center' : 'text-left'}`
+                                    : 'text-center text-gray-600',
+                                ]}
+                              >
+                                {value.text}
+                              </Tag>
+                            );
+                          })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {!section.table && ['main-specification', 'specifications'].includes(section.id) && (
+                <div class="mt-4 overflow-x-auto rounded-xl border border-gray-200">
+                  <table class="w-full text-sm">
+                    <tbody class="divide-y divide-gray-100">
+                      {Object.entries(product.specs).map(([key, value], idx) => (
+                        <tr class={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          <th
+                            scope="row"
+                            class="w-1/3 px-5 py-3 text-left font-medium text-gray-700"
+                          >
+                            {key}
+                          </th>
+                          <td class="px-5 py-3 text-gray-600">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          </section>
+        ))}
+      </div>
+      <CompanyIntro lang={lang} />
+    </div>
 
     {/* Related Products */}
     {related.length > 0 && (
       <section class="section-alt">
         <div class="container">
           <h2 class="text-xl font-bold text-gray-900">
-            {t(lang, 'More in {category}', { category: product.categoryName })}
+            {t(lang, 'More in {category}', { category: categoryLabel })}
           </h2>
           <div class="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((p) => (
@@ -207,3 +382,21 @@ const galleryImages = (
     )}
   </>
 </BaseLayout>
+
+<style>
+  #installation-and-dimensions :global(th),
+  #installation-and-dimensions :global(td) {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #d1d5db;
+    background: transparent;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 400;
+  }
+  #installation-and-dimensions :global(tr:nth-child(odd)) {
+    background: #f3f4f6;
+  }
+  #installation-and-dimensions :global(tr:nth-child(-n + 2)) {
+    background: white;
+  }
+</style>

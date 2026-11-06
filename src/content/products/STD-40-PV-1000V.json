@@ -1,0 +1,354 @@
+{
+  "id": "STD-40-PV-1000V",
+  "name": "Type 2 1000V 3P DC Surge Protector SPD STD-40-PV",
+  "slug": "std-40-pv-1000v-dc-surge-protector",
+  "categorySlug": "surge-protector-device",
+  "categoryName": "Surge Protector Device",
+  "productTypes": ["DC"],
+  "shortDescription": "Type 2 1000V 3P PV surge protector with pluggable MOV modules, In 20kA / Imax 40kA and a 54mm-wide DIN rail footprint for combiner boxes and inverter DC inputs.",
+  "description": "The STD-40-PV 1000V 3P is a Type 2 DC surge protector for PV combiner boxes and inverter DC inputs. It combines pluggable MOV modules, In 20kA / Imax 40kA surge ratings and a 54mm-wide three-pole housing. Review the 1000V specifications, terminal layout and dedicated 3P drawings below to plan your selection and enclosure layout.",
+  "features": [
+    "Location of Use: String box, inverter",
+    "Network Systems: (DC+)-PE, (DC-)-PE",
+    "Surge Ratings: In = 20kA (8/20 μs), Imax = 40kA (8/20 μs)",
+    "IEC/EN Category: Class II / Type 2",
+    "Protective Elements: High Energy MOV",
+    "Housing: Pluggable Design",
+    "Compliance: IEC/EN 61643-31"
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "STD-40-PV"
+    },
+    {
+      "name": "DC System Voltage",
+      "value": "1000V DC"
+    },
+    {
+      "name": "IEC/EN Category",
+      "value": "Class II / Type 2"
+    },
+    {
+      "name": "Nominal Discharge Current (In)",
+      "value": "20kA (8/20 μs)"
+    },
+    {
+      "name": "Maximum Discharge Current (Imax)",
+      "value": "40kA (8/20 μs)"
+    },
+    {
+      "name": "Network Systems",
+      "value": "(DC+)-PE, (DC-)-PE"
+    },
+    {
+      "name": "Protective Elements",
+      "value": "High Energy Metal Oxide Varistor (MOV)"
+    },
+    {
+      "name": "Housing",
+      "value": "Pluggable Design"
+    },
+    {
+      "name": "Mounting",
+      "value": "DIN Rail"
+    },
+    {
+      "name": "Location of Use",
+      "value": "String Box, Inverter"
+    },
+    {
+      "name": "Compliance",
+      "value": "IEC/EN 61643-31"
+    }
+  ],
+  "image": "/images/uploads/std-40-pv-1000v-orange.png",
+  "customizationOptions": ["Custom Color", "Custom Packaging", "Custom Printing"],
+  "colorVariants": [
+    {
+      "name": "Orange",
+      "image": "/images/uploads/std-40-pv-1000v-orange.png",
+      "alt": "1000V 3P DC surge protector in orange custom housing colors"
+    },
+    {
+      "name": "Orange / Gray",
+      "image": "/images/uploads/std-40-pv-1000v-orange-gray.png",
+      "alt": "1000V 3P DC surge protector in orange / gray custom housing colors"
+    },
+    {
+      "name": "Black / Green",
+      "image": "/images/uploads/std-40-pv-1000v-black-green.png",
+      "alt": "1000V 3P DC surge protector in black / green custom housing colors"
+    },
+    {
+      "name": "White / Gray",
+      "image": "/images/uploads/std-40-pv-1000v-white-gray.png",
+      "alt": "1000V 3P DC surge protector in white / gray custom housing colors"
+    },
+    {
+      "name": "White",
+      "image": "/images/uploads/std-40-pv-1000v-white.png",
+      "alt": "1000V 3P DC surge protector in white custom housing colors"
+    },
+    {
+      "name": "Red / Gray",
+      "image": "/images/uploads/std-40-pv-1000v-red-gray.png",
+      "alt": "1000V 3P DC surge protector in red / gray custom housing colors"
+    },
+    {
+      "name": "White / Green",
+      "image": "/images/uploads/std-40-pv-1000v-white-green.png",
+      "alt": "1000V 3P DC surge protector in white / green custom housing colors"
+    },
+    {
+      "name": "Orange / Green",
+      "image": "/images/uploads/std-40-pv-1000v-orange-green.png",
+      "alt": "1000V 3P DC surge protector in orange / green custom housing colors"
+    }
+  ],
+  "images": [
+    "/images/uploads/std-40-pv-1000v-orange.png",
+    "/images/uploads/std-40-pv-1000v-surge-protection.png",
+    "/images/uploads/std-40-pv-1000v-terminal-guide.png",
+    "/images/uploads/std-40-pv-1000v-plug-in-modules.png",
+    "/images/uploads/std-40-pv-1000v-mov-comparison.png"
+  ],
+  "imageAlts": [
+    "Soltree STD-40-PV Type 2 1000V 3P DC surge protector, orange front view",
+    "STD-40-PV 1000V 3P DC surge protection with Type 2 protection, status indicators and 40kA maximum discharge current",
+    "1000V 3P STD-40-PV terminal and label guide showing positive, earth and negative terminals, status indicator and electrical ratings",
+    "STD-40-PV 1000V 3P pluggable surge protection modules with a locking clip and removable module",
+    "Comparison illustration of standard MOV components and epoxy-encapsulated MOV construction"
+  ],
+  "metaTitle": "Type 2 1000V 3P DC Surge Protector SPD STD-40-PV | Soltree",
+  "metaDescription": "Select the STD-40-PV Type 2 1000V 3P DC surge protector: 20kA/40kA, pluggable MOV modules, 54mm width, specifications and dedicated 3P wiring drawings.",
+  "metaKeywords": "1000V DC surge protector, STD-40-PV, Type 2 SPD, 40kA DC SPD, MOV surge protector, DIN rail PV SPD",
+  "published": true,
+  "badge": "New",
+  "sortOrder": 12.6,
+  "detailSections": [
+    {
+      "title": "Application",
+      "id": "application",
+      "content": "Choose the STD-40-PV 1000V 3P for PV projects that specify a Type 2 DC SPD with a three-pole connection arrangement. Typical installation points include string combiner boxes and the DC input side of solar inverters. The device uses high-energy MOV elements to limit transient overvoltages from induced lightning and switching surges; its nominal discharge current is 20kA and maximum discharge current is 40kA, rated with an 8/20 microsecond waveform.\n\nFor selection, review the PV string voltage calculation, inverter requirements and earthing arrangement together. The 1000V rating must suit the maximum string open-circuit voltage under the project's site conditions. Use the dedicated 3P wiring diagrams to check the positive, negative and protective-earth connections against the marked terminals on the supplied unit. Three poles describe this DC device's configuration, not three AC phases or three independent PV strings.\n\nThe 54mm-wide housing fits a DIN rail layout, while pluggable modules and visible status windows support inspection and replacement. Allow room for the conductors and access to the modules when laying out the enclosure. For a quotation, send the inverter model, string voltage calculation, wiring diagram, quantity and preferred housing color."
+    },
+    {
+      "title": "Specifications",
+      "id": "specifications",
+      "content": "Read the 1000V column for the model on this page: 3P, Class II / Type 2, In 20kA, Imax 40kA and a listed voltage protection level (Up) of 3.8kV. Ucpv is the maximum continuous PV operating voltage; Up describes the voltage protection level, not the normal operating voltage. The 1500V column is a separate series rating shown for comparison and does not extend the rating of the 1000V unit. Match the selected device to the PV circuit and the equipment protection requirements.",
+      "table": {
+        "caption": "STD-40-PV Surge protector 3P",
+        "rows": [
+          ["Pole", "3P", "3P"],
+          ["Classified Test", "Class II", "Class II"],
+          ["Ucpv (VDC)", "1000", "1500"],
+          ["In (8/20)μs (kA)", "20", "20"],
+          ["Imax (8/20)μs (kA)", "40", "40"],
+          ["Up (kV)", "3.8", "5.4"]
+        ]
+      }
+    },
+    {
+      "title": "Remote Signal Contact",
+      "id": "remote-signal-contact",
+      "content": "For projects with remote status monitoring, confirm whether the quoted 1000V 3P configuration includes a signal contact and request its terminal assignment and contact ratings. Check those details against the monitoring input before specifying the connection. The signal-contact information is separate from the SPD's PV power-circuit ratings.",
+      "table": {
+        "caption": "Remote Signal Contact",
+        "rows": [
+          ["Maximum working voltage (V)", "250VAC/30VDC", "250VAC/30VDC"],
+          ["Maximum working current (A) · 1A (250V AC)", "1A (250V AC)", "1A (250V AC)"],
+          ["1A (30V DC)", "1A (30V AC)", "1A (30V AC)"]
+        ]
+      }
+    },
+    {
+      "title": "Installation and Dimensions",
+      "id": "installation-and-dimensions",
+      "content": "Review the conductor capacity, stripping length, tightening torque and environmental limits below when planning the enclosure. The mounting information specifies H 35-7.5 / DIN35 rail. Use the dedicated 3P dimension drawing further down the page to check the three-pole footprint, and leave access to the terminal screws, status windows and removable modules. Confirm the final installation details against the instructions supplied with the selected unit.",
+      "table": {
+        "caption": "Installation and Dimensions",
+        "rows": [
+          [
+            {
+              "text": "Wiring capacity (mm²)",
+              "rowSpan": 2
+            },
+            {
+              "text": "Hard wire",
+              "header": true
+            },
+            "4~25",
+            "4~25"
+          ],
+          [
+            {
+              "text": "Flexible wire",
+              "header": true
+            },
+            "4~16",
+            "4~16"
+          ],
+          [
+            {
+              "text": "Stripping length (mm)",
+              "colSpan": 2
+            },
+            "10",
+            "10"
+          ],
+          [
+            {
+              "text": "Terminal screw",
+              "colSpan": 2
+            },
+            "M5",
+            "M5"
+          ],
+          [
+            {
+              "text": "Torque (N·m)",
+              "rowSpan": 2
+            },
+            {
+              "text": "Main circuit",
+              "header": true
+            },
+            "3.5",
+            "3.5"
+          ],
+          [
+            {
+              "text": "Remote signal contact",
+              "header": true
+            },
+            "0.25",
+            "0.25"
+          ],
+          [
+            {
+              "text": "Protection class",
+              "rowSpan": 2
+            },
+            {
+              "text": "All profile",
+              "header": true
+            },
+            "IP40",
+            "IP40"
+          ],
+          [
+            {
+              "text": "Connection port",
+              "header": true
+            },
+            "IP20",
+            "IP20"
+          ],
+          [
+            {
+              "text": "Installation environment",
+              "colSpan": 2
+            },
+            {
+              "text": "No obvious shock and vibration",
+              "colSpan": 2,
+              "header": false
+            }
+          ],
+          [
+            {
+              "text": "Altitude (m)",
+              "colSpan": 2
+            },
+            "≤2000",
+            "≤2000"
+          ],
+          [
+            {
+              "text": "Working temperature",
+              "colSpan": 2
+            },
+            "-30°C ~ +70°C",
+            "-30°C ~ +70°C"
+          ],
+          [
+            {
+              "text": "Relative humidity",
+              "colSpan": 2
+            },
+            "30%~90%",
+            "30%~90%"
+          ],
+          [
+            {
+              "text": "How to install",
+              "colSpan": 2
+            },
+            {
+              "text": "Installed with H 35-7.5/DIN35 steel mounting rail",
+              "colSpan": 2,
+              "header": false
+            }
+          ],
+          [
+            {
+              "text": "Size (mm) (W × H × L)",
+              "rowSpan": 3
+            },
+            {
+              "text": "W",
+              "header": true
+            },
+            "36",
+            "54"
+          ],
+          [
+            {
+              "text": "H",
+              "header": true
+            },
+            "90",
+            "90"
+          ],
+          [
+            {
+              "text": "L",
+              "header": true
+            },
+            "67.6",
+            "67.6"
+          ],
+          [
+            {
+              "text": "Weight (kg)",
+              "colSpan": 2
+            },
+            "0.24",
+            "0.36"
+          ]
+        ]
+      }
+    },
+    {
+      "title": "Wiring Diagram",
+      "id": "wiring-diagram",
+      "content": "This 3P DC SPD wiring illustration shows the positive and negative conductors, an upstream MCB, fuse, protective-earth connection and downstream load circuits. Use it to identify the SPD branch and its relationship to the other DC components. Follow the polarity and earth markings on the supplied device when reviewing the connections; the diagram does not specify the MCB or fuse rating for your project.",
+      "image": "/images/uploads/std-40-pv-3p-wiring-diagram.png",
+      "imageAlt": "STD-40-PV 3-pole DC surge protector wiring diagram showing positive and negative conductors, MCB, fuse, protective earth and load circuits"
+    },
+    {
+      "title": "Dimensions",
+      "id": "dimensions",
+      "content": "The drawing below shows the side profile and three-pole front view, with a 54mm front width and L+, PE and L- terminal positions. Dimensions are in millimetres. Use the complete profile to check DIN rail space and enclosure clearance, with additional room for conductor routing and module removal.",
+      "image": "/images/uploads/std-40-pv-3p-dimensions.png",
+      "imageAlt": "STD-40-PV 3-pole DC surge protector dimensions showing the side view and 54mm-wide front view with L+, PE and L- terminals"
+    },
+    {
+      "title": "Drawing",
+      "id": "drawing",
+      "content": "The 3 Pole system drawing places DC surge protection at the PV generation side and near the inverter, with a DC switch between the illustrated protection points. It shows how the SPD branches relate to the DC conductors and earth. Review the required protection locations against the actual cable route and site design; the drawing illustrates the arrangement rather than a fixed quantity of SPDs for every installation.",
+      "image": "/images/uploads/std-40-pv-3p-drawing.png",
+      "imageAlt": "STD-40-PV 3-pole DC surge protector drawing showing PV generation, DC SPDs, DC switch, inverter and earth connections"
+    }
+  ]
+}

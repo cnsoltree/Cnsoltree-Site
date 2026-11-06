@@ -236,7 +236,14 @@ CMS.registerEventListener({
       for (const [key, value] of Object.entries(gallery)) data = data.set(key, value);
     }
     const stringLists = isProduct
-      ? ['features', 'images', 'descriptionImages', 'additionalCategorySlugs', 'productTypes']
+      ? [
+          'features',
+          'customizationOptions',
+          'images',
+          'descriptionImages',
+          'additionalCategorySlugs',
+          'productTypes',
+        ]
       : ['tags', 'relatedProductTypes'];
     for (const name of stringLists) {
       const values = data.get(name);

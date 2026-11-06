@@ -173,6 +173,21 @@ export const cmsConfig = {
         },
         list('features', '产品特点'),
         {
+          ...list('customizationOptions', '定制服务'),
+          hint: '显示在特点下方，例如 Custom Color、Custom Packaging、Custom Printing；留空则不显示。',
+        },
+        {
+          ...list('colorVariants', '可选颜色图片', null),
+          max: 12,
+          summary: '{{fields.name}}',
+          hint: '上传同款不同颜色的实拍图。客户点击后，左侧主图切换为该图片；第一项建议使用默认颜色。',
+          fields: [
+            { label: '颜色名称（前台展示）', name: 'name', widget: 'string' },
+            { label: '颜色产品图', name: 'image', widget: 'image', choose_url: false },
+            { label: '图片说明 Alt', name: 'alt', widget: 'string', required: false },
+          ],
+        },
+        {
           ...list('specs', '技术参数', null),
           summary: '{{fields.name}}：{{fields.value}}',
           fields: [
