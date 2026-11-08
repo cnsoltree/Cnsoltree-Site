@@ -1049,3 +1049,38 @@
 - landing-pages.ts 新增 noindex 字段；中文选型页登记到 solar-pv-components / pv-combiner-box，Resources 可见；sitemap 过滤 noindex 页面。本地 /resources 含链接、/sitemap.xml 不含。
 - Astro check 0 errors；选型逻辑自检通过；npm run build 完成（本机实际 Node v25.2.1，未切换到 Node 22；Vercel 按 engines 22.x 构建）。
 - 按用户要求将工作区全部改动（不含 artifacts/combiner-box-selector.html 原型）提交并推送 main，触发 Vercel 部署；线上结果见下一条记录。
+- 线上验证（2026-11-08，提交 c09e23f）：Vercel 部署完成；https://www.elesoltree.com/cn/steel-combiner-box-selector HTTP 200、标题正确、noindex；/resources 含链接，/sitemap.xml 不含；首页、/pv-combiner-box、/dc-mcb、/dc-surge-protector、/products/STZ-63-DC 均 HTTP 200。未做浏览器视觉验收。
+# PV Combiner Box 首屏背景（2026-11-08）
+
+- 项目示例视觉收紧：图片/内容改为 35%/65%，客户画像与场景合并为副标题，原定义表格改为需求说明、双列配件清单、单句项目配合及紧凑总结条。修复顶部问号字符，保留 Illustrative configuration 和模块级待验证说明。增加 Discuss a Similar Project 询价锚点；详情案例尚未完成，未放空链接。格式整理、页面回归通过；未做浏览器视觉验收，未部署。
+
+- 示例版式调整：按用户认可的示例稿，将塑料/钢制箱改为上下两个横向项目模块，左 40% 方图、右 60% 介绍，小屏上图下文。用定义列表展示客户画像、应用需求、配件、项目配合，以浅绿总结区收尾；明确 Illustrative project / Details pending confirmation，未编造客户证言、交付记录或销量，案例页链接暂不添加。完成格式整理；未做浏览器视觉验收，未部署。
+
+- 配置示例模块：置于定制区与应用场景之间，双列展示 HT 两进一出塑料箱、PCB 六进一出钢制箱，含大图、箱体标签、配置摘要及说明。整合删除原三款产品参考区，保留 configurations 锚点并更新页内导航名称。案例落地页尚未完成，不添加空链接或虚构项目背景。完成格式整理；未做浏览器视觉验收，未部署。
+
+- 项目支持区提升：原左右布局及四行内容改为标题介绍加三栏场景（工商业屋顶、地面电站、OEM/分销），配线条图标与简短说明；EPC 和安装商并入介绍，删除各项重复询价资料清单，共用 Discuss Your Project 按钮。手机单列、md 起三列。页面回归及 Prettier 整理通过；未做浏览器视觉验收，未部署。
+
+- 流程区提升：保留深绿底，四栏文字改为语义化有序列表和连接节点；lg 起横向四步，其余屏幕纵向。标题改为 From Your Drawing to Project Delivery.，增加生产前确认范围说明；第三步改为 Specification approval，保留样品/首件按需确认。底部新增指向现有询价区的入口。页面回归及 Prettier 整理通过；未做浏览器视觉验收，未部署。
+
+- 定制区提升：标题精简为 Your Project. Your Configuration.，六项用浅灰绿底、细边框及独立线条图标呈现，保留 MPPT 分隔、器件协调及文件需求审核等技术条件。底部改为图纸咨询标题、简短说明及实心绿色邮件按钮。响应式 1/2/3 列；本地页面回归（含 8 FAQ、表单和 10 个引用）通过，完成 Prettier 格式整理。未做浏览器视觉验收，未部署。
+
+- 后续调整：底部三行文字升级为三张带线条图标的半透明深绿卡片，突出图纸配置、品牌定制和项目供货；sm 起三列，手机单列。首屏遮罩改为左深右浅渐变，改善左侧文案对比度并展示右侧箱体。本地页面回归与 Prettier 通过；未做浏览器视觉验收，未部署。
+
+- `/pv-combiner-box` 首屏复用 `/cn/steel-combiner-box-selector` 的 `pv-combiner-box-field-hero.png`，采用相同响应式尺寸、object-cover 与 55% 黑色遮罩。
+- 本地 HTTP 页面回归（8 个 FAQ、表单及 11 个产品/图片引用）、两页背景输出比对、Prettier 检查通过。未做浏览器视觉验收，未部署。
+
+# 移除首屏产品卡（2026-11-08）
+
+- 删除 `/pv-combiner-box` 首屏右侧 Configuration reference 白色产品卡及说明，将双列布局改为 max-w-3xl 单列文案，保留现场背景。
+- 本地页面回归和 Prettier 检查通过；未做浏览器视觉验收，未部署。
+
+## PV Combiner Box 案例模块优化（2026-11-08）
+
+- 用户确认两个案例为真实客户：删除“pending verification”介绍和“Illustrative configuration”标签，改为“Customer project”。
+- 每个案例改为：标签 → 标题/客户 → 一句应用场景 → 6 格参数表（取自产品 JSON 现有参数，钢箱无电压数据未写）→ 一句“Why this enclosure”（两案例各不相同）→ 询价 + View product details 两个链接；删除重复的 coordination 和绿色总结框，去掉图片外层边框，图片可点到产品页。保持上下排列。
+- Astro check 0 errors，verify-pv-combiner-page 通过，本地 HTTP 200。标题与 HT 8WAY 图片不一致由用户后期处理。未部署。
+- 2026-11-08 追加：案例模块去掉“View product details”链接和图片的产品页链接，只保留询价按钮；用户将为两个案例各做独立落地页，届时再接入。未部署。
+- 2026-11-08 追加：案例按钮改为“Read the full project →”，分别链到 /projects/plastic-combiner-box-south-africa-rooftop 与 /projects/steel-combiner-box-multi-string-pv（页面尚未创建，当前 404）。未部署。
+- 2026-11-08 追加：塑料箱案例图换为用户提供的屋顶挂墙实景图（src/assets/uploads/ht-8way-rooftop-installed.png），仅案例模块使用，产品主图不变。未部署。
+- 2026-11-08 追加：钢箱案例图换为用户提供的光伏车棚立柱安装实景图（src/assets/uploads/steel-combiner-box-carport-installed.png），产品主图不变。未部署。
+- 2026-11-08 追加：“Read the full project”按钮改为仅当 src/pages/projects/<slug>.astro 存在时渲染（import.meta.glob），避免线上 404；临时建页验证可自动出现，已删除临时页。npm run build 通过，提交推送 main。
