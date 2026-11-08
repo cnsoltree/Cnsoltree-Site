@@ -1,5 +1,39 @@
 # 项目开发进度
 
+## DC MCB 按三种结构选型（2026-11-06）
+
+- `/dc-mcb` 从按 1P–4P 展示旧产品改为 DZ47 4.5kA、C65 6kA、L7 10kA 三种结构选型，更新首屏、SEO 标题/描述、三张系列卡、对比表、FAQ 及询价要求。卡片链接至本页询价区，未将旧产品图片或详情指定为某种结构；首屏保留极数示意图。
+- 分断能力采用用户本轮提供的数值，不添加截图中的市场虚标/质量评价。未修改旧 MCB 产品详情记录；三种结构的专用图片、电压/电流/极数及详情对应关系待补齐。
+- 同步 `scripts/verify.mjs` 的 DC 系列验收：检查三张卡片及每行型号与分断能力对应；保留 AC 极数入口检查。
+- Astro check：0 errors、0 warnings、2 个现有 hints；Node 22 Astro 构建通过。未做浏览器视觉验收，未提交或部署。
+- 站内回归通过：265 页面、81 产品、19 文章，三类型号与分断能力对应检查通过，无本地断链或缺失资源。
+
+## 2P 首图换为配色总览（2026-11-06）
+
+- 原图保存为 `std-40-pv-600v-color-range.png`（1254×1254），同步 Astro/公开目录；600V 产品封面、图库首图与落地页卡片/Schema 图片更新，补充 Alt。独立橙色配色、8 款配色与后五张展示图保留。
+- 原始尺寸、文件一致性、产品/分类/落地页引用、两款专项与图库切换回归、diff 检查通过；后台图片索引同步。未构建、提交或部署。
+
+## 3P 配色总览首图新版（2026-11-06）
+
+- 按用户随后上传的新图替换 `std-40-pv-1000v-color-range.png`，原图为 1000×1000；同步 Astro/公开目录，原封面与落地页引用保持有效。
+- 两份文件一致、原始尺寸与本地产品页引用检查通过，diff 检查通过。未构建、提交或部署。
+
+## 3P 首图换为配色总览（2026-11-06）
+
+- 新原图保存为 `std-40-pv-1000v-color-range.png`（1254×1254），同步 Astro 与公开上传目录；1000V 封面、图库第一张及落地页卡片/Schema 图片改用该图，更新 Alt。原橙色单品图继续作为配色选项，后四张展示图不变。
+- 原图尺寸、两份文件一致性、封面/图库顺序与落地页引用、8 款独立配色及图库切换回归通过，diff 检查通过；后台图片索引同步。重启 4400 预览后，两款 DC 专项回归及产品/分类/落地页新图引用核验通过。未重新构建、提交或部署。
+
+## 清理旧 DC SPD 产品记录（2026-11-06）
+
+- 用户表示旧链接无保留价值，希望网站重新起步。本地删除 SPD-DC-1P/2P/3P/4P-White 四款草稿记录及对应西语文件，移除 8 条旧 Orange 到 White 的重定向，保留图片资产避免影响共用引用。
+- scripts/verify-dc-spd-range.mjs 通过：只发布 STD-40-PV 600V 2P / 1000V 3P，两款入口与结构化数据正常；diff 检查通过。未改云端后台快照，未重新构建、提交或部署，线上仍为 4a1f72b。
+
+## SPD 更新已上线（2026-11-05）
+
+- 提交 `4a1f72b4d3714951b1d3e35937c76e2a1b162f1a` 已推送 GitHub main；现有 Vercel 项目生产部署 `dpl_EVKKkdwVSCui8biAz2mB16HghQGo` 状态 READY。
+- 正式域名 `https://www.elesoltree.com` 验收通过：DC Surge Protector 两款左图右文卡片、600V/1000V 详情、各 8 款配色、1000V 新图库及技术图纸响应 200，3P 首列宽度与 Meta 正确。
+- 验收脚本：工作区 artifacts/verify-spd-production.mjs 及项目 scripts/verify-dc-spd-range.mjs。发布后记录仅更新本地任务文档，不影响已上线版本。
+
 ## SPD 更新发布前验收（2026-11-05）
 
 - 用户明确要求上传服务器更新网站。现有 Vercel 项目 `cnsoltree-site-pnst`，生产分支 main；本地与远端起点一致（b3207ea）。
@@ -911,3 +945,107 @@
 
 - 按用户原文更新 600V / 1000V 产品名称，分别加入 2P / 3P；SEO 标题同步，产品 ID 与 URL 保持不变。
 - 本地两页 H1、SEO title 逐项核验通过；未部署。
+
+## DC MCB 首屏文字排版精简（2026-11-06）
+
+- 按用户截图反馈调整 `src/pages/dc-mcb.astro` 左侧：标题改为 DC Miniature / Circuit Breakers 两段并略缩字号，简介缩为两句；原四组说明改为由现有 dcSeries 数据生成的 DZ47 / C65 / L7 三列系列及分断能力。
+- 询价改为紧凑主按钮，系列对比改为文字链接，减少首屏视觉重量；保留右侧图片及页面其余选型内容。
+- Node 22 Astro check：182 文件，0 errors / 0 warnings / 2 个既有 hints；Prettier 和 git diff --check 通过。浏览器连接不可用，本地 4400 服务未运行，未做浏览器视觉验收；未提交、未部署。
+
+## DC MCB 询价联系方式与垂直居中（2026-11-06）
+
+- 参照 dc-surge-protector 的联系方式列表及图标，DC MCB 询价区使用 CONTACT 共用配置输出邮箱、电话、WhatsApp 直链，替换原 View all contact options 链接。
+- 左侧增加 self-center，文字保持左对齐，相对右侧表单垂直居中；窄屏沿用上下排列。
+- 本地 http://127.0.0.1:4400/dc-mcb 返回 200，实际 HTML 中三种联系方式、居中样式与原表单均验证通过；Prettier、git diff --check 通过。未做浏览器视觉验收，未提交或部署。
+
+## DC MCB FAQ 与选型咨询模块（2026-11-06）
+
+- 在 Before you specify 问答区底部参照 SPD 页面新增浅绿咨询条，提示提供 DC 电压、电流、接线图和数量，按钮跳至 #inquiry。
+- FAQ 分参数与型号选型、应用接线与采购两组共 10 问：定义、系列区别、分断能力、电流、极数、AC/DC、PV、电池、隔离、OEM；每条先直接回答，再交代适用条件，不添加未经确认的型号电压或电流参数。
+- FAQPage 继续从可见问答同源生成。参考 Google AI features 网站指南与 Schneider Electric DC 选型 FAQ（https://developers.google.com/search/docs/appearance/ai-features；https://www.se.com/eg/en/faqs/FA409615/），不承诺 AI 引用或排名效果。
+- 本地 4400 页面返回 200，10 条可见问题及完整答案与 JSON-LD 逐项一致，咨询条和询价锚点核验通过；Prettier、git diff --check 通过。未做浏览器视觉验收，未提交或部署。
+
+## 启动本地开发服务（2026-11-06）
+
+- 使用本地 Node 22，执行管理资源同步并在后台启动 Astro dev，监听 127.0.0.1:4400。
+- /dc-surge-protector 实测返回 HTTP 200，服务持续监听文件变化；未部署。
+
+## PV Combiner Box 定制与项目落地页（2026-11-06）
+
+- 新增 src/pages/pv-combiner-box.astro：项目定制首屏、六项定制维度、四类客户项目、三款现有产品参考、四步对接流程、八条 FAQ 与项目询价区。沿用现有产品素材，不新增未经核实的认证、MOQ、交期或项目案例承诺。
+- landing-pages.ts 登记页面并接入产品导航和资源目录；英文页面不生成不存在的西语版本。ContactForm 增加可选默认主题和消息提示，当前页复用现有 /api/contact 提交接口，图纸通过邮箱发送。
+- 新增 scripts/verify-pv-combiner-page.mjs，验证 HTTP 200、导航和锚点、表单、canonical、八条可见 FAQ 与 JSON-LD 一致性及 10 个产品/图片引用。Astro check：183 文件，0 errors / 0 warnings / 2 个既有 hints；页面专项核验通过。
+- 浏览器访问宿主不可用，未做视觉验收；未发送真实询盘，未提交或部署。
+- Node 22 生产构建通过（含 Vercel 函数打包）；本次修改文件 Prettier 与 git diff --check 通过。构建存在大体积 chunk 提示，不影响构建完成。
+
+## 重新运行本地服务（2026-11-06）
+
+- 使用现有 Node 22 运行管理资源同步，并在后台启动 Astro dev（127.0.0.1:4400）。
+- /dc-surge-protector 实测返回 HTTP 200；日志位于 artifacts/elesoltree-dev.stdout.log 和 artifacts/elesoltree-dev.stderr.log（工作区根目录下）。未部署。
+
+## DC MCB 首屏下方快速选型（2026-11-06）
+
+- 参照用户截图在 banner 后、页内导航前加入深色选型区，桌面两栏、手机上下排列，显示 Economy / Choose DZ47Z-63 与 Standard / Choose STZ-63。
+- 首屏 Compare series 改为跳至新选型区，页内导航增加入口；两款按钮均链接现有询价区，未添加未经确认的型号参数。
+- 本地 /dc-mcb HTTP 200、两个型号及区块顺序验证通过；Prettier 与 git diff --check 通过。未做浏览器视觉验收，未部署。
+- Astro check 完成：184 文件，0 errors / 0 warnings / 2 个既有 hints。
+
+## DC MCB 选型区浅色与紧凑排版（2026-11-06）
+
+- 按用户反馈将快速选型区改为浅灰绿底、深色文字；缩小标题、区块上下内边距、分隔线及按钮间距，保留桌面双栏和移动端堆叠。
+- 两款新增 4.5kA / 6kA 标签；根据用户提供的参数重写文案，分别强调 Economy B/C/D-curve DC distribution / 4.5kA，以及 Standard B/C/D trip-curve options / 6kA。不添加未提供的电流或电压范围。
+- Prettier、git diff --check、本地 HTTP 200 与新区域文案及浅色样式输出核验通过；未做浏览器视觉验收，未部署。
+
+## DC MCB 页内导航上移（2026-11-06）
+
+- 按截图箭头将页内导航整体移至首屏 banner 后、快速选型区前，保留链接及样式。
+- Prettier、git diff --check 与本地 HTTP 200、HTML 区块顺序核验通过；未部署。
+
+## DC MCB 价格与规格定位（2026-11-06）
+
+- 根据用户确认的左款价格更低，在 DZ47Z-63 说明下增加 Lower price · Budget-friendly；STZ-63 增加 Higher specification · 6kA，以已提供的分断能力表达升级定位。
+- 保持紧凑间距，未编造具体价格或质量测试结论。Prettier、git diff --check、本地 HTTP 200 及两行文案核验通过；未部署。
+
+## STZ-63 DC 系列产品（2026-11-06）
+
+- 新增 src/content/products/STZ-63-DC.json，published=true，Circuit Breaker 分类及 MCB/DC 类型；标题按用户提供原文 STZ-63 DC MCP 6kA 1P 2P 3P 4P 500V 1000V。
+- 复用 SPD 的 ProductDetail 模板，包含图库、Application、Specifications 参数表、Selection & Wiring 和 Ordering Information；仅采用用户已提供的 6kA、极数、电压选项及 B/C/D 曲线，不推断各极数与电压映射。
+- 暂用现有 DC MCB 四种极数主图，尚待用户提供 STZ-63 专用素材；Standard 选型入口已链接详情页。
+- 本地产品详情、Circuit Breaker 分类与 DC MCB 页面均 HTTP 200，产品标题/链接、四个详情模块与四张图库素材核验通过；Prettier 与 git diff --check 通过。未做浏览器视觉验收，未提交或线上部署。
+
+## 中文光伏汇流箱选型页（2026-11-08）
+
+- 新增 src/pages/pv-combiner-box-selector.astro：首屏、选型计算器（电压等级 + 可折叠 Voc 推算、单串 Isc、路数、外部防雷、SPD Imax）、ST 系列规格表（推荐行高亮）、冷轧钢板喷塑箱体、名词解释、注意事项、询价区（复用 ContactForm，点“按此方案获取报价”把结果带入留言）、免责声明。
+- 选型规则放在 src/lib/combiner-selector.mjs：低温电压 ×1.2、熔丝 ×1.5、总断路器 ×1.25，按标准规格向上取；路数向上匹配最近型号，>36 路提示分箱；SPD 500/1000/1500V → DC600/1000/1500V，有外部防雷用 T1+T2；总电流 ≥63A 提示铜排，断路器 ≥250A 提示塑壳断路器。
+- 新增 scripts/verify-combiner-selector.mjs 逻辑自检，通过。Astro check：187 文件，0 errors / 0 warnings / 2 个既有 hints。本地 dev（127.0.0.1:4400）页面 HTTP 200，noindex，19 行规格表、询价主题输出正常。
+- 页面 noindex、未加入导航和 sitemap（中文页放在英文站内，待用户决定是否公开）。ContactForm 标签仍为英文（按 URL 语言取 en）。ST-5-1 包装尺寸按 520×420×200 填写，待用户核对。未做浏览器视觉验收，未提交或部署。
+
+- 2026-11-08 追加：按用户要求删除选型页询价区（表单、联系方式）和“按此方案获取报价”按钮，保留“复制选型结果”。页面 HTTP 200，已无 /api/contact 表单。
+- 2026-11-08 追加：选型页首屏背景换为用户提供的光伏阵列+汇流箱图（src/assets/pv-combiner-box-field-hero.png，astro:assets 输出多尺寸），上盖 55% 黑色遮罩。页面 HTTP 200、图片输出正常；未做浏览器视觉验收。
+- 2026-11-08 追加：删除选型页首屏右侧白色产品图卡片，首屏只保留文字，背景图完整露出。页面 HTTP 200。
+- 2026-11-08 追加：选型区推荐型号字号由 4xl 缩为 2xl、结果行间距收紧；桌面端左右两栏等高（底部对齐），移除结果卡 sticky。页面 HTTP 200。
+- 2026-11-08 追加：按用户确认（主要客户为 T2）删除“建筑是否装有外部防雷”选项，SPD 固定推荐 PV T2，结果区固定提示“建筑有外部防雷（避雷针 / 避雷带）时需改用 T1+T2”。逻辑自检、Astro check（0 errors）与页面 HTTP 200 通过。
+- 2026-11-08 追加：删除 SPD Imax 选项，固定 40kA；修复左栏等高拉伸导致行和按钮被撑高（表单加 content-start）。逻辑自检、Astro check、HTTP 200 通过。
+- 2026-11-08 追加：按用户澄清恢复“SPD 最大通流 Imax”一栏，仅保留 40kA（标配）选项，去掉 60kA。页面 HTTP 200。
+- 2026-11-08 追加：规格表小标题改为“ST 系列冷轧钢板配电箱规格”。
+- 2026-11-08 追加：规格表改为等宽六列（table-fixed）、表头与内容全部居中。
+- 2026-11-08 追加：规格表下方增加“箱体规格可根据客户需求定制和更换。”
+- 2026-11-08 追加：为给后期英文 SEO 页让出网址，中文选型页从 /pv-combiner-box-selector 移到 /cn/steel-combiner-box-selector（文件 src/pages/cn/steel-combiner-box-selector.astro），仍 noindex。新地址 HTTP 200，旧地址 404。规划：英文按材质分两页（钢制 / 塑料）互链，共用 src/lib/combiner-selector.mjs。
+- 2026-11-08 追加：电压推算增加“低温系数（选填）”，留空按 1.2，可填 1.0–1.5，附温度系数×最低气温的计算说明；estimateVoltage 增加 factor 参数，自检新增 4 条断言。逻辑自检、Astro check、HTTP 200 通过。
+- 2026-11-08 追加：低温系数框换成“Voc 温度系数（%/°C）”和“当地最低气温（°C）”两个选填框；都空按 1.2，都填按 1 + |β| ×（25 − Tmin）自动计算（新增 coldFactor），只填一项或越界给提示；说明温度系数需查光伏组件规格书。自检新增 7 条断言；逻辑自检、Astro check、HTTP 200 通过。
+- 2026-11-08 追加：恢复“低温系数”框：默认 1.2，可手填（1.0–1.5）；填了 Voc 温度系数和最低气温时自动计算并填入（只读），清空后恢复手填值。新增 resolveFactor（自动 > 手填 > 默认），自检新增 4 条断言。
+- 2026-11-08 追加：结果区算式标注系数名称，如“14A × 1.5（熔丝系数）= 21A”“14A × 4 路 × 1.25（断路器系数）= 70A”。
+- 2026-11-08 追加：首屏小标题改为“ST 系列 · 金属光伏直流汇流箱”，H1 改为“金属光伏汇流箱选型”，与后期塑料箱页区分。
+- 2026-11-08 追加：低温系数标签改为“低温系数（默认 1.2，可按地区修改）”。
+- 2026-11-08 追加：推算区三个选填标签的括号说明改为小号浅灰字，避免低温系数标签换行。
+- 2026-11-08 追加：单串 Isc 默认值由 14 改为 13.9（恢复示例参数同样回到 13.9）。
+- 2026-11-08 追加：表单新增“熔丝系数”（默认 1.5）和“断路器系数”（默认 1.25）两个可改输入框，不设下限（仅要求 > 0），附 IEC 1.5 / NEC 1.56、以组件规格书为准的说明；select 增加 fuseK / breakerK 参数，自检新增 4 条断言。逻辑自检、Astro check、HTTP 200 通过。
+- 2026-11-08 追加：更正熔丝系数说明——系数由标准决定（IEC ≥1.5 / NEC 1.56），组件规格书无此项；规格书需核对“最大串联熔丝额定值”。
+- 2026-11-08 追加：断路器系数说明改为“IEC 62548 至少 1.25，美标 NEC 1.56，箱内高温按断路器降容曲线加大”。
+- 2026-11-08 追加：熔丝/断路器系数两个框收进折叠区“按标准调整熔丝 / 断路器系数”，样式同电压推算折叠；标题后显示当前系数，改动后显示“已修改”。收起时仍按框内数值计算。Astro check、HTTP 200 通过。
+
+## 选型页加入 Resources 并发布（2026-11-08）
+
+- landing-pages.ts 新增 noindex 字段；中文选型页登记到 solar-pv-components / pv-combiner-box，Resources 可见；sitemap 过滤 noindex 页面。本地 /resources 含链接、/sitemap.xml 不含。
+- Astro check 0 errors；选型逻辑自检通过；npm run build 完成（本机实际 Node v25.2.1，未切换到 Node 22；Vercel 按 engines 22.x 构建）。
+- 按用户要求将工作区全部改动（不含 artifacts/combiner-box-selector.html 原型）提交并推送 main，触发 Vercel 部署；线上结果见下一条记录。

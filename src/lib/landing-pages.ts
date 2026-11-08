@@ -10,8 +10,28 @@ export const landingPages: {
   groupSlug: string;
   topics: string[];
   nav?: boolean;
+  /** Listed in Resources but kept out of the sitemap (page itself is noindex). */
+  noindex?: boolean;
   description: string;
 }[] = [
+  {
+    title: 'Custom PV Combiner Boxes for Solar Projects',
+    href: '/pv-combiner-box',
+    groupSlug: 'solar-pv-components',
+    topics: ['pv-combiner-box'],
+    nav: true,
+    description:
+      'Plan custom PV combiner boxes for solar projects, from circuit configuration and enclosure layout to OEM branding and project supply.',
+  },
+  {
+    title: '金属光伏汇流箱选型（中文）',
+    href: '/cn/steel-combiner-box-selector',
+    groupSlug: 'solar-pv-components',
+    topics: ['pv-combiner-box'],
+    noindex: true,
+    description:
+      'ST 系列冷轧钢板汇流箱选型计算器：按电压、单串 Isc 和路数推荐型号，并匹配熔丝、断路器和 SPD。',
+  },
   {
     title: 'AC MCB Miniature Circuit Breakers',
     href: '/ac-mcb',

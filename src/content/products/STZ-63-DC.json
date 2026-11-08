@@ -1,0 +1,96 @@
+{
+  "id": "STZ-63-DC",
+  "name": "STZ-63 DC MCP 6kA 1P 2P 3P 4P 500V 1000V",
+  "slug": "stz-63-dc-mcp-6ka-1p-2p-3p-4p-500v-1000v",
+  "categorySlug": "circuit-breaker",
+  "categoryName": "Circuit Breaker",
+  "productTypes": ["MCB", "DC"],
+  "shortDescription": "Standard-series DC circuit breaker with 6kA breaking capacity, B/C/D trip-curve options and 1P?4P configurations. 500V / 1000V options are confirmed for the selected configuration.",
+  "description": "STZ-63 is the standard-series option for DC distribution projects requiring 6kA breaking capacity. Choose from B, C and D trip curves and 1P, 2P, 3P or 4P configurations to match the circuit requirements. Confirm the applicable 500V or 1000V DC rating and wiring arrangement for the exact configuration before ordering.",
+  "features": [
+    "6kA breaking capacity for DC circuit protection.",
+    "1P, 2P, 3P and 4P configuration options.",
+    "B, C and D trip-curve options to suit the load.",
+    "500V / 1000V DC options, subject to the selected pole configuration and approved wiring."
+  ],
+  "specs": [
+    {
+      "name": "Model",
+      "value": "STZ-63"
+    },
+    {
+      "name": "Circuit Type",
+      "value": "DC"
+    },
+    {
+      "name": "Breaking Capacity",
+      "value": "6kA"
+    },
+    {
+      "name": "Pole Options",
+      "value": "1P, 2P, 3P, 4P"
+    },
+    {
+      "name": "Voltage Options",
+      "value": "500V DC / 1000V DC, subject to selected configuration"
+    },
+    {
+      "name": "Trip Curve Options",
+      "value": "B / C / D"
+    }
+  ],
+  "image": "/images/products/MCB-DC-2P-01.jpg",
+  "images": [
+    "/images/products/MCB-DC-2P-01.jpg",
+    "/images/products/MCB-DC-1P-01.jpg",
+    "/images/products/MCB-DC-3P-01.jpg",
+    "/images/products/MCB-DC-4P-01.jpg"
+  ],
+  "imageAlts": [
+    "Soltree 2P DC circuit breaker configuration",
+    "Soltree 1P DC circuit breaker configuration",
+    "Soltree 3P DC circuit breaker configuration",
+    "Soltree 4P DC circuit breaker configuration"
+  ],
+  "metaTitle": "STZ-63 DC MCP 6kA 1P 2P 3P 4P 500V 1000V | Soltree",
+  "metaDescription": "STZ-63 DC circuit breaker with 6kA breaking capacity, B/C/D curves and 1P?4P options. Enquire about 500V / 1000V configurations for your DC circuit.",
+  "metaKeywords": "STZ-63, DC circuit breaker, 6kA DC MCB, 1P 2P 3P 4P, 500V DC, 1000V DC",
+  "published": true,
+  "badge": "New",
+  "sortOrder": 4.5,
+  "createdAt": "2026-11-07T07:37:43.059Z",
+  "detailSections": [
+    {
+      "id": "application",
+      "title": "Application",
+      "content": "STZ-63 provides overload and short-circuit protection for DC distribution circuits within the ratings of the selected configuration. Review the system voltage, load current, prospective fault current and required trip curve when selecting the breaker.\n\nFor solar PV or battery projects, supply the circuit diagram and system parameters so the exact model and wiring arrangement can be checked. Pole count alone does not establish the permissible DC voltage."
+    },
+    {
+      "id": "specifications",
+      "title": "Specifications",
+      "content": "Review the series options below. Confirm the rated current, DC voltage, pole arrangement and breaking capacity at that voltage for the exact configuration quoted.",
+      "table": {
+        "caption": "STZ-63 DC Circuit Breaker ? Series Options",
+        "rows": [
+          ["Parameter", "Series option"],
+          ["Model", "STZ-63"],
+          ["Circuit Type", "DC"],
+          ["Breaking Capacity", "6kA"],
+          ["Pole Options", "1P, 2P, 3P, 4P"],
+          ["Voltage Options", "500V DC / 1000V DC, subject to selected configuration"],
+          ["Trip Curve Options", "B / C / D"]
+        ]
+      }
+    },
+    {
+      "id": "selection-and-wiring",
+      "title": "Selection & Wiring",
+      "content": "Select the pole configuration and B/C/D trip curve to match the circuit design. The 500V and 1000V options are configuration-dependent; do not assume that every pole option supports both voltages.\n\nFollow the documentation for the selected model for polarity, terminal connections and any permitted series connections. Confirm the required breaking capacity against the prospective fault current at the installation point."
+    },
+    {
+      "id": "ordering",
+      "title": "Ordering Information",
+      "content": "For a quotation, send the STZ-63 model name, required DC voltage, rated current, poles, B/C/D trip curve, quantity and destination market. Include the wiring diagram and any documentation requirements so the configuration can be confirmed."
+    }
+  ]
+}

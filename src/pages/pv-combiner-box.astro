@@ -1,0 +1,466 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Img from '@/components/Img.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import { CONTACT, SITE } from '@/consts';
+import { getProductById } from '@/lib/data';
+import { getImage } from 'astro:assets';
+import heroImage from '@/assets/products/PCB-M6in-05-1.jpg';
+
+const customization = [
+  [
+    '01',
+    'Circuit configuration',
+    'Define the string inputs, outputs and inverter connections around your project wiring diagram. Keep independent MPPT circuits separate where required.',
+  ],
+  [
+    '02',
+    'Protection & switching',
+    'Specify the DC breaker or isolator, PV fuses and surge protection requirements. Component ratings and coordination are reviewed for the proposed circuit.',
+  ],
+  [
+    '03',
+    'Enclosure & layout',
+    'Discuss plastic or steel housing, mounting space, cable entry positions, terminal access and the installation environment.',
+  ],
+  [
+    '04',
+    'Wiring & connections',
+    'Set cable sizes, connector requirements, polarity markings and internal routing against the approved configuration.',
+  ],
+  [
+    '05',
+    'OEM identification',
+    'Bring your logo, nameplate, circuit labels and packaging requirements for a consistent brand presentation.',
+  ],
+  [
+    '06',
+    'Project documentation',
+    'Identify the drawings, component list, inspection records and market-specific documents needed for your procurement review.',
+  ],
+];
+const projects = [
+  [
+    'EPC & solar contractors',
+    'Coordinate the box specification with the array design, inverter schedule and site installation plan.',
+    'Send your single-line diagram, inverter models and box quantities.',
+  ],
+  [
+    'Commercial & industrial rooftops',
+    'Plan repeatable configurations across roof zones while keeping circuit identification and maintenance access clear.',
+    'Share the string layout, mounting locations and site conditions.',
+  ],
+  [
+    'Ground-mount projects',
+    'Discuss field enclosure requirements, cable entry arrangements and supply batches for the project schedule.',
+    'Include the site environment, cable schedule and target delivery dates.',
+  ],
+  [
+    'OEM brands & distributors',
+    'Develop a repeat-order configuration with agreed components, labels and packaging for your market.',
+    'Provide your target specification, branding and order forecast.',
+  ],
+];
+const workflow = [
+  [
+    'Project brief',
+    'Send a drawing or specification, inverter information, quantity and destination. Flag any items still to be decided.',
+  ],
+  [
+    'Configuration review',
+    'Review the circuit arrangement, protection components, enclosure layout and documentation scope together.',
+  ],
+  [
+    'Sample & approval',
+    'Agree the quotation and whether a sample or first article is needed. Confirm drawings and the component list before production.',
+  ],
+  [
+    'Production & delivery',
+    'Confirm inspection requirements, labeling, packing and shipment batches against the agreed project schedule.',
+  ],
+];
+const references = [
+  {
+    id: 'HT-8Way-2in1out-600VDC',
+    title: 'Compact string box',
+    caption: 'A starting point for compact PV protection layouts.',
+  },
+  {
+    id: 'HA-12Way-2in2out-500VDC-32A-15AFUSE',
+    title: 'Multiple-circuit enclosure',
+    caption: 'A reference for discussing separate input and output circuits.',
+  },
+  {
+    id: 'PCB-M6in-05',
+    title: 'Steel combiner enclosure',
+    caption: 'A reference for multi-string layouts and lockable enclosure requirements.',
+  },
+].map((item) => ({ ...item, product: getProductById(item.id)! }));
+const faqs = [
+  [
+    'Can you customize a PV combiner box to our drawing?',
+    'Yes. Send your single-line diagram, component requirements and enclosure layout, or start with an existing configuration. We will review feasibility and confirm the final scope in the quotation and approved specification.',
+  ],
+  [
+    'What can be customized?',
+    'Circuit inputs and outputs, protection components, enclosure layout, cable entries, connections, labels and packaging can be discussed. Availability depends on the selected design, component compatibility and order quantity.',
+  ],
+  [
+    'Can you support an EPC project or a tender enquiry?',
+    'Yes. Share the technical schedule, bill of quantities, required documents, destination and delivery milestones. Identify mandatory requirements so the proposed configuration and supply scope can be reviewed against them.',
+  ],
+  [
+    'Can one box serve multiple inverter MPPT inputs?',
+    'The layout must preserve the circuit arrangement required by the inverter. Send the inverter model and wiring diagram so independent circuits and any combining points can be reviewed before a configuration is agreed.',
+  ],
+  [
+    'What are the MOQ and lead time for custom orders?',
+    'MOQ and lead time are quoted for the agreed configuration. They depend on enclosure changes, component availability, branding, sample requirements and quantity. Include your target delivery date with the enquiry.',
+  ],
+  [
+    'Which certificates and inspection documents can you provide?',
+    'Send the standards, certificates and inspection records required by your project or market. We will confirm which documents apply to the proposed assembly and components. Component certificates do not automatically certify the complete box.',
+  ],
+  [
+    'Do you offer samples before a project order?',
+    'Request a sample or first article with your enquiry. Its specification, cost and schedule will be confirmed before proceeding; agree any approval criteria before production.',
+  ],
+  [
+    'How do I send project drawings?',
+    `Email your drawings, bill of quantities and specification to ${CONTACT.email}. You can also send an initial brief through the form below and reference the project name when following up by email.`,
+  ],
+];
+const ogImage = await getImage({ src: heroImage, width: 1200, format: 'jpg' });
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(([name, text]) => ({
+      '@type': 'Question',
+      name,
+      acceptedAnswer: { '@type': 'Answer', text },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'PV Combiner Box',
+        item: `${SITE.url}/pv-combiner-box`,
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Custom PV Combiner Boxes & Solar Project Supply"
+  description="Custom PV combiner boxes for EPC contractors, solar projects and OEM brands. Discuss circuit configuration, enclosures, project documentation and supply requirements with Soltree."
+  path="/pv-combiner-box"
+  image={ogImage.src}
+  schema={schema}
+>
+  <section class="overflow-hidden bg-[#102c24] text-white">
+    <div class="container py-10 sm:py-16">
+      <nav aria-label="Breadcrumb" class="mb-10 text-sm text-green-200">
+        <a href="/" class="hover:text-white">
+          Home
+        </a>
+        <span class="mx-3" aria-hidden="true">
+          /
+        </span>
+        <span>PV Combiner Box</span>
+      </nav>
+      <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-300">
+            Custom configurations · Project supply
+          </p>
+          <h1 class="mt-5 text-4xl font-bold leading-tight sm:text-5xl">
+            PV Combiner Boxes.
+            <br />
+            <span class="text-green-300">Built Around Your Project.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-200">
+            From your wiring diagram to an agreed box configuration. Work with Soltree on protection
+            components, enclosure layout and OEM details for your solar project.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-5">
+            <a href="#inquiry" class="btn-primary-lg">
+              Discuss Your Project <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="#customization"
+              class="text-sm font-semibold text-green-200 underline underline-offset-4 hover:text-white"
+            >
+              Explore customization
+            </a>
+          </div>
+          <div class="mt-10 grid grid-cols-3 gap-4 border-t border-white/20 pt-6 text-sm">
+            {['Drawing-based enquiries', 'OEM branding', 'Project batch supply'].map((text) => (
+              <p class="leading-relaxed text-green-100">{text}</p>
+            ))}
+          </div>
+        </div>
+        <figure class="rounded-2xl bg-white p-5 text-gray-900 sm:p-8">
+          <div class="flex justify-between gap-3 text-xs font-semibold uppercase tracking-widest text-gray-500">
+            <span>PV combiner box</span>
+            <span>Configuration reference</span>
+          </div>
+          <Img
+            src="/images/products/PCB-M6in-05-1.jpg"
+            alt="Soltree steel PV combiner box with string protection components and cable connections"
+            width={900}
+            priority
+            class="mt-4 aspect-square max-h-[440px] w-full object-contain"
+          />
+          <figcaption class="mt-4 border-t border-gray-200 pt-4 text-sm leading-relaxed text-gray-500">
+            Steel and plastic enclosure options. Final components and layout follow your approved
+            specification.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <nav aria-label="PV combiner box page sections" class="border-b border-gray-200 bg-gray-50">
+    <div class="container flex flex-wrap gap-x-8 gap-y-3 py-5 text-sm font-semibold text-gray-600">
+      <a href="#customization">Customization</a>
+      <a href="#projects">Project support</a>
+      <a href="#configurations">Box references</a>
+      <a href="#process">How we work</a>
+      <a href="#faq">FAQs</a>
+      <a href="#inquiry">Project enquiry →</a>
+    </div>
+  </nav>
+
+  <section id="customization" class="py-16 sm:py-24">
+    <div class="container">
+      <div class="max-w-2xl">
+        <p class="eyebrow">Configure the details</p>
+        <h2 class="section-title mt-3">
+          Your design requirements.
+          <br />
+          One coordinated configuration.
+        </h2>
+        <p class="mt-5 leading-relaxed text-gray-600">
+          Start with an existing box or bring your own specification. Define the details that matter
+          to your installation, procurement team and brand.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        {customization.map(([number, title, description]) => (
+          <article class="border-t border-gray-200 pt-6">
+            <span class="text-sm font-semibold text-green-700">{number}</span>
+            <h3 class="mt-3 text-xl font-bold">{title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600">{description}</p>
+          </article>
+        ))}
+      </div>
+      <div class="mt-10 flex flex-col gap-4 rounded-xl bg-[#edf3ee] p-6 sm:flex-row sm:items-center sm:justify-between">
+        <p class="max-w-2xl text-sm leading-relaxed text-gray-700">
+          Already have a drawing or bill of materials? Send it with your quantity and destination to
+          start a configuration review.
+        </p>
+        <a
+          href={`mailto:${CONTACT.email}?subject=PV%20Combiner%20Box%20Project%20Drawings`}
+          class="shrink-0 font-semibold text-green-800 underline underline-offset-4"
+        >
+          Email your drawings →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-[#f5f7f4] py-16 sm:py-24">
+    <div class="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+      <div>
+        <p class="eyebrow">For your next solar project</p>
+        <h2 class="section-title mt-3">A supply conversation that starts with the project.</h2>
+        <p class="mt-5 leading-relaxed text-gray-600">
+          Bring us in at the specification, tender or procurement stage. Align the box configuration
+          and supply scope with the way your project will be built.
+        </p>
+        <a href="#inquiry" class="btn-primary mt-7">
+          Send a Project Brief <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="space-y-7">
+        {projects.map(([title, description, brief]) => (
+          <article class="border-b border-gray-200 pb-7 last:border-0 last:pb-0">
+            <h3 class="text-xl font-bold">{title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-600">{description}</p>
+            <p class="mt-3 text-sm font-medium text-green-800">{brief}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="configurations" class="py-16 sm:py-24">
+    <div class="container">
+      <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div class="max-w-2xl">
+          <p class="eyebrow">A starting point for customization</p>
+          <h2 class="section-title mt-3">Explore Existing Box Configurations</h2>
+          <p class="mt-5 leading-relaxed text-gray-600">
+            Use these products to discuss enclosure styles and layouts. The final circuit and
+            component ratings are confirmed for your project.
+          </p>
+        </div>
+        <a
+          href="/categories/pv-combiner-box"
+          class="shrink-0 text-sm font-semibold text-green-800 underline underline-offset-4"
+        >
+          View all combiner boxes →
+        </a>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {references.map(({ title, caption, product }) => (
+          <article class="overflow-hidden rounded-xl border border-gray-200">
+            <a href={`/products/${product.id}`} class="block bg-[#f8faf8] p-6">
+              <Img
+                src={product.image}
+                alt={product.name}
+                width={640}
+                class="aspect-square w-full object-contain"
+              />
+            </a>
+            <div class="p-6">
+              <p class="text-xs font-semibold uppercase tracking-wide text-green-700">
+                {product.id}
+              </p>
+              <h3 class="mt-3 text-xl font-bold">
+                <a href={`/products/${product.id}`} class="hover:text-green-700">
+                  {title}
+                </a>
+              </h3>
+              <p class="mt-3 text-sm leading-relaxed text-gray-600">{caption}</p>
+              <a
+                href={`/products/${product.id}`}
+                class="mt-5 inline-block text-sm font-semibold text-green-800"
+              >
+                View reference product →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="bg-[#102c24] py-16 text-white sm:py-24">
+    <div class="container">
+      <p class="text-sm font-semibold uppercase tracking-widest text-green-300">
+        From enquiry to supply
+      </p>
+      <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Agree the Details Before Production.</h2>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {workflow.map(([title, description], index) => (
+          <article class="border-t border-white/25 pt-6">
+            <span class="text-sm font-semibold text-green-300">0{index + 1}</span>
+            <h3 class="mt-4 text-xl font-semibold">{title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-300">{description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-16 sm:py-24">
+    <div class="container">
+      <p class="eyebrow">Before you send an enquiry</p>
+      <h2 class="section-title mt-3">Custom PV Combiner Box FAQs</h2>
+      <div class="mt-10 grid items-start gap-x-12 lg:grid-cols-2">
+        {faqs.map(([question, answer]) => (
+          <details class="group border-b border-gray-200">
+            <summary class="flex cursor-pointer list-none items-start justify-between gap-5 py-5 text-base font-semibold">
+              <span>{question}</span>
+              <span aria-hidden="true" class="text-xl text-green-700 group-open:rotate-45">
+                +
+              </span>
+            </summary>
+            <p class="pb-6 text-sm leading-relaxed text-gray-600">{answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="inquiry" class="bg-[#edf3ee] py-16 sm:py-24">
+    <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <p class="eyebrow">Custom box · OEM · Project quotation</p>
+        <h2 class="section-title mt-3">Tell Us What Your Project Needs.</h2>
+        <p class="mt-5 leading-relaxed text-gray-600">
+          Have a complete specification or just an initial layout? Send what you have and tell us
+          which details need support.
+        </p>
+        <ul class="mt-7 space-y-3 text-sm text-gray-700">
+          <li>01 — Inverter model, string inputs and output arrangement</li>
+          <li>02 — Design voltage, current and protection requirements</li>
+          <li>03 — Enclosure, installation environment and branding</li>
+          <li>04 — Quantity, destination, documents and target delivery</li>
+        </ul>
+        <p class="mt-6 text-sm leading-relaxed text-gray-600">
+          For drawings and attachments, email us directly with your project name.
+        </p>
+        <div class="mt-7 flex flex-col items-start gap-3 border-t border-green-900/15 pt-6 text-sm font-semibold text-green-900">
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+          <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}>{CONTACT.phone}</a>
+          <a
+            href={`https://wa.me/${CONTACT.whatsapp}?text=Hello%2C%20I%20have%20a%20PV%20combiner%20box%20project%20enquiry.`}
+            target="_blank"
+            rel="noopener"
+          >
+            Discuss on WhatsApp →
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-white p-6 shadow-sm sm:p-8">
+        <h3 class="text-xl font-bold">Request a Project Review</h3>
+        <p class="mb-6 mt-2 text-sm text-gray-500">
+          Share your requirements for a configuration and quotation discussion.
+        </p>
+        <ContactForm
+          showCountry
+          showSubject
+          defaultSubject="PV Combiner Box — Custom / Project Enquiry"
+          messagePlaceholder={
+            'Project / destination market:\nInverter model & string layout:\nDesign voltage & current:\nEnclosure / OEM requirements:\nQuantity & target delivery:\nRequired documentation:'
+          }
+          buttonText="Send Project Enquiry"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+  .eyebrow {
+    color: #15803d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  .section-title {
+    color: #182b23;
+    font-size: clamp(1.875rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  nav[aria-label='PV combiner box page sections'] a:hover {
+    color: #15803d;
+  }
+</style>

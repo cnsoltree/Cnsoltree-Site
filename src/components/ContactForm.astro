@@ -5,6 +5,8 @@ interface Props {
   showInquiryType?: boolean;
   showSubject?: boolean;
   buttonText?: string;
+  defaultSubject?: string;
+  messagePlaceholder?: string;
 }
 import { langFromUrl, t } from '@/i18n';
 const lang = langFromUrl(Astro.url);
@@ -14,6 +16,8 @@ const {
   showInquiryType = false,
   showSubject = false,
   buttonText = t(lang, 'Send Enquiry'),
+  defaultSubject,
+  messagePlaceholder,
 } = Astro.props;
 const id = crypto.randomUUID();
 ---
@@ -136,6 +140,7 @@ const id = crypto.randomUUID();
       <input
         id={`${id}-subject`}
         name="subject"
+        value={defaultSubject}
         required
         maxlength="200"
         class="input"
@@ -155,10 +160,13 @@ const id = crypto.randomUUID();
       maxlength="5000"
       rows={4}
       class="textarea"
-      placeholder={t(
-        lang,
-        'Please describe your requirements, including product names, quantities, and any special specifications...',
-      )}
+      placeholder={
+        messagePlaceholder ??
+        t(
+          lang,
+          'Please describe your requirements, including product names, quantities, and any special specifications...',
+        )
+      }
     ></textarea>
   </div>
   <input name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />

@@ -1,0 +1,580 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import heroBg from '@/assets/pv-combiner-box-field-hero.png';
+import { MODELS, K, modelName } from '@/lib/combiner-selector.mjs';
+
+const glossary = [
+  [
+    'Voc 开路电压',
+    `组件不接负载时的电压。低温时会升高，本工具默认按 ${K.vocCold} 倍留余量（填写组件 Voc 温度系数和当地最低气温可自动精确计算），用来判断电压等级。`,
+  ],
+  ['Isc 短路电流', '组件短路时的电流。串联时电流不变，并联时电流相加，用来选熔断器和断路器。'],
+  ['路数', '有多少串组件并联接进汇流箱。路数越多，总电流越大。'],
+  ['支路熔断器', '每一串单独保护，防止故障时其他串的电流倒灌进来。'],
+  ['总直流断路器', '汇流箱输出总开关，用于检修分断和过载保护。'],
+  ['SPD 浪涌保护器', '吸收雷击感应过电压。电压规格跟随系统电压等级。'],
+];
+const pitfalls = [
+  '熔断器和断路器按电流选，不按功率（瓦数）选。',
+  '直流侧必须用直流专用器件。交流断路器、交流 SPD 不能用在光伏直流侧。',
+  '熔丝规格不能超过组件规格书上的最大串联熔丝额定值。',
+  '同一台箱子接入的组件串，Voc 和 Isc 尽量一致。',
+  `总电流 ${K.busbarAmp}A 及以上，箱内建议用镀锡铜排；用软线时必须压接冷压端子。`,
+  '本工具只匹配箱内器件。箱外线缆规格和压降由现场安装方核算。',
+];
+const features = [
+  ['结构强度', '冷轧钢板箱体抗冲击、不易变形，大路数箱体装铜排和大电流断路器也有足够支撑。'],
+  ['户外耐候', '表面静电喷塑，防锈、耐紫外，适合户外光伏阵列现场长期安装。'],
+  ['安全防盗', '门锁结构，箱体可靠接地，现场不易被随意打开或破坏。'],
+];
+---
+
+<BaseLayout
+  title="光伏汇流箱选型计算器 · ST 系列"
+  description="输入系统电压、单串短路电流和进箱路数，自动推荐 ST 系列光伏直流汇流箱型号，并匹配支路熔断器、总直流断路器和防雷 SPD。"
+  path="/cn/steel-combiner-box-selector"
+  noindex
+>
+  <section class="relative isolate overflow-hidden bg-[#102c24] text-white">
+    <Image
+      src={heroBg}
+      alt=""
+      widths={[960, 1440, 1942]}
+      sizes="100vw"
+      loading="eager"
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 -z-10 bg-black/55" aria-hidden="true"></div>
+    <div class="container py-10 sm:py-14">
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-green-200">
+        <a href="/" class="hover:text-white">
+          首页
+        </a>
+        <span class="mx-3" aria-hidden="true">
+          /
+        </span>
+        <a href="/pv-combiner-box" class="hover:text-white">
+          PV Combiner Box
+        </a>
+        <span class="mx-3" aria-hidden="true">
+          /
+        </span>
+        <span>选型计算器</span>
+      </nav>
+      <div class="max-w-3xl py-6 sm:py-10">
+        <div>
+          <p class="text-sm font-semibold tracking-[0.18em] text-green-300">
+            ST 系列 · 金属光伏直流汇流箱
+          </p>
+          <h1 class="mt-4 text-4xl font-bold leading-tight sm:text-5xl">金属光伏汇流箱选型</h1>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-gray-200">
+            输入系统电压、单串短路电流和进箱路数，自动推荐汇流箱型号，并算出支路熔断器、总直流断路器和防雷
+            SPD 规格。
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2 text-sm">
+            {['2–36 进 1 出', 'DC 500 / 1000 / 1500V', '冷轧钢板喷塑'].map((t) => (
+              <span class="rounded border border-white/30 px-3 py-1 text-green-100">{t}</span>
+            ))}
+          </div>
+          <a href="#selector" class="btn-primary-lg mt-8">
+            开始选型 <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="selector" class="bg-[#f5f7f4] py-14 sm:py-20">
+    <div class="container">
+      <p class="eyebrow">选型计算</p>
+      <h2 class="section-title mt-3">填三个参数，出整箱配置</h2>
+      <p class="mt-4 text-gray-600">已按示例参数填好，改任意一项结果会立即更新。</p>
+
+      <div class="mt-8 grid items-start gap-6 lg:items-stretch lg:grid-cols-[1fr_1.15fr]">
+        <form
+          id="sel-form"
+          class="grid content-start gap-6 rounded-xl border border-gray-200 bg-white p-6"
+          autocomplete="off"
+        >
+          <fieldset class="grid gap-2">
+            <legend class="label">系统直流电压等级</legend>
+            <div class="seg">
+              {[500, 1000, 1500].map((v) => (
+                <>
+                  <input type="radio" name="v" id={`sel-v${v}`} value={v} checked={v === 1000} />
+                  <label for={`sel-v${v}`}>{v}V</label>
+                </>
+              ))}
+            </div>
+            <details
+              id="sel-est"
+              class="mt-2 rounded-lg border border-dashed border-gray-300 px-4 py-3"
+            >
+              <summary class="cursor-pointer text-sm font-semibold text-green-700">
+                不知道电压等级？按组件参数推算
+              </summary>
+              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="sel-voc" class="label">
+                    单块组件 Voc（V）
+                  </label>
+                  <input
+                    id="sel-voc"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    value="49.5"
+                    class="input"
+                  />
+                </div>
+                <div>
+                  <label for="sel-ns" class="label">
+                    每串块数
+                  </label>
+                  <input id="sel-ns" type="number" min="1" step="1" value="16" class="input" />
+                </div>
+                <div>
+                  <label for="sel-beta" class="label">
+                    Voc 温度系数
+                    <span class="text-xs font-normal text-gray-500">（%/°C，选填）</span>
+                  </label>
+                  <input
+                    id="sel-beta"
+                    type="number"
+                    step="0.01"
+                    min="-0.6"
+                    max="0.6"
+                    placeholder="如 -0.27"
+                    class="input"
+                  />
+                </div>
+                <div>
+                  <label for="sel-tmin" class="label">
+                    当地最低气温<span class="text-xs font-normal text-gray-500">（°C，选填）</span>
+                  </label>
+                  <input
+                    id="sel-tmin"
+                    type="number"
+                    step="1"
+                    min="-60"
+                    max="40"
+                    placeholder="如 -10"
+                    class="input"
+                  />
+                </div>
+                <div>
+                  <label for="sel-k" class="label">
+                    低温系数
+                    <span class="text-xs font-normal text-gray-500">
+                      （默认 {K.vocCold}，可按地区修改）
+                    </span>
+                  </label>
+                  <input
+                    id="sel-k"
+                    type="number"
+                    step="0.001"
+                    min="1"
+                    max="1.5"
+                    placeholder={String(K.vocCold)}
+                    class="input"
+                  />
+                  <p id="sel-k-src" class="mt-1 text-xs text-gray-500"></p>
+                </div>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-gray-500">
+                低温系数默认 {K.vocCold}，也可以直接手填（1.0–1.5）。填了 Voc
+                温度系数和当地最低气温后，按 1 + |Voc 温度系数| ×（25 −
+                当地最低气温）自动计算并填入。 Voc 温度系数请查看光伏组件规格书（Temperature
+                Coefficient of Voc），常见 −0.25% ~
+                −0.30%/°C；当地最低气温取安装地历史极端最低气温。
+              </p>
+              <p id="sel-est-out" class="mono mt-3 text-sm text-gray-600"></p>
+              <button type="button" id="sel-use-est" class="btn-outline mt-3">
+                使用推算结果
+              </button>
+            </details>
+          </fieldset>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="sel-isc" class="label">
+                单串短路电流 Isc（A）
+              </label>
+              <input id="sel-isc" type="number" min="0" step="0.01" value="13.9" class="input" />
+              <p class="mt-1 text-xs text-gray-500">看组件规格书上的 Isc</p>
+            </div>
+            <div>
+              <label for="sel-n" class="label">
+                进箱路数
+              </label>
+              <input id="sel-n" type="number" min="1" max="99" step="1" value="4" class="input" />
+              <p class="mt-1 text-xs text-gray-500">几串组件接进这台箱子</p>
+            </div>
+          </div>
+
+          <details id="sel-coef" class="rounded-lg border border-dashed border-gray-300 px-4 py-3">
+            <summary class="cursor-pointer text-sm font-semibold text-green-700">
+              按标准调整熔丝 / 断路器系数
+              <span id="sel-coef-sum" class="ml-1 text-xs font-normal text-gray-500">
+                （当前 {K.fuse} / {K.breaker}，默认按 IEC）
+              </span>
+            </summary>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="sel-fk" class="label">
+                  熔丝系数
+                  <span class="text-xs font-normal text-gray-500">（默认 {K.fuse}，可修改）</span>
+                </label>
+                <input id="sel-fk" type="number" min="0" step="0.01" value={K.fuse} class="input" />
+                <p class="mt-1 text-xs leading-relaxed text-gray-500">
+                  系数按标准取：IEC 要求至少 1.5，美标 NEC 为
+                  1.56。组件规格书上要核对的是“最大串联熔丝额定值”（Maximum Series Fuse
+                  Rating），推荐熔丝不能超过它。
+                </p>
+              </div>
+              <div>
+                <label for="sel-bk" class="label">
+                  断路器系数
+                  <span class="text-xs font-normal text-gray-500">
+                    （默认 {K.breaker}，可修改）
+                  </span>
+                </label>
+                <input
+                  id="sel-bk"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  value={K.breaker}
+                  class="input"
+                />
+                <p class="mt-1 text-xs leading-relaxed text-gray-500">
+                  系数按标准取：IEC 62548 要求至少 1.25，美标 NEC 为
+                  1.56。箱内温度高时，还要按断路器规格书的温度降容曲线适当加大。
+                </p>
+              </div>
+            </div>
+          </details>
+          <fieldset class="grid gap-2">
+            <legend class="label">SPD 最大通流 Imax</legend>
+            <div class="seg">
+              <input type="radio" name="imax" id="sel-i40" value="40" checked />
+              <label for="sel-i40">40kA（标配）</label>
+            </div>
+          </fieldset>
+
+          <button type="button" id="sel-demo" class="btn-outline justify-self-start">
+            恢复示例参数
+          </button>
+        </form>
+
+        <div class="result rounded-xl border border-gray-200 bg-white p-6" aria-live="polite">
+          <p class="text-xs font-semibold tracking-widest text-gray-500">推荐型号</p>
+          <p id="sel-model" class="mono mt-1 text-2xl font-semibold text-green-700">
+            ST-4-1
+          </p>
+          <p id="sel-meta" class="mt-1 text-sm text-gray-500"></p>
+          <dl class="mt-5 border-t border-gray-200">
+            {[
+              ['sel-r-v', '电压等级'],
+              ['sel-r-fuse', '支路熔断器'],
+              ['sel-r-brk', '总直流断路器'],
+              ['sel-r-spd', '防雷 SPD'],
+              ['sel-r-wire', '箱内接线'],
+            ].map(([id, k]) => (
+              <div class="grid grid-cols-[7rem_1fr] gap-3 border-b border-gray-200 py-2.5 last:border-0">
+                <dt class="text-sm text-gray-500">{k}</dt>
+                <dd class="min-w-0">
+                  <span id={id} class="block font-semibold text-gray-900"></span>
+                  <span id={`${id}-why`} class="mono block text-xs text-gray-500"></span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <div id="sel-notes" class="mt-4 grid gap-2"></div>
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <button type="button" id="sel-copy" class="btn-primary">
+              复制选型结果
+            </button>
+            <span id="sel-copied" class="text-sm text-green-700" hidden>
+              已复制
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="spec" class="py-14 sm:py-20">
+    <div class="container">
+      <p class="eyebrow">ST 系列冷轧钢板配电箱规格</p>
+      <h2 class="section-title mt-3">2–36 进 1 出全系列尺寸</h2>
+      <p class="mt-4 text-gray-600">高亮行是当前推荐型号。路数不在表内时，按向上最近的型号选。</p>
+      <div class="mt-8 overflow-x-auto rounded-xl border border-gray-200">
+        <table class="w-full min-w-[640px] table-fixed text-center text-sm">
+          <thead class="bg-gray-50 text-gray-500">
+            <tr>
+              <th class="px-4 py-3 font-medium">型号</th>
+              <th class="px-4 py-3 font-medium">路数</th>
+              <th class="px-4 py-3 font-medium">外形尺寸（mm）</th>
+              <th class="px-4 py-3 font-medium">包装尺寸（mm）</th>
+              <th class="px-4 py-3 font-medium">净重（kg）</th>
+              <th class="px-4 py-3 font-medium">毛重（kg）</th>
+            </tr>
+          </thead>
+          <tbody>
+            {MODELS.map(([n, size, pack, net, gross]) => (
+              <tr data-inputs={n} class="border-t border-gray-200">
+                <td class="px-4 py-2.5 font-semibold">{modelName(n)}</td>
+                <td class="px-4 py-2.5">{n}进1出</td>
+                <td class="mono px-4 py-2.5">{size}</td>
+                <td class="mono px-4 py-2.5">{pack}</td>
+                <td class="mono px-4 py-2.5">{net}</td>
+                <td class="mono px-4 py-2.5">{gross}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3 text-xs text-gray-500">箱体材质：冷轧钢板喷塑。</p>
+      <p class="mt-1 text-xs text-gray-500">箱体规格可根据客户需求定制和更换。</p>
+    </div>
+  </section>
+
+  <section class="bg-[#f5f7f4] py-14 sm:py-20">
+    <div class="container">
+      <p class="eyebrow">箱体</p>
+      <h2 class="section-title mt-3">冷轧钢板喷塑箱体</h2>
+      <div class="mt-8 grid gap-8 md:grid-cols-3">
+        {features.map(([title, text]) => (
+          <article class="border-t border-gray-300 pt-5">
+            <h3 class="text-lg font-bold">{title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-gray-600">{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 sm:py-20">
+    <div class="container grid gap-12 lg:grid-cols-2">
+      <div>
+        <p class="eyebrow">名词解释</p>
+        <h2 class="section-title mt-3">关键参数</h2>
+        <dl class="mt-6 grid gap-4">
+          {glossary.map(([term, text]) => (
+            <div>
+              <dt class="font-bold">{term}</dt>
+              <dd class="mt-1 text-sm leading-relaxed text-gray-600">{text}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div>
+        <p class="eyebrow">避坑</p>
+        <h2 class="section-title mt-3">选型注意事项</h2>
+        <ol class="mt-6 grid list-decimal gap-3 pl-5 text-sm leading-relaxed text-gray-700">
+          {pitfalls.map((text) => (
+            <li>{text}</li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-8 text-xs leading-relaxed text-gray-500">
+    免责声明：本选型工具仅作辅助参考，不替代专业电气设计。现场施工请遵循当地电气规范，并由持证电工验收。
+  </div>
+</BaseLayout>
+
+<script>
+  import {
+    select,
+    estimateVoltage,
+    resolveFactor,
+    summaryText,
+    modelName,
+    r1,
+    K,
+  } from '@/lib/combiner-selector.mjs';
+
+  function init() {
+    const form = document.getElementById('sel-form') as HTMLFormElement | null;
+    if (!form) return;
+    const $ = (id: string) => document.getElementById(id)!;
+    const num = (id: string) => Number(($(id) as HTMLInputElement).value);
+    const radio = (name: string) =>
+      (form.querySelector(`input[name="${name}"]:checked`) as HTMLInputElement).value;
+    const est = $('sel-est') as HTMLDetailsElement;
+    let text = '';
+    const kBox = $('sel-k') as HTMLInputElement;
+    let manualK = '';
+    kBox.addEventListener('input', () => (manualK = kBox.value));
+    const factor = () => {
+      const r = resolveFactor(
+        ($('sel-beta') as HTMLInputElement).value,
+        ($('sel-tmin') as HTMLInputElement).value,
+        manualK,
+      );
+      kBox.readOnly = r.source === 'auto';
+      if (r.source === 'auto')
+        kBox.value = Number.isNaN(r.factor) ? '' : String(Math.round(r.factor * 1000) / 1000);
+      else if (kBox.value !== manualK) kBox.value = manualK;
+      $('sel-k-src').textContent =
+        {
+          auto: '按温度系数和最低气温自动计算',
+          manual: '手动填写',
+          default: '未填写，按默认值',
+        }[r.source as string] ?? '';
+      return r.factor;
+    };
+
+    const render = () => {
+      const e = estimateVoltage(num('sel-voc'), num('sel-ns'), factor());
+      $('sel-est-out').textContent = e
+        ? `${num('sel-voc')}V × ${num('sel-ns')} 块 × ${Math.round(e.factor * 1000) / 1000} = ${r1(e.vmax)}V → ${e.grade ? `建议 ${e.grade}V 等级` : '超过 1500V，请减少每串块数'}`
+        : '请填写 Voc 和每串块数；温度系数（0.1–0.6）和最低气温（−60~40°C）需同时填写；手填低温系数范围 1.0–1.5';
+      ($('sel-use-est') as HTMLButtonElement).disabled = !e?.grade;
+
+      const o = select({
+        v: Number(radio('v')),
+        isc: num('sel-isc'),
+        n: num('sel-n'),
+        fuseK: num('sel-fk'),
+        breakerK: num('sel-bk'),
+        vmax: est.open ? (e?.vmax ?? null) : null,
+      });
+      const m = o.model;
+      $('sel-model').textContent = m ? modelName(m[0]) : '需分箱 / 定制';
+      $('sel-meta').textContent = m ? `${m[0]} 进 1 出 · 外形 ${m[1]} mm · 净重 ${m[3]} kg` : '';
+      const set = (id: string, value?: string, why?: string) => {
+        $(id).textContent = value ?? '—';
+        $(`${id}-why`).textContent = why ?? '';
+      };
+      set('sel-r-v', `DC ${o.v}V`);
+      set('sel-r-fuse', o.fuse, o.fuseWhy);
+      set('sel-r-brk', o.breaker, o.breakerWhy);
+      set('sel-r-spd', o.spd, o.spdWhy);
+      set('sel-r-wire', o.wire);
+      const notes = $('sel-notes');
+      notes.replaceChildren(
+        ...o.notes.map(([level, t]: [string, string]) => {
+          const div = document.createElement('p');
+          div.className = `note ${level}`;
+          div.textContent = t;
+          return div;
+        }),
+      );
+      document
+        .querySelectorAll<HTMLTableRowElement>('#spec tr[data-inputs]')
+        .forEach((row) => row.classList.toggle('hit', !!m && Number(row.dataset.inputs) === m[0]));
+      const fk = num('sel-fk'),
+        bk = num('sel-bk');
+      $('sel-coef-sum').textContent =
+        fk === K.fuse && bk === K.breaker
+          ? `（当前 ${fk} / ${bk}，默认按 IEC）`
+          : `（当前 ${fk} / ${bk}，已修改）`;
+      text = summaryText(o);
+    };
+
+    form.addEventListener('input', render);
+    form.addEventListener('change', render);
+    est.addEventListener('toggle', render);
+    $('sel-use-est').addEventListener('click', () => {
+      const e = estimateVoltage(num('sel-voc'), num('sel-ns'), factor());
+      if (e?.grade) {
+        ($(`sel-v${e.grade}`) as HTMLInputElement).checked = true;
+        render();
+      }
+    });
+    $('sel-demo').addEventListener('click', () => {
+      form.reset();
+      render();
+    });
+    $('sel-copy').addEventListener('click', () => {
+      const done = () => {
+        $('sel-copied').hidden = false;
+        setTimeout(() => ($('sel-copied').hidden = true), 1800);
+      };
+      navigator.clipboard?.writeText(text).then(done, () => {});
+    });
+    render();
+  }
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style>
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+  .eyebrow {
+    color: #15803d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+  }
+  .section-title {
+    color: #182b23;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .mono {
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .seg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .seg input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .seg label {
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    background: #fff;
+  }
+  .seg input:checked + label {
+    background: #15803d;
+    border-color: #15803d;
+    color: #fff;
+    font-weight: 600;
+  }
+  .seg input:focus-visible + label {
+    outline: 2px solid #15803d;
+    outline-offset: 2px;
+  }
+  :global(#sel-notes .note) {
+    border-radius: 0.375rem;
+    background: #edf3ee;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+    color: #1f3b2e;
+  }
+  :global(#sel-notes .note.warn) {
+    background: #fdf3e3;
+    color: #92400e;
+  }
+  :global(#sel-notes .note.bad) {
+    background: #fdeaea;
+    color: #b91c1c;
+    font-weight: 600;
+  }
+  :global(#spec tr.hit td) {
+    background: #edf3ee;
+    font-weight: 600;
+  }
+  :global(#spec tr.hit td:first-child) {
+    color: #15803d;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

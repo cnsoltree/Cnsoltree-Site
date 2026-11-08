@@ -62,7 +62,7 @@
       "value": "IEC/EN 61643-31"
     }
   ],
-  "image": "/images/uploads/std-40-pv-1000v-orange.png",
+  "image": "/images/uploads/std-40-pv-1000v-color-range.png",
   "customizationOptions": ["Custom Color", "Custom Packaging", "Custom Printing"],
   "colorVariants": [
     {
@@ -107,14 +107,14 @@
     }
   ],
   "images": [
-    "/images/uploads/std-40-pv-1000v-orange.png",
+    "/images/uploads/std-40-pv-1000v-color-range.png",
     "/images/uploads/std-40-pv-1000v-surge-protection.png",
     "/images/uploads/std-40-pv-1000v-terminal-guide.png",
     "/images/uploads/std-40-pv-1000v-plug-in-modules.png",
     "/images/uploads/std-40-pv-1000v-mov-comparison.png"
   ],
   "imageAlts": [
-    "Soltree STD-40-PV Type 2 1000V 3P DC surge protector, orange front view",
+    "Soltree STD-40-PV Type 2 1000V 3P DC surge protector with orange main unit and eight custom color options",
     "STD-40-PV 1000V 3P DC surge protection with Type 2 protection, status indicators and 40kA maximum discharge current",
     "1000V 3P STD-40-PV terminal and label guide showing positive, earth and negative terminals, status indicator and electrical ratings",
     "STD-40-PV 1000V 3P pluggable surge protection modules with a locking clip and removable module",

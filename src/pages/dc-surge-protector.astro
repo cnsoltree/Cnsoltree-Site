@@ -5,8 +5,8 @@ import ContactForm from '@/components/ContactForm.astro';
 import { CONTACT, SITE } from '@/consts';
 import { getImage } from 'astro:assets';
 import rangeImage from '@/assets/uploads/dc-surge-protector-range.png';
-import stdImage from '@/assets/uploads/std-40-pv-1000v-orange.png';
-import std600Image from '@/assets/uploads/std-40-pv-600v-orange.png';
+import stdImage from '@/assets/uploads/std-40-pv-1000v-color-range.png';
+import std600Image from '@/assets/uploads/std-40-pv-600v-color-range.png';
 
 // Two core Type 2 configurations; keep links aligned with the product detail pages.
 const badges = [
@@ -28,7 +28,7 @@ const series = [
     poles: '2P',
     up: '2.8',
     href: '/products/STD-40-PV-600V',
-    image: '/images/uploads/std-40-pv-600v-orange.png',
+    image: '/images/uploads/std-40-pv-600v-color-range.png',
     asset: std600Image,
     description:
       'A 2-pole Type 2 DC SPD for 600V PV circuits, installed in a string combiner box or near the inverter DC input. Review its specifications, 2P drawings and combiner-box installation example on the product page.',
@@ -47,7 +47,7 @@ const series = [
     poles: '3P',
     up: '3.8',
     href: '/products/STD-40-PV-1000V',
-    image: '/images/uploads/std-40-pv-1000v-orange.png',
+    image: '/images/uploads/std-40-pv-1000v-color-range.png',
     asset: stdImage,
     description:
       'A 3-pole Type 2 DC SPD for 1000V PV circuits, for use at the string combiner box or inverter DC side. Review the electrical ratings and wiring diagram against your PV circuit and earthing arrangement before ordering.',

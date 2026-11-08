@@ -382,13 +382,16 @@ for (const [route, type, otherRoute, otherType] of [
   const html = pageHtml(route);
   const range = html.match(/<section\b[^>]*id="series"[\s\S]*?<\/section>/)?.[0];
   assert(range, `Missing MCB range: ${route}`);
-  const family = products.filter((product) => product.id.startsWith(`MCB-${type}-`));
-  assert.equal(family.length, 4, `Expected four ${type} pole options`);
-  for (const product of family)
-    assert(
-      range.includes(`href="/products/${product.id}"`),
-      `Missing ${type} model: ${product.id}`,
-    );
+  if (type === 'AC') {
+    const family = products.filter((product) => product.id.startsWith('MCB-AC-'));
+    assert.equal(family.length, 4, 'Expected four AC pole options');
+    for (const product of family)
+      assert(range.includes(`href="/products/${product.id}"`), `Missing AC model: ${product.id}`);
+  } else {
+    assert.equal((range.match(/<article\b/g) ?? []).length, 3, 'Expected three DC series');
+    for (const name of ['DZ47', 'C65', 'L7'])
+      assert(range.includes(`${name} DC MCB`), `Missing DC series: ${name}`);
+  }
   assert(!range.includes(`/products/MCB-${otherType}-`), `Mixed AC/DC product range: ${route}`);
   assert(html.includes(`href="${otherRoute}"`), `Missing AC/DC cross-link: ${route}`);
   assert(html.includes(`rel="canonical" href="https://www.elesoltree.com${route}"`));
@@ -406,9 +409,19 @@ for (const [route, type, otherRoute, otherType] of [
   );
 }
 const dcMcbTable = pageHtml('/dc-mcb').match(/<table\b[\s\S]*?<\/table>/)?.[0];
-for (const product of products.filter((item) => item.id.startsWith('MCB-DC-')))
-  for (const key of ['Poles', 'Rated Voltage', 'Rated Current', 'Breaking Capacity', 'Trip Curve'])
-    assert(dcMcbTable?.includes(product.specs[key]), `DC comparison must use product data: ${key}`);
+for (const [name, capacity] of [
+  ['DZ47', '4.5kA'],
+  ['C65', '6kA'],
+  ['L7', '10kA'],
+]) {
+  const row = dcMcbTable?.match(
+    new RegExp(`<tr\\b[^>]*>\\s*<th[^>]*>${name}</th>[\\s\\S]*?</tr>`),
+  )?.[0];
+  assert(
+    row && new RegExp(`<td[^>]*>${capacity.replace('.', '\\.')}</td>`).test(row),
+    `DC series rating mismatch: ${name} ${capacity}`,
+  );
+}
 assert(landingPages.find((page) => page.href === '/ac-mcb')?.nav);
 assert(landingPages.find((page) => page.href === '/dc-mcb')?.nav);
 assert(!landingPages.some((page) => page.href === '/mcb'));

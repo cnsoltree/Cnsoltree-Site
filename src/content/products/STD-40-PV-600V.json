@@ -62,7 +62,7 @@
       "value": "IEC/EN 61643-31"
     }
   ],
-  "image": "/images/uploads/std-40-pv-600v-orange.png",
+  "image": "/images/uploads/std-40-pv-600v-color-range.png",
   "customizationOptions": ["Custom Color", "Custom Packaging", "Custom Printing"],
   "colorVariants": [
     {
@@ -107,7 +107,7 @@
     }
   ],
   "images": [
-    "/images/uploads/std-40-pv-600v-orange.png",
+    "/images/uploads/std-40-pv-600v-color-range.png",
     "/images/uploads/std-40-pv-600v-surge-protection.png",
     "/images/uploads/std-40-pv-600v-plug-in-modules.png",
     "/images/uploads/std-40-pv-600v-terminal-guide.png",
@@ -115,7 +115,7 @@
     "/images/uploads/std-40-pv-600v-mov-comparison.png"
   ],
   "imageAlts": [
-    "STD-40-PV 600V DC surge protector with orange modules and orange base",
+    "Soltree STD-40-PV Type 2 600V 2P DC surge protector with orange main unit and eight custom color options",
     "STD-40-PV 600V DC surge protection and 40kA maximum discharge current overview",
     "STD-40-PV plug-in module replacement and locking clip detail",
     "STD-40-PV positive, negative and earth terminals with indicator and label guide",

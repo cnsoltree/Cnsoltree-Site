@@ -2,43 +2,77 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Img from '@/components/Img.astro';
 import ContactForm from '@/components/ContactForm.astro';
-import { products } from '@/lib/data';
-import { SITE } from '@/consts';
+import { CONTACT, SITE } from '@/consts';
 
-// Electrical values come from the published product records, not the AC series table.
-const dcProducts = products.filter((product) => product.id.startsWith('MCB-DC-'));
+// Series and breaking capacities supplied for this landing page; pole variants are specified separately.
+const dcSeries = [
+  {
+    name: 'DZ47',
+    capacity: '4.5kA',
+    label: '4.5kA series',
+    text: 'Specify the DZ47 structure when your project calls for a 4.5kA DC MCB.',
+  },
+  {
+    name: 'C65',
+    capacity: '6kA',
+    label: '6kA series',
+    text: 'Specify the C65 structure when your project calls for a 6kA DC MCB.',
+  },
+  {
+    name: 'L7',
+    capacity: '10kA',
+    label: '10kA series',
+    text: 'Specify the L7 structure when your project calls for a 10kA DC MCB.',
+  },
+];
 const faqGroups = [
   {
-    title: 'Selection & installation',
+    title: 'Ratings & model selection',
     items: [
       [
-        'Can an AC MCB be used in a DC circuit?',
-        'Only use a breaker with an explicit DC rating suitable for the circuit. Some devices carry both AC and DC ratings, but their permitted voltage and wiring conditions can differ. An AC-only rating does not establish suitability for DC use.',
+        'What is a DC miniature circuit breaker (DC MCB)?',
+        'A DC miniature circuit breaker provides overload and short-circuit protection in a direct-current circuit within its specified ratings. Select a model using the circuit voltage, load current, prospective fault current and permitted wiring arrangement. A DC rating must be stated in the documentation for the exact model.',
       ],
       [
-        'Does using more poles increase the DC voltage rating?',
-        'Do not calculate a new voltage rating from pole count alone. Permitted pole connections, polarity and earthing conditions must follow the selected model documentation. The table above shows the values currently listed for each product.',
+        'What is the difference between DZ47, C65 and L7 DC MCBs?',
+        'The Soltree range presented here lists DZ47 at 4.5kA, C65 at 6kA and L7 at 10kA breaking capacity. These are three series options, not current ratings. Confirm the breaking capacity at your required DC voltage, together with the current rating, poles and wiring diagram, for the exact model quoted.',
       ],
       [
-        'How do I choose a DC MCB for a PV string?',
-        'Provide the maximum string open-circuit voltage under the design conditions, current information, inverter model and wiring diagram. Have the circuit designer confirm the voltage rating, fault interruption capability, pole arrangement and any required PV-specific protection.',
+        'How do I choose between 4.5kA, 6kA and 10kA breaking capacity?',
+        'Choose a DC breaking capacity that covers the prospective short-circuit current at the installation point, at the applicable DC voltage and specified conditions. A higher kA value does not mean the breaker carries more load current. Confirm the fault level and model documentation before choosing DZ47, C65 or L7.',
+      ],
+      [
+        'How do I select the rated current of a DC MCB?',
+        'Select the DC MCB current rating to suit the circuit load and conductor protection requirements. Review cable capacity, installation temperature, derating and the load characteristics with the circuit designer. Rated current in amperes (A) and breaking capacity in kiloamperes (kA) describe different requirements; both need to be checked.',
+      ],
+      [
+        'What is the difference between 1P, 2P, 3P and 4P DC MCBs?',
+        'The pole count identifies the number of breaker poles; it does not by itself establish a usable DC voltage. The required pole arrangement depends on the system voltage, earthing and the manufacturer-approved wiring. Do not assume that adding poles automatically increases the voltage rating or that any series connection is permitted.',
       ],
     ],
   },
   {
-    title: 'Applications & ordering',
+    title: 'Applications, wiring & ordering',
     items: [
       [
-        'Can these models be used with a battery system?',
-        'Battery use requires a separate check of the system voltage, prospective fault current, breaker characteristics and wiring conditions. Do not assume that suitability for a PV circuit also establishes suitability for a battery circuit. Send the battery and system protection details for review.',
+        'Can an AC MCB be used in a DC circuit?',
+        'An AC-only MCB must not be selected for a DC circuit based on its AC rating. Use a breaker with an explicit DC rating suitable for the circuit. A dual-rated model may have different AC and DC voltage limits and wiring requirements, so check its DC documentation and polarity markings.',
+      ],
+      [
+        'How do I choose a DC MCB for a solar PV string?',
+        'Select PV circuit protection using the maximum string open-circuit voltage under the design conditions, circuit current and fault conditions. Confirm that the exact breaker is suitable for the intended PV circuit and wiring arrangement. Send the string layout, inverter model and wiring diagram for review; the series name alone does not establish suitability.',
+      ],
+      [
+        'Can a DC MCB be used in a battery storage system?',
+        'A DC MCB can be considered for a battery circuit only when its voltage rating, fault interruption capability and wiring conditions match that system. Battery fault current can differ substantially from PV fault current. Provide battery data, the protection arrangement and any charging or reverse-current conditions for model-specific review.',
       ],
       [
         'Is a DC MCB the same as a DC isolator?',
-        'An MCB provides overcurrent protection. A switch-disconnector serves a switching and isolation function. Whether a particular breaker is also suitable for isolation must be confirmed from its markings and documentation; the device name alone is not enough.',
+        'A DC MCB provides overcurrent protection, while a DC switch-disconnector provides switching and isolation. A particular breaker may also be suitable for isolation if that function is confirmed by its markings and documentation. Do not replace a specified isolator with an MCB solely because both devices can open a circuit.',
       ],
       [
-        'What information is needed for an OEM quotation?',
-        'Send your application, target model or ratings, quantity and destination market. Include the wiring diagram, required documentation and any logo, label or packaging requirements. Configuration, available order options and lead time are confirmed with the quotation.',
+        'What should I send for a Soltree DC MCB or OEM quotation?',
+        'Send the application, maximum DC voltage, rated current, poles, required breaking capacity and wiring diagram. Add the preferred series (DZ47, C65 or L7), quantity, destination market and documentation requirements. For OEM enquiries, include logo, label and packaging needs. Available configurations, samples and delivery timing are confirmed with the quotation.',
       ],
     ],
   },
@@ -66,8 +100,8 @@ const schema = [
 ---
 
 <BaseLayout
-  title="DC MCB for Solar PV & DC Circuits | 1P–4P Breakers | Soltree"
-  description="Compare Soltree 1P–4P DC miniature circuit breakers, review listed voltage and breaking ratings, and request selection support or an OEM quotation."
+  title="DZ47, C65 & L7 DC MCB | 4.5kA, 6kA & 10kA | Soltree"
+  description="Compare DZ47 4.5kA, C65 6kA and L7 10kA DC miniature circuit breakers. Specify your DC voltage, current and poles for a Soltree OEM quotation."
   path="/dc-mcb"
   image="/images/products/MCB-DC-2P-01.jpg"
   schema={schema}
@@ -85,42 +119,42 @@ const schema = [
       </nav>
       <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-widest text-green-300">
-            Solar PV & DC circuit protection
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-green-300">
+            Solar PV & DC protection
           </p>
-          <h1 class="mt-4 text-[2.125rem] font-bold leading-tight sm:text-[3.375rem]">
-            DC Miniature Circuit Breakers <span class="text-green-300">for Your PV Project</span>
+          <h1 class="mt-4 text-[2.125rem] font-bold leading-[1.12] tracking-tight sm:text-5xl">
+            DC Miniature <span class="block text-green-300">Circuit Breakers</span>
           </h1>
-          <p class="mt-6 text-lg leading-relaxed text-gray-200">
-            Compare Soltree 1P–4P DC MCB models for compatible PV and DC distribution circuits.
-            Review the voltage rating, fault level and wiring arrangement together, then request the
-            configuration and documentation your project needs.
+          <p class="mt-5 max-w-lg text-base leading-relaxed text-gray-200">
+            Three series for PV and DC distribution projects. Share your voltage, current and pole
+            requirements for a tailored quotation.
           </p>
-          <dl class="mt-8 grid grid-cols-2 gap-6">
-            {[
-              ['1P–4P models', 'Compare the listed pole options'],
-              ['DC-rated selection', 'Match the actual circuit voltage'],
-              ['DIN rail mounting', 'Plan enclosure and service access'],
-              ['OEM enquiries', 'Discuss branding and order requirements'],
-            ].map(([title, text]) => (
-              <div class="border-l-2 border-green-400 pl-4">
-                <dt class="font-semibold">{title}</dt>
-                <dd class="mt-2 text-sm leading-relaxed text-gray-300">{text}</dd>
-              </div>
-            ))}
-          </dl>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#selection" class="btn-primary-lg">
-              Compare DC ratings <span aria-hidden="true">→</span>
+          <div class="mt-7 max-w-lg border-y border-white/15 py-4">
+            <p class="text-xs text-gray-300">Series / breaking capacity</p>
+            <dl class="mt-3 grid grid-cols-3 divide-x divide-white/15">
+              {dcSeries.map((series, index) => (
+                <div class:list={[index > 0 && 'pl-4']}>
+                  <dt class="text-sm font-semibold">{series.name}</dt>
+                  <dd class="mt-1 text-lg font-semibold text-green-300">{series.capacity}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a href="#inquiry" class="btn-primary">
+              Request a quote <span aria-hidden="true">→</span>
             </a>
-            <a href="#inquiry" class="btn-primary-lg">
-              Request a DC MCB quote <span aria-hidden="true">→</span>
+            <a
+              href="#choose-series"
+              class="rounded-sm py-2 text-sm font-semibold text-green-200 underline underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300"
+            >
+              Compare series <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
         <div class="rounded-2xl bg-[#f5f7f4] p-6 text-gray-900 shadow-2xl sm:p-8">
           <div class="flex items-center justify-between text-xs font-semibold uppercase tracking-widest text-gray-500">
-            <span>The DC MCB range</span>
+            <span>DC MCB pole configurations</span>
             <span>1P–4P</span>
           </div>
           <div class="mt-6 grid grid-cols-2 gap-4">
@@ -152,6 +186,7 @@ const schema = [
 
   <nav aria-label="DC MCB page sections" class="border-b border-gray-200 bg-gray-50">
     <div class="container flex flex-wrap gap-x-8 gap-y-3 py-5 text-sm font-semibold text-gray-600">
+      <a href="#choose-series">Choose your series</a>
       <a href="#overview">DC protection</a>
       <a href="#series">Product range</a>
       <a href="#selection">Ratings & selection</a>
@@ -160,6 +195,73 @@ const schema = [
       <a href="#faq">FAQs</a>
     </div>
   </nav>
+
+  <section
+    id="choose-series"
+    class="border-b border-green-900/10 bg-[#f1f5f1] py-8 text-gray-900 sm:py-10"
+    aria-labelledby="choose-series-heading"
+  >
+    <div class="container">
+      <div class="grid gap-3 lg:grid-cols-2 lg:items-center lg:gap-12">
+        <h2
+          id="choose-series-heading"
+          class="max-w-xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl"
+        >
+          Which DC MCB series should you choose?
+        </h2>
+        <p class="max-w-xl text-sm leading-relaxed text-gray-600 sm:text-base">
+          Compare 4.5kA and 6kA options, then match the DC voltage, trip curve and wiring to your
+          circuit.
+        </p>
+      </div>
+      <div class="mt-6 grid border-t border-green-900/15 md:grid-cols-2">
+        {[
+          {
+            tier: 'Economy',
+            model: 'DZ47Z-63',
+            capacity: '4.5kA',
+            positioning: 'Lower price · Budget-friendly',
+            href: '#inquiry',
+            text: 'Economy model for B/C/D-curve DC distribution applications, with 4.5kA breaking capacity. A cost-conscious choice where its rated capacity meets the circuit requirements.',
+          },
+          {
+            tier: 'Standard',
+            model: 'STZ-63',
+            capacity: '6kA',
+            positioning: 'Higher specification · 6kA',
+            href: '/products/STZ-63-DC',
+            text: 'Standard 6kA model with B/C/D trip-curve options for DC distribution. Choose it where the circuit requires 6kA breaking capacity, with the curve matched to the load.',
+          },
+        ].map(({ tier, model, capacity, positioning, href, text }, index) => (
+          <div
+            class:list={[
+              'flex flex-col pt-5 pb-2',
+              index === 0
+                ? 'pb-5 md:pb-2 md:pr-10'
+                : 'border-t border-green-900/15 md:border-l md:border-t-0 md:pl-10',
+            ]}
+          >
+            <div class="flex items-center gap-3">
+              <p class="text-xs font-bold uppercase tracking-[0.12em] text-green-800">{tier}</p>
+              <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-green-900 ring-1 ring-green-900/10">
+                {capacity}
+              </span>
+            </div>
+            <h3 class="mt-2 text-xl font-bold sm:text-2xl">Choose {model}</h3>
+            <p class="mt-3 max-w-xl flex-1 text-sm leading-relaxed text-gray-600">{text}</p>
+            <p class="mt-3 text-sm font-semibold text-gray-900">{positioning}</p>
+            <a
+              href={href}
+              aria-label={`${index === 1 ? 'View' : 'Enquire about'} ${model} DC MCB`}
+              class="mt-2 self-start rounded-sm py-2 text-sm font-semibold text-green-800 underline-offset-4 hover:text-green-950 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-700"
+            >
+              {index === 1 ? 'View' : 'Enquire about'} {model} <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section id="overview" class="container py-16 sm:py-20" aria-labelledby="overview-heading">
     <p class="section-eyebrow">Understand the circuit</p>
@@ -204,47 +306,29 @@ const schema = [
     <div class="container">
       <p class="section-eyebrow">Product range</p>
       <h2 id="series-heading" class="mt-3 text-3xl font-bold sm:text-4xl">
-        Explore the DC MCB pole options.
+        Three series. Three breaking capacities.
       </h2>
       <p class="mt-5 leading-relaxed text-gray-600">
-        Compare the published models below. Open a product page for its listed specifications, and
-        include the exact model in your enquiry.
+        Start with the structural type and required breaking capacity. Include the series name in
+        your enquiry so the quotation identifies the configuration you need.
       </p>
-      <div class="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-        {dcProducts.map((product) => (
-          <a
-            href={`/products/${product.id}`}
-            class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-lg focus-visible:outline-2 focus-visible:outline-green-700"
-          >
-            <div class="relative h-56">
-              <Img
-                src={product.image}
-                alt={`Soltree ${product.specs.Poles} DC MCB`}
-                fill
-                width={480}
-                class="object-contain p-6 transition-transform group-hover:scale-105"
-              />
-            </div>
-            <div class="border-t border-gray-100 p-5">
-              <p class="text-xs font-semibold uppercase tracking-wider text-green-700">
-                {product.id}
-              </p>
-              <h3 class="mt-2 text-lg font-bold">{product.specs.Poles} DC MCB</h3>
-              <dl class="mt-4 space-y-3 text-sm">
-                <div>
-                  <dt class="text-gray-500">Rated voltage</dt>
-                  <dd class="mt-1 font-medium">{product.specs['Rated Voltage']}</dd>
-                </div>
-                <div>
-                  <dt class="text-gray-500">Breaking capacity</dt>
-                  <dd class="mt-1 font-medium">{product.specs['Breaking Capacity']}</dd>
-                </div>
-              </dl>
-              <p class="mt-5 text-sm font-semibold text-green-700">
-                View specifications <span aria-hidden="true">→</span>
-              </p>
-            </div>
-          </a>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {dcSeries.map((series) => (
+          <article class="flex flex-col rounded-xl border border-gray-200 bg-white p-6 sm:p-8">
+            <p class="text-xs font-semibold uppercase tracking-wider text-green-700">
+              {series.label}
+            </p>
+            <h3 class="mt-4 text-2xl font-bold">{series.name} DC MCB</h3>
+            <p class="mt-6 text-4xl font-bold text-green-800">{series.capacity}</p>
+            <p class="mt-2 text-sm text-gray-500">Breaking capacity</p>
+            <p class="mt-5 flex-1 text-sm leading-relaxed text-gray-600">{series.text}</p>
+            <a
+              href="#inquiry"
+              class="mt-6 border-t border-gray-100 pt-5 text-sm font-semibold text-green-700 underline underline-offset-4"
+            >
+              Enquire about {series.name} <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
         ))}
       </div>
     </div>
@@ -253,50 +337,35 @@ const schema = [
   <section id="selection" class="container py-16 sm:py-24" aria-labelledby="selection-heading">
     <p class="section-eyebrow">Ratings & selection</p>
     <h2 id="selection-heading" class="mt-3 text-3xl font-bold sm:text-4xl">
-      DC MCB specification comparison
+      DZ47 vs C65 vs L7: compare DC MCB series
     </h2>
     <p class="mt-5 leading-relaxed text-gray-600">
-      These values follow the current product records. Pole count alone does not establish a
-      different voltage rating or a permitted wiring arrangement; confirm the selected configuration
-      and supporting documentation before ordering.
+      Use these three series ratings to define your enquiry. Confirm the breaking capacity at the
+      required DC voltage, together with the rated current, pole configuration and wiring diagram,
+      in the documentation for the exact model supplied.
     </p>
     <div
       class="mt-8 overflow-x-auto"
       role="region"
-      aria-label="DC MCB specification comparison"
+      aria-label="DC MCB series and breaking capacity comparison"
       tabindex="0"
     >
-      <table class="dc-mcb-table w-full min-w-[960px] text-center text-sm">
+      <table class="dc-mcb-table w-full min-w-[560px] text-center text-sm">
         <thead>
           <tr>
-            {[
-              'Model',
-              'Poles',
-              'Rated voltage',
-              'Rated current',
-              'Breaking capacity',
-              'Trip curve',
-            ].map((label) => (
-              <th scope="col">{label}</th>
-            ))}
+            <th scope="col">Structural type</th>
+            <th scope="col">Breaking capacity</th>
+            <th scope="col">Enquiry reference</th>
           </tr>
         </thead>
         <tbody>
-          {dcProducts.map((product) => (
+          {dcSeries.map((series) => (
             <tr>
-              <th scope="row">
-                <a
-                  href={`/products/${product.id}`}
-                  class="font-semibold text-green-700 underline underline-offset-4"
-                >
-                  {product.id}
-                </a>
-              </th>
-              <td>{product.specs.Poles}</td>
-              <td>{product.specs['Rated Voltage']}</td>
-              <td>{product.specs['Rated Current']}</td>
-              <td>{product.specs['Breaking Capacity']}</td>
-              <td>{product.specs['Trip Curve']}</td>
+              <th scope="row">{series.name}</th>
+              <td>{series.capacity}</td>
+              <td>
+                {series.name} DC MCB / {series.capacity}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -388,7 +457,7 @@ const schema = [
       {[
         [
           'Electrical specification',
-          'Provide the application, DC voltage, current, poles and required breaking capability, together with the circuit diagram.',
+          'Provide the DZ47, C65 or L7 series, required breaking capacity, DC voltage, current and poles, together with the circuit diagram.',
         ],
         [
           'Branding & packaging',
@@ -414,8 +483,12 @@ const schema = [
     <div class="container">
       <p class="section-eyebrow">Before you specify</p>
       <h2 id="faq-heading" class="mt-3 text-3xl font-bold sm:text-4xl">
-        DC MCB questions, answered.
+        DC MCB FAQs: ratings, selection & applications
       </h2>
+      <p class="mt-5 leading-relaxed text-gray-600">
+        Compare DZ47, C65 and L7, understand DC breaker ratings, and prepare the details for your
+        PV, battery or OEM enquiry.
+      </p>
       <div class="mt-8 grid items-start gap-6 lg:grid-cols-2">
         {faqGroups.map((group) => (
           <div class="rounded-xl border border-gray-200 bg-white px-6 sm:px-8">
@@ -439,12 +512,23 @@ const schema = [
           </div>
         ))}
       </div>
+      <div class="mt-6 flex flex-col gap-5 rounded-xl bg-[#edf3ee] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div>
+          <h3 class="font-semibold">Need help choosing a DC MCB?</h3>
+          <p class="mt-2 text-sm leading-relaxed text-gray-600">
+            Send your DC voltage, current, wiring diagram and quantity with your enquiry.
+          </p>
+        </div>
+        <a href="#inquiry" class="btn-primary shrink-0 self-start sm:self-auto">
+          Ask about your project <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="inquiry" class="bg-[#102c24] py-16 sm:py-24">
     <div class="container grid gap-10 lg:grid-cols-2 lg:gap-20">
-      <div class="text-white">
+      <div class="min-w-0 self-center text-white">
         <p class="text-sm font-semibold uppercase tracking-widest text-green-300">
           Get a DC MCB quote
         </p>
@@ -455,16 +539,59 @@ const schema = [
         </p>
         <ul class="mt-8 space-y-4 text-sm text-gray-200">
           <li>01 — Application, maximum DC voltage and wiring diagram</li>
-          <li>02 — Circuit current, fault level and required pole arrangement</li>
+          <li>02 — DZ47 4.5kA / C65 6kA / L7 10kA, current and poles</li>
           <li>03 — Quantities, destination and requested documentation</li>
           <li>04 — Logo, label, packaging or sample requirements</li>
         </ul>
-        <a
-          href="/contact"
-          class="mt-8 inline-block text-sm text-green-200 underline underline-offset-4"
-        >
-          View all contact options
-        </a>
+        <ul class="mt-8 space-y-4 border-t border-white/15 pt-8 text-sm text-gray-200">
+          {[
+            [
+              `mailto:${CONTACT.email}`,
+              CONTACT.email,
+              'M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75',
+            ],
+            [
+              `tel:${CONTACT.phone.replace(/\s/g, '')}`,
+              CONTACT.phone,
+              'M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z',
+            ],
+          ].map(([link, label, icon]) => (
+            <li>
+              <a href={link} class="flex items-center gap-3 transition-colors hover:text-white">
+                <svg
+                  class="h-5 w-5 shrink-0 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d={icon} />
+                </svg>
+                {label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href={`https://wa.me/${CONTACT.whatsapp}`}
+              target="_blank"
+              rel="noopener"
+              class="flex items-center gap-3 transition-colors hover:text-white"
+            >
+              <svg
+                class="h-5 w-5 shrink-0 text-green-400"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.965.985-3.595A9.816 9.816 0 012.12 12c0-5.453 4.436-9.88 9.909-9.88S21.938 6.547 21.938 12c0 5.454-4.437 9.88-9.909 9.88z" />
+              </svg>
+              WhatsApp: {CONTACT.phone}
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="rounded-2xl bg-white p-6 sm:p-8">
         <h3 class="mb-6 text-xl font-bold">Tell us about your DC MCB project</h3>
