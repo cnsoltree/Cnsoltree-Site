@@ -1,0 +1,153 @@
+---
+// Application example: no real customer behind it. Switch kind to 'project' only with real, approved customer details, results and site photos.
+import ProjectCaseStudy from '@/components/ProjectCaseStudy.astro';
+---
+
+<ProjectCaseStudy
+  kind="example"
+  slug="steel-combiner-box-multi-string-pv"
+  metaTitle="Lockable Steel PV Combiner Box for Solar Carports | 6 In / 1 Out"
+  metaDescription="Application example: a lockable 6-in / 1-out steel PV combiner box with 125A DC breaker, 6 × 15A fuses, 40kA SPD and IP65 enclosure for solar carports and other sites with public access."
+  eyebrow="Application example · Solar carport"
+  title="Lockable Steel Combiner Boxes for Solar Carports"
+  subtitle="Carport combiner boxes sit on columns within reach of cars, trolleys and passers-by. Here is how we configure a 6-string steel box that stands up to the site and is the same on every column."
+  heroImage="/images/uploads/steel-combiner-box-carport-installed.png"
+  heroAlt="Steel PV combiner box mounted on a solar carport column with cable tray"
+  facts={[
+    ['Application', 'Solar carport / car park'],
+    ['Configuration', '6 in / 1 out · 125A'],
+    ['Enclosure', 'Steel · IP65 · lock & key'],
+    ['Soltree scope', 'Pre-wired box, labels, packing'],
+  ]}
+  challengeTitle="A Combiner Box Within Reach of Cars and Shoppers"
+  challenge={[
+    'On a solar carport, the combiner boxes are mounted on the carport columns at about shoulder height, a few metres from moving cars and shoppers. The installer can’t fence them off, and the site owner expects them to look tidy for years.',
+    'A plastic box that works well on a residential roof is often the wrong choice here. The site sets four clear requirements:',
+  ]}
+  requirements={[
+    ['Impact resistance', 'Boxes sit within reach of car doors, trolleys and bumpers.'],
+    ['No public access', 'Only maintenance staff should be able to open the door.'],
+    [
+      'Per-string protection',
+      'Six parallel strings per box, each fused individually so one fault cannot feed the others.',
+    ],
+    [
+      'The same box on every column',
+      'One part number and one layout, so any technician can service any box on site.',
+    ],
+  ]}
+  solutionTitle="Six Strings, One Protected Output, a Box People Can’t Easily Open"
+  powerPath={[
+    '6 PV strings',
+    '15A fuse per string',
+    '125A DC breaker',
+    '40kA SPD',
+    'Inverter input',
+  ]}
+  solution={[
+    [
+      'Steel instead of plastic',
+      'A steel enclosure resists knocks in a car park, and the safety lock keeps the door closed to anyone without a key.',
+    ],
+    [
+      'A fuse on every string',
+      'Six 15A PV fuses stop a faulty string from being back-fed by the other five.',
+    ],
+    [
+      'A 125A DC breaker on the output',
+      'It leaves headroom over the combined string current and gives technicians a visible point to isolate the box.',
+    ],
+    [
+      'Bottom cable entry',
+      'Glands on the bottom face let cables drop straight into the cable tray running down the column, and keep rain out of the entries.',
+    ],
+  ]}
+  boxContents={[
+    {
+      title: 'PV string fuses',
+      spec: '6 × 15A PV fuses',
+      purpose:
+        'Protect each string individually against reverse current from the parallel strings.',
+    },
+    {
+      title: 'DC circuit breaker',
+      spec: '125A DC breaker',
+      purpose:
+        'Overload and short-circuit protection on the combined output, and isolation for maintenance.',
+    },
+    {
+      title: 'Surge protection',
+      spec: '500V DC SPD · 40kA max',
+      purpose: 'Limits lightning-induced transients before they reach the inverter.',
+    },
+    {
+      title: 'Enclosure',
+      spec: 'Steel · IP65 · safety lock',
+      purpose: 'Impact-resistant, weather-sealed and tamper-proof for public sites.',
+    },
+    {
+      title: 'Cable entries',
+      spec: '6 in + 1 out + earth',
+      purpose: 'Arranged on the bottom face for a straight drop into the cable tray.',
+    },
+    {
+      title: 'Wiring & labels',
+      spec: 'Pre-wired, polarity-marked',
+      purpose: 'Circuit labels and polarity markings speed up installation and inspection.',
+    },
+  ]}
+  specs={[
+    ['Reference model', 'PCB-M6in-05'],
+    ['PV array inputs / outputs', '6 / 1'],
+    ['DC circuit breaker', '125A'],
+    ['PV fuse rating', '15A × 6'],
+    ['Surge protection', '500V DC, 40kA max discharge current'],
+    ['Enclosure', 'Steel, high impact resistance'],
+    ['Security', 'Safety lock & key'],
+    ['Protection level', 'IP65'],
+    ['Applicable systems', 'Grid-tied / off-grid PV'],
+  ]}
+  customization={[
+    [
+      'Mounting brackets',
+      'Column, wall or rail brackets sized to the posts or structure on your site.',
+    ],
+    [
+      'Cable entry layout',
+      'Gland sizes and positions matched to your cable sizes and tray routing.',
+    ],
+    [
+      'Circuit count & ratings',
+      'Inputs, outputs and fuse, breaker and SPD ratings matched to your string plan and inverter.',
+    ],
+    [
+      'Labels & branding',
+      'String labels numbered to your layout drawing, plus your logo and nameplate on the door.',
+    ],
+  ]}
+  gallery={[
+    {
+      src: '/images/products/PCB-M6in-05-2.jpg',
+      alt: 'PCB-M6in-05 combiner box interior with 125A DC breaker and 15A fuses',
+      caption: 'Interior layout',
+    },
+    {
+      src: '/images/uploads/soltree-workshop-combiner-boxes.png',
+      alt: 'Open steel PV combiner boxes with installed protection components and wiring',
+      caption: 'Assembly in our workshop',
+    },
+    {
+      src: '/images/uploads/soltree-workshop-packing.png',
+      alt: 'Staff fitting protective foam corners to a steel enclosure before packing',
+      caption: 'Protective packaging',
+    },
+  ]}
+  productIds={['PCB-M6in-05']}
+  ctaTitle="Planning a Carport or Multi-String PV Project?"
+  ctaChecklist={[
+    'Number of strings and the module Voc / Isc',
+    'Inverter model and number of MPPT inputs',
+    'Mounting location (column, wall or rail) and cable sizes',
+    'Quantity, destination and any branding requirements',
+  ]}
+/>

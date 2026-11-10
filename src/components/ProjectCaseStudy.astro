@@ -1,0 +1,399 @@
+---
+/**
+ * 项目/案例详情页模板。src/pages/projects/<slug>.astro 传数据进来即可。
+ * 固定故事结构：首屏 → 背景与需求 → 方案 → 箱内配置 → 定制 → 交付过程 → 结果(仅真实项目) → 产品 → 询价。
+ * kind='example'：应用示例（无真实客户），页面明确标注，不显示结果与客户反馈。
+ * kind='project'：真实客户项目，有客户授权的信息与现场照片时才用。
+ * 右侧栏：目录（同博客文章页）+ 公司介绍（同产品页 CompanyIntro）。
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Img from '@/components/Img.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import CompanyIntro from '@/components/CompanyIntro.astro';
+import { CONTACT, SITE } from '@/consts';
+import { getProductById } from '@/lib/data';
+
+type Pair = [string, string];
+interface Props {
+  kind: 'example' | 'project';
+  slug: string;
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  heroImage: string;
+  heroAlt: string;
+  facts: Pair[];
+  challengeTitle: string;
+  challenge: string[];
+  requirements: Pair[];
+  solutionTitle: string;
+  powerPath: string[];
+  solution: Pair[];
+  boxContents: { title: string; spec: string; purpose: string }[];
+  specs: Pair[];
+  customization: Pair[];
+  delivery?: Pair[];
+  gallery?: { src: string; alt: string; caption: string }[];
+  /** 只在 kind='project' 时显示，必须是真实数据 */
+  results?: { stats: Pair[]; quote?: { text: string; by: string } };
+  productIds: string[];
+  ctaTitle: string;
+  ctaChecklist: string[];
+}
+
+const p = Astro.props;
+const isExample = p.kind === 'example';
+const path = `/projects/${p.slug}`;
+const products = p.productIds.map((id) => getProductById(id)!).filter(Boolean);
+const results = isExample ? undefined : p.results;
+// Our standard workflow (same as /pv-combiner-box); a real project can pass its own dated steps.
+const delivery = p.delivery ?? [
+  [
+    'Project brief',
+    'You send the string plan, inverter details, quantity and destination, plus a photo of the mounting location if you have one.',
+  ],
+  [
+    'Configuration review',
+    'We check fuse, breaker and SPD ratings against your module and inverter data, and propose the enclosure and cable entry layout.',
+  ],
+  [
+    'Specification approval',
+    'You approve the drawing and component list before production. A sample or first article can be agreed at this stage.',
+  ],
+  [
+    'Production & delivery',
+    'Boxes are assembled, inspected, labelled and packed, then shipped according to the agreed delivery plan.',
+  ],
+];
+const sections = [
+  ['challenge', isExample ? 'The challenge' : 'Project background'],
+  ['solution', 'Our solution'],
+  ['inside', "What's inside"],
+  ['customization', 'Customization'],
+  ['delivery', 'How we deliver'],
+  ...(results ? [['results', 'Results']] : []),
+  ...(products.length ? [['products', 'Products used']] : []),
+  ['inquiry', 'Request a quote'],
+];
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Projects', item: `${SITE.url}/projects` },
+      { '@type': 'ListItem', position: 3, name: p.title, item: `${SITE.url}${path}` },
+    ],
+  },
+];
+---
+
+<BaseLayout title={p.metaTitle} description={p.metaDescription} path={path} schema={schema}>
+  <section class="relative isolate overflow-hidden bg-[#102c24] text-white">
+    <Img
+      src={p.heroImage}
+      alt={p.heroAlt}
+      width={1600}
+      priority
+      class="absolute inset-0 -z-10 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(4,24,20,0.94)_0%,rgba(4,24,20,0.8)_50%,rgba(4,24,20,0.35)_100%)]"></div>
+    <div class="container py-10 sm:py-16">
+      <nav aria-label="Breadcrumb" class="mb-10 text-sm text-green-200">
+        <a href="/" class="hover:text-white">
+          Home
+        </a>
+        <span class="mx-3" aria-hidden="true">
+          /
+        </span>
+        <a href="/projects" class="hover:text-white">
+          Projects
+        </a>
+        <span class="mx-3" aria-hidden="true">
+          /
+        </span>
+        <span class="text-white">{isExample ? 'Application example' : 'Project'}</span>
+      </nav>
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-300">{p.eyebrow}</p>
+        <h1 class="mt-5 text-4xl font-bold leading-tight sm:text-5xl">{p.title}</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-200">{p.subtitle}</p>
+      </div>
+      <dl class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {p.facts.map(([label, value]) => (
+          <div class="rounded-xl border border-white/15 bg-[#0a2923]/65 p-5 backdrop-blur-sm">
+            <dt class="text-xs font-semibold uppercase tracking-wider text-green-300">{label}</dt>
+            <dd class="mt-2 font-semibold leading-snug text-white">{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <div class="container grid gap-12 py-14 sm:py-20 lg:grid-cols-[minmax(0,1fr)_300px] xl:grid-cols-[minmax(0,1fr)_320px] xl:gap-16">
+    <div class="min-w-0 space-y-16 sm:space-y-20">
+      <section id="challenge">
+        <p class="eyebrow">{isExample ? 'The challenge' : 'Project background'}</p>
+        <h2 class="section-title mt-3">{p.challengeTitle}</h2>
+        {p.challenge.map((text) => (
+          <p class="mt-5 leading-relaxed text-gray-600">{text}</p>
+        ))}
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          {p.requirements.map(([title, text]) => (
+            <article class="rounded-xl border border-[#dfe8e1] bg-[#f5f8f5] p-5">
+              <h3 class="font-bold text-[#18392c]">{title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-gray-600">{text}</p>
+            </article>
+          ))}
+        </div>
+        {isExample && (
+          <p class="mt-6 text-sm leading-relaxed text-gray-500">
+            This page shows a typical configuration and how we approach it. It does not describe a
+            specific customer project. Final components, ratings and documents follow your approved
+            specification.
+          </p>
+        )}
+      </section>
+
+      <section id="solution">
+        <p class="eyebrow">Our solution</p>
+        <h2 class="section-title mt-3">{p.solutionTitle}</h2>
+        <ol
+          aria-label="Power path"
+          class="mt-8 flex flex-wrap items-center gap-2 rounded-xl border border-[#dfe8e1] bg-[#f5f8f5] p-5 text-sm font-semibold text-[#18392c]"
+        >
+          {p.powerPath.map((step, i) => (
+            <li class="flex items-center gap-2">
+              {i > 0 && (
+                <span class="text-green-700" aria-hidden="true">
+                  →
+                </span>
+              )}
+              <span class="rounded-md bg-white px-3 py-1.5 shadow-sm">{step}</span>
+            </li>
+          ))}
+        </ol>
+        <ul class="mt-8 space-y-5">
+          {p.solution.map(([title, text]) => (
+            <li class="flex gap-4">
+              <svg
+                class="mt-1 h-5 w-5 shrink-0 text-green-700"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                aria-hidden="true"
+              >
+                <path d="M5 12l5 5L20 7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <p class="leading-relaxed text-gray-600">
+                <span class="font-semibold text-[#18392c]">{title}. </span>
+                {text}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="inside">
+        <p class="eyebrow">Inside the box</p>
+        <h2 class="section-title mt-3">What Goes Into the Combiner Box</h2>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {p.boxContents.map(({ title, spec, purpose }) => (
+            <article class="rounded-xl border border-[#dfe8e1] bg-[#f5f8f5] p-5">
+              <h3 class="font-bold text-[#18392c]">{title}</h3>
+              <p class="mt-1 text-sm font-semibold text-green-800">{spec}</p>
+              <p class="mt-3 text-sm leading-relaxed text-gray-600">{purpose}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="mt-10 text-lg font-bold text-[#18392c]">Full specifications</h3>
+        <dl class="mt-4 divide-y divide-[#dfe8e1] overflow-hidden rounded-xl border border-[#dfe8e1]">
+          {p.specs.map(([label, value]) => (
+            <div class="grid gap-1 px-5 py-3.5 sm:grid-cols-[13rem_1fr] sm:gap-6">
+              <dt class="text-sm text-gray-500">{label}</dt>
+              <dd class="text-sm font-semibold text-[#18392c]">{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section id="customization">
+        <p class="eyebrow">Customization</p>
+        <h2 class="section-title mt-3">
+          {isExample ? 'What Can Be Built to Your Project' : 'What Was Built for This Project'}
+        </h2>
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+          {p.customization.map(([title, text]) => (
+            <li class="rounded-xl border border-[#dfe8e1] p-5">
+              <h3 class="font-bold text-[#18392c]">{title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-gray-600">{text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="delivery">
+        <p class="eyebrow">How we deliver</p>
+        <h2 class="section-title mt-3">From Your Drawing to a Packed Box</h2>
+        <ol class="mt-8 space-y-6 border-l-2 border-[#dfe8e1] pl-6">
+          {delivery.map(([title, text], i) => (
+            <li class="relative">
+              <span class="absolute -left-[2.35rem] flex h-7 w-7 items-center justify-center rounded-full bg-green-700 text-xs font-bold text-white">
+                {i + 1}
+              </span>
+              <h3 class="font-bold text-[#18392c]">{title}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-gray-600">{text}</p>
+            </li>
+          ))}
+        </ol>
+        {p.gallery && p.gallery.length > 0 && (
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            {p.gallery.map(({ src, alt, caption }) => (
+              <figure class="overflow-hidden rounded-xl border border-[#dfe8e1] bg-white">
+                <Img src={src} alt={alt} width={600} class="aspect-[4/3] w-full object-cover" />
+                <figcaption class="px-4 py-3 text-sm font-semibold text-[#18392c]">
+                  {caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {results && (
+        <section id="results">
+          <p class="eyebrow">Results</p>
+          <h2 class="section-title mt-3">What the Customer Got</h2>
+          <dl class="mt-8 grid gap-4 sm:grid-cols-3">
+            {results.stats.map(([label, value]) => (
+              <div class="rounded-xl border border-[#dfe8e1] bg-[#f5f8f5] p-5">
+                <dd class="text-2xl font-bold text-green-800">{value}</dd>
+                <dt class="mt-1 text-sm text-gray-600">{label}</dt>
+              </div>
+            ))}
+          </dl>
+          {results.quote && (
+            <blockquote class="mt-8 border-l-4 border-green-700 pl-5">
+              <p class="text-lg italic leading-relaxed text-gray-700">“{results.quote.text}”</p>
+              <footer class="mt-3 text-sm font-semibold text-[#18392c]">{results.quote.by}</footer>
+            </blockquote>
+          )}
+        </section>
+      )}
+
+      {products.length > 0 && (
+        <section id="products">
+          <p class="eyebrow">Soltree products</p>
+          <h2 class="section-title mt-3">Products Used in This Configuration</h2>
+          <div class="mt-8 grid gap-5 sm:grid-cols-2">
+            {products.map((product) => (
+              <a
+                href={`/products/${product.id}`}
+                class="group flex items-center gap-5 overflow-hidden rounded-xl border border-[#dfe8e1] bg-white p-4"
+              >
+                <Img
+                  src={product.image}
+                  alt={product.name}
+                  width={240}
+                  class="aspect-square w-28 shrink-0 object-contain"
+                />
+                <div>
+                  <p class="text-xs font-semibold text-gray-500">{product.id}</p>
+                  <h3 class="mt-1 text-sm font-bold leading-snug text-[#18392c] group-hover:text-green-800">
+                    {product.name}
+                  </h3>
+                  <p class="mt-2 text-sm font-semibold text-green-800">View details →</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+
+    <aside class="min-w-0">
+      <!-- Sticky only when the viewport is tall enough to show the whole sidebar; no inner scrollbar. -->
+      <div class="space-y-5 lg:[@media(min-height:760px)]:sticky lg:top-24">
+        <nav
+          aria-label="Table of contents"
+          class="hidden rounded-xl border border-gray-100 p-5 lg:block"
+        >
+          <h2 class="text-sm font-bold">On this page</h2>
+          <ul class="mt-4 space-y-3">
+            {sections.map(([id, label]) => (
+              <li>
+                <a
+                  href={`#${id}`}
+                  class="text-xs leading-relaxed text-gray-500 hover:text-green-700"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="#inquiry" class="btn-primary mt-6 w-full">
+            Ask an Engineer
+          </a>
+        </nav>
+        <CompanyIntro lang="en" compact />
+      </div>
+    </aside>
+  </div>
+
+  <section id="inquiry" class="bg-[#edf3ee] py-16 sm:py-24">
+    <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <p class="eyebrow">Similar project · Quotation</p>
+        <h2 class="section-title mt-3">{p.ctaTitle}</h2>
+        <p class="mt-5 font-semibold text-[#18392c]">Send us:</p>
+        <ul class="mt-3 space-y-2 text-gray-600">
+          {p.ctaChecklist.map((item) => (
+            <li class="flex gap-3">
+              <span class="text-green-700" aria-hidden="true">
+                ✓
+              </span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-sm text-gray-600">
+          Drawings by email:{' '}
+          <a href={`mailto:${CONTACT.email}`} class="font-semibold text-green-800 underline">
+            {CONTACT.email}
+          </a>
+        </p>
+        <a
+          href="/pv-combiner-box#configurations"
+          class="mt-6 inline-block text-sm font-semibold text-green-800 underline underline-offset-4"
+        >
+          See more combiner box configurations
+        </a>
+      </div>
+      <div class="rounded-2xl bg-white p-6 shadow-sm sm:p-8">
+        <ContactForm showCountry showSubject defaultSubject={`Similar project — ${p.title}`} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+  .eyebrow {
+    color: #15803d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  .section-title {
+    color: #182b23;
+    font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+</style>

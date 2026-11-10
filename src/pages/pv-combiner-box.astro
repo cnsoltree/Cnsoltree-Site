@@ -7,6 +7,137 @@ import { getProductById } from '@/lib/data';
 import { Image, getImage } from 'astro:assets';
 import heroImage from '@/assets/products/PCB-M6in-05-1.jpg';
 import heroBg from '@/assets/pv-combiner-box-field-hero.png';
+import factoryImage from '@/assets/factory.jpg';
+import wiringReference from '@/assets/uploads/pv-combiner-internal-wiring-reference.png';
+import wiring2in1000v from '@/assets/uploads/pv-combiner-2in1out-1000v-internal.png';
+import wiring3in1000v from '@/assets/uploads/pv-combiner-3in1out-1000v-internal-v2.png';
+import wiring4in1000v from '@/assets/uploads/pv-combiner-4in1out-1000v-internal-v2.png';
+import wiring8in1000v from '@/assets/uploads/pv-combiner-8in1out-1000v-internal-v2.png';
+import wiring9in1000v from '@/assets/uploads/pv-combiner-9in1out-1000v-internal.png';
+import wiring10in1000v from '@/assets/uploads/pv-combiner-10in1out-1000v-internal.png';
+import wiring12in1000v from '@/assets/uploads/pv-combiner-12in1out-1000v-internal.png';
+import projectAustria from '@/assets/uploads/project-austria-1-1mw.png';
+import projectMalaysia from '@/assets/uploads/project-malaysia-10kw.png';
+import projectXinjiang from '@/assets/uploads/project-xinjiang-10mw.png';
+import projectZhejiang from '@/assets/uploads/project-zhejiang-46kw.png';
+import projectUSA from '@/assets/uploads/project-usa-32kw.png';
+import workshopAssembly from '@/assets/uploads/soltree-workshop-assembly.png';
+import workshopBoxes from '@/assets/uploads/soltree-workshop-combiner-boxes.png';
+import workshopPacking from '@/assets/uploads/soltree-workshop-packing.png';
+import workshopWarehouse from '@/assets/uploads/soltree-workshop-warehouse.png';
+import workshopWiring from '@/assets/uploads/soltree-workshop-wiring.png';
+
+const workshopPhotos = [
+  {
+    image: workshopAssembly,
+    caption: 'Assembly Workshop',
+    alt: 'Workers assembling and wiring PV combiner boxes at workshop benches',
+  },
+  {
+    image: workshopBoxes,
+    caption: 'Combiner Box Assembly',
+    alt: 'Open steel PV combiner boxes with installed protection components and wiring',
+  },
+  {
+    image: workshopPacking,
+    caption: 'Protective Packaging',
+    alt: 'Staff fitting protective foam corners to a steel enclosure before packing',
+  },
+  {
+    image: workshopWarehouse,
+    caption: 'Component Storage',
+    alt: 'Workshop storage shelves with electrical components, cables and packed boxes',
+  },
+  {
+    image: workshopWiring,
+    caption: 'Wiring & Production',
+    alt: 'Worker wiring a combiner box beside cable processing equipment',
+  },
+];
+
+const internalWiring = [
+  { inputs: 2, voltage: 500, image: wiringReference },
+  { inputs: 2, voltage: 1000, image: wiring2in1000v },
+  { inputs: 3, voltage: 1000, image: wiring3in1000v },
+  { inputs: 4, voltage: 1000, image: wiring4in1000v },
+  { inputs: 8, voltage: 1000, image: wiring8in1000v },
+  { inputs: 9, voltage: 1000, image: wiring9in1000v },
+  { inputs: 10, voltage: 1000, image: wiring10in1000v },
+  { inputs: 12, voltage: 1000, image: wiring12in1000v },
+];
+
+const globalProjects = [
+  {
+    image: projectAustria,
+    location: 'Austria',
+    capacity: '1.1 MW',
+    description: 'Hillside Farm Solar Project',
+    alt: 'Ground-mounted solar panels and combiner equipment at an Austrian hillside farm',
+  },
+  {
+    image: projectMalaysia,
+    location: 'Malaysia',
+    capacity: '10 kW',
+    description: 'Oilfield PV & Energy Storage',
+    alt: 'Inverters and DC combiner boxes in a Malaysian oilfield PV and storage system',
+  },
+  {
+    image: projectXinjiang,
+    location: 'Xinjiang, China',
+    capacity: '10 MW',
+    description: 'Ground-Mount Solar Project',
+    alt: 'Rows of solar panels at a ground-mounted PV project in Xinjiang, China',
+  },
+  {
+    image: projectZhejiang,
+    location: 'Zhejiang, China',
+    capacity: '46 kW',
+    description: 'Rooftop Solar Project',
+    alt: 'Rooftop photovoltaic installation in Zhejiang, China',
+  },
+  {
+    image: projectUSA,
+    location: 'United States',
+    capacity: '32 kW',
+    description: 'PV Combiner Box Installation',
+    alt: 'Open PV combiner box mounted beneath a solar array in the United States',
+  },
+];
+
+const factoryHighlights = [
+  [
+    'Manufacturing experience',
+    '15+ Years',
+    'M3 21V9l6 4V9l6 4V3h4v18H3z M6 17h1 M11 17h1 M16 17h1',
+  ],
+  ['International certifications', '100+', 'M14 3H5v18h14V8l-5-5z M14 3v5h5 M8 12h8 M8 16h6'],
+  [
+    'PV combiner box industry',
+    'Leading Manufacturer',
+    'M12 21V10 M12 15C4 15 2 8 3 3c6 0 10 4 9 12z M12 18c0-8 4-12 9-12 1 7-3 12-9 12z',
+  ],
+  [
+    'Global partners',
+    '3,000+',
+    'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z M3 12h18 M12 3c4 5 4 13 0 18-4-5-4-13 0-18z',
+  ],
+  [
+    'Core R&D team',
+    '30+ Specialists',
+    'M9 3h6 M10 3v6l-6 10a1 1 0 0 0 1 2h14a1 1 0 0 0 1-2L14 9V3 M7 15h10',
+  ],
+  [
+    'Employees',
+    '100+',
+    'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z M17 4a4 4 0 0 1 0 8 M22 21v-2a4 4 0 0 0-3-4',
+  ],
+  [
+    '2025 production value',
+    'CNY 80M+',
+    'M3 21h18 M6 17v-4 M10 17V9 M14 17V5 M18 17V3 M3 10l6-5 4 1 7-5',
+  ],
+  ['Factory floor area', '10,000+ m²', 'M3 10l9-7 9 7 M5 9v12h14V9 M9 21v-8h6v8'],
+];
 
 const customization = [
   [
@@ -82,7 +213,7 @@ const casePages = Object.keys(import.meta.glob('/src/pages/projects/*.astro')).m
 const references = [
   {
     id: 'HT-8Way-2in1out-600VDC',
-    caseHref: '/projects/plastic-combiner-box-south-africa-rooftop',
+    caseHref: '/projects/plastic-combiner-box-residential-rooftop',
     image: '/images/uploads/ht-8way-rooftop-installed.png',
     imageAlt: 'HT 8-way plastic PV combiner box wall-mounted beside a rooftop solar array',
     title: '2-in / 1-out Plastic Combiner Box',
@@ -121,40 +252,137 @@ const references = [
     why: 'A steel, lockable enclosure for sites where the box is exposed to impact or unauthorized access.',
   },
 ].map((item) => ({ ...item, product: getProductById(item.id)! }));
-const faqs = [
-  [
-    'Can you customize a PV combiner box to our drawing?',
-    'Yes. Send your single-line diagram, component requirements and enclosure layout, or start with an existing configuration. We will review feasibility and confirm the final scope in the quotation and approved specification.',
-  ],
-  [
-    'What can be customized?',
-    'Circuit inputs and outputs, protection components, enclosure layout, cable entries, connections, labels and packaging can be discussed. Availability depends on the selected design, component compatibility and order quantity.',
-  ],
-  [
-    'Can you support an EPC project or a tender enquiry?',
-    'Yes. Share the technical schedule, bill of quantities, required documents, destination and delivery milestones. Identify mandatory requirements so the proposed configuration and supply scope can be reviewed against them.',
-  ],
-  [
-    'Can one box serve multiple inverter MPPT inputs?',
-    'The layout must preserve the circuit arrangement required by the inverter. Send the inverter model and wiring diagram so independent circuits and any combining points can be reviewed before a configuration is agreed.',
-  ],
-  [
-    'What are the MOQ and lead time for custom orders?',
-    'MOQ and lead time are quoted for the agreed configuration. They depend on enclosure changes, component availability, branding, sample requirements and quantity. Include your target delivery date with the enquiry.',
-  ],
-  [
-    'Which certificates and inspection documents can you provide?',
-    'Send the standards, certificates and inspection records required by your project or market. We will confirm which documents apply to the proposed assembly and components. Component certificates do not automatically certify the complete box.',
-  ],
-  [
-    'Do you offer samples before a project order?',
-    'Request a sample or first article with your enquiry. Its specification, cost and schedule will be confirmed before proceeding; agree any approval criteria before production.',
-  ],
-  [
-    'How do I send project drawings?',
-    `Email your drawings, bill of quantities and specification to ${CONTACT.email}. You can also send an initial brief through the form below and reference the project name when following up by email.`,
-  ],
+const faqGroups = [
+  {
+    title: 'System selection & protection',
+    items: [
+      [
+        'What does a PV combiner box do?',
+        'A PV combiner box brings string circuits into an organized enclosure for connection and protection. Depending on the design, it combines strings into a shared output or keeps circuits separate for independent inverter inputs. It does not convert DC power to AC.',
+      ],
+      [
+        'Does every solar installation need an external combiner box?',
+        'The inverter connection plan determines whether an external box is needed. Review its available string inputs and built-in protection against the array layout and project requirements. Send the inverter data sheet and string plan rather than selecting a box by system power alone.',
+      ],
+      [
+        'How do I choose a PV combiner box for my inverter?',
+        'Start with the inverter model and wiring diagram. Confirm string inputs, outputs, design voltage and current, then review protection and enclosure requirements. Our configuration examples are references; the final selection follows your approved project specification.',
+      ],
+      [
+        'Which protection components are included?',
+        'The component list is configuration-specific. Our project examples include PV fuses, a DC breaker and surge protection. Switching devices, cable sizes and connections are reviewed together before approval.',
+      ],
+      [
+        'Can one box serve multiple inverter MPPT inputs?',
+        'Yes, with a layout that preserves the independent circuits required by the inverter. Multiple outputs do not necessarily share one combined bus. Send the inverter model and wiring diagram so we can review each circuit and combining point.',
+      ],
+      [
+        'What does 2-in / 1-out or 2-in / 2-out mean?',
+        'These labels describe input and output counts. A 2-in / 1-out design typically combines two strings, while a 2-in / 2-out design can preserve two separate circuits. Always check the wiring diagram: the label alone does not confirm internal connections or MPPT compatibility.',
+      ],
+      [
+        'How should I specify system voltage and current?',
+        'Provide module Voc and Isc, modules per string, parallel string count and the site minimum temperature. The design review must account for cold-weather string voltage, inverter limits, cable ratings and protection coordination. A power rating in kW alone is insufficient.',
+      ],
+      [
+        'Can I use a PV combiner box for AC circuits or batteries?',
+        'Only use a box approved for the intended circuit. Our featured examples are PV DC configurations. AC aggregation and battery protection require separate reviews of device ratings, fault current, switching and wiring; a matching voltage label alone does not establish suitability.',
+      ],
+    ],
+  },
+  {
+    title: 'Enclosures, installation & maintenance',
+    items: [
+      [
+        'Are your PV combiner boxes suitable for outdoor installation?',
+        'Our featured plastic and steel boxes specify IP65. Confirm the selected model, seals, cable entries and site conditions before installation; an IP65 rating does not permit submersion.',
+      ],
+      [
+        'Should I choose a plastic or steel enclosure?',
+        'Our plastic project example prioritizes light weight and compact wall mounting. The steel example adds a lockable housing for exposed sites. Choose around installation space, access and environmental requirements.',
+      ],
+      [
+        'Can the box be installed in coastal, hot or cold environments?',
+        'Share the site temperature range, sun exposure, humidity and salt or chemical exposure. Enclosure material, seals, component operating limits and thermal performance must be reviewed for that location. The featured IP65 rating alone does not confirm UV, corrosion or temperature suitability.',
+      ],
+      [
+        'Are the boxes supplied pre-wired?',
+        'Our two featured customer configurations are pre-wired assemblies. Confirm the supplied components, external terminations, cable entries and installation documents in your order specification. Pre-wiring still requires on-site mounting, connection and commissioning.',
+      ],
+      [
+        'Who should install and commission the combiner box?',
+        'Use a qualified PV installer or electrician following the supplied instructions and local requirements. Commissioning includes checks of polarity, connections, protective earthing and the approved circuit arrangement. PV conductors can remain live in daylight after the inverter is switched off.',
+      ],
+      [
+        'What routine maintenance is required?',
+        'Follow the selected assembly instructions for inspection intervals. Check for water ingress, damaged seals, loose or overheated connections and protection-device status. Internal work requires qualified personnel, isolation of all relevant sources and verification of a safe working condition; never open fuse holders under load.',
+      ],
+      [
+        'How do I select replacement fuses or SPD modules?',
+        'Use the approved component list and device instructions. Match the fuse type and electrical ratings, or the SPD module and compatible base. Send the box identification and component label for review before substituting a part.',
+      ],
+    ],
+  },
+  {
+    title: 'Customization, OEM & documentation',
+    items: [
+      [
+        'Can you customize a PV combiner box to our drawing?',
+        'Yes. Soltree reviews circuit inputs and outputs, protection components, enclosure layout, cable entries and wiring against your drawing. OEM options include your logo, nameplate, circuit labels and packaging. The quotation and approved specification define the final scope.',
+      ],
+      [
+        'Can cable entries and connectors match our installation?',
+        'Yes, cable entry positions, cable sizes, connectors and internal routing can be specified during layout review. Include your cable and mating-connector details so mechanical fit, electrical compatibility, sealing and installation access can be checked together.',
+      ],
+      [
+        'Can I request monitoring or additional protection functions?',
+        'Include a separate schedule for functions such as string monitoring, remote alarms or reverse-current protection. Specify the measurements, interface and operating requirements. These are project requirements to review, rather than standard features of every configuration shown here.',
+      ],
+      [
+        'Which certificates and inspection documents can you provide?',
+        'Send the standards, certificates and inspection records required by your project or market. We will confirm which documents apply to the proposed assembly and components. Component certificates do not automatically certify the complete box.',
+      ],
+      [
+        'What is confirmed before production starts?',
+        'The agreed scope should identify the wiring diagram, component list, enclosure layout, electrical ratings, labels, packaging and required documents. Confirm any sample approval criteria and inspection requirements before releasing the order for production.',
+      ],
+      [
+        'Can you support consistent configurations for repeat orders?',
+        'Yes. Agree a repeat-order configuration with defined components, layout, identification and packaging. Reference the previous order and approved drawing revision, and confirm any proposed changes before production so different batches remain aligned with your project requirements.',
+      ],
+    ],
+  },
+  {
+    title: 'Quotations, delivery & after-sales',
+    items: [
+      [
+        'What are the MOQ and lead time for custom orders?',
+        'MOQ and production lead time are quoted for the agreed configuration, quantity and sample requirements. Include your destination and target arrival date so production and transit can be planned separately.',
+      ],
+      [
+        'Do you offer samples before a project order?',
+        'Request a sample or first article with your enquiry. Its specification, cost and schedule will be confirmed before proceeding; agree any approval criteria before production.',
+      ],
+      [
+        'What should I send for an EPC quotation or tender enquiry?',
+        `Email your single-line diagram, inverter model, electrical requirements and bill of quantities to ${CONTACT.email}. Include enclosure requirements, mandatory documents, destination and delivery milestones. You can also start with the enquiry form below and send drawings by email.`,
+      ],
+      [
+        'How are packing and shipping arranged?',
+        'Packing, shipment batches, destination and delivery responsibilities are agreed with the order. Include handling or labeling requirements in your enquiry.',
+      ],
+      [
+        'What warranty and after-sales terms apply?',
+        'Confirm the warranty period, coverage and support arrangements in your quotation or contract. For a product issue, send the order reference, configuration and photos to help us review it.',
+      ],
+      [
+        'Do you charge for design or custom tooling?',
+        'Ask for design, sample, tooling and production costs to be identified in the quotation. Charges depend on the requested scope; confirm ownership and reuse terms if your project requires dedicated tooling or a proprietary enclosure.',
+      ],
+    ],
+  },
 ];
+const faqs = faqGroups.flatMap((group) => group.items);
 const ogImage = await getImage({ src: heroImage, width: 1200, format: 'jpg' });
 const schema = [
   {
@@ -281,9 +509,11 @@ const schema = [
   <nav aria-label="PV combiner box page sections" class="border-b border-gray-200 bg-gray-50">
     <div class="container flex flex-wrap gap-x-8 gap-y-3 py-5 text-sm font-semibold text-gray-600">
       <a href="#customization">Customization</a>
+      <a href="#internal-wiring">Internal wiring</a>
       <a href="#projects">Project support</a>
       <a href="#configurations">Configuration examples</a>
       <a href="#process">How we work</a>
+      <a href="#factory">Our factory</a>
       <a href="#faq">FAQs</a>
       <a href="#inquiry">Project enquiry →</a>
     </div>
@@ -338,7 +568,46 @@ const schema = [
     </div>
   </section>
 
-  <section id="configurations" class="border-t border-gray-100 pb-16 pt-12 sm:pb-24 sm:pt-16">
+  <section
+    id="internal-wiring"
+    aria-labelledby="internal-wiring-title"
+    class="border-t border-gray-100 bg-[#f5f7f4] py-12 sm:py-16"
+  >
+    <div class="container">
+      <p class="eyebrow">Inside the combiner box</p>
+      <h2 id="internal-wiring-title" class="section-title mt-3">
+        PV Combiner Box Internal Wiring
+      </h2>
+      <p class="mt-4 max-w-3xl leading-relaxed text-gray-600">
+        Explore eight input and voltage configurations. Some cards currently share an illustrative
+        reference image; actual components and wiring depend on the approved configuration drawing.
+      </p>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {internalWiring.map(({ inputs, voltage, image }) => (
+          <figure class="overflow-hidden rounded-xl border border-green-900/10 bg-white">
+            <Image
+              src={image}
+              alt="Shared illustrative internal wiring reference showing PV fuses, surge protection, a circuit breaker and marked connections"
+              widths={[320, 640, 960]}
+              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              width={640}
+              format="webp"
+              loading="lazy"
+              class="aspect-square h-auto w-full bg-gray-100 object-contain"
+            />
+            <figcaption class="border-t border-gray-100 px-4 py-4 text-center">
+              <h3 class="text-lg font-bold text-green-950">
+                {inputs} in / 1 out{' '}
+                <span class="whitespace-nowrap text-green-700">· {voltage}V DC</span>
+              </h3>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="configurations" class="border-t border-gray-100 pb-6 pt-12 sm:pb-8 sm:pt-16">
     <div class="container">
       <div class="max-w-3xl">
         <p class="eyebrow">Project configuration examples</p>
@@ -411,6 +680,42 @@ const schema = [
     </div>
   </section>
 
+  <section
+    id="global-projects"
+    aria-labelledby="global-projects-title"
+    class="border-t border-gray-100 pb-12 pt-6 sm:pb-16 sm:pt-8"
+  >
+    <div class="container">
+      <p class="eyebrow">Project gallery</p>
+      <h2 id="global-projects-title" class="section-title mt-3">
+        More Projects Around the World
+      </h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        {globalProjects.map(({ image, location, capacity, description, alt }) => (
+          <figure class="grid row-span-3 grid-rows-subgrid gap-y-2">
+            <Image
+              src={image}
+              alt={alt}
+              widths={[320, 640, 960]}
+              sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
+              width={640}
+              height={480}
+              format="webp"
+              loading="lazy"
+              class="aspect-[4/3] h-auto w-full rounded-xl object-cover"
+            />
+            <figcaption class="row-span-2 grid grid-rows-subgrid text-center">
+              <p class="pt-2 text-base font-bold text-green-950">
+                {location} <span class="whitespace-nowrap text-green-700">· {capacity}</span>
+              </p>
+              <p class="text-sm leading-relaxed text-gray-600">{description}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <section id="projects" class="bg-[#f5f7f4] py-16 sm:py-24">
     <div class="container">
       <div class="max-w-3xl">
@@ -444,6 +749,210 @@ const schema = [
       <a href="#inquiry" class="btn-primary mt-8">
         Discuss Your Project <span aria-hidden="true">→</span>
       </a>
+    </div>
+  </section>
+
+  <section id="factory" aria-labelledby="factory-title" class="py-16 sm:py-24">
+    <div class="container">
+      <div class="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+        <figure class="flex flex-col overflow-hidden rounded-2xl bg-[#edf3ee]">
+          <Image
+            src={factoryImage}
+            alt="Soltree factory exterior with the SOLTREE sign, rooftop solar panels and loading area"
+            widths={[480, 720, 1024]}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            class="aspect-square h-auto w-full object-cover lg:aspect-auto lg:h-0 lg:flex-1"
+          />
+          <figcaption class="shrink-0 px-6 py-4 text-sm text-green-950">
+            Soltree factory · DC electrical products & PV combiner box supply
+          </figcaption>
+        </figure>
+        <div class="flex flex-col">
+          <p class="eyebrow">Meet your manufacturing partner</p>
+          <h2 id="factory-title" class="section-title mt-3">
+            DC Protection Products.
+            <br />
+            PV Combiner Box Manufacturing.
+          </h2>
+          <p class="mt-5 leading-relaxed text-gray-600">
+            With over 15 years of manufacturing expertise, Soltree provides DC protection products
+            and PV combiner boxes at competitive prices. We support installers, project buyers and
+            OEM partners with plastic or steel enclosures, custom configurations and coordinated
+            project supply.
+          </p>
+          <p class="mt-4 leading-relaxed text-gray-600">
+            Our range includes DC circuit breakers, surge protectors, PV fuses and complete combiner
+            box assemblies. From component selection and enclosure layout to branding and packaging,
+            we help turn your project requirements into an agreed production specification for
+            consistent repeat orders.
+          </p>
+          <div class="mt-7 flex items-center gap-5 border-y border-green-900/15 py-5">
+            <span class="shrink-0 text-4xl font-bold tracking-tight text-green-800">98.9%</span>
+            <div>
+              <p class="font-semibold text-gray-900">Customer satisfaction</p>
+              <p class="mt-1 text-sm leading-relaxed text-gray-600">
+                Dedicated support and responsive service.
+              </p>
+            </div>
+          </div>
+          <ul class="mt-auto grid grid-cols-2 gap-3 pt-6 text-sm font-semibold text-green-900">
+            <li class="rounded-lg bg-[#edf3ee] px-4 py-3">DC protection components</li>
+            <li class="rounded-lg bg-[#edf3ee] px-4 py-3">PV combiner box assembly</li>
+            <li class="rounded-lg bg-[#edf3ee] px-4 py-3">OEM & custom configurations</li>
+            <li class="rounded-lg bg-[#edf3ee] px-4 py-3">Wholesale & project supply</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        id="factory-highlights"
+        class="mt-12 rounded-2xl border border-green-900/10 bg-[#f0f6f2] px-4 py-8 sm:px-8 sm:py-10"
+      >
+        <h3 class="sr-only">Soltree factory capabilities at a glance</h3>
+        <dl class="grid grid-cols-2 gap-x-4 gap-y-9 lg:grid-cols-4 lg:gap-y-10">
+          {factoryHighlights.map(([label, value, icon]) => (
+            <div class="flex flex-col items-center text-center">
+              <span
+                class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-green-700 text-white"
+                aria-hidden="true"
+              >
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d={icon} />
+                </svg>
+              </span>
+              <dt class="text-xs font-medium text-gray-600 sm:text-sm">{label}</dt>
+              <dd class="mt-2 text-lg font-bold tracking-tight text-green-800 sm:text-2xl">
+                {value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div class="mt-14 border-t border-gray-200 pt-10">
+        <h3 class="text-2xl font-bold text-[#182b23]">
+          From DC Components to a Complete Combiner Box
+        </h3>
+        <p class="mt-3 max-w-3xl leading-relaxed text-gray-600">
+          Source DC protection components or a complete PV combiner box, configured for your
+          project.
+        </p>
+        <div class="mt-7 grid gap-x-5 gap-y-3 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="grid row-span-4 grid-rows-subgrid gap-y-3 rounded-xl border border-gray-200 p-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-green-700">
+              Overcurrent protection
+            </p>
+            <h4 class="text-lg font-bold">DC Circuit Breakers</h4>
+            <p class="text-sm leading-relaxed text-gray-600">
+              DC breakers selected for your system voltage, current, breaking capacity and pole
+              arrangement.
+            </p>
+            <a
+              href="/dc-mcb"
+              class="self-end pt-2 text-sm font-semibold text-green-800 underline-offset-4 hover:underline"
+            >
+              Explore DC MCBs →
+            </a>
+          </article>
+          <article class="grid row-span-4 grid-rows-subgrid gap-y-3 rounded-xl border border-gray-200 p-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-green-700">
+              Surge protection
+            </p>
+            <h4 class="text-lg font-bold">DC Surge Protectors</h4>
+            <p class="text-sm leading-relaxed text-gray-600">
+              PV surge protection matched to your system voltage, earthing arrangement and box
+              design.
+            </p>
+            <a
+              href="/dc-surge-protector"
+              class="self-end pt-2 text-sm font-semibold text-green-800 underline-offset-4 hover:underline"
+            >
+              Explore DC SPDs →
+            </a>
+          </article>
+          <article class="grid row-span-4 grid-rows-subgrid gap-y-3 rounded-xl border border-gray-200 p-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-green-700">
+              String protection
+            </p>
+            <h4 class="text-lg font-bold">PV Fuses & Wiring</h4>
+            <p class="text-sm leading-relaxed text-gray-600">
+              PV fuses, holders, terminals and wiring specified for your string current and circuit
+              layout.
+            </p>
+            <a
+              href="#inquiry"
+              class="self-end pt-2 text-sm font-semibold text-green-800 underline-offset-4 hover:underline"
+            >
+              Discuss Components →
+            </a>
+          </article>
+          <article class="grid row-span-4 grid-rows-subgrid gap-y-3 rounded-xl border border-gray-200 p-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-green-700">
+              Configured assemblies
+            </p>
+            <h4 class="text-lg font-bold">PV Combiner Boxes</h4>
+            <p class="text-sm leading-relaxed text-gray-600">
+              Plastic or steel boxes with configured inputs, outputs and protection, plus OEM
+              branding options.
+            </p>
+            <a
+              href="#configurations"
+              class="self-end pt-2 text-sm font-semibold text-green-800 underline-offset-4 hover:underline"
+            >
+              View Configurations →
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="factory-tour"
+    aria-labelledby="factory-tour-title"
+    class="border-t border-gray-100 bg-[#f5f7f4] py-12 sm:py-16"
+  >
+    <div class="container">
+      <p class="eyebrow">Inside Soltree</p>
+      <h2 id="factory-tour-title" class="section-title mt-3">
+        A Closer Look at Our Factory
+      </h2>
+      <p class="mt-4 max-w-3xl leading-relaxed text-gray-600">
+        Production workshops, quality inspection, warehousing and our technical team — from
+        manufacturing to packing and shipping.
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        {workshopPhotos.map(({ image, caption, alt }) => (
+          <figure class="overflow-hidden rounded-xl bg-white">
+            <Image
+              src={image}
+              alt={alt}
+              widths={[320, 640, 960]}
+              sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
+              width={640}
+              height={480}
+              format="webp"
+              loading="lazy"
+              class="aspect-[4/3] h-auto w-full object-cover"
+            />
+            <figcaption class="px-3 py-4 text-center text-sm font-semibold text-green-950">
+              {caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -484,19 +993,32 @@ const schema = [
 
   <section id="faq" class="py-16 sm:py-24">
     <div class="container">
-      <p class="eyebrow">Before you send an enquiry</p>
-      <h2 class="section-title mt-3">Custom PV Combiner Box FAQs</h2>
-      <div class="mt-10 grid items-start gap-x-12 lg:grid-cols-2">
-        {faqs.map(([question, answer]) => (
-          <details class="group border-b border-gray-200">
-            <summary class="flex cursor-pointer list-none items-start justify-between gap-5 py-5 text-base font-semibold">
-              <span>{question}</span>
-              <span aria-hidden="true" class="text-xl text-green-700 group-open:rotate-45">
-                +
-              </span>
-            </summary>
-            <p class="pb-6 text-sm leading-relaxed text-gray-600">{answer}</p>
-          </details>
+      <p class="eyebrow">Selection · Customization · Project orders</p>
+      <h2 class="section-title mt-3">PV Combiner Box FAQs</h2>
+      <p class="mt-5 max-w-3xl leading-relaxed text-gray-600">
+        Answers to common questions about inverter connections, outdoor enclosures, OEM options and
+        project supply. Have a drawing or specification? Send it with your enquiry for review.
+      </p>
+      <div class="mt-10 space-y-10">
+        {faqGroups.map(({ title, items }) => (
+          <div>
+            <h3 class="border-b border-green-900/15 pb-4 text-xl font-semibold text-green-900">
+              {title}
+            </h3>
+            <div class="grid items-start gap-x-12 lg:grid-cols-2">
+              {items.map(([question, answer]) => (
+                <details class="group border-b border-gray-200">
+                  <summary class="flex cursor-pointer list-none items-start justify-between gap-5 py-5 text-base font-semibold">
+                    <span>{question}</span>
+                    <span aria-hidden="true" class="text-xl text-green-700 group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p class="pb-6 text-sm leading-relaxed text-gray-600">{answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>

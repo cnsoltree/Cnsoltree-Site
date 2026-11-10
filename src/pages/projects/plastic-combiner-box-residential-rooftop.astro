@@ -1,0 +1,159 @@
+---
+// Application example: no real customer behind it. Switch kind to 'project' only with real, approved customer details and site photos.
+import ProjectCaseStudy from '@/components/ProjectCaseStudy.astro';
+---
+
+<ProjectCaseStudy
+  kind="example"
+  slug="plastic-combiner-box-residential-rooftop"
+  metaTitle="2-In / 1-Out Plastic PV Combiner Box for Residential Rooftop Solar"
+  metaDescription="Application example: a pre-wired 2-in / 1-out plastic PV combiner box with 600V DC rating, 63A DC breaker, 4 × 15A fuses and 40kA SPD in an IP65 enclosure for residential rooftop installers."
+  eyebrow="Application example · Residential rooftop PV"
+  title="2-In / 1-Out Plastic Combiner Box for Residential Rooftops"
+  subtitle="How a compact plastic combiner box is configured when an installer combines two rooftop strings into one inverter input and wants the same pre-wired box on every job."
+  heroImage="/images/uploads/ht-8way-rooftop-installed.png"
+  heroAlt="HT 8-way plastic PV combiner box wall-mounted beside a rooftop solar array"
+  facts={[
+    ['Application', 'Residential rooftop PV'],
+    ['Configuration', '2 in / 1 out · 600V DC'],
+    ['Enclosure', 'Flame-retardant plastic · IP65'],
+    ['Soltree scope', 'Pre-wired box under one part number'],
+  ]}
+  challengeTitle="Many Small Roofs, Little Time on Each"
+  challenge={[
+    'Residential installers usually work on many small systems with similar layouts. Every hour spent wiring a combiner box on a roof or an exterior wall is an hour not spent on the next job.',
+    'A box that arrives pre-wired, mounts quickly and is reordered under one part number saves time on every roof. The installer’s requirements are:',
+  ]}
+  solutionTitle="Two Strings, One Inverter Input, the Same Box on Every Job"
+  powerPath={['2 PV strings', '15A fuse per pole', '63A DC breaker', '40kA SPD', 'Inverter input']}
+  solution={[
+    [
+      'A light plastic housing',
+      'Flame-retardant hard plastic keeps the box light enough to carry onto a roof, and IP65 sealing suits outdoor walls.',
+    ],
+    [
+      'Fuses on both poles',
+      'Four 15A PV fuses protect the positive and negative pole of each of the two strings.',
+    ],
+    [
+      'A 63A DC breaker on the output',
+      'Provides overload and short-circuit protection and a clear isolation point for the inverter connection.',
+    ],
+    [
+      'Pre-wired under one part number',
+      'Same components and layout in every batch, so installers reorder without re-checking the specification.',
+    ],
+  ]}
+  requirements={[
+    [
+      'Light and compact',
+      'The box is carried onto the roof or mounted on an exterior wall, so it needs to be small and light.',
+    ],
+    [
+      'Quick installation',
+      'A pre-wired assembly with labelled terminals reduces wiring time and mistakes on site.',
+    ],
+    [
+      'Surge protection',
+      'Rooftop arrays are exposed to lightning-induced surges, so an SPD on the DC side protects the inverter.',
+    ],
+    [
+      'Repeat orders',
+      'The installer wants the same components and layout in every batch, ordered under one part number.',
+    ],
+  ]}
+  boxContents={[
+    {
+      title: 'PV string fuses',
+      spec: '4 × 15A PV fuses',
+      purpose: 'Fuse both the positive and negative pole of each of the two strings.',
+    },
+    {
+      title: 'DC circuit breaker',
+      spec: '63A DC breaker',
+      purpose:
+        'Provides overload and short-circuit protection on the combined output, and isolates it for maintenance.',
+    },
+    {
+      title: 'Surge protection',
+      spec: '500V DC SPD · 40kA max',
+      purpose: 'Limits lightning-induced transients before they reach the inverter.',
+    },
+    {
+      title: 'Enclosure',
+      spec: 'Flame-retardant plastic · IP65',
+      purpose: 'Lightweight, weather-sealed housing with a clear cover for checking device status.',
+    },
+    {
+      title: 'Connections',
+      spec: 'PV connectors in · glands out',
+      purpose:
+        'Strings plug in with PV connectors; output and earth cables enter through sealed glands.',
+    },
+    {
+      title: 'Wiring & labels',
+      spec: 'Pre-wired, polarity-marked',
+      purpose:
+        'Circuit labels and polarity markings make installation and inspection quicker on site.',
+    },
+  ]}
+  customization={[
+    [
+      'Circuit count',
+      'Inputs and outputs matched to your string plan and inverter. Two inputs and one output is one option.',
+    ],
+    [
+      'Ratings & components',
+      'Breaker, fuse and SPD ratings are reviewed against your string Voc, Isc and system voltage.',
+    ],
+    [
+      'Connector type',
+      'PV connectors or cable glands, matched to the cables and mating connectors you use.',
+    ],
+    [
+      'Enclosure size',
+      'Module width and housing size chosen for the components, with space for wiring.',
+    ],
+    ['OEM identification', 'Your logo, nameplate, circuit labels and packaging.'],
+    [
+      'Repeat-order build',
+      'A fixed component list and layout under one part number for consistent batches.',
+    ],
+  ]}
+  specs={[
+    ['Reference model', 'HT-8Way-2in1out-600VDC'],
+    ['PV string inputs / outputs', '2 / 1'],
+    ['Max system voltage', '600V DC'],
+    ['DC circuit breaker', '63A'],
+    ['PV fuse rating', '15A × 4'],
+    ['Surge protection', '500V DC, 40kA max discharge current'],
+    ['Enclosure', 'Flame-retardant hard plastic'],
+    ['Protection level', 'IP65'],
+    ['Applicable systems', 'On-grid / off-grid PV'],
+  ]}
+  productIds={['HT-8Way-2in1out-600VDC']}
+  gallery={[
+    {
+      src: '/images/products/HT-8Way-2in1out-600VDC-2.jpg',
+      alt: 'HT-8Way-2in1out-600VDC combiner box interior with 63A DC breaker and fuses',
+      caption: 'Interior layout',
+    },
+    {
+      src: '/images/uploads/soltree-workshop-wiring.png',
+      alt: 'Worker wiring a combiner box beside cable processing equipment',
+      caption: 'Wiring in our workshop',
+    },
+    {
+      src: '/images/uploads/soltree-workshop-packing.png',
+      alt: 'Staff fitting protective foam corners to an enclosure before packing',
+      caption: 'Protective packaging',
+    },
+  ]}
+  ctaTitle="Supplying Residential Rooftop Installations?"
+  ctaChecklist={[
+    'Number of strings and the module Voc / Isc',
+    'Inverter model and number of MPPT inputs',
+    'Connector type and cable sizes',
+    'Monthly or batch quantity, destination and branding requirements',
+  ]}
+/>

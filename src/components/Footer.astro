@@ -6,6 +6,7 @@ const categories = getCategories(lang);
 const QUICK_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/products' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Blog', href: '/blog' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
@@ -49,7 +50,9 @@ const year = new Date().getFullYear();
 
       {/* Col 2 — Products */}
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">{t(lang, 'Products')}</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+          {t(lang, 'Products')}
+        </h3>
         <ul class="mt-4 space-y-2.5">
           {categories.map((cat) => (
             <li>
@@ -66,7 +69,9 @@ const year = new Date().getFullYear();
 
       {/* Col 3 — Quick Links */}
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">{t(lang, 'Quick Links')}</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+          {t(lang, 'Quick Links')}
+        </h3>
         <ul class="mt-4 space-y-2.5">
           {QUICK_LINKS.map((link) => (
             <li>
@@ -83,7 +88,9 @@ const year = new Date().getFullYear();
 
       {/* Col 4 — Contact */}
       <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">{t(lang, 'Contact')}</h3>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-white">
+          {t(lang, 'Contact')}
+        </h3>
         <ul class="mt-4 space-y-3">
           <li class="flex items-start gap-3 text-sm text-gray-400">
             <svg
@@ -157,7 +164,9 @@ const year = new Date().getFullYear();
   {/* Bottom bar */}
   <div class="border-t border-gray-800">
     <div class="container flex flex-col items-center justify-between gap-3 py-5 sm:flex-row">
-      <p class="text-xs text-gray-500">© {year} Soltree. {t(lang, 'All rights reserved.')}</p>
+      <p class="text-xs text-gray-500">
+        © {year} Soltree. {t(lang, 'All rights reserved.')}
+      </p>
       <div class="flex gap-5">
         <a
           href={href(lang, '/privacy')}

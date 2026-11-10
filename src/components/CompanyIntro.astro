@@ -5,21 +5,28 @@ import { t, type Lang } from '@/i18n';
 
 interface Props {
   lang: Lang;
+  /** Shorter version for sidebars that already stick as a whole (project pages). */
+  compact?: boolean;
 }
-const { lang } = Astro.props;
+const { lang, compact = false } = Astro.props;
 ---
 
 <aside data-company-intro aria-labelledby="company-intro-heading" class="min-w-0 lg:self-stretch">
-  <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm lg:sticky lg:top-28 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto">
+  <div
+    class:list={[
+      'overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm',
+      !compact && 'lg:sticky lg:top-28 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto',
+    ]}
+  >
     <Img
       src="/images/factory.jpg"
       alt={t(lang, 'Soltree factory building')}
       width={640}
       height={640}
-      class="aspect-video w-full object-cover"
+      class:list={['w-full object-cover', compact ? 'aspect-[2/1]' : 'aspect-video']}
       sizes="(min-width: 1024px) 320px, (min-width: 640px) 640px, 100vw"
     />
-    <div class="p-6">
+    <div class:list={[compact ? 'p-5' : 'p-6']}>
       <p class="text-xs font-semibold uppercase tracking-widest text-green-700">Soltree</p>
       <h2 id="company-intro-heading" class="mt-2 text-xl font-bold text-gray-900">
         {t(lang, 'Hi there! I’m Shawn')}
@@ -31,15 +38,17 @@ const { lang } = Astro.props;
             'I’m representing Soltree and passionate about electrical equipment. With solid experience in the electrical industry, we’re committed to providing quality products at affordable prices.',
           )}
         </p>
-        <p>
+        <p class:list={[compact && 'hidden']}>
           {t(
             lang,
             'We’re proud to have maintained a 98.9% customer satisfaction rate through dedication and excellent service.',
           )}
         </p>
-        <p>{t(lang, 'Let’s build reliable electrical solutions, together!')}</p>
+        <p class:list={[compact && 'hidden']}>
+          {t(lang, 'Let’s build reliable electrical solutions, together!')}
+        </p>
       </div>
-      <div class="mt-6 border-t border-gray-100 pt-5">
+      <div class:list={['border-t border-gray-100', compact ? 'mt-4 pt-4' : 'mt-6 pt-5']}>
         <p class="text-xs font-semibold uppercase tracking-wider text-gray-500">
           {t(lang, 'Contact')}
         </p>

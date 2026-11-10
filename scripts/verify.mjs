@@ -388,8 +388,9 @@ for (const [route, type, otherRoute, otherType] of [
     for (const product of family)
       assert(range.includes(`href="/products/${product.id}"`), `Missing AC model: ${product.id}`);
   } else {
-    assert.equal((range.match(/<article\b/g) ?? []).length, 3, 'Expected three DC series');
-    for (const name of ['DZ47', 'C65', 'L7'])
+    assert.equal((range.match(/<article\b/g) ?? []).length, 2, 'Expected two DC series');
+    assert(!/\b(?:DZ47|C65|L7)\b|10kA|[Tt]hree series/.test(html), 'Outdated DC series');
+    for (const name of ['DZ47Z-63', 'STZ-63'])
       assert(range.includes(`${name} DC MCB`), `Missing DC series: ${name}`);
   }
   assert(!range.includes(`/products/MCB-${otherType}-`), `Mixed AC/DC product range: ${route}`);
@@ -400,26 +401,26 @@ for (const [route, type, otherRoute, otherType] of [
     ...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g),
   ].flatMap((match) => JSON.parse(match[1]));
   const faq = data.find((item) => item['@type'] === 'FAQPage');
-  assert.equal(faq?.mainEntity.length, 6, `MCB FAQ count: ${route}`);
+  assert.equal(faq?.mainEntity.length, type === 'DC' ? 10 : 6, `MCB FAQ count: ${route}`);
   const faqSection = html.match(/<section\b[^>]*id="faq"[\s\S]*?<\/section>/)?.[0];
   assert.equal(
     (faqSection?.match(/<details\b/g) ?? []).length,
-    6,
+    type === 'DC' ? 10 : 6,
     `Visible MCB FAQ count: ${route}`,
   );
 }
-const dcMcbTable = pageHtml('/dc-mcb').match(/<table\b[\s\S]*?<\/table>/)?.[0];
+const dcMcbCards = [...pageHtml('/dc-mcb').matchAll(/<article\b[\s\S]*?<\/article>/g)].map(
+  (match) => match[0],
+);
 for (const [name, capacity] of [
-  ['DZ47', '4.5kA'],
-  ['C65', '6kA'],
-  ['L7', '10kA'],
+  ['DZ47Z-63', '4.5kA'],
+  ['STZ-63', '6kA'],
 ]) {
-  const row = dcMcbTable?.match(
-    new RegExp(`<tr\\b[^>]*>\\s*<th[^>]*>${name}</th>[\\s\\S]*?</tr>`),
-  )?.[0];
+  const card = dcMcbCards.find((item) => item.includes(`${name} DC MCB`));
+  assert(card && card.includes(capacity), `DC series rating mismatch: ${name} ${capacity}`);
   assert(
-    row && new RegExp(`<td[^>]*>${capacity.replace('.', '\\.')}</td>`).test(row),
-    `DC series rating mismatch: ${name} ${capacity}`,
+    card.includes('Internal layout') && /<img\b/.test(card),
+    `Missing DC internal comparison: ${name}`,
   );
 }
 assert(landingPages.find((page) => page.href === '/ac-mcb')?.nav);

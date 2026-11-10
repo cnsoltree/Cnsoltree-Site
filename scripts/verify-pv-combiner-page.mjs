@@ -16,6 +16,7 @@ for (const section of [
   'projects',
   'configurations',
   'process',
+  'factory',
   'faq',
   'inquiry',
 ]) {
@@ -26,6 +27,14 @@ assert.match(html, /<form[^>]*action="\/api\/contact"/);
 assert.match(html, /name="subject"[^>]*value="PV Combiner Box/);
 assert.match(html, /href="https:\/\/wa.me\/\d+\?text=/);
 assert.match(html, /rel="canonical" href="https:\/\/www.elesoltree.com\/pv-combiner-box"/);
+const factory = html.match(/<section\b[^>]*id="factory"[\s\S]*?<\/section>/)?.[0] ?? '';
+assert(factory.includes('98.9%'));
+assert(factory.includes('Soltree factory exterior'));
+assert(factory.includes('loading="lazy"'));
+for (const href of ['/dc-mcb', '/dc-surge-protector']) {
+  assert(factory.includes(`href="${href}"`));
+  assert.equal((await fetch(new URL(href, origin))).status, 200);
+}
 const decode = (text) =>
   text
     .replace(/&amp;/g, '&')
@@ -47,7 +56,8 @@ const schemas = [
   ...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g),
 ].flatMap(([, json]) => JSON.parse(json));
 const faq = schemas.find((schema) => schema['@type'] === 'FAQPage');
-assert.equal(faq.mainEntity.length, 8);
+assert.equal(faq.mainEntity.length, 27);
+assert.equal(new Set(faq.mainEntity.map((item) => item.name)).size, 27);
 assert.deepEqual(
   visible,
   faq.mainEntity.map((item) => [item.name, item.acceptedAnswer.text]),
@@ -67,5 +77,5 @@ for (const target of targets) {
   assert.equal(result.status, 200, `Broken reference: ${target}`);
 }
 console.log(
-  `PV combiner page OK: sections, enquiry form, 8 FAQs, canonical and ${targets.size} product/image references.`,
+  `PV combiner page OK: sections, enquiry form, 27 FAQs, canonical and ${targets.size} product/image references.`,
 );
