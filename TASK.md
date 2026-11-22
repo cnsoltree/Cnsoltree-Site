@@ -1,6 +1,6 @@
 # 当前开发任务
 
-- 待部署（2026-11-22）：修复 `/dc-surge-protector` 的 Google Product 摘要结构化数据。页面改为输出 `ItemList`，不再输出缺少 `offers`、`review` 或 `aggregateRating` 的两个 `Product` 对象；本地 check、build、页面验证与格式检查均通过。提交后等待 Google 重新抓取并在 Search Console 验证。
+- 已部署（2026-11-22）：修复 `/dc-surge-protector` 的 Google Product 摘要结构化数据。页面改为输出 `ItemList`，不再输出缺少 `offers`、`review` 或 `aggregateRating` 的两个 `Product` 对象；本地 check、build、页面验证与格式检查均通过。提交 `50343f7` 已部署，线上确认无 `Product` Schema。下一步在 Search Console 请求重新抓取。
 
 - 本地完成（2026-11-10）：DC MCB 首屏右侧两张极数产品图替换为用户提供的 STZ-63 系列总览原图，标题改为 STZ-63 series / 6kA，完整展示并保留 AC MCB 链接。页面与图片响应核验通过；已随 4135e9b 推送，线上 /dc-mcb HTTP 200。
 
