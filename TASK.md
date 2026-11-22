@@ -1,6 +1,6 @@
 # 当前开发任务
 
-- 待部署（2026-11-22）：页脚和结构化数据补充公司全称 `Wenzhou Soltree Electric Co., Ltd.`。Organization Schema 使用法定全称，保留 Soltree 品牌别名，文章 publisher 关联同一组织实体。
+- 已部署（2026-11-22）：页脚和结构化数据补充公司全称 `Wenzhou Soltree Electric Co., Ltd.`。Organization Schema 使用法定全称，保留 Soltree 品牌别名，文章 publisher 关联同一组织实体。线上首页已核验。
 
 - 已部署（2026-11-22）：修复 `/dc-surge-protector` 的 Google Product 摘要结构化数据。页面改为输出 `ItemList`，不再输出缺少 `offers`、`review` 或 `aggregateRating` 的两个 `Product` 对象；本地 check、build、页面验证与格式检查均通过。提交 `50343f7` 已部署，线上确认无 `Product` Schema。下一步在 Search Console 请求重新抓取。
 
