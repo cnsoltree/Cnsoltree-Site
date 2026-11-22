@@ -38,7 +38,11 @@ const schema = [
     datePublished: post.date,
     dateModified: post.dateModified ?? post.date,
     author: { '@type': 'Person', name: post.author },
-    publisher: { '@type': 'Organization', name: 'Soltree' },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${site}/#organization`,
+      name: 'Wenzhou Soltree Electric Co., Ltd.',
+    },
     articleSection: family?.name,
   },
 ];

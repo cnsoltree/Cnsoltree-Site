@@ -1,5 +1,6 @@
 export const SITE = {
   name: 'Soltree',
+  legalName: 'Wenzhou Soltree Electric Co., Ltd.',
   tagline: 'Professional Electrical Protection Solutions',
   description:
     'B2B manufacturer of circuit breakers, SPDs, DC fuse holders, power meters, ATS and PV combiner boxes. Wholesale & OEM available.',
