@@ -1,6 +1,8 @@
 # 当前开发任务
 
-- 本地完成（2026-11-10）：DC MCB 首屏右侧两张极数产品图替换为用户提供的 STZ-63 系列总览原图，标题改为 STZ-63 series / 6kA，完整展示并保留 AC MCB 链接。页面与图片响应核验通过，未部署。
+- 待部署（2026-11-22）：修复 `/dc-surge-protector` 的 Google Product 摘要结构化数据。页面改为输出 `ItemList`，不再输出缺少 `offers`、`review` 或 `aggregateRating` 的两个 `Product` 对象；本地 check、build、页面验证与格式检查均通过。提交后等待 Google 重新抓取并在 Search Console 验证。
+
+- 本地完成（2026-11-10）：DC MCB 首屏右侧两张极数产品图替换为用户提供的 STZ-63 系列总览原图，标题改为 STZ-63 series / 6kA，完整展示并保留 AC MCB 链接。页面与图片响应核验通过；已随 4135e9b 推送，线上 /dc-mcb HTTP 200。
 
 - 本地完成（2026-11-10）：DC MCB 内部对比与 Ratings & selection 合并为统一系列对比模块；保留上下两款左图右文，在说明中整合选型定位和内部差异，删除重复表格，三步选型检查并入模块底部。页面输出核验通过，未部署。
 
@@ -10,7 +12,7 @@
 
 - 本地完成（2026-11-10）：`/dc-mcb` 统一为 DZ47Z-63 4.5kA、STZ-63 6kA 两个系列，首屏改为两列，同步产品卡、对比表、FAQ、SEO 与询价文案，移除 L7 / 10kA。本地页面输出核验通过，未部署。
 
-- 本地完成（2026-11-10）：项目详情页模板 + 首个应用示例页 /projects/steel-combiner-box-multi-string-pv；导航/页脚加入 Projects，新增 /projects 列表页；新增塑料箱应用示例页 /projects/plastic-combiner-box-residential-rooftop。未部署。
+- 本地完成（2026-11-10）：项目详情页模板 + 首个应用示例页 /projects/steel-combiner-box-multi-string-pv；导航/页脚加入 Projects，新增 /projects 列表页；新增塑料箱应用示例页；右侧目录+公司介绍栏。已推送并线上核验（2026-11-10，4135e9b）。
 
 - 已推送（2026-11-08）：/pv-combiner-box 案例模块优化（真实客户、参数表、Why this enclosure、两张实景图）；“Read the full project”按钮仅在 src/pages/projects/ 下存在对应案例页时显示，待用户制作两个案例落地页。
 

@@ -28,15 +28,15 @@ for (const id of expected) {
 const schemas = [
   ...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g),
 ].flatMap((match) => JSON.parse(match[1]));
-const productSchemas = schemas.filter((schema) => schema['@type'] === 'Product');
-assert.equal(productSchemas.length, 2);
-for (const product of dc) {
-  const schema = productSchemas.find((item) => item.url.endsWith(`/products/${product.id}`));
-  assert.equal(schema?.name, product.name);
-  assert.equal(
-    schema.additionalProperty.find((item) => item.name === 'Poles').value,
-    product.id.endsWith('600V') ? '2P' : '3P',
-  );
-}
+const rangeSchema = schemas.find((schema) => schema['@type'] === 'ItemList');
+assert(rangeSchema, 'Missing ItemList schema for the DC SPD range');
+assert.deepEqual(
+  rangeSchema.itemListElement.map((item) => item.url).sort(),
+  expected.map((id) => `https://www.elesoltree.com/products/${id}`).sort(),
+);
+assert(
+  !schemas.some((schema) => schema['@type'] === 'Product'),
+  'Range page must not emit incomplete Product schemas',
+);
 assert(!/STO-40-PV|500V to 1500V|1P–4P/.test(html));
 console.log('DC SPD range: exactly two published models, cards, detail links and schemas passed.');
